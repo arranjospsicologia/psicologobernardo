@@ -209,3 +209,40 @@ const copyrightElements = document.querySelectorAll('.footer-bottom p');
 copyrightElements.forEach(el => {
   el.innerHTML = el.innerHTML.replace('2025', currentYear);
 });
+
+// ========== SOCIAL SHARE LINKS ==========
+function initializeSocialShare() {
+  // Pega a URL atual e o título da página
+  const currentUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  // Seleciona os botões de compartilhamento
+  const shareContainer = document.querySelector('.post-share');
+
+  if (shareContainer) {
+    const facebookBtn = shareContainer.querySelector('a[aria-label*="Facebook"]');
+    const twitterBtn = shareContainer.querySelector('a[aria-label*="Twitter"]');
+    const linkedinBtn = shareContainer.querySelector('a[aria-label*="LinkedIn"]');
+    const whatsappBtn = shareContainer.querySelector('a[aria-label*="WhatsApp"]');
+
+    // Atualiza os links dinamicamente
+    if (facebookBtn) {
+      facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+    }
+
+    if (twitterBtn) {
+      twitterBtn.href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${pageTitle}`;
+    }
+
+    if (linkedinBtn) {
+      linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
+    }
+
+    if (whatsappBtn) {
+      whatsappBtn.href = `https://wa.me/?text=${pageTitle}%20-%20${currentUrl}`;
+    }
+  }
+}
+
+// Executa quando a página carregar
+document.addEventListener('DOMContentLoaded', initializeSocialShare);

@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(powershell -Command \"Get-Content ''assets\\css\\style.css'' | Measure-Object -Line | Select-Object -ExpandProperty Lines\")",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(git pull:*)",
+      "Bash(git push)",
+      "Bash(git stash:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "WebSearch",
+      "WebFetch(domain:psicologobernardo.com.br)",
+      "WebFetch(domain:ceciliafreytas.com.br)"
     ],
     "deny": [],
     "ask": []

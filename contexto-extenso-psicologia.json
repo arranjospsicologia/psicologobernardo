@@ -1,0 +1,266 @@
+{
+  "generated_at": "2025-10-25",
+  "project": "psicologobernardo.com.br",
+  "locale": "pt-BR",
+  "city_focus": "Vitória",
+  "state": "ES",
+  "primary_neighborhood": "Jardim da Penha",
+  "regulatory": {
+    "telepsychology_rules": [
+      {
+        "title": "Resolução CFP nº 11/2018",
+        "summary": "Regulamenta a prestação de serviços psicológicos por TICs (psicologia online).",
+        "url": "https://site.cfp.org.br/wp-content/uploads/2018/05/RESOLU%C3%87%C3%83O-N%C2%BA-11-DE-11-DE-MAIO-DE-2018.pdf"
+      },
+      {
+        "title": "Orientações: Atendimento Online (CRP-PR) – atualização 2024",
+        "summary": "Informa que a Resolução CFP nº 9/2024 revogou a 11/2018 e descontinuou o cadastro e-Psi.",
+        "url": "https://crppr.org.br/orientacoes/atendimento-online/"
+      }
+    ],
+    "ethics_links": [
+      {
+        "name": "Conselho Federal de Psicologia (CFP)",
+        "url": "https://site.cfp.org.br/"
+      },
+      {
+        "name": "Código de Ética Profissional do Psicólogo",
+        "url": "https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf"
+      }
+    ]
+  },
+  "demand_and_prevalence": {
+    "brazil": [
+      {
+        "topic": "Ansiedade no Brasil",
+        "stat": "Brasil entre as maiores prevalências de ansiedade da América Latina; estimativas anteriores indicavam ~9,3% da população.",
+        "source": "https://ipqhc.org.br/2024/04/15/saude-mental-no-brasil-dados-e-panorama/",
+        "year": 2024
+      },
+      {
+        "topic": "Percepção de ansiedade",
+        "stat": "45% dos brasileiros relatam sofrer de ansiedade; 19% relatam depressão; mulheres e jovens 18–24 mais afetados.",
+        "source": "https://www.ipsos.com/pt-br/calendario-da-saude-2024",
+        "year": 2024
+      },
+      {
+        "topic": "Região das Américas",
+        "stat": "Estimativa de >58 milhões com transtornos de ansiedade; prevalência no Brasil estimada entre as mais altas (até 9,3%).",
+        "source": "https://www.paho.org/en/noncommunicable-diseases-and-mental-health/noncommunicable-diseases-and-mental-health-data-portal-2",
+        "year": 2015
+      },
+      {
+        "topic": "OMS – Panorama global",
+        "stat": "Em 2021, ~359 milhões conviviam com transtornos de ansiedade (4,4% da população global).",
+        "source": "https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders",
+        "year": 2025
+      },
+      {
+        "topic": "Aumento pós-2020",
+        "stat": "Depressão e ansiedade aumentaram >25% no primeiro ano da pandemia.",
+        "source": "https://bvsms.saude.gov.br/oms-divulga-informe-mundial-de-saude-mental-transformar-a-saude-mental-para-todos/",
+        "year": 2022
+      }
+    ],
+    "youth_trends": [
+      {
+        "topic": "Adolescentes e jovens",
+        "stat": "Incidência global de transtornos de ansiedade (10–24 anos) aumentou 52% entre 1990 e 2021.",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11651023/",
+        "year": 2024
+      }
+    ]
+  },
+  "modality_and_access": {
+    "internet_penetration": [
+      {
+        "stat": "Em 2023, 92,5% dos domicílios brasileiros tinham acesso à internet; áreas urbanas 94,1%.",
+        "source": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41024-internet-foi-acessada-em-72-5-milhoes-de-domicilios-do-pais-em-2023",
+        "year": 2024
+      },
+      {
+        "stat": "Em 2024, 74,9 milhões de domicílios tinham internet; banda larga fixa 88,9% e móvel 84,3% desses domicílios.",
+        "source": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/44031-internet-chega-a-74-9-milhoes-de-domicilios-do-pais-em-2024",
+        "year": 2025
+      },
+      {
+        "stat": "Acesso por TV cresce; uso de microcomputador em queda (33,4% em 2024).",
+        "source": "https://telesintese.com.br/ibge-pela-primeira-vez-mais-da-metade-da-populacao-acessa-a-internet-pela-tv/",
+        "year": 2025
+      }
+    ],
+    "policy_and_guidance": [
+      {
+        "stat": "Política nacional de saúde mental: cuidado em liberdade e direitos humanos.",
+        "source": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-mental",
+        "year": 2025
+      }
+    ]
+  },
+  "local_context": {
+    "city_profile": {
+      "vitoria": {
+        "population_census_2022": "322.869",
+        "area_km2": "97,12",
+        "source": "https://pt.wikipedia.org/wiki/Vit%C3%B3ria_%28Esp%C3%ADrito_Santo%29"
+      }
+    },
+    "neighborhoods": [
+      {
+        "name": "Jardim da Penha",
+        "notes": "Bairro do consultório; vias próximas: Av. Dante Michelini, Reta da Penha, Av. Fernando Ferrari.",
+        "transport_refs": [
+          "https://moovitapp.com/index/pt-br/transporte_p%C3%BAblico-Avenida_Dante_Michelini-Vit%C3%B3ria-site_32165302-4794"
+        ]
+      },
+      {
+        "name": "Jardim Camburi",
+        "notes": "Bairro mais populoso do ES (48.286 moradores, Censo 2022). Proximidade e fluxo pela Av. Dante Michelini.",
+        "source": "https://www.agazeta.com.br/es/cotidiano/jardim-camburi-e-o-bairro-mais-populoso-do-es-veja-os-20-maiores-1124"
+      },
+      {
+        "name": "Praia do Canto",
+        "notes": "Bairro com comércio e serviços diversificados; rota via Reta da Penha.",
+        "source": "https://vitoria.es.gov.br/"
+      },
+      {
+        "name": "Mata da Praia",
+        "notes": "Vias de acesso: Dante Michelini e Adalberto Simão Nader (acesso Aeroporto).",
+        "source": "https://www.vitoria.es.gov.br/noticia/dez-milhas-garoto-2025-mudancas-no-transito-e-ruas-de-lazer-suspensas-em-vitoria-no-domingo-28-54509"
+      },
+      {
+        "name": "Centro de Vitória",
+        "notes": "Acesso pela Av. Vitória / Beira Mar; conexão com transporte troncal Transcol.",
+        "source": "https://ceturb.es.gov.br/Media/ceturb/Banners/0506_CARTILHA_apresentac%C3%A7a%CC%83o.pdf"
+      }
+    ]
+  },
+  "seo_guidelines": {
+    "content": {
+      "min_words": {
+        "local": 900,
+        "problem": 1100,
+        "service": 900
+      },
+      "structure": [
+        "Introdução com keyword",
+        "Explicação do serviço/problema (ACP)",
+        "Contexto local e facilidades de acesso",
+        "Como funciona (sessão, duração, ética)",
+        "FAQ (5–8 itens) com Schema",
+        "CTA duplo (WhatsApp + Doctoralia)"
+      ]
+    },
+    "internal_linking": {
+      "rules": [
+        "Cada página linkar 3–5 páginas relacionadas (serviço/problema/proximidade).",
+        "Inserir seção 'Veja também' ao fim de cada página.",
+        "Breadcrumbs em todas as páginas.",
+        "Evitar âncoras genéricas ('clique aqui'); usar linguagem natural ('terapia online', 'psicólogo em Vitória')."
+      ]
+    },
+    "external_links": {
+      "whitelist": [
+        "https://site.cfp.org.br/",
+        "https://bvsms.saude.gov.br/",
+        "https://www.gov.br/saude/",
+        "https://portal.fiocruz.br/",
+        "https://www.paho.org/",
+        "https://www.who.int/",
+        "https://scielo.br/",
+        "https://pubmed.ncbi.nlm.nih.gov/"
+      ],
+      "usage": "2–4 referências autoritativas por página, contextuais, com target=_blank e rel='noopener'."
+    },
+    "structured_data": {
+      "types": [
+        "ProfessionalService",
+        "FAQPage",
+        "LocalBusiness",
+        "Organization"
+      ]
+    },
+    "performance": {
+      "core_web_vitals": {
+        "LCP_ms": 2500,
+        "INP_ms": 200,
+        "CLS": 0.1,
+        "docs": [
+          "https://web.dev/explore/learn-core-web-vitals",
+          "https://developers.google.com/search/docs/appearance/core-web-vitals",
+          "https://web.dev/articles/top-cwv"
+        ]
+      },
+      "best_practices": [
+        "Imagens otimizadas e 'width/height' definidos para evitar CLS.",
+        "Preload do LCP (fonte/hero).",
+        "Lazy-loading em imagens não críticas.",
+        "Minificar e adiar JS não essencial; priorizar CSS crítico inline.",
+        "Usar SSG/SSR para páginas programáticas.",
+        "Métricas no campo via GA4 + relatório de Core Web Vitals no Search Console."
+      ]
+    },
+    "meta_and_og": {
+      "title_max_chars": 60,
+      "description_max_chars": 160,
+      "open_graph": true,
+      "twitter_cards": true
+    }
+  },
+  "page_generator_variables": {
+    "service_types": [
+      "Terapia individual",
+      "Terapia de casal",
+      "Terapia familiar",
+      "Terapia online",
+      "Abordagem Centrada na Pessoa (ACP)"
+    ],
+    "problems": [
+      "Ansiedade",
+      "Depressão",
+      "Síndrome do pânico",
+      "Burnout",
+      "Estresse",
+      "Crise existencial",
+      "Insônia",
+      "Baixa autoestima",
+      "Problemas de relacionamento",
+      "Luto"
+    ],
+    "audiences": [
+      "Homens",
+      "Mulheres",
+      "Adultos",
+      "Jovens adultos",
+      "Casais",
+      "Universitários",
+      "Profissionais"
+    ],
+    "nearby_areas": [
+      "Jardim Camburi",
+      "Praia do Canto",
+      "Mata da Praia",
+      "Centro de Vitória"
+    ],
+    "cta": {
+      "whatsapp_text_template": "Olá, gostaria de saber sobre {servico} ({contexto}). Encontrei seu site e gostaria de agendar uma primeira sessão.",
+      "doctoralia_widget_hint": "Incorpore widget de agendamento após a seção de 'Como funciona'."
+    },
+    "faq_seeds": {
+      "online": [
+        "Terapia online é eficaz como a presencial?",
+        "Quais plataformas são utilizadas?",
+        "O atendimento online é regulamentado pelo CFP?",
+        "Como funciona a primeira sessão online?",
+        "Como realizo o pagamento?"
+      ],
+      "ansiedade": [
+        "Quando procurar ajuda para ansiedade?",
+        "Ansiedade tem cura?",
+        "Quanto tempo dura a terapia para ansiedade?",
+        "Psicólogo ou psiquiatra para ansiedade?",
+        "Atende ansiedade online?"
+      ]
+    }
+  }
+}

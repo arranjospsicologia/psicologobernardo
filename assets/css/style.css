@@ -248,20 +248,25 @@ button {
 
 /* CTA Link in Navigation */
 .nav-link-cta {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  color: var(--white) !important;
-  padding: 0.6rem 1.5rem !important;
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  position: relative;
 }
 
 .nav-link-cta::after {
-  display: none;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
 }
 
-.nav-link-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.nav-link-cta:hover::after {
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
 }
 
 .nav-toggle,
@@ -1527,14 +1532,14 @@ body.page-loaded {
   background-color: var(--white);
 }
 
-.info-grid {
+.agendamento-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.info-card {
+.agendamento-info-card {
   padding: 2rem;
   background-color: var(--secondary-color);
   border-radius: var(--radius-md);
@@ -1542,12 +1547,12 @@ body.page-loaded {
   transition: var(--transition);
 }
 
-.info-card:hover {
+.agendamento-info-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
 }
 
-.info-icon {
+.agendamento-info-icon {
   width: 60px;
   height: 60px;
   margin: 0 auto 1.5rem;
@@ -1560,13 +1565,13 @@ body.page-loaded {
   font-size: 1.75rem;
 }
 
-.info-card h3 {
+.agendamento-info-card h3 {
   margin-bottom: 1rem;
   color: var(--black);
   font-size: 1.25rem;
 }
 
-.info-card p {
+.agendamento-info-card p {
   color: var(--text-color);
   line-height: 1.7;
   font-size: 0.95rem;
@@ -1677,7 +1682,7 @@ body.page-loaded {
     padding: 1.5rem;
   }
 
-  .info-grid {
+  .agendamento-info-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

@@ -57,66 +57,83 @@ function scrollActive() {
 window.addEventListener('scroll', scrollActive);
 
 // ========== FAQ ACCORDION ==========
-const faqItems = document.querySelectorAll('.faq-item');
+function initializeFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
 
-faqItems.forEach(item => {
-  const question = item.querySelector('.faq-question');
-  
-  question.addEventListener('click', () => {
-    const isActive = item.classList.contains('active');
-    
-    // Fecha todos os itens
-    faqItems.forEach(faq => faq.classList.remove('active'));
-    
-    // Abre o item clicado se não estava ativo
-    if (!isActive) {
-      item.classList.add('active');
-    }
-  });
-});
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
 
-// ========== SMOOTH SCROLL ==========
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    
-    if (target) {
-      const headerHeight = document.getElementById('header').offsetHeight;
-      const targetPosition = target.offsetTop - headerHeight;
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
+    if (question) {
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Fecha todos os itens
+        faqItems.forEach(faq => faq.classList.remove('active'));
+
+        // Abre o item clicado se não estava ativo
+        if (!isActive) {
+          item.classList.add('active');
+        }
       });
     }
   });
-});
+}
+
+// Inicializa FAQ quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', initializeFAQ);
+
+// ========== SMOOTH SCROLL ==========
+function initializeSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+
+      if (target) {
+        const headerHeight = document.getElementById('header').offsetHeight;
+        const targetPosition = target.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
+// Inicializa smooth scroll quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', initializeSmoothScroll);
 
 // ========== SCROLL REVEAL ANIMATION ==========
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+function initializeScrollReveal() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Elementos para animar
+  const animatedElements = document.querySelectorAll('.feature-card, .servico-card, .projeto-card, .faq-item, .info-card');
+
+  animatedElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
   });
-}, observerOptions);
+}
 
-// Elementos para animar
-const animatedElements = document.querySelectorAll('.feature-card, .servico-card, .projeto-card, .faq-item, .info-card');
-
-animatedElements.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
+// Inicializa scroll reveal quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', initializeScrollReveal);
 
 // ========== PAGE TRANSITIONS ==========
 // Fade in na carga da página
@@ -156,59 +173,79 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========== FORM VALIDATION (se necessário) ==========
-const forms = document.querySelectorAll('form');
+function initializeForms() {
+  const forms = document.querySelectorAll('form');
 
-forms.forEach(form => {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-    
-    console.log('Form data:', data);
-    // Aqui você pode adicionar lógica para enviar o formulário
-  });
-});
+  forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-// ========== WHATSAPP ANALYTICS ==========
-const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
 
-whatsappButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Google Analytics tracking (se configurado)
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'click', {
-        'event_category': 'WhatsApp',
-        'event_label': 'Contato via WhatsApp'
-      });
-    }
-    console.log('WhatsApp click tracked');
-  });
-});
-
-// ========== LAZY LOADING IMAGES ==========
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src || img.src;
-        img.classList.add('loaded');
-        imageObserver.unobserve(img);
-      }
+      console.log('Form data:', data);
+      // Aqui você pode adicionar lógica para enviar o formulário
     });
   });
-
-  const images = document.querySelectorAll('img[loading="lazy"]');
-  images.forEach(img => imageObserver.observe(img));
 }
 
+// Inicializa forms quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', initializeForms);
+
+// ========== WHATSAPP ANALYTICS ==========
+function initializeWhatsAppTracking() {
+  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+
+  whatsappButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Google Analytics tracking (se configurado)
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'click', {
+          'event_category': 'WhatsApp',
+          'event_label': 'Contato via WhatsApp'
+        });
+      }
+      console.log('WhatsApp click tracked');
+    });
+  });
+}
+
+// Inicializa WhatsApp tracking quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', initializeWhatsAppTracking);
+
+// ========== LAZY LOADING IMAGES ==========
+function initializeLazyLoading() {
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.classList.add('loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => imageObserver.observe(img));
+  }
+}
+
+// Inicializa lazy loading quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', initializeLazyLoading);
+
 // ========== COPYRIGHT YEAR ==========
-const currentYear = new Date().getFullYear();
-const copyrightElements = document.querySelectorAll('.footer-bottom p');
-copyrightElements.forEach(el => {
-  el.innerHTML = el.innerHTML.replace('2025', currentYear);
-});
+function updateCopyrightYear() {
+  const currentYear = new Date().getFullYear();
+  const copyrightElements = document.querySelectorAll('.footer-bottom p');
+  copyrightElements.forEach(el => {
+    el.innerHTML = el.innerHTML.replace('2025', currentYear);
+  });
+}
+
+// Atualiza copyright quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', updateCopyrightYear);
 
 // ========== SOCIAL SHARE LINKS ==========
 function initializeSocialShare() {

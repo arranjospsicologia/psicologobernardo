@@ -1892,3 +1892,127 @@ body.page-loaded {
     padding: 1.25rem;
   }
 }
+/* ===================================
+   Consultório Gallery Section
+   =================================== */
+
+.consultorio-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 4rem 0;
+}
+
+.consultorio-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.consultorio-intro strong {
+  color: var(--primary-color);
+}
+
+.consultorio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-color);
+  background: #fff;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.consultorio-cta {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(74, 119, 113, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.consultorio-cta p {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.consultorio-cta p:last-child {
+  margin-bottom: 0;
+}
+
+.consultorio-cta strong {
+  color: var(--primary-color);
+}
+
+.btn-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.btn-link:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .consultorio-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .consultorio-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .consultorio-cta {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .consultorio-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

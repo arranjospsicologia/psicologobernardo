@@ -44,3 +44,29 @@ yarn-error.log*
 notes.md
 TODO.md
 .scratch/
+
+# Documentation and development scripts (keep local)
+docs/
+scripts/
+*.md
+!README.md
+
+# Development/build scripts
+generate-pages.js
+generate-sitemap.js
+validate-pages.js
+content-generator.js
+minify-assets.js
+
+# Data and config files
+seed-pages.json
+contexto-extenso-psicologia.json
+package.json
+
+# Templates (not for production)
+**/template*.html
+**/_template*.html
+
+# OneDrive temporary files
+~$*
+*.tmp

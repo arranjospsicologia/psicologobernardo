@@ -1893,7 +1893,7 @@ body.page-loaded {
   }
 }
 /* ===================================
-   Consultório Gallery Section
+   Consultório Carousel Section
    =================================== */
 
 .consultorio-section {
@@ -1914,50 +1914,118 @@ body.page-loaded {
   color: var(--primary-color);
 }
 
-.consultorio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+/* Carousel Container */
+.consultorio-carousel {
+  max-width: 900px;
+  margin: 0 auto 3rem;
 }
 
-.gallery-item {
+.carousel-container {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   background: #fff;
 }
 
-.gallery-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-item img {
+.carousel-slide {
+  min-width: 100%;
+  display: none;
+  flex-direction: column;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
   aspect-ratio: 4/3;
-  transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.gallery-caption {
-  padding: 1rem;
+.carousel-caption {
+  padding: 1.5rem;
   text-align: center;
   font-weight: 500;
+  font-size: 1.1rem;
   color: var(--text-color);
   background: #fff;
   margin: 0;
-  font-size: 0.95rem;
 }
 
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 15px;
+}
+
+.carousel-next {
+  right: 15px;
+}
+
+/* Dots Navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: rgba(74, 119, 113, 0.5);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background: var(--primary-color);
+  transform: scale(1.3);
+}
+
+/* CTA Box */
 .consultorio-cta {
   text-align: center;
   max-width: 700px;
@@ -1994,11 +2062,36 @@ body.page-loaded {
   border-bottom-color: var(--primary-color);
 }
 
+/* Touch/Swipe support indicator */
+@media (hover: none) and (pointer: coarse) {
+  .carousel-btn {
+    opacity: 0.7;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .consultorio-gallery {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .consultorio-carousel {
+    max-width: 100%;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .carousel-caption {
+    font-size: 1rem;
+    padding: 1.25rem;
   }
 
   .consultorio-intro {
@@ -2009,10 +2102,13 @@ body.page-loaded {
   .consultorio-cta {
     padding: 1.5rem;
   }
-}
 
-@media (min-width: 1200px) {
-  .consultorio-gallery {
-    grid-template-columns: repeat(3, 1fr);
+  .carousel-dots {
+    gap: 10px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
   }
 }

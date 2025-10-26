@@ -246,3 +246,126 @@ function initializeSocialShare() {
 
 // Executa quando a página carregar
 document.addEventListener('DOMContentLoaded', initializeSocialShare);
+
+// ========== CONSULTORIO CAROUSEL ==========
+function initializeConsultorioCarousel() {
+  const carousel = document.querySelector('.consultorio-carousel');
+
+  if (!carousel) return; // Sai se o carousel não existir na página
+
+  const track = carousel.querySelector('.carousel-track');
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  const dots = carousel.querySelectorAll('.carousel-dot');
+
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+
+  // Função para atualizar o carousel
+  function updateCarousel() {
+    // Remove active de todos os slides e dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Adiciona active ao slide e dot atual
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  // Próximo slide
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  // Slide anterior
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  // Ir para slide específico
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+  }
+
+  // Event listeners para botões
+  if (nextBtn) {
+    nextBtn.addEventListener('click', nextSlide);
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', prevSlide);
+  }
+
+  // Event listeners para dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+
+  // Navegação por teclado
+  document.addEventListener('keydown', (e) => {
+    // Só funciona se o carousel estiver visível na viewport
+    const carouselRect = carousel.getBoundingClientRect();
+    const isVisible = carouselRect.top < window.innerHeight && carouselRect.bottom > 0;
+
+    if (isVisible) {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+    }
+  });
+
+  // Suporte a touch/swipe em dispositivos móveis
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const swipeThreshold = 50; // Mínimo de pixels para considerar um swipe
+
+    if (touchEndX < touchStartX - swipeThreshold) {
+      // Swipe para esquerda - próximo slide
+      nextSlide();
+    }
+
+    if (touchEndX > touchStartX + swipeThreshold) {
+      // Swipe para direita - slide anterior
+      prevSlide();
+    }
+  }
+
+  // Auto-avançar (opcional - descomentado por padrão, mas pode ser ativado)
+  // let autoplayInterval;
+  // function startAutoplay() {
+  //   autoplayInterval = setInterval(nextSlide, 5000); // Muda a cada 5 segundos
+  // }
+  // function stopAutoplay() {
+  //   clearInterval(autoplayInterval);
+  // }
+  //
+  // // Inicia autoplay
+  // startAutoplay();
+  //
+  // // Para autoplay quando usuário interage
+  // carousel.addEventListener('mouseenter', stopAutoplay);
+  // carousel.addEventListener('mouseleave', startAutoplay);
+  // prevBtn?.addEventListener('click', stopAutoplay);
+  // nextBtn?.addEventListener('click', stopAutoplay);
+  // dots.forEach(dot => dot.addEventListener('click', stopAutoplay));
+}
+
+// Inicializa o carousel quando a página carregar
+document.addEventListener('DOMContentLoaded', initializeConsultorioCarousel);

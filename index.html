@@ -116,7 +116,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -245,46 +245,63 @@
                 <div class="consultorio-intro">
                     <p>O consultório fica localizado no <strong>Jardim da Penha</strong>, em Vitória/ES, em um espaço tranquilo e privativo. O ambiente foi cuidadosamente pensado para proporcionar conforto, acolhimento e confidencialidade durante as sessões.</p>
                 </div>
-                <div class="consultorio-gallery">
-                    <div class="gallery-item">
-                        <img src="assets/images/consultorio/sala-atendimento-01.jpg"
-                             alt="Sala de atendimento - Consultório de Psicologia em Vitória"
-                             width="800"
-                             height="600"
-                             fetchpriority="high">
-                        <p class="gallery-caption">Sala de atendimento</p>
+                <div class="consultorio-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <img src="assets/images/consultorio/sala-atendimento-01.jpg"
+                                     alt="Sala de atendimento - Consultório de Psicologia em Vitória"
+                                     width="800"
+                                     height="600"
+                                     fetchpriority="high">
+                                <p class="carousel-caption">Sala de atendimento</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/consultorio/poltronas-terapia.jpg"
+                                     alt="Poltronas confortáveis para terapia"
+                                     width="800"
+                                     height="600"
+                                     loading="lazy">
+                                <p class="carousel-caption">Espaço de acolhimento</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/consultorio/ambiente-acolhedor.jpg"
+                                     alt="Ambiente acolhedor do consultório"
+                                     width="800"
+                                     height="600"
+                                     loading="lazy">
+                                <p class="carousel-caption">Ambiente pensado para você</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/consultorio/sala-atendimento-02.jpg"
+                                     alt="Vista da sala de terapia"
+                                     width="800"
+                                     height="600"
+                                     loading="lazy">
+                                <p class="carousel-caption">Espaço de escuta</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/consultorio/espaco-privado.jpg"
+                                     alt="Espaço privado e seguro para psicoterapia"
+                                     width="800"
+                                     height="600"
+                                     loading="lazy">
+                                <p class="carousel-caption">Privacidade e confidencialidade</p>
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn carousel-next" aria-label="Próxima imagem">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/consultorio/poltronas-terapia.jpg"
-                             alt="Poltronas confortáveis para terapia"
-                             width="800"
-                             height="600"
-                             loading="lazy">
-                        <p class="gallery-caption">Espaço de acolhimento</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/consultorio/ambiente-acolhedor.jpg"
-                             alt="Ambiente acolhedor do consultório"
-                             width="800"
-                             height="600"
-                             loading="lazy">
-                        <p class="gallery-caption">Ambiente pensado para você</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/consultorio/sala-atendimento-02.jpg"
-                             alt="Vista da sala de terapia"
-                             width="800"
-                             height="600"
-                             loading="lazy">
-                        <p class="gallery-caption">Espaço de escuta</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/consultorio/espaco-privado.jpg"
-                             alt="Espaço privado e seguro para psicoterapia"
-                             width="800"
-                             height="600"
-                             loading="lazy">
-                        <p class="gallery-caption">Privacidade e confidencialidade</p>
+                    <div class="carousel-dots">
+                        <button class="carousel-dot active" aria-label="Ir para slide 1"></button>
+                        <button class="carousel-dot" aria-label="Ir para slide 2"></button>
+                        <button class="carousel-dot" aria-label="Ir para slide 3"></button>
+                        <button class="carousel-dot" aria-label="Ir para slide 4"></button>
+                        <button class="carousel-dot" aria-label="Ir para slide 5"></button>
                     </div>
                 </div>
                 <div class="consultorio-cta">
@@ -661,7 +678,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.min.js"></script>
 
     <!-- Doctoralia Widget Script -->
     <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>

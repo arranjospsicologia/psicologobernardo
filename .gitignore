@@ -12,3 +12,35 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Environment and API Keys
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+credentials/
+
+# Claude Code settings (keep local configs private)
+.claude/settings.json
+.claude/settings.local.json
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development files
+*.local.md
+notes.md
+TODO.md
+.scratch/

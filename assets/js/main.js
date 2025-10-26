@@ -416,3 +416,35 @@ function initializeConsultorioCarousel() {
 
 // Inicializa o carousel quando a página carregar
 document.addEventListener('DOMContentLoaded', initializeConsultorioCarousel);
+
+// ========== COOKIE CONSENT BANNER ==========
+function initCookieBanner() {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+
+  if (!cookieBanner || !acceptBtn) return;
+
+  // Verifica se o usuário já aceitou os cookies
+  const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+  if (!cookiesAccepted) {
+    // Mostra o banner após um pequeno delay
+    setTimeout(() => {
+      cookieBanner.classList.add('show');
+    }, 1000);
+  }
+
+  // Ao clicar em aceitar
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieBanner.classList.remove('show');
+
+    // Remove o banner do DOM após a animação
+    setTimeout(() => {
+      cookieBanner.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Inicializa o banner de cookies quando a página carregar
+document.addEventListener('DOMContentLoaded', initCookieBanner);

@@ -584,6 +584,33 @@ button {
   color: var(--text-light);
 }
 
+.projetos-nota {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background-color: #f0f7f8;
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.projetos-nota p {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.projetos-nota a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.projetos-nota a:hover {
+  color: #025e63;
+  text-decoration: none;
+}
+
 /* ========== FAQ ========== */
 .faq {
   background-color: var(--secondary-color);

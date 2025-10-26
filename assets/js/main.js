@@ -288,7 +288,12 @@ document.addEventListener('DOMContentLoaded', initializeSocialShare);
 function initializeConsultorioCarousel() {
   const carousel = document.querySelector('.consultorio-carousel');
 
-  if (!carousel) return; // Sai se o carousel não existir na página
+  if (!carousel) {
+    console.log('Carrossel não encontrado na página');
+    return;
+  }
+
+  console.log('Carrossel encontrado, inicializando...');
 
   const track = carousel.querySelector('.carousel-track');
   const slides = carousel.querySelectorAll('.carousel-slide');
@@ -296,11 +301,18 @@ function initializeConsultorioCarousel() {
   const nextBtn = carousel.querySelector('.carousel-next');
   const dots = carousel.querySelectorAll('.carousel-dot');
 
+  console.log(`Total de slides: ${slides.length}`);
+  console.log(`Botão prev: ${prevBtn ? 'encontrado' : 'NÃO encontrado'}`);
+  console.log(`Botão next: ${nextBtn ? 'encontrado' : 'NÃO encontrado'}`);
+  console.log(`Dots: ${dots.length} encontrados`);
+
   let currentSlide = 0;
   const totalSlides = slides.length;
 
   // Função para atualizar o carousel
   function updateCarousel() {
+    console.log(`Atualizando carrossel - slide atual: ${currentSlide}`);
+
     // Remove active de todos os slides e dots
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
@@ -312,18 +324,21 @@ function initializeConsultorioCarousel() {
 
   // Próximo slide
   function nextSlide() {
+    console.log('Clicou em próximo');
     currentSlide = (currentSlide + 1) % totalSlides;
     updateCarousel();
   }
 
   // Slide anterior
   function prevSlide() {
+    console.log('Clicou em anterior');
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     updateCarousel();
   }
 
   // Ir para slide específico
   function goToSlide(index) {
+    console.log(`Indo para slide ${index}`);
     currentSlide = index;
     updateCarousel();
   }
@@ -331,16 +346,23 @@ function initializeConsultorioCarousel() {
   // Event listeners para botões
   if (nextBtn) {
     nextBtn.addEventListener('click', nextSlide);
+    console.log('Event listener adicionado ao botão next');
   }
 
   if (prevBtn) {
     prevBtn.addEventListener('click', prevSlide);
+    console.log('Event listener adicionado ao botão prev');
   }
 
   // Event listeners para dots
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => goToSlide(index));
   });
+  console.log(`Event listeners adicionados aos ${dots.length} dots`);
+
+  // IMPORTANTE: Inicializa o primeiro slide
+  updateCarousel();
+  console.log('Carrossel inicializado com sucesso!');
 
   // Navegação por teclado
   document.addEventListener('keydown', (e) => {

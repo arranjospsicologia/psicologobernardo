@@ -536,6 +536,8 @@ button {
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--black);
+  background: none;
+  border: none;
   cursor: pointer;
   transition: var(--transition);
 }

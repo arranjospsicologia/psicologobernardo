@@ -1,17 +1,17 @@
 # robots.txt para psicologobernardo.com.br
-
 User-agent: *
 Allow: /
 
-# Bloquear templates (não devem ser indexados)
-Disallow: /servicos/_template-servico.html
-Disallow: /demandas/_template-problema.html
-Disallow: /proximidade/_template-proximidade.html
-
-# Bloquear scripts e configurações
-Disallow: /*.js$
-Disallow: /*.json$
-Disallow: /node_modules/
-
-# Sitemap
 Sitemap: https://psicologobernardo.com.br/sitemap.xml
+
+# Regras adicionais
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Evita bloqueios desnecessários
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /docs/

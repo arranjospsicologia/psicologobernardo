@@ -49,19 +49,51 @@ const sections = document.querySelectorAll('section[id]');
 function scrollActive() {
   const scrollY = window.pageYOffset;
 
+  // Remove active de todos os links primeiro
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Mapeamento de seções para links do menu
+  // Define quais seções ativam qual link do menu
+  const sectionToLinkMap = {
+    'home': 'home',
+    'sobre': 'sobre',
+    'rodape-sobre': 'sobre',
+    'consultorio': 'sobre',
+    'avaliacoes': 'servicos',
+    'servicos': 'servicos',
+    'projetos': 'projetos',
+    'faq': 'projetos',
+    'contato': 'contato'
+  };
+
+  let activeSection = null;
+
+  // Encontra a seção ativa atual
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 100;
     const sectionId = current.getAttribute('id');
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector('.nav-link[href*=' + sectionId + ']')?.classList.add('active');
-    } else {
-      document.querySelector('.nav-link[href*=' + sectionId + ']')?.classList.remove('active');
+      activeSection = sectionId;
     }
   });
+
+  // Ativa o link correspondente baseado no mapeamento
+  if (activeSection && sectionToLinkMap[activeSection]) {
+    const targetLink = sectionToLinkMap[activeSection];
+    const linkElement = document.querySelector(`.nav-link[href*="${targetLink}"]`);
+    if (linkElement) {
+      linkElement.classList.add('active');
+    }
+  }
 }
 window.addEventListener('scroll', scrollActive);
+
+// Ativa o link correto quando a página carrega
+document.addEventListener('DOMContentLoaded', scrollActive);
 
 // ========== FAQ ACCORDION ==========
 function initializeFAQ() {
@@ -448,3 +480,75 @@ function initCookieBanner() {
 
 // Inicializa o banner de cookies quando a página carregar
 document.addEventListener('DOMContentLoaded', initCookieBanner);
+
+// ========== BLOG TAG FILTER ==========
+function initializeBlogFilter() {
+  const filterButtons = document.querySelectorAll('.tag-filter-btn');
+  const blogCards = document.querySelectorAll('.blog-card');
+
+  if (!filterButtons.length || !blogCards.length) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedTag = button.getAttribute('data-tag');
+
+      // Remove active de todos os botões
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+
+      // Adiciona active ao botão clicado
+      button.classList.add('active');
+
+      // Filtra os posts
+      blogCards.forEach(card => {
+        const cardTags = card.getAttribute('data-tags');
+
+        // Se o filtro é "todos", mostra todos os cards
+        if (selectedTag === 'todos') {
+          card.style.display = 'block';
+          // Adiciona animação de fade in
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          // Verifica se o card tem a tag selecionada
+          if (cardTags && cardTags.includes(selectedTag)) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            // Esconde cards que não têm a tag
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        }
+      });
+
+      // Scroll suave para o topo da grade de posts
+      const blogGrid = document.querySelector('.blog-grid');
+      if (blogGrid) {
+        const headerHeight = document.getElementById('header').offsetHeight;
+        const filterHeight = document.querySelector('.blog-tags-filter').offsetHeight;
+        const targetPosition = blogGrid.offsetTop - headerHeight - filterHeight - 20;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Configura transições CSS para os cards
+  blogCards.forEach(card => {
+    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+  });
+}
+
+// Inicializa o filtro do blog quando a página carregar
+document.addEventListener('DOMContentLoaded', initializeBlogFilter);

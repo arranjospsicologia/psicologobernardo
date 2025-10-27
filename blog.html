@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog sobre saúde mental, psicologia e bem-estar por Bernardo Carielo, psicólogo em Vitória/ES - CRP 16/5527">
+    <meta name="keywords" content="psicologia, saúde mental, ansiedade, autoconhecimento, ACP, Abordagem Centrada na Pessoa, masculinidades, terapia, psicoterapia, Vitória ES">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
@@ -13,6 +14,49 @@
       gtag('js', new Date());
 
       gtag('config', 'G-WQ4XBV7333');
+    </script>
+
+    <!-- Schema.org Markup for Blog Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Blog - Psicólogo Bernardo",
+      "description": "Reflexões, dicas e conteúdos sobre saúde mental e psicologia",
+      "url": "https://psicologobernardo.com.br/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "Bernardo Carielo",
+        "jobTitle": "Psicólogo",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Conselho Regional de Psicologia - CRP 16/5527"
+        }
+      },
+      "keywords": ["psicologia", "saúde mental", "ansiedade", "autoconhecimento", "ACP", "Abordagem Centrada na Pessoa", "masculinidades", "terapia", "psicoterapia"],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Ansiedade"
+        },
+        {
+          "@type": "Thing",
+          "name": "Autoconhecimento"
+        },
+        {
+          "@type": "Thing",
+          "name": "Abordagem Centrada na Pessoa"
+        },
+        {
+          "@type": "Thing",
+          "name": "Masculinidades"
+        },
+        {
+          "@type": "Thing",
+          "name": "Saúde Mental"
+        }
+      ]
+    }
     </script>
 
     <title>Blog - Psicólogo Bernardo | Bernardo Carielo</title>
@@ -85,9 +129,31 @@
         <!-- Blog Grid -->
         <section class="blog-section section">
             <div class="container">
+                <!-- Tag Filter -->
+                <div class="blog-tags-filter">
+                    <button class="tag-filter-btn active" data-tag="todos">
+                        <i class="fas fa-th"></i> Todos os posts
+                    </button>
+                    <button class="tag-filter-btn" data-tag="ansiedade">
+                        <i class="fas fa-heart-pulse"></i> Ansiedade
+                    </button>
+                    <button class="tag-filter-btn" data-tag="autoconhecimento">
+                        <i class="fas fa-compass"></i> Autoconhecimento
+                    </button>
+                    <button class="tag-filter-btn" data-tag="acp">
+                        <i class="fas fa-book-open"></i> ACP
+                    </button>
+                    <button class="tag-filter-btn" data-tag="masculinidades">
+                        <i class="fas fa-users"></i> Masculinidades
+                    </button>
+                    <button class="tag-filter-btn" data-tag="saude-mental">
+                        <i class="fas fa-brain"></i> Saúde Mental
+                    </button>
+                </div>
+
                 <div class="blog-grid">
                     <!-- Post 1 -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-tags="ansiedade saude-mental">
                         <div class="blog-image">
                             <img src="assets/images/blog/ansiedade-desacelerar.jpg" alt="Quando a ansiedade vira demais: sinais de que talvez você precise desacelerar" loading="lazy">
                             <div class="blog-category">Saúde Mental</div>
@@ -104,7 +170,7 @@
                     </article>
 
                     <!-- Post 2 -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-tags="masculinidades saude-mental">
                         <div class="blog-image">
                             <img src="assets/images/blog/terapia-homens.jpg" alt="Por que é tão difícil para muitos homens falar sobre o que sentem" loading="lazy">
                             <div class="blog-category">Saúde Mental</div>
@@ -121,7 +187,7 @@
                     </article>
 
                     <!-- Post 3 -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-tags="autoconhecimento acp">
                         <div class="blog-image">
                             <img src="assets/images/blog/crise-existencial.jpg" alt="Quando tudo perde o sentido: o que a psicoterapia pode revelar" loading="lazy">
                             <div class="blog-category">Reflexões</div>
@@ -138,7 +204,7 @@
                     </article>
 
                     <!-- Post 4 -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-tags="saude-mental">
                         <div class="blog-image">
                             <img src="assets/images/blog/corpo-emocoes.jpg" alt="Quando o corpo fala: o que suas tensões e dores podem estar tentando dizer" loading="lazy">
                             <div class="blog-category">Saúde Mental</div>
@@ -155,7 +221,7 @@
                     </article>
 
                     <!-- Post 5 -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-tags="acp">
                         <div class="blog-image">
                             <img src="assets/images/blog/abordagem-centrada-pessoa.jpg" alt="O que é a Abordagem Centrada na Pessoa e por que ela continua tão atual" loading="lazy">
                             <div class="blog-category">ACP</div>

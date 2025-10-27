@@ -40,39 +40,54 @@
     <!-- Schema Markup: Professional Service -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Bernardo Carielo - Psicólogo",
-      "image": "https://psicologobernardo.com.br/assets/images/bernardo-avatar.jpg",
-      "@id": "https://psicologobernardo.com.br/#organization",
-      "url": "https://psicologobernardo.com.br/",
-      "telephone": "+55 27 99833-1228",
-      "priceRange": "$$",
-      "address": {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://psicologobernardo.com.br/#professionalservice",
+    "name": "Bernardo Carielo - Psicólogo",
+    "url": "https://psicologobernardo.com.br/",
+    "image": "https://psicologobernardo.com.br/assets/images/bernardo-avatar.jpg",
+    "telephone": "+5527998331228",
+    "priceRange": "$$",
+    "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Darcy Grijó, 50 - Sala 409",
         "addressLocality": "Vitória",
         "addressRegion": "ES",
         "postalCode": "29060-630",
         "addressCountry": "BR"
-      },
-      "geo": {
+    },
+    "geo": {
         "@type": "GeoCoordinates",
         "latitude": -20.2798925,
         "longitude": -40.3009252
-      },
-      "openingHours": "Mo-Fr 13:30-21:00",
-      "aggregateRating": {
+    },
+    "hasMap": "https://www.google.com/maps/place/Arranjos+Psicologia/",
+    "openingHoursSpecification": [
+        {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "13:30",
+        "closes": "21:00"
+        }
+    ],
+    "areaServed": [
+        { "@type": "City", "name": "Vitória" },
+        { "@type": "AdministrativeArea", "name": "Espírito Santo" }
+    ],
+    "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "65"
-      },
-      "sameAs": [
+        "reviewCount": "65",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
+    "sameAs": [
         "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
         "https://www.google.com/maps/place/Arranjos+Psicologia/"
-      ]
+    ]
     }
     </script>
+
       
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -544,7 +559,7 @@
               "name": "Como agendar uma consulta?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Você pode agendar diretamente pelo WhatsApp ou pelo Doctoralia. Basta clicar no botão "Agendar Consulta"."
+                "text": "Você pode agendar diretamente pelo WhatsApp ou pelo Doctoralia. Basta clicar no botão \"Agendar Consulta\"."
               }
             }
           ]

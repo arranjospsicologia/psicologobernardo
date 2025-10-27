@@ -369,6 +369,16 @@ button {
   align-items: center;
 }
 
+.hero-eyebrow { display: inline-block; 
+  background-color: rgba(8, 186, 156, 0.15); /* verde-água com opacidade */ 
+  color: #047c82; /* tom mais escuro da mesma paleta */ 
+  padding: 0.5rem 1rem; 
+  border-radius: 2rem; /* bordas bem arredondadas */ 
+  font-size: 0.95rem; 
+  font-weight: 500; 
+  margin-bottom: 1rem; /* espaçamento abaixo (separa do h1) */ 
+}
+
 .hero-title {
   font-size: var(--h1-size);
   color: var(--black);

@@ -38,9 +38,7 @@ Psicoterapia com a Abordagem Centrada na Pessoa em Vitória/ES.
 │   ├── js/
 │   └── images/
 │
-├── localizacao/               # Landing pages de localização
 ├── servicos/                  # Landing pages de serviços
-├── demandas/                  # Landing pages por demanda
 └── posts/                     # Artigos do blog
 ```
 

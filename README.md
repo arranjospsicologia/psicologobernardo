@@ -9,7 +9,7 @@ Site profissional do psicólogo Bernardo Carielo (CRP 16/5527), especializado em
 ## 📋 Sobre
 
 Psicoterapia com a Abordagem Centrada na Pessoa em Vitória/ES.
-- Atendimento presencial no Jardim da Penha
+- Atendimento presencial em Jardim da Penha - Vitória - ES
 - Atendimento online para todo o Brasil e brasileiros no exterior
 - Terapia individual, de casal e grupos terapêuticos
 

@@ -574,10 +574,16 @@ button {
   order: 2;
 }
 
+.projeto-image {
+  overflow: hidden;
+  max-width: 100%;
+}
+
 .projeto-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .projeto-content {
@@ -1135,6 +1141,16 @@ button {
 
   .projeto-card:nth-child(even) .projeto-image {
     order: 0;
+  }
+
+  .projeto-image {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .projeto-image img {
+    height: auto;
+    max-height: 300px;
   }
 
   .hero {

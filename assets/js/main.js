@@ -552,3 +552,274 @@ function initializeBlogFilter() {
 
 // Inicializa o filtro do blog quando a página carregar
 document.addEventListener('DOMContentLoaded', initializeBlogFilter);
+
+// ========== GOOGLE REVIEWS CAROUSEL ==========
+function initializeReviewsCarousel() {
+  // Carrega os reviews do JSON
+  fetch('/assets/data/reviews.json')
+    .then(res => res.json())
+    .then(reviews => {
+      const container = document.getElementById('reviews-container');
+      if (!container) return;
+
+      // Determina quantos reviews mostrar por vez (2 no desktop, 1 no mobile)
+      const getReviewsPerPage = () => window.innerWidth > 768 ? 2 : 1;
+      let currentIndex = 0;
+      let reviewsPerPage = getReviewsPerPage();
+
+      // Cria a estrutura do widget
+      const widgetHTML = `
+        <div class="reviews-widget">
+          <div class="reviews-widget-header">
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" class="google-logo">
+            <span class="reviews-title">Avaliações</span>
+            <div class="reviews-rating">
+              <span class="rating-number">5.0</span>
+              <div class="rating-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="reviews-carousel" id="reviews-carousel"></div>
+          <div class="reviews-nav">
+            <button class="review-nav-btn" id="review-prev" aria-label="Review anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="review-indicators" id="review-indicators"></div>
+            <button class="review-nav-btn" id="review-next" aria-label="Próximo review">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      `;
+      container.innerHTML = widgetHTML;
+
+      const carousel = document.getElementById('reviews-carousel');
+      const indicators = document.getElementById('review-indicators');
+      const prevBtn = document.getElementById('review-prev');
+      const nextBtn = document.getElementById('review-next');
+
+      // Função para truncar texto
+      function truncateText(text, maxLength = 150) {
+        if (text.length <= maxLength) {
+          return { truncated: text, isTruncated: false };
+        }
+        const truncated = text.substring(0, maxLength).trim() + '...';
+        return { truncated, isTruncated: true, full: text };
+      }
+
+      // Função para renderizar os reviews
+      function renderReviews() {
+        reviewsPerPage = getReviewsPerPage();
+        carousel.innerHTML = '';
+
+        // Calcula a largura de cada card baseado no número de reviews por página
+        // Considera o gap de 1.5rem entre os cards
+        const gapSize = 1.5; // rem
+        const cardWidth = reviewsPerPage === 1
+          ? '100%'
+          : `calc((100% - ${gapSize}rem) / ${reviewsPerPage})`;
+
+        reviews.forEach((review, index) => {
+          const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+          const { truncated, isTruncated, full } = truncateText(review.text);
+
+          const reviewCard = document.createElement('div');
+          reviewCard.className = 'review-card';
+          // Define a largura do card dinamicamente baseado em reviewsPerPage
+          reviewCard.style.flex = `0 0 ${cardWidth}`;
+          reviewCard.style.maxWidth = cardWidth;
+          reviewCard.innerHTML = `
+            <div class="review-header">
+              <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+                   alt="Google"
+                   class="review-google-icon">
+              <img src="${review.photo}"
+                   alt="${review.name}"
+                   class="review-avatar"
+                   onerror="this.src='https://via.placeholder.com/40'">
+              <div class="review-author">
+                <div class="review-name">${review.name}</div>
+                <div class="review-date">${review.date}</div>
+              </div>
+            </div>
+            <div class="review-stars">${stars}</div>
+            <div class="review-text-container">
+              <p class="review-text">${truncated}</p>
+              ${isTruncated ? '<button class="read-more-btn" data-expanded="false">Leia mais</button>' : ''}
+            </div>
+          `;
+
+          // Adiciona event listener para o botão "Leia mais"
+          if (isTruncated) {
+            const readMoreBtn = reviewCard.querySelector('.read-more-btn');
+            const textElement = reviewCard.querySelector('.review-text');
+
+            readMoreBtn.addEventListener('click', () => {
+              const isExpanded = readMoreBtn.getAttribute('data-expanded') === 'true';
+
+              if (isExpanded) {
+                textElement.textContent = truncated;
+                readMoreBtn.textContent = 'Leia mais';
+                readMoreBtn.setAttribute('data-expanded', 'false');
+              } else {
+                textElement.textContent = full;
+                readMoreBtn.textContent = 'Leia menos';
+                readMoreBtn.setAttribute('data-expanded', 'true');
+              }
+            });
+          }
+
+          carousel.appendChild(reviewCard);
+        });
+
+        updateCarousel();
+      }
+
+      // Função para atualizar a posição do carousel
+      function updateCarousel() {
+        // Desliza uma "página" por vez (reviewsPerPage reviews)
+        // No desktop: 2 reviews por página, então offset = -100%, -200%, etc.
+        // No mobile: 1 review por página, então offset = -100%, -200%, etc.
+        const offset = -(currentIndex * 100);
+        carousel.style.transform = `translateX(${offset}%)`;
+        updateButtons();
+        updateIndicators();
+      }
+
+      // Função para atualizar os botões
+      function updateButtons() {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= totalPages - 1;
+      }
+
+      // Função para criar e atualizar indicadores
+      function updateIndicators() {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        indicators.innerHTML = '';
+
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'review-dot' + (i === currentIndex ? ' active' : '');
+          dot.setAttribute('aria-label', `Ir para página ${i + 1}`);
+          dot.addEventListener('click', () => goToPage(i));
+          indicators.appendChild(dot);
+        }
+      }
+
+      // Função para ir para uma página específica
+      function goToPage(pageIndex) {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        if (pageIndex >= 0 && pageIndex < totalPages) {
+          currentIndex = pageIndex;
+          updateCarousel();
+        }
+      }
+
+      // Event listeners para os botões
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        if (currentIndex < totalPages - 1) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      // Atualiza ao redimensionar a janela
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const newReviewsPerPage = getReviewsPerPage();
+          if (newReviewsPerPage !== reviewsPerPage) {
+            currentIndex = 0; // Reset para o início ao mudar de layout
+            renderReviews();
+          }
+        }, 250);
+      });
+
+      // Suporte para navegação por teclado
+      document.addEventListener('keydown', (e) => {
+        if (!container) return;
+
+        const containerRect = container.getBoundingClientRect();
+        const isVisible = containerRect.top < window.innerHeight && containerRect.bottom > 0;
+
+        if (isVisible) {
+          if (e.key === 'ArrowLeft') {
+            prevBtn.click();
+          } else if (e.key === 'ArrowRight') {
+            nextBtn.click();
+          }
+        }
+      });
+
+      // Suporte a touch/swipe
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+          nextBtn.click();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+          prevBtn.click();
+        }
+      }
+
+      // Renderiza os reviews pela primeira vez
+      renderReviews();
+    })
+    .catch(err => {
+      console.error('Erro ao carregar avaliações:', err);
+      const container = document.getElementById('reviews-container');
+      if (container) {
+        container.innerHTML = '<p style="text-align: center; color: #666;">Erro ao carregar avaliações. Tente novamente mais tarde.</p>';
+      }
+    });
+}
+
+// Inicializa o carousel de reviews quando a página carregar
+document.addEventListener('DOMContentLoaded', initializeReviewsCarousel);
+
+// ========== BLOG IMAGE FALLBACK ==========
+function initializeBlogImageFallback() {
+  // Seleciona todas as imagens do blog
+  const blogImages = document.querySelectorAll('.blog-image img, .post-featured-image img, .blog-card img');
+
+  blogImages.forEach(img => {
+    // Adiciona event listener para erro de carregamento
+    img.addEventListener('error', function() {
+      // Define imagem placeholder
+      const isInPostsFolder = window.location.pathname.includes('/posts/');
+      const placeholderPath = isInPostsFolder
+        ? '../assets/images/blog-image-placeholder.jpg'
+        : 'assets/images/blog-image-placeholder.jpg';
+
+      // Verifica se já não é o placeholder para evitar loop infinito
+      if (!this.src.includes('blog-image-placeholder.jpg')) {
+        this.src = placeholderPath;
+        this.alt = 'Imagem de postagem do blog';
+      }
+    });
+  });
+}
+
+// Inicializa fallback de imagens do blog quando a página carregar
+document.addEventListener('DOMContentLoaded', initializeBlogImageFallback);

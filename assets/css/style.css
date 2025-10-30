@@ -58,7 +58,6 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--white);
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,10 +76,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-iframe {
-  max-width: 100%;
 }
 
 ul {
@@ -134,43 +129,34 @@ button {
   transition: var(--transition);
   cursor: pointer;
   text-decoration: none !important;
-}
-
-.btn:hover {
-  text-decoration: none !important;
-}
-
-.btn * {
-  color: inherit !important;
-  text-decoration: none !important;
+  border: none;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: #FFFFFF !important;
+  color: var(--white) !important;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-dark);
-  color: #FFFFFF !important;
+  color: var(--white) !important;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-}
-
-.btn-primary i {
-  color: #FFFFFF !important;
+  text-decoration: none !important;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   border: 2px solid var(--primary-color);
+  text-decoration: none !important;
 }
 
 .btn-secondary:hover {
   background-color: var(--primary-color);
-  color: var(--white);
+  color: var(--white) !important;
+  text-decoration: none !important;
 }
 
 .btn-outline {
@@ -592,7 +578,6 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-height: 300px;
 }
 
 .projeto-content {
@@ -792,16 +777,17 @@ button {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  height: 100%;
-  min-height: 450px;
-  max-width: 100%;
+  width: 100%;
+  height: 450px;
+  position: relative;
 }
 
 .contato-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  border: 0;
 }
 
 /* ========== CTA ========== */
@@ -829,26 +815,13 @@ button {
 }
 
 .cta .btn-primary {
-  background-color: #FFFFFF;
-  color: #08BA9C !important;
+  background-color: var(--white);
+  color: var(--primary-color) !important;
 }
 
 .cta .btn-primary:hover {
-  background-color: #F9ECE8;
-  color: #047C82 !important;
-}
-
-.cta .btn-primary i {
-  color: #08BA9C !important;
-}
-
-.cta .btn-primary:hover i {
-  color: #047C82 !important;
-}
-
-/* Garantir que ícones nos botões sempre sejam visíveis */
-.btn i {
-  color: inherit;
+  background-color: var(--secondary-color);
+  color: var(--primary-color) !important;
 }
 
 /* ========== FOOTER ========== */
@@ -936,6 +909,7 @@ button {
 .avaliacoes-section {
   background-color: var(--secondary-color);
   text-align: center;
+  overflow-x: hidden;
 }
 
 .avaliacoes-grid {
@@ -944,6 +918,7 @@ button {
   gap: 3rem;
   margin-top: 2rem;
   align-items: stretch;
+  max-width: 100%;
 }
 
 .avaliacao-item {
@@ -954,6 +929,8 @@ button {
   min-height: 600px;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .avaliacao-item > * {
@@ -961,6 +938,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 
 .avaliacoes-widget {
@@ -1041,8 +1019,6 @@ button {
     margin-top: 0.5rem;
     background-color: var(--secondary-color);
     border-radius: var(--radius-sm);
-    max-height: 400px;
-    overflow-y: auto;
   }
 
   .nav-dropdown .nav-link i {
@@ -1068,31 +1044,11 @@ button {
   .hero-container,
   .contato-grid,
   .projeto-card {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
-  /* No mobile, todas as imagens de projeto aparecem primeiro (acima do texto) */
-  .projeto-card .projeto-image {
-    order: -1 !important;
-  }
-
-  .projeto-card .projeto-content {
-    order: 1 !important;
-  }
-
-  /* Garantir que as imagens dos projetos carreguem corretamente no mobile */
-  .projeto-image {
-    min-height: 250px;
-    max-height: 400px;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .projeto-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  .projeto-card:nth-child(even) .projeto-image {
+    order: 0;
   }
 
   .hero {
@@ -1115,7 +1071,6 @@ button {
 @media screen and (max-width: 576px) {
   .container {
     padding: 0 1rem;
-    max-width: 100%;
   }
 
   .section {
@@ -1141,67 +1096,11 @@ button {
   }
 
   .avaliacao-item {
-    min-height: 600px;
-  }
-
-  /* Widget Doctoralia - tamanho mínimo igual ao Google */
-  .avaliacao-item #zl-url,
-  .avaliacao-item .zl-url {
-    min-height: 600px;
-    display: block;
+    min-height: auto;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
-  }
-
-  /* Correção específica para seção de contato em telas muito pequenas */
-  .contato {
-    overflow: hidden;
-  }
-
-  .contato-grid {
-    gap: 2rem;
-  }
-
-  .contato-info,
-  .contato-map {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .contato-map {
-    min-height: 300px;
-    margin: 0;
-  }
-
-  .info-card {
-    padding: 1rem;
-  }
-}
-
-/* Correção extra para telas muito pequenas (menos de 400px) */
-@media screen and (max-width: 400px) {
-  .container {
-    padding: 0 0.75rem;
-  }
-
-  .contato-grid,
-  .contato-info,
-  .contato-map {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .contato .container {
-    padding: 0 0.5rem;
-  }
-
-  .info-card {
-    margin: 0;
   }
 }
 
@@ -1922,6 +1821,31 @@ body.page-loaded {
   text-decoration-thickness: 2px;
 }
 
+/* Remove underline from buttons inside beneficios-content */
+.beneficios-content .btn,
+.beneficios-content a.btn,
+.beneficios-content a.btn-primary,
+.beneficios-content a.btn-secondary {
+  text-decoration: none !important;
+}
+
+.beneficios-content a.btn-primary {
+  color: var(--white) !important;
+}
+
+.beneficios-content a.btn-secondary {
+  color: var(--primary-color) !important;
+}
+
+.beneficios-content a.btn-primary:hover,
+.beneficios-content a.btn-secondary:hover {
+  text-decoration: none !important;
+}
+
+.beneficios-content a.btn-secondary:hover {
+  color: var(--white) !important;
+}
+
 .contato-alternativo {
   background-color: var(--secondary-color);
 }
@@ -2600,6 +2524,33 @@ body.page-loaded {
   text-decoration-thickness: 2px;
 }
 
+/* Remove underline from buttons inside main-content */
+.main-content .btn,
+.main-content a.btn,
+.main-content a.btn-primary,
+.main-content a.btn-secondary {
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+.main-content a.btn-primary {
+  color: var(--white) !important;
+}
+
+.main-content a.btn-secondary {
+  color: var(--primary-color) !important;
+}
+
+.main-content a.btn-primary:hover,
+.main-content a.btn-secondary:hover,
+.main-content a.btn:hover {
+  text-decoration: none !important;
+}
+
+.main-content a.btn-secondary:hover {
+  color: var(--white) !important;
+}
+
 .main-content ul,
 .main-content ol {
   margin-bottom: 2rem;
@@ -2654,6 +2605,41 @@ body.page-loaded {
 .cta-box p {
   color: var(--text-color);
   margin-bottom: 1rem;
+}
+
+/* Ensure buttons in cta-box have proper styling */
+.cta-box .btn,
+.cta-box a.btn,
+.cta-box a.btn-primary,
+.cta-box a.btn-secondary {
+  text-decoration: none !important;
+  display: inline-flex;
+}
+
+.cta-box a.btn-primary {
+  color: var(--white) !important;
+}
+
+.cta-box a.btn-secondary {
+  color: var(--primary-color) !important;
+}
+
+.cta-box a.btn-primary:hover,
+.cta-box a.btn-secondary:hover {
+  text-decoration: none !important;
+}
+
+.cta-box a.btn-secondary:hover {
+  color: var(--white) !important;
+}
+
+/* Doctoralia widget link styling */
+.cta-box .zl-url,
+.main-content .zl-url,
+.beneficios-content .zl-url,
+a.zl-url {
+  text-decoration: none !important;
+  color: var(--primary-color) !important;
 }
 
 /* Related Links */
@@ -2808,5 +2794,259 @@ body.page-loaded {
     flex: 1 1 calc(50% - 0.5rem);
     justify-content: center;
     min-width: 140px;
+  }
+}
+
+/* ========== GOOGLE REVIEWS WIDGET ========== */
+.reviews-widget {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.reviews-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.reviews-widget-header .google-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.reviews-widget-header .reviews-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reviews-rating .rating-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.reviews-rating .rating-stars {
+  color: #fbbc04;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.reviews-carousel {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+.review-card {
+  /* A largura é definida dinamicamente via JavaScript */
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.review-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.review-google-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  opacity: 0.9;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+}
+
+.review-author {
+  flex: 1;
+}
+
+.review-name {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.review-stars {
+  color: #fbbc04;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 2px;
+}
+
+.review-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-text {
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.read-more-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: var(--transition);
+}
+
+.read-more-btn:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Navigation Buttons */
+.reviews-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.review-nav-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.review-nav-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+.review-nav-btn:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.review-indicators {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.review-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.review-dot.active {
+  background: var(--primary-color);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .reviews-widget-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .reviews-widget-header .google-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .reviews-widget-header .reviews-title {
+    font-size: 1.1rem;
+  }
+
+  .reviews-rating .rating-number {
+    font-size: 1.25rem;
+  }
+
+  .reviews-rating .rating-stars {
+    font-size: 1.1rem;
+  }
+
+  .review-card {
+    flex: 0 0 100%;
+  }
+
+  .reviews-carousel {
+    gap: 0;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+  }
+
+  .review-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth scroll behavior */
+@media (prefers-reduced-motion: reduce) {
+  .reviews-carousel {
+    transition: none;
   }
 }

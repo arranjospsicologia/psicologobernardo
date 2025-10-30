@@ -88,7 +88,102 @@
     }
     </script>
 
-      
+    <!-- Schema Markup: Reviews -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Tamiris R. Lara"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "reviewBody": "O Bernardo é um excelente profissional, e a Arranjos é um lugar muito aconchegante, onde os pacientes se sentem acolhidos. Tudo isso pode ser notado logo de primeira pelas cores e pela decoração, que sempre tem uma história ou que foi feita à mão pelo próprio psicólogo.",
+        "itemReviewed": {
+            "@type": "ProfessionalService",
+            "name": "Bernardo Carielo - Psicólogo"
+        }
+        },
+        {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Victor Raft"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "reviewBody": "O Bernardo é um psicólogo diferenciado! Ele consegue realmente se conectar com as pessoas e não mede esforços para ajudar da forma que conseguir. Espero de coração que muitas pessoas possam ter a oportunidade de conhecer a Arranjos e serem beneficiadas pelo lindo trabalho que é feito nela!",
+        "itemReviewed": {
+            "@type": "ProfessionalService",
+            "name": "Bernardo Carielo - Psicólogo"
+        }
+        },
+        {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Viviane Raposo"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "reviewBody": "Eu sou completamente apaixonada por esse espaço. Cada detalhe foi pensado com tanto carinho que só de entrar a gente sente uma paz enorme!",
+        "itemReviewed": {
+            "@type": "ProfessionalService",
+            "name": "Bernardo Carielo - Psicólogo"
+        }
+        },
+        {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Lucas Sartori"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "reviewBody": "Além de um excelente profissional, encontra-se excepcionais balinhas de canela e café.",
+        "itemReviewed": {
+            "@type": "ProfessionalService",
+            "name": "Bernardo Carielo - Psicólogo"
+        }
+        },
+        {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Tarcisio Muciaccia"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "reviewBody": "Excelente!",
+        "itemReviewed": {
+            "@type": "ProfessionalService",
+            "name": "Bernardo Carielo - Psicólogo"
+        }
+        }
+    ]
+    }
+    </script>
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
@@ -102,6 +197,8 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
 </head>
 <body>
     <!-- WhatsApp Floating Button -->
@@ -333,9 +430,9 @@
                     </div>
 
                     <div class="avaliacao-item">
-                        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                        <div class="elfsight-app-36eef16e-6ee7-4400-9060-5e22cba8d474" data-elfsight-app-lazy></div>
+                       <div id="reviews-container"></div>
                     </div>
+
                 </div>
                 <div class="avaliacoes-cta">
                     <p>Quer conhecer mais sobre meu trabalho? <a href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria" target="_blank" rel="noopener">Veja todas as 65 avaliações</a> ou <a href="agendar-consulta.html">agende sua primeira sessão</a>.</p>
@@ -723,5 +820,8 @@
 
     <!-- Doctoralia Widget Script -->
     <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
+  
+
+
 </body>
 </html>

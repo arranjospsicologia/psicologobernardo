@@ -58,6 +58,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,6 +77,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 ul {
@@ -128,18 +133,33 @@ button {
   font-weight: 500;
   transition: var(--transition);
   cursor: pointer;
+  text-decoration: none !important;
+}
+
+.btn:hover {
+  text-decoration: none !important;
+}
+
+.btn * {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: var(--white);
+  color: #FFFFFF !important;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-dark);
+  color: #FFFFFF !important;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.btn-primary i {
+  color: #FFFFFF !important;
 }
 
 .btn-secondary {
@@ -572,6 +592,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  min-height: 300px;
 }
 
 .projeto-content {
@@ -773,11 +794,14 @@ button {
   box-shadow: var(--shadow-md);
   height: 100%;
   min-height: 450px;
+  max-width: 100%;
 }
 
 .contato-map iframe {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  border: 0;
 }
 
 /* ========== CTA ========== */
@@ -805,12 +829,26 @@ button {
 }
 
 .cta .btn-primary {
-  background-color: var(--white);
-  color: var(--primary-color);
+  background-color: #FFFFFF;
+  color: #08BA9C !important;
 }
 
 .cta .btn-primary:hover {
-  background-color: var(--secondary-color);
+  background-color: #F9ECE8;
+  color: #047C82 !important;
+}
+
+.cta .btn-primary i {
+  color: #08BA9C !important;
+}
+
+.cta .btn-primary:hover i {
+  color: #047C82 !important;
+}
+
+/* Garantir que ícones nos botões sempre sejam visíveis */
+.btn i {
+  color: inherit;
 }
 
 /* ========== FOOTER ========== */
@@ -1003,6 +1041,8 @@ button {
     margin-top: 0.5rem;
     background-color: var(--secondary-color);
     border-radius: var(--radius-sm);
+    max-height: 400px;
+    overflow-y: auto;
   }
 
   .nav-dropdown .nav-link i {
@@ -1028,11 +1068,31 @@ button {
   .hero-container,
   .contato-grid,
   .projeto-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
-  .projeto-card:nth-child(even) .projeto-image {
-    order: 0;
+  /* No mobile, todas as imagens de projeto aparecem primeiro (acima do texto) */
+  .projeto-card .projeto-image {
+    order: -1 !important;
+  }
+
+  .projeto-card .projeto-content {
+    order: 1 !important;
+  }
+
+  /* Garantir que as imagens dos projetos carreguem corretamente no mobile */
+  .projeto-image {
+    min-height: 250px;
+    max-height: 400px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .projeto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .hero {
@@ -1055,6 +1115,7 @@ button {
 @media screen and (max-width: 576px) {
   .container {
     padding: 0 1rem;
+    max-width: 100%;
   }
 
   .section {
@@ -1080,11 +1141,67 @@ button {
   }
 
   .avaliacao-item {
-    min-height: auto;
+    min-height: 600px;
+  }
+
+  /* Widget Doctoralia - tamanho mínimo igual ao Google */
+  .avaliacao-item #zl-url,
+  .avaliacao-item .zl-url {
+    min-height: 600px;
+    display: block;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
+  }
+
+  /* Correção específica para seção de contato em telas muito pequenas */
+  .contato {
+    overflow: hidden;
+  }
+
+  .contato-grid {
+    gap: 2rem;
+  }
+
+  .contato-info,
+  .contato-map {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contato-map {
+    min-height: 300px;
+    margin: 0;
+  }
+
+  .info-card {
+    padding: 1rem;
+  }
+}
+
+/* Correção extra para telas muito pequenas (menos de 400px) */
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .contato-grid,
+  .contato-info,
+  .contato-map {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .contato .container {
+    padding: 0 0.5rem;
+  }
+
+  .info-card {
+    margin: 0;
   }
 }
 

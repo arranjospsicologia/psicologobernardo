@@ -59,9 +59,10 @@ function scrollActive() {
   const sectionToLinkMap = {
     'home': 'home',
     'sobre': 'sobre',
+    'avaliacoes': 'sobre',
+    'credenciais': 'sobre',
     'rodape-sobre': 'sobre',
     'consultorio': 'sobre',
-    'avaliacoes': 'servicos',
     'servicos': 'servicos',
     'projetos': 'projetos',
     'faq': 'projetos',

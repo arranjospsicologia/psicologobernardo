@@ -675,7 +675,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .credencial-icon i {
@@ -686,13 +686,13 @@ button {
 .credencial-card h3 {
   font-size: 1.5rem;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .credencial-card article {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -705,7 +705,7 @@ button {
 .credencial-card h4 {
   font-size: 1.125rem;
   color: var(--text-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
@@ -723,12 +723,12 @@ button {
 
 .credencial-card ul {
   margin-left: 1.5rem;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .credencial-card ul li {
   color: var(--text-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
   line-height: 1.6;
 }
 
@@ -2348,17 +2348,27 @@ body.page-loaded {
 
 .carousel-track {
   display: flex;
+  position: relative;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-slide {
   min-width: 100%;
-  display: none;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  will-change: opacity;
 }
 
 .carousel-slide.active {
+  position: relative;
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .carousel-slide img {

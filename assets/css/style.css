@@ -8,6 +8,8 @@
   --accent-yellow: #F7B42A;
   --accent-coral: #F83A50;
   --accent-orange: #FFA467;
+  --accent-green: #25D366;
+  --accent-blue: #5B9BD5;
   --gray: #75828A;
   --white: #FFFFFF;
   --black: #1a1a1a;
@@ -1423,45 +1425,96 @@ button {
 .blog-pagination {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
 }
 
 .pagination-btn {
-  width: 40px;
-  height: 40px;
+  padding: 0.75rem 1.5rem;
   border-radius: var(--radius-sm);
-  background-color: var(--secondary-color);
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--gray);
+  color: var(--gray);
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-number {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--radius-sm);
+  background-color: var(--white);
   color: var(--text-color);
   font-weight: 500;
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
 }
 
-.pagination-btn:hover,
-.pagination-btn.active {
+.pagination-number:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.pagination-number.active {
   background-color: var(--primary-color);
   color: var(--white);
+  border-color: var(--primary-color);
 }
 
 /* ========== BLOG POST STYLES ========== */
 .blog-post {
-  padding-top: calc(var(--header-height) + 2rem);
+  padding-top: calc(var(--header-height) + 3rem);
 }
 
 .breadcrumb {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
   color: var(--text-light);
   font-size: var(--small-size);
+  padding-top: 0.5rem;
+}
+
+.breadcrumb a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .breadcrumb a:hover {
   color: var(--primary-color);
+}
+
+.breadcrumb span {
+  color: var(--text-light);
 }
 
 .post-header {

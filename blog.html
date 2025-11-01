@@ -61,7 +61,11 @@
 
     <title>Blog - Psicólogo Bernardo | Bernardo Carielo</title>
     
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -152,9 +156,43 @@
                     </button>
                 </div>
 
-                <div class="blog-grid">
-                    <!-- Post 1 -->
-                    <article class="blog-card" data-tags="ansiedade saude-mental">
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Post 1 - Mais recente -->
+                    <article class="blog-card" data-tags="acp" data-page="1">
+                        <div class="blog-image">
+                            <img src="assets/images/blog/trabalho-interno-performance.jpg" alt="Trabalho interno x performance: como medir resultado?" loading="lazy">
+                            <div class="blog-category">ACP</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 31 Out 2025</span>
+                                <span><i class="far fa-clock"></i> 7 min de leitura</span>
+                            </div>
+                            <h2>Trabalho interno x performance: como medir "resultado"?</h2>
+                            <p>Em saúde mental, "resultado" raramente cabe em números. Às vezes, é poder dizer "não", dormir melhor, ou chorar sem se punir.</p>
+                            <a href="posts/trabalho-interno-vs-performance.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-card" data-tags="autoconhecimento" data-page="1">
+                        <div class="blog-image">
+                            <img src="assets/images/blog/automatico-modo-vida.jpg" alt="Quando o automático vira modo de vida" loading="lazy">
+                            <div class="blog-category">Autoconhecimento</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 30 Out 2025</span>
+                                <span><i class="far fa-clock"></i> 6 min de leitura</span>
+                            </div>
+                            <h2>Quando o "automático" vira modo de vida</h2>
+                            <p>Viver no automático economiza energia — até que custa caro. O convite aqui é desacelerar o olhar e reaprender preferências.</p>
+                            <a href="posts/quando-automatico-vira-modo-de-vida.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-card" data-tags="ansiedade saude-mental" data-page="1">
                         <div class="blog-image">
                             <img src="assets/images/blog/ansiedade-desacelerar.jpg" alt="Quando a ansiedade vira demais: sinais de que talvez você precise desacelerar" loading="lazy">
                             <div class="blog-category">Saúde Mental</div>
@@ -170,8 +208,8 @@
                         </div>
                     </article>
 
-                    <!-- Post 2 -->
-                    <article class="blog-card" data-tags="masculinidades saude-mental">
+                    <!-- Post 4 -->
+                    <article class="blog-card" data-tags="masculinidades saude-mental" data-page="1">
                         <div class="blog-image">
                             <img src="assets/images/blog/terapia-homens.jpg" alt="Por que é tão difícil para muitos homens falar sobre o que sentem" loading="lazy">
                             <div class="blog-category">Saúde Mental</div>
@@ -187,8 +225,8 @@
                         </div>
                     </article>
 
-                    <!-- Post 3 -->
-                    <article class="blog-card" data-tags="autoconhecimento acp">
+                    <!-- Post 5 -->
+                    <article class="blog-card" data-tags="autoconhecimento acp" data-page="1">
                         <div class="blog-image">
                             <img src="assets/images/blog/crise-existencial.jpg" alt="Quando tudo perde o sentido: o que a psicoterapia pode revelar" loading="lazy">
                             <div class="blog-category">Reflexões</div>
@@ -204,8 +242,8 @@
                         </div>
                     </article>
 
-                    <!-- Post 4 -->
-                    <article class="blog-card" data-tags="saude-mental">
+                    <!-- Post 6 -->
+                    <article class="blog-card" data-tags="saude-mental" data-page="1">
                         <div class="blog-image">
                             <img src="assets/images/blog/corpo-emocoes.jpg" alt="Quando o corpo fala: o que suas tensões e dores podem estar tentando dizer" loading="lazy">
                             <div class="blog-category">Saúde Mental</div>
@@ -221,8 +259,8 @@
                         </div>
                     </article>
 
-                    <!-- Post 5 -->
-                    <article class="blog-card" data-tags="acp">
+                    <!-- Post 7 - Página 2 -->
+                    <article class="blog-card" data-tags="acp" data-page="2" style="display: none;">
                         <div class="blog-image">
                             <img src="assets/images/blog/abordagem-centrada-pessoa.jpg" alt="O que é a Abordagem Centrada na Pessoa e por que ela continua tão atual" loading="lazy">
                             <div class="blog-category">ACP</div>
@@ -237,6 +275,20 @@
                             <a href="posts/abordagem-centrada-pessoa.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
+                </div>
+
+                <!-- Paginação -->
+                <div class="blog-pagination" id="blog-pagination">
+                    <button class="pagination-btn" id="prev-page" disabled>
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <div class="pagination-numbers" id="pagination-numbers">
+                        <button class="pagination-number active" data-page="1">1</button>
+                        <button class="pagination-number" data-page="2">2</button>
+                    </div>
+                    <button class="pagination-btn" id="next-page">
+                        Próxima <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>

@@ -37,17 +37,20 @@
     <meta name="twitter:image" content="https://psicologobernardo.com.br/assets/images/og-image.jpg">
 
 
-    <!-- Schema Markup: Professional Service -->
+    <!-- Schema Markup: LocalBusiness + ProfessionalService (principal) -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": "https://psicologobernardo.com.br/#professionalservice",
     "name": "Bernardo Carielo - Psicólogo",
     "url": "https://psicologobernardo.com.br/",
     "image": "https://psicologobernardo.com.br/assets/images/bernardo-avatar.jpg",
     "telephone": "+5527998331228",
+    "description": "Psicólogo clínico com mais de 8 anos de experiência, especializado em Abordagem Centrada na Pessoa (ACP). Atendimento presencial em Vitória/ES e online para todo o Brasil.",
     "priceRange": "$$",
+    "paymentAccepted": ["Cash", "Bank Transfer", "Pix"],
+    "currenciesAccepted": "BRL",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Darcy Grijó, 50 - Sala 409",
@@ -65,7 +68,7 @@
     "openingHoursSpecification": [
         {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "13:30",
         "closes": "21:00"
         }
@@ -81,119 +84,54 @@
         "bestRating": "5",
         "worstRating": "1"
     },
-    "employee": {
-        "@id": "https://psicologobernardo.com.br/#person"
-    },
-    "founder": {
-        "@id": "https://psicologobernardo.com.br/#person"
-    },
+    "review": [
+        {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Tamiris R. Lara" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "O Bernardo é um excelente profissional, e a Arranjos é um lugar muito aconchegante, onde os pacientes se sentem acolhidos. Tudo isso pode ser notado logo de primeira pelas cores e pela decoração, que sempre tem uma história ou que foi feita à mão pelo próprio psicólogo."
+        },
+        {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Victor Raft" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "O Bernardo é um psicólogo diferenciado! Ele consegue realmente se conectar com as pessoas e não mede esforços para ajudar da forma que conseguir. Espero de coração que muitas pessoas possam ter a oportunidade de conhecer a Arranjos e serem beneficiadas pelo lindo trabalho que é feito nela!"
+        },
+        {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Viviane Raposo" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Eu sou completamente apaixonada por esse espaço. Cada detalhe foi pensado com tanto carinho que só de entrar a gente sente uma paz enorme!"
+        },
+        {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Lucas Sartori" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Além de um excelente profissional, encontra-se excepcionais balinhas de canela e café."
+        },
+        {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Tarcisio Muciaccia" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Excelente!"
+        }
+    ],
+    "employee": { "@id": "https://psicologobernardo.com.br/#person" },
+    "founder": { "@id": "https://psicologobernardo.com.br/#person" },
     "sameAs": [
         "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
-        "https://www.google.com/maps/place/Arranjos+Psicologia/"
+        "https://www.google.com/maps/place/Arranjos+Psicologia/",
+        "https://www.instagram.com/bcarielo",
+        "https://www.facebook.com/bcarielo"
     ]
     }
     </script>
 
-    <!-- Schema Markup: Reviews -->
+    <!-- Schema Markup: Person (Profissional vinculado) -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-        {
-        "@type": "Review",
-        "author": {
-            "@type": "Person",
-            "name": "Tamiris R. Lara"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "reviewBody": "O Bernardo é um excelente profissional, e a Arranjos é um lugar muito aconchegante, onde os pacientes se sentem acolhidos. Tudo isso pode ser notado logo de primeira pelas cores e pela decoração, que sempre tem uma história ou que foi feita à mão pelo próprio psicólogo.",
-        "itemReviewed": {
-            "@type": "ProfessionalService",
-            "name": "Bernardo Carielo - Psicólogo"
-        }
-        },
-        {
-        "@type": "Review",
-        "author": {
-            "@type": "Person",
-            "name": "Victor Raft"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "reviewBody": "O Bernardo é um psicólogo diferenciado! Ele consegue realmente se conectar com as pessoas e não mede esforços para ajudar da forma que conseguir. Espero de coração que muitas pessoas possam ter a oportunidade de conhecer a Arranjos e serem beneficiadas pelo lindo trabalho que é feito nela!",
-        "itemReviewed": {
-            "@type": "ProfessionalService",
-            "name": "Bernardo Carielo - Psicólogo"
-        }
-        },
-        {
-        "@type": "Review",
-        "author": {
-            "@type": "Person",
-            "name": "Viviane Raposo"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "reviewBody": "Eu sou completamente apaixonada por esse espaço. Cada detalhe foi pensado com tanto carinho que só de entrar a gente sente uma paz enorme!",
-        "itemReviewed": {
-            "@type": "ProfessionalService",
-            "name": "Bernardo Carielo - Psicólogo"
-        }
-        },
-        {
-        "@type": "Review",
-        "author": {
-            "@type": "Person",
-            "name": "Lucas Sartori"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "reviewBody": "Além de um excelente profissional, encontra-se excepcionais balinhas de canela e café.",
-        "itemReviewed": {
-            "@type": "ProfessionalService",
-            "name": "Bernardo Carielo - Psicólogo"
-        }
-        },
-        {
-        "@type": "Review",
-        "author": {
-            "@type": "Person",
-            "name": "Tarcisio Muciaccia"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "reviewBody": "Excelente!",
-        "itemReviewed": {
-            "@type": "ProfessionalService",
-            "name": "Bernardo Carielo - Psicólogo"
-        }
-        }
-    ]
-    }
-    </script>
-
-    <!-- Schema Markup: Person (Professional) -->
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": ["Person", "Psychologist"],
+    "@type": "Person",
     "@id": "https://psicologobernardo.com.br/#person",
     "name": "Bernardo Carielo Macedo de Oliveira Pinto",
     "alternateName": "Bernardo Carielo",
@@ -201,19 +139,7 @@
     "image": "https://psicologobernardo.com.br/assets/images/bernardo-avatar.jpg",
     "jobTitle": "Psicólogo Clínico",
     "description": "Psicólogo clínico com mais de 8 anos de experiência, especializado em Abordagem Centrada na Pessoa (ACP). Atendimento presencial em Vitória/ES e online para todo o Brasil.",
-    "worksFor": {
-        "@type": "Organization",
-        "name": "Arranjos Psicologia",
-        "url": "https://arranjospsicologia.com.br",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rua Darcy Grijó, 50 - Sala 409",
-            "addressLocality": "Vitória",
-            "addressRegion": "ES",
-            "postalCode": "29060-630",
-            "addressCountry": "BR"
-        }
-    },
+    "worksFor": { "@id": "https://psicologobernardo.com.br/#professionalservice" },
     "hasCredential": [
         {
         "@type": "EducationalOccupationalCredential",
@@ -225,7 +151,7 @@
             "name": "Universidade Federal do Espírito Santo",
             "url": "https://ufes.br"
         },
-        "dateCreated": "2017"
+        "dateCreated": "2017-01-01"
         },
         {
         "@type": "EducationalOccupationalCredential",
@@ -237,7 +163,7 @@
             "name": "EncontroACP",
             "url": "https://encontroacp.com.br"
         },
-        "validFrom": "2023"
+        "dateCreated": "2023-01-01"
         },
         {
         "@type": "EducationalOccupationalCredential",
@@ -249,7 +175,7 @@
             "name": "EncontroACP",
             "url": "https://encontroacp.com.br"
         },
-        "dateCreated": "2022"
+        "dateCreated": "2022-01-01"
         },
         {
         "@type": "EducationalOccupationalCredential",
@@ -260,7 +186,7 @@
             "@type": "Organization",
             "name": "Areté"
         },
-        "dateCreated": "2017"
+        "dateCreated": "2017-01-01"
         }
     ],
     "memberOf": [

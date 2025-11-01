@@ -482,60 +482,78 @@ function initCookieBanner() {
 // Inicializa o banner de cookies quando a página carregar
 document.addEventListener('DOMContentLoaded', initCookieBanner);
 
-// ========== BLOG TAG FILTER ==========
-function initializeBlogFilter() {
-  const filterButtons = document.querySelectorAll('.tag-filter-btn');
+// ========== BLOG FILTER DROPDOWN ==========
+function initializeBlogFilterDropdown() {
+  const dropdownBtn = document.getElementById('filter-dropdown-btn');
+  const dropdownMenu = document.getElementById('filter-dropdown-menu');
+  const filterOptions = document.querySelectorAll('.filter-option');
+  const currentFilterLabel = document.getElementById('current-filter-label');
   const blogCards = document.querySelectorAll('.blog-card');
 
-  if (!filterButtons.length || !blogCards.length) return;
+  if (!dropdownBtn || !dropdownMenu || !filterOptions.length) return;
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const selectedTag = button.getAttribute('data-tag');
+  // Toggle dropdown
+  dropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownBtn.classList.toggle('active');
+    dropdownMenu.classList.toggle('active');
+  });
 
-      // Remove active de todos os botões
-      filterButtons.forEach(btn => btn.classList.remove('active'));
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownBtn.classList.remove('active');
+      dropdownMenu.classList.remove('active');
+    }
+  });
 
-      // Adiciona active ao botão clicado
-      button.classList.add('active');
+  // Filter options click
+  filterOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      const selectedTag = option.getAttribute('data-tag');
+      const selectedLabel = option.querySelector('span').textContent;
 
-      // Filtra os posts
+      // Update active state
+      filterOptions.forEach(opt => opt.classList.remove('active'));
+      option.classList.add('active');
+
+      // Update dropdown label
+      currentFilterLabel.textContent = selectedLabel;
+
+      // Close dropdown
+      dropdownBtn.classList.remove('active');
+      dropdownMenu.classList.remove('active');
+
+      // Filter cards
       blogCards.forEach(card => {
         const cardTags = card.getAttribute('data-tags');
 
-        // Se o filtro é "todos", mostra todos os cards
         if (selectedTag === 'todos') {
           card.style.display = 'block';
-          // Adiciona animação de fade in
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 10);
         } else {
-          // Verifica se o card tem a tag selecionada
           if (cardTags && cardTags.includes(selectedTag)) {
             card.style.display = 'block';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            }, 10);
           } else {
-            // Esconde cards que não têm a tag
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 300);
+            card.style.display = 'none';
           }
         }
       });
 
-      // Scroll suave para o topo da grade de posts
+      // Animate card transitions
+      setTimeout(() => {
+        blogCards.forEach(card => {
+          if (card.style.display === 'block') {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }
+        });
+      }, 50);
+
+      // Smooth scroll to blog grid
       const blogGrid = document.querySelector('.blog-grid');
       if (blogGrid) {
         const headerHeight = document.getElementById('header').offsetHeight;
-        const filterHeight = document.querySelector('.blog-tags-filter').offsetHeight;
-        const targetPosition = blogGrid.offsetTop - headerHeight - filterHeight - 20;
+        const targetPosition = blogGrid.offsetTop - headerHeight - 20;
 
         window.scrollTo({
           top: targetPosition,
@@ -543,28 +561,127 @@ function initializeBlogFilter() {
         });
       }
 
-      // Reset pagination to page 1 after filter
+      // Reset pagination to page 1
       if (typeof window.blogPagination !== 'undefined') {
         window.blogPagination.refresh();
       }
     });
   });
 
-  // Configura transições CSS para os cards
+  // Configure CSS transitions for cards
   blogCards.forEach(card => {
     card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
   });
+
+  // Expose globally for compatibility
+  window.getActiveFilter = () => {
+    const activeOption = document.querySelector('.filter-option.active');
+    return activeOption ? activeOption.getAttribute('data-tag') : 'todos';
+  };
 }
 
-// Inicializa o filtro do blog quando a página carregar
-document.addEventListener('DOMContentLoaded', initializeBlogFilter);
+// Initialize filter dropdown when page loads
+document.addEventListener('DOMContentLoaded', initializeBlogFilterDropdown);
+
+// ========== BLOG SEARCH ==========
+function initializeBlogSearch() {
+  const searchInput = document.getElementById('blog-search-input');
+  const clearSearchBtn = document.getElementById('clear-search');
+  const searchResultsCount = document.getElementById('search-results-count');
+  const blogCards = document.querySelectorAll('.blog-card');
+
+  if (!searchInput || !clearSearchBtn || !searchResultsCount) return;
+
+  let searchTerm = '';
+
+  // Função para buscar posts
+  function performSearch() {
+    searchTerm = searchInput.value.toLowerCase().trim();
+
+    if (searchTerm === '') {
+      // Limpa busca
+      clearSearchBtn.style.display = 'none';
+      searchResultsCount.style.display = 'none';
+
+      // Reseta filtros para "todos"
+      const allPostsOption = document.querySelector('.filter-option[data-tag="todos"]');
+      if (allPostsOption) {
+        allPostsOption.click();
+      }
+      return;
+    }
+
+    // Mostra botão de limpar
+    clearSearchBtn.style.display = 'flex';
+
+    // Filtra posts por título
+    let matchCount = 0;
+    blogCards.forEach(card => {
+      const title = card.getAttribute('data-title') || '';
+      const matches = title.includes(searchTerm);
+
+      if (matches) {
+        card.setAttribute('data-search-match', 'true');
+        matchCount++;
+      } else {
+        card.setAttribute('data-search-match', 'false');
+      }
+    });
+
+    // Mostra contagem de resultados
+    searchResultsCount.style.display = 'block';
+    searchResultsCount.textContent = matchCount === 0
+      ? 'Nenhum post encontrado'
+      : `${matchCount} post${matchCount > 1 ? 's' : ''} encontrado${matchCount > 1 ? 's' : ''}`;
+
+    // Atualiza paginação
+    if (window.blogPagination) {
+      window.blogPagination.refresh();
+    }
+  }
+
+  // Event listeners
+  searchInput.addEventListener('input', performSearch);
+  searchInput.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape') {
+      clearSearch();
+    }
+  });
+
+  clearSearchBtn.addEventListener('click', clearSearch);
+
+  function clearSearch() {
+    searchInput.value = '';
+    searchTerm = '';
+    clearSearchBtn.style.display = 'none';
+    searchResultsCount.style.display = 'none';
+
+    // Remove atributo de busca
+    blogCards.forEach(card => {
+      card.removeAttribute('data-search-match');
+    });
+
+    // Atualiza paginação
+    if (window.blogPagination) {
+      window.blogPagination.refresh();
+    }
+  }
+
+  // Expõe função globalmente
+  window.blogSearch = {
+    isActive: () => searchTerm !== '',
+    getTerm: () => searchTerm
+  };
+}
+
+document.addEventListener('DOMContentLoaded', initializeBlogSearch);
 
 // ========== BLOG PAGINATION ==========
 function initializeBlogPagination() {
   const blogCards = document.querySelectorAll('.blog-card');
   const prevButton = document.getElementById('prev-page');
   const nextButton = document.getElementById('next-page');
-  const paginationNumbers = document.querySelectorAll('.pagination-number');
+  const paginationNumbersContainer = document.getElementById('pagination-numbers');
   const blogPaginationContainer = document.getElementById('blog-pagination');
 
   if (!blogCards.length || !prevButton || !nextButton || !blogPaginationContainer) return;
@@ -572,19 +689,65 @@ function initializeBlogPagination() {
   let currentPage = 1;
   const postsPerPage = 6;
 
-  // Function to get visible cards based on current filter
+  // Function to get visible cards based on current filter and search
   function getVisibleCards() {
-    const activeFilter = document.querySelector('.tag-filter-btn.active');
-    const selectedTag = activeFilter ? activeFilter.getAttribute('data-tag') : 'todos';
-
-    if (selectedTag === 'todos') {
-      return Array.from(blogCards);
-    }
+    const selectedTag = window.getActiveFilter ? window.getActiveFilter() : 'todos';
+    const isSearchActive = window.blogSearch && window.blogSearch.isActive();
 
     return Array.from(blogCards).filter(card => {
+      // Filtra por busca primeiro
+      if (isSearchActive) {
+        const searchMatch = card.getAttribute('data-search-match');
+        if (searchMatch !== 'true') return false;
+      }
+
+      // Depois filtra por tag
+      if (selectedTag === 'todos') return true;
+
       const cardTags = card.getAttribute('data-tags');
       return cardTags && cardTags.includes(selectedTag);
     });
+  }
+
+  // Função para gerar botões de paginação inteligentes
+  function generatePaginationButtons(totalPages) {
+    if (totalPages <= 1) return [];
+
+    const buttons = [];
+    const showEllipsis = totalPages > 6;
+
+    if (!showEllipsis) {
+      // Mostra todos os botões se houver 6 ou menos páginas
+      for (let i = 1; i <= totalPages; i++) {
+        buttons.push(i);
+      }
+    } else {
+      // Paginação inteligente com "..."
+      // Sempre mostra: primeira, [...], anterior, atual, próxima, [...], última
+
+      buttons.push(1); // Primeira página
+
+      if (currentPage > 3) {
+        buttons.push('...'); // Ellipsis antes
+      }
+
+      // Páginas ao redor da atual
+      for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+        if (!buttons.includes(i)) {
+          buttons.push(i);
+        }
+      }
+
+      if (currentPage < totalPages - 2) {
+        buttons.push('...'); // Ellipsis depois
+      }
+
+      if (totalPages > 1) {
+        buttons.push(totalPages); // Última página
+      }
+    }
+
+    return buttons;
   }
 
   // Function to show posts for a specific page
@@ -595,6 +758,7 @@ function initializeBlogPagination() {
     // Ensure page is within bounds
     if (page < 1) page = 1;
     if (page > totalPages) page = totalPages;
+    if (totalPages === 0) page = 1;
 
     currentPage = page;
 
@@ -633,22 +797,40 @@ function initializeBlogPagination() {
   function updatePaginationButtons(totalPages) {
     // Update prev/next buttons
     prevButton.disabled = currentPage === 1;
-    nextButton.disabled = currentPage === totalPages;
+    nextButton.disabled = currentPage === totalPages || totalPages === 0;
 
-    // Update number buttons
-    paginationNumbers.forEach(btn => {
-      const page = parseInt(btn.getAttribute('data-page'));
-      btn.classList.toggle('active', page === currentPage);
+    // Gera botões inteligentes
+    const pageButtons = generatePaginationButtons(totalPages);
 
-      // Hide page numbers that don't exist
-      if (page > totalPages) {
-        btn.style.display = 'none';
+    // Limpa container
+    paginationNumbersContainer.innerHTML = '';
+
+    // Cria novos botões
+    pageButtons.forEach(item => {
+      if (item === '...') {
+        const ellipsis = document.createElement('span');
+        ellipsis.className = 'pagination-ellipsis';
+        ellipsis.textContent = '...';
+        paginationNumbersContainer.appendChild(ellipsis);
       } else {
-        btn.style.display = 'flex';
+        const button = document.createElement('button');
+        button.className = 'pagination-number';
+        button.setAttribute('data-page', item);
+        button.textContent = item;
+
+        if (item === currentPage) {
+          button.classList.add('active');
+        }
+
+        button.addEventListener('click', () => {
+          showPage(item);
+        });
+
+        paginationNumbersContainer.appendChild(button);
       }
     });
 
-    // Hide pagination if only one page
+    // Hide pagination if only one page or no results
     if (totalPages <= 1) {
       blogPaginationContainer.style.display = 'none';
     } else {
@@ -674,14 +856,6 @@ function initializeBlogPagination() {
       }
     });
   }
-
-  // Event listeners for number buttons
-  paginationNumbers.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const page = parseInt(btn.getAttribute('data-page'));
-      showPage(page);
-    });
-  });
 
   // Initialize first page
   showPage(1);

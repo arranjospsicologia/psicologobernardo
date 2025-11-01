@@ -136,8 +136,8 @@
         }
 
         .hover-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
         }
 
         .icon-badge {
@@ -145,18 +145,23 @@
         }
 
         .hover-card:hover .icon-badge {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
-        /* Pulse animation for CTA */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(7, 122, 128, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(7, 122, 128, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(7, 122, 128, 0); }
+
+        /* Botão com fundo branco e texto escuro */
+        .btn-white-primary {
+            background-color: var(--white) !important;
+            color: var(--primary-color) !important;
         }
 
-        .pulse-btn {
-            animation: pulse 2s infinite;
+        .btn-white-primary i {
+            color: var(--primary-color) !important;
+        }
+
+        .btn-white-primary:hover {
+            background-color: #f8f9fa !important;
+            transform: translateY(-2px);
         }
 
         @media screen and (max-width: 968px) {
@@ -265,20 +270,20 @@
         </section>
 
         <!-- Page Hero -->
-        <section class="page-hero section" style="background: linear-gradient(135deg, var(--secondary-color) 0%, var(--white) 100%); padding: 4rem 0;">
+        <section class="page-hero section" style="padding: 4rem 0;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
                     <div>
                         <h1 class="page-title" style="text-align: left; margin-bottom: 1.5rem;">Sobre Bernardo Carielo</h1>
                         <p class="page-subtitle" style="text-align: left; font-size: 1.125rem; line-height: 1.8;">Psicólogo clínico orientado pela <strong>Abordagem Centrada na Pessoa</strong> — escuta genuína, empatia e respeito à experiência singular de cada pessoa.</p>
                         <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-                            <div class="hover-card" style="display: flex; align-items: center; gap: 0.5rem; background-color: var(--white); padding: 0.875rem 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 2px solid var(--primary-color);">
+                            <div class="hover-card" style="display: flex; align-items: center; gap: 0.5rem; background-color: var(--white); padding: 0.875rem 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--secondary-color);">
                                 <i class="fas fa-certificate" style="color: var(--primary-color); font-size: 1.125rem;"></i>
-                                <span style="font-weight: 600; color: var(--primary-color);">CRP 16/5527</span>
+                                <span style="font-weight: 600; color: var(--text-color);">CRP 16/5527</span>
                             </div>
-                            <div class="hover-card" style="display: flex; align-items: center; gap: 0.5rem; background-color: var(--white); padding: 0.875rem 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 2px solid var(--accent-orange);">
-                                <i class="fas fa-clock" style="color: var(--accent-orange); font-size: 1.125rem;"></i>
-                                <span style="font-weight: 600; color: var(--accent-orange);">8+ anos de experiência</span>
+                            <div class="hover-card" style="display: flex; align-items: center; gap: 0.5rem; background-color: var(--white); padding: 0.875rem 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--secondary-color);">
+                                <i class="fas fa-clock" style="color: var(--primary-color); font-size: 1.125rem;"></i>
+                                <span style="font-weight: 600; color: var(--text-color);">8+ anos de experiência</span>
                             </div>
                         </div>
                     </div>
@@ -302,24 +307,24 @@
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
                             <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
-                                <div class="icon-badge" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; box-shadow: 0 4px 12px rgba(7, 122, 128, 0.3);">
-                                    <i class="fas fa-map-marker-alt" style="color: var(--white); font-size: 1.75rem;"></i>
+                                <div class="icon-badge" style="width: 70px; height: 70px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-map-marker-alt" style="color: var(--primary-color); font-size: 1.75rem;"></i>
                                 </div>
-                                <h4 style="margin-bottom: 0.75rem; color: var(--primary-color); font-size: 1.125rem;">Presencial</h4>
+                                <h4 style="margin-bottom: 0.75rem; color: var(--text-color); font-size: 1.125rem;">Presencial</h4>
                                 <p style="margin: 0; color: var(--text-light); line-height: 1.6;">Jardim da Penha<br>Vitória-ES</p>
                             </div>
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); border-top: 3px solid var(--accent-blue);">
-                                <div class="icon-badge" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent-blue) 0%, #4A7FB8 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; box-shadow: 0 4px 12px rgba(91, 155, 213, 0.3);">
-                                    <i class="fas fa-laptop" style="color: var(--white); font-size: 1.75rem;"></i>
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
+                                <div class="icon-badge" style="width: 70px; height: 70px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-laptop" style="color: var(--primary-color); font-size: 1.75rem;"></i>
                                 </div>
-                                <h4 style="margin-bottom: 0.75rem; color: var(--accent-blue); font-size: 1.125rem;">Online</h4>
+                                <h4 style="margin-bottom: 0.75rem; color: var(--text-color); font-size: 1.125rem;">Online</h4>
                                 <p style="margin: 0; color: var(--text-light); line-height: 1.6;">Todo o Brasil e<br>brasileiros no exterior</p>
                             </div>
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); border-top: 3px solid var(--accent-yellow);">
-                                <div class="icon-badge" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent-yellow) 0%, #e09e1f 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; box-shadow: 0 4px 12px rgba(241, 178, 53, 0.3);">
-                                    <i class="fas fa-graduation-cap" style="color: var(--white); font-size: 1.75rem;"></i>
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
+                                <div class="icon-badge" style="width: 70px; height: 70px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                    <i class="fas fa-graduation-cap" style="color: var(--primary-color); font-size: 1.75rem;"></i>
                                 </div>
-                                <h4 style="margin-bottom: 0.75rem; color: var(--accent-yellow); font-size: 1.125rem;">Formação Continuada</h4>
+                                <h4 style="margin-bottom: 0.75rem; color: var(--text-color); font-size: 1.125rem;">Formação Continuada</h4>
                                 <p style="margin: 0; color: var(--text-light); line-height: 1.6;">Aprofundamento constante<br>na prática e presença</p>
                             </div>
                         </div>
@@ -350,7 +355,7 @@
                                 <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.0625rem;"><i class="fas fa-comments" style="margin-right: 0.5rem;"></i> Linguagem simples</h4>
                                 <p style="margin: 0; line-height: 1.7; color: var(--text-color);">Sem jargões técnicos desnecessários.</p>
                             </div>
-                            <div class="hover-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm); grid-column: 2 / 3;">
+                            <div class="hover-card etica-realismo-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm);">
                                 <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.0625rem;"><i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i> Ética e realismo</h4>
                                 <p style="margin: 0; line-height: 1.7; color: var(--text-color);">Sem promessas fáceis; confiança no seu potencial de mudança.</p>
                             </div>
@@ -361,7 +366,7 @@
         </section>
 
         <!-- Para Quem -->
-        <section class="content-section section" id="para-quem" style="background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%); padding: 4rem 0;">
+        <section class="content-section section" id="para-quem" style="background-color: var(--secondary-color); padding: 4rem 0;">
             <div class="container">
                 <div class="content-wrapper">
                     <div class="main-content">
@@ -372,15 +377,15 @@
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
                                 <div class="hover-card" style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border-top: 3px solid var(--primary-color);">
                                     <i class="fas fa-user" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.75rem;"></i>
-                                    <h4 style="margin: 0; color: var(--primary-color);">Indivíduos</h4>
+                                    <h4 style="margin: 0; color: var(--text-color);">Indivíduos</h4>
                                 </div>
-                                <div class="hover-card" style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border-top: 3px solid var(--accent-orange);">
-                                    <i class="fas fa-heart" style="font-size: 2rem; color: var(--accent-orange); margin-bottom: 0.75rem;"></i>
-                                    <h4 style="margin: 0; color: var(--accent-orange);">Casais</h4>
+                                <div class="hover-card" style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border-top: 3px solid var(--primary-color);">
+                                    <i class="fas fa-heart" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.75rem;"></i>
+                                    <h4 style="margin: 0; color: var(--text-color);">Casais</h4>
                                 </div>
-                                <div class="hover-card" style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border-top: 3px solid var(--accent-yellow);">
-                                    <i class="fas fa-home" style="font-size: 2rem; color: var(--accent-yellow); margin-bottom: 0.75rem;"></i>
-                                    <h4 style="margin: 0; color: var(--accent-yellow);">Famílias</h4>
+                                <div class="hover-card" style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border-top: 3px solid var(--primary-color);">
+                                    <i class="fas fa-home" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.75rem;"></i>
+                                    <h4 style="margin: 0; color: var(--text-color);">Famílias</h4>
                                 </div>
                             </div>
 
@@ -403,79 +408,79 @@
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
                             <!-- Saúde Mental e Emocional -->
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-top: 4px solid var(--primary-color);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(7, 122, 128, 0.3);">
-                                        <i class="fas fa-brain" style="color: var(--white); font-size: 1.5rem;"></i>
+                                    <div class="icon-badge" style="width: 55px; height: 55px; background-color: var(--secondary-color); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-brain" style="color: var(--primary-color); font-size: 1.5rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--primary-color); font-size: 1.125rem;">Saúde mental e emocional</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Saúde mental e emocional</h3>
                                 </div>
                                 <p style="line-height: 1.7; color: var(--text-color);">Ansiedade (inclui pânico e ansiedade social), depressão e tristeza prolongada, estresse/burnout, insônia, angústia existencial, processos de luto (inclusive por pet), sintomas/transtornos psicossomáticos, insegurança, procrastinação, crenças limitantes, TDA/TDAH, entre outros.</p>
                             </div>
 
                             <!-- Relações, Casais e Família -->
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-top: 4px solid var(--accent-blue);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--accent-blue) 0%, #4A7FB8 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(91, 155, 213, 0.3);">
-                                        <i class="fas fa-users" style="color: var(--white); font-size: 1.5rem;"></i>
+                                    <div class="icon-badge" style="width: 55px; height: 55px; background-color: var(--secondary-color); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-users" style="color: var(--primary-color); font-size: 1.5rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--accent-blue); font-size: 1.125rem;">Relações, casais e família</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Relações, casais e família</h3>
                                 </div>
                                 <p style="line-height: 1.7; color: var(--text-color);">Dificuldades de relacionamento, comunicação não violenta, habilidades sociais, terapia de casal, terapia familiar, conflitos e acordos, decisões compartilhadas e reconstrução de vínculos.</p>
                             </div>
 
                             <!-- Sexualidade e Gênero -->
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-top: 4px solid var(--accent-yellow);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--accent-yellow) 0%, #e09e1f 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(241, 178, 53, 0.3);">
-                                        <i class="fas fa-venus-mars" style="color: var(--white); font-size: 1.5rem;"></i>
+                                    <div class="icon-badge" style="width: 55px; height: 55px; background-color: var(--secondary-color); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-venus-mars" style="color: var(--primary-color); font-size: 1.5rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--accent-yellow); font-size: 1.125rem;">Sexualidade e gênero</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Sexualidade e gênero</h3>
                                 </div>
                                 <p style="line-height: 1.7; color: var(--text-color);">Terapia sexual, vaginismo, anorgasmia, impotência, questões de identidade/expressão de gênero e incongruência de gênero, diálogo sobre desejo, limites e consentimento.</p>
                             </div>
 
                             <!-- Vida, Trabalho e Desempenho -->
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-top: 4px solid var(--accent-orange);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--accent-orange) 0%, #e68d4e 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(255, 153, 102, 0.3);">
-                                        <i class="fas fa-briefcase" style="color: var(--white); font-size: 1.5rem;"></i>
+                                    <div class="icon-badge" style="width: 55px; height: 55px; background-color: var(--secondary-color); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-briefcase" style="color: var(--primary-color); font-size: 1.5rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--accent-orange); font-size: 1.125rem;">Vida, trabalho e desempenho</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Vida, trabalho e desempenho</h3>
                                 </div>
                                 <p style="line-height: 1.7; color: var(--text-color);">Transição de carreira, análise de escolhas profissionais, organização/planejamento, ansiedade em provas de concurso, insatisfação no trabalho, autenticidade profissional e redefinição de critérios de "resultado".</p>
                             </div>
 
                             <!-- Avaliações e Documentos -->
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-top: 4px solid var(--primary-dark);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--primary-dark) 0%, #035a5f 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(7, 122, 128, 0.3);">
-                                        <i class="fas fa-file-medical" style="color: var(--white); font-size: 1.5rem;"></i>
+                                    <div class="icon-badge" style="width: 55px; height: 55px; background-color: var(--secondary-color); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-file-medical" style="color: var(--primary-color); font-size: 1.5rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--primary-dark); font-size: 1.125rem;">Avaliações e documentos</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Avaliações e documentos</h3>
                                 </div>
                                 <p style="line-height: 1.7; color: var(--text-color);">Avaliação psicológica e laudo para cirurgia bariátrica (acompanhamento pré e pós), laudo para vasectomia e outras demandas documentais conforme critérios técnicos.</p>
                             </div>
 
                             <!-- Supervisão Profissional -->
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-top: 4px solid var(--gray);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 55px; height: 55px; background: linear-gradient(135deg, var(--gray) 0%, #5d6971 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);">
-                                        <i class="fas fa-chalkboard-teacher" style="color: var(--white); font-size: 1.5rem;"></i>
+                                    <div class="icon-badge" style="width: 55px; height: 55px; background-color: var(--secondary-color); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-chalkboard-teacher" style="color: var(--primary-color); font-size: 1.5rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--gray); font-size: 1.125rem;">Supervisão profissional</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Supervisão profissional</h3>
                                 </div>
                                 <p style="line-height: 1.7; color: var(--text-color);">Supervisão clínica (individual e em grupo) para psicólogos em início de carreira ou em desenvolvimento, discussão de casos e cuidado com a prática.</p>
                             </div>
                         </div>
 
-                        <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%); padding: 1.75rem 2rem; border-radius: var(--radius-md); margin-top: 3rem; border-left: 5px solid #ffc107; box-shadow: var(--shadow-sm);">
+                        <div style="background-color: var(--secondary-color); padding: 1.75rem 2rem; border-radius: var(--radius-md); margin-top: 3rem; border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm);">
                             <div style="display: flex; align-items: flex-start; gap: 1rem;">
                                 <div style="flex-shrink: 0;">
-                                    <i class="fas fa-exclamation-triangle" style="color: #f0ad4e; font-size: 1.75rem;"></i>
+                                    <i class="fas fa-exclamation-triangle" style="color: var(--primary-color); font-size: 1.75rem;"></i>
                                 </div>
                                 <div>
-                                    <p style="margin: 0; color: #856404; line-height: 1.7; font-size: 1rem;"><strong style="font-size: 1.0625rem;">Importante:</strong> conteúdos do site/blog são informativos e não substituem atendimento. Em situações de risco, procure serviços de urgência e sua rede local de cuidado.</p>
+                                    <p style="margin: 0; color: var(--text-color); line-height: 1.7; font-size: 1rem;"><strong style="font-size: 1.0625rem; color: var(--text-color);">Importante:</strong> conteúdos do site/blog são informativos e não substituem atendimento. Em situações de risco, procure serviços de urgência e sua rede local de cuidado.</p>
                                 </div>
                             </div>
                         </div>
@@ -623,9 +628,9 @@
                             <!-- 2017 Bacharelado -->
                             <div style="position: relative; padding-left: 70px; margin-bottom: 1.5rem;">
                                 <div style="position: absolute; left: 22px; top: 0; width: 17px; height: 17px; background-color: var(--white); border-radius: 50%; border: 2px solid var(--primary-color);"></div>
-                                <div style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 2px solid var(--accent-yellow);">
-                                    <span style="display: inline-block; background-color: var(--accent-yellow); color: var(--white); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.5rem;">2017</span>
-                                    <h3 style="color: var(--accent-yellow); margin-bottom: 0.35rem; font-size: 1.0625rem;"><i class="fas fa-university"></i> Bacharelado em Psicologia</h3>
+                                <div style="background-color: var(--white); padding: 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 2px solid var(--primary-color);">
+                                    <span style="display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.5rem;">2017</span>
+                                    <h3 style="color: var(--primary-color); margin-bottom: 0.35rem; font-size: 1.0625rem;"><i class="fas fa-university"></i> Bacharelado em Psicologia</h3>
                                     <p style="margin: 0; color: var(--text-light); font-weight: 500; font-size: 0.9375rem;">Universidade Federal do Espírito Santo (UFES)</p>
                                 </div>
                             </div>
@@ -663,51 +668,51 @@
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                             <div class="hover-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: flex-start; gap: 1rem;">
-                                <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 8px rgba(7, 122, 128, 0.3);">
-                                    <i class="fas fa-map-pin" style="color: var(--white); font-size: 1.25rem;"></i>
+                                <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-map-pin" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                 </div>
                                 <div>
-                                    <h4 style="margin-bottom: 0.65rem; color: var(--primary-color); font-size: 1.0625rem;">Formatos</h4>
+                                    <h4 style="margin-bottom: 0.65rem; color: var(--text-color); font-size: 1.0625rem;">Formatos</h4>
                                     <p style="margin: 0; line-height: 1.6; color: var(--text-color);">Presencial (Jardim da Penha, Vitória-ES) e online (Brasil e exterior).</p>
                                 </div>
                             </div>
 
                             <div class="hover-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: flex-start; gap: 1rem;">
-                                <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 8px rgba(7, 122, 128, 0.3);">
-                                    <i class="fas fa-users" style="color: var(--white); font-size: 1.25rem;"></i>
+                                <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-users" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                 </div>
                                 <div>
-                                    <h4 style="margin-bottom: 0.65rem; color: var(--primary-color); font-size: 1.0625rem;">Públicos atendidos</h4>
+                                    <h4 style="margin-bottom: 0.65rem; color: var(--text-color); font-size: 1.0625rem;">Públicos atendidos</h4>
                                     <p style="margin: 0; line-height: 1.6; color: var(--text-color);">Adultos, idosos, casais e famílias.</p>
                                 </div>
                             </div>
 
                             <div class="hover-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: flex-start; gap: 1rem;">
-                                <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 8px rgba(7, 122, 128, 0.3);">
-                                    <i class="fas fa-file-invoice" style="color: var(--white); font-size: 1.25rem;"></i>
+                                <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-file-invoice" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                 </div>
                                 <div>
-                                    <h4 style="margin-bottom: 0.65rem; color: var(--primary-color); font-size: 1.0625rem;">Documentos e reembolso</h4>
+                                    <h4 style="margin-bottom: 0.65rem; color: var(--text-color); font-size: 1.0625rem;">Documentos e reembolso</h4>
                                     <p style="margin: 0; line-height: 1.6; color: var(--text-color);">Emito nota fiscal; confirme com seu plano o que é necessário (geralmente encaminhamento médico).</p>
                                 </div>
                             </div>
 
                             <div class="hover-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: flex-start; gap: 1rem;">
-                                <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-green) 0%, #22c55e 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);">
-                                    <i class="fab fa-whatsapp" style="color: var(--white); font-size: 1.25rem;"></i>
+                                <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fab fa-whatsapp" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                 </div>
                                 <div>
-                                    <h4 style="margin-bottom: 0.65rem; color: var(--accent-green); font-size: 1.0625rem;">Contato</h4>
+                                    <h4 style="margin-bottom: 0.65rem; color: var(--text-color); font-size: 1.0625rem;">Contato</h4>
                                     <p style="margin: 0; line-height: 1.6; color: var(--text-color);">Preferencialmente WhatsApp. Por sigilo e organização, não retorno ligações de números desconhecidos.</p>
                                 </div>
                             </div>
 
                             <div class="hover-card" style="background-color: var(--white); padding: 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: flex-start; gap: 1rem;">
-                                <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-orange) 0%, #e68d4e 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 8px rgba(255, 153, 102, 0.3);">
-                                    <i class="fas fa-language" style="color: var(--white); font-size: 1.25rem;"></i>
+                                <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-language" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                 </div>
                                 <div>
-                                    <h4 style="margin-bottom: 0.65rem; color: var(--accent-orange); font-size: 1.0625rem;">Idiomas</h4>
+                                    <h4 style="margin-bottom: 0.65rem; color: var(--text-color); font-size: 1.0625rem;">Idiomas</h4>
                                     <p style="margin: 0; line-height: 1.6; color: var(--text-color);">Português e Inglês.</p>
                                 </div>
                             </div>
@@ -774,12 +779,12 @@
                         <h2 style="text-align: center; margin-bottom: 2.5rem; font-size: 1.75rem;"><i class="fas fa-network-wired" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Redes e projetos</h2>
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 4px solid var(--primary-color);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(7, 122, 128, 0.3);">
-                                        <i class="fas fa-clinic-medical" style="color: var(--white); font-size: 1.25rem;"></i>
+                                    <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-clinic-medical" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--primary-color); font-size: 1.125rem;">Arranjos Psicologia</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">Arranjos Psicologia</h3>
                                 </div>
                                 <p style="margin-bottom: 1rem; line-height: 1.7;">Clínica, grupos (Entre Homens; Desafios da Profissão) e supervisão.</p>
                                 <a href="https://arranjospsicologia.com.br" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; color: var(--primary-color); font-weight: 500; text-decoration: none;">
@@ -787,15 +792,15 @@
                                 </a>
                             </div>
 
-                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent-orange);">
+                            <div class="hover-card" style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-top: 3px solid var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div class="icon-badge" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-orange) 0%, #e68d4e 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(255, 153, 102, 0.3);">
-                                        <i class="fas fa-users" style="color: var(--white); font-size: 1.25rem;"></i>
+                                    <div class="icon-badge" style="width: 50px; height: 50px; background-color: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-users" style="color: var(--primary-color); font-size: 1.25rem;"></i>
                                     </div>
-                                    <h3 style="margin: 0; color: var(--accent-orange); font-size: 1.125rem;">EncontroACP</h3>
+                                    <h3 style="margin: 0; color: var(--text-color); font-size: 1.125rem;">EncontroACP</h3>
                                 </div>
                                 <p style="margin-bottom: 1rem; line-height: 1.7;">Parceria e facilitação de grupos.</p>
-                                <a href="https://encontroacp.com.br" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; color: var(--accent-orange); font-weight: 500; text-decoration: none;">
+                                <a href="https://encontroacp.com.br" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; color: var(--primary-color); font-weight: 500; text-decoration: none;">
                                     Visitar site <i class="fas fa-arrow-right" style="margin-left: 0.5rem; font-size: 0.875rem;"></i>
                                 </a>
                             </div>
@@ -804,7 +809,7 @@
                         <div style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); padding: 3rem 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center;">
                             <h3 style="color: var(--white); margin-bottom: 1rem; font-size: 1.5rem;">Vamos conversar?</h3>
                             <p style="color: var(--white); margin-bottom: 2rem; font-size: 1.0625rem; line-height: 1.7; opacity: 0.95;">Se você identificou alguma necessidade ou simplesmente quer saber mais sobre como posso te ajudar, entre em contato.</p>
-                            <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary pulse-btn" target="_blank" style="display: inline-flex; align-items: center; gap: 0.75rem; background-color: var(--accent-green); color: var(--white); padding: 1rem 2.5rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; font-size: 1.0625rem; transition: var(--transition); box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);">
+                            <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-white-primary" target="_blank" style="font-size: 1.0625rem;">
                                 <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> Agendar Consulta
                             </a>
                         </div>

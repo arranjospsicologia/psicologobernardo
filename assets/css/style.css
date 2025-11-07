@@ -2486,14 +2486,14 @@ button {
 }
 
 .carousel-dot {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 2px solid var(--primary-color);
-  background: transparent;
+  background: rgba(8, 186, 156, 0.25);
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0;
+  padding: 14px;
 }
 
 .carousel-dot:hover {
@@ -2589,8 +2589,8 @@ button {
   }
 
   .carousel-dot {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -3464,19 +3464,19 @@ a.zl-url {
 }
 
 .review-dot {
-  width: 8px;
-  height: 8px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: #ddd;
+  background: #888;
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
-  padding: 0;
+  padding: 14px;
 }
 
 .review-dot.active {
   background: var(--primary-color);
-  width: 24px;
+  width: 28px;
   border-radius: 4px;
 }
 

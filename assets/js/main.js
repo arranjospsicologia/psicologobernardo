@@ -1082,8 +1082,29 @@ function initializeReviewsCarousel() {
     });
 }
 
-// Inicializa o carousel de reviews quando a página carregar
-document.addEventListener('DOMContentLoaded', initializeReviewsCarousel);
+// Inicializa o carousel de reviews com lazy loading (Intersection Observer)
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewsContainer = document.getElementById('reviews-container');
+
+  if (!reviewsContainer) return;
+
+  // Cria o Intersection Observer para lazy loading
+  const reviewsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Seção de reviews está visível, carrega os reviews
+        initializeReviewsCarousel();
+        // Para de observar após carregar
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '200px' // Começa a carregar 200px antes da seção ser visível
+  });
+
+  // Observa o container de reviews
+  reviewsObserver.observe(reviewsContainer);
+});
 
 // ========== BLOG IMAGE FALLBACK ==========
 function initializeBlogImageFallback() {

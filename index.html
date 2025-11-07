@@ -254,19 +254,226 @@
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    
-    <!-- Google Fonts -->
+
+    <!-- Preconnect para recursos externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    
+    <!-- Preload da imagem hero (LCP) -->
+    <link rel="preload" as="image" href="assets/images/hero-image.jpg" fetchpriority="high">
+
+    <!-- CSS Crítico Inline -->
+    <style>
+        /* Variables */
+        :root {
+            --primary-color: #08BA9C;
+            --primary-dark: #047C82;
+            --secondary-color: #F9ECE8;
+            --white: #FFFFFF;
+            --black: #1a1a1a;
+            --text-color: #333333;
+            --text-light: #666666;
+            --font-main: 'Inter', 'Inter-fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --header-height: 4.5rem;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --transition: all 0.3s ease;
+        }
+
+        /* Ajuste de métricas para fallback fonts (reduz CLS) */
+        @font-face {
+            font-family: 'Inter-fallback';
+            src: local('Arial');
+            ascent-override: 90%;
+            descent-override: 22%;
+            line-gap-override: 0%;
+            size-adjust: 107%;
+        }
+
+        /* Reset básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-main);
+            font-size: 1rem;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        h1, h2, h3 { font-weight: 600; line-height: 1.2; color: var(--black); }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style: none; }
+        button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+        }
+        .nav {
+            height: var(--header-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-img { height: 50px; width: auto; }
+        .nav-list { display: flex; gap: 2rem; }
+        .nav-link { color: var(--text-color); font-weight: 500; }
+        .nav-toggle, .nav-close { display: none; }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color);
+        }
+        .btn-agendar-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        /* Hero Section (Otimizado para CLS) */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--white) 100%);
+            padding: var(--header-height) 0 2rem;
+        }
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 650px;
+        }
+        .hero-content {
+            min-height: 450px;
+        }
+        .hero-eyebrow {
+            display: inline-block;
+            background-color: rgba(8, 186, 156, 0.15);
+            color: #047c82;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .hero-title {
+            font-size: 3rem;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            min-height: 115px;
+        }
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .hero-image {
+            position: relative;
+            min-height: 500px;
+        }
+        .hero-image img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+        }
+
+        /* Mobile básico */
+        @media screen and (max-width: 768px) {
+            .hero-container { grid-template-columns: 1fr; min-height: auto; }
+            .hero-title { font-size: 2rem; }
+            .nav-list { display: none; }
+            .btn-agendar-nav { display: none; }
+            .nav-toggle { display: block; font-size: 1.5rem; cursor: pointer; }
+        }
+    </style>
+
+    <!-- Google Fonts (async com font-display swap) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+
+    <!-- CSS Principal (async) -->
+    <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
+
+    <!-- Font Awesome (async) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Polyfill para carregamento assíncrono de CSS -->
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        !function(e){"use strict";var t=function(t,n,r,o){var i,d=e.document,a=d.createElement("link");if(n)i=n;else{var s=(d.body||d.getElementsByTagName("head")[0]).childNodes;i=s[s.length-1]}var l=d.styleSheets;if(o)for(var f in o)o.hasOwnProperty(f)&&a.setAttribute(f,o[f]);a.rel="stylesheet",a.href=t,a.media="only x",function e(t){if(d.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(a,n?i:i.nextSibling)});var u=function(e){for(var t=a.href,n=l.length;n--;)if(l[n].href===t)return e();setTimeout(function(){u(e)})};return a.addEventListener&&a.addEventListener("load",function(){this.media=r||"all"}),a.onloadcssdefined=u,u(function(){a.media!==r&&(a.media=r)}),a};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+    </script>
+
 </head>
 <body>
     <!-- WhatsApp Floating Button -->

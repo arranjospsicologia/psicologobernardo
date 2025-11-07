@@ -382,7 +382,7 @@
         }
         .hero-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 3rem;
             align-items: center;
             min-height: 650px;
@@ -411,12 +411,10 @@
             box-sizing: border-box;
         }
         .hero-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--black);
             margin-bottom: 1.5rem;
-            line-height: 1.2;
-            min-height: 7.2rem;
-            max-height: 7.2rem;
+            line-height: 1.35;
         }
         .hero-description {
             font-size: 1.25rem;
@@ -466,6 +464,9 @@
 
         /* Mobile básico */
         @media screen and (max-width: 768px) {
+            .hero {
+                padding-top: var(--header-height);
+            }
             .hero-container {
                 grid-template-columns: 1fr;
                 min-height: auto;
@@ -473,11 +474,15 @@
             }
             .hero-content {
                 min-height: 380px;
+                padding-top: 3rem;
+            }
+            .hero-image {
+                order: 1;
+                margin-bottom: 0;
             }
             .hero-title {
-                font-size: 2rem;
-                min-height: 7.2rem;
-                max-height: 7.2rem;
+                font-size: 1.9rem;
+                line-height: 1.35;
             }
             .hero-description {
                 font-size: 1.1rem;
@@ -594,7 +599,7 @@
                     <span class="hero-eyebrow">O melhor jeito de viver é Autêntico —</span>
                     <h1 class="hero-title">Bernardo Carielo | Psicólogo em Vitória - ES</h1>
                     <p class="hero-description">Um espaço de escuta, acolhimento e autenticidade — para desacelerar, se compreender e reencontrar sentido.</p>
-                    <p class="hero-description">Atendimento psicológico presencial em Vitória (ES) e online para todo o Brasil e brasileiros vivendo no exterior.</p>  
+                    <p class="hero-description">Psicoterapia pela Abordagem Centrada na Pessoa — presencial em Vitória (ES) e online para todo o Brasil e brasileiros vivendo no exterior.</p>  
                     <div class="hero-buttons">
                         <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank">
                             <i class="fab fa-whatsapp"></i> Agendar consulta

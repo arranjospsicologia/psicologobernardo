@@ -331,6 +331,13 @@
         .nav-link { color: var(--text-color); font-weight: 500; }
         .nav-toggle, .nav-close { display: none; }
 
+        /* Dropdown - Esconde por padrão para evitar flash */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+
         /* Botões */
         .btn {
             display: inline-flex;

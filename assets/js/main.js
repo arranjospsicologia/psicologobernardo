@@ -176,41 +176,8 @@ function initializeScrollReveal() {
 document.addEventListener('DOMContentLoaded', initializeScrollReveal);
 
 // ========== PAGE TRANSITIONS ==========
-// Fade in na carga da página
-window.addEventListener('load', () => {
-  document.body.classList.remove('page-loading');
-  document.body.classList.add('page-loaded');
-});
-
-// Fade out antes de navegar para outra página
-document.addEventListener('DOMContentLoaded', () => {
-  // Adiciona classe de loading inicialmente
-  document.body.classList.add('page-loading');
-
-  // Intercepta cliques em links internos
-  const internalLinks = document.querySelectorAll('a[href]');
-
-  internalLinks.forEach(link => {
-    // Ignora links externos, âncoras (#), e links do WhatsApp
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('http') || href.includes('wa.me') || href.includes('mailto:')) {
-      return;
-    }
-
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = link.href;
-
-      // Adiciona classe de transição
-      document.body.classList.add('page-transitioning');
-
-      // Navega após a animação
-      setTimeout(() => {
-        window.location.href = target;
-      }, 300); // Mesmo tempo da transição CSS
-    });
-  });
-});
+// DESABILITADO: Transições de página removidas para evitar fade-in indesejado
+// As transições estavam causando problemas de UX em navegações internas
 
 // ========== FORM VALIDATION (se necessário) ==========
 function initializeForms() {

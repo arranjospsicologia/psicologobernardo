@@ -1938,23 +1938,7 @@ button {
 }
 
 /* ========== PAGE TRANSITIONS ========== */
-body {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-body.page-transitioning {
-  opacity: 0;
-}
-
-/* Prevent flash of unstyled content during transition */
-body.page-loading {
-  opacity: 0;
-}
-
-body.page-loaded {
-  opacity: 1;
-}
+/* REMOVIDO: Transições de página desabilitadas para melhor UX */
 
 /* ========== AGENDAMENTO PAGE ========== */
 .agendamento-hero {

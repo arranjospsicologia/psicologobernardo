@@ -179,22 +179,6 @@ document.addEventListener('DOMContentLoaded', initializeScrollReveal);
 // DESABILITADO: Transições de página removidas para evitar fade-in indesejado
 // As transições estavam causando problemas de UX em navegações internas
 
-// ========== SCROLL RESTORATION ==========
-// Garante que páginas sempre comecem no topo (previne restauração automática do navegador)
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
-// Force scroll to top on page load
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-});
-
-// Also on DOMContentLoaded for faster response
-document.addEventListener('DOMContentLoaded', () => {
-  window.scrollTo(0, 0);
-});
-
 // ========== FORM VALIDATION (se necessário) ==========
 function initializeForms() {
   const forms = document.querySelectorAll('form');

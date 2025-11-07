@@ -156,6 +156,16 @@
 
     <!-- Custom Responsive Styles for Sobre Page -->
     <style>
+        /* Nav Mobile Critical CSS */
+        .nav-list { display: flex; gap: 2rem; }
+        .nav-toggle, .nav-close { display: none; }
+
+        @media screen and (max-width: 968px) {
+            .nav-list { display: none; }
+            .btn-agendar-nav { display: none; }
+            .nav-toggle { display: block; font-size: 1.5rem; cursor: pointer; }
+        }
+
         /* Hover effects for cards */
         .hover-card {
             transition: all 0.3s ease;

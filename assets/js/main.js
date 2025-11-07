@@ -718,7 +718,7 @@ function initializeBlogPagination() {
   }
 
   // Function to show posts for a specific page
-  function showPage(page) {
+  function showPage(page, shouldScroll = true) {
     const visibleCards = getVisibleCards();
     const totalPages = Math.ceil(visibleCards.length / postsPerPage);
 
@@ -748,15 +748,17 @@ function initializeBlogPagination() {
     // Update pagination buttons
     updatePaginationButtons(totalPages);
 
-    // Scroll to top of blog section
-    const blogSection = document.querySelector('.blog-section');
-    if (blogSection) {
-      const headerHeight = document.getElementById('header').offsetHeight;
-      const targetPosition = blogSection.offsetTop - headerHeight - 20;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+    // Scroll to top of blog section (only when navigating between pages)
+    if (shouldScroll) {
+      const blogSection = document.querySelector('.blog-section');
+      if (blogSection) {
+        const headerHeight = document.getElementById('header').offsetHeight;
+        const targetPosition = blogSection.offsetTop - headerHeight - 20;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
   }
 
@@ -824,13 +826,13 @@ function initializeBlogPagination() {
     });
   }
 
-  // Initialize first page
-  showPage(1);
+  // Initialize first page (without scrolling)
+  showPage(1, false);
 
   // Expose pagination controls globally for filter integration
   window.blogPagination = {
     goToPage: showPage,
-    refresh: () => showPage(1),
+    refresh: () => showPage(1, false),
     currentPage: () => currentPage
   };
 }

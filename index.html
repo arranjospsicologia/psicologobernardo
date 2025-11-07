@@ -304,6 +304,11 @@
             color: var(--text-color);
             line-height: 1.6;
             background-color: var(--white);
+            opacity: 1 !important;
+        }
+        /* Desabilita page loading transition na home */
+        body.page-loading {
+            opacity: 1 !important;
         }
         h1, h2, h3 { font-weight: 600; line-height: 1.2; color: var(--black); }
         a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -719,7 +724,7 @@
                                      alt="Sala de atendimento do consultório de psicologia em Jardim da Penha, Vitória ES, com iluminação natural e decoração acolhedora"
                                      width="800"
                                      height="600"
-                                     fetchpriority="high">
+                                     loading="lazy">
                                 <p class="carousel-caption">Sala de atendimento</p>
                             </div>
                             <div class="carousel-slide">

@@ -11,16 +11,6 @@
     <meta name="keywords" content="psicólogo em vitória, psicólogo em jardim da penha, psicoterapeuta vitória, terapia vitória, psicólogo humanista, abordagem centrada na pessoa, psicoterapia online, psicólogo jardim da penha vitória">
     <meta name="author" content="Bernardo Carielo">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-WQ4XBV7333');
-    </script>
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
@@ -259,6 +249,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <!-- Preload da imagem hero (LCP) -->
     <link rel="preload" as="image" href="assets/images/hero-image.jpg" fetchpriority="high">
@@ -389,7 +380,9 @@
             min-height: 650px;
         }
         .hero-content {
-            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .hero-eyebrow {
             display: inline-block;
@@ -400,28 +393,29 @@
             font-size: 0.95rem;
             font-weight: 500;
             margin-bottom: 1rem;
+            width: fit-content;
         }
         .hero-title {
             font-size: 3rem;
             color: var(--black);
             margin-bottom: 1.5rem;
             line-height: 1.2;
-            min-height: 115px;
         }
         .hero-description {
             font-size: 1.25rem;
             color: var(--text-light);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
         }
         .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+            margin-top: 0.5rem;
         }
         .hero-image {
             position: relative;
-            min-height: 500px;
+            width: 100%;
         }
         .hero-image img {
             border-radius: var(--radius-lg);
@@ -430,6 +424,7 @@
             height: auto;
             aspect-ratio: 1 / 1;
             object-fit: cover;
+            display: block;
         }
 
         /* WhatsApp Float */
@@ -469,9 +464,33 @@
     <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
 
-    <!-- Font Awesome (async) -->
+    <!-- Font Awesome (async com font-display swap) -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* Font Awesome font-display override */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format('woff2');
+        }
+    </style>
 
     <!-- Polyfill para carregamento assíncrono de CSS -->
     <script>
@@ -545,7 +564,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/hero-image.jpg" alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa">
+                    <img src="assets/images/hero-image.jpg" alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa" width="800" height="800" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -1164,8 +1183,15 @@
 
     <!-- Doctoralia Widget Script -->
     <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
-  
 
+    <!-- Google tag (gtag.js) - Carregado no final para não bloquear renderização -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WQ4XBV7333');
+    </script>
 
 </body>
 </html>

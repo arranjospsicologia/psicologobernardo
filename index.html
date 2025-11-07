@@ -280,10 +280,10 @@
         @font-face {
             font-family: 'Inter-fallback';
             src: local('Arial');
-            ascent-override: 90%;
-            descent-override: 22%;
+            ascent-override: 96.67%;
+            descent-override: 24.19%;
             line-gap-override: 0%;
-            size-adjust: 107%;
+            size-adjust: 103.33%;
         }
 
         /* Reset básico */
@@ -371,6 +371,7 @@
             align-items: center;
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--white) 100%);
             padding: var(--header-height) 0 2rem;
+            contain: layout;
         }
         .hero-container {
             display: grid;
@@ -378,11 +379,13 @@
             gap: 3rem;
             align-items: center;
             min-height: 650px;
+            contain: layout;
         }
         .hero-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            contain: layout;
         }
         .hero-eyebrow {
             display: inline-block;
@@ -394,12 +397,15 @@
             font-weight: 500;
             margin-bottom: 1rem;
             width: fit-content;
+            height: 2.4rem;
+            line-height: 1.4rem;
         }
         .hero-title {
             font-size: 3rem;
             color: var(--black);
             margin-bottom: 1.5rem;
             line-height: 1.2;
+            min-height: 3.6em;
         }
         .hero-description {
             font-size: 1.25rem;
@@ -416,6 +422,7 @@
         .hero-image {
             position: relative;
             width: 100%;
+            contain: layout;
         }
         .hero-image img {
             border-radius: var(--radius-lg);
@@ -447,18 +454,32 @@
 
         /* Mobile básico */
         @media screen and (max-width: 768px) {
-            .hero-container { grid-template-columns: 1fr; min-height: auto; }
-            .hero-title { font-size: 2rem; }
+            .hero-container {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                gap: 2rem;
+            }
+            .hero-title {
+                font-size: 2rem;
+                min-height: 4.8em;
+            }
+            .hero-description {
+                font-size: 1.1rem;
+            }
+            .hero-eyebrow {
+                font-size: 0.9rem;
+                height: 2.2rem;
+                line-height: 1.2rem;
+            }
             .nav-list { display: none; }
             .btn-agendar-nav { display: none; }
             .nav-toggle { display: block; font-size: 1.5rem; cursor: pointer; }
         }
     </style>
 
-    <!-- Google Fonts (async com font-display swap) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    <!-- Google Fonts (preload crítico com font-display swap) -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="all">
 
     <!-- CSS Principal (async) -->
     <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">

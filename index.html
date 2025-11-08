@@ -506,7 +506,14 @@
     </style>
 
     <!-- Google Fonts (com font-display swap para performance) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="all">
+    <link
+        rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
 
     <!-- CSS Principal (síncrono para home evitar CLS) -->
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -608,20 +615,24 @@
                 <div class="hero-image">
                     <picture>
                         <source
-                            type="image/webp"
-                            srcset="assets/images/hero-image-380.webp 380w,
-                                    assets/images/hero-image-760.webp 760w,
-                                    assets/images/hero-image-1080.webp 1080w,
-                                    assets/images/hero-image-1440.webp 1440w"
-                            sizes="(max-width: 480px) 100vw,
-                                   (max-width: 768px) 50vw,
-                                   (max-width: 1024px) 40vw,
-                                   500px">
-                        <img src="assets/images/hero-image.jpg"
-                             alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
-                             width="800"
-                             height="800"
-                             fetchpriority="high">
+                        type="image/webp"
+                        srcset="
+                            assets/images/hero-image-380.webp 380w,
+                            assets/images/hero-image-760.webp 760w,
+                            assets/images/hero-image-1080.webp 1080w,
+                            assets/images/hero-image-1440.webp 1440w"
+                        sizes="(max-width: 480px) 100vw,
+                                (max-width: 768px) 80vw,
+                                (max-width: 1024px) 60vw,
+                                500px">
+                        <img
+                        src="assets/images/hero-image-760.webp"
+                        alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
+                        width="380"
+                        height="507"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async">
                     </picture>
                 </div>
             </div>
@@ -1241,15 +1252,17 @@
     <!-- JavaScript (defer para não bloquear renderização) -->
     <script src="assets/js/main.min.js" defer></script>
 
+<!-- Google tag (gtag.js) - Deferred for better performance -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
+<script>
+window.addEventListener('load', function() {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
+});
+</script>
 
-    <!-- Google tag (gtag.js) - Carregado no final para não bloquear renderização -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WQ4XBV7333');
-    </script>
 
 </body>
 </html>

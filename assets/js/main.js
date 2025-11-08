@@ -1086,6 +1086,246 @@ document.addEventListener('DOMContentLoaded', () => {
   reviewsObserver.observe(reviewsContainer);
 });
 
+// ========== DOCTORALIA REVIEWS CAROUSEL ==========
+function initializeDoctorialiaCarousel() {
+  // Carrega os reviews do JSON
+  fetch('/assets/data/doctoralia-reviews.json')
+    .then(res => res.json())
+    .then(reviews => {
+      const container = document.getElementById('doctoralia-reviews-container');
+      if (!container) return;
+
+      // Determina quantos reviews mostrar por vez (1 sempre)
+      let currentIndex = 0;
+      const reviewsPerPage = 1;
+
+      // Cria a estrutura do widget
+      const widgetHTML = `
+        <div class="doctoralia-widget">
+          <div class="doctoralia-widget-header">
+            <img src="assets/images/doctoralia-logo.png" alt="Doctoralia" class="doctoralia-logo-small" width="100" height="100">
+            <div class="doctoralia-header-info">
+              <span class="doctoralia-title">Avaliações</span>
+              <div class="doctoralia-rating-summary">
+                <span class="rating-number">5.0</span>
+                <div class="rating-stars-green">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="doctoralia-carousel" id="doctoralia-carousel"></div>
+          <div class="doctoralia-nav">
+            <button class="doctoralia-nav-btn" id="doctoralia-prev" aria-label="Review anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="doctoralia-indicators" id="doctoralia-indicators"></div>
+            <button class="doctoralia-nav-btn" id="doctoralia-next" aria-label="Próximo review">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <a href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria?utm_id=379142&utm_source=widget-doctor-379142&utm_medium=big-with-opinion&utm_campaign=&utm_content=#profile-reviews"
+             class="doctoralia-cta-link"
+             target="_blank"
+             rel="noopener">
+            Ver todas as 65 avaliações
+          </a>
+        </div>
+      `;
+      container.innerHTML = widgetHTML;
+
+      const carousel = document.getElementById('doctoralia-carousel');
+      const indicators = document.getElementById('doctoralia-indicators');
+      const prevBtn = document.getElementById('doctoralia-prev');
+      const nextBtn = document.getElementById('doctoralia-next');
+
+      // Função para truncar texto
+      function truncateText(text, maxLength = 150) {
+        if (text.length <= maxLength) {
+          return { truncated: text, isTruncated: false };
+        }
+        const truncated = text.substring(0, maxLength).trim() + '...';
+        return { truncated, isTruncated: true, full: text };
+      }
+
+      // Função para renderizar os reviews
+      function renderReviews() {
+        carousel.innerHTML = '';
+
+        reviews.forEach((review, index) => {
+          const stars = '★'.repeat(review.rating);
+          const { truncated, isTruncated, full } = truncateText(review.text);
+
+          const reviewCard = document.createElement('div');
+          reviewCard.className = 'doctoralia-review-card';
+          reviewCard.innerHTML = `
+            <div class="doctoralia-review-header">
+              <div class="doctoralia-avatar">${review.initial}</div>
+              <div class="doctoralia-author">
+                <div class="doctoralia-name">${review.name}</div>
+                <div class="doctoralia-date">${review.date}</div>
+              </div>
+            </div>
+            <div class="doctoralia-stars-green">${stars}</div>
+            <div class="doctoralia-text-container">
+              <p class="doctoralia-text">${truncated}</p>
+              ${isTruncated ? '<button class="doctoralia-read-more-btn" data-expanded="false">Leia mais</button>' : ''}
+            </div>
+          `;
+
+          // Adiciona event listener para o botão "Leia mais"
+          if (isTruncated) {
+            const readMoreBtn = reviewCard.querySelector('.doctoralia-read-more-btn');
+            const textElement = reviewCard.querySelector('.doctoralia-text');
+
+            readMoreBtn.addEventListener('click', () => {
+              const isExpanded = readMoreBtn.getAttribute('data-expanded') === 'true';
+
+              if (isExpanded) {
+                textElement.textContent = truncated;
+                readMoreBtn.textContent = 'Leia mais';
+                readMoreBtn.setAttribute('data-expanded', 'false');
+              } else {
+                textElement.textContent = full;
+                readMoreBtn.textContent = 'Leia menos';
+                readMoreBtn.setAttribute('data-expanded', 'true');
+              }
+            });
+          }
+
+          carousel.appendChild(reviewCard);
+        });
+
+        updateCarousel();
+      }
+
+      // Função para atualizar a posição do carousel
+      function updateCarousel() {
+        const offset = -(currentIndex * 100);
+        carousel.style.transform = `translateX(${offset}%)`;
+        updateButtons();
+        updateIndicators();
+      }
+
+      // Função para atualizar os botões
+      function updateButtons() {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= totalPages - 1;
+      }
+
+      // Função para criar e atualizar indicadores
+      function updateIndicators() {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        indicators.innerHTML = '';
+
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'doctoralia-dot' + (i === currentIndex ? ' active' : '');
+          dot.setAttribute('aria-label', `Ir para página ${i + 1}`);
+          dot.addEventListener('click', () => goToPage(i));
+          indicators.appendChild(dot);
+        }
+      }
+
+      // Função para ir para uma página específica
+      function goToPage(pageIndex) {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        if (pageIndex >= 0 && pageIndex < totalPages) {
+          currentIndex = pageIndex;
+          updateCarousel();
+        }
+      }
+
+      // Event listeners para os botões
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+        if (currentIndex < totalPages - 1) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      // Suporte para navegação por teclado
+      document.addEventListener('keydown', (e) => {
+        if (!container) return;
+
+        const containerRect = container.getBoundingClientRect();
+        const isVisible = containerRect.top < window.innerHeight && containerRect.bottom > 0;
+
+        if (isVisible) {
+          if (e.key === 'ArrowLeft') {
+            prevBtn.click();
+          } else if (e.key === 'ArrowRight') {
+            nextBtn.click();
+          }
+        }
+      });
+
+      // Suporte a touch/swipe
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+          nextBtn.click();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+          prevBtn.click();
+        }
+      }
+
+      // Renderiza os reviews pela primeira vez
+      renderReviews();
+    })
+    .catch(err => {
+      console.error('Erro ao carregar avaliações do Doctoralia:', err);
+      const container = document.getElementById('doctoralia-reviews-container');
+      if (container) {
+        container.innerHTML = '<p style="text-align: center; color: #666;">Erro ao carregar avaliações. Tente novamente mais tarde.</p>';
+      }
+    });
+}
+
+// Inicializa o carousel de reviews do Doctoralia com lazy loading
+document.addEventListener('DOMContentLoaded', () => {
+  const doctorialiaContainer = document.getElementById('doctoralia-reviews-container');
+
+  if (!doctorialiaContainer) return;
+
+  // Cria o Intersection Observer para lazy loading
+  const doctorialiaObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Seção está visível, carrega os reviews
+        initializeDoctorialiaCarousel();
+        // Para de observar após carregar
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '200px' // Começa a carregar 200px antes da seção ser visível
+  });
+
+  // Observa o container
+  doctorialiaObserver.observe(doctorialiaContainer);
+});
+
 // ========== BLOG IMAGE FALLBACK ==========
 function initializeBlogImageFallback() {
   // Seleciona todas as imagens do blog

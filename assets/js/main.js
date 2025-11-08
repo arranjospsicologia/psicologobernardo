@@ -179,26 +179,6 @@ document.addEventListener('DOMContentLoaded', initializeScrollReveal);
 // DESABILITADO: Transições de página removidas para evitar fade-in indesejado
 // As transições estavam causando problemas de UX em navegações internas
 
-// ========== FORM VALIDATION (se necessário) ==========
-function initializeForms() {
-  const forms = document.querySelectorAll('form');
-
-  forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-
-      console.log('Form data:', data);
-      // Aqui você pode adicionar lógica para enviar o formulário
-    });
-  });
-}
-
-// Inicializa forms quando DOM estiver pronto
-document.addEventListener('DOMContentLoaded', initializeForms);
-
 // ========== WHATSAPP ANALYTICS ==========
 function initializeWhatsAppTracking() {
   const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');

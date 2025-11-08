@@ -252,8 +252,9 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <!-- Preload da imagem hero WebP (LCP) -->
-    <link rel="preload" as="image" href="assets/images/hero-image-760.webp" type="image/webp" fetchpriority="high" media="(max-width: 768px)">
-    <link rel="preload" as="image" href="assets/images/hero-image-1080.webp" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/images/hero-image-380.webp" type="image/webp" fetchpriority="high" media="(max-width: 480px)">
+    <link rel="preload" as="image" href="assets/images/hero-image-760.webp" type="image/webp" fetchpriority="high" media="(min-width: 481px) and (max-width: 1024px)">
+    <link rel="preload" as="image" href="assets/images/hero-image-1080.webp" type="image/webp" fetchpriority="high" media="(min-width: 1025px)">
 
     <!-- Preload CSS crítico -->
     <link rel="preload" as="style" href="assets/css/style.min.css">
@@ -617,7 +618,10 @@
                                     assets/images/hero-image-760.webp 760w,
                                     assets/images/hero-image-1080.webp 1080w,
                                     assets/images/hero-image-1440.webp 1440w"
-                            sizes="(max-width: 768px) 100vw, 45vw">
+                            sizes="(max-width: 480px) 380px,
+                                   (max-width: 768px) 760px,
+                                   (max-width: 1024px) 760px,
+                                   1080px">
                         <img src="assets/images/hero-image.jpg"
                              alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
                              width="800"

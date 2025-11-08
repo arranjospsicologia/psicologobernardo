@@ -1089,7 +1089,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ========== DOCTORALIA REVIEWS CAROUSEL ==========
 function initializeDoctorialiaCarousel() {
   // Carrega os reviews do JSON
-  fetch('/assets/data/doctoralia-reviews.json')
+  fetch('assets/data/doctoralia-reviews.json')
     .then(res => res.json())
     .then(reviews => {
       const container = document.getElementById('doctoralia-reviews-container');

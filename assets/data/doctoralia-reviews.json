@@ -1,5 +1,12 @@
 [
   {
+    "name": "FG",
+    "initial": "F",
+    "rating": 5,
+    "text": "Bernardo é um profissional ímpar. Atento e detalhista, ele é sempre pertinente em suas colocações e conduz o processo terapêutico de forma muito empática e leve. De forma bastante natural e com diálogo aberto, nos ajuda com as questões complexas que nos levam até ele. A gente fica bastante à vontade durante as sessões, sem tabus ou meias palavras.",
+    "date": "8 de dezembro de 2020"
+  },
+  {
     "name": "Marina",
     "initial": "M",
     "rating": 5,
@@ -26,12 +33,5 @@
     "rating": 5,
     "text": "O Dr. Bernardo é extremamente atencioso e empático, me senti como se estivesse conversando com meu melhor amigo e tudo fluiu muito bem, dizem que a primeira impressão é a que fica e ela foi a melhor possível. Parabéns Dr. Bernardo você é 10, obrigado.",
     "date": "23 de fevereiro de 2022"
-  },
-  {
-    "name": "FG",
-    "initial": "F",
-    "rating": 5,
-    "text": "Bernardo é um profissional ímpar. Atento e detalhista, ele é sempre pertinente em suas colocações e conduz o processo terapêutico de forma muito empática e leve. De forma bastante natural e com diálogo aberto, nos ajuda com as questões complexas que nos levam até ele. A gente fica bastante à vontade durante as sessões, sem tabus ou meias palavras.",
-    "date": "8 de dezembro de 2020"
   }
 ]

@@ -1040,6 +1040,80 @@ button {
   text-decoration-thickness: 2px;
 }
 
+/* Doctoralia Card Styling */
+.doctoralia-card {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  min-height: 600px;
+}
+
+.doctoralia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.doctoralia-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex: 0;
+}
+
+.doctoralia-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.doctoralia-info h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.doctoralia-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.doctoralia-rating .stars {
+  color: #FFB800;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.doctoralia-rating .rating-text {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.doctoralia-description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 0;
+  text-align: left;
+}
+
+.btn-doctoralia {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+  flex: 0;
+}
+
 /* ========== RESPONSIVE ========== */
 @media screen and (max-width: 968px) {
   :root {

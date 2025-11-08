@@ -965,10 +965,9 @@ function initializeReviewsCarousel() {
         indicators.innerHTML = '';
 
         for (let i = 0; i < totalPages; i++) {
-          const dot = document.createElement('button');
+          const dot = document.createElement('span');
           dot.className = 'review-dot' + (i === currentIndex ? ' active' : '');
-          dot.setAttribute('aria-label', `Ir para página ${i + 1}`);
-          dot.addEventListener('click', () => goToPage(i));
+          dot.setAttribute('aria-label', `Página ${i + 1}`);
           indicators.appendChild(dot);
         }
       }
@@ -1156,6 +1155,7 @@ function initializeDoctorialiaCarousel() {
 
           const reviewCard = document.createElement('div');
           reviewCard.className = 'doctoralia-review-card';
+          reviewCard.style.display = index === 0 ? 'flex' : 'none'; // Mostra apenas o primeiro
           reviewCard.innerHTML = `
             <div class="doctoralia-review-header">
               <div class="doctoralia-avatar">${review.initial}</div>
@@ -1197,10 +1197,12 @@ function initializeDoctorialiaCarousel() {
         updateCarousel();
       }
 
-      // Função para atualizar a posição do carousel
+      // Função para atualizar a posição do carousel (usando display em vez de transform)
       function updateCarousel() {
-        const offset = -(currentIndex * 100);
-        carousel.style.transform = `translateX(${offset}%)`;
+        const cards = carousel.querySelectorAll('.doctoralia-review-card');
+        cards.forEach((card, index) => {
+          card.style.display = index === currentIndex ? 'flex' : 'none';
+        });
         updateButtons();
         updateIndicators();
       }
@@ -1218,10 +1220,9 @@ function initializeDoctorialiaCarousel() {
         indicators.innerHTML = '';
 
         for (let i = 0; i < totalPages; i++) {
-          const dot = document.createElement('button');
+          const dot = document.createElement('span');
           dot.className = 'doctoralia-dot' + (i === currentIndex ? ' active' : '');
-          dot.setAttribute('aria-label', `Ir para página ${i + 1}`);
-          dot.addEventListener('click', () => goToPage(i));
+          dot.setAttribute('aria-label', `Página ${i + 1}`);
           indicators.appendChild(dot);
         }
       }

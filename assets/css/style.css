@@ -1170,21 +1170,17 @@ button {
 
 /* Doctoralia Carousel */
 .doctoralia-carousel {
-  display: flex;
-  overflow: hidden;
   position: relative;
   flex: 1;
   min-height: 300px;
   margin-bottom: 1rem;
-  transition: transform 0.3s ease;
   width: 100%;
 }
 
 .doctoralia-review-card {
-  flex: 0 0 100%;
   width: 100%;
   padding: 1rem;
-  display: flex;
+  display: none; /* Oculto por padrão, JS mostra o ativo */
   flex-direction: column;
   gap: 1rem;
   box-sizing: border-box;
@@ -1304,19 +1300,14 @@ button {
   background-color: #d0d0d0;
   border: none;
   padding: 0;
-  cursor: pointer;
   transition: var(--transition);
+  pointer-events: none; /* Não clicável, apenas visual */
 }
 
 .doctoralia-dot.active {
   background-color: #00B39B;
   width: 24px;
   border-radius: 4px;
-}
-
-.doctoralia-dot:hover {
-  background-color: #00B39B;
-  opacity: 0.7;
 }
 
 /* Doctoralia CTA Link */
@@ -3621,19 +3612,19 @@ a.zl-url {
 }
 
 .review-dot {
-  width: 16px;
-  height: 16px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #888;
+  background: #d0d0d0;
   transition: all 0.3s ease;
-  cursor: pointer;
   border: none;
-  padding: 14px;
+  padding: 0;
+  pointer-events: none; /* Não clicável, apenas visual */
 }
 
 .review-dot.active {
   background: var(--primary-color);
-  width: 28px;
+  width: 24px;
   border-radius: 4px;
 }
 

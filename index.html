@@ -438,14 +438,15 @@
             width: 100%;
             contain: layout;
         }
-        .hero-image img {
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            display: block;
+
+        .hero-image img{
+        aspect-ratio: auto !important; 
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+        display: block;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
         }
 
         /* WhatsApp Float */
@@ -545,6 +546,19 @@
             src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format('woff2');
         }
     </style>
+   
+    <link
+        rel="preload"
+        as="image"
+        imagesrcset="
+            assets/images/hero/hero-380x507.avif 380w,
+            assets/images/hero/hero-600x800.avif 600w"
+        imagesizes="(max-width: 576px) calc(100vw - 2rem),
+                    (max-width: 968px) calc(100vw - 3rem),
+                    (max-width: 1024px) 60vw,
+                    500px"
+        href="assets/images/hero/hero-600x800.avif"
+    fetchpriority="high">
 
 
 </head>
@@ -613,28 +627,40 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <picture>
-                        <source
-                        type="image/webp"
-                        srcset="
-                            assets/images/hero-image-380.webp 380w,
-                            assets/images/hero-image-760.webp 760w,
-                            assets/images/hero-image-1080.webp 1080w,
-                            assets/images/hero-image-1440.webp 1440w"
-                        sizes="(max-width: 480px) 100vw,
-                                (max-width: 768px) 80vw,
-                                (max-width: 1024px) 60vw,
-                                500px">
-                        <img
-                        src="assets/images/hero-image-760.webp"
-                        alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
-                        width="380"
-                        height="507"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async">
-                    </picture>
+                <picture>
+                    <!-- AVIF -->
+                    <source
+                    type="image/avif"
+                    srcset="
+                        assets/images/hero/hero-380x507.avif 380w,
+                        assets/images/hero/hero-600x800.avif 600w"
+                    sizes="(max-width: 576px) calc(100vw - 2rem),
+                            (max-width: 968px) calc(100vw - 3rem),
+                            (max-width: 1024px) 60vw,
+                            500px">
+
+                    <!-- WebP fallback -->
+                    <source
+                    type="image/webp"
+                    srcset="
+                        assets/images/hero/hero-380x507.webp 380w,
+                        assets/images/hero/hero-600x800.webp 600w"
+                    sizes="(max-width: 576px) calc(100vw - 2rem),
+                            (max-width: 968px) calc(100vw - 3rem),
+                            (max-width: 1024px) 60vw,
+                            500px">
+
+                    <!-- Fallback img (set width/height to reserve space & avoid CLS) -->
+                    <img
+                    src="assets/images/hero/hero-380x507.jpg"
+                    alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
+                    width="380" height="507"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async">
+                </picture>
                 </div>
+
             </div>
         </section>
 

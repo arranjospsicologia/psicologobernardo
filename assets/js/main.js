@@ -46,6 +46,18 @@ window.addEventListener('scroll', scrollHeader);
 // ========== ACTIVE LINK ==========
 const sections = document.querySelectorAll('section[id]');
 
+// Cache de dimensões das seções para evitar reflow forçado
+let sectionDimensions = [];
+
+// Função para calcular e cachear as dimensões das seções
+function cacheSectionDimensions() {
+  sectionDimensions = Array.from(sections).map(section => ({
+    id: section.getAttribute('id'),
+    top: section.offsetTop - 100,
+    height: section.offsetHeight
+  }));
+}
+
 function scrollActive() {
   const scrollY = window.pageYOffset;
 
@@ -71,14 +83,10 @@ function scrollActive() {
 
   let activeSection = null;
 
-  // Encontra a seção ativa atual
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 100;
-    const sectionId = current.getAttribute('id');
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      activeSection = sectionId;
+  // Usa as dimensões cacheadas (sem reflow!)
+  sectionDimensions.forEach(section => {
+    if (scrollY > section.top && scrollY <= section.top + section.height) {
+      activeSection = section.id;
     }
   });
 
@@ -91,10 +99,23 @@ function scrollActive() {
     }
   }
 }
+
+// Recalcula dimensões ao redimensionar a janela
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    cacheSectionDimensions();
+  }, 250);
+});
+
 window.addEventListener('scroll', scrollActive);
 
 // Ativa o link correto quando a página carrega
-document.addEventListener('DOMContentLoaded', scrollActive);
+document.addEventListener('DOMContentLoaded', () => {
+  cacheSectionDimensions(); // Calcula dimensões uma vez
+  scrollActive();
+});
 
 // ========== FAQ ACCORDION ==========
 function initializeFAQ() {
@@ -123,15 +144,36 @@ function initializeFAQ() {
 document.addEventListener('DOMContentLoaded', initializeFAQ);
 
 // ========== SMOOTH SCROLL ==========
+// Cache da altura do header para evitar reflow
+let cachedHeaderHeight = 0;
+
 function initializeSmoothScroll() {
+  const header = document.getElementById('header');
+
+  // Calcula altura do header uma vez
+  if (header) {
+    cachedHeaderHeight = header.offsetHeight;
+  }
+
+  // Recalcula ao redimensionar
+  let smoothScrollResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(smoothScrollResizeTimer);
+    smoothScrollResizeTimer = setTimeout(() => {
+      if (header) {
+        cachedHeaderHeight = header.offsetHeight;
+      }
+    }, 250);
+  });
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
 
       if (target) {
-        const headerHeight = document.getElementById('header').offsetHeight;
-        const targetPosition = target.offsetTop - headerHeight;
+        // Usa altura cacheada (sem reflow!)
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - cachedHeaderHeight;
 
         window.scrollTo({
           top: targetPosition,
@@ -499,8 +541,9 @@ function initializeBlogFilterDropdown() {
       // Smooth scroll to blog grid
       const blogGrid = document.querySelector('.blog-grid');
       if (blogGrid) {
-        const headerHeight = document.getElementById('header').offsetHeight;
-        const targetPosition = blogGrid.offsetTop - headerHeight - 20;
+        // Usa altura cacheada do header se disponível
+        const headerHeight = cachedHeaderHeight || document.getElementById('header').offsetHeight;
+        const targetPosition = blogGrid.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
 
         window.scrollTo({
           top: targetPosition,
@@ -732,8 +775,9 @@ function initializeBlogPagination() {
     if (shouldScroll) {
       const blogSection = document.querySelector('.blog-section');
       if (blogSection) {
-        const headerHeight = document.getElementById('header').offsetHeight;
-        const targetPosition = blogSection.offsetTop - headerHeight - 20;
+        // Usa altura cacheada do header se disponível
+        const headerHeight = cachedHeaderHeight || document.getElementById('header').offsetHeight;
+        const targetPosition = blogSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'

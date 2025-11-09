@@ -546,18 +546,18 @@
             src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format('woff2');
         }
     </style>
-   
+
     <link
         rel="preload"
         as="image"
         imagesrcset="
-            assets/images/hero/hero-380x507.avif 380w,
-            assets/images/hero/hero-600x800.avif 600w"
+            assets/images/hero/hero-380x507.webp 380w,
+            assets/images/hero/hero-600x800.webp 600w"
         imagesizes="(max-width: 576px) calc(100vw - 2rem),
                     (max-width: 968px) calc(100vw - 3rem),
                     (max-width: 1024px) 60vw,
                     500px"
-        href="assets/images/hero/hero-600x800.avif"
+        href="assets/images/hero/hero-600x800.webp"
     fetchpriority="high">
 
 
@@ -615,7 +615,7 @@
         <section class="hero section" id="home">
             <div class="hero-container container">
                 <div class="hero-content">
-                    <span class="hero-eyebrow">O melhor jeito de viver é Autêntico —</span>
+                    <!-- <span class="hero-eyebrow">O melhor jeito de viver é Autêntico —</span> -->
                     <h1 class="hero-title">Bernardo Carielo | Psicólogo em Vitória - ES</h1>
                     <p class="hero-description">Um espaço de escuta, acolhimento e autenticidade — para desacelerar, se compreender e reencontrar sentido.</p>
                     <p class="hero-description">Psicoterapia pela Abordagem Centrada na Pessoa: presencial em Vitória (ES) e online para todo o Brasil e brasileiros vivendo no exterior.</p>  
@@ -627,38 +627,21 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                <picture>
-                    <!-- AVIF -->
-                    <source
-                    type="image/avif"
-                    srcset="
-                        assets/images/hero/hero-380x507.avif 380w,
-                        assets/images/hero/hero-600x800.avif 600w"
-                    sizes="(max-width: 576px) calc(100vw - 2rem),
-                            (max-width: 968px) calc(100vw - 3rem),
-                            (max-width: 1024px) 60vw,
-                            500px">
-
-                    <!-- WebP fallback -->
-                    <source
-                    type="image/webp"
+                <img
+                    fetchpriority="high"
+                    decoding="async"
+                    width="600"
+                    height="800"
+                    src="assets/images/hero/hero-600x800.jpg"
+                    alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
                     srcset="
                         assets/images/hero/hero-380x507.webp 380w,
                         assets/images/hero/hero-600x800.webp 600w"
                     sizes="(max-width: 576px) calc(100vw - 2rem),
-                            (max-width: 968px) calc(100vw - 3rem),
-                            (max-width: 1024px) 60vw,
-                            500px">
-
-                    <!-- Fallback img (set width/height to reserve space & avoid CLS) -->
-                    <img
-                    src="assets/images/hero/hero-380x507.jpg"
-                    alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
-                    width="380" height="507"
-                    loading="eager"
-                    fetchpriority="high"
-                    decoding="async">
-                </picture>
+                           (max-width: 968px) calc(100vw - 3rem),
+                           (max-width: 1024px) 60vw,
+                           500px"
+                    loading="eager">
                 </div>
 
             </div>

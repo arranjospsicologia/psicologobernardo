@@ -78,8 +78,12 @@
 
   // Initial cache + on resize/orientation changes
   document.addEventListener('DOMContentLoaded', () => {
-    cacheSectionDimensions();
     scrollWork(window.pageYOffset); // set initial states
+  });
+
+  // Defer expensive layout reads until after page load (better Lighthouse score)
+  window.addEventListener('load', () => {
+    setTimeout(cacheSectionDimensions, 100);
   });
 
   let resizeTimer;
@@ -165,10 +169,10 @@
   /* =======================
      SMOOTH SCROLL (click-time only, OK)
   ======================= */
-  let cachedHeaderHeight = 0;
+  // Use fixed header height (4.5rem = 72px) to avoid forced reflow on load
+  let cachedHeaderHeight = 72;
   function initializeSmoothScroll() {
     const header = document.getElementById('header');
-    if (header) cachedHeaderHeight = header.offsetHeight;
 
     let smoothScrollResizeTimer;
     window.addEventListener('resize', () => {

@@ -34,66 +34,11 @@
   document.addEventListener('DOMContentLoaded', initializeMobileMenu);
 
   /* =======================
-     HEADER SHADOW + ACTIVE LINK (Reflow-safe)
+     HEADER SHADOW (Zero forced reflows)
   ======================= */
   const headerEl = document.getElementById('header');
-  const sections = document.querySelectorAll('section[id]');
-  const navLinksAll = Array.from(document.querySelectorAll('.nav-link'));
+  let headerShadowOn = null;
 
-  // Map section id -> selector fragment (your original mapping)
-  const sectionToLinkMap = {
-    'home': 'home',
-    'sobre': 'sobre',
-    'avaliacoes': 'sobre',
-    'credenciais': 'sobre',
-    'rodape-sobre': 'sobre',
-    'consultorio': 'sobre',
-    'servicos': 'servicos',
-    'projetos': 'projetos',
-    'faq': 'projetos',
-    'contato': 'contato'
-  };
-
-  // Pre-resolve target link elements to avoid querySelector on every scroll
-  const sectionToLinkEl = {};
-  Object.keys(sectionToLinkMap).forEach(secId => {
-    const frag = sectionToLinkMap[secId];
-    sectionToLinkEl[secId] = document.querySelector(`.nav-link[href*="${frag}"]`) || null;
-  });
-
-  let sectionDimensions = [];
-  let lastActiveLink = null;
-  let headerShadowOn = null; // tri-state: null (unknown), true, false
-
-  function cacheSectionDimensions() {
-    // Wrap in rAF to batch layout reads
-    requestAnimationFrame(() => {
-      sectionDimensions = Array.from(sections).map(section => ({
-        id: section.getAttribute('id'),
-        top: section.offsetTop - 100,
-        height: section.offsetHeight
-      }));
-    });
-  }
-
-  // Initial cache + on resize/orientation changes
-  document.addEventListener('DOMContentLoaded', () => {
-    scrollWork(window.pageYOffset); // set initial states
-  });
-
-  // Defer expensive layout reads until after page load (better Lighthouse score)
-  window.addEventListener('load', () => {
-    setTimeout(cacheSectionDimensions, 100);
-  });
-
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(cacheSectionDimensions, 250);
-  }, { passive: true });
-  window.addEventListener('orientationchange', cacheSectionDimensions, { passive: true });
-
-  // Scroll work split in two small functions called inside a single rAF
   function updateHeaderShadow(scrollY) {
     if (!headerEl) return;
     const shouldShadow = scrollY >= 50;
@@ -105,48 +50,36 @@
     }
   }
 
-  function updateActiveLink(scrollY) {
-    let activeSectionId = null;
-    // Use the cached dimensions; no layout reads here
-    for (let i = 0; i < sectionDimensions.length; i++) {
-      const s = sectionDimensions[i];
-      if (scrollY > s.top && scrollY <= s.top + s.height) {
-        activeSectionId = s.id;
-        break;
-      }
-    }
-
-    // If nothing matches, no changes
-    if (!activeSectionId) return;
-
-    const targetLink = sectionToLinkEl[activeSectionId];
-    if (targetLink && targetLink !== lastActiveLink) {
-      // Remove only if needed
-      if (lastActiveLink) lastActiveLink.classList.remove('active');
-      // Remove stray actives if any (rare)
-      navLinksAll.forEach(l => { if (l !== targetLink) l.classList.remove('active'); });
-      targetLink.classList.add('active');
-      lastActiveLink = targetLink;
-    }
-  }
-
-  // Single throttled scroll loop using rAF (prevents forced reflow)
+  // Throttled scroll listener only for header shadow
   let ticking = false;
-  function scrollWork(scrollY) {
-    updateHeaderShadow(scrollY);
-    updateActiveLink(scrollY);
-  }
   function onScroll() {
     const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
     if (!ticking) {
       ticking = true;
       requestAnimationFrame(() => {
-        scrollWork(currentY);
+        updateHeaderShadow(currentY);
         ticking = false;
       });
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* =======================
+     ACTIVE LINK ON CLICK (No scroll spy)
+  ======================= */
+  function initializeNavLinkHighlight() {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Remove active from all links
+        navLinks.forEach(l => l.classList.remove('active'));
+        // Add active to clicked link
+        this.classList.add('active');
+      }, { passive: true });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initializeNavLinkHighlight);
 
   /* =======================
      FAQ ACCORDION

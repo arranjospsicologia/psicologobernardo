@@ -258,8 +258,9 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- Preload CSS crítico -->
-    <link rel="preload" as="style" href="assets/css/style.min.css">
+    <!-- CSS Principal - carregamento não bloqueante -->
+    <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
 
     <!-- Fontes locais (Inter) - carregamento assíncrono -->
     <link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -544,9 +545,6 @@
             .nav-toggle { display: block; font-size: 1.5rem; cursor: pointer; }
         }
     </style>
-
-    <!-- CSS Principal (síncrono para home evitar CLS) -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
 
     <!-- Font Awesome Subset (local, apenas ícones usados - 97% menor) -->
     <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>

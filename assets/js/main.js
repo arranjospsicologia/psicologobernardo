@@ -52,12 +52,13 @@
 
   // Throttled scroll listener only for header shadow
   let ticking = false;
+  let lastScrollY = 0;
   function onScroll() {
-    const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
     if (!ticking) {
       ticking = true;
       requestAnimationFrame(() => {
-        updateHeaderShadow(currentY);
+        updateHeaderShadow(lastScrollY);
         ticking = false;
       });
     }

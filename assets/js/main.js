@@ -178,7 +178,9 @@
     window.addEventListener('resize', () => {
       clearTimeout(smoothScrollResizeTimer);
       smoothScrollResizeTimer = setTimeout(() => {
-        if (header) cachedHeaderHeight = header.offsetHeight;
+        requestAnimationFrame(() => {
+          if (header) cachedHeaderHeight = header.offsetHeight;
+        });
       }, 250);
     }, { passive: true });
 
@@ -187,8 +189,11 @@
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - cachedHeaderHeight;
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          requestAnimationFrame(() => {
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - cachedHeaderHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          });
+          return; // prevent double scroll
         }
       });
     });
@@ -419,9 +424,11 @@
 
         const blogGrid = document.querySelector('.blog-grid');
         if (blogGrid) {
-          const headerHeight = cachedHeaderHeight || (document.getElementById('header') ? document.getElementById('header').offsetHeight : 0);
-          const targetPosition = blogGrid.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          requestAnimationFrame(() => {
+            const headerHeight = cachedHeaderHeight || (document.getElementById('header') ? document.getElementById('header').offsetHeight : 0);
+            const targetPosition = blogGrid.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          });
         }
 
         if (typeof window.blogPagination !== 'undefined') {
@@ -607,9 +614,11 @@
       if (shouldScroll) {
         const blogSection = document.querySelector('.blog-section');
         if (blogSection) {
-          const headerHeight = cachedHeaderHeight || (document.getElementById('header') ? document.getElementById('header').offsetHeight : 0);
-          const targetPosition = blogSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          requestAnimationFrame(() => {
+            const headerHeight = cachedHeaderHeight || (document.getElementById('header') ? document.getElementById('header').offsetHeight : 0);
+            const targetPosition = blogSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          });
         }
       }
     }

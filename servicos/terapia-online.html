@@ -7,14 +7,40 @@
     <meta name="keywords" content="terapia online, psicologo online brasil, psicoterapia online, atendimento psicologico online, terapia virtual, psicologo a distancia">
     <meta name="author" content="Bernardo Carielo">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WQ4XBV7333');
-    </script>
+    <!-- Google tag (gtag.js) - Lazy loaded apenas quando necessário -->
+<script>
+(function() {
+  let analyticsLoaded = false;
+
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+
+    // Carregar gtag.js
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333';
+    document.head.appendChild(script);
+
+    // Inicializar
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
+  }
+
+  // Carregar em qualquer interação do usuário
+  const events = ['mousedown', 'touchstart', 'keydown', 'scroll'];
+  const loadOnInteraction = () => {
+    loadAnalytics();
+    events.forEach(e => window.removeEventListener(e, loadOnInteraction));
+  };
+  events.forEach(e => window.addEventListener(e, loadOnInteraction, { passive: true, once: true }));
+
+  // Ou carregar após 3 segundos se não houver interação
+  setTimeout(loadAnalytics, 3000);
+})();
+</script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">

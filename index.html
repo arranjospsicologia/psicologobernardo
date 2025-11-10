@@ -245,9 +245,6 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- Preconnect para recursos externos -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-
     <!-- Preload CSS crítico -->
     <link rel="preload" as="style" href="assets/css/style.min.css">
 
@@ -1262,15 +1259,39 @@
     <!-- JavaScript (defer para não bloquear renderização) -->
     <script src="assets/js/main.min.js" defer></script>
 
-<!-- Google tag (gtag.js) - Deferred for better performance -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333"></script>
+<!-- Google tag (gtag.js) - Lazy loaded apenas quando necessário -->
 <script>
-window.addEventListener('load', function() {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
-});
+(function() {
+  let analyticsLoaded = false;
+
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+
+    // Carregar gtag.js
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333';
+    document.head.appendChild(script);
+
+    // Inicializar
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
+  }
+
+  // Carregar em qualquer interação do usuário
+  const events = ['mousedown', 'touchstart', 'keydown', 'scroll'];
+  const loadOnInteraction = () => {
+    loadAnalytics();
+    events.forEach(e => window.removeEventListener(e, loadOnInteraction));
+  };
+  events.forEach(e => window.addEventListener(e, loadOnInteraction, { passive: true, once: true }));
+
+  // Ou carregar após 3 segundos se não houver interação
+  setTimeout(loadAnalytics, 3000);
+})();
 </script>
 
 

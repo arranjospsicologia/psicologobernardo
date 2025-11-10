@@ -34,6 +34,14 @@
         type="image/avif"
         media="(min-width: 769px)"
         fetchpriority="high">
+    <!-- Preload hero mobile (para LCP mobile) -->
+    <link
+        rel="preload"
+        as="image"
+        href="assets/images/hero/hero-380x507.avif"
+        type="image/avif"
+        media="(max-width: 450px)"
+        fetchpriority="high">
 
     <!-- Schema Markup: LocalBusiness + ProfessionalService (principal) -->
     <script type="application/ld+json">
@@ -260,7 +268,6 @@
             forward: ["dataLayer.push"]
         };
     </script>
-    <script src="/assets/partytown/partytown.js"></script>
 
     <!-- CSS Principal - carregamento não bloqueante -->
     <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -622,7 +629,7 @@
                 </div>
                 <div class="hero-image">
                 <picture>
-                    <!-- Mobile: lazy (LCP = texto) | Desktop: eager (LCP = imagem) -->
+                    <!-- Mobile: eager (LCP = imagem) | Desktop: eager (LCP = imagem) -->
                     <source
                         media="(max-width: 450px)"
                         srcset="assets/images/hero/hero-380x507.avif"
@@ -646,7 +653,7 @@
                         height="800"
                         src="assets/images/hero/hero-600x800.jpg"
                         alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
-                        loading="lazy">
+                        fetchpriority="high">
                 </picture>
                 </div>
 
@@ -1275,7 +1282,6 @@
   gtag('js', new Date());
   gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
 </script>
-
-
+<script src="/assets/partytown/partytown.js"></script>
 </body>
 </html>

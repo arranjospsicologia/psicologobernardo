@@ -198,6 +198,23 @@
   document.addEventListener('DOMContentLoaded', initializeLazyLoading);
 
   /* =======================
+     HERO IMAGE FADE-IN (LCP optimization)
+  ======================= */
+  function initializeHeroImageFadeIn() {
+    const heroImg = document.querySelector('.hero-img-lazy');
+    if (heroImg) {
+      if (heroImg.complete) {
+        heroImg.classList.add('loaded');
+      } else {
+        heroImg.addEventListener('load', function() {
+          heroImg.classList.add('loaded');
+        });
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', initializeHeroImageFadeIn);
+
+  /* =======================
      COPYRIGHT YEAR
   ======================= */
   function updateCopyrightYear() {

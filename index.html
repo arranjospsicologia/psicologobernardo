@@ -26,21 +26,13 @@
     <meta name="twitter:description" content="Atendimento psicológico presencial e online com base na Abordagem Centrada na Pessoa. Consultório em Jardim da Penha, Vitória/ES.">
     <meta name="twitter:image" content="https://psicologobernardo.com.br/assets/images/og-image.jpg">
 
-    <!-- Preload hero apenas desktop (mobile = lazy para LCP de texto) -->
+    <!-- Preload hero apenas desktop (mobile usa lazy loading) -->
     <link
         rel="preload"
         as="image"
         href="assets/images/hero/hero-600x800.avif"
         type="image/avif"
         media="(min-width: 769px)"
-        fetchpriority="high">
-    <!-- Preload hero mobile (para LCP mobile) -->
-    <link
-        rel="preload"
-        as="image"
-        href="assets/images/hero/hero-380x507.avif"
-        type="image/avif"
-        media="(max-width: 450px)"
         fetchpriority="high">
 
     <!-- Schema Markup: LocalBusiness + ProfessionalService (principal) -->
@@ -526,7 +518,8 @@
             }
             .hero-content {
                 min-height: 380px;
-                padding-top: 3rem;
+                padding-top: 4rem;
+                padding-bottom: 5rem;
             }
             .hero-image {
                 order: 1;
@@ -534,18 +527,25 @@
             }
             .hero-title {
                 font-size: 1.9rem;
-                line-height: 1.35;
+                line-height: 1.65;
                 min-height: 100px;
+                margin-bottom: 2rem;
             }
             .hero-description {
                 font-size: 1.1rem;
+                line-height: 1.85;
                 min-height: 70px;
+                margin-bottom: 1.75rem;
             }
             .hero-eyebrow {
                 font-size: 0.9rem;
                 min-height: 2.2rem;
                 max-height: 2.2rem;
                 line-height: 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+            .hero-buttons {
+                margin-top: 1rem;
             }
             .nav-list { display: none; }
             .btn-agendar-nav { display: none; }
@@ -629,7 +629,7 @@
                 </div>
                 <div class="hero-image">
                 <picture>
-                    <!-- Mobile: eager (LCP = imagem) | Desktop: eager (LCP = imagem) -->
+                    <!-- Mobile: lazy (imagem abaixo da dobra) | Desktop: eager (LCP = imagem) -->
                     <source
                         media="(max-width: 450px)"
                         srcset="assets/images/hero/hero-380x507.avif"
@@ -653,7 +653,7 @@
                         height="800"
                         src="assets/images/hero/hero-600x800.jpg"
                         alt="Psicólogo em Jardim da Penha, Vitória (ES) – Bernardo Carielo, especialista em Abordagem Centrada na Pessoa"
-                        fetchpriority="high">
+                        loading="lazy">
                 </picture>
                 </div>
 

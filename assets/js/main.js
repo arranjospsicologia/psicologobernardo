@@ -621,9 +621,9 @@
             </div>
             <div class="reviews-carousel" id="reviews-carousel"></div>
             <div class="reviews-nav">
-              <button class="review-nav-btn" id="review-prev" aria-label="Review anterior"><i class="fas fa-chevron-left"></i></button>
+              <button class="review-nav-btn" id="review-prev" aria-label="Review anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
               <div class="review-indicators" id="review-indicators"></div>
-              <button class="review-nav-btn" id="review-next" aria-label="Próximo review"><i class="fas fa-chevron-right"></i></button>
+              <button class="review-nav-btn" id="review-next" aria-label="Próximo review"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
             </div>
           </div>
         `;
@@ -809,9 +809,9 @@
             </div>
             <div class="doctoralia-carousel" id="doctoralia-carousel"></div>
             <div class="doctoralia-nav">
-              <button class="doctoralia-nav-btn" id="doctoralia-prev" aria-label="Review anterior"><i class="fas fa-chevron-left"></i></button>
+              <button class="doctoralia-nav-btn" id="doctoralia-prev" aria-label="Review anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
               <div class="doctoralia-indicators" id="doctoralia-indicators"></div>
-              <button class="doctoralia-nav-btn" id="doctoralia-next" aria-label="Próximo review"><i class="fas fa-chevron-right"></i></button>
+              <button class="doctoralia-nav-btn" id="doctoralia-next" aria-label="Próximo review"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
             </div>
             <a href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria?utm_id=379142&utm_source=widget-doctor-379142&utm_medium=big-with-opinion&utm_campaign=&utm_content=#profile-reviews"
                class="doctoralia-cta-link" target="_blank" rel="noopener">Ver todas as 65 avaliações</a>

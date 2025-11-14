@@ -599,7 +599,7 @@
      REVIEWS (lazy via IO)
   ======================= */
   function initializeReviewsCarousel() {
-    fetch('/assets/data/reviews.json')
+    fetch('assets/data/reviews.json')
       .then(res => res.json())
       .then(reviews => {
         const container = document.getElementById('reviews-container');

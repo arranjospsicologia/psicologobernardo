@@ -313,7 +313,7 @@
         }
 
         /* Mobile básico */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 968px) {
             .hero {
                 padding-top: var(--header-height);
             }
@@ -353,9 +353,36 @@
             .hero-buttons {
                 margin-top: 1rem;
             }
-            .nav-list { display: none; }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--white);
+                padding: 6rem 2rem 2rem;
+                box-shadow: var(--shadow-lg);
+                transition: var(--transition);
+            }
+            .nav-menu.show-menu {
+                right: 0;
+            }
+            .nav-list {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
             .btn-agendar-nav { display: none; }
-            .nav-toggle { display: block; font-size: 1.5rem; cursor: pointer; }
+            .nav-toggle { display: block; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
+            .nav-close {
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--primary-color);
+            }
         }
     </style>
 

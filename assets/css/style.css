@@ -1337,6 +1337,32 @@ button {
   text-decoration-thickness: 2px;
 }
 
+/* Google Reviews CTA Link */
+.reviews-cta-link {
+  display: block;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+.reviews-cta-link:hover {
+  color: var(--primary-dark);
+  text-decoration-thickness: 2px;
+}
+
+/* Mobile height fix for Doctoralia widget */
+@media screen and (max-width: 768px) {
+  .doctoralia-widget {
+    min-height: 600px;
+  }
+}
+
 /* ========== RESPONSIVE ========== */
 @media screen and (max-width: 968px) {
   :root {

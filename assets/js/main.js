@@ -625,6 +625,8 @@
               <div class="review-indicators" id="review-indicators"></div>
               <button class="review-nav-btn" id="review-next" aria-label="Próximo review"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
             </div>
+            <a href="https://www.google.com/maps/place/Psic%C3%B3logo+-+Bernardo+Carielo+Macedo+de+Oliveira+Pinto/@-20.2796937,-40.3010992,17z/data=!4m17!1m8!3m7!1s0xb8171b61b8e13b:0x5bab77942d3119e5!2sPsic%C3%B3logo+-+Bernardo+Carielo+Macedo+de+Oliveira+Pinto!8m2!3d-20.2798925!4d-40.3009252!10e5!16s%2Fg%2F11hdqw304k!3m7!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!9m1!1b1!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
+               class="reviews-cta-link" target="_blank" rel="noopener">Ver todas as 20+ avaliações</a>
           </div>
         `;
         container.innerHTML = widgetHTML;
@@ -814,7 +816,7 @@
               <button class="doctoralia-nav-btn" id="doctoralia-next" aria-label="Próximo review"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
             </div>
             <a href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria?utm_id=379142&utm_source=widget-doctor-379142&utm_medium=big-with-opinion&utm_campaign=&utm_content=#profile-reviews"
-               class="doctoralia-cta-link" target="_blank" rel="noopener">Ver todas as 65 avaliações</a>
+               class="doctoralia-cta-link" target="_blank" rel="noopener">Ver todas as 60+ avaliações</a>
           </div>
         `;
         container.innerHTML = widgetHTML;

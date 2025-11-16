@@ -314,20 +314,29 @@ button {
 .btn-agendar-nav {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #047C82;
-  color: var(--white);
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--white) !important;
   border-radius: var(--radius-sm);
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
   transition: var(--transition);
+  min-height: 56px;
+  box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
 }
 
 .btn-agendar-nav:hover {
-  background-color: #08BA9C;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-agendar-nav svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .nav-toggle,

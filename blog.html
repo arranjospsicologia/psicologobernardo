@@ -68,80 +68,63 @@
 
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome (async com font-display swap) -->
-    <!-- Font Awesome Subset (local, apenas ícones usados - 97% menor) -->
-    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/css/fontawesome-subset.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/fontawesome-subset.min.css"></noscript>
-    <style>
-        /* Font Awesome font-display override */
-        @font-face {
-            font-family: 'Font Awesome 6 Free';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2) format('woff2');
-        }
-        @font-face {
-            font-family: 'Font Awesome 6 Free';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format('woff2');
-        }
-        @font-face {
-            font-family: 'Font Awesome 6 Brands';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format('woff2');
-        }
-    </style>
 </head>
 <body>
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
     </a>
 
     <!-- Header/Navigation -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.html" class="nav-logo">
+            <a href="/" class="nav-logo">
                 <img src="assets/images/logo.svg" alt="Logo Bernardo Carielo - Psicólogo CRP 16/5527" class="logo-img">
             </a>
 
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html#home" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="/#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre</a></li>
                     <li class="nav-item nav-dropdown">
-                        <a href="index.html#servicos" class="nav-link">Serviços <i class="fas fa-chevron-down"></i></a>
+                        <a href="/#servicos" class="nav-link">Serviços
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-left:0.25rem" aria-hidden="true">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="servicos/psicoterapia-individual.html">Psicoterapia Individual</a></li>
-                            <li><a href="servicos/terapia-de-casal.html">Terapia de Casal</a></li>
-                            <li><a href="servicos/terapia-online.html">Terapia Online</a></li>
-                            <li><a href="servicos/grupos-e-rodas.html">Grupos e Rodas de Conversa</a></li>
-                            <li><a href="servicos/laudos-psicologicos.html">Laudos Psicológicos</a></li>
-                            <li><a href="servicos/supervisao-profissional.html">Supervisão Profissional</a></li>
+                            <li><a href="/servicos/psicoterapia-individual.html">Psicoterapia Individual</a></li>
+                            <li><a href="/servicos/terapia-de-casal.html">Terapia de Casal</a></li>
+                            <li><a href="/servicos/terapia-online.html">Terapia Online</a></li>
+                            <li><a href="/servicos/grupos-e-rodas.html">Grupos e Rodas de Conversa</a></li>
+                            <li><a href="/servicos/laudos-psicologicos.html">Laudos Psicológicos</a></li>
+                            <li><a href="/servicos/supervisao-profissional.html">Supervisão Profissional</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="index.html#projetos" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="/#projetos" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="/blog.html" class="nav-link active">Blog</a></li>
+                    <li class="nav-item"><a href="/contato.html" class="nav-link">Contato</a></li>
                 </ul>
                 <div class="nav-close" id="nav-close">
-                    <i class="fas fa-times"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
                 </div>
             </div>
 
             <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="btn-agendar-nav" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar consulta
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Agendar consulta
             </a>
 
             <div class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
             </div>
         </nav>
     </header>
@@ -181,10 +164,15 @@
                 <div class="blog-controls">
                     <div class="blog-search">
                         <div class="search-input-wrapper">
-                            <i class="fas fa-search"></i>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
                             <input type="text" id="blog-search-input" placeholder="Buscar posts por título..." class="search-input">
                             <button id="clear-search" class="clear-search" style="display: none;">
-                                <i class="fas fa-times"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                </svg>
                             </button>
                         </div>
                         <div id="search-results-count" class="search-results-count" style="display: none;"></div>
@@ -192,40 +180,68 @@
 
                     <div class="blog-filter-dropdown">
                         <button class="filter-dropdown-btn" id="filter-dropdown-btn">
-                            <i class="fas fa-filter"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
                             <span id="current-filter-label">Todos os posts</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
                         </button>
                         <div class="filter-dropdown-menu" id="filter-dropdown-menu">
                             <button class="filter-option active" data-tag="todos">
-                                <i class="fas fa-th"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M4 11h6v6H4zm0-7h6v6H4zm7 0h6v6h-6zm0 7h6v6h-6z"/>
+                                </svg>
                                 <span>Todos os posts</span>
-                                <i class="fas fa-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
                             </button>
                             <button class="filter-option" data-tag="acp">
-                                <i class="fas fa-book-open"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                                </svg>
                                 <span>ACP</span>
-                                <i class="fas fa-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
                             </button>
                             <button class="filter-option" data-tag="saude-mental">
-                                <i class="fas fa-brain"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92 2.88c-.59.88-.09 2.08.93 2.38l.97.29-.3 1.88c-.09.56.35 1.08.92 1.08h.5c.33 0 .63-.19.78-.49l.84-1.69h.93v2.5c0 .56.45 1 1 1h.5c.56 0 1-.44 1-1v-2.5h.93l.84 1.69c.15.3.45.49.78.49h.5c.57 0 1.01-.52.92-1.08l-.3-1.88.97-.29c1.02-.3 1.52-1.5.93-2.38L18 9.66C17.81 5.95 14.77 3 13 3zm0 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm1.5-5.5h-3v-1h3v1z"/>
+                                </svg>
                                 <span>Saúde Mental</span>
-                                <i class="fas fa-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
                             </button>
                             <button class="filter-option" data-tag="autoconhecimento">
-                                <i class="fas fa-compass"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
                                 <span>Autoconhecimento</span>
-                                <i class="fas fa-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
                             </button>
                             <button class="filter-option" data-tag="ansiedade">
-                                <i class="fas fa-heart-pulse"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
                                 <span>Ansiedade</span>
-                                <i class="fas fa-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
                             </button>
                             <button class="filter-option" data-tag="masculinidades">
-                                <i class="fas fa-users"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                                </svg>
                                 <span>Masculinidades</span>
-                                <i class="fas fa-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -243,12 +259,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 31 Out 2025</span>
-                                <span><i class="far fa-clock"></i> 12 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>31 Out 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>12 min de leitura</span>
                             </div>
                             <h2>Trabalho interno x performance: como medir 'resultado'?</h2>
                             <p>Em saúde mental, 'resultado' raramente cabe em números. Às vezes, é poder dizer 'não', dormir melhor, ou chorar sem se punir.</p>
-                            <a href="posts/trabalho-interno-vs-performance.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/trabalho-interno-vs-performance.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article>
                     <!-- Quando o 'automático' vira modo de vida -->
@@ -259,12 +285,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 30 Out 2025</span>
-                                <span><i class="far fa-clock"></i> 10 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>30 Out 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>10 min de leitura</span>
                             </div>
                             <h2>Quando o 'automático' vira modo de vida</h2>
                             <p>Viver no automático economiza energia — até que custa caro. O convite aqui é desacelerar o olhar e reaprender preferências.</p>
-                            <a href="posts/quando-automatico-vira-modo-de-vida.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/quando-automatico-vira-modo-de-vida.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article>
                     <!-- Ansiedade: os sinais de que talvez seja hora de desacelerar -->
@@ -275,12 +311,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 5 Mar 2025</span>
-                                <span><i class="far fa-clock"></i> 11 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>5 Mar 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>11 min de leitura</span>
                             </div>
                             <h2>Ansiedade: os sinais de que talvez seja hora de desacelerar</h2>
                             <p>Saiba como reconhecer os sinais de ansiedade e o que o corpo tenta comunicar quando o ritmo de vida se torna insustentável.</p>
-                            <a href="posts/ansiedade-sinais-desacelerar.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/ansiedade-sinais-desacelerar.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article>
                     <!-- Corpo e emoções: o que o corpo revela quando a mente cala -->
@@ -291,12 +337,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 20 Fev 2025</span>
-                                <span><i class="far fa-clock"></i> 11 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>20 Fev 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>11 min de leitura</span>
                             </div>
                             <h2>Corpo e emoções: o que o corpo revela quando a mente cala</h2>
                             <p>Uma reflexão sobre como o corpo expressa o que muitas vezes não conseguimos dizer em palavras e sobre o papel da terapia na reconexão entre corpo e emoção.</p>
-                            <a href="posts/corpo-e-emocoes.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/corpo-e-emocoes.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article>
                     <!-- Crises existenciais: quando a vida parece perder o sentido -->
@@ -307,12 +363,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 5 Fev 2025</span>
-                                <span><i class="far fa-clock"></i> 12 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>5 Fev 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>12 min de leitura</span>
                             </div>
                             <h2>Crises existenciais: quando a vida parece perder o sentido</h2>
                             <p>Reflexões sobre o que acontece quando antigas certezas deixam de fazer sentido e a importância de acolher os momentos de crise como oportunidades de transformação.</p>
-                            <a href="posts/crises-existenciais.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/crises-existenciais.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article>
                     <!-- O que é a Abordagem Centrada na Pessoa e por que ela continua tão atual -->
@@ -323,12 +389,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 22 Jan 2025</span>
-                                <span><i class="far fa-clock"></i> 14 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>22 Jan 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>14 min de leitura</span>
                             </div>
                             <h2>O que é a Abordagem Centrada na Pessoa e por que ela continua tão atual</h2>
                             <p>Conheça os princípios da Abordagem Centrada na Pessoa, desenvolvida por Carl Rogers, e entenda por que essa forma de fazer psicologia permanece viva e necessária.</p>
-                            <a href="posts/abordagem-centrada-pessoa.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/abordagem-centrada-pessoa.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article>
                     <!-- Por que é tão difícil para muitos homens falar sobre o que sentem -->
@@ -339,12 +415,22 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 22 Jan 2025</span>
-                                <span><i class="far fa-clock"></i> 10 min de leitura</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>22 Jan 2025</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+</svg>10 min de leitura</span>
                             </div>
                             <h2>Por que é tão difícil para muitos homens falar sobre o que sentem</h2>
                             <p>Entenda como a terapia pode ajudar homens a lidarem com emoções, relacionamentos e pressões sem precisar dar conta de tudo sozinho.</p>
-                            <a href="posts/terapia-para-homens.html" class="blog-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+                            <a href="posts/terapia-para-homens.html" class="blog-link">Ler mais <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+</svg></a>
                         </div>
                     </article></div>
 
@@ -361,14 +447,18 @@
                 <!-- Paginação -->
                 <div class="blog-pagination" id="blog-pagination">
                     <button class="pagination-btn" id="prev-page" disabled="">
-                        <i class="fas fa-chevron-left"></i> Anterior
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg> Anterior
                     </button>
                     <div class="pagination-numbers" id="pagination-numbers">
                         <button class="pagination-number active" data-page="1">1</button>
                         <button class="pagination-number" data-page="2">2</button>
                     </div>
                     <button class="pagination-btn" id="next-page">
-                        Próxima <i class="fas fa-chevron-right"></i>
+                        Próxima <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -382,7 +472,9 @@
                     <p>Talvez seja um bom momento pra conversar.</p>
                     <!-- Botão WhatsApp -->
                     <a href="https://wa.me/5527998331228?text=Olá,%20gostei%20do%20seu%20texto%20no%20blog%20e%20gostaria%20de%20conversar" class="btn btn-primary" target="_blank" aria-label="Falar no WhatsApp">
-                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg> Falar no WhatsApp
                     </a>
                 </div>
             </div>
@@ -394,18 +486,18 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <img src="assets/images/logo.svg" alt="Psicólogo Bernardo" class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="Logo empresarial Bernardo Carielo" class="footer-logo">
                     <p>Sou Bernardo Carielo, psicólogo CRP 16/5527. Ofereço psicoterapia com a Abordagem Centrada na Pessoa em Vitória/ES. Atendimento individual, casais e família.</p>
                 </div>
 
                 <div class="footer-column">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#sobre">Sobre</a></li>
-                        <li><a href="index.html#servicos">Serviços</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index.html#contato">Contato</a></li>
+                        <li><a href="/#home">Home</a></li>
+                        <li><a href="/sobre.html">Sobre</a></li>
+                        <li><a href="/#servicos">Serviços</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contato.html">Contato</a></li>
                     </ul>
                 </div>
 
@@ -416,31 +508,48 @@
 
                     <h3 style="margin-top: 1.5rem;">Contato</h3>
                     <ul>
-                        <li><a href="https://wa.me/5527998331228" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                        <li><a href="mailto:contato@arranjospsicologia.com.br"><i class="fas fa-envelope"></i> Email</a></li>
-                        <li><a href="https://instagram.com/bcarielo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://facebook.com/bcarielo" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://wa.me/5527998331228" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp</a></li>
+                        <li><a href="mailto:contato@arranjospsicologia.com.br">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Email</a></li>
+                        <li><a href="https://instagram.com/bcarielo" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            Instagram</a></li>
+                        <li><a href="https://facebook.com/bcarielo" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Facebook</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3>Regulamentação Profissional</h3>
                     <ul>
-                        <li><a href="https://crp16.org.br/" target="_blank" rel="noopener"><i class="fas fa-certificate"></i> CRP 16</a></li>
-                        <li><a href="https://site.cfp.org.br/" target="_blank" rel="noopener"><i class="fas fa-landmark"></i> CFP</a></li>
-                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank" rel="noopener"><i class="fas fa-book"></i> Código de Ética</a></li>
-                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2018/05/RESOLU%C3%87%C3%83O-N%C2%BA-11-DE-11-DE-MAIO-DE-2018.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Resolução 11/2018</a></li>
+                        <li><a href="https://crp16.org.br/" target="_blank" rel="noopener">CRP 16</a></li>
+                        <li><a href="https://site.cfp.org.br/" target="_blank" rel="noopener">CFP</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank" rel="noopener">Código de Ética</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2018/05/RESOLU%C3%87%C3%83O-N%C2%BA-11-DE-11-DE-MAIO-DE-2018.pdf" target="_blank" rel="noopener">Resolução 11/2018</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="/politica-privacidade.html">Política de Privacidade</a>
                     <span class="separator"> | </span>
-                    <a href="termos-uso.html">Termos de Uso</a>
+                    <a href="/termos-uso.html">Termos de Uso</a>
                 </div>
-                <p>© 2025 Psicólogo Bernardo - Bernardo Carielo (CRP 16/5527). Todos os direitos reservados.</p>
+                <p>&copy; 2025 Psicólogo Bernardo - Bernardo Carielo (CRP 16/5527). Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

@@ -10,6 +10,7 @@
   --accent-orange: #FFA467;
   --accent-green: #25D366;
   --accent-blue: #5B9BD5;
+  --accent-color: #08BA9C; /* Define accent-color to fix undefined variable */
   --gray: #75828A;
   --white: #FFFFFF;
   --black: #1a1a1a;
@@ -322,9 +323,7 @@ button {
   border-radius: var(--radius-sm);
   font-weight: 500;
   transition: var(--transition);
-  min-height: 56px;
   box-shadow: var(--shadow-sm);
-  box-sizing: border-box;
 }
 
 .btn-agendar-nav:hover {
@@ -1768,17 +1767,6 @@ button {
   border-color: var(--primary-color);
 }
 
-.pagination-ellipsis {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray);
-  font-weight: 500;
-  user-select: none;
-}
-
 /* ========== BLOG POST STYLES ========== */
 .blog-post {
   padding-top: calc(var(--header-height) + 3rem);
@@ -2145,44 +2133,14 @@ button {
   }
 }
 
-/* ========== NEWSLETTER ========== */
-.newsletter {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  color: var(--white);
-}
-
-.newsletter-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.newsletter-content h2 {
-  font-size: 2rem;
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.newsletter-content p {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-
-
-
 
 @media screen and (max-width: 576px) {
   .blog-grid {
     grid-template-columns: 1fr;
   }
 
-  
-}
 
-/* ========== PAGE TRANSITIONS ========== */
-/* REMOVIDO: Transições de página desabilitadas para melhor UX */
+}
 
 /* ========== AGENDAMENTO PAGE ========== */
 .agendamento-hero {

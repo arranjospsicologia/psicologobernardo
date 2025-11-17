@@ -51,42 +51,14 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
 
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome (async com font-display swap) -->
-    <!-- Font Awesome Subset (local, apenas ícones usados - 97% menor) -->
-    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/css/fontawesome-subset.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/fontawesome-subset.min.css"></noscript>
-    <style>
-        /* Font Awesome font-display override */
-        @font-face {
-            font-family: 'Font Awesome 6 Free';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2) format('woff2');
-        }
-        @font-face {
-            font-family: 'Font Awesome 6 Free';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format('woff2');
-        }
-        @font-face {
-            font-family: 'Font Awesome 6 Brands';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format('woff2');
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
     </a>
 
     <!-- Header/Navigation -->
@@ -101,7 +73,11 @@
                     <li class="nav-item"><a href="index.html#home" class="nav-link active">Início</a></li>
                     <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
                     <li class="nav-item nav-dropdown">
-                        <a href="index.html#servicos" class="nav-link">Serviços <i class="fas fa-chevron-down"></i></a>
+                        <a href="index.html#servicos" class="nav-link">Serviços
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-left:0.25rem" aria-hidden="true">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a href="servicos/psicoterapia-individual.html">Psicoterapia Individual</a></li>
                             <li><a href="servicos/terapia-de-casal.html">Terapia de Casal</a></li>
@@ -116,16 +92,23 @@
                     <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
                 </ul>
                 <div class="nav-close" id="nav-close">
-                    <i class="fas fa-times"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
                 </div>
             </div>
 
             <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="btn-agendar-nav" target="_blank">
-                <i class="fab fa-whatsapp"></i> Agendar consulta
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Agendar consulta
             </a>
 
             <div class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
             </div>
         </nav>
     </header>
@@ -149,19 +132,84 @@
 
                     <!-- Índice -->
                     <nav class="legal-toc">
-                        <h3><i class="fas fa-list"></i> Índice</h3>
+                        <h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <line x1="8" y1="6" x2="21" y2="6"/>
+                                <line x1="8" y1="12" x2="21" y2="12"/>
+                                <line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                <line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                            Índice
+                        </h3>
                         <ul>
-                            <li><a href="#intro"><i class="fas fa-chevron-right"></i> 1. Introdução</a></li>
-                            <li><a href="#responsavel"><i class="fas fa-chevron-right"></i> 2. Responsável pelo Tratamento</a></li>
-                            <li><a href="#dados-coletados"><i class="fas fa-chevron-right"></i> 3. Dados Coletados</a></li>
-                            <li><a href="#finalidade"><i class="fas fa-chevron-right"></i> 4. Finalidade do Uso</a></li>
-                            <li><a href="#base-legal"><i class="fas fa-chevron-right"></i> 5. Base Legal</a></li>
-                            <li><a href="#compartilhamento"><i class="fas fa-chevron-right"></i> 6. Compartilhamento</a></li>
-                            <li><a href="#cookies"><i class="fas fa-chevron-right"></i> 7. Cookies</a></li>
-                            <li><a href="#seguranca"><i class="fas fa-chevron-right"></i> 8. Segurança</a></li>
-                            <li><a href="#direitos"><i class="fas fa-chevron-right"></i> 9. Seus Direitos</a></li>
-                            <li><a href="#retencao"><i class="fas fa-chevron-right"></i> 10. Retenção de Dados</a></li>
-                            <li><a href="#contato"><i class="fas fa-chevron-right"></i> 11. Contato</a></li>
+                            <li><a href="#intro">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                1. Introdução
+                            </a></li>
+                            <li><a href="#responsavel">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                2. Responsável pelo Tratamento
+                            </a></li>
+                            <li><a href="#dados-coletados">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                3. Dados Coletados
+                            </a></li>
+                            <li><a href="#finalidade">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                4. Finalidade do Uso
+                            </a></li>
+                            <li><a href="#base-legal">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                5. Base Legal
+                            </a></li>
+                            <li><a href="#compartilhamento">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                6. Compartilhamento
+                            </a></li>
+                            <li><a href="#cookies">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                7. Cookies
+                            </a></li>
+                            <li><a href="#seguranca">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                8. Segurança
+                            </a></li>
+                            <li><a href="#direitos">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                9. Seus Direitos
+                            </a></li>
+                            <li><a href="#retencao">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                10. Retenção de Dados
+                            </a></li>
+                            <li><a href="#contato">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                </svg>
+                                11. Contato
+                            </a></li>
                         </ul>
                     </nav>
 
@@ -176,7 +224,13 @@
                         <h2>2. Responsável pelo Tratamento de Dados</h2>
 
                         <div class="legal-contact-box">
-                            <h3><i class="fas fa-user-shield"></i> Dados do Controlador</h3>
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M12 2L7 5v6c0 5 5 9 5 9s5-4 5-9V5l-5-3z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Dados do Controlador
+                            </h3>
                             <p><strong>Nome:</strong> Bernardo Carielo</p>
                             <p><strong>CRP:</strong> 16/5527</p>
                             <p><strong>Endereço:</strong> Rua Darcy Grijó, 50 - Sala 409, Jardim da Penha, Vitória - ES</p>
@@ -260,7 +314,13 @@
                     </ul>
 
                     <div class="legal-highlight">
-                        <h3><i class="fas fa-lock"></i> Sigilo Profissional</h3>
+                        <h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            Sigilo Profissional
+                        </h3>
                         <p>Todos os dados clínicos são mantidos em <strong>absoluto sigilo</strong>, conforme determina o Código de Ética Profissional do Psicólogo.</p>
                     </div>
                     </section>
@@ -306,7 +366,14 @@
                     <p>Para exercer seus direitos, entre em contato através do e-mail: <strong>contato@arranjospsicologia.com.br</strong></p>
 
                     <div class="legal-warning">
-                        <h3><i class="fas fa-exclamation-triangle"></i> Importante - Dados Clínicos</h3>
+                        <h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                            Importante - Dados Clínicos
+                        </h3>
                         <p>Dados clínicos devem ser mantidos por pelo menos <strong>5 anos</strong> conforme Resolução CFP nº 01/2009, mesmo após solicitação de exclusão.</p>
                     </div>
                     </section>
@@ -325,14 +392,25 @@
                         <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre o tratamento de seus dados pessoais, entre em contato:</p>
 
                         <div class="legal-contact-box">
-                            <h3><i class="fas fa-envelope"></i> Entre em Contato</h3>
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                Entre em Contato
+                            </h3>
                             <p><strong>E-mail:</strong> contato@arranjospsicologia.com.br</p>
                             <p><strong>WhatsApp:</strong> (27) 99833-1228</p>
                             <p><strong>Endereço:</strong> Rua Darcy Grijó, 50 - Sala 409, Jardim da Penha, Vitória - ES, CEP 29060-630</p>
                         </div>
 
                         <div class="legal-footer-note">
-                            <p><i class="fas fa-shield-alt"></i> Esta Política de Privacidade foi elaborada em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD)</strong> e as normas do <strong>Conselho Federal de Psicologia</strong>.</p>
+                            <p>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                                Esta Política de Privacidade foi elaborada em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD)</strong> e as normas do <strong>Conselho Federal de Psicologia</strong>.
+                            </p>
                         </div>
                     </section>
 
@@ -347,7 +425,10 @@
                     <h2>Alguma dúvida sobre nossa política de privacidade?</h2>
                     <p>Entre em contato e teremos prazer em esclarecer</p>
                     <a href="https://wa.me/5527998331228?text=Olá,%20tenho%20dúvidas%20sobre%20a%20política%20de%20privacidade" class="btn btn-primary" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Falar no WhatsApp
                     </a>
                 </div>
             </div>
@@ -381,20 +462,60 @@
 
                     <h3 style="margin-top: 1.5rem;">Contato</h3>
                     <ul>
-                        <li><a href="https://wa.me/5527998331228" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                        <li><a href="mailto:contato@arranjospsicologia.com.br"><i class="fas fa-envelope"></i> Email</a></li>
-                        <li><a href="https://instagram.com/bcarielo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://facebook.com/bcarielo" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://wa.me/5527998331228" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp</a></li>
+                        <li><a href="mailto:contato@arranjospsicologia.com.br">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Email</a></li>
+                        <li><a href="https://instagram.com/bcarielo" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            Instagram</a></li>
+                        <li><a href="https://facebook.com/bcarielo" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Facebook</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3>Regulamentação Profissional</h3>
                     <ul>
-                        <li><a href="https://crp16.org.br/" target="_blank" rel="noopener"><i class="fas fa-certificate"></i> CRP 16</a></li>
-                        <li><a href="https://site.cfp.org.br/" target="_blank" rel="noopener"><i class="fas fa-landmark"></i> CFP</a></li>
-                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank" rel="noopener"><i class="fas fa-book"></i> Código de Ética</a></li>
-                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2018/05/RESOLU%C3%87%C3%83O-N%C2%BA-11-DE-11-DE-MAIO-DE-2018.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Resolução 11/2018</a></li>
+                        <li><a href="https://crp16.org.br/" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 8v4M12 16h.01"/>
+                            </svg>
+                            CRP 16</a></li>
+                        <li><a href="https://site.cfp.org.br/" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                            CFP</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                            Código de Ética</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2018/05/RESOLU%C3%87%C3%83O-N%C2%BA-11-DE-11-DE-MAIO-DE-2018.pdf" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                            Resolução 11/2018</a></li>
                     </ul>
                 </div>
             </div>

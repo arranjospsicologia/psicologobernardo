@@ -527,7 +527,8 @@
         /* Carrossel com Visual Melhorado */
         .consultorio-carousel {
             position: relative;
-            margin: 3rem 0;
+            margin: 3rem auto;
+            max-width: 900px;
         }
 
         .carousel-container {
@@ -554,16 +555,18 @@
 
         .carousel-caption {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1.5rem;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 1rem;
+            background: rgba(0, 128, 128, 0.85);
             color: var(--white);
             font-size: 1.125rem;
             font-weight: 500;
             text-align: center;
-            backdrop-filter: blur(8px);
+            border-radius: 6px;
+            width: auto;
+            max-width: 90%;
         }
 
         .carousel-btn {

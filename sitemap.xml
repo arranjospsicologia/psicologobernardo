@@ -36,6 +36,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Página de Localização -->
+  <url>
+    <loc>https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Páginas de Serviços -->
   <url>
     <loc>https://psicologobernardo.com.br/servicos/psicoterapia-individual.html</loc>
@@ -76,13 +84,25 @@
 
   <!-- Posts do Blog -->
   <url>
+    <loc>https://psicologobernardo.com.br/posts/abordagem-centrada-pessoa.html</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://psicologobernardo.com.br/posts/ansiedade-sinais-desacelerar.html</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://psicologobernardo.com.br/posts/terapia-para-homens.html</loc>
+    <loc>https://psicologobernardo.com.br/posts/autenticidade-qualidade-vida.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/posts/corpo-e-emocoes.html</loc>
     <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -94,14 +114,20 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://psicologobernardo.com.br/posts/corpo-e-emocoes.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://psicologobernardo.com.br/posts/estresse-desgaste-emocional.html</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://psicologobernardo.com.br/posts/abordagem-centrada-pessoa.html</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://psicologobernardo.com.br/posts/nao-somos-maquinas.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/posts/obrigacao-estar-bem.html</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -112,8 +138,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://psicologobernardo.com.br/posts/terapia-centrada-pessoa-explicacao.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/posts/terapia-online-funciona.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/posts/terapia-para-homens.html</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://psicologobernardo.com.br/posts/trabalho-interno-vs-performance.html</loc>
     <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/posts/vida-acelerou-demais.html</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

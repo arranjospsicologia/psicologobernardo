@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um olhar sobre a aceleração social e a perda de presença no cotidiano. Como a velocidade da vida moderna nos afasta de nós mesmos e o que podemos fazer sobre isso.">
+    <meta name="keywords" content="aceleração social, vida moderna, ansiedade, presença, ACP, cotidiano, desaceleração, tempo, ritmo de vida">
+    <meta name="author" content="Bernardo Carielo">
+
+    <!-- Google tag (gtag.js) - Lazy loaded apenas quando necessário -->
+<script>
+(function() {
+  let analyticsLoaded = false;
+
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+
+    // Carregar gtag.js
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333';
+    document.head.appendChild(script);
+
+    // Inicializar
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
+  }
+
+  // Carregar em qualquer interação do usuário
+  const events = ['mousedown', 'touchstart', 'keydown', 'scroll'];
+  const loadOnInteraction = () => {
+    loadAnalytics();
+    events.forEach(e => window.removeEventListener(e, loadOnInteraction));
+  };
+  events.forEach(e => window.addEventListener(e, loadOnInteraction, { passive: true, once: true }));
+
+  // Ou carregar após 3 segundos se não houver interação
+  setTimeout(loadAnalytics, 3000);
+})();
+</script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A vida acelerou demais: o que perdemos quando não temos tempo para sentir">
+    <meta property="og:description" content="Um olhar sobre a aceleração social e a perda de presença no cotidiano.">
+    <meta property="og:image" content="../assets/images/blog/vida-acelerou-demais.jpg">
+
+    <title>A vida acelerou demais: o que perdemos quando não temos tempo para sentir - Psicólogo Bernardo</title>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />    <!-- Fontes locais (Inter) -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://psicologobernardo.com.br/posts/vida-acelerou-demais.html"
+    },
+    "headline": "A vida acelerou demais: o que perdemos quando não temos tempo para sentir",
+    "description": "Um olhar sobre a aceleração social e a perda de presença no cotidiano.",
+    "image": "https://psicologobernardo.com.br/assets/images/blog/vida-acelerou-demais.jpg",
+    "author": {
+        "@type": "Person",
+        "name": "Bernardo Carielo",
+        "url": "https://psicologobernardo.com.br/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Psicólogo Bernardo",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://psicologobernardo.com.br/assets/images/logo.svg"
+        }
+    },
+    "datePublished":"2025-11-05T09:00:00-03:00",
+    "dateModified":"2025-11-05T09:00:00-03:00"
+    }
+    </script>
+
+    <!-- Schema Markup: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Home","item": "https://psicologobernardo.com.br/"},
+        {"@type": "ListItem","position": 2,"name": "Blog","item": "https://psicologobernardo.com.br/blog.html"},
+        {"@type": "ListItem","position": 3,"name": "A vida acelerou demais","item": "https://psicologobernardo.com.br/posts/vida-acelerou-demais.html"}
+    ]
+    }
+    </script>
+
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav-logo">
+                <img src="../assets/images/logo.svg" alt="Logo Bernardo Carielo - Psicólogo CRP 16/5527" class="logo-img">
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="/#servicos" class="nav-link">Serviços
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-left:0.25rem" aria-hidden="true">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/servicos/psicoterapia-individual.html">Psicoterapia Individual</a></li>
+                            <li><a href="/servicos/terapia-de-casal.html">Terapia de Casal</a></li>
+                            <li><a href="/servicos/terapia-online.html">Terapia Online</a></li>
+                            <li><a href="/servicos/grupos-e-rodas.html">Grupos e Rodas de Conversa</a></li>
+                            <li><a href="/servicos/laudos-psicologicos.html">Laudos Psicológicos</a></li>
+                            <li><a href="/servicos/supervisao-profissional.html">Supervisão Profissional</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="/#projetos" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="/blog.html" class="nav-link active">Blog</a></li>
+                    <li class="nav-item"><a href="/contato.html" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="btn-agendar-nav" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Agendar consulta
+            </a>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <article class="blog-post section">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="/">Home</a>
+                    <span>/</span>
+                    <a href="/blog.html">Blog</a>
+                    <span>/</span>
+                    <span>A vida acelerou demais</span>
+                </nav>
+
+                <!-- Post Header -->
+                <header class="post-header">
+                    <div class="post-category">Saúde Mental</div>
+                    <h1 class="post-title">A vida acelerou demais: o que perdemos quando não temos tempo para sentir</h1>
+                    <div class="post-meta">
+                        <div class="post-author">
+                            <img src="../assets/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Bernardo Carielo</span>
+                                <span class="author-title">Psicólogo CRP 16/5527</span>
+                            </div>
+                        </div>
+                        <div class="post-info">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                05 Nov 2025
+                            </span>
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                7 min de leitura
+                            </span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Featured Image -->
+                <div class="post-featured-image">
+                    <img src="../assets/images/blog/vida-acelerou-demais.jpg" alt="Pessoa correndo no meio da multidão representando aceleração social">
+                </div>
+
+                <!-- Post Content -->
+                <div class="post-content">
+                    <p class="lead">
+                        Um olhar sobre a aceleração social e a perda de presença no cotidiano.
+                    </p>
+
+                    <p>
+                        Você acorda com o alarme, já atrasado. Café correndo. Responde mensagens no caminho. Chega no trabalho e já tem pendências acumuladas. Almoça rápido, às vezes sem nem perceber o sabor. Tarde passa voando. Volta pra casa cansado, mas ainda tem coisas pra fazer. Antes de dormir, rola o feed por alguns minutos que viram horas. E recomeça tudo no dia seguinte.
+                    </p>
+
+                    <p>
+                        Quando foi que tudo ficou tão rápido?
+                    </p>
+
+                    <h2>Tudo anda rápido demais</h2>
+
+                    <p>
+                        A vida moderna não só acelerou — ela exige que você acelere junto. Não dá tempo pra pausar. Não dá tempo pra processar. Mal termina uma coisa, já tem outra esperando. E se você não acompanha, fica a sensação de que está ficando pra trás.
+                    </p>
+
+                    <p>
+                        A tecnologia prometeu nos dar mais tempo livre. Hoje, fazemos tudo mais rápido — mas fazemos muito mais também. Respondemos e-mails fora do expediente. Trabalhamos no fim de semana. Consumimos conteúdo em velocidade 2x. E quando sobra tempo, sentimos culpa por não estar "aproveitando melhor".
+                    </p>
+
+                    <p>
+                        Não é só impressão sua. O ritmo realmente mudou. E isso tem consequências.
+                    </p>
+
+                    <h2>Aceleração como controle social</h2>
+
+                    <p>
+                        Quando não há tempo pra parar, também não há tempo pra questionar. Não há tempo pra sentir. Não há tempo pra pensar sobre o que você quer de verdade, sobre o que está fazendo, sobre o sentido das coisas.
+                    </p>
+
+                    <p>
+                        A aceleração não é um acidente. É um sistema. Manter as pessoas ocupadas, apressadas, esgotadas, é uma forma de controle. Quem está correndo o tempo todo não tem espaço pra resistir, pra se organizar, pra questionar a lógica das coisas.
+                    </p>
+
+                    <p>
+                        E o pior: a gente internaliza isso. Começa a acreditar que o problema está em nós — que não somos rápidos o suficiente, organizados o suficiente, eficientes o suficiente. A culpa é sempre individual, nunca estrutural.
+                    </p>
+
+                    <h2>O corpo sente quando não temos tempo</h2>
+
+                    <p>
+                        Quando a vida acelera demais, o corpo avisa. Às vezes é uma dor de cabeça que não passa. Às vezes é insônia. Ou uma sensação de aperto no peito que você não sabe de onde vem. Pode ser irritabilidade, cansaço constante, falta de vontade de fazer coisas que antes davam prazer.
+                    </p>
+
+                    <p>
+                        Esses sintomas não são frescura. São sinais de que você está vivendo num ritmo insustentável. O corpo está pedindo desaceleração — mas o mundo continua exigindo velocidade.
+                    </p>
+
+                    <h3>Sintomas do dia a dia</h3>
+
+                    <ul>
+                        <li><strong>Dificuldade de concentração</strong> — Você começa uma tarefa e já está pensando em outra</li>
+                        <li><strong>Sensação de urgência constante</strong> — Mesmo quando não há nada urgente, você sente que deveria estar fazendo algo</li>
+                        <li><strong>Exaustão sem ter feito "nada demais"</strong> — Você não consegue apontar o que cansou tanto, mas está esgotado</li>
+                        <li><strong>Impaciência</strong> — Esperar virou tortura. Tudo precisa ser imediato</li>
+                        <li><strong>Dificuldade de relaxar</strong> — Quando você para, vem a culpa. Ou a ansiedade. Ou ambos</li>
+                    </ul>
+
+                    <p>
+                        Se você se reconheceu em algum desses pontos, saiba que não está sozinho. E não, você não é fraco. Você está vivendo numa sociedade que naturalizou a aceleração — e isso adoece.
+                    </p>
+
+                    <h2>Terapia como pausa real</h2>
+
+                    <p>
+                        Uma das coisas que mais ouço no consultório é: "aqui é o único lugar onde eu realmente paro". E isso diz muito. Não deveria ser assim — mas é. Porque lá fora, tudo empurra pra frente. E aqui dentro, você pode simplesmente parar.
+                    </p>
+
+                    <p>
+                        Na Abordagem Centrada na Pessoa, não há pressa. Não há roteiro a seguir. Não há meta de produtividade. O que surge, surge. E tudo bem se for confuso. Tudo bem se for lento. O ritmo é o seu.
+                    </p>
+
+                    <p>
+                        Esse espaço de pausa não é luxo. É necessidade. É um momento em que você pode, finalmente, <em>sentir</em>. Não gerenciar emoções, não otimizar a experiência, não transformar tudo em aprendizado. Só sentir.
+                    </p>
+
+                    <blockquote>
+                        <p>"Somente quando paramos de correr é que conseguimos ouvir o que realmente importa."</p>
+                    </blockquote>
+
+                    <h2>Práticas de desaceleração</h2>
+
+                    <p>
+                        Não existe fórmula mágica. E qualquer lista de "passos para desacelerar" corre o risco de virar mais uma tarefa. Mas há pequenas coisas que podem ajudar — não como obrigação, mas como possibilidade.
+                    </p>
+
+                    <p>
+                        <strong>Fazer uma coisa de cada vez.</strong> Parece óbvio, mas virou raro. Quando você está comendo, só coma. Quando está andando, só ande. Sem tentar otimizar cada segundo.
+                    </p>
+
+                    <p>
+                        <strong>Permitir-se o tédio.</strong> Nem todo momento precisa ser preenchido. Às vezes, simplesmente não fazer nada é o que você precisa. E não, isso não é perda de tempo.
+                    </p>
+
+                    <p>
+                        <strong>Respeitar o cansaço.</strong> Se você está cansado, descanse. Sem culpa, sem negociação, sem precisar "merecer". Cansaço não é fraqueza. É limite.
+                    </p>
+
+                    <p>
+                        <strong>Escolher conscientemente onde gastar energia.</strong> Nem tudo precisa da sua atenção. Nem toda mensagem precisa ser respondida na hora. Você pode decidir onde quer estar presente — e onde não.
+                    </p>
+
+                    <h2>Um convite pra respirar</h2>
+
+                    <p>
+                        Não vou dizer que é fácil desacelerar numa sociedade que valoriza velocidade. Não é. Mas é possível criar pequenos espaços de respiro no meio do caos. E às vezes, esses espaços fazem toda diferença.
+                    </p>
+
+                    <p>
+                        Se você sente que está vivendo no automático, que os dias passam sem que você esteja realmente presente, que o cansaço virou regra, talvez seja a hora de parar. Nem que seja por 50 minutos por semana.
+                    </p>
+
+                    <p>
+                        A terapia pode ser esse espaço. Um lugar onde o relógio desacelera. Onde você pode se ouvir. Onde não precisa ser rápido, eficiente, produtivo. Pode simplesmente ser.
+                    </p>
+
+                    <p>
+                        Se isso faz sentido pra você, estou à disposição.
+                    </p>
+                </div>
+
+                <!-- Post Footer -->
+                <footer class="post-footer">
+                    <div class="post-tags">
+                        <strong>Tags:</strong>
+                        <span class="tag">Aceleração Social</span>
+                        <span class="tag">Vida Moderna</span>
+                        <span class="tag">Ansiedade</span>
+                        <span class="tag">Presença</span>
+                        <span class="tag">ACP</span>
+                        <span class="tag">Cotidiano</span>
+                        <span class="tag">Desaceleração</span>
+                    </div>
+
+                    <div class="post-share">
+                        <strong>Compartilhar:</strong>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/posts/vida-acelerou-demais.html" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/posts/vida-acelerou-demais.html&text=A%20vida%20acelerou%20demais" target="_blank" rel="noopener" aria-label="Compartilhar no Twitter">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle" aria-hidden="true">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/posts/vida-acelerou-demais.html" target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/?text=A%20vida%20acelerou%20demais%20https://psicologobernardo.com.br/posts/vida-acelerou-demais.html" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </footer>
+
+                <!-- Author Bio -->
+                <div class="author-bio">
+                    <img src="../assets/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-bio-avatar">
+                    <div class="author-bio-content">
+                        <h3>Bernardo Carielo</h3>
+                        <p class="author-bio-title">Psicólogo CRP 16/5527</p>
+                        <p>Sou psicólogo com mais de 8 anos de experiência em psicoterapia com a Abordagem Centrada na Pessoa. Atendo em Vitória/ES, oferecendo um espaço acolhedor para você cuidar da sua saúde mental.</p>
+                        <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-primary" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Agendar Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="../assets/images/logo.svg" alt="Logo empresarial Bernardo Carielo" class="footer-logo">
+                    <p>Sou Bernardo Carielo, psicólogo CRP 16/5527. Ofereço psicoterapia com a Abordagem Centrada na Pessoa em Vitória/ES. Atendimento individual, casais e família.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="/#home">Home</a></li>
+                        <li><a href="/sobre.html">Sobre</a></li>
+                        <li><a href="/#servicos">Serviços</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Localização</h3>
+                    <p>Rua Darcy Grijó, 50 - Sala 409<br>Jardim da Penha, Vitória - ES</p>
+                    <p><strong>CRP 16/5527</strong></p>
+
+                    <h3 style="margin-top: 1.5rem;">Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5527998331228" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp</a></li>
+                        <li><a href="mailto:contato@arranjospsicologia.com.br">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Email</a></li>
+                        <li><a href="https://instagram.com/bcarielo" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            Instagram</a></li>
+                        <li><a href="https://facebook.com/bcarielo" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:0.5rem" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Facebook</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Regulamentação Profissional</h3>
+                    <ul>
+                        <li><a href="https://crp16.org.br/" target="_blank" rel="noopener">CRP 16</a></li>
+                        <li><a href="https://site.cfp.org.br/" target="_blank" rel="noopener">CFP</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank" rel="noopener">Código de Ética</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2018/05/RESOLU%C3%87%C3%83O-N%C2%BA-11-DE-11-DE-MAIO-DE-2018.pdf" target="_blank" rel="noopener">Resolução 11/2018</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="/politica-privacidade.html">Política de Privacidade</a>
+                    <span class="separator"> | </span>
+                    <a href="/termos-uso.html">Termos de Uso</a>
+                </div>
+                <p>&copy; 2025 Psicólogo Bernardo - Bernardo Carielo (CRP 16/5527). Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

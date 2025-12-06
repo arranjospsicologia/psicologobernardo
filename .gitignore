@@ -25,6 +25,7 @@ credentials/
 # Claude Code settings (keep local configs private)
 .claude/settings.json
 .claude/settings.local.json
+.claude/skills/
 
 # Node modules
 node_modules/

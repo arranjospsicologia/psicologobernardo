@@ -51,6 +51,8 @@ docs/
 scripts/
 *.md
 !README.md
+!visual-update.md
+!estrategia-visual.md
 
 # Development/build scripts
 generate-pages.js

@@ -1,183 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página não encontrada - Arranjos Psicologia</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="modulepreload" href="/_app/immutable/entry/start.BtdrHS6m.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/BiENmxp0.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/C01aNDpk.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/BUApaBEI.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/Dp2qyR-0.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.CFjS3YqN.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/D9v6ouIy.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/TQ8ZMJ2V.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/BYqJgZKS.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/-31MjJiw.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/CnOyojKf.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_1tlck6o = {
+						base: ""
+					};
 
-    <!-- Google tag (gtag.js) - Lazy loaded apenas quando necessário -->
-<script>
-(function() {
-  let analyticsLoaded = false;
+					const element = document.currentScript.parentElement;
 
-  function loadAnalytics() {
-    if (analyticsLoaded) return;
-    analyticsLoaded = true;
-
-    // Carregar gtag.js
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WQ4XBV7333';
-    document.head.appendChild(script);
-
-    // Inicializar
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WQ4XBV7333', { 'anonymize_ip': true });
-  }
-
-  // Carregar em qualquer interação do usuário
-  const events = ['mousedown', 'touchstart', 'keydown', 'scroll'];
-  const loadOnInteraction = () => {
-    loadAnalytics();
-    events.forEach(e => window.removeEventListener(e, loadOnInteraction));
-  };
-  events.forEach(e => window.addEventListener(e, loadOnInteraction, { passive: true, once: true }));
-
-  // Ou carregar após 3 segundos se não houver interação
-  setTimeout(loadAnalytics, 3000);
-})();
-</script>
-
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #F9ECE8 0%, #ffffff 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .error-container {
-            text-align: center;
-            max-width: 600px;
-        }
-
-        .error-number {
-            font-size: 8rem;
-            font-weight: 700;
-            color: #08BA9C;
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .error-title {
-            font-size: 2rem;
-            color: #1a1a1a;
-            margin-bottom: 1rem;
-        }
-
-        .error-description {
-            font-size: 1.125rem;
-            color: #666666;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .error-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background-color: #08BA9C;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #047C82;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #08BA9C;
-            border: 2px solid #08BA9C;
-        }
-
-        .btn-secondary:hover {
-            background-color: #08BA9C;
-            color: white;
-        }
-
-        .logo {
-            margin-bottom: 2rem;
-        }
-
-        .logo img {
-            height: 80px;
-            width: auto;
-        }
-
-        @media screen and (max-width: 576px) {
-            .error-number {
-                font-size: 5rem;
-            }
-
-            .error-title {
-                font-size: 1.5rem;
-            }
-
-            .error-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
-    <!-- Fontes locais (Inter) -->
-    <link rel="stylesheet" href="assets/css/fonts.css">
-
-</head>
-<body>
-    <div class="error-container">
-        <div class="logo">
-            <img src="assets/images/logo.svg" alt="Arranjos Psicologia">
-        </div>
-        
-        <div class="error-number">404</div>
-        
-        <h1 class="error-title">Página não encontrada</h1>
-        
-        <p class="error-description">
-            Ops! Parece que a página que você está procurando não existe ou foi movida. 
-            Não se preocupe, vamos te ajudar a encontrar o que precisa.
-        </p>
-        
-        <div class="error-buttons">
-            <a href="index.html" class="btn btn-primary">Voltar para Home</a>
-            <a href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="btn btn-secondary" target="_blank">Falar no WhatsApp</a>
-        </div>
-    </div>
-</body>
+					Promise.all([
+						import("/_app/immutable/entry/start.BtdrHS6m.js"),
+						import("/_app/immutable/entry/app.CFjS3YqN.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
 </html>

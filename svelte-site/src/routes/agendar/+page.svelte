@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Section, Button, SEO } from "$lib";
-    import LazyDoctoraliaWidget from "$lib/components/LazyDoctoraliaWidget.svelte";
     import {
         Calendar,
         Clock,
@@ -11,6 +10,11 @@
         ChevronDown,
     } from "lucide-svelte";
     import { onMount } from "svelte";
+
+    // Dynamic import to prevent CSS from being bundled in shared chunks
+    const LazyDoctoraliaWidgetPromise = import(
+        "$lib/components/LazyDoctoraliaWidget.svelte"
+    );
 
     let faqItems = [
         {
@@ -135,7 +139,16 @@
 <!-- Widget Calendário -->
 <Section variant="white" id="agendar">
     <div class="widget-container">
-        <LazyDoctoraliaWidget />
+        {#await LazyDoctoraliaWidgetPromise then module}
+            <module.default />
+        {:catch}
+            <a
+                href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria"
+                rel="nofollow"
+            >
+                Agendar consulta via Doctoralia
+            </a>
+        {/await}
     </div>
 </Section>
 

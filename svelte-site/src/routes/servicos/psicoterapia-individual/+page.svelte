@@ -1,7 +1,11 @@
 <script lang="ts">
     import { Section, Button, Breadcrumb, SEO } from "$lib";
-    import LazyDoctoraliaWidget from "$lib/components/LazyDoctoraliaWidget.svelte";
     import { Phone, ChevronDown } from "lucide-svelte";
+
+    // Dynamic import to prevent CSS from being bundled in shared chunks
+    const LazyDoctoraliaWidgetPromise = import(
+        "$lib/components/LazyDoctoraliaWidget.svelte"
+    );
 
     let faqItems = [
         {
@@ -195,7 +199,16 @@
             individual pode te ajudar neste momento da sua vida.
         </p>
         <div class="widget-container">
-            <LazyDoctoraliaWidget />
+            {#await LazyDoctoraliaWidgetPromise then module}
+                <module.default />
+            {:catch}
+                <a
+                    href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria"
+                    rel="nofollow"
+                >
+                    Agendar consulta via Doctoralia
+                </a>
+            {/await}
         </div>
         <p>Ou fale comigo diretamente pelo WhatsApp:</p>
         <Button

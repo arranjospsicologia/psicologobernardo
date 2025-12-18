@@ -24,7 +24,7 @@
 		Star,
 	} from "lucide-svelte";
 
-	let faqItems: { question: string; answer: string; open: boolean }[] = [
+	let faqItems = $state([
 		{
 			question:
 				"Como funciona a terapia pela Abordagem Centrada na Pessoa?",
@@ -56,7 +56,7 @@
 			answer: 'Você pode agendar diretamente pelo WhatsApp ou pelo Doctoralia. Basta clicar no botão "Agendar Consulta".',
 			open: false,
 		},
-	];
+	]);
 
 	function toggleFaq(index: number) {
 		faqItems = faqItems.map((item, i) => ({
@@ -251,7 +251,7 @@
 		aggregateRating: {
 			"@type": "AggregateRating",
 			ratingValue: "5.0",
-			reviewCount: "11",
+			reviewCount: "25",
 			bestRating: "5",
 			worstRating: "1",
 		},
@@ -319,7 +319,8 @@
 			},
 		],
 		sameAs: [
-			"https://www.instagram.com/psicologobernardo",
+			"https://www.instagram.com/bcarielo",
+			"https://www.facebook.com/bcarielo",
 			"https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
 			"https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
 		],
@@ -455,6 +456,15 @@
 	jsonLd={homeSchema}
 />
 
+<svelte:head>
+	<link
+		rel="preload"
+		as="image"
+		href="/images/hero/hero-600x800.avif"
+		type="image/avif"
+	/>
+</svelte:head>
+
 <!-- Hero Section -->
 <section class="hero gradient-hero hero-animated">
 	<div class="hero-shapes">
@@ -465,12 +475,18 @@
 	</div>
 	<div class="container hero-container">
 		<div class="hero-content">
-			<span class="hero-eyebrow animate-fade-in-up" style="--delay: 0.1s"
-				>Psicólogo em Vitória - ES</span
-			>
-			<h1 class="hero-title animate-fade-in-up" style="--delay: 0.2s">
-				Bernardo Carielo
-				<span>CRP-16/5527 • Psicólogo Humanista</span>
+			<h1 class="hero-h1-wrapper">
+				<span
+					class="hero-eyebrow animate-fade-in-up"
+					style="--delay: 0.1s">Psicólogo em Vitória - ES</span
+				>
+				<span
+					class="hero-title animate-fade-in-up"
+					style="--delay: 0.2s"
+				>
+					Bernardo Carielo
+					<span>CRP-16/5527 • Psicólogo Humanista</span>
+				</span>
 			</h1>
 			<p
 				class="hero-description animate-fade-in-up"
@@ -797,7 +813,13 @@
 	<div class="faq-container">
 		{#each faqItems as item, index}
 			<details class="faq-item" bind:open={item.open}>
-				<summary class="faq-question" onclick={() => toggleFaq(index)}>
+				<summary
+					class="faq-question"
+					onclick={(e) => {
+						e.preventDefault();
+						toggleFaq(index);
+					}}
+				>
 					<span>{item.question}</span>
 					<ChevronDown
 						size={20}
@@ -888,6 +910,19 @@
 
 <style>
 	/* Hero */
+	.hero-h1-wrapper {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+	}
+
 	.hero {
 		min-height: 100vh;
 		display: flex;
@@ -1008,6 +1043,7 @@
 	}
 
 	.hero-title {
+		display: block;
 		font-size: var(--text-5xl);
 		margin-bottom: 1.5rem;
 		position: relative;

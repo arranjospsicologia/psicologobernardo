@@ -67,6 +67,7 @@
                 class="logo-img"
                 width="120"
                 height="50"
+                fetchpriority="high"
             />
         </a>
 

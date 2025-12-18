@@ -207,7 +207,13 @@
     <div class="faq-container">
         {#each faqItems as item, index}
             <details class="faq-item" bind:open={item.open}>
-                <summary class="faq-question" onclick={() => toggleFaq(index)}>
+                <summary
+                    class="faq-question"
+                    onclick={(e) => {
+                        e.preventDefault();
+                        toggleFaq(index);
+                    }}
+                >
                     <span>{item.question}</span>
                     <ChevronDown
                         size={20}

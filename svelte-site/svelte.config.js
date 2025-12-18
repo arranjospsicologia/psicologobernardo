@@ -11,7 +11,8 @@ const config = {
 			assets: 'build',
 			fallback: '404.html',
 			precompress: false,
-			strict: false
+			strict: false,
+			inlineStyleThreshold: 10240
 		}),
 		paths: {
 			base: '',

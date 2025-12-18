@@ -60,7 +60,9 @@
         return () => observer.disconnect();
     });
 
-    let doctoraliaUrl = $derived(`https://www.doctoralia.com.br/${doctor}/psicologo/vitoria`);
+    let doctoraliaUrl = $derived(
+        `https://www.doctoralia.com.br/${doctor}/psicologo/vitoria`,
+    );
 </script>
 
 <div class="widget-wrapper" bind:this={widgetContainer}>
@@ -84,35 +86,3 @@
         Agendar consulta via Doctoralia
     </a>
 </div>
-
-<style>
-    .widget-wrapper {
-        min-height: 400px;
-        position: relative;
-    }
-
-    .widget-loading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 3rem;
-        color: var(--text-light);
-    }
-
-    .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid var(--border-light, #e5e5e5);
-        border-top-color: var(--primary-color, #5a7d7c);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 1rem;
-    }
-
-    @keyframes spin {
-        to {
-            transform: rotate(360deg);
-        }
-    }
-</style>

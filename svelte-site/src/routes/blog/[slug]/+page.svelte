@@ -15,19 +15,22 @@
 
 	let { data }: { data: PageData } = $props();
 
-	// Data comes from +page.ts load function
-	const { post, content } = data;
+	// Data comes from +page.ts load function (using $derived for reactivity)
+	const post = $derived(data.post);
+	const content = $derived(data.content);
 
 	// Get related posts (same category or tags)
-	const relatedPosts = blogPosts
-		.filter(
-			(p) =>
-				p.slug !== data.slug &&
-				p.tags.some((tag) => post.tags.includes(tag)),
-		)
-		.slice(0, 3);
+	const relatedPosts = $derived(
+		blogPosts
+			.filter(
+				(p) =>
+					p.slug !== data.slug &&
+					p.tags.some((tag) => post.tags.includes(tag)),
+			)
+			.slice(0, 3),
+	);
 
-	const postSchema = {
+	const postSchema = $derived({
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
 		headline: post.title,
@@ -41,7 +44,7 @@
 			"@type": "Organization",
 			name: "Psicólogo Bernardo",
 		},
-	};
+	});
 </script>
 
 <SEO

@@ -1,11 +1,6 @@
 <script lang="ts">
-    import {
-        Section,
-        Button,
-        Breadcrumb,
-        SEO,
-        LazyDoctoraliaWidget,
-    } from "$lib";
+    import { Section, Button, Breadcrumb, SEO } from "$lib";
+    import LazyDoctoraliaWidget from "$lib/components/LazyDoctoraliaWidget.svelte";
     import { Phone, ChevronDown } from "lucide-svelte";
 
     let faqItems = [

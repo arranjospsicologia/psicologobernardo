@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Section, Button, SEO, LazyDoctoraliaWidget } from "$lib";
+    import { Section, Button, SEO } from "$lib";
+    import LazyDoctoraliaWidget from "$lib/components/LazyDoctoraliaWidget.svelte";
     import {
         Calendar,
         Clock,

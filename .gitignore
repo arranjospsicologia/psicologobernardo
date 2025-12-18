@@ -30,6 +30,11 @@ credentials/
 # Node modules
 node_modules/
 
+# Svelte build output and dependencies (don't version these)
+svelte-site/build/
+svelte-site/.svelte-kit/
+svelte-site/node_modules/
+
 # Build outputs
 dist/
 build/

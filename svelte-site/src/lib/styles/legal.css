@@ -1,0 +1,218 @@
+/* Legal Pages Shared Styles */
+
+.legal-hero {
+    background: var(--secondary-color);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.legal-hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.legal-hero p {
+    color: var(--text-light);
+}
+
+/* Table of Contents */
+.legal-toc {
+    background: var(--secondary-light);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2.5rem;
+}
+
+.legal-toc h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+}
+
+.legal-toc ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.legal-toc a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    transition: var(--transition);
+}
+
+.legal-toc a:hover {
+    color: var(--primary-color);
+}
+
+/* Content Sections */
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-section {
+    margin-bottom: 2.5rem;
+}
+
+.legal-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.legal-section h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--black);
+}
+
+.legal-section p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.legal-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.legal-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Contact Box */
+.legal-contact-box {
+    background: var(--secondary-light);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.legal-contact-box h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legal-contact-box p {
+    margin-bottom: 0.5rem;
+}
+
+.legal-contact-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Highlight Box */
+.legal-highlight {
+    background: rgba(8, 186, 156, 0.08);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.legal-highlight h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Warning Box */
+.legal-warning {
+    background: rgba(245, 158, 11, 0.1);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+    border-left: 4px solid #f59e0b;
+}
+
+.legal-warning h3 {
+    margin-top: 0;
+    color: #d97706;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Emergency Box */
+.legal-emergency {
+    background: rgba(239, 68, 68, 0.1);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+    border-left: 4px solid #ef4444;
+}
+
+.legal-emergency h3 {
+    margin-top: 0;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legal-emergency ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.legal-emergency li {
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+}
+
+/* Footer Note */
+.legal-footer-note {
+    background: var(--secondary-light);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.legal-footer-note p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* CTA Section */
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--text-lg);
+    margin-bottom: 2rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .legal-toc ul {
+        grid-template-columns: 1fr;
+    }
+}

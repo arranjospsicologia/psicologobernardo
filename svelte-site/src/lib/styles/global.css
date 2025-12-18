@@ -1736,3 +1736,14 @@ button {
     text-align: center;
   }
 }
+
+/* =========================
+   FAQ CHEVRON ANIMATION
+   ========================= */
+.faq-question .chevron {
+  transition: transform 0.3s;
+}
+
+.faq-question .chevron.open {
+  transform: rotate(180deg);
+}

@@ -93,8 +93,8 @@
                 srcset="/images/servicos/psicoterapia-individual-hero-400w.webp 400w,
                         /images/servicos/psicoterapia-individual-hero-800w.webp 800w,
                         /images/servicos/psicoterapia-individual-hero.webp 1600w"
-                sizes="(max-width: 480px) 100vw,
-                       (max-width: 768px) 90vw,
+                sizes="(max-width: 400px) 400px,
+                       (max-width: 800px) 800px,
                        900px"
                 alt="Atendimento de psicoterapia individual em consultório acolhedor - Vitória ES"
                 loading="eager"
@@ -291,14 +291,3 @@
         </Button>
     </div>
 </Section>
-
-<style>
-    /* Component-specific overrides only */
-    .faq-question :global(.chevron) {
-        transition: transform 0.3s;
-    }
-
-    .faq-question :global(.chevron.open) {
-        transform: rotate(180deg);
-    }
-</style>

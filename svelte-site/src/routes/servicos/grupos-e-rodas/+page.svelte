@@ -70,6 +70,12 @@
         <div class="hero-image">
             <img
                 src="/images/servicos/grupos-rodas-hero.webp"
+                srcset="/images/servicos/grupos-rodas-hero-400w.webp 400w,
+                        /images/servicos/grupos-rodas-hero-800w.webp 800w,
+                        /images/servicos/grupos-rodas-hero.webp 1600w"
+                sizes="(max-width: 480px) 100vw,
+                       (max-width: 768px) 90vw,
+                       900px"
                 alt="Grupos e rodas de conversa - Espaços coletivos de partilha"
                 loading="eager"
                 fetchpriority="high"

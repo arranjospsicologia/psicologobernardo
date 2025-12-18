@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Section, Button, SEO } from "$lib";
+    import { Section, Button, SEO, LazyDoctoraliaWidget } from "$lib";
     import {
         Calendar,
         Clock,
@@ -50,14 +50,6 @@
             open: i === index ? !item.open : false,
         }));
     }
-
-    onMount(() => {
-        // Load Doctoralia widget
-        const script = document.createElement("script");
-        script.id = "zl-widget-s";
-        script.src = "//platform.docplanner.com/js/widget.js";
-        document.body.appendChild(script);
-    });
 
     const agendarSchema = [
         {
@@ -142,19 +134,7 @@
 <!-- Widget Calendário -->
 <Section variant="white" id="agendar">
     <div class="widget-container">
-        <a
-            id="zl-url"
-            class="zl-url"
-            href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria"
-            rel="nofollow"
-            data-zlw-doctor="bernardo-carielo-macedo-de-oliveira-pinto"
-            data-zlw-type="big_with_calendar"
-            data-zlw-opinion="false"
-            data-zlw-hide-branding="true"
-            data-zlw-saas-only="false"
-        >
-            Bernardo Carielo Macedo de Oliveira Pinto - Doctoralia.com.br
-        </a>
+        <LazyDoctoraliaWidget />
     </div>
 </Section>
 

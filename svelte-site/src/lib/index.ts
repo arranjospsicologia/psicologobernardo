@@ -8,6 +8,7 @@ export { default as ReviewCarousel } from './components/ReviewCarousel.svelte';
 export { default as ImageCarousel } from './components/ImageCarousel.svelte';
 export { default as Breadcrumb } from './components/Breadcrumb.svelte';
 export { default as SEO } from './components/SEO.svelte';
+export { default as LazyDoctoraliaWidget } from './components/LazyDoctoraliaWidget.svelte';
 
 
 // GSAP utils should be imported dynamically to avoid SSR issues

@@ -81,6 +81,12 @@
         <div class="hero-image">
             <img
                 src="/images/servicos/terapia-online-hero.webp"
+                srcset="/images/servicos/terapia-online-hero-400w.webp 400w,
+                        /images/servicos/terapia-online-hero-800w.webp 800w,
+                        /images/servicos/terapia-online-hero.webp 1600w"
+                sizes="(max-width: 480px) 100vw,
+                       (max-width: 768px) 90vw,
+                       900px"
                 alt="Terapia online - Psicoterapia por videochamada com segurança"
                 loading="eager"
                 fetchpriority="high"

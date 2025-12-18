@@ -77,6 +77,12 @@
         <div class="hero-image">
             <img
                 src="/images/servicos/supervisao-profissional-hero.webp"
+                srcset="/images/servicos/supervisao-profissional-hero-400w.webp 400w,
+                        /images/servicos/supervisao-profissional-hero-800w.webp 800w,
+                        /images/servicos/supervisao-profissional-hero.webp 1600w"
+                sizes="(max-width: 480px) 100vw,
+                       (max-width: 768px) 90vw,
+                       900px"
                 alt="Supervisão clínica para psicólogos - Desenvolvimento profissional"
                 loading="eager"
                 fetchpriority="high"

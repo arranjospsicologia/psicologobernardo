@@ -70,6 +70,12 @@
         <div class="hero-image">
             <img
                 src="/images/servicos/laudos-psicologicos-hero.webp"
+                srcset="/images/servicos/laudos-psicologicos-hero-400w.webp 400w,
+                        /images/servicos/laudos-psicologicos-hero-800w.webp 800w,
+                        /images/servicos/laudos-psicologicos-hero.webp 1600w"
+                sizes="(max-width: 480px) 100vw,
+                       (max-width: 768px) 90vw,
+                       900px"
                 alt="Avaliação psicológica e laudos para cirurgias"
                 loading="eager"
                 fetchpriority="high"

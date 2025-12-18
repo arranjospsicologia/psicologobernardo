@@ -1,7 +1,12 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb, SEO } from "$lib";
+    import {
+        Section,
+        Button,
+        Breadcrumb,
+        SEO,
+        LazyDoctoraliaWidget,
+    } from "$lib";
     import { Phone, ChevronDown } from "lucide-svelte";
-    import { onMount } from "svelte";
 
     let faqItems = [
         {
@@ -37,13 +42,6 @@
             open: i === index ? !item.open : false,
         }));
     }
-
-    onMount(() => {
-        const script = document.createElement("script");
-        script.id = "zl-widget-s";
-        script.src = "//platform.docplanner.com/js/widget.js";
-        document.body.appendChild(script);
-    });
 
     const serviceSchema = {
         "@context": "https://schema.org",
@@ -93,6 +91,12 @@
         <div class="hero-image">
             <img
                 src="/images/servicos/psicoterapia-individual-hero.webp"
+                srcset="/images/servicos/psicoterapia-individual-hero-400w.webp 400w,
+                        /images/servicos/psicoterapia-individual-hero-800w.webp 800w,
+                        /images/servicos/psicoterapia-individual-hero.webp 1600w"
+                sizes="(max-width: 480px) 100vw,
+                       (max-width: 768px) 90vw,
+                       900px"
                 alt="Atendimento de psicoterapia individual em consultório acolhedor - Vitória ES"
                 loading="eager"
                 fetchpriority="high"
@@ -196,18 +200,7 @@
             individual pode te ajudar neste momento da sua vida.
         </p>
         <div class="widget-container">
-            <a
-                id="zl-url"
-                class="zl-url"
-                href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria"
-                rel="nofollow"
-                data-zlw-doctor="bernardo-carielo-macedo-de-oliveira-pinto"
-                data-zlw-type="big_with_calendar"
-                data-zlw-opinion="false"
-                data-zlw-hide-branding="true"
-            >
-                Agendar consulta via Doctoralia
-            </a>
+            <LazyDoctoraliaWidget />
         </div>
         <p>Ou fale comigo diretamente pelo WhatsApp:</p>
         <Button

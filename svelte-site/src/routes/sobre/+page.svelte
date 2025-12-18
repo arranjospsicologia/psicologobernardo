@@ -59,6 +59,7 @@
     type="profile"
     image="https://psicologobernardo.com.br/images/bernardo-avatar.jpg"
     jsonLd={aboutSchema}
+    preloadImage="/images/sobre/bernardo-profissional.webp"
 />
 
 <!-- Breadcrumb -->
@@ -82,11 +83,12 @@
         </div>
         <div class="hero-image">
             <img
-                src="/images/sobre/bernardo-profissional.jpg"
+                src="/images/sobre/bernardo-profissional.webp"
                 alt="Bernardo Carielo Psicólogo clínico em Vitória ES"
                 width="450"
                 height="450"
                 loading="eager"
+                fetchpriority="high"
             />
         </div>
     </div>

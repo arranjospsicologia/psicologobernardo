@@ -1,0 +1,1 @@
+import{m as s,o as n}from"./chGkqRg7.js";function b(d,i,o,f,a){var r=()=>{f(o[d])};o.addEventListener(i,r),a?s(()=>{o[d]=a()}):r(),(o===document.body||o===window||o===document)&&n(()=>{o.removeEventListener(i,r)})}export{b};

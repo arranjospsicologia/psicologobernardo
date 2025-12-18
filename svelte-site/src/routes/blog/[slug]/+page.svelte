@@ -1,4 +1,5 @@
 <script lang="ts">
+	import "$lib/styles/blog.css";
 	import { Section, Button, Breadcrumb, SEO } from "$lib";
 	import {
 		Phone,
@@ -211,8 +212,6 @@
 </Section>
 
 <style>
-	@import "../../../lib/styles/blog.css";
-
 	.post-footer {
 		margin-top: 3rem;
 		padding-top: 2rem;

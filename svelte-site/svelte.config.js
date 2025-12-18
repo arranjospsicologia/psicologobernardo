@@ -12,7 +12,7 @@ const config = {
 			fallback: '404.html',
 			precompress: false,
 			strict: false,
-			inlineStyleThreshold: 10240
+			inlineStyleThreshold: 25000
 		}),
 		paths: {
 			base: '',

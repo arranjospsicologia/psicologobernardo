@@ -48,6 +48,7 @@
     description="Grupos e Rodas de Conversa em Vitória e online. Espaços de partilha pela Abordagem Centrada na Pessoa. Roda Entre Homens e Desafios da Profissão Psi."
     canonical="https://psicologobernardo.com.br/servicos/grupos-e-rodas/"
     jsonLd={serviceSchema}
+    preloadImage="/images/servicos/grupos-rodas-hero.webp"
 />
 
 <!-- Breadcrumb -->
@@ -68,9 +69,10 @@
         </p>
         <div class="hero-image">
             <img
-                src="/images/servicos/grupos-rodas-hero.jpg"
+                src="/images/servicos/grupos-rodas-hero.webp"
                 alt="Grupos e rodas de conversa - Espaços coletivos de partilha"
                 loading="eager"
+                fetchpriority="high"
                 width="900"
                 height="600"
             />

@@ -48,6 +48,7 @@
     description="Laudos Psicológicos e Avaliações em Vitória - ES. Avaliação psicológica ética para cirurgia bariátrica, vasectomia e laqueadura. Psicólogo CRP 16/5527."
     canonical="https://psicologobernardo.com.br/servicos/laudos-psicologicos/"
     jsonLd={serviceSchema}
+    preloadImage="/images/servicos/laudos-psicologicos-hero.webp"
 />
 
 <!-- Breadcrumb -->
@@ -68,9 +69,10 @@
         </p>
         <div class="hero-image">
             <img
-                src="/images/servicos/laudos-psicologicos-hero.jpg"
+                src="/images/servicos/laudos-psicologicos-hero.webp"
                 alt="Avaliação psicológica e laudos para cirurgias"
                 loading="eager"
+                fetchpriority="high"
                 width="900"
                 height="600"
             />

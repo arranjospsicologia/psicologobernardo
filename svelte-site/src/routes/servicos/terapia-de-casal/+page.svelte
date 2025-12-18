@@ -57,6 +57,7 @@
     description="Terapia de Casal em Vitória - ES. Espaço de escuta e reconexão para casais pela Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/servicos/terapia-de-casal/"
     jsonLd={serviceSchema}
+    preloadImage="/images/servicos/terapia-casal-hero.webp"
 />
 
 <!-- Breadcrumb -->
@@ -77,9 +78,10 @@
         </p>
         <div class="hero-image">
             <img
-                src="/images/servicos/terapia-casal-hero.jpg"
+                src="/images/servicos/terapia-casal-hero.webp"
                 alt="Terapia de casal em ambiente acolhedor - Vitória ES"
                 loading="eager"
+                fetchpriority="high"
                 width="900"
                 height="600"
             />

@@ -43,7 +43,6 @@
         script.id = "zl-widget-s";
         script.src = "//platform.docplanner.com/js/widget.js";
         document.body.appendChild(script);
-        document.body.appendChild(script);
     });
 
     const serviceSchema = {
@@ -71,6 +70,7 @@
     description="Psicoterapia Individual em Vitória - ES. Espaço de escuta empática e autoconhecimento pela Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/servicos/psicoterapia-individual/"
     jsonLd={serviceSchema}
+    preloadImage="/images/servicos/psicoterapia-individual-hero.webp"
 />
 
 <!-- Breadcrumb -->
@@ -92,9 +92,10 @@
         </p>
         <div class="hero-image">
             <img
-                src="/images/servicos/psicoterapia-individual-hero.jpg"
+                src="/images/servicos/psicoterapia-individual-hero.webp"
                 alt="Atendimento de psicoterapia individual em consultório acolhedor - Vitória ES"
                 loading="eager"
+                fetchpriority="high"
                 width="900"
                 height="600"
             />

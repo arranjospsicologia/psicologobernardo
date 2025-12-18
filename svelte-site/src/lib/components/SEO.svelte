@@ -6,6 +6,7 @@
     export let image: string =
         "https://psicologobernardo.com.br/images/og-image.png";
     export let jsonLd: Record<string, any> | undefined = undefined;
+    export let preloadImage: string | undefined = undefined;
 
     // Default canonical domain if relative path provided (optional enhancement, but keeping simple for now)
     const siteUrl = "https://psicologobernardo.com.br";
@@ -21,6 +22,15 @@
 <svelte:head>
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    {#if preloadImage}
+        <link
+            rel="preload"
+            as="image"
+            href={preloadImage}
+            fetchpriority="high"
+        />
+    {/if}
 
     {#if effectiveCanonical}
         <link rel="canonical" href={effectiveCanonical} />

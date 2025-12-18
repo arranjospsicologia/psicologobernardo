@@ -60,6 +60,7 @@
     description="Terapia Online para todo o Brasil. Psicoterapia pela Abordagem Centrada na Pessoa com a mesma qualidade do atendimento presencial. Autorizada pelo CFP."
     canonical="https://psicologobernardo.com.br/servicos/terapia-online/"
     jsonLd={serviceSchema}
+    preloadImage="/images/servicos/terapia-online-hero.webp"
 />
 
 <Breadcrumb
@@ -79,9 +80,10 @@
         </p>
         <div class="hero-image">
             <img
-                src="/images/servicos/terapia-online-hero.jpg"
+                src="/images/servicos/terapia-online-hero.webp"
                 alt="Terapia online - Psicoterapia por videochamada com segurança"
                 loading="eager"
+                fetchpriority="high"
                 width="900"
                 height="600"
             />

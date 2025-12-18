@@ -55,6 +55,7 @@
     description="Supervisão Profissional em ACP em Vitória e online. Espaço de reflexão sobre a prática clínica para psicólogos da Abordagem Centrada na Pessoa."
     canonical="https://psicologobernardo.com.br/servicos/supervisao-profissional/"
     jsonLd={serviceSchema}
+    preloadImage="/images/servicos/supervisao-profissional-hero.webp"
 />
 
 <!-- Breadcrumb -->
@@ -75,9 +76,10 @@
         </p>
         <div class="hero-image">
             <img
-                src="/images/servicos/supervisao-profissional-hero.jpg"
+                src="/images/servicos/supervisao-profissional-hero.webp"
                 alt="Supervisão clínica para psicólogos - Desenvolvimento profissional"
                 loading="eager"
+                fetchpriority="high"
                 width="900"
                 height="600"
             />

@@ -14,29 +14,6 @@
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" href="/favicon.ico" />
-
-	<!-- Preload fonts -->
-	<link
-		rel="preload"
-		href="/fonts/inter-400-latin.woff2"
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="preload"
-		href="/fonts/inter-500-latin.woff2"
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="preload"
-		href="/fonts/inter-600-latin.woff2"
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
 </svelte:head>
 
 <Header />

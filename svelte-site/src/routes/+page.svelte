@@ -746,7 +746,7 @@
 		<div class="projeto-card">
 			<div class="projeto-image">
 				<img
-					src="/images/roda-homens.jpg"
+					src="/images/roda-homens.webp"
 					alt="Roda de Conversa Entre Homens"
 					loading="lazy"
 					decoding="async"
@@ -778,9 +778,10 @@
 		<div class="projeto-card">
 			<div class="projeto-image">
 				<img
-					src="/images/roda-psicologos.jpg"
+					src="/images/roda-psicologos.webp"
 					alt="Roda de Conversa para Psicólogos"
 					loading="lazy"
+					decoding="async"
 					width="400"
 					height="300"
 				/>

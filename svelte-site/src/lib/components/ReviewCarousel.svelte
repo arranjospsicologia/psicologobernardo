@@ -99,6 +99,8 @@
                 src="/images/doctoralia-logo.png"
                 alt="Doctoralia"
                 class="platform-logo doctoralia-logo"
+                width="120"
+                height="24"
             />
         {/if}
         <div class="header-info">
@@ -128,6 +130,10 @@
                             src={review.photo}
                             alt={review.name}
                             class="avatar"
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                            decoding="async"
                             on:error={(e) => {
                                 const target = e.target as HTMLImageElement;
                                 target.src = "https://via.placeholder.com/40";

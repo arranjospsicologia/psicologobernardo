@@ -271,8 +271,16 @@ button {
       #F5E8E2 50%,
       #EDE0D9 75%,
       #F7EDE9 100%);
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
+  position: relative;
+}
+
+/* Subtle overlay effect without heavy animation */
+.gradient-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(8, 186, 156, 0.03) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .gradient-cta {
@@ -281,20 +289,6 @@ button {
 
 .gradient-dark {
   background: linear-gradient(180deg, var(--primary-dark) 0%, #035a60 100%);
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* =========================
@@ -1862,6 +1856,8 @@ button {
   background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.2) 60%, transparent 80%);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
+  animation-delay: 1s;
+  will-change: background-position;
 }
 
 .hero-title {

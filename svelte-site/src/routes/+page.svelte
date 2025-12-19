@@ -460,9 +460,9 @@
 	<link
 		rel="preload"
 		as="image"
-		href="/images/hero/hero-600x800.avif"
-		imagesrcset="/images/hero/hero-600x800-300w.avif 300w, /images/hero/hero-600x800-450w.avif 450w, /images/hero/hero-600x800.avif 600w"
-		imagesizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 600px"
+		href="/images/hero/hero-380x507.avif"
+		imagesrcset="/images/hero/hero-380x507.avif 380w, /images/hero/hero-600x800-450w.avif 450w, /images/hero/hero-600x800.avif 600w"
+		imagesizes="(max-width: 480px) 380px, (max-width: 768px) 450px, 600px"
 		type="image/avif"
 		fetchpriority="high"
 	/>
@@ -517,17 +517,17 @@
 		<div class="hero-image">
 			<picture>
 				<source
-					srcset="/images/hero/hero-600x800-300w.avif 300w,
+					srcset="/images/hero/hero-380x507.avif 380w,
 					        /images/hero/hero-600x800-450w.avif 450w,
 					        /images/hero/hero-600x800.avif 600w"
-					sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 600px"
+					sizes="(max-width: 480px) 380px, (max-width: 768px) 450px, 600px"
 					type="image/avif"
 				/>
 				<source
-					srcset="/images/hero/hero-600x800-300w.webp 300w,
+					srcset="/images/hero/hero-380x507.webp 380w,
 					        /images/hero/hero-600x800-450w.webp 450w,
 					        /images/hero/hero-600x800.webp 600w"
-					sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 600px"
+					sizes="(max-width: 480px) 380px, (max-width: 768px) 450px, 600px"
 					type="image/webp"
 				/>
 				<img

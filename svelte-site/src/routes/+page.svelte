@@ -153,27 +153,27 @@
 	// Office images for carousel
 	const officeImages = [
 		{
-			src: "/images/consultorio/ambiente-acolhedor.jpg",
+			src: "/images/consultorio/ambiente-acolhedor.webp",
 			alt: "Sala de atendimento do consultório de psicologia em Jardim da Penha, Vitória ES, com iluminação natural e decoração acolhedora",
 			caption: "Sala de atendimento",
 		},
 		{
-			src: "/images/consultorio/poltronas-terapia.jpg",
+			src: "/images/consultorio/poltronas-terapia.webp",
 			alt: "Poltronas confortáveis para sessões de psicoterapia em ambiente privativo e seguro",
 			caption: "Espaço de acolhimento",
 		},
 		{
-			src: "/images/consultorio/sala-atendimento-01.jpg",
+			src: "/images/consultorio/sala-atendimento-01.webp",
 			alt: "Ambiente cuidadosamente pensado para proporcionar conforto e confidencialidade durante as sessões terapêuticas",
 			caption: "Ambiente pensado para você",
 		},
 		{
-			src: "/images/consultorio/sala-atendimento-02.jpg",
+			src: "/images/consultorio/sala-atendimento-02.webp",
 			alt: "Vista completa da sala de psicoterapia com decoração neutra e acolhedora em tons suaves",
 			caption: "Espaço de escuta",
 		},
 		{
-			src: "/images/consultorio/espaco-privado.jpg",
+			src: "/images/consultorio/espaco-privado.webp",
 			alt: "Espaço privado e silencioso preparado para garantir total confidencialidade e segurança nas sessões de psicoterapia",
 			caption: "Privacidade e confidencialidade",
 		},

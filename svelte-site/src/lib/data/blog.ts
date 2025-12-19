@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["autoconhecimento", "acp"],
         date: "17 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/autenticidade-qualidade-vida.jpg"
+        image: "/images/blog/autenticidade-qualidade-vida.webp"
     },
     {
         slug: "terapia-centrada-pessoa-explicacao",
@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["acp", "terapia-humanista"],
         date: "16 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/terapia-centrada-pessoa-explicacao.jpg"
+        image: "/images/blog/terapia-centrada-pessoa-explicacao.webp"
     },
     {
         slug: "estresse-desgaste-emocional",
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "ansiedade"],
         date: "13 Nov 2025",
         readTime: "8 min de leitura",
-        image: "/images/blog/estresse-desgaste-emocional.jpg"
+        image: "/images/blog/estresse-desgaste-emocional.webp"
     },
     {
         slug: "terapia-online-funciona",
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["acp", "terapia-online"],
         date: "10 Nov 2025",
         readTime: "8 min de leitura",
-        image: "/images/blog/terapia-online-funciona.jpg"
+        image: "/images/blog/terapia-online-funciona.webp"
     },
     {
         slug: "obrigacao-estar-bem",
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "autoconhecimento"],
         date: "07 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/obrigacao-estar-bem.jpg"
+        image: "/images/blog/obrigacao-estar-bem.webp"
     },
     {
         slug: "vida-acelerou-demais",
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "ansiedade", "acp"],
         date: "05 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/vida-acelerou-demais.jpg"
+        image: "/images/blog/vida-acelerou-demais.webp"
     },
     {
         slug: "nao-somos-maquinas",
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "autoconhecimento", "acp"],
         date: "02 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/nao-somos-maquinas.jpg"
+        image: "/images/blog/nao-somos-maquinas.webp"
     },
     {
         slug: "trabalho-interno-vs-performance",
@@ -89,7 +89,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "acp"],
         date: "31 Out 2025",
         readTime: "12 min de leitura",
-        image: "/images/blog/trabalho-interno-vs-performance.jpg"
+        image: "/images/blog/trabalho-interno-vs-performance.webp"
     },
     {
         slug: "quando-automatico-vira-modo-de-vida",
@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["autoconhecimento", "saude-mental", "acp"],
         date: "30 Out 2025",
         readTime: "10 min de leitura",
-        image: "/images/blog/quando-automatico-vira-modo-de-vida.jpg"
+        image: "/images/blog/quando-automatico-vira-modo-de-vida.webp"
     },
     {
         slug: "ansiedade-sinais-desacelerar",
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["ansiedade", "saude-mental"],
         date: "5 Mar 2025",
         readTime: "11 min de leitura",
-        image: "/images/blog/ansiedade-sinais-desacelerar.jpg"
+        image: "/images/blog/ansiedade-sinais-desacelerar.webp"
     },
     {
         slug: "corpo-e-emocoes",
@@ -119,7 +119,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "acp"],
         date: "20 Fev 2025",
         readTime: "11 min de leitura",
-        image: "/images/blog/corpo-e-emocoes.jpg"
+        image: "/images/blog/corpo-e-emocoes.webp"
     },
     {
         slug: "crises-existenciais",
@@ -129,7 +129,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "autoconhecimento"],
         date: "5 Fev 2025",
         readTime: "12 min de leitura",
-        image: "/images/blog/crises-existenciais.jpg"
+        image: "/images/blog/crises-existenciais.webp"
     },
     {
         slug: "abordagem-centrada-pessoa",
@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["acp"],
         date: "22 Jan 2025",
         readTime: "14 min de leitura",
-        image: "/images/blog/abordagem-centrada-pessoa.jpg"
+        image: "/images/blog/abordagem-centrada-pessoa.webp"
     },
     {
         slug: "terapia-para-homens",
@@ -149,7 +149,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["masculinidades"],
         date: "22 Jan 2025",
         readTime: "10 min de leitura",
-        image: "/images/blog/terapia-para-homens.jpg"
+        image: "/images/blog/terapia-para-homens.webp"
     }
 ];
 

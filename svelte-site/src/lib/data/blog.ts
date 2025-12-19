@@ -12,6 +12,36 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "terapia-para-estudantes-ufes-vitoria",
+        title: "Terapia para Estudantes e Universitários em Vitória (UFES)",
+        description: "Psicoterapia para estudantes e universitários em Vitória (UFES). Ansiedade acadêmica, pressão, futuro profissional e um consultório em frente à universidade, em Jardim da Penha.",
+        category: "Estudantes",
+        tags: ["UFES", "Estudantes", "Ansiedade Acadêmica", "Jardim da Penha", "Carreira", "saude-mental"],
+        date: "19 Dez 2025",
+        readTime: "6 min de leitura",
+        image: "/images/blog/terapia-estudantes-ufes.png"
+    },
+    {
+        slug: "onde-cuidar-saude-mental-jardim-da-penha",
+        title: "Onde cuidar da Saúde Mental em Jardim da Penha e Região (Vitória – ES)",
+        description: "Guia local de saúde mental em Jardim da Penha e região: praças, parques, orla de Camburi, UFES, UBS e rede de apoio. Dicas práticas para descompressão em Vitória (ES).",
+        category: "Saúde Mental",
+        tags: ["Jardim da Penha", "Saúde Mental", "Vitória ES", "Natureza", "Autocuidado", "saude-mental"],
+        date: "19 Dez 2025",
+        readTime: "6 min de leitura",
+        image: "/images/blog/saude-mental-jardim-da-penha.png"
+    },
+    {
+        slug: "como-escolher-psicologo-em-vitoria-es",
+        title: "Como escolher um psicólogo em Vitória (ES): guia prático e seguro",
+        description: "Aprenda como escolher um psicólogo em Vitória (ES) com critérios éticos e práticos: CRP, abordagem, localização (Jardim da Penha, UFES) e relação terapêutica.",
+        category: "Saúde Mental",
+        tags: ["Psicólogo Vitória", "Jardim da Penha", "CRP", "Abordagem", "Relação Terapêutica", "saude-mental"],
+        date: "19 Dez 2025",
+        readTime: "7 min de leitura",
+        image: "/images/blog/como-escolher-psicologo-vitoria.png"
+    },
+    {
         slug: "autenticidade-qualidade-vida",
         title: "O melhor jeito de viver é autêntico: por que a autenticidade melhora a qualidade de vida",
         description: "Como a Abordagem Centrada na Pessoa entende a autorrealização e a tendência atualizante — e por que isso importa para você.",

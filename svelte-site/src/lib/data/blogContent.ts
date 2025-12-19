@@ -135,7 +135,7 @@ export const postContents: Record<string, PostContent> = {
 
 				<p>
 					<a href="/sobre/">Conheça meu trabalho</a> ·
-					<a href="/psicoterapia/">Como funciona a psicoterapia</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
 					<a href="/contato/">Entrar em contato</a>
 				</p>
 			</section>
@@ -419,7 +419,7 @@ export const postContents: Record<string, PostContent> = {
 						<!-- Sugestões de links internos (ajuste as rotas) -->
 						<a href="/localizacao/psicologo-jardim-da-penha/">Psicólogo em Jardim da Penha</a> ·
 						<a href="/localizacao/psicologo-vitoria-es/">Psicólogo em Vitória (ES)</a> ·
-						<a href="/psicoterapia/">Como funciona a psicoterapia</a> ·
+						<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
 						<a href="/contato/">Entrar em contato</a>
 					</p>
 				</section>
@@ -571,7 +571,7 @@ export const postContents: Record<string, PostContent> = {
 				<p>
 					<a href="/sobre/">Conheça meu trabalho</a>
 					·
-					<a href="/psicoterapia/">Como funciona a psicoterapia</a>
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a>
 					·
 					<a href="/contato/">Agendar / tirar dúvidas</a>
 				</p>

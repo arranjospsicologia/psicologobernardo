@@ -49,6 +49,7 @@
     description="Psicólogo para dificuldades de relacionamento em Vitória ES. Terapia para conflitos, comunicação e padrões que se repetem. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/experiencia/relacionamento/"
     jsonLd={experienceSchema}
+    preloadImage="/images/experiencia/relacionamento-350.avif"
 />
 
 <!-- Breadcrumb -->
@@ -70,11 +71,15 @@
         <div class="hero-image">
             <picture>
                 <source
-                    srcset="/images/experiencia/relacionamento-350.avif"
+                    srcset="/images/experiencia/relacionamento-200.avif 200w,
+                            /images/experiencia/relacionamento-350.avif 350w"
+                    sizes="(max-width: 480px) 200px, 350px"
                     type="image/avif"
                 />
                 <source
-                    srcset="/images/experiencia/relacionamento-350.webp"
+                    srcset="/images/experiencia/relacionamento-200.webp 200w,
+                            /images/experiencia/relacionamento-350.webp 350w"
+                    sizes="(max-width: 480px) 200px, 350px"
                     type="image/webp"
                 />
                 <img
@@ -262,5 +267,4 @@
 </Section>
 
 <style>
-    @import "../../../lib/styles/experience.css";
 </style>

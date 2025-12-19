@@ -54,6 +54,7 @@
     description="Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Tratamento humanizado com a Abordagem Centrada na Pessoa."
     canonical="https://psicologobernardo.com.br/experiencia/autoestima/"
     jsonLd={experienceSchema}
+    preloadImage="/images/experiencia/autoestima-350.avif"
 />
 
 <!-- Breadcrumb -->
@@ -75,11 +76,15 @@
         <div class="hero-image">
             <picture>
                 <source
-                    srcset="/images/experiencia/autoestima-350.avif"
+                    srcset="/images/experiencia/autoestima-200.avif 200w,
+                            /images/experiencia/autoestima-350.avif 350w"
+                    sizes="(max-width: 480px) 200px, 350px"
                     type="image/avif"
                 />
                 <source
-                    srcset="/images/experiencia/autoestima-350.webp"
+                    srcset="/images/experiencia/autoestima-200.webp 200w,
+                            /images/experiencia/autoestima-350.webp 350w"
+                    sizes="(max-width: 480px) 200px, 350px"
                     type="image/webp"
                 />
                 <img
@@ -266,5 +271,4 @@
 </Section>
 
 <style>
-    @import "../../../lib/styles/experience.css";
 </style>

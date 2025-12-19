@@ -10,7 +10,6 @@
         Car,
         Bus,
     } from "lucide-svelte";
-    import "$lib/styles/location.css";
 
     const vitoriaSchema = {
         "@context": "https://schema.org",
@@ -80,6 +79,7 @@
     description="Atendimento psicológico em Vitória ES. Psicoterapia pela Abordagem Centrada na Pessoa em consultório localizado em Jardim da Penha. Atendimento presencial e online para toda a Grande Vitória."
     canonical="https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/"
     jsonLd={vitoriaSchema}
+    preloadImage="/images/consultorio/fachada-madison.webp"
 />
 
 <!-- Breadcrumb -->
@@ -112,9 +112,16 @@
             </div>
             <div class="hero-image">
                 <img
-                    src="/images/consultorio/fachada-madison.jpg"
+                    src="/images/consultorio/fachada-madison.webp"
+                    srcset="/images/consultorio/fachada-madison-400w.webp 400w,
+                            /images/consultorio/fachada-madison-800w.webp 800w,
+                            /images/consultorio/fachada-madison.webp 1200w"
+                    sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 450px"
                     alt="Fachada do Edifício Madison Office Tower - Consultório em Jardim da Penha, Vitória (ES)"
+                    width="450"
+                    height="600"
                     loading="eager"
+                    fetchpriority="high"
                 />
             </div>
         </div>

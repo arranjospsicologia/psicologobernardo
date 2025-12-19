@@ -11,7 +11,6 @@
         Users,
         MessageCircle,
     } from "lucide-svelte";
-    import "$lib/styles/location.css";
 
     const jardimDaPenhaSchema = {
         "@context": "https://schema.org",
@@ -104,6 +103,7 @@
     description="Psicólogo em Jardim da Penha, Vitória (ES). Consultório em frente à UFES. Atendimento presencial humanizado para ansiedade, depressão e relacionamentos. Agende sua sessão."
     canonical="https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha/"
     jsonLd={jardimDaPenhaSchema}
+    preloadImage="/images/consultorio/fachada-madison.webp"
 />
 
 <Breadcrumb
@@ -138,9 +138,16 @@
             </div>
             <div class="hero-image">
                 <img
-                    src="/images/consultorio/fachada-madison.jpg"
+                    src="/images/consultorio/fachada-madison.webp"
+                    srcset="/images/consultorio/fachada-madison-400w.webp 400w,
+                            /images/consultorio/fachada-madison-800w.webp 800w,
+                            /images/consultorio/fachada-madison.webp 1200w"
+                    sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 450px"
                     alt="Fachada do Edifício Madison Office Tower - Consultório em Jardim da Penha, Vitória (ES)"
+                    width="450"
+                    height="600"
                     loading="eager"
+                    fetchpriority="high"
                 />
             </div>
         </div>

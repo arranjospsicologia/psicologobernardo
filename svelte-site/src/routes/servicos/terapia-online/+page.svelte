@@ -8,7 +8,6 @@
         Clock,
         Globe,
     } from "lucide-svelte";
-    import "$lib/styles/services.css";
 
     let faqItems = $state([
         {
@@ -84,8 +83,8 @@
                 srcset="/images/servicos/terapia-online-hero-400w.webp 400w,
                         /images/servicos/terapia-online-hero-800w.webp 800w,
                         /images/servicos/terapia-online-hero.webp 1600w"
-                sizes="(max-width: 480px) 100vw,
-                       (max-width: 768px) 90vw,
+                sizes="(max-width: 480px) 400px,
+                       (max-width: 768px) 800px,
                        900px"
                 alt="Terapia online - Psicoterapia por videochamada com segurança"
                 loading="eager"

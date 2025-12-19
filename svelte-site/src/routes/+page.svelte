@@ -461,7 +461,10 @@
 		rel="preload"
 		as="image"
 		href="/images/hero/hero-600x800.avif"
+		imagesrcset="/images/hero/hero-600x800-300w.avif 300w, /images/hero/hero-600x800-450w.avif 450w, /images/hero/hero-600x800.avif 600w"
+		imagesizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 600px"
 		type="image/avif"
+		fetchpriority="high"
 	/>
 </svelte:head>
 
@@ -514,8 +517,18 @@
 		<div class="hero-image">
 			<picture>
 				<source
-					srcset="/images/hero/hero-600x800.avif"
+					srcset="/images/hero/hero-600x800-300w.avif 300w,
+					        /images/hero/hero-600x800-450w.avif 450w,
+					        /images/hero/hero-600x800.avif 600w"
+					sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 600px"
 					type="image/avif"
+				/>
+				<source
+					srcset="/images/hero/hero-600x800-300w.webp 300w,
+					        /images/hero/hero-600x800-450w.webp 450w,
+					        /images/hero/hero-600x800.webp 600w"
+					sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 600px"
+					type="image/webp"
 				/>
 				<img
 					src="/images/hero/hero-600x800.webp"
@@ -736,6 +749,7 @@
 					src="/images/roda-homens.jpg"
 					alt="Roda de Conversa Entre Homens"
 					loading="lazy"
+					decoding="async"
 					width="400"
 					height="300"
 				/>

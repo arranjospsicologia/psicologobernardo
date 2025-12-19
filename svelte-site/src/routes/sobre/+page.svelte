@@ -84,6 +84,9 @@
         <div class="hero-image">
             <img
                 src="/images/sobre/bernardo-profissional.webp"
+                srcset="/images/sobre/bernardo-profissional-225w.webp 225w,
+                        /images/sobre/bernardo-profissional.webp 450w"
+                sizes="(max-width: 480px) 225px, 450px"
                 alt="Bernardo Carielo Psicólogo clínico em Vitória ES"
                 width="450"
                 height="450"
@@ -283,4 +286,3 @@
         </Button>
     </div>
 </Section>
-

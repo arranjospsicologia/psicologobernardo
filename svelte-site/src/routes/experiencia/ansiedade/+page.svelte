@@ -54,6 +54,7 @@
     description="Psicólogo para ansiedade em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/experiencia/ansiedade/"
     jsonLd={anxietySchema}
+    preloadImage="/images/experiencia/ansiedade-350.avif"
 />
 
 <Breadcrumb
@@ -75,11 +76,15 @@
         <div class="hero-image">
             <picture>
                 <source
-                    srcset="/images/experiencia/ansiedade-350.avif"
+                    srcset="/images/experiencia/ansiedade-200.avif 200w,
+                            /images/experiencia/ansiedade-350.avif 350w"
+                    sizes="(max-width: 480px) 200px, 350px"
                     type="image/avif"
                 />
                 <source
-                    srcset="/images/experiencia/ansiedade-350.webp"
+                    srcset="/images/experiencia/ansiedade-200.webp 200w,
+                            /images/experiencia/ansiedade-350.webp 350w"
+                    sizes="(max-width: 480px) 200px, 350px"
                     type="image/webp"
                 />
                 <img
@@ -245,5 +250,4 @@
 </Section>
 
 <style>
-    @import "../../../lib/styles/experience.css";
 </style>

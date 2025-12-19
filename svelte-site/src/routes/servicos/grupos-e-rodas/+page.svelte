@@ -73,8 +73,8 @@
                 srcset="/images/servicos/grupos-rodas-hero-400w.webp 400w,
                         /images/servicos/grupos-rodas-hero-800w.webp 800w,
                         /images/servicos/grupos-rodas-hero.webp 1600w"
-                sizes="(max-width: 480px) 100vw,
-                       (max-width: 768px) 90vw,
+                sizes="(max-width: 480px) 400px,
+                       (max-width: 768px) 800px,
                        900px"
                 alt="Grupos e rodas de conversa - Espaços coletivos de partilha"
                 loading="eager"

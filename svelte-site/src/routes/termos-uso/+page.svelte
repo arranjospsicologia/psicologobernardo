@@ -298,5 +298,4 @@
 </Section>
 
 <style>
-    @import "../../lib/styles/legal.css";
 </style>

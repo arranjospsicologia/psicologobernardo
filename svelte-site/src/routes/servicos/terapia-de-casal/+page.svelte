@@ -79,8 +79,8 @@
                 srcset="/images/servicos/terapia-casal-hero-400w.webp 400w,
                         /images/servicos/terapia-casal-hero-800w.webp 800w,
                         /images/servicos/terapia-casal-hero.webp 1600w"
-                sizes="(max-width: 480px) 100vw,
-                       (max-width: 768px) 90vw,
+                sizes="(max-width: 480px) 400px,
+                       (max-width: 768px) 800px,
                        900px"
                 alt="Terapia de casal em ambiente acolhedor - Vitória ES"
                 loading="eager"

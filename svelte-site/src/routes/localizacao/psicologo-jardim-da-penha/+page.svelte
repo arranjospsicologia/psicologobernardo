@@ -12,6 +12,62 @@
         MessageCircle,
     } from "lucide-svelte";
 
+    // FAQPage Schema for SEO
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "Onde posso estacionar para ir ao consultório em Jardim da Penha?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O Edifício Madison não possui estacionamento próprio, mas há bastante estacionamento nas ruas ao redor: Rua Darcy Grijó, Rua da Lama, Rua Arthur Czartoryski, R. Des. Vicente Caetano e Av. Alziro Zarur.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Como chegar ao consultório de ônibus vindo da UFES?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O consultório fica em frente à UFES, na Rua Darcy Grijó. Se você está na universidade, basta atravessar a Fernando Ferrari. O trajeto a pé leva menos de 5 minutos.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Você atende plano de saúde ou Unimed em Jardim da Penha?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Não atendo diretamente por convênios. Os atendimentos são particulares, mas forneço recibo para reembolso, caso seu plano ofereça essa opção.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Qual o valor da consulta com psicólogo em Jardim da Penha?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Os valores são informados diretamente pelo WhatsApp, pois podem variar conforme a modalidade (presencial ou online) e frequência.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Quanto tempo dura uma sessão de terapia?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Cada sessão tem duração de aproximadamente 50 minutos. A frequência semanal é o mais indicado para manter a continuidade do processo terapêutico.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Atende estudantes da UFES?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim, atendo estudantes universitários e a proximidade com a UFES facilita o acesso. Questões como ansiedade acadêmica, pressão por desempenho e transições de vida são temas frequentes nos atendimentos.",
+                },
+            },
+        ],
+    };
+
     const jardimDaPenhaSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -366,6 +422,92 @@
             <h3>Serra</h3>
             <p>Atendimento presencial e online</p>
         </a>
+    </div>
+</Section>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+</svelte:head>
+
+<Section variant="white">
+    <div class="section-header">
+        <h2>Perguntas frequentes – Psicólogo em Jardim da Penha</h2>
+    </div>
+    <div class="faq-container">
+        <details class="faq-item">
+            <summary
+                >Onde posso estacionar para ir ao consultório em Jardim da
+                Penha?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O Edifício Madison não possui estacionamento próprio, mas há
+                    bastante estacionamento nas ruas ao redor: Rua Darcy Grijó,
+                    Rua da Lama, Rua Arthur Czartoryski, R. Des. Vicente Caetano
+                    e Av. Alziro Zarur.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Como chegar ao consultório de ônibus vindo da UFES?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O consultório fica em frente à UFES, na Rua Darcy Grijó. Se
+                    você está na universidade, basta atravessar a Fernando
+                    Ferrari. O trajeto a pé leva menos de 5 minutos. Diversos
+                    ônibus param nos pontos próximos à UFES e à Rua da Lama.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Você atende plano de saúde ou Unimed em Jardim da Penha?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Não atendo diretamente por convênios. Os atendimentos são
+                    particulares, mas forneço recibo para reembolso, caso seu
+                    plano ofereça essa opção. Verifique com sua operadora as
+                    condições de reembolso para psicoterapia.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Qual o valor da consulta com psicólogo em Jardim da Penha?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Os valores são informados diretamente pelo WhatsApp, pois
+                    podem variar conforme a modalidade (presencial ou online) e
+                    frequência. Entre em contato para saber mais sobre
+                    investimento e formas de pagamento (PIX, transferência).
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Quanto tempo dura uma sessão de terapia?</summary>
+            <div class="faq-answer">
+                <p>
+                    Cada sessão tem duração de aproximadamente 50 minutos. A
+                    frequência semanal é o mais indicado para manter a
+                    continuidade do processo terapêutico.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Atende estudantes da UFES?</summary>
+            <div class="faq-answer">
+                <p>
+                    Sim, atendo estudantes universitários e a proximidade com a
+                    UFES facilita o acesso. Questões como ansiedade acadêmica,
+                    pressão por desempenho e transições de vida são temas
+                    frequentes nos atendimentos.
+                </p>
+            </div>
+        </details>
     </div>
 </Section>
 

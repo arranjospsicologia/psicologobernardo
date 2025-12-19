@@ -2,6 +2,54 @@
     import { Section, Button, Breadcrumb, SEO } from "$lib";
     import { Phone, MapPin, Home, Monitor } from "lucide-svelte";
 
+    // FAQPage Schema for SEO
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "Tem psicólogo para moradores de Serra ES?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim. Atendo moradores de Serra no meu consultório em Jardim da Penha (Vitória), com fácil acesso pela Fernando Ferrari. Também ofereço atendimento online.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Quanto tempo leva para ir de Laranjeiras até o consultório?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O trajeto de Laranjeiras ou Colina de Laranjeiras até o consultório leva entre 20 e 35 minutos de carro, dependendo do horário.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "O psicólogo atende moradores de Jacaraípe e Manguinhos?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim. Atendo moradores de todas as regiões de Serra, incluindo o litoral (Jacaraípe, Manguinhos, Nova Almeida) e regiões centrais (Laranjeiras, Civit, Serra Sede).",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Para quem mora em Serra, vale mais a pena terapia online ou presencial?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Depende da sua rotina. Muitos pacientes de Serra optam pela terapia online pela praticidade. Outros preferem reservar um momento presencial fora da rotina. Ambas as modalidades funcionam bem.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "O consultório tem fácil acesso para quem vem da Fernando Ferrari?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim. O consultório fica em Jardim da Penha, próximo à Av. Fernando Ferrari, com fácil acesso para quem vem de Serra. Há bastante estacionamento nas ruas ao redor do prédio.",
+                },
+            },
+        ],
+    };
+
     const serraSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -86,7 +134,8 @@
             Se você mora em Serra e está buscando atendimento psicológico, meu
             consultório em Jardim da Penha (Vitória) é uma opção de fácil
             acesso. Fico próximo à <strong>Fernando Ferrari</strong>, com acesso
-            rápido pela Reta da Penha, com estacionamento no prédio.
+            rápido pela Reta da Penha, com bastante estacionamento nas ruas ao
+            redor.
         </p>
         <p>
             Atendo presencialmente pessoas de diversos bairros de Serra, como
@@ -190,6 +239,80 @@
             <h3>Vila Velha</h3>
             <p>Atendimento presencial e online</p>
         </a>
+    </div>
+</Section>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+</svelte:head>
+
+<Section variant="white">
+    <div class="section-header">
+        <h2>Perguntas frequentes – Psicólogo para Serra ES</h2>
+    </div>
+    <div class="faq-container">
+        <details class="faq-item">
+            <summary>Tem psicólogo para moradores de Serra ES?</summary>
+            <div class="faq-answer">
+                <p>
+                    Sim. Atendo moradores de Serra no meu consultório em Jardim
+                    da Penha (Vitória), com fácil acesso pela Fernando Ferrari.
+                    Também ofereço atendimento online.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Quanto tempo leva para ir de Laranjeiras até o consultório?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O trajeto de Laranjeiras ou Colina de Laranjeiras até o
+                    consultório leva entre 20 e 35 minutos de carro, dependendo
+                    do horário.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >O psicólogo atende moradores de Jacaraípe e Manguinhos?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Sim. Atendo moradores de todas as regiões de Serra,
+                    incluindo o litoral (Jacaraípe, Manguinhos, Nova Almeida) e
+                    regiões centrais (Laranjeiras, Civit, Serra Sede).
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Para quem mora em Serra, vale mais a pena terapia online ou
+                presencial?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Depende da sua rotina. Muitos pacientes de Serra optam pela
+                    terapia online pela praticidade. Outros preferem reservar um
+                    momento presencial fora da rotina. Ambas as modalidades
+                    funcionam bem.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >O consultório tem fácil acesso para quem vem da Fernando
+                Ferrari?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Sim. O consultório fica em Jardim da Penha, próximo à Av.
+                    Fernando Ferrari, com fácil acesso para quem vem de Serra.
+                    Há bastante estacionamento nas ruas ao redor: Rua Darcy
+                    Grijó, Rua da Lama e Av. Alziro Zarur.
+                </p>
+            </div>
+        </details>
     </div>
 </Section>
 

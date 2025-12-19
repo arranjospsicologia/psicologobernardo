@@ -2,6 +2,54 @@
     import { Section, Button, Breadcrumb, SEO } from "$lib";
     import { Phone, MapPin, Home, Monitor } from "lucide-svelte";
 
+    // FAQPage Schema for SEO
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "Tem psicólogo para moradores de Vila Velha?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim. Atendo moradores de Vila Velha no meu consultório em Jardim da Penha (Vitória), a poucos minutos da Terceira Ponte. Também ofereço atendimento online.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Quanto tempo leva para ir de Vila Velha até o consultório?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O trajeto de bairros como Praia da Costa, Itapuã ou Glória leva entre 15 e 25 minutos de carro, dependendo do trânsito na Terceira Ponte.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Onde posso estacionar para ir ao consultório vindo de Vila Velha?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O Edifício Madison não possui estacionamento próprio, mas há bastante estacionamento nas ruas ao redor: Rua Darcy Grijó, Rua da Lama, Rua Arthur Czartoryski, R. Des. Vicente Caetano e Av. Alziro Zarur.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Vale a pena ir presencialmente ou é melhor terapia online morando em Vila Velha?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Depende da sua preferência e rotina. Muitos pacientes de Vila Velha optam pelo presencial pela experiência diferenciada. Outros preferem online pela praticidade. Ambas as modalidades são eficazes.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Quais bairros de Vila Velha você atende?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Atendo moradores de todos os bairros de Vila Velha, incluindo Praia da Costa, Itapuã, Centro, Glória, Boa Vista, Coqueiral de Itaparica, entre outros.",
+                },
+            },
+        ],
+    };
+
     const vilaVelhaSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -195,6 +243,78 @@
             <h3>Serra</h3>
             <p>Atendimento presencial e online</p>
         </a>
+    </div>
+</Section>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+</svelte:head>
+
+<Section variant="white">
+    <div class="section-header">
+        <h2>Perguntas frequentes – Psicólogo para Vila Velha</h2>
+    </div>
+    <div class="faq-container">
+        <details class="faq-item">
+            <summary>Tem psicólogo para moradores de Vila Velha?</summary>
+            <div class="faq-answer">
+                <p>
+                    Sim. Atendo moradores de Vila Velha no meu consultório em
+                    Jardim da Penha (Vitória), a poucos minutos da Terceira
+                    Ponte. Também ofereço atendimento online.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Quanto tempo leva para ir de Vila Velha até o consultório?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O trajeto de bairros como Praia da Costa, Itapuã ou Glória
+                    leva entre 15 e 25 minutos de carro, dependendo do trânsito
+                    na Terceira Ponte.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Onde posso estacionar para ir ao consultório vindo de Vila
+                Velha?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O Edifício Madison não possui estacionamento próprio, mas há
+                    bastante estacionamento nas ruas ao redor: Rua Darcy Grijó,
+                    Rua da Lama, Rua Arthur Czartoryski, R. Des. Vicente Caetano
+                    e Av. Alziro Zarur.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Vale a pena ir presencialmente ou é melhor terapia online
+                morando em Vila Velha?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Depende da sua preferência e rotina. Muitos pacientes de
+                    Vila Velha optam pelo presencial pela experiência
+                    diferenciada. Outros preferem online pela praticidade. Ambas
+                    as modalidades são eficazes.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Quais bairros de Vila Velha você atende?</summary>
+            <div class="faq-answer">
+                <p>
+                    Atendo moradores de todos os bairros de Vila Velha,
+                    incluindo Praia da Costa, Itapuã, Centro, Glória, Boa Vista,
+                    Coqueiral de Itaparica, entre outros.
+                </p>
+            </div>
+        </details>
     </div>
 </Section>
 

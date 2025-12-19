@@ -45,26 +45,47 @@
 <!-- Breadcrumb -->
 <Breadcrumb items={[{ name: "Início", href: "/" }, { name: "Contato" }]} />
 
-<!-- Page Hero -->
-<section class="page-hero">
+<!-- Page Hero - Contato -->
+<section class="contato-hero">
     <div class="container">
-        <h1>Contato</h1>
-        <p class="hero-subtitle">
-            Oi! Que bom que você está considerando falar comigo.
-        </p>
+        <div class="contato-hero-content">
+            <div class="contato-hero-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                    <path d="M8 10h.01"></path>
+                    <path d="M12 10h.01"></path>
+                    <path d="M16 10h.01"></path>
+                </svg>
+            </div>
+            <h1>Contato</h1>
+            <p class="contato-hero-greeting">
+                Oi! Que bom que você está considerando falar comigo.
+            </p>
+            <div class="contato-hero-message">
+                <p>
+                    Se fizer sentido, me manda uma mensagem — posso te responder
+                    com calma, entender o que você está buscando e dizer como
+                    posso ajudar
+                    <span class="text-subtle"
+                        >(ou encaminhar, quando for o melhor caminho)</span
+                    >.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
-
-<!-- Mensagem Acolhedora -->
-<Section variant="white">
-    <div class="welcome-message">
-        <p>
-            Se fizer sentido, me manda uma mensagem — posso te responder com
-            calma, entender o que você está buscando e dizer como posso ajudar
-            (ou encaminhar, quando for o melhor caminho).
-        </p>
-    </div>
-</Section>
 
 <!-- Formas de Contato -->
 <Section variant="beige" id="formas-contato">
@@ -234,4 +255,3 @@
         </Button>
     </div>
 </Section>
-

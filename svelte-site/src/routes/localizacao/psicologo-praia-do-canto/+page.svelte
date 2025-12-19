@@ -2,6 +2,54 @@
     import { Section, Button, Breadcrumb, SEO } from "$lib";
     import { Phone, MapPin, ExternalLink } from "lucide-svelte";
 
+    // FAQPage Schema for SEO
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "Tem psicólogo em Praia do Canto?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Atendo moradores de Praia do Canto no meu consultório em Jardim da Penha, a apenas 5-10 minutos de carro. A localização é de fácil acesso para quem vem da região litorânea.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Quanto tempo leva para chegar ao consultório saindo de Praia do Canto?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O trajeto de Praia do Canto até o consultório em Jardim da Penha leva entre 5 e 10 minutos de carro, dependendo do trânsito. Também é possível chegar de ônibus.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "O psicólogo atende convênio para moradores de Praia do Canto?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Os atendimentos são particulares. Forneço recibo para reembolso caso seu plano de saúde ofereça essa opção.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Qual o horário de atendimento do psicólogo?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O atendimento acontece de segunda a sexta-feira, das 13h30 às 21h. Os horários são agendados previamente pelo WhatsApp.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "É possível fazer terapia online morando em Praia do Canto?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim. Além do atendimento presencial, ofereço terapia online por videochamada. Você pode escolher a modalidade que melhor se adapta ao seu momento.",
+                },
+            },
+        ],
+    };
+
     const praiaDoCantoSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -226,6 +274,74 @@
             <h3>Serra</h3>
             <p>Atendimento presencial e online</p>
         </a>
+    </div>
+</Section>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+</svelte:head>
+
+<Section variant="white">
+    <div class="section-header">
+        <h2>Perguntas frequentes – Psicólogo próximo a Praia do Canto</h2>
+    </div>
+    <div class="faq-container">
+        <details class="faq-item">
+            <summary>Tem psicólogo em Praia do Canto?</summary>
+            <div class="faq-answer">
+                <p>
+                    Atendo moradores de Praia do Canto no meu consultório em
+                    Jardim da Penha, a apenas 5-10 minutos de carro. A
+                    localização é de fácil acesso para quem vem da região
+                    litorânea.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >Quanto tempo leva para chegar ao consultório saindo de Praia do
+                Canto?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O trajeto de Praia do Canto até o consultório em Jardim da
+                    Penha leva entre 5 e 10 minutos de carro, dependendo do
+                    trânsito. Também é possível chegar de ônibus.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >O psicólogo atende convênio para moradores de Praia do Canto?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Os atendimentos são particulares. Forneço recibo para
+                    reembolso caso seu plano de saúde ofereça essa opção.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Qual o horário de atendimento do psicólogo?</summary>
+            <div class="faq-answer">
+                <p>
+                    O atendimento acontece de segunda a sexta-feira, das 13h30
+                    às 21h. Os horários são agendados previamente pelo WhatsApp.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary
+                >É possível fazer terapia online morando em Praia do Canto?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    Sim. Além do atendimento presencial, ofereço terapia online
+                    por videochamada. Você pode escolher a modalidade que melhor
+                    se adapta ao seu momento.
+                </p>
+            </div>
+        </details>
     </div>
 </Section>
 

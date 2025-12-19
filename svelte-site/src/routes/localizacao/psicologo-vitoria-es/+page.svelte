@@ -11,6 +11,62 @@
         Bus,
     } from "lucide-svelte";
 
+    // FAQPage Schema for SEO
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "Onde fica o consultório do psicólogo em Vitória ES?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "O consultório está localizado em Jardim da Penha, em frente à UFES, no Edifício Madison Office Tower, Sala 409. Endereço: Rua Darcy Grijó, 50 - Jardim da Penha, Vitória - ES.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "O psicólogo atende plano de saúde em Vitória?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Os atendimentos são particulares. Não atendo diretamente por convênios, mas forneço recibo para reembolso caso seu plano ofereça essa opção.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Quais bairros de Vitória o psicólogo atende?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Atendo presencialmente pacientes de todos os bairros de Vitória, incluindo Jardim da Penha, Praia do Canto, Mata da Praia, Jardim Camburi, Goiabeiras, Bento Ferreira, Centro, entre outros.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "O psicólogo em Vitória também atende online?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sim. Além do atendimento presencial em Jardim da Penha, ofereço terapia online por videochamada para pessoas de Vitória e de qualquer lugar do Brasil.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Como funciona a primeira consulta com o psicólogo?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "A primeira consulta é um momento de acolhimento e escuta sem julgamentos. Conversamos sobre suas demandas, expectativas e como a terapia pode te ajudar. Não há compromisso de continuidade.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Qual abordagem o psicólogo em Vitória utiliza?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Trabalho com a Abordagem Centrada na Pessoa (ACP), desenvolvida por Carl Rogers. É uma abordagem humanista que valoriza a empatia, a autenticidade e o respeito incondicional.",
+                },
+            },
+        ],
+    };
+
     const vitoriaSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -300,6 +356,85 @@
             <h3>Serra</h3>
             <p>Atendimento presencial e online</p>
         </a>
+    </div>
+</Section>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
+</svelte:head>
+
+<Section variant="white">
+    <div class="section-header">
+        <h2>Perguntas frequentes – Psicólogo em Vitória ES</h2>
+    </div>
+    <div class="faq-container">
+        <details class="faq-item">
+            <summary
+                >Onde fica o consultório do psicólogo em Vitória ES?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    O consultório está localizado em Jardim da Penha, em frente
+                    à UFES, no Edifício Madison Office Tower, Sala 409.
+                    Endereço: Rua Darcy Grijó, 50 - Jardim da Penha, Vitória -
+                    ES.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>O psicólogo atende plano de saúde em Vitória?</summary>
+            <div class="faq-answer">
+                <p>
+                    Os atendimentos são particulares. Não atendo diretamente por
+                    convênios, mas forneço recibo para reembolso caso seu plano
+                    ofereça essa opção.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Quais bairros de Vitória o psicólogo atende?</summary>
+            <div class="faq-answer">
+                <p>
+                    Atendo presencialmente pacientes de todos os bairros de
+                    Vitória, incluindo Jardim da Penha, Praia do Canto, Mata da
+                    Praia, Jardim Camburi, Goiabeiras, Bento Ferreira, Centro,
+                    entre outros.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>O psicólogo em Vitória também atende online?</summary>
+            <div class="faq-answer">
+                <p>
+                    Sim. Além do atendimento presencial em Jardim da Penha,
+                    ofereço terapia online por videochamada para pessoas de
+                    Vitória e de qualquer lugar do Brasil.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Como funciona a primeira consulta com o psicólogo?</summary
+            >
+            <div class="faq-answer">
+                <p>
+                    A primeira consulta é um momento de acolhimento e escuta sem
+                    julgamentos. Conversamos sobre suas demandas, expectativas e
+                    como a terapia pode te ajudar. Não há compromisso de
+                    continuidade.
+                </p>
+            </div>
+        </details>
+        <details class="faq-item">
+            <summary>Qual abordagem o psicólogo em Vitória utiliza?</summary>
+            <div class="faq-answer">
+                <p>
+                    Trabalho com a Abordagem Centrada na Pessoa (ACP),
+                    desenvolvida por Carl Rogers. É uma abordagem humanista que
+                    valoriza a empatia, a autenticidade e o respeito
+                    incondicional.
+                </p>
+            </div>
+        </details>
     </div>
 </Section>
 

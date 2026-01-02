@@ -130,13 +130,15 @@
                 </ul>
             </li>
 
-            <li><a href="/blog/" class="nav-link">Blog</a></li>
+            <li><a href="/artigos/" class="nav-link">Artigos</a></li>
             <li><a href="/contato/" class="nav-link">Contato</a></li>
         </ul>
 
         <div class="nav-cta">
-            <Button href="/agendar/" variant="primary" size="sm"
-                >Agendar Consulta</Button
+            <Button
+                href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+                variant="primary"
+                size="sm">Conversar</Button
             >
         </div>
 
@@ -246,8 +248,8 @@
                 </li>
 
                 <li>
-                    <a href="/blog/" class="mobile-link" onclick={closeMenu}>
-                        <span>Blog</span>
+                    <a href="/artigos/" class="mobile-link" onclick={closeMenu}>
+                        <span>Artigos</span>
                     </a>
                 </li>
                 <li>
@@ -259,8 +261,10 @@
         </nav>
 
         <div class="mobile-cta">
-            <Button href="/agendar/" variant="primary" onclick={closeMenu}
-                >Agendar Consulta</Button
+            <Button
+                href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+                variant="primary"
+                onclick={closeMenu}>Conversar</Button
             >
         </div>
     </div>

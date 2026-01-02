@@ -1,12 +1,14 @@
 export const prerender = true;
 
+import { blogPosts, categoryPages } from '$lib/data/blog';
+
 const site = 'https://psicologobernardo.com.br';
 
 export async function GET() {
-    // Auto-discover all +page.svelte files
+    // Auto-discover static +page.svelte files
     const modules = import.meta.glob('/src/routes/**/+page.svelte');
 
-    const pages = Object.keys(modules)
+    const staticPages = Object.keys(modules)
         .map((path) => {
             // Transform /src/routes/sobre/+page.svelte -> /sobre
             const route = path
@@ -16,9 +18,20 @@ export async function GET() {
             return route === '' ? '/' : route;
         })
         .filter((route) => {
-            // Exclude dynamic routes (contain [ or ]) and hidden system files
+            // Exclude dynamic routes (contain [ or ]) as we'll add them manually
             return !route.includes('[') && !route.includes(']');
         });
+
+    // Generate dynamic routes
+    const dynamicPages = [
+        // Category pages (e.g., /saude-mental/)
+        ...categoryPages.map(cat => `/${cat.slug}`),
+
+        // Blog posts (e.g., /saude-mental/titulo-do-post)
+        ...blogPosts.map(post => `/${post.categorySlug}/${post.slug}`)
+    ];
+
+    const allPages = [...staticPages, ...dynamicPages];
 
     const body = `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
@@ -29,7 +42,7 @@ export async function GET() {
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
-  ${pages
+  ${allPages
             .map(
                 (page) => `
   <url>

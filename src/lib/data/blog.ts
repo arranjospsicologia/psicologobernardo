@@ -4,6 +4,7 @@ export interface BlogPost {
     title: string;
     description: string;
     category: string;
+    categorySlug: string; // URL-friendly category for routing
     tags: string[];
     date: string;
     readTime: string;
@@ -16,6 +17,7 @@ export const blogPosts: BlogPost[] = [
         title: "Terapia para Estudantes e Universitários em Vitória (UFES)",
         description: "Psicoterapia para estudantes e universitários em Vitória (UFES). Ansiedade acadêmica, pressão, futuro profissional e um consultório em frente à universidade, em Jardim da Penha.",
         category: "Estudantes",
+        categorySlug: "jardim-da-penha",
         tags: ["UFES", "Estudantes", "Ansiedade Acadêmica", "Jardim da Penha", "Carreira", "saude-mental"],
         date: "19 Dez 2025",
         readTime: "6 min de leitura",
@@ -26,6 +28,7 @@ export const blogPosts: BlogPost[] = [
         title: "Onde cuidar da Saúde Mental em Jardim da Penha e Região (Vitória – ES)",
         description: "Guia local de saúde mental em Jardim da Penha e região: praças, parques, orla de Camburi, UFES, UBS e rede de apoio. Dicas práticas para descompressão em Vitória (ES).",
         category: "Saúde Mental",
+        categorySlug: "jardim-da-penha",
         tags: ["Jardim da Penha", "Saúde Mental", "Vitória ES", "Natureza", "Autocuidado", "saude-mental"],
         date: "19 Dez 2025",
         readTime: "6 min de leitura",
@@ -36,6 +39,7 @@ export const blogPosts: BlogPost[] = [
         title: "Como escolher um psicólogo em Vitória (ES): guia prático e seguro",
         description: "Aprenda como escolher um psicólogo em Vitória (ES) com critérios éticos e práticos: CRP, abordagem, localização (Jardim da Penha, UFES) e relação terapêutica.",
         category: "Saúde Mental",
+        categorySlug: "vitoria-es",
         tags: ["Psicólogo Vitória", "Jardim da Penha", "CRP", "Abordagem", "Relação Terapêutica", "saude-mental"],
         date: "19 Dez 2025",
         readTime: "7 min de leitura",
@@ -46,6 +50,7 @@ export const blogPosts: BlogPost[] = [
         title: "O melhor jeito de viver é autêntico: por que a autenticidade melhora a qualidade de vida",
         description: "Como a Abordagem Centrada na Pessoa entende a autorrealização e a tendência atualizante — e por que isso importa para você.",
         category: "Autoconhecimento",
+        categorySlug: "acp",
         tags: ["autoconhecimento", "acp"],
         date: "17 Nov 2025",
         readTime: "7 min de leitura",
@@ -56,6 +61,7 @@ export const blogPosts: BlogPost[] = [
         title: "Terapia Centrada na Pessoa: como funciona — explicado de um jeito simples e humano",
         description: "Como a ACP cria um ambiente seguro para que você possa existir sem precisar performar.",
         category: "ACP",
+        categorySlug: "acp",
         tags: ["acp", "terapia-humanista"],
         date: "16 Nov 2025",
         readTime: "7 min de leitura",
@@ -66,6 +72,7 @@ export const blogPosts: BlogPost[] = [
         title: "Quando o estresse vira desgaste emocional: por que estamos tão cansados?",
         description: "Diferenciando o estresse saudável do estresse contínuo — e o impacto no corpo e na mente.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["saude-mental", "ansiedade"],
         date: "13 Nov 2025",
         readTime: "8 min de leitura",
@@ -76,6 +83,7 @@ export const blogPosts: BlogPost[] = [
         title: "Terapia Online Funciona? Evidências e experiência clínica explicadas de forma simples",
         description: "O que a prática e a ciência mostram sobre os atendimentos online — e como saber se é para você.",
         category: "Terapia Online",
+        categorySlug: "psicoterapia",
         tags: ["acp", "terapia-online"],
         date: "10 Nov 2025",
         readTime: "8 min de leitura",
@@ -86,6 +94,7 @@ export const blogPosts: BlogPost[] = [
         title: "A obrigação de estar bem: como o capitalismo transforma emoções em produtos",
         description: "Por que acreditar que precisamos ser felizes o tempo todo adoece — e o que a ACP mostra sobre isso.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["saude-mental", "autoconhecimento"],
         date: "07 Nov 2025",
         readTime: "7 min de leitura",
@@ -96,6 +105,7 @@ export const blogPosts: BlogPost[] = [
         title: "A vida acelerou demais: o que perdemos quando não temos tempo para sentir",
         description: "Um olhar sobre a aceleração social e a perda de presença no cotidiano.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["saude-mental", "ansiedade", "acp"],
         date: "05 Nov 2025",
         readTime: "7 min de leitura",
@@ -106,6 +116,7 @@ export const blogPosts: BlogPost[] = [
         title: "Não somos máquinas: o mito da produtividade infinita e o esgotamento do humano",
         description: "Por que tentar render cada vez mais nos desconecta de quem realmente somos.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["saude-mental", "autoconhecimento", "acp"],
         date: "02 Nov 2025",
         readTime: "7 min de leitura",
@@ -115,8 +126,9 @@ export const blogPosts: BlogPost[] = [
         slug: "trabalho-interno-vs-performance",
         title: "Trabalho interno x performance: como medir 'resultado'?",
         description: "Em saúde mental, 'resultado' raramente cabe em números. Às vezes, é poder dizer 'não', dormir melhor, ou chorar sem se punir.",
-        category: "Saúde Mental",
-        tags: ["saude-mental", "acp"],
+        category: "Psicoterapia",
+        categorySlug: "psicoterapia",
+        tags: ["psicoterapia", "acp", "saude-mental"],
         date: "31 Out 2025",
         readTime: "12 min de leitura",
         image: "/images/blog/trabalho-interno-vs-performance.webp"
@@ -126,6 +138,7 @@ export const blogPosts: BlogPost[] = [
         title: "Quando o 'automático' vira modo de vida",
         description: "Viver no automático economiza energia — até que custa caro. O convite aqui é desacelerar o olhar e reaprender preferências.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["autoconhecimento", "saude-mental", "acp"],
         date: "30 Out 2025",
         readTime: "10 min de leitura",
@@ -136,6 +149,7 @@ export const blogPosts: BlogPost[] = [
         title: "Ansiedade: os sinais de que talvez seja hora de desacelerar",
         description: "Saiba como reconhecer os sinais de ansiedade e o que o corpo tenta comunicar quando o ritmo de vida se torna insustentável.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["ansiedade", "saude-mental"],
         date: "5 Mar 2025",
         readTime: "11 min de leitura",
@@ -146,6 +160,7 @@ export const blogPosts: BlogPost[] = [
         title: "Corpo e emoções: o que o corpo revela quando a mente cala",
         description: "Uma reflexão sobre como o corpo expressa o que muitas vezes não conseguimos dizer em palavras e sobre o papel da terapia na reconexão entre corpo e emoção.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["saude-mental", "acp"],
         date: "20 Fev 2025",
         readTime: "11 min de leitura",
@@ -156,6 +171,7 @@ export const blogPosts: BlogPost[] = [
         title: "Crises existenciais: quando a vida parece perder o sentido",
         description: "Reflexões sobre o que acontece quando antigas certezas deixam de fazer sentido e a importância de acolher os momentos de crise como oportunidades de transformação.",
         category: "Saúde Mental",
+        categorySlug: "saude-mental",
         tags: ["saude-mental", "autoconhecimento"],
         date: "5 Fev 2025",
         readTime: "12 min de leitura",
@@ -166,6 +182,7 @@ export const blogPosts: BlogPost[] = [
         title: "O que é a Abordagem Centrada na Pessoa e por que ela continua tão atual",
         description: "Conheça os princípios da Abordagem Centrada na Pessoa, desenvolvida por Carl Rogers, e entenda por que essa forma de fazer psicologia permanece viva e necessária.",
         category: "ACP",
+        categorySlug: "acp",
         tags: ["acp"],
         date: "22 Jan 2025",
         readTime: "14 min de leitura",
@@ -176,11 +193,22 @@ export const blogPosts: BlogPost[] = [
         title: "Por que é tão difícil para muitos homens falar sobre o que sentem",
         description: "Entenda como a terapia pode ajudar homens a lidarem com emoções, relacionamentos e pressões sem precisar dar conta de tudo sozinho.",
         category: "Masculinidades",
+        categorySlug: "homens",
         tags: ["masculinidades"],
         date: "22 Jan 2025",
         readTime: "10 min de leitura",
         image: "/images/blog/terapia-para-homens.webp"
     }
+];
+
+// Category definitions with metadata for SEO
+export const categoryPages = [
+    { slug: "saude-mental", label: "Saúde Mental", description: "Artigos sobre ansiedade, estresse, emoções e bem-estar psicológico" },
+    { slug: "acp", label: "Abordagem Centrada na Pessoa", description: "Artigos sobre a ACP, Carl Rogers e psicoterapia humanista" },
+    { slug: "homens", label: "Terapia para Homens", description: "Artigos sobre masculinidades, emoções e saúde mental masculina" },
+    { slug: "psicoterapia", label: "Psicoterapia", description: "Artigos sobre o processo terapêutico, modalidades e dúvidas comuns" },
+    { slug: "jardim-da-penha", label: "Jardim da Penha", description: "Artigos sobre saúde mental em Jardim da Penha, UFES e região" },
+    { slug: "vitoria-es", label: "Vitória ES", description: "Artigos sobre psicologia e saúde mental em Vitória, Espírito Santo" },
 ];
 
 export const categories = [
@@ -194,6 +222,14 @@ export const categories = [
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
     return blogPosts.find(post => post.slug === slug);
+}
+
+export function getPostsByCategory(categorySlug: string): BlogPost[] {
+    return blogPosts.filter(post => post.categorySlug === categorySlug);
+}
+
+export function getCategoryBySlug(slug: string) {
+    return categoryPages.find(cat => cat.slug === slug);
 }
 
 export function filterPosts(posts: BlogPost[], category: string, search: string): BlogPost[] {

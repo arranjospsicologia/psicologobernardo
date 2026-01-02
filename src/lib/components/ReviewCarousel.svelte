@@ -85,6 +85,7 @@
     aria-label="Avaliações de pacientes"
     on:touchstart={handleTouchStart}
     on:touchend={handleTouchEnd}
+    style="position: relative;"
 >
     <!-- Header -->
     <div class="carousel-header">
@@ -178,35 +179,33 @@
     </div>
 
     <!-- Navigation -->
-    <div class="carousel-nav">
-        <button
-            class="nav-btn"
-            on:click={prevSlide}
-            disabled={currentIndex === 0}
-            aria-label="Review anterior"
-        >
-            <ChevronLeft size={20} />
-        </button>
+    <button
+        class="nav-btn nav-prev"
+        on:click={prevSlide}
+        disabled={currentIndex === 0}
+        aria-label="Review anterior"
+    >
+        <ChevronLeft size={20} />
+    </button>
 
-        <div class="nav-dots">
-            {#each reviews as _, index}
-                <button
-                    class="nav-dot"
-                    class:active={index === currentIndex}
-                    on:click={() => goToSlide(index)}
-                    aria-label={`Ir para avaliação ${index + 1}`}
-                ></button>
-            {/each}
-        </div>
+    <button
+        class="nav-btn nav-next"
+        on:click={nextSlide}
+        disabled={currentIndex === reviews.length - 1}
+        aria-label="Próximo review"
+    >
+        <ChevronRight size={20} />
+    </button>
 
-        <button
-            class="nav-btn"
-            on:click={nextSlide}
-            disabled={currentIndex === reviews.length - 1}
-            aria-label="Próximo review"
-        >
-            <ChevronRight size={20} />
-        </button>
+    <div class="carousel-dots">
+        {#each reviews as _, index}
+            <button
+                class="carousel-dot"
+                class:active={index === currentIndex}
+                on:click={() => goToSlide(index)}
+                aria-label={`Ir para avaliação ${index + 1}`}
+            ></button>
+        {/each}
     </div>
 
     <!-- CTA Link -->

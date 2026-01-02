@@ -13,10 +13,10 @@
     const blogSchema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: "Blog - Psicólogo Bernardo",
+        name: "Artigos - Psicólogo Bernardo",
         description:
             "Reflexões, dicas e conteúdos sobre saúde mental e psicologia",
-        url: "https://psicologobernardo.com.br/blog/",
+        url: "https://psicologobernardo.com.br/artigos/",
         author: {
             "@type": "Person",
             name: "Bernardo Carielo",
@@ -26,18 +26,18 @@
 </script>
 
 <SEO
-    title="Blog - Psicólogo Bernardo | Bernardo Carielo"
-    description="Blog sobre saúde mental, psicologia e bem-estar por Bernardo Carielo, psicólogo em Vitória/ES - CRP 16/5527"
-    canonical="https://psicologobernardo.com.br/blog/"
+    title="Artigos - Psicólogo Bernardo | Bernardo Carielo"
+    description="Artigos sobre saúde mental, psicologia e bem-estar por Bernardo Carielo, psicólogo em Vitória/ES - CRP 16/5527"
+    canonical="https://psicologobernardo.com.br/artigos/"
     jsonLd={blogSchema}
 />
 
 <!-- Breadcrumb -->
-<Breadcrumb items={[{ name: "Início", href: "/" }, { name: "Blog" }]} />
+<Breadcrumb items={[{ name: "Início", href: "/" }, { name: "Artigos" }]} />
 
 <section class="blog-hero">
     <div class="container">
-        <h1>Blog</h1>
+        <h1>Artigos</h1>
         <p>Reflexões, dicas e conteúdos sobre saúde mental e psicologia</p>
     </div>
 </section>
@@ -48,7 +48,7 @@
             <Search size={18} />
             <input
                 type="text"
-                placeholder="Buscar posts por título..."
+                placeholder="Buscar artigos por título..."
                 class="search-input"
                 bind:value={searchTerm}
             />
@@ -67,7 +67,7 @@
             </div>
         {:else}
             {#each filteredPosts as post}
-                <a href="/blog/{post.slug}" class="blog-card">
+                <a href="/{post.categorySlug}/{post.slug}" class="blog-card">
                     <div class="blog-image">
                         <img
                             src={post.image}

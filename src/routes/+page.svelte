@@ -53,7 +53,7 @@
 		},
 		{
 			question: "Como agendar uma consulta?",
-			answer: 'Você pode agendar diretamente pelo WhatsApp ou pelo Doctoralia. Basta clicar no botão "Agendar Consulta".',
+			answer: 'Você pode conversar diretamente comigo pelo WhatsApp. Basta clicar no botão "Conversar" ou "Falar no WhatsApp".',
 			open: false,
 		},
 	]);
@@ -508,9 +508,13 @@
 				para você se conhecer e crescer.
 			</p>
 			<div class="hero-buttons animate-fade-in-up" style="--delay: 0.4s">
-				<Button href="/agendar/" variant="primary" size="lg">
+				<Button
+					href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+					variant="primary"
+					size="lg"
+				>
 					<Calendar size={20} />
-					Agendar Consulta
+					Conversar
 				</Button>
 			</div>
 		</div>
@@ -587,8 +591,9 @@
 	</div>
 	<div class="avaliacoes-cta">
 		<p>
-			Quer conhecer mais sobre meu trabalho? <a href="/agendar/"
-				>Agende sua primeira sessão</a
+			Quer conhecer mais sobre meu trabalho? <a
+				href="https://wa.me/5527998331228?text=Olá,%20vi%20os%20depoimentos%20no%20site%20e%20gostaria%20de%20conversar."
+				>Converse comigo no WhatsApp</a
 			> e comece sua jornada de autoconhecimento.
 		</p>
 	</div>
@@ -645,7 +650,7 @@
 		</div>
 	</div>
 	<div class="credenciais-cta">
-		<Button href="/sobre/" variant="outline">Ver currículo completo</Button>
+		<a href="/sobre/" class="btn-link">Ver mais</a>
 	</div>
 </Section>
 
@@ -692,7 +697,7 @@
 		</p>
 		<p>
 			Atendimento presencial ou online. <a
-				href="#contato"
+				href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20ao%20consultório."
 				class="btn-link">Entre em contato</a
 			> para agendar sua primeira sessão.
 		</p>
@@ -912,13 +917,13 @@
 		<h2>Pronto para dar o primeiro passo?</h2>
 		<p>Agende uma consulta e comece sua jornada de autoconhecimento.</p>
 		<Button
-			href="/agendar/"
+			href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20conversar"
 			variant="secondary"
 			size="lg"
 			class="cta-button"
 		>
-			<Calendar size={20} />
-			Agendar Consulta
+			<Phone size={20} />
+			Falar no WhatsApp
 		</Button>
 	</div>
 </Section>

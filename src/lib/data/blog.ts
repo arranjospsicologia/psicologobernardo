@@ -11,12 +11,22 @@ export interface BlogPost {
     image: string;
 }
 
+// Category definitions with metadata for SEO
+export const categoryPages = [
+    { slug: "saude-mental", label: "Saúde Mental", description: "Artigos sobre ansiedade, estresse, emoções e bem-estar psicológico" },
+    { slug: "acp", label: "Abordagem Centrada na Pessoa", description: "Artigos sobre a ACP, Carl Rogers e psicoterapia humanista" },
+    { slug: "homens", label: "Terapia para Homens", description: "Artigos sobre masculinidades, emoções e saúde mental masculina" },
+    { slug: "psicoterapia", label: "Psicoterapia", description: "Artigos sobre o processo terapêutico, modalidades e dúvidas comuns" },
+    { slug: "jardim-da-penha", label: "Jardim da Penha", description: "Artigos sobre saúde mental em Jardim da Penha, UFES e região" },
+    { slug: "vitoria-es", label: "Vitória ES", description: "Artigos sobre psicologia e saúde mental em Vitória, Espírito Santo" },
+];
+
 export const blogPosts: BlogPost[] = [
     {
         slug: "terapia-para-estudantes-ufes-vitoria",
         title: "Terapia para Estudantes e Universitários em Vitória (UFES)",
         description: "Psicoterapia para estudantes e universitários em Vitória (UFES). Ansiedade acadêmica, pressão, futuro profissional e um consultório em frente à universidade, em Jardim da Penha.",
-        category: "Estudantes",
+        category: "Jardim da Penha",
         categorySlug: "jardim-da-penha",
         tags: ["UFES", "Estudantes", "Ansiedade Acadêmica", "Jardim da Penha", "Carreira", "saude-mental"],
         date: "19 Dez 2025",
@@ -27,7 +37,7 @@ export const blogPosts: BlogPost[] = [
         slug: "onde-cuidar-saude-mental-jardim-da-penha",
         title: "Onde cuidar da Saúde Mental em Jardim da Penha e Região (Vitória – ES)",
         description: "Guia local de saúde mental em Jardim da Penha e região: praças, parques, orla de Camburi, UFES, UBS e rede de apoio. Dicas práticas para descompressão em Vitória (ES).",
-        category: "Saúde Mental",
+        category: "Jardim da Penha",
         categorySlug: "jardim-da-penha",
         tags: ["Jardim da Penha", "Saúde Mental", "Vitória ES", "Natureza", "Autocuidado", "saude-mental"],
         date: "19 Dez 2025",
@@ -38,7 +48,7 @@ export const blogPosts: BlogPost[] = [
         slug: "como-escolher-psicologo-em-vitoria-es",
         title: "Como escolher um psicólogo em Vitória (ES): guia prático e seguro",
         description: "Aprenda como escolher um psicólogo em Vitória (ES) com critérios éticos e práticos: CRP, abordagem, localização (Jardim da Penha, UFES) e relação terapêutica.",
-        category: "Saúde Mental",
+        category: "Vitória ES",
         categorySlug: "vitoria-es",
         tags: ["Psicólogo Vitória", "Jardim da Penha", "CRP", "Abordagem", "Relação Terapêutica", "saude-mental"],
         date: "19 Dez 2025",
@@ -49,7 +59,7 @@ export const blogPosts: BlogPost[] = [
         slug: "autenticidade-qualidade-vida",
         title: "O melhor jeito de viver é autêntico: por que a autenticidade melhora a qualidade de vida",
         description: "Como a Abordagem Centrada na Pessoa entende a autorrealização e a tendência atualizante — e por que isso importa para você.",
-        category: "Autoconhecimento",
+        category: "Abordagem Centrada na Pessoa",
         categorySlug: "acp",
         tags: ["autoconhecimento", "acp"],
         date: "17 Nov 2025",
@@ -60,7 +70,7 @@ export const blogPosts: BlogPost[] = [
         slug: "terapia-centrada-pessoa-explicacao",
         title: "Terapia Centrada na Pessoa: como funciona — explicado de um jeito simples e humano",
         description: "Como a ACP cria um ambiente seguro para que você possa existir sem precisar performar.",
-        category: "ACP",
+        category: "Abordagem Centrada na Pessoa",
         categorySlug: "acp",
         tags: ["acp", "terapia-humanista"],
         date: "16 Nov 2025",
@@ -82,7 +92,7 @@ export const blogPosts: BlogPost[] = [
         slug: "terapia-online-funciona",
         title: "Terapia Online Funciona? Evidências e experiência clínica explicadas de forma simples",
         description: "O que a prática e a ciência mostram sobre os atendimentos online — e como saber se é para você.",
-        category: "Terapia Online",
+        category: "Psicoterapia",
         categorySlug: "psicoterapia",
         tags: ["acp", "terapia-online"],
         date: "10 Nov 2025",
@@ -181,7 +191,7 @@ export const blogPosts: BlogPost[] = [
         slug: "abordagem-centrada-pessoa",
         title: "O que é a Abordagem Centrada na Pessoa e por que ela continua tão atual",
         description: "Conheça os princípios da Abordagem Centrada na Pessoa, desenvolvida por Carl Rogers, e entenda por que essa forma de fazer psicologia permanece viva e necessária.",
-        category: "ACP",
+        category: "Abordagem Centrada na Pessoa",
         categorySlug: "acp",
         tags: ["acp"],
         date: "22 Jan 2025",
@@ -192,7 +202,7 @@ export const blogPosts: BlogPost[] = [
         slug: "terapia-para-homens",
         title: "Por que é tão difícil para muitos homens falar sobre o que sentem",
         description: "Entenda como a terapia pode ajudar homens a lidarem com emoções, relacionamentos e pressões sem precisar dar conta de tudo sozinho.",
-        category: "Masculinidades",
+        category: "Terapia para Homens",
         categorySlug: "homens",
         tags: ["masculinidades"],
         date: "22 Jan 2025",
@@ -201,23 +211,9 @@ export const blogPosts: BlogPost[] = [
     }
 ];
 
-// Category definitions with metadata for SEO
-export const categoryPages = [
-    { slug: "saude-mental", label: "Saúde Mental", description: "Artigos sobre ansiedade, estresse, emoções e bem-estar psicológico" },
-    { slug: "acp", label: "Abordagem Centrada na Pessoa", description: "Artigos sobre a ACP, Carl Rogers e psicoterapia humanista" },
-    { slug: "homens", label: "Terapia para Homens", description: "Artigos sobre masculinidades, emoções e saúde mental masculina" },
-    { slug: "psicoterapia", label: "Psicoterapia", description: "Artigos sobre o processo terapêutico, modalidades e dúvidas comuns" },
-    { slug: "jardim-da-penha", label: "Jardim da Penha", description: "Artigos sobre saúde mental em Jardim da Penha, UFES e região" },
-    { slug: "vitoria-es", label: "Vitória ES", description: "Artigos sobre psicologia e saúde mental em Vitória, Espírito Santo" },
-];
-
 export const categories = [
-    { id: "todos", label: "Todos os posts" },
-    { id: "acp", label: "ACP" },
-    { id: "saude-mental", label: "Saúde Mental" },
-    { id: "autoconhecimento", label: "Autoconhecimento" },
-    { id: "ansiedade", label: "Ansiedade" },
-    { id: "masculinidades", label: "Masculinidades" }
+    { id: "todos", label: "Todos os artigos" },
+    ...categoryPages.map(cat => ({ id: cat.slug, label: cat.label }))
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
@@ -234,7 +230,8 @@ export function getCategoryBySlug(slug: string) {
 
 export function filterPosts(posts: BlogPost[], category: string, search: string): BlogPost[] {
     return posts.filter(post => {
-        const matchesCategory = category === "todos" || post.tags.includes(category);
+        // Filter by categorySlug (Silos) instead of tags
+        const matchesCategory = category === "todos" || post.categorySlug === category;
         const matchesSearch = search === "" ||
             post.title.toLowerCase().includes(search.toLowerCase()) ||
             post.description.toLowerCase().includes(search.toLowerCase());

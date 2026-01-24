@@ -1,0 +1,19 @@
+# robots.txt para psicologobernardo.com.br
+User-agent: *
+Allow: /
+
+Sitemap: https://psicologobernardo.com.br/sitemap.xml
+
+
+
+# Regras adicionais
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Evita bloqueios desnecessários
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /docs/

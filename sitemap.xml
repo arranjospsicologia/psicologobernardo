@@ -7,281 +7,286 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
-  
   <url>
     <loc>https://psicologobernardo.com.br/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/agendar</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/agendar/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/artigos/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/artigos</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/contato/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/experiencia/ansiedade/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/contato</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/experiencia/autoestima/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/experiencia/ansiedade</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/experiencia/burnout/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/experiencia/autoestima</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/experiencia/depressao/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/experiencia/burnout</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/experiencia/relacionamento/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/experiencia/depressao</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/experiencia/relacionamento</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/localizacao/psicologo-praia-do-canto/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/localizacao/psicologo-serra-es/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-praia-do-canto</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/localizacao/psicologo-vila-velha/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-serra-es</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-vila-velha</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://psicologobernardo.com.br/politica-privacidade/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/servicos/grupos-e-rodas/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/servicos/laudos-psicologicos/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/servicos/psicoterapia-individual/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/servicos/supervisao-profissional/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/servicos/terapia-de-casal/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/servicos/terapia-online/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/sobre/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/termos-uso/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/politica-privacidade</loc>
+    <loc>https://psicologobernardo.com.br/saude-mental/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/servicos/grupos-e-rodas</loc>
+    <loc>https://psicologobernardo.com.br/acp/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/servicos/laudos-psicologicos</loc>
+    <loc>https://psicologobernardo.com.br/homens/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/servicos/psicoterapia-individual</loc>
+    <loc>https://psicologobernardo.com.br/psicoterapia/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/servicos/supervisao-profissional</loc>
+    <loc>https://psicologobernardo.com.br/jardim-da-penha/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/servicos/terapia-de-casal</loc>
+    <loc>https://psicologobernardo.com.br/vitoria-es/</loc>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/servicos/terapia-online</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/jardim-da-penha/custo-vida-jardim-da-penha-ansiedade/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/sobre</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/jardim-da-penha/terapia-para-estudantes-ufes-vitoria/</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/termos-uso</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha/</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/saude-mental</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/vitoria-es/como-escolher-psicologo-em-vitoria-es/</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/acp</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/acp/autenticidade-qualidade-vida/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/homens</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/acp/terapia-centrada-pessoa-explicacao/</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/psicoterapia</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/estresse-desgaste-emocional/</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/jardim-da-penha</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/psicoterapia/terapia-online-funciona/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/vitoria-es</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/obrigacao-estar-bem/</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/jardim-da-penha/terapia-para-estudantes-ufes-vitoria</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/vida-acelerou-demais/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/nao-somos-maquinas/</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/vitoria-es/como-escolher-psicologo-em-vitoria-es</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/psicoterapia/trabalho-interno-vs-performance/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/acp/autenticidade-qualidade-vida</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/quando-automatico-vira-modo-de-vida/</loc>
+    <lastmod>2025-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/acp/terapia-centrada-pessoa-explicacao</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/ansiedade-sinais-desacelerar/</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/estresse-desgaste-emocional</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/corpo-e-emocoes/</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/psicoterapia/terapia-online-funciona</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/saude-mental/crises-existenciais/</loc>
+    <lastmod>2025-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/obrigacao-estar-bem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/acp/abordagem-centrada-pessoa/</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/vida-acelerou-demais</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://psicologobernardo.com.br/homens/terapia-para-homens/</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/nao-somos-maquinas</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/psicoterapia/trabalho-interno-vs-performance</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/quando-automatico-vira-modo-de-vida</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/ansiedade-sinais-desacelerar</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/corpo-e-emocoes</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/saude-mental/crises-existenciais</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/acp/abordagem-centrada-pessoa</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://psicologobernardo.com.br/homens/terapia-para-homens</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
 </urlset>

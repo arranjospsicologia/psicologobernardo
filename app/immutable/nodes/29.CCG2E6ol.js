@@ -1,4 +1,138 @@
-import{e as G}from"../chunks/CBbuBPfZ.js";import{g as _e,d as we,b as ke,A as Re}from"../chunks/Cu4Kokrg.js";import{c as fe,a as c,f as p}from"../chunks/BUzcI0aO.js";import{f as O,I as Ue,t as k,L as ye,g as e,u as h,a as r,c as s,r as o,n as le}from"../chunks/Boz4_rnh.js";import{s as f}from"../chunks/CXN3EcKo.js";import{l as qe,s as be,i as ve}from"../chunks/Cw_SZe-E.js";import{I as ze,s as Ae,e as W,B as ge,a as q,i as X}from"../chunks/B6kXTmCV.js";import{S as Z,h as Te}from"../chunks/CI6MHlsL.js";import"../chunks/CmEVmTvO.js";import{B as Qe}from"../chunks/Cjb_AQrU.js";import{S as Fe}from"../chunks/rw_l2SiH.js";import{C as Ie}from"../chunks/Do_Y9wWA.js";import{C as $e}from"../chunks/i-7rZUm5.js";import{M as De}from"../chunks/BvPfPtb6.js";import{F as Be}from"../chunks/jN55ooT7.js";import{P as he}from"../chunks/D4n1bcFc.js";function Je(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];ze(d,be({name:"linkedin"},()=>a,{get iconNode(){return t},children:(N,R)=>{var C=fe(),S=O(C);Ae(S,n,"default",{}),c(N,C)},$$slots:{default:!0}}))}function He(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];ze(d,be({name:"twitter"},()=>a,{get iconNode(){return t},children:(N,R)=>{var C=fe(),S=O(C);Ae(S,n,"default",{}),c(N,C)},$$slots:{default:!0}}))}const Le={"vinculos-liquidos-intimidade-digital":{slug:"vinculos-liquidos-intimidade-digital",tags:["Relacionamentos","Intimidade","Era Digital","Vitória ES","saude-mental"],htmlContent:`
+import{e as G}from"../chunks/CBbuBPfZ.js";import{g as we,d as _e,b as Re,A as ke}from"../chunks/2B44h_8r.js";import{c as fe,a as m,f as p}from"../chunks/BUzcI0aO.js";import{f as O,I as Ue,t as R,L as ye,g as e,u as h,a as r,c as s,r as o,n as le}from"../chunks/Boz4_rnh.js";import{s as f}from"../chunks/CXN3EcKo.js";import{l as qe,s as be,i as ve}from"../chunks/Cw_SZe-E.js";import{I as ze,s as Ae,e as W,B as ge,a as q,i as X}from"../chunks/B6kXTmCV.js";import{S as Z,h as Te}from"../chunks/CI6MHlsL.js";import"../chunks/CmEVmTvO.js";import{B as Qe}from"../chunks/Cjb_AQrU.js";import{S as Fe}from"../chunks/rw_l2SiH.js";import{C as Ie}from"../chunks/Do_Y9wWA.js";import{C as $e}from"../chunks/i-7rZUm5.js";import{M as De}from"../chunks/BvPfPtb6.js";import{F as Je}from"../chunks/jN55ooT7.js";import{P as he}from"../chunks/D4n1bcFc.js";function Be(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];ze(d,be({name:"linkedin"},()=>a,{get iconNode(){return t},children:(N,k)=>{var C=fe(),S=O(C);Ae(S,n,"default",{}),m(N,C)},$$slots:{default:!0}}))}function He(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];ze(d,be({name:"twitter"},()=>a,{get iconNode(){return t},children:(N,k)=>{var C=fe(),S=O(C);Ae(S,n,"default",{}),m(N,C)},$$slots:{default:!0}}))}const Le={"seis-condicoes-carl-rogers":{slug:"seis-condicoes-carl-rogers",tags:["Abordagem Centrada na Pessoa","Carl Rogers","Condições Terapêuticas","Vitória ES","acp"],htmlContent:`
+			<p class="lead">
+				Carl Rogers afirmou que "para que ocorra uma mudança construtiva na personalidade, é necessário que estas [seis] condições existam e se mantenham ao longo de um período de tempo". Mas o que exatamente são essas condições? E por que, décadas depois, elas continuam sendo o alicerce de toda terapia centrada na pessoa?
+			</p>
+
+			<p>
+				<strong>As Seis Condições Necessárias e Suficientes são os pressupostos fundamentais estabelecidos por Carl Rogers, em 1957, para que a mudança terapêutica verdadeira aconteça.</strong> Elas descrevem não técnicas ou procedimentos, mas qualidades da relação entre terapeuta e cliente. E essa é a revolução: não é o que o terapeuta <em>faz</em>, é quem ele <em>é</em> na relação.
+			</p>
+
+			<p>
+				Se você está buscando terapia em Vitória ou Jardim da Penha, entender essas condições pode ajudar a reconhecer o que faz uma relação terapêutica funcionar, e a escolher um profissional que realmente ofereça esse espaço de acolhimento.
+			</p>
+
+			<section>
+				<h2>Quais são as Seis Condições de Rogers?</h2>
+
+				<p>Em seu artigo de 1957, publicado no <em>Journal of Consulting Psychology</em>, Rogers listou as seis condições assim:</p>
+
+				<ol>
+					<li><strong>Contato psicológico</strong> entre terapeuta e cliente.</li>
+					<li><strong>O cliente está incongruente</strong> - vulnerável ou ansioso.</li>
+					<li><strong>O terapeuta é congruente</strong> (integrado) na relação.</li>
+					<li><strong>O terapeuta oferece consideração positiva incondicional</strong> ao cliente.</li>
+					<li><strong>O terapeuta experiencia uma compreensão empática</strong> do mundo interno do cliente e se esforça para comunicar isso.</li>
+					<li><strong>O cliente percebe</strong>, ao menos minimamente, a empatia e a aceitação do terapeuta.</li>
+				</ol>
+
+				<p>E Rogers foi enfático:</p>
+
+				<blockquote>
+					"Nenhuma outra condição é necessária. Se essas seis condições existem e se mantêm ao longo de um período de tempo, isso é suficiente. O processo de mudança construtiva na personalidade se seguirá."
+				</blockquote>
+			</section>
+
+			<section>
+				<h2>As Três Condições Centrais (ou "Core Conditions")</h2>
+
+				<p>
+					Curiosamente, o termo "condições centrais" nunca foi usado por Rogers. Ele foi cunhado por Robert Carkhuff nos anos 1960 e passou a representar três das seis condições: <strong>empatia</strong>, <strong>consideração positiva incondicional</strong> e <strong>congruência</strong>.
+				</p>
+
+				<p>Essas são as condições que dependem diretamente do terapeuta e são frequentemente chamadas de "condições facilitadoras":</p>
+
+				<h3>3. Congruência (Autenticidade)</h3>
+				<p>
+					O terapeuta é genuíno na relação. Não usa máscaras, não finge. O que ele sente internamente está alinhado com o que expressa. Isso cria um ambiente de confiança: você sabe que está diante de uma pessoa real, não de um papel.
+				</p>
+
+				<h3>4. Consideração Positiva Incondicional (Aceitação)</h3>
+				<p>
+					O terapeuta acolhe você sem julgamento, não importa o que você pense, sinta ou tenha feito. Isso não significa concordar com tudo, e sim aceitar profundamente <em>quem você é</em>. É nesse solo seguro que as defesas podem baixar e a mudança começa a acontecer.
+				</p>
+
+				<h3>5. Compreensão Empática</h3>
+				<p>
+					O terapeuta se esforça genuinamente para ver o mundo através dos seus olhos. Não é apenas "entender" - é <em>sentir com você</em>, sem nunca perder de vista que a experiência é sua. Quando nos sentimos verdadeiramente compreendidos, a solidão diminui.
+				</p>
+
+				<p>
+					Juntas, essas condições constroem o que a literatura chama de "rapport profundo" - a base para que o trabalho terapêutico realmente aconteça. É onde a mudança verdadeira se torna possível.
+				</p>
+			</section>
+
+			<section class="box">
+				<h3>As Condições "Ocultas" (ou "Hidden Conditions")</h3>
+
+				<p>As outras três condições - a primeira, a segunda e a sexta - são menos conhecidas, mas igualmente essenciais. Sem elas, as condições centrais não têm onde pousar.</p>
+
+				<h4>Condição 1: Contato Psicológico</h4>
+				<p>
+					Terapeuta e cliente precisam estar "na mesma página" psicologicamente. Isso parece óbvio, mas nem sempre é possível. Barreiras a esse contato podem incluir crises psíquicas intensas (como psicose ativa), uso de substâncias durante a sessão, ou incapacidade de dar consentimento informado.
+				</p>
+
+				<h4>Condição 2: O Cliente Está Incongruente</h4>
+				<p>
+					O cliente precisa estar em algum grau de vulnerabilidade ou desconforto. Se a pessoa não busca terapia, mas sim amizade, aconselhamento técnico (sobre dívidas, por exemplo) ou se está em um estágio inicial de resistência à mudança, esta condição não se cumpre.
+				</p>
+
+				<h4>Condição 6: O Cliente Percebe a Aceitação</h4>
+				<p>
+					Não basta o terapeuta ser empático e aceitar o cliente; o cliente precisa <em>sentir</em> isso. Se há desconfiança persistente, ou se a dupla simplesmente "não combina", essa condição não será atendida.
+				</p>
+
+				<p>
+					Esta é, possivelmente, a condição mais difícil de cumprir. Ela exige paciência do terapeuta para que a confiança se construa, e abertura para explorar, junto com o cliente, qualquer resistência em se envolver plenamente na relação.
+				</p>
+			</section>
+
+			<section>
+				<h2>Se uma condição faltar, o que acontece?</h2>
+
+				<p>
+					Rogers e autores que o seguiram, como Tony Merry, enfatizam que as seis condições funcionam como uma <em>gestalt</em> - um todo integrado. Se qualquer uma delas não puder ser atendida, talvez seja o caso de encaminhar para outro profissional ou serviço.
+				</p>
+
+				<p>
+					Isso não é falha sua nem do terapeuta. É reconhecer que a terapia depende de encontro, e nem todo encontro acontece.
+				</p>
+			</section>
+
+			<section>
+				<h2>O que isso significa para quem busca terapia em Vitória?</h2>
+
+				<p>Se você está considerando iniciar um processo terapêutico aqui em Vitória ou na região de Jardim da Penha, essas condições podem servir como um guia. Pergunte-se:</p>
+
+				<ul>
+					<li>O terapeuta parece genuíno ou está "atuando"?</li>
+					<li>Você se sente acolhido sem julgamento?</li>
+					<li>Você se sente compreendido?</li>
+					<li>Existe espaço para você ser você?</li>
+				</ul>
+
+				<p>
+					Essas não são perguntas técnicas. São percepções do corpo, da intuição. Se algo não encaixa, é legítimo buscar outro profissional. A relação terapêutica é, em si, o instrumento da cura.
+				</p>
+			</section>
+
+			<section class="cta">
+				<h2>Um convite à autenticidade</h2>
+
+				<p>
+					Se você se identificou com esse texto e busca um espaço de escuta onde possa ser você mesmo, sem máscaras e sem julgamento, a terapia pode ser esse lugar.
+				</p>
+
+				<p>
+					No meu consultório em Jardim da Penha, em Vitória (ES), ofereço exatamente essas condições que Rogers descreveu: empatia, aceitação e autenticidade. Para que você possa, finalmente, ser quem você é.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"As seis condições substituem técnicas terapêuticas?",answer:"Na visão de Rogers, sim. Ele acreditava que nenhuma técnica específica era necessária se essas condições estivessem presentes. A relação, por si só, é terapêutica. Outras abordagens usam técnicas adicionais, mas na ACP, o foco está na qualidade do encontro humano."},{question:"Preciso conhecer essas condições para fazer terapia?",answer:"Não. A maioria das pessoas não conhece esses termos e mesmo assim se beneficia da terapia. Mas entender o que faz uma relação terapêutica funcionar pode ajudar você a reconhecer quando está em um espaço seguro, e quando não está."},{question:"A terapia online oferece essas mesmas condições?",answer:"Sim. As seis condições não dependem de um espaço físico, mas da qualidade da relação. A terapia online pode ser tão eficaz quanto a presencial, desde que terapeuta e cliente consigam estabelecer contato psicológico genuíno."},{question:"Quanto tempo leva para essas condições 'funcionarem'?",answer:"Não há prazo. Rogers falava em 'um período de tempo' sem especificar. Algumas pessoas sentem os efeitos rapidamente; para outras, leva meses. O importante é que as condições se mantenham consistentes ao longo do processo."},{question:"E se eu não me sentir acolhido pelo terapeuta?",answer:"É totalmente legítimo mudar de profissional. A sexta condição - de que você perceba a empatia e aceitação - é fundamental. Se isso não acontece, a mudança terapêutica fica comprometida. Um bom terapeuta entenderá essa decisão."}]},"vinculos-liquidos-intimidade-digital":{slug:"vinculos-liquidos-intimidade-digital",tags:["Relacionamentos","Intimidade","Era Digital","Vitória ES","saude-mental"],htmlContent:`
 			<p class="lead">
 				Você já percebeu que está mais conectado do que nunca, mas ainda assim se sente sozinho? Talvez tenha centenas de contatos no celular, mas ninguém para ligar em um momento de angústia. Ou então, no meio de uma conversa, percebe que ambos estão olhando para as próprias telas.
 			</p>
@@ -2273,6 +2407,6 @@ import{e as G}from"../chunks/CBbuBPfZ.js";import{g as _e,d as we,b as ke,A as Re
 			<p>Coordeno também a <strong>Roda de Conversa Entre Homens</strong>, um grupo terapêutico onde homens compartilham suas vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência potente de conexão e crescimento.</p>
 
 			<p>Se quiser saber mais sobre como a terapia pode te ajudar — seja individual ou em grupo — entre em contato. O primeiro passo pode ser mais simples do que você imagina. E você não precisa dar esse passo sozinho.</p>
-		`}},Ge=({params:d})=>{const n=_e(d.categoria);if(!n)throw G(404,"Categoria não encontrada");const a=we(d.slug),t=Le[d.slug];if(!a||!t)throw G(404,"Artigo não encontrado");if(a.categorySlug!==d.categoria)throw G(404,"Artigo não encontrado nesta categoria");return{categoria:d.categoria,category:n,slug:d.slug,post:a,content:t}},Aa=Object.freeze(Object.defineProperty({__proto__:null,load:Ge},Symbol.toStringTag,{value:"Module"}));var We=p('<div class="faq-item"><h3> </h3> <p> </p></div>'),Xe=p('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),Ze=p('<span class="tag svelte-lxkfym"> </span>'),Ke=p("<!> Conversar",1),Ye=p(`<div class="post-content"><!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo com mais de 8 anos de experiência em psicoterapia com
+		`}},Ge=({params:d})=>{const n=we(d.categoria);if(!n)throw G(404,"Categoria não encontrada");const a=_e(d.slug),t=Le[d.slug];if(!a||!t)throw G(404,"Artigo não encontrado");if(a.categorySlug!==d.categoria)throw G(404,"Artigo não encontrado nesta categoria");return{categoria:d.categoria,category:n,slug:d.slug,post:a,content:t}},Aa=Object.freeze(Object.defineProperty({__proto__:null,load:Ge},Symbol.toStringTag,{value:"Module"}));var We=p('<div class="faq-item"><h3> </h3> <p> </p></div>'),Xe=p('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),Ze=p('<span class="tag svelte-lxkfym"> </span>'),Ke=p("<!> Conversar",1),Ye=p(`<div class="post-content"><!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo com mais de 8 anos de experiência em psicoterapia com
                 a Abordagem Centrada na Pessoa. Atendo em Vitória/ES, oferecendo
-                um espaço acolhedor para você cuidar da sua saúde mental.</p> <!></div></div>`,1),ea=p('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),aa=p('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),oa=p("<!> Falar no WhatsApp",1),sa=p('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),ra=p('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Ca(d,n){Ue(n,!0);const a=h(()=>n.data.post),t=h(()=>n.data.content),N=h(()=>n.data.category),R=h(()=>ke.filter(i=>i.slug!==n.data.slug&&i.categorySlug===e(a).categorySlug).slice(0,3)),C=h(()=>({"@context":"https://schema.org","@graph":[{"@type":"BlogPosting",headline:e(a).title,description:e(a).description,image:`https://psicologobernardo.com.br${e(a).image}`,author:{"@type":"Person",name:"Bernardo Carielo"},publisher:{"@type":"Organization",name:"Psicólogo Bernardo"},mainEntityOfPage:{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}},...e(t).faq?[{"@type":"FAQPage",mainEntity:e(t).faq.map(i=>({"@type":"Question",name:i.question,acceptedAnswer:{"@type":"Answer",text:i.answer}}))}]:[]]}));var S=ra(),K=O(S);{let i=h(()=>`${e(a).title} - Psicólogo Bernardo`),V=h(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),l=h(()=>`https://psicologobernardo.com.br${e(a).image}`);Fe(K,{get title(){return e(i)},get description(){return e(a).description},get canonical(){return e(V)},type:"article",get image(){return e(l)},get jsonLd(){return e(C)}})}var Y=r(K,2);{let i=h(()=>[{name:"Início",href:"/"},{name:e(N).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);Qe(Y,{get items(){return e(i)}})}var T=r(Y,2),ee=s(T),Q=s(ee),F=s(Q),Ce=s(F,!0);o(F);var I=r(F,2),Pe=s(I,!0);o(I);var ae=r(I,2),$=s(ae),oe=s($);Ie(oe,{size:16});var xe=r(oe);o($);var se=r($,2),re=s(se);$e(re,{size:16});var Ee=r(re);o(se),o(ae),o(Q);var ie=r(Q,2),ne=s(ie);o(ie),o(ee),o(T);var te=r(T,2);Z(te,{variant:"white",children:(i,V)=>{var l=Ye(),v=O(l),P=s(v);Te(P,()=>e(t).htmlContent);var U=r(P,2);{var m=g=>{var z=Xe(),A=r(s(z),2);W(A,17,()=>e(t).faq,X,(w,ue)=>{var H=We(),L=s(H),Ve=s(L,!0);o(L);var pe=r(L,2),Me=s(pe,!0);o(pe),o(H),k(()=>{f(Ve,e(ue).question),f(Me,e(ue).answer)}),c(w,H)}),o(z),c(g,z)};ve(U,g=>{e(t).faq&&e(t).faq.length>0&&g(m)})}o(v);var u=r(v,2),x=s(u),M=r(s(x),2);W(M,17,()=>e(t).tags,X,(g,z)=>{var A=Ze(),w=s(A,!0);o(A),k(()=>f(w,e(z))),c(g,A)}),o(x);var _=r(x,2),j=r(s(_),2),y=s(j);De(y,{size:18}),o(j);var b=r(j,2),D=s(b);Be(D,{size:18}),o(b);var E=r(b,2),B=s(E);He(B,{size:18}),o(E);var J=r(E,2),Oe=s(J);Je(Oe,{size:18}),o(J),o(_),o(u);var me=r(u,2),ce=r(s(me),2),Ne=r(s(ce),4);ge(Ne,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",children:(g,z)=>{var A=Ke(),w=O(A);he(w,{size:20}),le(),c(g,A)},$$slots:{default:!0}}),o(ce),o(me),k((g,z)=>{q(j,"href",`https://api.whatsapp.com/send?text=${g??""}`),q(b,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),q(E,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${z??""}`),q(J,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),c(i,l)},$$slots:{default:!0}});var de=r(te,2);{var Se=i=>{Z(i,{variant:"beige",children:(V,l)=>{var v=aa(),P=r(s(v),2);W(P,21,()=>e(R),X,(U,m)=>{var u=ea(),x=s(u),M=s(x),_=r(M,2),j=s(_,!0);o(_),o(x);var y=r(x,2),b=s(y),D=s(b,!0);o(b);var E=r(b,2),B=r(s(E));Re(B,{size:16}),o(E),o(y),o(u),k(()=>{q(u,"href",`/${e(m).categorySlug??""}/${e(m).slug??""}`),q(M,"src",e(m).image),q(M,"alt",e(m).altText||e(m).title),f(j,e(m).category),f(D,e(m).title)}),c(U,u)}),o(P),o(v),c(V,v)},$$slots:{default:!0}})};ve(de,i=>{e(R).length>0&&i(Se)})}var je=r(de,2);Z(je,{variant:"gradient",children:(i,V)=>{var l=sa(),v=r(s(l),4);ge(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(P,U)=>{var m=oa(),u=O(m);he(u,{size:20}),le(),c(P,m)},$$slots:{default:!0}}),o(l),c(i,l)},$$slots:{default:!0}}),k(()=>{f(Ce,e(a).category),f(Pe,e(a).title),f(xe,` ${e(a).date??""}`),f(Ee,` ${e(a).readTime??""}`),q(ne,"src",e(a).image),q(ne,"alt",e(a).altText||e(a).title)}),c(d,S),ye()}export{Ca as component,Aa as universal};
+                um espaço acolhedor para você cuidar da sua saúde mental.</p> <!></div></div>`,1),ea=p('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),aa=p('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),oa=p("<!> Falar no WhatsApp",1),sa=p('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),ra=p('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Ca(d,n){Ue(n,!0);const a=h(()=>n.data.post),t=h(()=>n.data.content),N=h(()=>n.data.category),k=h(()=>Re.filter(i=>i.slug!==n.data.slug&&i.categorySlug===e(a).categorySlug).slice(0,3)),C=h(()=>({"@context":"https://schema.org","@graph":[{"@type":"BlogPosting",headline:e(a).title,description:e(a).description,image:`https://psicologobernardo.com.br${e(a).image}`,author:{"@type":"Person",name:"Bernardo Carielo"},publisher:{"@type":"Organization",name:"Psicólogo Bernardo"},mainEntityOfPage:{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}},...e(t).faq?[{"@type":"FAQPage",mainEntity:e(t).faq.map(i=>({"@type":"Question",name:i.question,acceptedAnswer:{"@type":"Answer",text:i.answer}}))}]:[]]}));var S=ra(),K=O(S);{let i=h(()=>`${e(a).title} - Psicólogo Bernardo`),V=h(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),l=h(()=>`https://psicologobernardo.com.br${e(a).image}`);Fe(K,{get title(){return e(i)},get description(){return e(a).description},get canonical(){return e(V)},type:"article",get image(){return e(l)},get jsonLd(){return e(C)}})}var Y=r(K,2);{let i=h(()=>[{name:"Início",href:"/"},{name:e(N).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);Qe(Y,{get items(){return e(i)}})}var T=r(Y,2),ee=s(T),Q=s(ee),F=s(Q),Ce=s(F,!0);o(F);var I=r(F,2),Pe=s(I,!0);o(I);var ae=r(I,2),$=s(ae),oe=s($);Ie(oe,{size:16});var xe=r(oe);o($);var se=r($,2),re=s(se);$e(re,{size:16});var Ee=r(re);o(se),o(ae),o(Q);var ie=r(Q,2),ne=s(ie);o(ie),o(ee),o(T);var te=r(T,2);Z(te,{variant:"white",children:(i,V)=>{var l=Ye(),v=O(l),P=s(v);Te(P,()=>e(t).htmlContent);var U=r(P,2);{var c=g=>{var z=Xe(),A=r(s(z),2);W(A,17,()=>e(t).faq,X,(_,ue)=>{var H=We(),L=s(H),Ve=s(L,!0);o(L);var pe=r(L,2),Me=s(pe,!0);o(pe),o(H),R(()=>{f(Ve,e(ue).question),f(Me,e(ue).answer)}),m(_,H)}),o(z),m(g,z)};ve(U,g=>{e(t).faq&&e(t).faq.length>0&&g(c)})}o(v);var u=r(v,2),x=s(u),M=r(s(x),2);W(M,17,()=>e(t).tags,X,(g,z)=>{var A=Ze(),_=s(A,!0);o(A),R(()=>f(_,e(z))),m(g,A)}),o(x);var w=r(x,2),j=r(s(w),2),y=s(j);De(y,{size:18}),o(j);var b=r(j,2),D=s(b);Je(D,{size:18}),o(b);var E=r(b,2),J=s(E);He(J,{size:18}),o(E);var B=r(E,2),Oe=s(B);Be(Oe,{size:18}),o(B),o(w),o(u);var ce=r(u,2),me=r(s(ce),2),Ne=r(s(me),4);ge(Ne,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",children:(g,z)=>{var A=Ke(),_=O(A);he(_,{size:20}),le(),m(g,A)},$$slots:{default:!0}}),o(me),o(ce),R((g,z)=>{q(j,"href",`https://api.whatsapp.com/send?text=${g??""}`),q(b,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),q(E,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${z??""}`),q(B,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(i,l)},$$slots:{default:!0}});var de=r(te,2);{var Se=i=>{Z(i,{variant:"beige",children:(V,l)=>{var v=aa(),P=r(s(v),2);W(P,21,()=>e(k),X,(U,c)=>{var u=ea(),x=s(u),M=s(x),w=r(M,2),j=s(w,!0);o(w),o(x);var y=r(x,2),b=s(y),D=s(b,!0);o(b);var E=r(b,2),J=r(s(E));ke(J,{size:16}),o(E),o(y),o(u),R(()=>{q(u,"href",`/${e(c).categorySlug??""}/${e(c).slug??""}`),q(M,"src",e(c).image),q(M,"alt",e(c).altText||e(c).title),f(j,e(c).category),f(D,e(c).title)}),m(U,u)}),o(P),o(v),m(V,v)},$$slots:{default:!0}})};ve(de,i=>{e(k).length>0&&i(Se)})}var je=r(de,2);Z(je,{variant:"gradient",children:(i,V)=>{var l=sa(),v=r(s(l),4);ge(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(P,U)=>{var c=oa(),u=O(c);he(u,{size:20}),le(),m(P,c)},$$slots:{default:!0}}),o(l),m(i,l)},$$slots:{default:!0}}),R(()=>{f(Ce,e(a).category),f(Pe,e(a).title),f(xe,` ${e(a).date??""}`),f(Ee,` ${e(a).readTime??""}`),q(ne,"src",e(a).image),q(ne,"alt",e(a).altText||e(a).title)}),m(d,S),ye()}export{Ca as component,Aa as universal};

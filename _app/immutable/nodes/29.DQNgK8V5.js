@@ -1,4 +1,413 @@
-import{e as L}from"../chunks/CBbuBPfZ.js";import{g as Ne,d as Ve,b as Me,A as ke}from"../chunks/PqCXV7MM.js";import{c as he,a as m,f as u}from"../chunks/BUzcI0aO.js";import{f as O,I as we,t as w,L as ye,g as e,u as h,a as r,c as s,r as o,n as ue}from"../chunks/Boz4_rnh.js";import{s as f}from"../chunks/CXN3EcKo.js";import{l as fe,s as qe,i as le}from"../chunks/Cw_SZe-E.js";import{I as be,s as ze,e as G,B as ve,a as z,i as W}from"../chunks/B6kXTmCV.js";import{S as X,h as Re}from"../chunks/CI6MHlsL.js";import"../chunks/CmEVmTvO.js";import{B as Te}from"../chunks/Cjb_AQrU.js";import{S as Ue}from"../chunks/rw_l2SiH.js";import{C as $e}from"../chunks/Do_Y9wWA.js";import{C as Qe}from"../chunks/i-7rZUm5.js";import{F as Fe}from"../chunks/jN55ooT7.js";import{P as ge}from"../chunks/D4n1bcFc.js";function De(d,n){const a=fe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];be(d,qe({name:"linkedin"},()=>a,{get iconNode(){return t},children:(_,y)=>{var A=he(),x=O(A);ze(x,n,"default",{}),m(_,A)},$$slots:{default:!0}}))}function Be(d,n){const a=fe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];be(d,qe({name:"twitter"},()=>a,{get iconNode(){return t},children:(_,y)=>{var A=he(),x=O(A);ze(x,n,"default",{}),m(_,A)},$$slots:{default:!0}}))}const Ie={"custo-vida-jardim-da-penha-ansiedade":{slug:"custo-vida-jardim-da-penha-ansiedade",tags:["Jardim da Penha","Ansiedade Financeira","Custo de Vida","Vitória ES","saude-mental"],htmlContent:`
+import{e as G}from"../chunks/CBbuBPfZ.js";import{g as Me,d as we,b as ke,A as Ue}from"../chunks/jrQ2zHXz.js";import{c as fe,a as m,f as u}from"../chunks/BUzcI0aO.js";import{f as O,I as ye,t as k,L as Re,g as e,u as h,a as r,c as s,r as o,n as le}from"../chunks/Boz4_rnh.js";import{s as f}from"../chunks/CXN3EcKo.js";import{l as qe,s as be,i as ve}from"../chunks/Cw_SZe-E.js";import{I as ze,s as Ae,e as W,B as ge,a as q,i as X}from"../chunks/B6kXTmCV.js";import{S as K,h as Te}from"../chunks/CI6MHlsL.js";import"../chunks/CmEVmTvO.js";import{B as Fe}from"../chunks/Cjb_AQrU.js";import{S as Qe}from"../chunks/rw_l2SiH.js";import{C as $e}from"../chunks/Do_Y9wWA.js";import{C as De}from"../chunks/i-7rZUm5.js";import{M as Ie}from"../chunks/BvPfPtb6.js";import{F as Be}from"../chunks/jN55ooT7.js";import{P as he}from"../chunks/D4n1bcFc.js";function Je(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];ze(d,be({name:"linkedin"},()=>a,{get iconNode(){return t},children:(N,U)=>{var P=fe(),E=O(P);Ae(E,n,"default",{}),m(N,P)},$$slots:{default:!0}}))}function He(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];ze(d,be({name:"twitter"},()=>a,{get iconNode(){return t},children:(N,U)=>{var P=fe(),E=O(P);Ae(E,n,"default",{}),m(N,P)},$$slots:{default:!0}}))}const Le={"rede-apoio-saude-mental-vitoria-es":{slug:"rede-apoio-saude-mental-vitoria-es",tags:["Vitória ES","Rede de Apoio","Saúde Mental Gratuita","Comunidade","vitoria-es"],htmlContent:`
+			<p class="lead">
+				Cuidar da saúde mental não é algo que se faz sozinho. E também não acontece apenas dentro de um consultório. Existe uma rede invisível que sustenta a gente no dia a dia: lugares onde respiramos, pessoas com quem dividimos algo, comunidades que nos acolhem sem pedir nada em troca.
+			</p>
+
+			<p>
+				<strong>Se você mora em Vitória (ES), essa rede existe - e está mais perto do que parece.</strong> Este guia reúne os principais recursos de apoio à saúde mental na cidade: desde espaços públicos que ajudam a descomprimir até serviços gratuitos de atendimento psicológico.
+			</p>
+
+			<section>
+				<h2>Por que "rede de apoio" importa tanto?</h2>
+
+				<p>Quando falamos em saúde mental, é comum pensar apenas em terapia ou medicação. Mas a ciência já deixou claro: o contexto em que vivemos impacta diretamente nosso bem-estar. A Organização Mundial da Saúde (OMS) reconhece que promover saúde mental envolve não só o indivíduo, mas também a comunidade e o ambiente.</p>
+
+				<p>Isso significa que:</p>
+
+				<ul>
+					<li>Ter lugares para caminhar e desacelerar faz diferença.</li>
+					<li>Conviver com outras pessoas (mesmo que brevemente) ajuda a regular emoções.</li>
+					<li>Saber onde buscar ajuda profissional quando necessário reduz a sobrecarga.</li>
+				</ul>
+
+				<p>Uma rede de apoio não é só um grupo de amigos. É tudo aquilo que te sustenta quando a vida aperta.</p>
+			</section>
+
+			<section>
+				<h2>Espaços públicos que ajudam a cuidar da mente</h2>
+
+				<p>Antes de falar de serviços, vale lembrar: o corpo também precisa de espaço. E Vitória tem opções que muita gente desconhece ou subutiliza.</p>
+
+				<h3>Praças de bairro: convivência simples, efeito real</h3>
+
+				<p>Praças são mais do que áreas verdes. São pontos de encontro, circulação e descompressão. Em Jardim da Penha, por exemplo, temos a Praça do Carone, a Praça do BH, a Praça da Catedral (com quadra de bocha!) e várias outras com quadras esportivas abertas à comunidade.</p>
+
+				<p>A rotina de "dar uma volta na praça" parece banal, mas funciona: sair de casa, ver gente, pisar na grama - tudo isso tira a mente do loop de preocupação.</p>
+
+				<h3>Parques e natureza urbana</h3>
+
+				<p>Para quem busca mais "clima de natureza", o <a href="https://m.vitoria.es.gov.br/semmam/parque-pedra-da-cebola" target="_blank" rel="noopener noreferrer">Parque Pedra da Cebola</a> oferece trilhas curtas, áreas verdes amplas e bancos para sentar sem fazer nada.</p>
+
+				<p>Outra opção menos conhecida é o <strong><a href="https://m.vitoria.es.gov.br/semmam/parque-von-schilgen" target="_blank" rel="noopener noreferrer">Parque Municipal Von Schilgen</a></strong>, uma reserva natural conservada no coração da cidade. É um ambiente de muita paz, ideal para quem quer silêncio e contato com a mata. A <a href="https://www.vitoria.es.gov.br/cidade/parques" target="_blank" rel="noopener noreferrer">Prefeitura de Vitória</a> mantém uma lista completa de parques públicos.</p>
+
+				<h3>Orla de Camburi</h3>
+
+				<p>A Orla é um recurso valioso e gratuito. Caminhar com o vento no rosto, mesmo por 20 minutos, pode funcionar como um "reset" em dias de ansiedade. Não precisa correr nem bater meta. Só andar já ajuda.</p>
+
+				<h3>Campus da UFES</h3>
+
+				<p>O campus da <a href="https://www.ufes.br/" target="_blank" rel="noopener noreferrer">Universidade Federal do Espírito Santo</a> é aberto ao público e funciona como um grande espaço verde urbano. Dá para caminhar, sentar, observar.</p>
+			</section>
+
+			<section class="box">
+				<h3>Grupos e comunidades esportivas</h3>
+
+				<p>Outra forma de rede de apoio que muita gente esquece: grupos de atividade física. Não precisa ser atleta. Em várias praças de Jardim da Penha, existem jogos abertos de vôlei, futevôlei e basquete - basta chegar junto.</p>
+
+				<p>Existem também grupos de corrida e caminhada que se encontram na Orla de Camburi. Participar de uma comunidade assim, mesmo que você não conheça ninguém no início, cria vínculos que vão além do exercício.</p>
+
+				<p>O ponto aqui é: você não precisa resolver tudo sozinho. Fazer parte de algo maior, mesmo que seja um jogo de domingo, já muda o dia.</p>
+			</section>
+
+			<section>
+				<h2>Serviços gratuitos de saúde mental em Vitória</h2>
+
+				<p>Quando o que você sente precisa de mais do que uma caminhada - e isso é absolutamente legítimo - existem serviços públicos e comunitários de atendimento psicológico em Vitória. A lista completa está disponível na <a href="https://arranjospsicologia.com.br/utilidade-publica-vitoria-es" target="_blank" rel="noopener noreferrer">página de Utilidade Pública da Arranjos Psicologia</a>, mas aqui vai um resumo:</p>
+
+				<h3>Clínicas-Escola de Psicologia</h3>
+
+				<p>Universidades que oferecem atendimento gratuito ou social à comunidade:</p>
+
+				<ul>
+					<li><strong>NPA - UFES</strong> (Núcleo de Psicologia Aplicada): atendimento gratuito com estagiários supervisionados. Inscrições no fim de cada semestre.</li>
+					<li><strong>Clínica de Psicologia da UVV</strong> (Vila Velha): psicoterapia individual, de casal, psicodiagnóstico.</li>
+					<li><strong>Clínica de Psicologia da FAESA</strong>: atendimento à Grande Vitória.</li>
+					<li><strong>NPP - Multivix</strong> e <strong>CIASC - Unisales</strong>: atendimento via estágio supervisionado.</li>
+				</ul>
+
+				<h3>CAPS - Centros de Atenção Psicossocial</h3>
+
+				<p>Os CAPS são unidades especializadas do SUS para casos de sofrimento psíquico intenso. Funcionam com acolhimento imediato ("porta aberta"):</p>
+
+				<ul>
+					<li><strong>CAPSi</strong> (Bento Ferreira): crianças e adolescentes.</li>
+					<li><strong>CAPS II Ilha de Santa Maria</strong>: adultos com transtornos mentais.</li>
+					<li><strong>CAPS AD III</strong>: álcool e drogas, funciona 24h.</li>
+					<li><strong>CAPS III São Pedro</strong>: adultos, 24h.</li>
+				</ul>
+
+				<div class="note">
+					<p><strong>Atenção:</strong> O atendimento nos CAPS está sujeito à disponibilidade de vagas e triagem. É recomendável ligar antes para confirmar horários e procedimentos.</p>
+				</div>
+
+				<h3>CVV - Centro de Valorização da Vida</h3>
+
+				<p>Para momentos de crise ou quando você só precisa de alguém para ouvir: ligue <strong>188</strong> (gratuito, 24h). Também há chat disponível em <a href="https://cvv.org.br" target="_blank" rel="noopener noreferrer">cvv.org.br</a>.</p>
+			</section>
+
+			<section>
+				<h2>Quando a rede não basta</h2>
+
+				<p>Ter rede de apoio não significa que você não precisa de terapia. Às vezes, precisa. E a rede existe justamente para te ajudar a chegar nesse cuidado quando necessário.</p>
+
+				<p>Se você sente:</p>
+
+				<ul>
+					<li>Ansiedade que não passa, mesmo fazendo tudo "certo"</li>
+					<li>Sensação de isolamento, mesmo estando perto de gente</li>
+					<li>Dificuldade de manter rotina, trabalho ou relacionamentos</li>
+					<li>Esgotamento físico e emocional</li>
+				</ul>
+
+				<p>...pode ser hora de buscar um espaço de escuta profissional. A terapia não substitui a rede, mas ela pode te ajudar a construir, fortalecer ou reativar os vínculos que te sustentam.</p>
+			</section>
+
+			<section class="cta">
+				<h2>Precisando de um espaço de escuta?</h2>
+
+				<p>
+					Se você está em Vitória e busca acompanhamento psicológico, atendo presencialmente em Jardim da Penha e também online. A terapia pode ser um lugar para você se reconectar consigo e com o que te sustenta.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Existe psicólogo gratuito em Vitória?",answer:"Sim. Clínicas-escola de universidades (UFES, UVV, FAESA, Multivix, Unisales) oferecem atendimento gratuito ou com valor social. Os CAPS do SUS também atendem gratuitamente casos de sofrimento psíquico intenso."},{question:"O que é o CAPS e quem pode usar?",answer:"CAPS são Centros de Atenção Psicossocial do SUS, voltados para pessoas com transtornos mentais graves ou uso problemático de substâncias. Funcionam com acolhimento imediato (porta aberta) e não exigem encaminhamento."},{question:"Praças e parques ajudam na saúde mental?",answer:"Sim. Estudos mostram que contato com natureza, movimento físico e convivência social ajudam a regular emoções e reduzir estresse. Não substituem tratamento, mas funcionam como sustentação no dia a dia."},{question:"Como sei se preciso de terapia ou só de mais rede de apoio?",answer:"Se você consegue lidar com o que sente usando seus recursos (amigos, atividades, descanso), ótimo. Se o sofrimento persiste, interfere na rotina ou parece maior do que você consegue carregar, a terapia pode ajudar. Não existe resposta única: cada pessoa vive um momento."}]},"vicio-trabalho-workaholic-burnout":{slug:"vicio-trabalho-workaholic-burnout",tags:["Homens","Burnout","Workaholism","Vitória ES","homens"],htmlContent:`
+			<p class="lead">
+				Trabalhar muito nem sempre é sinal de sucesso. Para muitos homens, o trabalho deixou de ser um meio e virou uma necessidade emocional - uma forma de provar valor, fugir de si mesmo ou simplesmente não parar para sentir.
+			</p>
+
+			<p>
+				<strong>O vício em trabalho (workaholism) é a compulsão por trabalhar de forma excessiva, mesmo quando isso prejudica a saúde, os relacionamentos e a qualidade de vida.</strong> Diferente de quem trabalha muito por necessidade temporária, o workaholic não consegue desligar - e frequentemente não percebe que há algo errado.
+			</p>
+
+			<section>
+				<h2>Por que homens são especialmente vulneráveis?</h2>
+
+				<p>Não é exagero dizer que muitos homens foram ensinados a medir seu valor pela produtividade. Desde cedo, a mensagem é clara: "Homem bom é homem que trabalha". E essa equação, repetida por décadas, forma uma identidade:</p>
+
+				<ul>
+					<li>Se eu trabalho, eu valho.</li>
+					<li>Se eu paro, estou falhando.</li>
+					<li>Se eu descanso, estou sendo fraco.</li>
+				</ul>
+
+				<p>
+					O resultado é um ciclo perigoso: quanto mais você trabalha, mais validação recebe. Mas quanto mais validação externa você precisa, mais vazio fica por dentro. E mais você trabalha para preencher esse vazio.
+				</p>
+			</section>
+
+			<section class="box">
+				<h3>Sinais de que o trabalho virou prisão</h3>
+
+				<p>Nem todo mundo que trabalha muito é workaholic. A diferença está na relação com o trabalho, não na quantidade de horas. Alguns sinais que merecem atenção:</p>
+
+				<ul>
+					<li>Você sente culpa quando não está trabalhando, mesmo em férias ou fins de semana.</li>
+					<li>Sua identidade está quase totalmente ligada à sua profissão.</li>
+					<li>Você usa o trabalho para evitar outros assuntos: relacionamentos, emoções, conflitos internos.</li>
+					<li>Descansar gera ansiedade em vez de alívio.</li>
+					<li>Seu corpo dá sinais (insônia, tensão, exaustão), mas você ignora.</li>
+				</ul>
+
+				<p>Se vários desses pontos fazem sentido pra você, não é motivo para vergonha. É um convite para olhar com mais cuidado.</p>
+			</section>
+
+			<section>
+				<h2>O burnout como consequência</h2>
+
+				<p>
+					O burnout é o esgotamento que acontece quando o corpo e a mente não aguentam mais. Ele costuma chegar disfarçado: irritabilidade, distância emocional, sensação de vazio mesmo quando tudo "deu certo".
+				</p>
+
+				<p>Para muitos homens, o burnout é especialmente difícil porque:</p>
+
+				<ol>
+					<li>Admitir cansaço pode parecer "fraqueza".</li>
+					<li>Pedir ajuda foi historicamente desencorajado.</li>
+					<li>A identidade está tão ligada ao trabalho que parar significa "não saber mais quem eu sou".</li>
+				</ol>
+
+				<p>A verdade é que o burnout não é sinal de fraqueza. É o corpo dizendo que algo precisa mudar.</p>
+			</section>
+
+			<section>
+				<h2>O que está por trás do trabalho compulsivo?</h2>
+
+				<p>Na perspectiva da Abordagem Centrada na Pessoa (ACP), não olhamos para o comportamento isolado, mas para o que ele representa. O trabalho compulsivo costuma estar ligado a:</p>
+
+				<ul>
+					<li><strong>Fuga de emoções difíceis:</strong> tristeza, medo, solidão - sentimentos que o trabalho ajuda a "esquecer".</li>
+					<li><strong>Necessidade de validação:</strong> quando sentimos que não somos suficientes por dentro, buscamos provas de valor por fora.</li>
+					<li><strong>Dificuldade de intimidade:</strong> o trabalho pode ser mais "seguro" do que relações, que exigem vulnerabilidade.</li>
+				</ul>
+
+				<p>Entender o que está por trás é o primeiro passo para sair do piloto automático.</p>
+			</section>
+
+			<section>
+				<h2>Existe saída?</h2>
+
+				<p>Existe, mas não é simples nem rápida. Sair do vício em trabalho envolve:</p>
+
+				<ol>
+					<li><strong>Reconhecer o padrão:</strong> perceber que trabalhar demais não é virtude, é escape.</li>
+					<li><strong>Questionar a equação "trabalho = valor":</strong> você é mais do que o que você produz.</li>
+					<li><strong>Criar espaço para sentir:</strong> o que aparece quando você para? Tédio? Angústia? Vazio? Esses são pontos de entrada, não inimigos.</li>
+					<li><strong>Buscar apoio:</strong> terapia pode ser um espaço seguro para explorar o que está por trás da compulsão.</li>
+				</ol>
+			</section>
+
+			<section class="cta">
+				<h2>Um espaço para parar e olhar</h2>
+
+				<p>
+					Se você se reconheceu nesse texto, talvez seja hora de parar - não de trabalhar, mas de correr. A terapia pode ser um lugar para entender por que você não consegue desligar, o que está evitando e como construir uma relação mais saudável com o trabalho e consigo mesmo.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O vício em trabalho é uma doença?",answer:"Não é classificado oficialmente como transtorno, mas é reconhecido como um padrão comportamental que pode causar sofrimento significativo e problemas de saúde. A OMS reconhece o burnout como fenômeno ocupacional relacionado ao estresse crônico no trabalho."},{question:"Como saber se trabalho muito ou sou workaholic?",answer:"A diferença está na relação, não na quantidade. Se você consegue desligar, descansar sem culpa e tem outras fontes de satisfação além do trabalho, provavelmente está bem. Se parar gera ansiedade e sua identidade depende do trabalho, vale prestar atenção."},{question:"Terapia ajuda com vício em trabalho?",answer:"Sim. A terapia oferece um espaço para entender o que está por trás do comportamento compulsivo, trabalhar questões de autoestima e construir formas mais saudáveis de se relacionar consigo mesmo e com o trabalho."},{question:"Burnout tem cura?",answer:"Burnout não é uma 'doença' que se cura com remédio, mas uma resposta do organismo ao estresse crônico. A recuperação envolve mudanças no estilo de vida, revisão de prioridades e, muitas vezes, acompanhamento profissional (psicológico e/ou médico)."}]},"como-funciona-terapia-primeira-sessao":{slug:"como-funciona-terapia-primeira-sessao",tags:["Psicoterapia","Primeira Sessão","ACP","Vitória ES","psicoterapia"],htmlContent:`
+			<p class="lead">
+				Se você nunca fez terapia e está pensando em começar, é natural ter dúvidas. "O que vou falar?", "O psicólogo vai me julgar?", "Preciso ter um problema grave pra ir?". Essas perguntas são muito comuns, e na maioria das vezes ficam sem resposta até a pessoa finalmente entrar na sala.
+			</p>
+
+			<p>
+				<strong>A terapia funciona como um espaço de escuta, onde você é o centro.</strong> Não existe roteiro, não existe "jeito certo" de fazer. O objetivo é que você possa explorar o que sente e pensa em um ambiente seguro, sem pressa e sem julgamento, para que você possa encontrar seus próprios caminhos.
+			</p>
+
+			<section>
+				<h2>Mas afinal, o que acontece na terapia?</h2>
+
+				<p>A terapia se parece muito com uma conversa. Mas com algumas diferenças importantes:</p>
+
+				<ul>
+					<li><strong>É sobre você.</strong> Não é uma troca de ideias genérica. O foco está na sua experiência, na sua maneira de ver as coisas.</li>
+					<li><strong>Você não será julgado.</strong> O consultório é um espaço onde você pode falar sobre qualquer coisa, inclusive coisas que você nunca disse a ninguém, sem medo de crítica ou desaprovação.</li>
+					<li><strong>Não existe um jeito certo de lidar.</strong> Pode ter sessões mais leves, outras mais difíceis. Às vezes você chega sabendo o que quer falar, outras vezes não. Tudo isso faz parte.</li>
+				</ul>
+
+				<p>
+					Na Abordagem Centrada na Pessoa (ACP), que é a linha com a qual eu trabalho, não existe uma "direção exata" para a terapia. Não vou te dizer o que você deve fazer ou como resolver seus problemas. A proposta é diferente: eu te acompanho enquanto você descobre seus próprios caminhos.
+				</p>
+			</section>
+
+			<section>
+				<h2>Por que não funcionar como um médico?</h2>
+
+				<p>
+					É comum chegar à terapia esperando algo parecido com uma consulta médica: você descreve os sintomas, recebe um diagnóstico e sai com uma receita de "como resolver".
+				</p>
+
+				<p>
+					O problema dessa abordagem é que ela tira de você a <strong>autonomia</strong>. E, muitas vezes, o que causa sofrimento não é um "defeito a ser consertado", mas uma desconexão entre o que você sente e o que você está vivendo.
+				</p>
+
+				<p>
+					A terapia, na perspectiva da ACP, parte de uma premissa diferente: <strong>você tem dentro de si a capacidade de encontrar respostas</strong>. O papel do terapeuta é criar as condições para que isso aconteça, e não impor soluções de fora.
+				</p>
+			</section>
+
+			<section class="box">
+				<h3>Como são as sessões na prática?</h3>
+
+				<p>Aqui vão algumas informações práticas, que costumam ajudar a diminuir a ansiedade de quem está começando:</p>
+
+				<ul>
+					<li><strong>Frequência:</strong> A maioria das pessoas faz sessões semanais. Com o tempo, algumas preferem migrar para quinzenal. A frequência é algo que a gente define juntos, de acordo com o que fizer sentido pra você.</li>
+					<li><strong>Duração:</strong> Cada sessão dura cerca de 60 minutos, às vezes um pouco mais, às vezes um pouco menos. Não somos relógios.</li>
+					<li><strong>Local:</strong> Atendo presencialmente em Jardim da Penha, Vitória (ES), e também online para quem preferir ou não puder se deslocar.</li>
+					<li><strong>Valores:</strong> Os valores variam de acordo com a modalidade e frequência. Prefiro sempre conversar antes para entender a realidade de cada pessoa e adaptar de acordo.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>"Preciso ter um problema grave pra fazer terapia?"</h2>
+
+				<p>
+					Não. Muita gente procura terapia em momentos de crise, é verdade. Mas muita gente também procura porque quer se conhecer melhor, porque sente que algo "não está encaixando", ou simplesmente porque quer um espaço só para si.
+				</p>
+
+				<p>
+					Não existe um pré-requisito de sofrimento. A terapia é um investimento em você, em qualquer momento da vida.
+				</p>
+			</section>
+
+			<section>
+				<h2>O que esperar da primeira sessão?</h2>
+
+				<p>
+					A primeira sessão costuma ser um momento de acolhimento. Você pode contar o que te trouxe ali, tirar dúvidas sobre o processo, e perceber se existe uma conexão com o terapeuta.
+				</p>
+
+				<p>
+					Não precisa chegar com tudo preparado. Não precisa "saber falar sobre si". A gente começa de onde você está.
+				</p>
+			</section>
+
+			<section class="cta">
+				<h2>Quer dar o primeiro passo?</h2>
+
+				<p>
+					Se você está considerando começar terapia e tem dúvidas, pode entrar em contato sem compromisso. A gente conversa, você tira suas dúvidas, e decide se faz sentido pra você.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"A terapia funciona para qualquer pessoa?",answer:"A terapia pode ajudar pessoas em diferentes momentos e contextos. Não existe um perfil específico. O mais importante é que você sinta vontade de explorar o que está vivendo e encontre um profissional com quem se sinta à vontade."},{question:"Quanto tempo dura um processo terapêutico?",answer:"Não existe uma resposta única. Algumas pessoas fazem terapia por meses, outras por anos. A duração depende dos seus objetivos, do que surge no processo e de como você se sente ao longo do caminho."},{question:"Como saber se o psicólogo é o certo pra mim?",answer:"A relação terapêutica é fundamental. Se você não se sentir acolhido ou à vontade, é legítimo buscar outro profissional. Na primeira sessão, preste atenção em como você se sente: se existe espaço para ser você, sem máscaras."},{question:"Terapia online funciona?",answer:"Sim. A terapia online segue os mesmos princípios da presencial. A diferença é o meio. Para muitas pessoas, a flexibilidade do online facilita a continuidade do processo."}]},"ciumes-excessivo-cuidado-controle":{slug:"ciumes-excessivo-cuidado-controle",tags:["Relacionamentos","Ciúmes","Abuso Emocional","Vitória ES","saude-mental"],htmlContent:`
+			<p class="lead">
+				Sentir ciúmes de vez em quando é humano. Faz parte de querer proteger algo que valorizamos. Mas existe um ponto em que esse sentimento deixa de ser uma expressão de cuidado e se transforma em <strong>vigilância, cobranças e medo</strong>. Quando isso acontece, a relação (que deveria ser um espaço de segurança e crescimento) vira um campo minado.
+			</p>
+
+			<p>
+				<strong>O ciúmes excessivo é caracterizado pela necessidade constante de saber onde o outro está, com quem fala e o que sente, e não por curiosidade genuína, mas por medo de perder o controle.</strong> É um sentimento alimentado mais pela própria insegurança do que por qualquer atitude do parceiro.
+			</p>
+
+			<section>
+				<h2>A raiz do ciúmes: não é sobre o outro, é sobre você</h2>
+
+				<p>
+					É difícil ouvir isso, especialmente se você está vivendo essa angústia. Mas, na maioria das vezes, o ciúmes excessivo não nasce de fatos, e sim de uma dor interna: a sensação de não ser suficiente.
+				</p>
+
+				<p>
+					Quando não nos sentimos seguros em nós mesmos, passamos a buscar no outro a confirmação de que somos amados. E qualquer sinal que pareça ameaçar isso (uma conversa, um sorriso, um atraso) dispara um alarme interno desproporcional.
+				</p>
+
+				<p>
+					A Abordagem Centrada na Pessoa (ACP), desenvolvida por Carl Rogers, nos ajuda a entender esse movimento. Rogers falava sobre a <strong>necessidade de aceitação positiva</strong>, isto é, o quanto precisamos nos sentir aceitos para florescer. Quando essa aceitação não foi bem construída (seja na infância, em relacionamentos passados ou em outros contextos), tendemos a buscar no parceiro uma validação que, na verdade, só pode vir de dentro.
+				</p>
+			</section>
+
+			<section class="box">
+				<h3>Quando o ciúmes se torna controle: sinais de alerta</h3>
+
+				<p>Nem sempre é fácil perceber que cruzamos a linha. Algumas perguntas podem ajudar a refletir:</p>
+
+				<ul>
+					<li>Você sente necessidade de verificar o celular do outro?</li>
+					<li>Fica desconfortável quando seu parceiro tem amizades ou interesses próprios?</li>
+					<li>Faz perguntas repetidas sobre onde ele(a) estava, mesmo confiando na resposta?</li>
+					<li>Sente raiva ou tristeza intensa quando o outro não responde imediatamente?</li>
+				</ul>
+
+				<p>
+					Se você se identificou com várias dessas, não é motivo para vergonha. É um convite para olhar para dentro.
+				</p>
+
+				<p>
+					<strong>Se você está do outro lado</strong>, recebendo esse ciúmes, também vale a reflexão: você tem se sentido vigiado(a)? Tem deixado de fazer coisas que gosta para evitar conflitos? Isso pode ser um sinal de que a relação precisa de atenção.
+				</p>
+			</section>
+
+			<section>
+				<h2>Ciúmes e posse: você ama ou precisa?</h2>
+
+				<p>
+					Uma distinção importante que a psicologia humanista nos convida a fazer é entre <strong>amar</strong> e <strong>precisar</strong>. Amar é desejar o bem do outro, mesmo que ele faça escolhas diferentes das suas. Precisar é sentir que você não sobrevive sem ele, e por isso tenta controlá-lo para que nunca vá embora.
+				</p>
+
+				<p>
+					O ciúmes excessivo frequentemente habita esse lugar da "posse". Não é maldade. É medo. Mas, ainda assim, sufoca.
+				</p>
+
+				<p>
+					E aqui cabe uma observação delicada: quando o ciúmes vem acompanhado de <strong>humilhação, isolamento social, ameaças ou agressões</strong>, estamos falando de um relacionamento abusivo. Isso não é apenas "jeito de ser" ou "amor intenso". É violência, e merece ser nomeado assim.
+				</p>
+			</section>
+
+			<section>
+				<h2>Como lidar com o ciúmes excessivo?</h2>
+
+				<p>Se você reconhece esse padrão em si:</p>
+
+				<ol>
+					<li><strong>Acolha o sentimento, mas não obedeça a ele.</strong> Sentir ciúmes não significa que você precisa agir. Respire antes de reagir.</li>
+					<li><strong>Investigue a origem.</strong> Pergunte-se: "O que esse ciúmes está tentando me dizer sobre mim mesmo(a)?". Muitas vezes, ele fala de feridas antigas.</li>
+					<li><strong>Construa segurança interna.</strong> Isso é um processo, e a terapia pode ser um espaço seguro para trilhá-lo.</li>
+					<li><strong>Converse com honestidade.</strong> Se possível, fale com seu parceiro sobre o que você sente, sem acusações. Vulnerabilidade conecta; cobranças afastam.</li>
+				</ol>
+			</section>
+
+			<section class="cta">
+				<h2>Um espaço para olhar para isso</h2>
+
+				<p>
+					Falar sobre ciúmes não é fácil. Existe vergonha, medo de ser visto como "possessivo" ou "abusivo". Mas nomear o que sentimos é o primeiro passo para transformar.
+				</p>
+
+				<p>
+					No meu consultório em Jardim da Penha, em Vitória, atendo pessoas que vivem esse dilema, de ambos os lados. A terapia não é um tribunal. É um espaço de escuta, onde você pode explorar suas inseguranças sem julgamento e, aos poucos, construir uma relação mais saudável consigo e com quem você ama.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O ciúmes excessivo é uma doença?",answer:"Não necessariamente. O ciúmes faz parte da experiência humana. No entanto, quando se torna obsessivo, interfere na rotina e causa sofrimento significativo, pode estar associado a questões como ansiedade, baixa autoestima ou, em casos mais intensos, transtornos que merecem atenção profissional."},{question:"Como saber se meu relacionamento é abusivo?",answer:"Alguns sinais incluem: controle excessivo sobre suas ações, isolamento de amigos e família, humilhações frequentes, ciúmes como justificativa para agressões verbais ou físicas. Se você se sente constantemente vigiado(a) ou com medo, busque apoio. O CVV (188) e a Central de Atendimento à Mulher (180) são canais de ajuda."},{question:"Terapia ajuda a lidar com ciúmes?",answer:"Sim. A terapia oferece um espaço para entender as raízes do ciúmes, trabalhar a autoestima e desenvolver formas mais saudáveis de se relacionar. Na Abordagem Centrada na Pessoa, o foco está em você: não em corrigir comportamentos, mas em compreender o que está por trás deles."},{question:"É possível amar sem sentir ciúmes?",answer:"É possível amar com menos ciúmes, sim. Conforme você constrói segurança interna e confiança no vínculo, o ciúmes tende a diminuir. Isso não significa que ele desaparece por completo, mas deixa de governar suas ações."}]},"custo-vida-jardim-da-penha-ansiedade":{slug:"custo-vida-jardim-da-penha-ansiedade",tags:["Jardim da Penha","Ansiedade Financeira","Custo de Vida","Vitória ES","saude-mental"],htmlContent:`
 			<p class="lead">
 				Jardim da Penha é, sem dúvida, um dos bairros mais desejados de Vitória. A vida a pé, a proximidade com a praia de Camburi e a estrutura completa atraem muitos moradores. Mas existe um "lado B" que pouco se fala nas redes sociais: o impacto do alto custo de vida — especialmente aluguel e condomínio — na <strong>saúde mental</strong> de quem escolhe (ou precisa) viver aqui.
 			</p>
@@ -1586,7 +1995,6 @@ import{e as L}from"../chunks/CBbuBPfZ.js";import{g as Ne,d as Ve,b as Me,A as ke
 			<p>Coordeno também a <strong>Roda de Conversa Entre Homens</strong>, um grupo terapêutico onde homens compartilham suas vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência potente de conexão e crescimento.</p>
 
 			<p>Se quiser saber mais sobre como a terapia pode te ajudar — seja individual ou em grupo — entre em contato. O primeiro passo pode ser mais simples do que você imagina. E você não precisa dar esse passo sozinho.</p>
-		`}},Je=({params:d})=>{const n=Ne(d.categoria);if(!n)throw L(404,"Categoria não encontrada");const a=Ve(d.slug),t=Ie[d.slug];if(!a||!t)throw L(404,"Artigo não encontrado");if(a.categorySlug!==d.categoria)throw L(404,"Artigo não encontrado nesta categoria");return{categoria:d.categoria,category:n,slug:d.slug,post:a,content:t}},fa=Object.freeze(Object.defineProperty({__proto__:null,load:Je},Symbol.toStringTag,{value:"Module"}));var He=u('<div class="faq-item"><h3> </h3> <p> </p></div>'),Le=u('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),Ge=u('<span class="tag svelte-lxkfym"> </span>'),We=u("<!> Conversar",1),Xe=u(`<div class="post-content"><!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <p class="author-title svelte-lxkfym">Psicólogo CRP 16/5527</p> <p class="svelte-lxkfym">Sou psicólogo com mais de 8 anos de experiência em psicoterapia
-                com a Abordagem Centrada na Pessoa. Atendo em Vitória/ES,
-                oferecendo um espaço acolhedor para você cuidar da sua saúde
-                mental.</p> <!></div></div>`,1),Ke=u('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),Ye=u('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),Ze=u("<!> Falar no WhatsApp",1),ea=u('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),aa=u('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function qa(d,n){we(n,!0);const a=h(()=>n.data.post),t=h(()=>n.data.content),_=h(()=>n.data.category),y=h(()=>Me.filter(i=>i.slug!==n.data.slug&&i.categorySlug===e(a).categorySlug).slice(0,3)),A=h(()=>({"@context":"https://schema.org","@graph":[{"@type":"BlogPosting",headline:e(a).title,description:e(a).description,image:`https://psicologobernardo.com.br${e(a).image}`,author:{"@type":"Person",name:"Bernardo Carielo"},publisher:{"@type":"Organization",name:"Psicólogo Bernardo"},mainEntityOfPage:{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}},...e(t).faq?[{"@type":"FAQPage",mainEntity:e(t).faq.map(i=>({"@type":"Question",name:i.question,acceptedAnswer:{"@type":"Answer",text:i.answer}}))}]:[]]}));var x=aa(),K=O(x);{let i=h(()=>`${e(a).title} - Psicólogo Bernardo`),N=h(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),l=h(()=>`https://psicologobernardo.com.br${e(a).image}`);Ue(K,{get title(){return e(i)},get description(){return e(a).description},get canonical(){return e(N)},type:"article",get image(){return e(l)},get jsonLd(){return e(A)}})}var Y=r(K,2);{let i=h(()=>[{name:"Início",href:"/"},{name:e(_).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);Te(Y,{get items(){return e(i)}})}var U=r(Y,2),Z=s(U),$=s(Z),Q=s($),Ae=s(Q,!0);o(Q);var F=r(Q,2),Pe=s(F,!0);o(F);var ee=r(F,2),D=s(ee),ae=s(D);$e(ae,{size:16});var Ce=r(ae);o(D);var oe=r(D,2),se=s(oe);Qe(se,{size:16});var xe=r(se);o(oe),o(ee),o($);var re=r($,2),ie=s(re);o(re),o(Z),o(U);var ne=r(U,2);X(ne,{variant:"white",children:(i,N)=>{var l=Xe(),v=O(l),P=s(v);Re(P,()=>e(t).htmlContent);var R=r(P,2);{var c=g=>{var j=Le(),b=r(s(j),2);G(b,17,()=>e(t).faq,W,(k,ce)=>{var J=He(),H=s(J),Oe=s(H,!0);o(H);var pe=r(H,2),_e=s(pe,!0);o(pe),o(J),w(()=>{f(Oe,e(ce).question),f(_e,e(ce).answer)}),m(k,J)}),o(j),m(g,j)};le(R,g=>{e(t).faq&&e(t).faq.length>0&&g(c)})}o(v);var p=r(v,2),C=s(p),V=r(s(C),2);G(V,17,()=>e(t).tags,W,(g,j)=>{var b=Ge(),k=s(b,!0);o(b),w(()=>f(k,e(j))),m(g,b)}),o(C);var M=r(C,2),E=r(s(M),2),T=s(E);Fe(T,{size:18}),o(E);var q=r(E,2),B=s(q);Be(B,{size:18}),o(q);var S=r(q,2),I=s(S);De(I,{size:18}),o(S),o(M),o(p);var de=r(p,2),me=r(s(de),2),je=r(s(me),6);ve(je,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",children:(g,j)=>{var b=We(),k=O(b);ge(k,{size:20}),ue(),m(g,b)},$$slots:{default:!0}}),o(me),o(de),w(g=>{z(E,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),z(q,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${g??""}`),z(S,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title)]),m(i,l)},$$slots:{default:!0}});var te=r(ne,2);{var Ee=i=>{X(i,{variant:"beige",children:(N,l)=>{var v=Ye(),P=r(s(v),2);G(P,21,()=>e(y),W,(R,c)=>{var p=Ke(),C=s(p),V=s(C),M=r(V,2),E=s(M,!0);o(M),o(C);var T=r(C,2),q=s(T),B=s(q,!0);o(q);var S=r(q,2),I=r(s(S));ke(I,{size:16}),o(S),o(T),o(p),w(()=>{z(p,"href",`/${e(c).categorySlug??""}/${e(c).slug??""}`),z(V,"src",e(c).image),z(V,"alt",e(c).title),f(E,e(c).category),f(B,e(c).title)}),m(R,p)}),o(P),o(v),m(N,v)},$$slots:{default:!0}})};le(te,i=>{e(y).length>0&&i(Ee)})}var Se=r(te,2);X(Se,{variant:"gradient",children:(i,N)=>{var l=ea(),v=r(s(l),4);ve(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(P,R)=>{var c=Ze(),p=O(c);ge(p,{size:20}),ue(),m(P,c)},$$slots:{default:!0}}),o(l),m(i,l)},$$slots:{default:!0}}),w(()=>{f(Ae,e(a).category),f(Pe,e(a).title),f(Ce,` ${e(a).date??""}`),f(xe,` ${e(a).readTime??""}`),z(ie,"src",e(a).image),z(ie,"alt",e(a).title)}),m(d,x),ye()}export{qa as component,fa as universal};
+		`}},Ge=({params:d})=>{const n=Me(d.categoria);if(!n)throw G(404,"Categoria não encontrada");const a=we(d.slug),t=Le[d.slug];if(!a||!t)throw G(404,"Artigo não encontrado");if(a.categorySlug!==d.categoria)throw G(404,"Artigo não encontrado nesta categoria");return{categoria:d.categoria,category:n,slug:d.slug,post:a,content:t}},Aa=Object.freeze(Object.defineProperty({__proto__:null,load:Ge},Symbol.toStringTag,{value:"Module"}));var We=u('<div class="faq-item"><h3> </h3> <p> </p></div>'),Xe=u('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),Ke=u('<span class="tag svelte-lxkfym"> </span>'),Ye=u("<!> Conversar",1),Ze=u(`<div class="post-content"><!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo com mais de 8 anos de experiência em psicoterapia com
+                a Abordagem Centrada na Pessoa. Atendo em Vitória/ES, oferecendo
+                um espaço acolhedor para você cuidar da sua saúde mental.</p> <!></div></div>`,1),ea=u('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),aa=u('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),oa=u("<!> Falar no WhatsApp",1),sa=u('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),ra=u('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Pa(d,n){ye(n,!0);const a=h(()=>n.data.post),t=h(()=>n.data.content),N=h(()=>n.data.category),U=h(()=>ke.filter(i=>i.slug!==n.data.slug&&i.categorySlug===e(a).categorySlug).slice(0,3)),P=h(()=>({"@context":"https://schema.org","@graph":[{"@type":"BlogPosting",headline:e(a).title,description:e(a).description,image:`https://psicologobernardo.com.br${e(a).image}`,author:{"@type":"Person",name:"Bernardo Carielo"},publisher:{"@type":"Organization",name:"Psicólogo Bernardo"},mainEntityOfPage:{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}},...e(t).faq?[{"@type":"FAQPage",mainEntity:e(t).faq.map(i=>({"@type":"Question",name:i.question,acceptedAnswer:{"@type":"Answer",text:i.answer}}))}]:[]]}));var E=ra(),Y=O(E);{let i=h(()=>`${e(a).title} - Psicólogo Bernardo`),V=h(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),l=h(()=>`https://psicologobernardo.com.br${e(a).image}`);Qe(Y,{get title(){return e(i)},get description(){return e(a).description},get canonical(){return e(V)},type:"article",get image(){return e(l)},get jsonLd(){return e(P)}})}var Z=r(Y,2);{let i=h(()=>[{name:"Início",href:"/"},{name:e(N).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);Fe(Z,{get items(){return e(i)}})}var T=r(Z,2),ee=s(T),F=s(ee),Q=s(F),Pe=s(Q,!0);o(Q);var $=r(Q,2),Ce=s($,!0);o($);var ae=r($,2),D=s(ae),oe=s(D);$e(oe,{size:16});var xe=r(oe);o(D);var se=r(D,2),re=s(se);De(re,{size:16});var Se=r(re);o(se),o(ae),o(F);var ie=r(F,2),ne=s(ie);o(ie),o(ee),o(T);var te=r(T,2);K(te,{variant:"white",children:(i,V)=>{var l=Ze(),v=O(l),C=s(v);Te(C,()=>e(t).htmlContent);var y=r(C,2);{var c=g=>{var z=Xe(),A=r(s(z),2);W(A,17,()=>e(t).faq,X,(w,pe)=>{var H=We(),L=s(H),Ve=s(L,!0);o(L);var ue=r(L,2),_e=s(ue,!0);o(ue),o(H),k(()=>{f(Ve,e(pe).question),f(_e,e(pe).answer)}),m(w,H)}),o(z),m(g,z)};ve(y,g=>{e(t).faq&&e(t).faq.length>0&&g(c)})}o(v);var p=r(v,2),x=s(p),_=r(s(x),2);W(_,17,()=>e(t).tags,X,(g,z)=>{var A=Ke(),w=s(A,!0);o(A),k(()=>f(w,e(z))),m(g,A)}),o(x);var M=r(x,2),j=r(s(M),2),R=s(j);Ie(R,{size:18}),o(j);var b=r(j,2),I=s(b);Be(I,{size:18}),o(b);var S=r(b,2),B=s(S);He(B,{size:18}),o(S);var J=r(S,2),Oe=s(J);Je(Oe,{size:18}),o(J),o(M),o(p);var me=r(p,2),ce=r(s(me),2),Ne=r(s(ce),4);ge(Ne,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",children:(g,z)=>{var A=Ye(),w=O(A);he(w,{size:20}),le(),m(g,A)},$$slots:{default:!0}}),o(ce),o(me),k((g,z)=>{q(j,"href",`https://api.whatsapp.com/send?text=${g??""}`),q(b,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),q(S,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${z??""}`),q(J,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(i,l)},$$slots:{default:!0}});var de=r(te,2);{var Ee=i=>{K(i,{variant:"beige",children:(V,l)=>{var v=aa(),C=r(s(v),2);W(C,21,()=>e(U),X,(y,c)=>{var p=ea(),x=s(p),_=s(x),M=r(_,2),j=s(M,!0);o(M),o(x);var R=r(x,2),b=s(R),I=s(b,!0);o(b);var S=r(b,2),B=r(s(S));Ue(B,{size:16}),o(S),o(R),o(p),k(()=>{q(p,"href",`/${e(c).categorySlug??""}/${e(c).slug??""}`),q(_,"src",e(c).image),q(_,"alt",e(c).title),f(j,e(c).category),f(I,e(c).title)}),m(y,p)}),o(C),o(v),m(V,v)},$$slots:{default:!0}})};ve(de,i=>{e(U).length>0&&i(Ee)})}var je=r(de,2);K(je,{variant:"gradient",children:(i,V)=>{var l=sa(),v=r(s(l),4);ge(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(C,y)=>{var c=oa(),p=O(c);he(p,{size:20}),le(),m(C,c)},$$slots:{default:!0}}),o(l),m(i,l)},$$slots:{default:!0}}),k(()=>{f(Pe,e(a).category),f(Ce,e(a).title),f(xe,` ${e(a).date??""}`),f(Se,` ${e(a).readTime??""}`),q(ne,"src",e(a).image),q(ne,"alt",e(a).title)}),m(d,E),Re()}export{Pa as component,Aa as universal};

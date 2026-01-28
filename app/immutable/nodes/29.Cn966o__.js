@@ -1,4 +1,282 @@
-import{e as G}from"../chunks/CBbuBPfZ.js";import{g as Me,d as we,b as ke,A as Ue}from"../chunks/jrQ2zHXz.js";import{c as fe,a as m,f as u}from"../chunks/BUzcI0aO.js";import{f as O,I as ye,t as k,L as Re,g as e,u as h,a as r,c as s,r as o,n as le}from"../chunks/Boz4_rnh.js";import{s as f}from"../chunks/CXN3EcKo.js";import{l as qe,s as be,i as ve}from"../chunks/Cw_SZe-E.js";import{I as ze,s as Ae,e as W,B as ge,a as q,i as X}from"../chunks/B6kXTmCV.js";import{S as K,h as Te}from"../chunks/CI6MHlsL.js";import"../chunks/CmEVmTvO.js";import{B as Fe}from"../chunks/Cjb_AQrU.js";import{S as Qe}from"../chunks/rw_l2SiH.js";import{C as $e}from"../chunks/Do_Y9wWA.js";import{C as De}from"../chunks/i-7rZUm5.js";import{M as Ie}from"../chunks/BvPfPtb6.js";import{F as Be}from"../chunks/jN55ooT7.js";import{P as he}from"../chunks/D4n1bcFc.js";function Je(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];ze(d,be({name:"linkedin"},()=>a,{get iconNode(){return t},children:(N,U)=>{var P=fe(),E=O(P);Ae(E,n,"default",{}),m(N,P)},$$slots:{default:!0}}))}function He(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];ze(d,be({name:"twitter"},()=>a,{get iconNode(){return t},children:(N,U)=>{var P=fe(),E=O(P);Ae(E,n,"default",{}),m(N,P)},$$slots:{default:!0}}))}const Le={"rede-apoio-saude-mental-vitoria-es":{slug:"rede-apoio-saude-mental-vitoria-es",tags:["Vitória ES","Rede de Apoio","Saúde Mental Gratuita","Comunidade","vitoria-es"],htmlContent:`
+import{e as G}from"../chunks/CBbuBPfZ.js";import{g as _e,d as we,b as ke,A as Re}from"../chunks/Cu4Kokrg.js";import{c as fe,a as c,f as p}from"../chunks/BUzcI0aO.js";import{f as O,I as Ue,t as k,L as ye,g as e,u as h,a as r,c as s,r as o,n as le}from"../chunks/Boz4_rnh.js";import{s as f}from"../chunks/CXN3EcKo.js";import{l as qe,s as be,i as ve}from"../chunks/Cw_SZe-E.js";import{I as ze,s as Ae,e as W,B as ge,a as q,i as X}from"../chunks/B6kXTmCV.js";import{S as Z,h as Te}from"../chunks/CI6MHlsL.js";import"../chunks/CmEVmTvO.js";import{B as Qe}from"../chunks/Cjb_AQrU.js";import{S as Fe}from"../chunks/rw_l2SiH.js";import{C as Ie}from"../chunks/Do_Y9wWA.js";import{C as $e}from"../chunks/i-7rZUm5.js";import{M as De}from"../chunks/BvPfPtb6.js";import{F as Be}from"../chunks/jN55ooT7.js";import{P as he}from"../chunks/D4n1bcFc.js";function Je(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];ze(d,be({name:"linkedin"},()=>a,{get iconNode(){return t},children:(N,R)=>{var C=fe(),S=O(C);Ae(S,n,"default",{}),c(N,C)},$$slots:{default:!0}}))}function He(d,n){const a=qe(n,["children","$$slots","$$events","$$legacy"]);const t=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];ze(d,be({name:"twitter"},()=>a,{get iconNode(){return t},children:(N,R)=>{var C=fe(),S=O(C);Ae(S,n,"default",{}),c(N,C)},$$slots:{default:!0}}))}const Le={"vinculos-liquidos-intimidade-digital":{slug:"vinculos-liquidos-intimidade-digital",tags:["Relacionamentos","Intimidade","Era Digital","Vitória ES","saude-mental"],htmlContent:`
+			<p class="lead">
+				Você já percebeu que está mais conectado do que nunca, mas ainda assim se sente sozinho? Talvez tenha centenas de contatos no celular, mas ninguém para ligar em um momento de angústia. Ou então, no meio de uma conversa, percebe que ambos estão olhando para as próprias telas.
+			</p>
+
+			<p>
+				<strong>Vínculos líquidos</strong> são relações marcadas pela superficialidade, pela facilidade de serem desfeitas e pela dificuldade de gerar a intimidade que buscamos. O termo, inspirado no sociólogo Zygmunt Bauman, descreve bem o que muitos sentem hoje: a solidão de estar cercado de conexões que não preenchem.
+			</p>
+
+			<p>
+				Mas a boa notícia é que, ao entender o que está acontecendo, podemos escolher caminhar em outra direção. Este texto não vai te culpar pela modernidade, mas convida você a refletir sobre como quer se relacionar daqui para frente.
+			</p>
+
+			<section>
+				<h2>Por que os vínculos estão tão frágeis hoje?</h2>
+
+				<p>
+					Vivemos em uma cultura que valoriza a praticidade, a velocidade e a descartabilidade. Isso vale para objetos e, infelizmente, acabou valendo também para pessoas.
+				</p>
+
+				<p>
+					Nas redes sociais, relacionamos com versões editadas do outro. Curtidas, comentários rápidos e mensagens de áudio substituem conversas profundas. O resultado? Muitas interações, pouca intimidade. A quantidade engana: cem reações em um post não equivalem a uma pessoa que realmente te conhece.
+				</p>
+
+				<p>
+					Além disso, o medo da vulnerabilidade nos leva a manter uma distância de segurança emocional. É mais confortável trocar figurinhas digitais do que abrir o coração de verdade.
+				</p>
+			</section>
+
+			<section>
+				<h2>O que é intimidade real?</h2>
+
+				<p>
+					<strong>Intimidade real é a experiência de ser visto e aceito como você é</strong>, sem máscaras e sem precisar performar. É quando você pode falar sobre suas fraquezas e o outro não sai correndo. É quando o silêncio não é incômodo, e a presença já diz muito.
+				</p>
+
+				<p>
+					Na Abordagem Centrada na Pessoa (ACP), Carl Rogers dizia que a verdadeira conexão acontece quando encontramos alguém que nos oferece <strong>aceitação incondicional</strong>: que não precisa que sejamos perfeitos para nos querer por perto.
+				</p>
+
+				<p>
+					Isso é raro. E justamente por ser raro, quando encontramos, sentimos que chegamos em casa.
+				</p>
+			</section>
+
+			<section class="box">
+				<h3>Os sinais de que seus vínculos estão líquidos</h3>
+
+				<p>Pode ser útil refletir se algo nessa lista faz sentido para você:</p>
+
+				<ul>
+					<li>Você tem muitos conhecidos, mas poucos confidentes.</li>
+					<li>Evita assuntos difíceis para não "estragar" a conversa.</li>
+					<li>Sente que precisa sempre parecer bem nas interações.</li>
+					<li>Demora para responder porque responder "de verdade" dá trabalho.</li>
+					<li>Prefere terminar relacionamentos do que enfrentar conflitos.</li>
+					<li>Sente uma inquietação difusa mesmo estando com outras pessoas.</li>
+				</ul>
+
+				<p>
+					Esses sinais não são motivo de vergonha. Eles são pistas de que algo dentro de você pede algo diferente.
+				</p>
+			</section>
+
+			<section>
+				<h2>Como cultivar vínculos mais profundos?</h2>
+
+				<p>
+					Não existe fórmula mágica, mas algumas direções podem ajudar. E todas elas exigem escolha e coragem:
+				</p>
+
+				<h3>1. Escolha presença, não só disponibilidade</h3>
+				<p>
+					Estar presente vai além de responder rápido. É ouvir com atenção, sem já pensar na resposta. É deixar o celular de lado quando estiver com alguém importante. Presença se nota nos olhos, no corpo, no tempo que você escolhe dar.
+				</p>
+
+				<h3>2. Arrisque a vulnerabilidade (aos poucos)</h3>
+				<p>
+					Intimidade não se constrói com discursos perfeitos, mas com as pequenas aberturas: falar que você não está bem, admitir que está com medo, contar algo que te envergonha. A vulnerabilidade cria espaço para que o outro também se mostre.
+				</p>
+
+				<h3>3. Menos conexões, mais profundidade</h3>
+				<p>
+					Talvez você não precise de mais amigos, mas de aprofundar os que já tem. Qualidade exige tempo, e o tempo é finito. Pergunte-se: com quem você realmente quer investir?
+				</p>
+
+				<h3>4. Aceite o desconforto do conflito</h3>
+				<p>
+					Relacionamentos reais têm atrito. Evitar todo desentendimento é evitar também a intimidade. A ruptura saudável (e o reparo) fortalece o vínculo.
+				</p>
+
+				<h3>5. Busque espaços de escuta</h3>
+				<p>
+					Às vezes, precisamos de alguém de fora para nos ajudar a olhar para o que estamos vivendo. A terapia é um desses espaços: um lugar onde você pode ser ouvido sem julgamento, e reaprender a confiar e se abrir.
+				</p>
+			</section>
+
+			<section>
+				<h2>A intimidade como caminho de volta para si</h2>
+
+				<p>
+					Recuperar vínculos profundos não é só uma questão social. É um caminho de reencontro consigo mesmo. Quando permitimos que o outro nos veja de verdade, também nos vemos melhor.
+				</p>
+
+				<p>
+					Em <strong>Vitória</strong>, muitas pessoas vivem esse paradoxo: morando em uma cidade de praia, cercados de movimento, mas carregando uma solidão que não sabem nomear. Se você se identificou com algo aqui, saiba que não está só nessa busca.
+				</p>
+			</section>
+
+			<section class="cta">
+				<h2>Um espaço para reconexão</h2>
+
+				<p>
+					Se você se identificou com esse texto e busca um espaço para falar sobre suas relações e sua busca por conexões mais autênticas, a terapia pode ser esse lugar.
+				</p>
+
+				<p>
+					No meu consultório em Jardim da Penha, em Vitória (ES), atendo pessoas que buscam sair do automático e construir vínculos mais genuínos, consigo mesmas e com os outros.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Vínculos líquidos significam que estou fazendo algo errado?",answer:"Não necessariamente. Vínculos líquidos são uma característica da nossa época, não uma falha pessoal. A questão não é culpa, mas consciência: ao perceber esse padrão, você pode escolher caminhos diferentes."},{question:"Terapia ajuda a construir relacionamentos mais profundos?",answer:"Sim. A terapia oferece um espaço seguro para entender seus padrões de vínculo, trabalhar medos de vulnerabilidade e aprender formas mais autênticas de se relacionar."},{question:"É possível ter intimidade em relacionamentos online?",answer:"É possível, mas exige intencionalidade. Relacionamentos à distância ou mediados pela tecnologia podem ter profundidade, desde que haja espaço para vulnerabilidade e escuta real, não apenas trocas rápidas."},{question:"Como saber se um vínculo é líquido ou profundo?",answer:"Pergunte-se: nessa relação, eu posso ser vulnerável? O outro me conhece além da superfície? Existe espaço para desacordos sem que a relação se rompa? Esses são bons indicadores."},{question:"Qual a diferença entre estar sozinho e estar solitário?",answer:"Estar sozinho é um estado físico; estar solitário é emocional. Você pode se sentir solitário no meio de uma multidão, e em paz completa em sua própria companhia. O que muda é a qualidade das conexões que você nutre."}]},"o-silencio-na-terapia":{slug:"o-silencio-na-terapia",tags:["Abordagem Centrada na Pessoa","Psicoterapia","Silêncio","Autoconhecimento","psicoterapia"],htmlContent:`
+			<p class="lead">
+				O silêncio na terapia muitas vezes é mal compreendido. Vivemos em um mundo, especialmente em cidades agitadas como Vitória, onde o barulho é constante e a rapidez é exigida. Quando entramos no consultório (ou na sala virtual) e o diálogo cessa, é comum sentir um desconforto inicial. "Será que devo falar algo?", "O psicólogo está esperando eu continuar?". Mas o silêncio não é um vazio; ele é uma parte ativa e vital do seu processo terapêutico.
+			</p>
+
+			<section>
+				<h2>Mais do que apenas "não falar"</h2>
+				<p>Na Abordagem Centrada na Pessoa, o silêncio é acolhido como uma forma de comunicação tão potente quanto as palavras. Ele não significa que o assunto acabou, mas muitas vezes que estamos chegando em algo profundo que precisa de tempo para ser sentido, e não apenas racionalizado.</p>
+				<p>Quando o silêncio acontece, ele oferece um convite para você olhar para dentro, sem a pressão de ter que performar ou entreter.</p>
+			</section>
+
+			<section class="box">
+				<h3>Os benefícios do silêncio para você</h3>
+				
+				<h4>1. Autonomia e Ritmo</h4>
+				<p>O silêncio devolve a você o controle da sessão. Você não precisa correr para preencher lacunas. Esse espaço permite que você respire e decida para onde quer ir a seguir, respeitando o seu próprio tempo interno, algo raro no nosso dia a dia.</p>
+
+				<h4>2. Processamento Emocional</h4>
+				<p>Muitas vezes, após falar sobre algo doloroso ou complexo, precisamos de um momento para "digerir". O silêncio atua como esse tempo de digestão emocional. É nele que as fichas caem e que as emoções se assentam.</p>
+
+				<h4>3. Conexão Interna</h4>
+				<p>Ao cessar o ruído externo da fala, é possível ouvir melhor a sua própria voz interna. O silêncio facilita o contato com sentimentos que, na correria da fala, passariam despercebidos.</p>
+			</section>
+
+			<section>
+				<h2>O papel do psicólogo no silêncio</h2>
+				<p>Se o seu psicólogo fica em silêncio, não é porque ele está distante ou julgando. Pelo contrário. Estamos ali, em "atenção plena", acompanhando você nesse mergulho interno. Interromper um silêncio produtivo pode ser como acordar alguém de um sonho importante; quebra-se o fluxo de descoberta.</p>
+				<p>Nossa presença silenciosa é uma forma de dizer: "Estou aqui com você, pode levar o tempo que precisar, este espaço é seguro".</p>
+			</section>
+
+			<section>
+				<h2>Nem todo silêncio é igual</h2>
+				<p>É importante dizer: o silêncio precisa fazer sentido. O próprio Carl Rogers, em seu livro <em>Counseling and Psychotherapy</em> (1942), alertava que, em um primeiro contato, longas pausas podem gerar mais constrangimento do que ajuda.</p>
+				<p>Para que o silêncio seja terapêutico, é preciso que já exista um vínculo de confiança (o que chamamos de <em>rapport</em>). Quando essa conexão existe, o silêncio deixa de ser um "vazio constrangedor" e se torna uma ferramenta poderosa de encontro.</p>
+				<p>Vale lembrar também que <strong>nem toda terapia terá longos momentos de silêncio</strong>. Cada processo é único. Existem sessões muito faladas, dinâmicas, e outras mais pausadas. O silêncio não é uma regra, é uma possibilidade que surge no encontro de pessoa para pessoa.</p>
+			</section>
+			
+			<section class="cta">
+				<h2>Um convite para ser você mesmo</h2>
+				<p>
+					Se o silêncio surgir na sua próxima sessão, tente não brigar com ele. Experimente ficar nele por alguns instantes. Você pode se surpreender com o que ele tem a dizer.
+				</p>
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O silêncio na terapia é constrangedor?",answer:"Pode ser no início, pois não estamos acostumados com silêncios 'compartilhados' socialmente. Mas com o tempo e o vínculo terapêutico, ele se torna um espaço de conforto e descanso mental."},{question:"E se eu não tiver nada para falar?",answer:"Tudo bem. Às vezes, o 'nada para falar' esconde um cansaço, uma necessidade de pausa ou uma emoção que ainda não tem palavras. O silêncio permite que isso apareça."},{question:"O psicólogo fica em silêncio me julgando?",answer:"Jamais. Na Abordagem Centrada na Pessoa, o silêncio do terapeuta é uma expressão de aceitação e respeito pelo seu processo. Ele está focado em compreender o seu mundo, não em julgá-lo."}]},"carl-rogers-revolucao-humanista":{slug:"carl-rogers-revolucao-humanista",tags:["Abordagem Centrada na Pessoa","Carl Rogers","Humanismo","Vitória ES","acp"],htmlContent:`
+			<p class="lead">
+				Durante muito tempo, a psicologia olhou para o ser humano como um "paciente" – alguém passivo, portador de uma doença a ser curada por um especialista detentor de todo o saber. Carl Rogers ousou pensar diferente. Ele propôs que, se oferecermos o solo fértil adequado, qualquer pessoa tem dentro de si a semente e a força necessária para crescer e florescer. Essa foi a revolução humanista: devolver a você o protagonismo da sua própria história.
+			</p>
+
+			<section>
+				<h2>Quem foi Carl Rogers?</h2>
+
+				<p>
+					Imagine um psicólogo que, ao invés de se esconder atrás de termos técnicos e diagnósticos frios, preferia sentar-se frente a frente, de humano para humano. Esse foi Carl Rogers (1902–1987). Ele foi o primeiro psicoterapeuta a inserir um gravador dentro do espaço da terapia, no intuito de transcrever as sessões e estudar "o que, de fato, funciona na terapia?"
+				</p>
+
+				<p>
+					Americano, criado em uma família rígida e religiosa, Rogers encontrou na psicologia um caminho para a liberdade. Ele percebeu que as teorias tradicionais da época – que focavam muito no passado ou em comportamentos condicionados – muitas vezes ignoravam o essencial: <strong>a experiência vivida da pessoa no aqui e agora</strong>.
+				</p>
+
+				<p>
+					Ele não queria apenas "consertar" problemas. Ele queria entender como as pessoas crescem. E descobriu que o crescimento não vem de fora para dentro, impostos por conselhos ou medicações, mas de dentro para fora, quando somos verdadeiramente ouvidos e aceitos.
+				</p>
+			</section>
+
+			<section>
+				<h2>De "Paciente" para "Cliente": Uma mudança de postura</h2>
+
+				<p>
+					Pode parecer apenas uma troca de palavras, mas quando Rogers passou a usar o termo <strong>Cliente</strong> (e depois, Pessoa) ao invés de Paciente, ele mudou toda a dinâmica da terapia.
+				</p>
+
+				<ul>
+					<li><strong>Paciente</strong> sugere passividade: "Doutor, me cure".</li>
+					<li><strong>Cliente/Pessoa</strong> sugere autonomia: "Estou aqui para, com sua ajuda, encontrar meus próprios caminhos".</li>
+				</ul>
+
+				<p>
+					Na Abordagem Centrada na Pessoa (ACP), eu, como psicólogo, não sou o autoridade sobre a sua vida. <strong>Você é.</strong> Eu sou um facilitador, um companheiro de jornada que segura a lanterna enquanto você explora seus próprios caminhos, às vezes escuros, às vezes desconhecidos.
+				</p>
+			</section>
+
+			<section class="box">
+				<h3>As 3 Condições para o Florescimento Humano</h3>
+
+				<p>
+					Rogers identificou que, para qualquer mudança terapêutica real acontecer, três "ingredientes" são essenciais na relação entre terapeuta e cliente. Sem eles, há apenas técnica; com eles, há encontro humano.
+				</p>
+
+				<h4>1. Empatia (Mas a verdadeira!)</h4>
+				<p>
+					Não é apenas dizer "eu te entendo". É o esforço genuíno de calçar os seus sapatos, de ver o mundo através dos seus olhos, sem julgamentos. É sentir a sua dor como se fosse minha, sem nunca perder a noção de que ela é sua. Quando nos sentimos realmente compreendidos, a solidão diminui.
+				</p>
+
+				<h4>2. Aceitação Incondicional (Acolhimento)</h4>
+				<p>
+					Quantas vezes na vida usamos máscaras para sermos aceitos? Na terapia humanista, você tem permissão para ser inteiro. Aceitação incondicional significa que eu te acolho com todas as suas "luzes e sombras". Eu não preciso concordar com tudo o que você faz, mas aceito profundamente quem você <strong>é</strong>. É nesse solo seguro que você para de se defender e começa a mudar.
+				</p>
+
+				<h4>3. Congruência (Autenticidade)</h4>
+				<p>
+					O terapeuta não é um robô ou uma parede em branco. Eu sou uma pessoa real na sala com você. Congruência é a capacidade de ser transparente e verdadeiro na relação. Isso cria um ambiente de confiança: você sabe que não estou fingindo ou jogando.
+				</p>
+			</section>
+
+			<section>
+				<h2>Por que a ACP é vital aqui em Vitória?</h2>
+
+				<p>
+					Trabalhando aqui em <strong>Vitória</strong>, especialmente atendendo muitos jovens e estudantes da <strong>UFES</strong> e moradores de **Jardim da Penha**, percebo como a "Revolução de Rogers" é mais necessária do que nunca.
+				</p>
+
+				<p>
+					Vivemos em um ambiente de alta cobrança e performance.
+				</p>
+
+				<ul>
+					<li>O estudante que sente que nunca é bom o suficiente.</li>
+					<li>O jovem profissional que tem medo de falhar e decepcionar a família.</li>
+					<li>A sensação constante de ter que "ser alguém" para ser amado.</li>
+				</ul>
+
+				<p>
+					A terapia humanista oferece um antídoto a essa pressão. Aqui, você não precisa "performar". O consultório (seja presencial ou online) torna-se um oásis onde a exigência do mundo lá fora fica na porta. É um espaço para reconectar-se com quem você é, não com quem disseram que você deveria ser.
+				</p>
+
+				<p>
+					Ao colocar a <strong>pessoa</strong> no centro, e não o sintoma ou a nota, recuperamos a saúde mental de forma sustentável e gentil.
+				</p>
+			</section>
+
+			<section class="cta">
+				<h2>Um convite para ser você mesmo</h2>
+
+				<p>
+					Se você sente que perdeu a conexão consigo mesmo ou que está vivendo apenas para agradar os outros, a terapia pode ser o caminho de volta para casa.
+				</p>
+
+				<p>
+					No meu consultório em Jardim da Penha, em Vitória (ES), meu trabalho é oferecer essas condições que Rogers descreveu: empatia, aceitação e autenticidade. Para que você possa, finalmente, ser quem você é.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"A Abordagem Centrada na Pessoa serve para ansiedade?",answer:"Sim. A ansiedade muitas vezes surge quando tentamos ser o que não somos (incongruência). Ao encontrar um espaço seguro para ser você mesmo, a tensão diminui e você aprende a lidar com seus sentimentos de forma mais fluida, reduzindo os sintomas ansiosos."},{question:"O psicólogo humanista não dá conselhos?",answer:"Nós evitamos dar conselhos diretos ('faça isso', 'termine aquilo') porque acreditamos que isso retira a sua autonomia. Ninguém sabe melhor da sua vida do que você. Nosso papel é ajudar você a organizar seus pensamentos e sentimentos para que **você** tome as melhores decisões para si."},{question:"Qual a diferença entre Psicanálise e Humanismo?",answer:"De forma simplificada: a Psicanálise foca bastante no inconsciente, no passado e na interpretação do analista. O Humanismo foca mais na experiência consciente do 'aqui e agora', no potencial de crescimento futuro e na relação igualitária entre terapeuta e cliente. Ambas são excelentes, dependendo do que você busca."}]},"rede-apoio-saude-mental-vitoria-es":{slug:"rede-apoio-saude-mental-vitoria-es",tags:["Vitória ES","Rede de Apoio","Saúde Mental Gratuita","Comunidade","vitoria-es"],htmlContent:`
 			<p class="lead">
 				Cuidar da saúde mental não é algo que se faz sozinho. E também não acontece apenas dentro de um consultório. Existe uma rede invisível que sustenta a gente no dia a dia: lugares onde respiramos, pessoas com quem dividimos algo, comunidades que nos acolhem sem pedir nada em troca.
 			</p>
@@ -1995,6 +2273,6 @@ import{e as G}from"../chunks/CBbuBPfZ.js";import{g as Me,d as we,b as ke,A as Ue
 			<p>Coordeno também a <strong>Roda de Conversa Entre Homens</strong>, um grupo terapêutico onde homens compartilham suas vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência potente de conexão e crescimento.</p>
 
 			<p>Se quiser saber mais sobre como a terapia pode te ajudar — seja individual ou em grupo — entre em contato. O primeiro passo pode ser mais simples do que você imagina. E você não precisa dar esse passo sozinho.</p>
-		`}},Ge=({params:d})=>{const n=Me(d.categoria);if(!n)throw G(404,"Categoria não encontrada");const a=we(d.slug),t=Le[d.slug];if(!a||!t)throw G(404,"Artigo não encontrado");if(a.categorySlug!==d.categoria)throw G(404,"Artigo não encontrado nesta categoria");return{categoria:d.categoria,category:n,slug:d.slug,post:a,content:t}},Aa=Object.freeze(Object.defineProperty({__proto__:null,load:Ge},Symbol.toStringTag,{value:"Module"}));var We=u('<div class="faq-item"><h3> </h3> <p> </p></div>'),Xe=u('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),Ke=u('<span class="tag svelte-lxkfym"> </span>'),Ye=u("<!> Conversar",1),Ze=u(`<div class="post-content"><!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo com mais de 8 anos de experiência em psicoterapia com
+		`}},Ge=({params:d})=>{const n=_e(d.categoria);if(!n)throw G(404,"Categoria não encontrada");const a=we(d.slug),t=Le[d.slug];if(!a||!t)throw G(404,"Artigo não encontrado");if(a.categorySlug!==d.categoria)throw G(404,"Artigo não encontrado nesta categoria");return{categoria:d.categoria,category:n,slug:d.slug,post:a,content:t}},Aa=Object.freeze(Object.defineProperty({__proto__:null,load:Ge},Symbol.toStringTag,{value:"Module"}));var We=p('<div class="faq-item"><h3> </h3> <p> </p></div>'),Xe=p('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),Ze=p('<span class="tag svelte-lxkfym"> </span>'),Ke=p("<!> Conversar",1),Ye=p(`<div class="post-content"><!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo com mais de 8 anos de experiência em psicoterapia com
                 a Abordagem Centrada na Pessoa. Atendo em Vitória/ES, oferecendo
-                um espaço acolhedor para você cuidar da sua saúde mental.</p> <!></div></div>`,1),ea=u('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),aa=u('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),oa=u("<!> Falar no WhatsApp",1),sa=u('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),ra=u('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Pa(d,n){ye(n,!0);const a=h(()=>n.data.post),t=h(()=>n.data.content),N=h(()=>n.data.category),U=h(()=>ke.filter(i=>i.slug!==n.data.slug&&i.categorySlug===e(a).categorySlug).slice(0,3)),P=h(()=>({"@context":"https://schema.org","@graph":[{"@type":"BlogPosting",headline:e(a).title,description:e(a).description,image:`https://psicologobernardo.com.br${e(a).image}`,author:{"@type":"Person",name:"Bernardo Carielo"},publisher:{"@type":"Organization",name:"Psicólogo Bernardo"},mainEntityOfPage:{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}},...e(t).faq?[{"@type":"FAQPage",mainEntity:e(t).faq.map(i=>({"@type":"Question",name:i.question,acceptedAnswer:{"@type":"Answer",text:i.answer}}))}]:[]]}));var E=ra(),Y=O(E);{let i=h(()=>`${e(a).title} - Psicólogo Bernardo`),V=h(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),l=h(()=>`https://psicologobernardo.com.br${e(a).image}`);Qe(Y,{get title(){return e(i)},get description(){return e(a).description},get canonical(){return e(V)},type:"article",get image(){return e(l)},get jsonLd(){return e(P)}})}var Z=r(Y,2);{let i=h(()=>[{name:"Início",href:"/"},{name:e(N).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);Fe(Z,{get items(){return e(i)}})}var T=r(Z,2),ee=s(T),F=s(ee),Q=s(F),Pe=s(Q,!0);o(Q);var $=r(Q,2),Ce=s($,!0);o($);var ae=r($,2),D=s(ae),oe=s(D);$e(oe,{size:16});var xe=r(oe);o(D);var se=r(D,2),re=s(se);De(re,{size:16});var Se=r(re);o(se),o(ae),o(F);var ie=r(F,2),ne=s(ie);o(ie),o(ee),o(T);var te=r(T,2);K(te,{variant:"white",children:(i,V)=>{var l=Ze(),v=O(l),C=s(v);Te(C,()=>e(t).htmlContent);var y=r(C,2);{var c=g=>{var z=Xe(),A=r(s(z),2);W(A,17,()=>e(t).faq,X,(w,pe)=>{var H=We(),L=s(H),Ve=s(L,!0);o(L);var ue=r(L,2),_e=s(ue,!0);o(ue),o(H),k(()=>{f(Ve,e(pe).question),f(_e,e(pe).answer)}),m(w,H)}),o(z),m(g,z)};ve(y,g=>{e(t).faq&&e(t).faq.length>0&&g(c)})}o(v);var p=r(v,2),x=s(p),_=r(s(x),2);W(_,17,()=>e(t).tags,X,(g,z)=>{var A=Ke(),w=s(A,!0);o(A),k(()=>f(w,e(z))),m(g,A)}),o(x);var M=r(x,2),j=r(s(M),2),R=s(j);Ie(R,{size:18}),o(j);var b=r(j,2),I=s(b);Be(I,{size:18}),o(b);var S=r(b,2),B=s(S);He(B,{size:18}),o(S);var J=r(S,2),Oe=s(J);Je(Oe,{size:18}),o(J),o(M),o(p);var me=r(p,2),ce=r(s(me),2),Ne=r(s(ce),4);ge(Ne,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",children:(g,z)=>{var A=Ye(),w=O(A);he(w,{size:20}),le(),m(g,A)},$$slots:{default:!0}}),o(ce),o(me),k((g,z)=>{q(j,"href",`https://api.whatsapp.com/send?text=${g??""}`),q(b,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),q(S,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${z??""}`),q(J,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(i,l)},$$slots:{default:!0}});var de=r(te,2);{var Ee=i=>{K(i,{variant:"beige",children:(V,l)=>{var v=aa(),C=r(s(v),2);W(C,21,()=>e(U),X,(y,c)=>{var p=ea(),x=s(p),_=s(x),M=r(_,2),j=s(M,!0);o(M),o(x);var R=r(x,2),b=s(R),I=s(b,!0);o(b);var S=r(b,2),B=r(s(S));Ue(B,{size:16}),o(S),o(R),o(p),k(()=>{q(p,"href",`/${e(c).categorySlug??""}/${e(c).slug??""}`),q(_,"src",e(c).image),q(_,"alt",e(c).title),f(j,e(c).category),f(I,e(c).title)}),m(y,p)}),o(C),o(v),m(V,v)},$$slots:{default:!0}})};ve(de,i=>{e(U).length>0&&i(Ee)})}var je=r(de,2);K(je,{variant:"gradient",children:(i,V)=>{var l=sa(),v=r(s(l),4);ge(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(C,y)=>{var c=oa(),p=O(c);he(p,{size:20}),le(),m(C,c)},$$slots:{default:!0}}),o(l),m(i,l)},$$slots:{default:!0}}),k(()=>{f(Pe,e(a).category),f(Ce,e(a).title),f(xe,` ${e(a).date??""}`),f(Se,` ${e(a).readTime??""}`),q(ne,"src",e(a).image),q(ne,"alt",e(a).title)}),m(d,E),Re()}export{Pa as component,Aa as universal};
+                um espaço acolhedor para você cuidar da sua saúde mental.</p> <!></div></div>`,1),ea=p('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),aa=p('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),oa=p("<!> Falar no WhatsApp",1),sa=p('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),ra=p('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Ca(d,n){Ue(n,!0);const a=h(()=>n.data.post),t=h(()=>n.data.content),N=h(()=>n.data.category),R=h(()=>ke.filter(i=>i.slug!==n.data.slug&&i.categorySlug===e(a).categorySlug).slice(0,3)),C=h(()=>({"@context":"https://schema.org","@graph":[{"@type":"BlogPosting",headline:e(a).title,description:e(a).description,image:`https://psicologobernardo.com.br${e(a).image}`,author:{"@type":"Person",name:"Bernardo Carielo"},publisher:{"@type":"Organization",name:"Psicólogo Bernardo"},mainEntityOfPage:{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}},...e(t).faq?[{"@type":"FAQPage",mainEntity:e(t).faq.map(i=>({"@type":"Question",name:i.question,acceptedAnswer:{"@type":"Answer",text:i.answer}}))}]:[]]}));var S=ra(),K=O(S);{let i=h(()=>`${e(a).title} - Psicólogo Bernardo`),V=h(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),l=h(()=>`https://psicologobernardo.com.br${e(a).image}`);Fe(K,{get title(){return e(i)},get description(){return e(a).description},get canonical(){return e(V)},type:"article",get image(){return e(l)},get jsonLd(){return e(C)}})}var Y=r(K,2);{let i=h(()=>[{name:"Início",href:"/"},{name:e(N).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);Qe(Y,{get items(){return e(i)}})}var T=r(Y,2),ee=s(T),Q=s(ee),F=s(Q),Ce=s(F,!0);o(F);var I=r(F,2),Pe=s(I,!0);o(I);var ae=r(I,2),$=s(ae),oe=s($);Ie(oe,{size:16});var xe=r(oe);o($);var se=r($,2),re=s(se);$e(re,{size:16});var Ee=r(re);o(se),o(ae),o(Q);var ie=r(Q,2),ne=s(ie);o(ie),o(ee),o(T);var te=r(T,2);Z(te,{variant:"white",children:(i,V)=>{var l=Ye(),v=O(l),P=s(v);Te(P,()=>e(t).htmlContent);var U=r(P,2);{var m=g=>{var z=Xe(),A=r(s(z),2);W(A,17,()=>e(t).faq,X,(w,ue)=>{var H=We(),L=s(H),Ve=s(L,!0);o(L);var pe=r(L,2),Me=s(pe,!0);o(pe),o(H),k(()=>{f(Ve,e(ue).question),f(Me,e(ue).answer)}),c(w,H)}),o(z),c(g,z)};ve(U,g=>{e(t).faq&&e(t).faq.length>0&&g(m)})}o(v);var u=r(v,2),x=s(u),M=r(s(x),2);W(M,17,()=>e(t).tags,X,(g,z)=>{var A=Ze(),w=s(A,!0);o(A),k(()=>f(w,e(z))),c(g,A)}),o(x);var _=r(x,2),j=r(s(_),2),y=s(j);De(y,{size:18}),o(j);var b=r(j,2),D=s(b);Be(D,{size:18}),o(b);var E=r(b,2),B=s(E);He(B,{size:18}),o(E);var J=r(E,2),Oe=s(J);Je(Oe,{size:18}),o(J),o(_),o(u);var me=r(u,2),ce=r(s(me),2),Ne=r(s(ce),4);ge(Ne,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",children:(g,z)=>{var A=Ke(),w=O(A);he(w,{size:20}),le(),c(g,A)},$$slots:{default:!0}}),o(ce),o(me),k((g,z)=>{q(j,"href",`https://api.whatsapp.com/send?text=${g??""}`),q(b,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),q(E,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${z??""}`),q(J,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),c(i,l)},$$slots:{default:!0}});var de=r(te,2);{var Se=i=>{Z(i,{variant:"beige",children:(V,l)=>{var v=aa(),P=r(s(v),2);W(P,21,()=>e(R),X,(U,m)=>{var u=ea(),x=s(u),M=s(x),_=r(M,2),j=s(_,!0);o(_),o(x);var y=r(x,2),b=s(y),D=s(b,!0);o(b);var E=r(b,2),B=r(s(E));Re(B,{size:16}),o(E),o(y),o(u),k(()=>{q(u,"href",`/${e(m).categorySlug??""}/${e(m).slug??""}`),q(M,"src",e(m).image),q(M,"alt",e(m).altText||e(m).title),f(j,e(m).category),f(D,e(m).title)}),c(U,u)}),o(P),o(v),c(V,v)},$$slots:{default:!0}})};ve(de,i=>{e(R).length>0&&i(Se)})}var je=r(de,2);Z(je,{variant:"gradient",children:(i,V)=>{var l=sa(),v=r(s(l),4);ge(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(P,U)=>{var m=oa(),u=O(m);he(u,{size:20}),le(),c(P,m)},$$slots:{default:!0}}),o(l),c(i,l)},$$slots:{default:!0}}),k(()=>{f(Ce,e(a).category),f(Pe,e(a).title),f(xe,` ${e(a).date??""}`),f(Ee,` ${e(a).readTime??""}`),q(ne,"src",e(a).image),q(ne,"alt",e(a).altText||e(a).title)}),c(d,S),ye()}export{Ca as component,Aa as universal};

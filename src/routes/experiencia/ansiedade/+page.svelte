@@ -15,11 +15,11 @@
         },
         {
             question: "A terapia pode substituir medicação para ansiedade?",
-            answer: "A psicoterapia e a medicação são tratamentos complementares. Em alguns casos, a terapia pode ser suficiente; em outros, pode ser necessário o acompanhamento conjunto com um psiquiatra. Isso depende da intensidade dos sintomas e da sua história.",
+            answer: "A psicoterapia e a medicação são recursos complementares. Em alguns casos, a terapia pode ser suficiente; em outros, pode ser necessário o acompanhamento conjunto com um psiquiatra. Isso depende da intensidade do que você vive e da sua história.",
             open: false,
         },
         {
-            question: "Posso fazer o tratamento online?",
+            question: "Posso fazer o atendimento online?",
             answer: "Sim! O atendimento online é autorizado pelo Conselho Federal de Psicologia e mantém a mesma qualidade e ética do atendimento presencial. É uma ótima opção para quem tem dificuldade de deslocamento ou prefere o conforto de casa.",
             open: false,
         },
@@ -39,7 +39,7 @@
                 "@type": "WebPage",
                 "@id": "https://psicologobernardo.com.br/experiencia/ansiedade/#webpage",
                 url: "https://psicologobernardo.com.br/experiencia/ansiedade/",
-                name: "Psicólogo para Ansiedade em Vitória ES - Tratamento Humanizado",
+                name: "Psicólogo para Ansiedade em Vitória ES - Acolhimento Humanizado",
                 isPartOf: {
                     "@id": "https://psicologobernardo.com.br/#website",
                 },
@@ -51,10 +51,10 @@
                 "@type": "Article",
                 "@id": "https://psicologobernardo.com.br/experiencia/ansiedade/#article",
                 headline:
-                    "Psicólogo para Ansiedade em Vitória ES – Tratamento Humanizado",
+                    "Psicólogo para Ansiedade em Vitória ES – Acolhimento Humanizado",
                 name: "Ansiedade: Como a Psicoterapia pode ajudar?",
                 description:
-                    "Psicólogo para ansiedade em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
+                    "Psicólogo para ansiedade em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
                 author: {
                     "@id": "https://psicologobernardo.com.br/sobre/#person",
                 },
@@ -90,8 +90,8 @@
 </script>
 
 <SEO
-    title="Psicólogo para Ansiedade em Vitória ES – Tratamento Humanizado"
-    description="Psicólogo para ansiedade em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
+    title="Psicólogo para Ansiedade em Vitória ES – Acolhimento Humanizado"
+    description="Psicólogo para ansiedade em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/experiencia/ansiedade/"
     jsonLd={anxietySchema}
     preloadImage="/images/experiencia/ansiedade-350.avif"
@@ -129,7 +129,7 @@
                 />
                 <img
                     src="/images/experiencia/ansiedade-350.webp"
-                    alt="Tratamento para ansiedade - Psicólogo em Vitória ES"
+                    alt="Acolhimento para ansiedade - Psicólogo em Vitória ES"
                     width="350"
                     height="350"
                     loading="eager"
@@ -177,8 +177,8 @@
                 e à pressão
             </li>
             <li>
-                <strong>Recursos internos</strong> para lidar com os sintomas de
-                forma mais saudável
+                <strong>Recursos internos</strong> para lidar com os sinais e sintomas
+                de forma mais saudável
             </li>
             <li>
                 <strong>Escolhas mais conscientes</strong> em relação ao seu estilo

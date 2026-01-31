@@ -9,7 +9,8 @@
             open: false,
         },
         {
-            question: "Preciso me afastar do trabalho para tratar o burnout?",
+            question:
+                "Preciso me afastar do trabalho para lidar com o burnout?",
             answer: "Depende da gravidade. Em alguns casos, o afastamento pode ser necessário para recuperação. Em outros, é possível trabalhar o burnout na terapia enquanto mantém suas atividades. Cada caso é avaliado individualmente.",
             open: false,
         },
@@ -19,7 +20,7 @@
             open: false,
         },
         {
-            question: "Posso fazer o tratamento online?",
+            question: "Posso fazer o atendimento online?",
             answer: "Sim! O atendimento online é especialmente indicado para quem tem uma rotina agitada. A qualidade do atendimento é a mesma, e você pode fazer a terapia do conforto da sua casa.",
             open: false,
         },
@@ -54,7 +55,7 @@
                     "Psicólogo para Burnout em Vitória ES – Síndrome de Esgotamento Profissional",
                 name: "Burnout: Como a Psicoterapia pode ajudar?",
                 description:
-                    "Psicólogo para burnout em Vitória ES. Tratamento para esgotamento profissional com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
+                    "Psicólogo para burnout em Vitória ES. Acompanhamento para esgotamento profissional com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
                 author: {
                     "@id": "https://psicologobernardo.com.br/sobre/#person",
                 },
@@ -91,7 +92,7 @@
 
 <SEO
     title="Psicólogo para Burnout em Vitória ES – Síndrome de Esgotamento Profissional"
-    description="Psicólogo para burnout em Vitória ES. Tratamento para esgotamento profissional com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
+    description="Psicólogo para burnout em Vitória ES. Acompanhamento para esgotamento profissional com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/experiencia/burnout/"
     jsonLd={experienceSchema}
     preloadImage="/images/experiencia/burnout-350.avif"
@@ -129,7 +130,7 @@
                 />
                 <img
                     src="/images/experiencia/burnout-350.webp"
-                    alt="Tratamento para burnout - Psicólogo em Vitória ES"
+                    alt="Acompanhamento para burnout - Psicólogo em Vitória ES"
                     width="350"
                     height="350"
                     loading="eager"

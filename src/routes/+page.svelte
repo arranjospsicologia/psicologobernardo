@@ -181,271 +181,271 @@
 
 	const homeSchema = {
 		"@context": "https://schema.org",
-		"@type": ["LocalBusiness", "ProfessionalService"],
-		"@id": "https://psicologobernardo.com.br/#organization",
-		name: "Bernardo Carielo Psicólogo",
-		alternateName: "Psicólogo Bernardo",
-		description:
-			"Psicólogo em Vitória-ES (Jardim da Penha) e Online. Especialista na Abordagem Centrada na Pessoa. Atendimento humanizado para ansiedade, depressão, autoconhecimento e relacionamentos.",
-		image: [
-			"https://psicologobernardo.com.br/images/hero/hero-600x800.webp",
-			"https://psicologobernardo.com.br/images/consultorio/ambiente-acolhedor.jpg",
-		],
-		url: "https://psicologobernardo.com.br/",
-		telephone: "+5527998331228",
-		email: "contato@psicologobernardo.com.br",
-		priceRange: "$$",
-		currenciesAccepted: "BRL",
-		paymentAccepted: "Dinheiro, Transferência Bancária, PIX",
-		foundingDate: "2017",
-		address: {
-			"@type": "PostalAddress",
-			streetAddress:
-				"Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
-			addressLocality: "Vitória",
-			addressRegion: "ES",
-			postalCode: "29060-500",
-			addressCountry: {
-				"@type": "Country",
-				name: "BR",
-			},
-		},
-		geo: {
-			"@type": "GeoCoordinates",
-			latitude: -20.2798925,
-			longitude: -40.3009252,
-		},
-		hasMap: "https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
-		containedInPlace: {
-			"@type": "LocalBusiness",
-			name: "Arranjos Psicologia",
-		},
-		areaServed: [
+		"@graph": [
 			{
-				"@type": "City",
-				name: "Vitória",
-				containedInPlace: {
-					"@type": "State",
-					name: "Espírito Santo",
+				"@type": "WebSite",
+				"@id": "https://psicologobernardo.com.br/#website",
+				url: "https://psicologobernardo.com.br/",
+				name: "Psicólogo Bernardo",
+				inLanguage: "pt-BR",
+				publisher: {
+					"@id": "https://psicologobernardo.com.br/#organization",
 				},
 			},
 			{
-				"@type": "Country",
-				name: "Brasil",
+				"@type": "WebPage",
+				"@id": "https://psicologobernardo.com.br/#webpage",
+				url: "https://psicologobernardo.com.br/",
+				name: "Bernardo Carielo Psicólogo",
+				description:
+					"Psicólogo em Vitória-ES (Jardim da Penha) e Online. Especialista na Abordagem Centrada na Pessoa. Atendimento humanizado para ansiedade, depressão, autoconhecimento e relacionamentos.",
+				isPartOf: {
+					"@id": "https://psicologobernardo.com.br/#website",
+				},
+				mainEntity: {
+					"@id": "https://psicologobernardo.com.br/#organization",
+				},
 			},
-		],
-		openingHoursSpecification: [
 			{
-				"@type": "OpeningHoursSpecification",
-				dayOfWeek: [
-					"Monday",
-					"Tuesday",
-					"Wednesday",
-					"Thursday",
-					"Friday",
+				"@type": ["LocalBusiness", "ProfessionalService"],
+				"@id": "https://psicologobernardo.com.br/#organization",
+				name: "Bernardo Carielo Psicólogo",
+				alternateName: "Psicólogo Bernardo",
+				description:
+					"Psicólogo em Vitória-ES (Jardim da Penha) e Online. Especialista na Abordagem Centrada na Pessoa. Atendimento humanizado para ansiedade, depressão, autoconhecimento e relacionamentos.",
+				image: [
+					"https://psicologobernardo.com.br/images/hero/hero-600x800.webp",
+					"https://psicologobernardo.com.br/images/consultorio/ambiente-acolhedor.jpg",
 				],
-				opens: "13:30",
-				closes: "21:00",
-			},
-		],
-		aggregateRating: {
-			"@type": "AggregateRating",
-			ratingValue: "5.0",
-			reviewCount: "25",
-			bestRating: "5",
-			worstRating: "1",
-		},
-		review: [
-			{
-				"@type": "Review",
-				reviewRating: {
-					"@type": "Rating",
-					ratingValue: "5",
-					bestRating: "5",
+				url: "https://psicologobernardo.com.br/",
+				telephone: "+5527998331228",
+				email: "contato@psicologobernardo.com.br",
+				priceRange: "$$",
+				currenciesAccepted: "BRL",
+				paymentAccepted: "Dinheiro, Transferência Bancária, PIX",
+				foundingDate: "2017",
+				address: {
+					"@type": "PostalAddress",
+					streetAddress:
+						"Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
+					addressLocality: "Vitória",
+					addressRegion: "ES",
+					postalCode: "29060-500",
+					addressCountry: {
+						"@type": "Country",
+						name: "BR",
+					},
 				},
-				author: { "@type": "Person", name: "Kleber do R." },
-				reviewBody:
-					"O Dr. Bernardo é extremamente atencioso e empático, me senti como se estivesse conversando com meu melhor amigo e tudo fluiu muito bem.",
-				datePublished: "2024-12-12",
-			},
-			{
-				"@type": "Review",
-				reviewRating: {
-					"@type": "Rating",
-					ratingValue: "5",
+				geo: {
+					"@type": "GeoCoordinates",
+					latitude: -20.2798925,
+					longitude: -40.3009252,
+				},
+				hasMap: "https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
+				containedInPlace: {
+					"@type": "LocalBusiness",
+					name: "Arranjos Psicologia",
+				},
+				areaServed: [
+					{
+						"@type": "City",
+						name: "Vitória",
+						containedInPlace: {
+							"@type": "State",
+							name: "Espírito Santo",
+						},
+					},
+					{
+						"@type": "Country",
+						name: "Brasil",
+					},
+				],
+				openingHoursSpecification: [
+					{
+						"@type": "OpeningHoursSpecification",
+						dayOfWeek: [
+							"Monday",
+							"Tuesday",
+							"Wednesday",
+							"Thursday",
+							"Friday",
+						],
+						opens: "13:30",
+						closes: "21:00",
+					},
+				],
+				aggregateRating: {
+					"@type": "AggregateRating",
+					ratingValue: "5.0",
+					reviewCount: "25",
 					bestRating: "5",
 					worstRating: "1",
 				},
-				author: { "@type": "Person", name: "Marina Benetti" },
-				reviewBody:
-					"Excelente profissional, educado, atento e empático. O espaço é acolhedor, limpo e de fácil acesso.",
-				datePublished: "2024-12-12",
-			},
-			{
-				"@type": "Review",
-				reviewRating: {
-					"@type": "Rating",
-					ratingValue: "5",
-					bestRating: "5",
-				},
-				author: { "@type": "Person", name: "Eder França Balbino" },
-				reviewBody:
-					"Sem palavras para descrever o quanto me ajudou num momento extremamente importante em minha vida.",
-				datePublished: "2024-12-12",
-			},
-			{
-				"@type": "Review",
-				reviewRating: {
-					"@type": "Rating",
-					ratingValue: "5",
-					bestRating: "5",
-				},
-				author: { "@type": "Person", name: "FG" },
-				reviewBody:
-					"Bernardo é um profissional ímpar. Atento e detalhista, ele é sempre pertinente em suas colocações.",
-				datePublished: "2020-12-08",
-			},
-			{
-				"@type": "Review",
-				reviewRating: {
-					"@type": "Rating",
-					ratingValue: "5",
-					bestRating: "5",
-				},
-				author: { "@type": "Person", name: "Gustavo" },
-				reviewBody:
-					"O Bernardo tem me ajudado demais em um dos momentos mais difíceis da minha vida. Excelente psicólogo.",
-				datePublished: "2023-12-01",
-			},
-		],
-		sameAs: [
-			"https://www.instagram.com/bcarielo",
-			"https://www.facebook.com/bcarielo",
-			"https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
-			"https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
-		],
-		hasOfferCatalog: {
-			"@type": "OfferCatalog",
-			name: "Serviços de Psicologia",
-			itemListElement: [
-				{
-					"@type": "OfferCatalog",
-					name: "Psicoterapia",
-					itemListElement: [
-						{
-							"@type": "Offer",
-							itemOffered: {
-								"@type": "Service",
-								name: "Psicoterapia Individual Presencial",
-								description:
-									"Atendimento psicológico presencial em consultório no Jardim da Penha.",
-							},
+				review: [
+					{
+						"@type": "Review",
+						reviewRating: {
+							"@type": "Rating",
+							ratingValue: "5",
+							bestRating: "5",
 						},
-						{
-							"@type": "Offer",
-							itemOffered: {
-								"@type": "Service",
-								name: "Terapia Online",
-								description:
-									"Atendimento psicológico remoto via videochamada para todo o Brasil.",
-							},
+						author: { "@type": "Person", name: "Kleber do R." },
+						reviewBody:
+							"O Dr. Bernardo é extremamente atencioso e empático, me senti como se estivesse conversando com meu melhor amigo e tudo fluiu muito bem.",
+						datePublished: "2024-12-12",
+					},
+					{
+						"@type": "Review",
+						reviewRating: {
+							"@type": "Rating",
+							ratingValue: "5",
+							bestRating: "5",
+							worstRating: "1",
 						},
-						{
-							"@type": "Offer",
-							itemOffered: {
-								"@type": "Service",
-								name: "Terapia de Casal",
-								description:
-									"Apoio para casais melhorarem a comunicação e o relacionamento.",
-							},
+						author: { "@type": "Person", name: "Marina Benetti" },
+						reviewBody:
+							"Excelente profissional, educado, atento e empático. O espaço é acolhedor, limpo e de fácil acesso.",
+						datePublished: "2024-12-12",
+					},
+					{
+						"@type": "Review",
+						reviewRating: {
+							"@type": "Rating",
+							ratingValue: "5",
+							bestRating: "5",
 						},
-					],
-				},
-				{
-					"@type": "OfferCatalog",
-					name: "Serviços Especializados",
-					itemListElement: [
-						{
-							"@type": "Offer",
-							itemOffered: {
-								"@type": "Service",
-								name: "Grupos e Rodas de Conversa",
-								description:
-									"Encontros coletivos para troca de experiências.",
-							},
+						author: {
+							"@type": "Person",
+							name: "Eder França Balbino",
 						},
-						{
-							"@type": "Offer",
-							itemOffered: {
-								"@type": "Service",
-								name: "Supervisão Profissional",
-								description:
-									"Supervisão clínica para psicólogos em formação.",
-							},
+						reviewBody:
+							"Sem palavras para descrever o quanto me ajudou num momento extremamente importante em minha vida.",
+						datePublished: "2024-12-12",
+					},
+					{
+						"@type": "Review",
+						reviewRating: {
+							"@type": "Rating",
+							ratingValue: "5",
+							bestRating: "5",
 						},
-						{
-							"@type": "Offer",
-							itemOffered: {
-								"@type": "Service",
-								name: "Terapia para Brasileiros no Exterior",
-								description:
-									"Atendimento online para brasileiros vivendo fora do país.",
-							},
+						author: { "@type": "Person", name: "FG" },
+						reviewBody:
+							"Bernardo é um profissional ímpar. Atento e detalhista, ele é sempre pertinente em suas colocações.",
+						datePublished: "2020-12-08",
+					},
+					{
+						"@type": "Review",
+						reviewRating: {
+							"@type": "Rating",
+							ratingValue: "5",
+							bestRating: "5",
 						},
-					],
-				},
-			],
-		},
-		founder: {
-			"@type": "Person",
-			name: "Bernardo Carielo",
-			jobTitle: "Psicólogo Clínico",
-			description:
-				"Psicólogo Humanista formado pela UFES, especializado na Abordagem Centrada na Pessoa, com 8+ anos de experiência clínica.",
-			image: "https://psicologobernardo.com.br/images/hero/hero-600x800.webp",
-			alumniOf: {
-				"@type": "Organization",
-				name: "Universidade Federal do Espírito Santo",
-			},
-			hasCredential: {
-				"@type": "EducationalOccupationalCredential",
-				credentialCategory: "degree",
-				educationalLevel: "graduate",
-				recognizedBy: {
-					"@type": "Organization",
-					name: "Conselho Regional de Psicologia do Espírito Santo",
-				},
-				identifier: "CRP 16/5527",
-			},
-			knowsAbout: [
-				"Abordagem Centrada na Pessoa",
-				"Psicoterapia Humanista",
-				"Terapia Individual",
-				"Terapia de Casal",
-				"Ansiedade",
-				"Depressão",
-				"Autoconhecimento",
-			],
-			worksFor: {
-				"@type": "Organization",
-				name: "Arranjos Psicologia",
-			},
-		},
-		potentialAction: {
-			"@type": "ReserveAction",
-			target: {
-				"@type": "EntryPoint",
-				urlTemplate: "https://psicologobernardo.com.br/agendar/",
-				actionPlatform: [
-					"http://schema.org/DesktopWebPlatform",
-					"http://schema.org/MobileWebPlatform",
+						author: { "@type": "Person", name: "Gustavo" },
+						reviewBody:
+							"O Bernardo tem me ajudado demais em um dos momentos mais difíceis da minha vida. Excelente psicólogo.",
+						datePublished: "2023-12-01",
+					},
 				],
+				sameAs: [
+					"https://www.instagram.com/bcarielo",
+					"https://www.facebook.com/bcarielo",
+					"https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+					"https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
+				],
+				hasOfferCatalog: {
+					"@type": "OfferCatalog",
+					name: "Serviços de Psicologia",
+					itemListElement: [
+						{
+							"@type": "OfferCatalog",
+							name: "Psicoterapia",
+							itemListElement: [
+								{
+									"@type": "Offer",
+									itemOffered: {
+										"@type": "Service",
+										name: "Psicoterapia Individual Presencial",
+										description:
+											"Atendimento psicológico presencial em consultório no Jardim da Penha.",
+									},
+								},
+								{
+									"@type": "Offer",
+									itemOffered: {
+										"@type": "Service",
+										name: "Terapia Online",
+										description:
+											"Atendimento psicológico remoto via videochamada para todo o Brasil.",
+									},
+								},
+								{
+									"@type": "Offer",
+									itemOffered: {
+										"@type": "Service",
+										name: "Terapia de Casal",
+										description:
+											"Apoio para casais melhorarem a comunicação e o relacionamento.",
+									},
+								},
+							],
+						},
+						{
+							"@type": "OfferCatalog",
+							name: "Serviços Especializados",
+							itemListElement: [
+								{
+									"@type": "Offer",
+									itemOffered: {
+										"@type": "Service",
+										name: "Grupos e Rodas de Conversa",
+										description:
+											"Encontros coletivos para troca de experiências.",
+									},
+								},
+								{
+									"@type": "Offer",
+									itemOffered: {
+										"@type": "Service",
+										name: "Supervisão Profissional",
+										description:
+											"Supervisão clínica para psicólogos em formação.",
+									},
+								},
+								{
+									"@type": "Offer",
+									itemOffered: {
+										"@type": "Service",
+										name: "Terapia para Brasileiros no Exterior",
+										description:
+											"Atendimento online para brasileiros vivendo fora do país.",
+									},
+								},
+							],
+						},
+					],
+				},
+				founder: {
+					"@id": "https://psicologobernardo.com.br/sobre/#person",
+				},
+				potentialAction: {
+					"@type": "ReserveAction",
+					target: {
+						"@type": "EntryPoint",
+						urlTemplate:
+							"https://psicologobernardo.com.br/agendar/",
+						actionPlatform: [
+							"http://schema.org/DesktopWebPlatform",
+							"http://schema.org/MobileWebPlatform",
+						],
+					},
+					result: {
+						"@type": "Reservation",
+						name: "Agendamento de Consulta",
+					},
+				},
 			},
-			result: {
-				"@type": "Reservation",
-				name: "Agendamento de Consulta",
-			},
-		},
+		],
 	};
 </script>
 

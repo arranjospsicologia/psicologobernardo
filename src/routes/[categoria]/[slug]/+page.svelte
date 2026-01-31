@@ -72,32 +72,43 @@
                 ],
             },
             {
-                "@type": post.schemaType || "Article",
-                "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#article`,
-                mainEntityOfPage: {
-                    "@type": "WebPage",
-                    "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#webpage`,
+                "@type": "WebPage",
+                "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#webpage`,
+                url: `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/`,
+                name: `${post.title} - Psicólogo Bernardo`,
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
                 },
+                mainEntity: {
+                    "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#article`,
+                },
+            },
+            {
+                "@type": "Article",
+                "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#article`,
                 headline: post.title,
+                name: post.title,
                 description: post.description,
                 image: {
                     "@type": "ImageObject",
                     url: `https://psicologobernardo.com.br${post.image}`,
-                    width: 1200,
-                    height: 630,
+                    width: 800,
+                    height: 450,
                 },
                 datePublished: convertToISO(post.date),
-                dateModified: post.lastReviewed || convertToISO(post.date),
-                isAccessibleForFree: true,
-                inLanguage: "pt-BR",
-                articleSection: post.category,
-                keywords: post.tags ? post.tags.join(", ") : undefined,
+                dateModified: post.lastReviewed
+                    ? convertToISO(post.lastReviewed)
+                    : convertToISO(post.date),
                 author: {
                     "@id": "https://psicologobernardo.com.br/sobre/#person",
                 },
                 publisher: {
                     "@id": "https://psicologobernardo.com.br/#organization",
                 },
+                inLanguage: "pt-BR",
+                isAccessibleForFree: true,
+                articleSection: post.category,
+                keywords: post.tags,
                 audience: {
                     "@type": "Audience",
                     audienceType: "General public",
@@ -110,33 +121,7 @@
                           },
                       }
                     : {}),
-                ...(post.tags
-                    ? {
-                          about: post.tags
-                              .filter(
-                                  (t) =>
-                                      !t
-                                          .toLowerCase()
-                                          .includes("saúde mental") &&
-                                      !t
-                                          .toLowerCase()
-                                          .includes("saude mental") &&
-                                      !t.toLowerCase().includes("vitória") &&
-                                      !t.toLowerCase().includes("vitoria") &&
-                                      !t
-                                          .toLowerCase()
-                                          .includes("jardim da penha") &&
-                                      !t.toLowerCase().includes("es") &&
-                                      !t
-                                          .toLowerCase()
-                                          .includes("espírito santo"),
-                              )
-                              .map((tag) => ({
-                                  "@type": "Thing",
-                                  name: tag,
-                              })),
-                      }
-                    : {}),
+                about: aboutItems,
                 ...(content.references
                     ? {
                           citation: content.references,

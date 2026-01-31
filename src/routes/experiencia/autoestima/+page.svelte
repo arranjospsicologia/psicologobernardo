@@ -54,7 +54,7 @@
                     "Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem",
                 name: "Baixa Autoestima: Como a Psicoterapia pode ajudar?",
                 description:
-                    "Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Tratamento humanizado com a Abordagem Centrada na Pessoa.",
+                    "Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Acolhimento humanizado com a Abordagem Centrada na Pessoa.",
                 author: {
                     "@id": "https://psicologobernardo.com.br/sobre/#person",
                 },
@@ -91,7 +91,7 @@
 
 <SEO
     title="Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem"
-    description="Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Tratamento humanizado com a Abordagem Centrada na Pessoa."
+    description="Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Acolhimento humanizado com a Abordagem Centrada na Pessoa."
     canonical="https://psicologobernardo.com.br/experiencia/autoestima/"
     jsonLd={experienceSchema}
     preloadImage="/images/experiencia/autoestima-350.avif"

@@ -5,12 +5,12 @@
     let faqItems = $state([
         {
             question: "Como sei se preciso de ajuda profissional?",
-            answer: "Se os sintomas de tristeza, desânimo ou perda de interesse persistem por semanas e afetam sua vida cotidiana, é um sinal de que buscar ajuda pode ser benéfico. Não é preciso esperar que as coisas fiquem 'muito ruins' — quanto antes você buscar apoio, melhor.",
+            answer: "Se os sinais de tristeza, desânimo ou perda de interesse persistem por semanas e afetam sua vida cotidiana, é um sinal de que buscar ajuda pode ser benéfico. Não é preciso esperar que as coisas fiquem 'muito ruins' — quanto antes você buscar apoio, melhor.",
             open: false,
         },
         {
             question: "A terapia substitui a medicação?",
-            answer: "A psicoterapia e a medicação são tratamentos complementares. Em muitos casos, a combinação de ambos traz os melhores resultados. Dependendo da intensidade dos sintomas, pode ser indicado também o acompanhamento com um psiquiatra.",
+            answer: "A psicoterapia e a medicação são caminhos complementares. Em muitos casos, a combinação de ambos traz os melhores resultados. Dependendo da intensidade do que você sente, pode ser indicado também o acompanhamento com um psiquiatra.",
             open: false,
         },
         {
@@ -19,7 +19,7 @@
             open: false,
         },
         {
-            question: "Posso fazer o tratamento online?",
+            question: "Posso fazer o atendimento online?",
             answer: "Sim! O atendimento online é regulamentado pelo Conselho Federal de Psicologia e é uma opção eficaz para quem tem dificuldade de deslocamento ou prefere o conforto de casa.",
             open: false,
         },
@@ -54,7 +54,7 @@
                     "Psicólogo para Depressão em Vitória ES – Acolhimento e Escuta",
                 name: "Depressão: Como a Psicoterapia pode ajudar?",
                 description:
-                    "Psicólogo para depressão em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
+                    "Psicólogo para depressão em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
                 author: {
                     "@id": "https://psicologobernardo.com.br/sobre/#person",
                 },
@@ -91,7 +91,7 @@
 
 <SEO
     title="Psicólogo para Depressão em Vitória ES – Acolhimento e Escuta"
-    description="Psicólogo para depressão em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
+    description="Psicólogo para depressão em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/experiencia/depressao/"
     jsonLd={depressionSchema}
     preloadImage="/images/experiencia/depressao-350.avif"
@@ -130,7 +130,7 @@
                 />
                 <img
                     src="/images/experiencia/depressao-350.webp"
-                    alt="Tratamento para depressão - Psicólogo em Vitória ES"
+                    alt="Acompanhamento para depressão - Psicólogo em Vitória ES"
                     width="350"
                     height="350"
                     loading="eager"

@@ -181,7 +181,7 @@
 
 	const homeSchema = {
 		"@context": "https://schema.org",
-		"@type": ["LocalBusiness", "MedicalBusiness", "ProfessionalService"],
+		"@type": ["LocalBusiness", "ProfessionalService"],
 		"@id": "https://psicologobernardo.com.br/#organization",
 		name: "Bernardo Carielo Psicólogo",
 		alternateName: "Psicólogo Bernardo",

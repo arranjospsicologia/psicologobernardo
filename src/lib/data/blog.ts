@@ -9,6 +9,7 @@ export interface BlogPost {
     date: string;
     readTime: string;
     image: string;
+    altText?: string; // SEO-optimized image description (falls back to title if not provided)
 }
 
 // Category definitions with metadata for SEO
@@ -22,6 +23,110 @@ export const categoryPages = [
 ];
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "seis-condicoes-carl-rogers",
+        title: "As Seis Condições Necessárias e Suficientes para a Mudança Terapêutica: O Legado de Carl Rogers",
+        description: "Carl Rogers afirmou que são necessárias seis condições para a mudança terapêutica. Entenda o que são as condições centrais (empatia, aceitação, congruência) e as ocultas.",
+        category: "Abordagem Centrada na Pessoa",
+        categorySlug: "acp",
+        tags: ["Abordagem Centrada na Pessoa", "Carl Rogers", "Condições Terapêuticas", "Vitória ES", "acp"],
+        date: "28 Jan 2026",
+        readTime: "9 min de leitura",
+        image: "/images/blog/seis-condicoes-carl-rogers.webp",
+        altText: "Ilustração abstrata de formas orgânicas em turquesa e bege, representando conexão e harmonia na relação terapêutica"
+    },
+    {
+        slug: "vinculos-liquidos-intimidade-digital",
+        title: "Vínculos líquidos na era digital: como recuperar a intimidade real",
+        description: "Você está mais conectado do que nunca, mas ainda se sente só? Entenda o que são vínculos líquidos e como cultivar relações mais profundas e autênticas.",
+        category: "Saúde Mental",
+        categorySlug: "saude-mental",
+        tags: ["Relacionamentos", "Intimidade", "Era Digital", "Vitória ES", "saude-mental"],
+        date: "28 Jan 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/vinculos-liquidos-intimidade-digital.webp",
+        altText: "Ilustração abstrata de duas silhuetas humanas se conectando - uma formada por pixels fragmentados representando conexões digitais, outra com formas orgânicas representando intimidade real"
+    },
+    {
+        slug: "o-silencio-na-terapia",
+        title: "O Silêncio na Terapia: Por que ele é tão importante?",
+        description: "Muitas vezes mal compreendido, o silêncio na terapia não é vazio. É um espaço de processamento e autonomia. Entenda por que ele é vital para o seu crescimento.",
+        category: "Psicoterapia",
+        categorySlug: "psicoterapia",
+        tags: ["Abordagem Centrada na Pessoa", "Psicoterapia", "Silêncio", "Autoconhecimento", "psicoterapia"],
+        date: "28 Jan 2026",
+        readTime: "5 min de leitura",
+        image: "/images/blog/o-silencio-na-terapia.webp",
+        altText: "Ilustração de duas cadeiras vazias em um ambiente tranquilo de terapia"
+    },
+    {
+        slug: "carl-rogers-revolucao-humanista",
+        title: "Carl Rogers e a revolução humanista: colocando a pessoa no centro do cuidado",
+        description: "Durante muito tempo, a psicologia olhou para o ser humano como um 'paciente'. Carl Rogers mudou isso. Entenda a revolução humanista e como ela coloca você no centro do cuidado.",
+        altText: "Ilustração abstrata sugerindo um florescimento",
+        category: "Abordagem Centrada na Pessoa",
+        categorySlug: "acp",
+        tags: ["Abordagem Centrada na Pessoa", "Carl Rogers", "Humanismo", "Vitória ES", "acp"],
+        date: "28 Jan 2026",
+        readTime: "7 min de leitura",
+        image: "/images/blog/carl-rogers-revolucao-humanista.webp"
+    },
+    {
+        slug: "rede-apoio-saude-mental-vitoria-es",
+        title: "Rede de apoio em Vitória (ES): onde encontrar ajuda além do consultório?",
+        description: "Saúde mental não se faz sozinho. Conheça os espaços públicos, grupos e serviços gratuitos de atendimento psicológico disponíveis em Vitória (ES).",
+        category: "Vitória (ES)",
+        categorySlug: "vitoria-es",
+        tags: ["Vitória ES", "Rede de Apoio", "Saúde Mental Gratuita", "Comunidade", "vitoria-es"],
+        date: "27 Jan 2026",
+        readTime: "9 min de leitura",
+        image: "/images/blog/rede-apoio-saude-mental-vitoria-es.webp",
+        altText: "Ilustração de pessoas se abraçando dentro de um círculo de pessoas de mãos dadas"
+    },
+    {
+        slug: "vicio-trabalho-workaholic-burnout",
+        title: "Vício em trabalho: quando o sucesso vira prisão",
+        description: "O vício em trabalho (workaholism) é mais do que trabalhar muito. É uma compulsão que afeta saúde, relacionamentos e identidade. Entenda os sinais e como sair desse ciclo.",
+        category: "Terapia para Homens",
+        categorySlug: "homens",
+        tags: ["Homens", "Burnout", "Workaholism", "Vitória ES", "homens"],
+        date: "27 Jan 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/vicio-trabalho-workaholic-burnout.webp"
+    },
+    {
+        slug: "como-funciona-terapia-primeira-sessao",
+        title: "Como funciona a terapia: o que esperar da primeira sessão (e das próximas)",
+        description: "Nunca fez terapia e não sabe o que esperar? Entenda como funciona o processo terapêutico, o que acontece na primeira sessão e por que não existe um jeito certo de fazer.",
+        category: "Psicoterapia",
+        categorySlug: "psicoterapia",
+        tags: ["Psicoterapia", "Primeira Sessão", "ACP", "Vitória ES", "psicoterapia"],
+        date: "27 Jan 2026",
+        readTime: "7 min de leitura",
+        image: "/images/blog/como-funciona-terapia-primeira-sessao.webp"
+    },
+    {
+        slug: "ciumes-excessivo-cuidado-controle",
+        title: "Ciúmes excessivo: quando o cuidado vira controle e sufoca a relação",
+        description: "O ciúmes excessivo nasce da insegurança e pode transformar amor em controle. Entenda os sinais, a visão da ACP sobre posse e como a terapia pode ajudar.",
+        category: "Saúde Mental",
+        categorySlug: "saude-mental",
+        tags: ["Relacionamentos", "Ciúmes", "Abuso Emocional", "Vitória ES", "saude-mental"],
+        date: "27 Jan 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/ciumes-excessivo-cuidado-controle.webp"
+    },
+    {
+        slug: "custo-vida-jardim-da-penha-ansiedade",
+        title: "Aluguel, Condomínio e Ansiedade: o peso do custo de vida em Jardim da Penha na saúde mental",
+        description: "O impacto da ansiedade financeira em quem mora em Jardim da Penha. Entenda como o alto custo de vida (aluguel, condomínio) afeta a saúde mental e o que fazer para se proteger.",
+        category: "Jardim da Penha",
+        categorySlug: "jardim-da-penha",
+        tags: ["Jardim da Penha", "Ansiedade Financeira", "Custo de Vida", "Vitória ES", "saude-mental"],
+        date: "27 Jan 2026",
+        readTime: "6 min de leitura",
+        image: "/images/blog/custo-vida-jardim-da-penha-ansiedade.webp"
+    },
     {
         slug: "terapia-para-estudantes-ufes-vitoria",
         title: "Terapia para Estudantes e Universitários em Vitória (UFES)",

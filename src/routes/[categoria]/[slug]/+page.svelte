@@ -44,6 +44,31 @@
             ),
     );
 
+    // Helper for about items
+    const aboutItems = $derived([
+        {
+            "@type": "Thing",
+            name: category.label,
+        },
+        ...(post.tags
+            ? post.tags
+                  .filter(
+                      (t) =>
+                          !t.toLowerCase().includes("vitória") &&
+                          !t.toLowerCase().includes("jardim da penha") &&
+                          !t.toLowerCase().includes("saúde mental") &&
+                          t !== post.categorySlug,
+                  )
+                  .map((t) => ({
+                      "@type": "Thing",
+                      name:
+                          t.toLowerCase() === "acp"
+                              ? "Abordagem Centrada na Pessoa"
+                              : t.charAt(0).toUpperCase() + t.slice(1),
+                  }))
+            : []),
+    ]);
+
     // Schema Generator
     const postSchema = $derived({
         "@context": "https://schema.org",

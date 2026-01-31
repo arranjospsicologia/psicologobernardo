@@ -37,16 +37,76 @@
         }));
     }
 
-    const serviceSchema = {
+    let serviceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Terapia de Casal",
-        provider: {
-            "@type": "ProfessionalService",
-            name: "Bernardo Carielo Psicólogo",
-            telephone: "+55 27 99833-1228",
-        },
-    };
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/servicos/terapia-de-casal/#webpage",
+                url: "https://psicologobernardo.com.br/servicos/terapia-de-casal/",
+                name: "Terapia de Casal em Vitória – Espaço de escuta e reconexão",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+            },
+            {
+                "@type": "Service",
+                serviceType: "Terapia de Casal",
+                name: "Terapia de Casal em Vitória",
+                description:
+                    "Terapia de casal focada em fortalecer o diálogo, resolver conflitos e reconstruir o vínculo. Atendimento presencial e online.",
+                provider: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                areaServed: [
+                    {
+                        "@type": "City",
+                        name: "Vitória",
+                        containedInPlace: {
+                            "@type": "State",
+                            name: "ES",
+                        },
+                    },
+                    {
+                        "@type": "Country",
+                        name: "Brasil",
+                    },
+                ],
+                offers: {
+                    "@type": "Offer",
+                    url: "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                    priceCurrency: "BRL",
+                },
+                potentialAction: {
+                    "@type": "ReserveAction",
+                    target: {
+                        "@type": "EntryPoint",
+                        urlTemplate:
+                            "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                        actionPlatform: [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform",
+                        ],
+                    },
+                    result: {
+                        "@type": "Reservation",
+                        name: "Agendar Consulta",
+                    },
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

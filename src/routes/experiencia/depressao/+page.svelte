@@ -32,21 +32,61 @@
         }));
     }
 
-    const depressionSchema = {
+    let depressionSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "MedicalCondition",
-        name: "Depressão",
-        alternateName: ["Transtorno Depressivo", "Tristeza Profunda"],
-        possibleTreatment: {
-            "@type": "PsychologicalTreatment",
-            name: "Psicoterapia com Abordagem Centrada na Pessoa",
-            provider: {
-                "@type": "Physician",
-                name: "Bernardo Carielo",
-                telephone: "+55 27 99833-1228",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/experiencia/depressao/#webpage",
+                url: "https://psicologobernardo.com.br/experiencia/depressao/",
+                name: "Psicólogo para Depressão em Vitória ES – Acolhimento e Escuta",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/experiencia/depressao/#article",
+                },
             },
-        },
-    };
+            {
+                "@type": "Article",
+                "@id": "https://psicologobernardo.com.br/experiencia/depressao/#article",
+                headline:
+                    "Psicólogo para Depressão em Vitória ES – Acolhimento e Escuta",
+                name: "Depressão: Como a Psicoterapia pode ajudar?",
+                description:
+                    "Psicólogo para depressão em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
+                author: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
+                publisher: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                image: {
+                    "@type": "ImageObject",
+                    url: "https://psicologobernardo.com.br/images/experiencia/depressao-350.avif",
+                    width: 350,
+                    height: 350,
+                },
+                inLanguage: "pt-BR",
+                mentions: {
+                    "@type": "Service",
+                    "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#service",
+                    name: "Psicoterapia Individual",
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

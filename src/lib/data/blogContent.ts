@@ -3,6 +3,11 @@ export interface PostContent {
 	slug: string;
 	htmlContent: string;
 	tags: string[];
+	faq?: {
+		question: string;
+		answer: string;
+	}[];
+	references?: string[];
 }
 
 export const postContents: Record<string, PostContent> = {
@@ -144,31 +149,30 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>As seis condições substituem técnicas terapêuticas?</h3>
-					<p>Na visão de Rogers, sim. Ele acreditava que nenhuma técnica específica era necessária se essas condições estivessem presentes. A relação, por si só, é terapêutica. Outras abordagens usam técnicas adicionais, mas na ACP, o foco está na qualidade do encontro humano.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Preciso conhecer essas condições para fazer terapia?</h3>
-					<p>Não. A maioria das pessoas não conhece esses termos e mesmo assim se beneficia da terapia. Mas entender o que faz uma relação terapêutica funcionar pode ajudar você a reconhecer quando está em um espaço seguro, e quando não está.</p>
-				</div>
-				<div class="faq-item">
-					<h3>A terapia online oferece essas mesmas condições?</h3>
-					<p>Sim. As seis condições não dependem de um espaço físico, mas da qualidade da relação. A terapia online pode ser tão eficaz quanto a presencial, desde que terapeuta e cliente consigam estabelecer contato psicológico genuíno.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Quanto tempo leva para essas condições 'funcionarem'?</h3>
-					<p>Não há prazo. Rogers falava em 'um período de tempo' sem especificar. Algumas pessoas sentem os efeitos rapidamente; para outras, leva meses. O importante é que as condições se mantenham consistentes ao longo do processo.</p>
-				</div>
-				<div class="faq-item">
-					<h3>E se eu não me sentir acolhido pelo terapeuta?</h3>
-					<p>É totalmente legítimo mudar de profissional. A sexta condição - de que você perceba a empatia e aceitação - é fundamental. Se isso não acontece, a mudança terapêutica fica comprometida. Um bom terapeuta entenderá essa decisão.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "As seis condições substituem técnicas terapêuticas?",
+				answer: "Na visão de Rogers, sim. Ele acreditava que nenhuma técnica específica era necessária se essas condições estivessem presentes. A relação, por si só, é terapêutica. Outras abordagens usam técnicas adicionais, mas na ACP, o foco está na qualidade do encontro humano."
+			},
+			{
+				question: "Preciso conhecer essas condições para fazer terapia?",
+				answer: "Não. A maioria das pessoas não conhece esses termos e mesmo assim se beneficia da terapia. Mas entender o que faz uma relação terapêutica funcionar pode ajudar você a reconhecer quando está em um espaço seguro, e quando não está."
+			},
+			{
+				question: "A terapia online oferece essas mesmas condições?",
+				answer: "Sim. As seis condições não dependem de um espaço físico, mas da qualidade da relação. A terapia online pode ser tão eficaz quanto a presencial, desde que terapeuta e cliente consigam estabelecer contato psicológico genuíno."
+			},
+			{
+				question: "Quanto tempo leva para essas condições 'funcionarem'?",
+				answer: "Não há prazo. Rogers falava em 'um período de tempo' sem especificar. Algumas pessoas sentem os efeitos rapidamente; para outras, leva meses. O importante é que as condições se mantenham consistentes ao longo do processo."
+			},
+			{
+				question: "E se eu não me sentir acolhido pelo terapeuta?",
+				answer: "É totalmente legítimo mudar de profissional. A sexta condição - de que você perceba a empatia e aceitação - é fundamental. Se isso não acontece, a mudança terapêutica fica comprometida. Um bom terapeuta entenderá essa decisão."
+			}
+		]
 	},
 	"vinculos-liquidos-intimidade-digital": {
 		slug: "vinculos-liquidos-intimidade-digital",
@@ -300,31 +304,30 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>Vínculos líquidos significam que estou fazendo algo errado?</h3>
-					<p>Não necessariamente. Vínculos líquidos são uma característica da nossa época, não uma falha pessoal. A questão não é culpa, mas consciência: ao perceber esse padrão, você pode escolher caminhos diferentes.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Terapia ajuda a construir relacionamentos mais profundos?</h3>
-					<p>Sim. A terapia oferece um espaço seguro para entender seus padrões de vínculo, trabalhar medos de vulnerabilidade e aprender formas mais autênticas de se relacionar.</p>
-				</div>
-				<div class="faq-item">
-					<h3>É possível ter intimidade em relacionamentos online?</h3>
-					<p>É possível, mas exige intencionalidade. Relacionamentos à distância ou mediados pela tecnologia podem ter profundidade, desde que haja espaço para vulnerabilidade e escuta real, não apenas trocas rápidas.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Como saber se um vínculo é líquido ou profundo?</h3>
-					<p>Pergunte-se: nessa relação, eu posso ser vulnerável? O outro me conhece além da superfície? Existe espaço para desacordos sem que a relação se rompa? Esses são bons indicadores.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Qual a diferença entre estar sozinho e estar solitário?</h3>
-					<p>Estar sozinho é um estado físico; estar solitário é emocional. Você pode se sentir solitário no meio de uma multidão, e em paz completa em sua própria companhia. O que muda é a qualidade das conexões que você nutre.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "Vínculos líquidos significam que estou fazendo algo errado?",
+				answer: "Não necessariamente. Vínculos líquidos são uma característica da nossa época, não uma falha pessoal. A questão não é culpa, mas consciência: ao perceber esse padrão, você pode escolher caminhos diferentes."
+			},
+			{
+				question: "Terapia ajuda a construir relacionamentos mais profundos?",
+				answer: "Sim. A terapia oferece um espaço seguro para entender seus padrões de vínculo, trabalhar medos de vulnerabilidade e aprender formas mais autênticas de se relacionar."
+			},
+			{
+				question: "É possível ter intimidade em relacionamentos online?",
+				answer: "É possível, mas exige intencionalidade. Relacionamentos à distância ou mediados pela tecnologia podem ter profundidade, desde que haja espaço para vulnerabilidade e escuta real, não apenas trocas rápidas."
+			},
+			{
+				question: "Como saber se um vínculo é líquido ou profundo?",
+				answer: "Pergunte-se: nessa relação, eu posso ser vulnerável? O outro me conhece além da superfície? Existe espaço para desacordos sem que a relação se rompa? Esses são bons indicadores."
+			},
+			{
+				question: "Qual a diferença entre estar sozinho e estar solitário?",
+				answer: "Estar sozinho é um estado físico; estar solitário é emocional. Você pode se sentir solitário no meio de uma multidão, e em paz completa em sua própria companhia. O que muda é a qualidade das conexões que você nutre."
+			}
+		]
 	},
 	"o-silencio-na-terapia": {
 		slug: "o-silencio-na-terapia",
@@ -378,23 +381,22 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>O silêncio na terapia é constrangedor?</h3>
-					<p>Pode ser no início, pois não estamos acostumados com silêncios 'compartilhados' socialmente. Mas com o tempo e o vínculo terapêutico, ele se torna um espaço de conforto e descanso mental.</p>
-				</div>
-				<div class="faq-item">
-					<h3>E se eu não tiver nada para falar?</h3>
-					<p>Tudo bem. Às vezes, o 'nada para falar' esconde um cansaço, uma necessidade de pausa ou uma emoção que ainda não tem palavras. O silêncio permite que isso apareça.</p>
-				</div>
-				<div class="faq-item">
-					<h3>O psicólogo fica em silêncio me julgando?</h3>
-					<p>Jamais. Na Abordagem Centrada na Pessoa, o silêncio do terapeuta é uma expressão de aceitação e respeito pelo seu processo. Ele está focado em compreender o seu mundo, não em julgá-lo.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "O silêncio na terapia é constrangedor?",
+				answer: "Pode ser no início, pois não estamos acostumados com silêncios 'compartilhados' socialmente. Mas com o tempo e o vínculo terapêutico, ele se torna um espaço de conforto e descanso mental."
+			},
+			{
+				question: "E se eu não tiver nada para falar?",
+				answer: "Tudo bem. Às vezes, o 'nada para falar' esconde um cansaço, uma necessidade de pausa ou uma emoção que ainda não tem palavras. O silêncio permite que isso apareça."
+			},
+			{
+				question: "O psicólogo fica em silêncio me julgando?",
+				answer: "Jamais. Na Abordagem Centrada na Pessoa, o silêncio do terapeuta é uma expressão de aceitação e respeito pelo seu processo. Ele está focado em compreender o seu mundo, não em julgá-lo."
+			}
+		]
 	},
 	"carl-rogers-revolucao-humanista": {
 		slug: "carl-rogers-revolucao-humanista",
@@ -504,23 +506,22 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>A Abordagem Centrada na Pessoa serve para ansiedade?</h3>
-					<p>Sim. A ansiedade muitas vezes surge quando tentamos ser o que não somos (incongruência). Ao encontrar um espaço seguro para ser você mesmo, a tensão diminui e você aprende a lidar com seus sentimentos de forma mais fluida, reduzindo os sintomas ansiosos.</p>
-				</div>
-				<div class="faq-item">
-					<h3>O psicólogo humanista não dá conselhos?</h3>
-					<p>Nós evitamos dar conselhos diretos ('faça isso', 'termine aquilo') porque acreditamos que isso retira a sua autonomia. Ninguém sabe melhor da sua vida do que você. Nosso papel é ajudar você a organizar seus pensamentos e sentimentos para que **você** tome as melhores decisões para si.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Qual a diferença entre Psicanálise e Humanismo?</h3>
-					<p>De forma simplificada: a Psicanálise foca bastante no inconsciente, no passado e na interpretação do analista. O Humanismo foca mais na experiência consciente do 'aqui e agora', no potencial de crescimento futuro e na relação igualitária entre terapeuta e cliente. Ambas são excelentes, dependendo do que você busca.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "A Abordagem Centrada na Pessoa serve para ansiedade?",
+				answer: "Sim. A ansiedade muitas vezes surge quando tentamos ser o que não somos (incongruência). Ao encontrar um espaço seguro para ser você mesmo, a tensão diminui e você aprende a lidar com seus sentimentos de forma mais fluida, reduzindo os sintomas ansiosos."
+			},
+			{
+				question: "O psicólogo humanista não dá conselhos?",
+				answer: "Nós evitamos dar conselhos diretos ('faça isso', 'termine aquilo') porque acreditamos que isso retira a sua autonomia. Ninguém sabe melhor da sua vida do que você. Nosso papel é ajudar você a organizar seus pensamentos e sentimentos para que **você** tome as melhores decisões para si."
+			},
+			{
+				question: "Qual a diferença entre Psicanálise e Humanismo?",
+				answer: "De forma simplificada: a Psicanálise foca bastante no inconsciente, no passado e na interpretação do analista. O Humanismo foca mais na experiência consciente do 'aqui e agora', no potencial de crescimento futuro e na relação igualitária entre terapeuta e cliente. Ambas são excelentes, dependendo do que você busca."
+			}
+		]
 	},
 	"rede-apoio-saude-mental-vitoria-es": {
 		slug: "rede-apoio-saude-mental-vitoria-es",
@@ -653,27 +654,26 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>Existe psicólogo gratuito em Vitória?</h3>
-					<p>Sim. Clínicas-escola de universidades (UFES, UVV, FAESA, Multivix, Unisales) oferecem atendimento gratuito ou com valor social. Os CAPS do SUS também atendem gratuitamente casos de sofrimento psíquico intenso.</p>
-				</div>
-				<div class="faq-item">
-					<h3>O que é o CAPS e quem pode usar?</h3>
-					<p>CAPS são Centros de Atenção Psicossocial do SUS, voltados para pessoas com transtornos mentais graves ou uso problemático de substâncias. Funcionam com acolhimento imediato (porta aberta) e não exigem encaminhamento.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Praças e parques ajudam na saúde mental?</h3>
-					<p>Sim. Estudos mostram que contato com natureza, movimento físico e convivência social ajudam a regular emoções e reduzir estresse. Não substituem tratamento, mas funcionam como sustentação no dia a dia.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Como sei se preciso de terapia ou só de mais rede de apoio?</h3>
-					<p>Se você consegue lidar com o que sente usando seus recursos (amigos, atividades, descanso), ótimo. Se o sofrimento persiste, interfere na rotina ou parece maior do que você consegue carregar, a terapia pode ajudar. Não existe resposta única: cada pessoa vive um momento.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "Existe psicólogo gratuito em Vitória?",
+				answer: "Sim. Clínicas-escola de universidades (UFES, UVV, FAESA, Multivix, Unisales) oferecem atendimento gratuito ou com valor social. Os CAPS do SUS também atendem gratuitamente casos de sofrimento psíquico intenso."
+			},
+			{
+				question: "O que é o CAPS e quem pode usar?",
+				answer: "CAPS são Centros de Atenção Psicossocial do SUS, voltados para pessoas com transtornos mentais graves ou uso problemático de substâncias. Funcionam com acolhimento imediato (porta aberta) e não exigem encaminhamento."
+			},
+			{
+				question: "Praças e parques ajudam na saúde mental?",
+				answer: "Sim. Estudos mostram que contato com natureza, movimento físico e convivência social ajudam a regular emoções e reduzir estresse. Não substituem tratamento, mas funcionam como sustentação no dia a dia."
+			},
+			{
+				question: "Como sei se preciso de terapia ou só de mais rede de apoio?",
+				answer: "Se você consegue lidar com o que sente usando seus recursos (amigos, atividades, descanso), ótimo. Se o sofrimento persiste, interfere na rotina ou parece maior do que você consegue carregar, a terapia pode ajudar. Não existe resposta única: cada pessoa vive um momento."
+			}
+		]
 	},
 	"vicio-trabalho-workaholic-burnout": {
 		slug: "vicio-trabalho-workaholic-burnout",
@@ -778,27 +778,26 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>O vício em trabalho é uma doença?</h3>
-					<p>Não é classificado oficialmente como transtorno, mas é reconhecido como um padrão comportamental que pode causar sofrimento significativo e problemas de saúde. A OMS reconhece o burnout como fenômeno ocupacional relacionado ao estresse crônico no trabalho.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Como saber se trabalho muito ou sou workaholic?</h3>
-					<p>A diferença está na relação, não na quantidade. Se você consegue desligar, descansar sem culpa e tem outras fontes de satisfação além do trabalho, provavelmente está bem. Se parar gera ansiedade e sua identidade depende do trabalho, vale prestar atenção.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Terapia ajuda com vício em trabalho?</h3>
-					<p>Sim. A terapia oferece um espaço para entender o que está por trás do comportamento compulsivo, trabalhar questões de autoestima e construir formas mais saudáveis de se relacionar consigo mesmo e com o trabalho.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Burnout tem cura?</h3>
-					<p>Burnout não é uma 'doença' que se cura com remédio, mas uma resposta do organismo ao estresse crônico. A recuperação envolve mudanças no estilo de vida, revisão de prioridades e, muitas vezes, acompanhamento profissional (psicológico e/ou médico).</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "O vício em trabalho é uma doença?",
+				answer: "Não é classificado oficialmente como transtorno, mas é reconhecido como um padrão comportamental que pode causar sofrimento significativo e problemas de saúde. A OMS reconhece o burnout como fenômeno ocupacional relacionado ao estresse crônico no trabalho."
+			},
+			{
+				question: "Como saber se trabalho muito ou sou workaholic?",
+				answer: "A diferença está na relação, não na quantidade. Se você consegue desligar, descansar sem culpa e tem outras fontes de satisfação além do trabalho, provavelmente está bem. Se parar gera ansiedade e sua identidade depende do trabalho, vale prestar atenção."
+			},
+			{
+				question: "Terapia ajuda com vício em trabalho?",
+				answer: "Sim. A terapia oferece um espaço para entender o que está por trás do comportamento compulsivo, trabalhar questões de autoestima e construir formas mais saudáveis de se relacionar consigo mesmo e com o trabalho."
+			},
+			{
+				question: "Burnout tem cura?",
+				answer: "Burnout não é uma 'doença' que se cura com remédio, mas uma resposta do organismo ao estresse crônico. A recuperação envolve mudanças no estilo de vida, revisão de prioridades e, muitas vezes, acompanhamento profissional (psicológico e/ou médico)."
+			}
+		]
 	},
 	"como-funciona-terapia-primeira-sessao": {
 		slug: "como-funciona-terapia-primeira-sessao",
@@ -895,27 +894,26 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>A terapia funciona para qualquer pessoa?</h3>
-					<p>A terapia pode ajudar pessoas em diferentes momentos e contextos. Não existe um perfil específico. O mais importante é que você sinta vontade de explorar o que está vivendo e encontre um profissional com quem se sinta à vontade.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Quanto tempo dura um processo terapêutico?</h3>
-					<p>Não existe uma resposta única. Algumas pessoas fazem terapia por meses, outras por anos. A duração depende dos seus objetivos, do que surge no processo e de como você se sente ao longo do caminho.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Como saber se o psicólogo é o certo pra mim?</h3>
-					<p>A relação terapêutica é fundamental. Se você não se sentir acolhido ou à vontade, é legítimo buscar outro profissional. Na primeira sessão, preste atenção em como você se sente: se existe espaço para ser você, sem máscaras.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Terapia online funciona?</h3>
-					<p>Sim. A terapia online segue os mesmos princípios da presencial. A diferença é o meio. Para muitas pessoas, a flexibilidade do online facilita a continuidade do processo.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "A terapia funciona para qualquer pessoa?",
+				answer: "A terapia pode ajudar pessoas em diferentes momentos e contextos. Não existe um perfil específico. O mais importante é que você sinta vontade de explorar o que está vivendo e encontre um profissional com quem se sinta à vontade."
+			},
+			{
+				question: "Quanto tempo dura um processo terapêutico?",
+				answer: "Não existe uma resposta única. Algumas pessoas fazem terapia por meses, outras por anos. A duração depende dos seus objetivos, do que surge no processo e de como você se sente ao longo do caminho."
+			},
+			{
+				question: "Como saber se o psicólogo é o certo pra mim?",
+				answer: "A relação terapêutica é fundamental. Se você não se sentir acolhido ou à vontade, é legítimo buscar outro profissional. Na primeira sessão, preste atenção em como você se sente: se existe espaço para ser você, sem máscaras."
+			},
+			{
+				question: "Terapia online funciona?",
+				answer: "Sim. A terapia online segue os mesmos princípios da presencial. A diferença é o meio. Para muitas pessoas, a flexibilidade do online facilita a continuidade do processo."
+			}
+		]
 	},
 	"ciumes-excessivo-cuidado-controle": {
 		slug: "ciumes-excessivo-cuidado-controle",
@@ -1013,27 +1011,26 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>O ciúmes excessivo é uma doença?</h3>
-					<p>Não necessariamente. O ciúmes faz parte da experiência humana. No entanto, quando se torna obsessivo, interfere na rotina e causa sofrimento significativo, pode estar associado a questões como ansiedade, baixa autoestima ou, em casos mais intensos, transtornos que merecem atenção profissional.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Como saber se meu relacionamento é abusivo?</h3>
-					<p>Alguns sinais incluem: controle excessivo sobre suas ações, isolamento de amigos e família, humilhações frequentes, ciúmes como justificativa para agressões verbais ou físicas. Se você se sente constantemente vigiado(a) ou com medo, busque apoio. O CVV (188) e a Central de Atendimento à Mulher (180) são canais de ajuda.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Terapia ajuda a lidar com ciúmes?</h3>
-					<p>Sim. A terapia oferece um espaço para entender as raízes do ciúmes, trabalhar a autoestima e desenvolver formas mais saudáveis de se relacionar. Na Abordagem Centrada na Pessoa, o foco está em você: não em corrigir comportamentos, mas em compreender o que está por trás deles.</p>
-				</div>
-				<div class="faq-item">
-					<h3>É possível amar sem sentir ciúmes?</h3>
-					<p>É possível amar com menos ciúmes, sim. Conforme você constrói segurança interna e confiança no vínculo, o ciúmes tende a diminuir. Isso não significa que ele desaparece por completo, mas deixa de governar suas ações.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "O ciúmes excessivo é uma doença?",
+				answer: "Não necessariamente. O ciúmes faz parte da experiência humana. No entanto, quando se torna obsessivo, interfere na rotina e causa sofrimento significativo, pode estar associado a questões como ansiedade, baixa autoestima ou, em casos mais intensos, transtornos que merecem atenção profissional."
+			},
+			{
+				question: "Como saber se meu relacionamento é abusivo?",
+				answer: "Alguns sinais incluem: controle excessivo sobre suas ações, isolamento de amigos e família, humilhações frequentes, ciúmes como justificativa para agressões verbais ou físicas. Se você se sente constantemente vigiado(a) ou com medo, busque apoio. O CVV (188) e a Central de Atendimento à Mulher (180) são canais de ajuda."
+			},
+			{
+				question: "Terapia ajuda a lidar com ciúmes?",
+				answer: "Sim. A terapia oferece um espaço para entender as raízes do ciúmes, trabalhar a autoestima e desenvolver formas mais saudáveis de se relacionar. Na Abordagem Centrada na Pessoa, o foco está em você: não em corrigir comportamentos, mas em compreender o que está por trás deles."
+			},
+			{
+				question: "É possível amar sem sentir ciúmes?",
+				answer: "É possível amar com menos ciúmes, sim. Conforme você constrói segurança interna e confiança no vínculo, o ciúmes tende a diminuir. Isso não significa que ele desaparece por completo, mas deixa de governar suas ações."
+			}
+		]
 	},
 	"custo-vida-jardim-da-penha-ansiedade": {
 		slug: "custo-vida-jardim-da-penha-ansiedade",
@@ -1119,23 +1116,22 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>Ansiedade financeira é doença?</h3>
-					<p>Não é uma classificação médica, mas é um estado de estresse e preocupação intensa que pode afetar muito o bem-estar e a qualidade de vida, podendo contribuir para outros quadros de sofrimento emocional.</p>
-				</div>
-				<div class="faq-item">
-					<h3>O estresse com dinheiro pode causar problemas físicos?</h3>
-					<p>Sim, é comum que a tensão constante se manifeste no corpo (dores de cabeça, alterações de sono, tensão muscular). Se os sintomas persistirem, é importante buscar avaliação médica e psicológica.</p>
-				</div>
-				<div class="faq-item">
-					<h3>Psicólogo ajuda a lidar com dívidas?</h3>
-					<p>O psicólogo não atua como consultor financeiro, mas ajuda você a lidar com as emoções, medos e comportamentos relacionados ao dinheiro, fortalecendo sua capacidade de enfrentar a situação com mais clareza.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "Ansiedade financeira é doença?",
+				answer: "Não é uma classificação médica, mas é um estado de estresse e preocupação intensa que pode afetar muito o bem-estar e a qualidade de vida, podendo contribuir para outros quadros de sofrimento emocional."
+			},
+			{
+				question: "O estresse com dinheiro pode causar problemas físicos?",
+				answer: "Sim, é comum que a tensão constante se manifeste no corpo (dores de cabeça, alterações de sono, tensão muscular). Se os sintomas persistirem, é importante buscar avaliação médica e psicológica."
+			},
+			{
+				question: "Psicólogo ajuda a lidar com dívidas?",
+				answer: "O psicólogo não atua como consultor financeiro, mas ajuda você a lidar com as emoções, medos e comportamentos relacionados ao dinheiro, fortalecendo sua capacidade de enfrentar a situação com mais clareza."
+			}
+		]
 	},
 	"terapia-para-estudantes-ufes-vitoria": {
 		slug: "terapia-para-estudantes-ufes-vitoria",
@@ -1271,70 +1267,58 @@ export const postContents: Record<string, PostContent> = {
 				</p>
 			</section>
 
-			<section id="faq">
-				<h2>Perguntas Frequentes</h2>
 
-				<div class="faq-item">
-					<h3>Terapia para estudantes em Vitória: quando vale a pena procurar?</h3>
-					<p>Vale a pena procurar terapia quando a rotina da faculdade começa a pesar demais (ansiedade, estresse, insônia, dificuldade de concentração, procrastinação intensa, conflitos em casa, queda de rendimento ou sensação de estar “travado”). A terapia também pode ajudar mesmo sem um “grande problema”: para organizar escolhas, emoções e limites durante a graduação.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Existe psicólogo perto da UFES (Jardim da Penha)?</h3>
-					<p>Sim. Há consultórios na região de Jardim da Penha e arredores, próximos à UFES. Para muitos estudantes, escolher um psicólogo perto da universidade facilita manter a regularidade das sessões, reduzindo barreiras como trânsito, falta de tempo e cansaço após aulas, estágio ou laboratório.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Terapia presencial ou online: o que é melhor para universitários?</h3>
-					<p>Depende da sua rotina e do seu conforto. A terapia presencial pode ajudar quem sente necessidade de um espaço físico de pausa e privacidade. A terapia online costuma ser útil quando o tempo é apertado, quando você mora longe ou quando a logística de deslocamento atrapalha. O mais importante é escolher um formato que seja sustentável ao longo do semestre.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Quanto tempo dura a terapia? Dá para fazer durante o semestre?</h3>
-					<p>A duração varia conforme objetivos e momento de vida. Muitas pessoas fazem terapia de forma contínua por um período, enquanto outras preferem ciclos (por exemplo, atravessar uma fase de provas, TCC ou transição de curso). É comum e possível manter terapia durante o semestre — e, em geral, a regularidade ajuda a lidar melhor com os picos de pressão acadêmica.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Terapia ajuda com ansiedade na faculdade e pressão por desempenho?</h3>
-					<p>A terapia pode ajudar a compreender gatilhos de ansiedade e pressão, construir estratégias de regulação emocional, reorganizar prioridades e reduzir o ciclo de autocobrança e evitamento (como procrastinação). Além disso, pode apoiar a criação de limites mais realistas e um jeito mais sustentável de estudar e viver a graduação.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>O que acontece na primeira sessão de terapia?</h3>
-					<p>A primeira sessão costuma ser um momento de acolhimento e entendimento do que você está vivendo. Você pode falar sobre sua rotina, dificuldades, contexto (UFES, estágio, provas, TCC) e o que espera do processo. Também é o momento de tirar dúvidas sobre abordagem, frequência, valores e regras de remarcação, para que o acordo fique claro desde o início.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Como escolher um psicólogo para estudantes em Vitória (ES)?</h3>
-					<p>Alguns critérios ajudam: confirmar registro no CRP, entender a abordagem (e se ela combina com você), verificar disponibilidade de horários compatíveis com aula/estágio, considerar localização (por exemplo, Jardim da Penha/UFES) e observar se você se sente respeitado e confortável na comunicação. A qualidade da relação terapêutica é um fator importante para a continuidade do processo.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Psicólogo precisa ter experiência com universitários e TCC para atender estudantes?</h3>
-					<p>Não é obrigatório, mas pode ajudar. Muitos estudantes buscam terapia por temas comuns nessa fase (ansiedade acadêmica, escolhas, autonomia, relações, TCC, futuro profissional). O essencial é encontrar um psicólogo com registro no CRP, postura ética e uma abordagem que faça sentido para você — além de uma comunicação clara e acolhedora.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Como funciona a confidencialidade (sigilo) na terapia para estudantes?</h3>
-					<p>O atendimento psicológico é protegido por sigilo profissional. Em geral, o que você compartilha em sessão não é repassado a familiares, universidade ou terceiros. Existem exceções previstas por ética e legislação, que o psicólogo pode explicar de forma transparente no início do processo.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Quais horários costumam funcionar melhor para estudantes da UFES?</h3>
-					<p>Muitos universitários preferem horários no início da manhã, entre turnos, no fim da tarde ou à noite — dependendo de grade, estágio e deslocamento. Para aumentar a chance de manter o cuidado, vale escolher um horário realista e repetir semanalmente, evitando depender de “brechas” raras na agenda.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Terapia é indicada para quem está fazendo TCC e está travado?</h3>
-					<p>Pode ser indicada quando o TCC vira fonte de sofrimento, paralisia, autocobrança intensa ou sensação de incapacidade. A terapia pode ajudar a entender o que mantém o travamento, reduzir o peso emocional do processo e construir uma forma mais gentil e possível de seguir, respeitando limites e realidade da rotina.</p>
-				</div>
-
-				<div class="faq-item">
-					<h3>Como agendar terapia perto da UFES em Vitória (ES)?</h3>
-					<p>Você pode começar entrando em contato pelo site para tirar dúvidas e verificar horários disponíveis. Se a prioridade for praticidade, vale informar que você estuda na UFES e qual turno/rotina (aulas, estágio, laboratório), para buscar um horário compatível e sustentável durante o semestre.</p>
-				</div>
-			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "Terapia para estudantes em Vitória: quando vale a pena procurar?",
+				answer: "Vale a pena procurar terapia quando a rotina da faculdade começa a pesar demais (ansiedade, estresse, insônia, dificuldade de concentração, procrastinação intensa, conflitos em casa, queda de rendimento ou sensação de estar “travado”). A terapia também pode ajudar mesmo sem um “grande problema”: para organizar escolhas, emoções e limites durante a graduação."
+			},
+			{
+				question: "Existe psicólogo perto da UFES (Jardim da Penha)?",
+				answer: "Sim. Há consultórios na região de Jardim da Penha e arredores, próximos à UFES. Para muitos estudantes, escolher um psicólogo perto da universidade facilita manter a regularidade das sessões, reduzindo barreiras como trânsito, falta de tempo e cansaço após aulas, estágio ou laboratório."
+			},
+			{
+				question: "Terapia presencial ou online: o que é melhor para universitários?",
+				answer: "Depende da sua rotina e do seu conforto. A terapia presencial pode ajudar quem sente necessidade de um espaço físico de pausa e privacidade. A terapia online costuma ser útil quando o tempo é apertado, quando você mora longe ou quando a logística de deslocamento atrapalha. O mais importante é escolher um formato que seja sustentável ao longo do semestre."
+			},
+			{
+				question: "Quanto tempo dura a terapia? Dá para fazer durante o semestre?",
+				answer: "A duração varia conforme objetivos e momento de vida. Muitas pessoas fazem terapia de forma contínua por um período, enquanto outras preferem ciclos (por exemplo, atravessar uma fase de provas, TCC ou transição de curso). É comum e possível manter terapia durante o semestre — e, em geral, a regularidade ajuda a lidar melhor com os picos de pressão acadêmica."
+			},
+			{
+				question: "Terapia ajuda com ansiedade na faculdade e pressão por desempenho?",
+				answer: "A terapia pode ajudar a compreender gatilhos de ansiedade e pressão, construir estratégias de regulação emocional, reorganizar prioridades e reduzir o ciclo de autocobrança e evitamento (como procrastinação). Além disso, pode apoiar a criação de limites mais realistas e um jeito mais sustentável de estudar e viver a graduação."
+			},
+			{
+				question: "O que acontece na primeira sessão de terapia?",
+				answer: "A primeira sessão costuma ser um momento de acolhimento e entendimento do que você está vivendo. Você pode falar sobre sua rotina, dificuldades, contexto (UFES, estágio, provas, TCC) e o que espera do processo. Também é o momento de tirar dúvidas sobre abordagem, frequência, valores e regras de remarcação, para que o acordo fique claro desde o início."
+			},
+			{
+				question: "Como escolher um psicólogo para estudantes em Vitória (ES)?",
+				answer: "Alguns critérios ajudam: confirmar registro no CRP, entender a abordagem (e se ela combina com você), verificar disponibilidade de horários compatíveis com aula/estágio, considerar localização (por exemplo, Jardim da Penha/UFES) e observar se você se sente respeitado e confortável na comunicação. A qualidade da relação terapêutica é um fator importante para a continuidade do processo."
+			},
+			{
+				question: "Psicólogo precisa ter experiência com universitários e TCC para atender estudantes?",
+				answer: "Não é obrigatório, mas pode ajudar. Muitos estudantes buscam terapia por temas comuns nessa fase (ansiedade acadêmica, escolhas, autonomia, relações, TCC, futuro profissional). O essencial é encontrar um psicólogo com registro no CRP, postura ética e uma abordagem que faça sentido para você — além de uma comunicação clara e acolhedora."
+			},
+			{
+				question: "Como funciona a confidencialidade (sigilo) na terapia para estudantes?",
+				answer: "O atendimento psicológico é protegido por sigilo profissional. Em geral, o que você compartilha em sessão não é repassado a familiares, universidade ou terceiros. Existem exceções previstas por ética e legislação, que o psicólogo pode explicar de forma transparente no início do processo."
+			},
+			{
+				question: "Quais horários costumam funcionar melhor para estudantes da UFES?",
+				answer: "Muitos universitários preferem horários no início da manhã, entre turnos, no fim da tarde ou à noite — dependendo de grade, estágio e deslocamento. Para aumentar a chance de manter o cuidado, vale escolher um horário realista e repetir semanalmente, evitando depender de “brechas” raras na agenda."
+			},
+			{
+				question: "Terapia é indicada para quem está fazendo TCC e está travado?",
+				answer: "Pode ser indicada quando o TCC vira fonte de sofrimento, paralisia, autocobrança intensa ou sensação de incapacidade. A terapia pode ajudar a entender o que mantém o travamento, reduzir o peso emocional do processo e construir uma forma mais gentil e possível de seguir, respeitando limites e realidade da rotina."
+			},
+			{
+				question: "Como agendar terapia perto da UFES em Vitória (ES)?",
+				answer: "Você pode começar entrando em contato pelo site para tirar dúvidas e verificar horários disponíveis. Se a prioridade for praticidade, vale informar que você estuda na UFES e qual turno/rotina (aulas, estágio, laboratório), para buscar um horário compatível e sustentável durante o semestre."
+			}
+		]
 	},
 	"onde-cuidar-saude-mental-jardim-da-penha": {
 		slug: "onde-cuidar-saude-mental-jardim-da-penha",

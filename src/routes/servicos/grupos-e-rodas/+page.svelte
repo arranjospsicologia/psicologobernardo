@@ -32,15 +32,76 @@
         }));
     }
 
-    const serviceSchema = {
+    let serviceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Grupos e Rodas de Conversa",
-        provider: {
-            "@type": "ProfessionalService",
-            name: "Bernardo Carielo Psicólogo",
-        },
-    };
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/servicos/grupos-e-rodas/#webpage",
+                url: "https://psicologobernardo.com.br/servicos/grupos-e-rodas/",
+                name: "Grupos e Rodas de Conversa – Espaços de partilha e diálogo",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+            },
+            {
+                "@type": "Service",
+                serviceType: "Grupos e Rodas de Conversa",
+                name: "Grupos Terapêuticos e Rodas de Conversa",
+                description:
+                    "Espaços coletivos de partilha e diálogo baseados na Abordagem Centrada na Pessoa. Inclui Roda Entre Homens e grupos para psicólogos.",
+                provider: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                areaServed: [
+                    {
+                        "@type": "City",
+                        name: "Vitória",
+                        containedInPlace: {
+                            "@type": "State",
+                            name: "ES",
+                        },
+                    },
+                    {
+                        "@type": "Country",
+                        name: "Brasil",
+                    },
+                ],
+                offers: {
+                    "@type": "Offer",
+                    url: "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                    priceCurrency: "BRL",
+                },
+                potentialAction: {
+                    "@type": "ReserveAction",
+                    target: {
+                        "@type": "EntryPoint",
+                        urlTemplate:
+                            "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                        actionPlatform: [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform",
+                        ],
+                    },
+                    result: {
+                        "@type": "Reservation",
+                        name: "Agendar Consulta",
+                    },
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

@@ -32,21 +32,61 @@
         }));
     }
 
-    const experienceSchema = {
+    let experienceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "MedicalCondition",
-        name: "Síndrome de Burnout",
-        alternateName: ["Burnout", "Esgotamento Profissional"],
-        possibleTreatment: {
-            "@type": "PsychologicalTreatment",
-            name: "Psicoterapia com Abordagem Centrada na Pessoa",
-            provider: {
-                "@type": "Physician",
-                name: "Bernardo Carielo",
-                telephone: "+55 27 99833-1228",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/experiencia/burnout/#webpage",
+                url: "https://psicologobernardo.com.br/experiencia/burnout/",
+                name: "Psicólogo para Burnout em Vitória ES – Síndrome de Esgotamento Profissional",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/experiencia/burnout/#article",
+                },
             },
-        },
-    };
+            {
+                "@type": "Article",
+                "@id": "https://psicologobernardo.com.br/experiencia/burnout/#article",
+                headline:
+                    "Psicólogo para Burnout em Vitória ES – Síndrome de Esgotamento Profissional",
+                name: "Burnout: Como a Psicoterapia pode ajudar?",
+                description:
+                    "Psicólogo para burnout em Vitória ES. Tratamento para esgotamento profissional com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
+                author: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
+                publisher: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                image: {
+                    "@type": "ImageObject",
+                    url: "https://psicologobernardo.com.br/images/experiencia/burnout-350.avif",
+                    width: 350,
+                    height: 350,
+                },
+                inLanguage: "pt-BR",
+                mentions: {
+                    "@type": "Service",
+                    "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#service",
+                    name: "Psicoterapia Individual",
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

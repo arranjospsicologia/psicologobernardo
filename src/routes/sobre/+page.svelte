@@ -24,52 +24,75 @@
 
     const aboutSchema = {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://psicologobernardo.com.br/sobre#person",
-        name: "Bernardo Carielo Macedo de Oliveira Pinto",
-        alternateName: "Bernardo Carielo",
-        url: "https://psicologobernardo.com.br/sobre",
-        image: "https://psicologobernardo.com.br/images/bernardo-avatar.jpg",
-        jobTitle: "Psicólogo Clínico",
-        worksFor: {
-            "@type": "Organization",
-            name: "Arranjos Psicologia",
-            url: "https://arranjospsicologia.com.br",
-        },
-        alumniOf: [
+        "@graph": [
             {
-                "@type": "EducationalOrganization",
-                name: "Universidade Federal do Espírito Santo",
-                url: "https://ufes.br",
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/sobre/#webpage",
+                url: "https://psicologobernardo.com.br/sobre/",
+                name: "Sobre Bernardo Carielo – Psicólogo em Vitória ES | Abordagem Centrada na Pessoa",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
             },
             {
-                "@type": "Organization",
-                name: "EncontroACP",
+                "@type": "Person",
+                "@id": "https://psicologobernardo.com.br/sobre/#person",
+                name: "Bernardo Carielo Macedo de Oliveira Pinto",
+                alternateName: "Bernardo Carielo",
+                identifier: "CRP 16/5527",
+                url: "https://psicologobernardo.com.br/sobre/",
+                image: "https://psicologobernardo.com.br/images/bernardo-avatar.jpg",
+                jobTitle: "Psicólogo Clínico",
+                worksFor: [
+                    {
+                        "@id": "https://psicologobernardo.com.br/#organization",
+                    },
+                    {
+                        "@type": "Organization",
+                        name: "Arranjos Psicologia",
+                        url: "https://arranjospsicologia.com.br",
+                    },
+                ],
+                alumniOf: [
+                    {
+                        "@type": "EducationalOrganization",
+                        name: "Universidade Federal do Espírito Santo",
+                        alternateName: "UFES",
+                        url: "https://ufes.br",
+                    },
+                    {
+                        "@type": "EducationalOrganization",
+                        name: "EncontroACP",
+                    },
+                ],
+                knowsAbout: [
+                    "Abordagem Centrada na Pessoa",
+                    "Psicoterapia Humanista",
+                    "Terapia de Casal",
+                    "Supervisão Clínica",
+                    "Saúde Mental",
+                    "Ansiedade",
+                    "Depressão",
+                ],
+                address: {
+                    "@type": "PostalAddress",
+                    streetAddress:
+                        "Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
+                    addressLocality: "Vitória",
+                    addressRegion: "ES",
+                    postalCode: "29060-630",
+                    addressCountry: "BR",
+                },
+                telephone: "+5527998331228",
+                sameAs: [
+                    "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                    "https://www.instagram.com/bcarielo",
+                    "https://www.facebook.com/bcarielo",
+                ],
             },
-        ],
-        knowsAbout: [
-            "Abordagem Centrada na Pessoa",
-            "Psicoterapia Humanista",
-            "Terapia de Casal",
-            "Supervisão Clínica",
-            "Saúde Mental",
-            "Ansiedade",
-            "Depressão",
-        ],
-        address: {
-            "@type": "PostalAddress",
-            streetAddress:
-                "Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
-            addressLocality: "Vitória",
-            addressRegion: "ES",
-            postalCode: "29060-630",
-            addressCountry: "BR",
-        },
-        telephone: "+5527998331228",
-        sameAs: [
-            "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
-            "https://www.instagram.com/bcarielo",
-            "https://www.facebook.com/bcarielo",
         ],
     };
 

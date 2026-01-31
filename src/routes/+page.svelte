@@ -396,7 +396,7 @@
 				},
 			],
 		},
-		employee: {
+		founder: {
 			"@type": "Person",
 			name: "Bernardo Carielo",
 			jobTitle: "Psicólogo Clínico",

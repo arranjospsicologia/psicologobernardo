@@ -32,16 +32,60 @@
         }));
     }
 
-    const experienceSchema = {
+    let experienceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Psicoterapia para Dificuldades de Relacionamento",
-        provider: {
-            "@type": "ProfessionalService",
-            name: "Bernardo Carielo Psicólogo",
-            telephone: "+55 27 99833-1228",
-        },
-    };
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/experiencia/relacionamento/#webpage",
+                url: "https://psicologobernardo.com.br/experiencia/relacionamento/",
+                name: "Psicólogo para Relacionamentos em Vitória ES",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/experiencia/relacionamento/#article",
+                },
+            },
+            {
+                "@type": "Article",
+                "@id": "https://psicologobernardo.com.br/experiencia/relacionamento/#article",
+                headline: "Psicólogo para Relacionamentos em Vitória ES",
+                name: "Relacionamentos: Como a Psicoterapia pode ajudar?",
+                description:
+                    "Psicólogo para dificuldades de relacionamento em Vitória ES. Terapia para conflitos, comunicação e padrões que se repetem. Atendimento presencial em Jardim da Penha e online.",
+                author: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
+                publisher: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                image: {
+                    "@type": "ImageObject",
+                    url: "https://psicologobernardo.com.br/images/experiencia/relacionamento-350.avif",
+                    width: 350,
+                    height: 350,
+                },
+                inLanguage: "pt-BR",
+                mentions: {
+                    "@type": "Service",
+                    "@id": "https://psicologobernardo.com.br/servicos/terapia-de-casal/#service",
+                    name: "Terapia de Casal",
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

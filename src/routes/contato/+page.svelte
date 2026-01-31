@@ -12,26 +12,22 @@
 
     const contactSchema = {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        name: "Contato - Psicólogo Bernardo Carielo",
-        description:
-            "Entre em contato para agendar sua consulta. Atendimento presencial e online.",
-        mainEntity: {
-            "@type": "LocalBusiness",
-            name: "Bernardo Carielo Psicólogo",
-            telephone: "+55 27 99833-1228",
-            email: "contato@psicologobernardo.com.br",
-            address: {
-                "@type": "PostalAddress",
-                streetAddress:
-                    "Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
-                addressLocality: "Vitória",
-                addressRegion: "ES",
-                postalCode: "29060-500",
-                addressCountry: "BR",
+        "@graph": [
+            {
+                "@type": "ContactPage",
+                "@id": "https://psicologobernardo.com.br/contato/#webpage",
+                url: "https://psicologobernardo.com.br/contato/",
+                name: "Contato - Psicólogo Bernardo Carielo",
+                description:
+                    "Entre em contato para agendar sua consulta. Atendimento presencial e online.",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
             },
-            hasMap: "https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
-        },
+        ],
     };
 </script>
 

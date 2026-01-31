@@ -7,7 +7,7 @@
         "$lib/components/LazyDoctoraliaWidget.svelte"
     );
 
-    let faqItems = [
+    let faqItems = $state([
         {
             question: "Como funciona a psicoterapia individual?",
             answer: "A psicoterapia individual é um espaço onde você pode falar livremente sobre seus sentimentos, pensamentos e experiências. Na Abordagem Centrada na Pessoa, o processo acontece através da escuta empática e genuína, sem julgamentos. As sessões duram aproximadamente 60 minutos e acontecem geralmente uma vez por semana.",
@@ -33,7 +33,7 @@
             answer: "A primeira sessão é um momento de conhecimento mútuo. Você terá espaço para falar sobre o que te trouxe à terapia e tirar suas dúvidas sobre o processo. É também uma oportunidade para avaliarmos se há identificação entre nós.",
             open: false,
         },
-    ];
+    ]);
 
     function toggleFaq(index: number) {
         faqItems = faqItems.map((item, i) => ({
@@ -42,24 +42,76 @@
         }));
     }
 
-    const serviceSchema = {
+    let serviceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Psicoterapia Individual",
-        provider: {
-            "@type": "ProfessionalService",
-            name: "Bernardo Carielo Psicólogo",
-            telephone: "+55 27 99833-1228",
-            address: {
-                "@type": "PostalAddress",
-                streetAddress: "Rua Darcy Grijó, 50 - Sala 409",
-                addressLocality: "Vitória",
-                addressRegion: "ES",
-                postalCode: "29060-500",
-                addressCountry: "BR",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#webpage",
+                url: "https://psicologobernardo.com.br/servicos/psicoterapia-individual/",
+                name: "Psicoterapia Individual em Vitória – Espaço de escuta e autoconhecimento",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
             },
-        },
-    };
+            {
+                "@type": "Service",
+                serviceType: "Psicoterapia Individual",
+                name: "Psicoterapia Individual em Vitória",
+                description:
+                    "A psicoterapia individual é um espaço de escuta e autoconhecimento...",
+                provider: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                areaServed: [
+                    {
+                        "@type": "City",
+                        name: "Vitória",
+                        containedInPlace: {
+                            "@type": "State",
+                            name: "ES",
+                        },
+                    },
+                    {
+                        "@type": "Country",
+                        name: "Brasil",
+                    },
+                ],
+                offers: {
+                    "@type": "Offer",
+                    url: "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                    priceCurrency: "BRL",
+                },
+                potentialAction: {
+                    "@type": "ReserveAction",
+                    target: {
+                        "@type": "EntryPoint",
+                        urlTemplate:
+                            "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                        actionPlatform: [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform",
+                        ],
+                    },
+                    result: {
+                        "@type": "Reservation",
+                        name: "Agendar Consulta",
+                    },
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

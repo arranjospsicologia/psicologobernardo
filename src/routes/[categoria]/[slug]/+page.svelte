@@ -10,8 +10,10 @@
         Twitter,
         Linkedin,
         MessageCircle,
+        MapPin,
+        BookOpen,
     } from "lucide-svelte";
-    import { blogPosts } from "$lib/data/blog";
+    import { blogPosts, type BlogPost } from "$lib/data/blog";
     import type { PageData } from "./$types";
 
     let { data }: { data: PageData } = $props();
@@ -31,31 +33,121 @@
             .slice(0, 3),
     );
 
+    // Determines if the post is "local" based on category or tags
+    const isLocalContent = $derived(
+        post.categorySlug === "jardim-da-penha" ||
+            post.categorySlug === "vitoria-es" ||
+            post.tags.some(
+                (t) =>
+                    t.toLowerCase().includes("vitória") ||
+                    t.toLowerCase().includes("jardim da penha"),
+            ),
+    );
+
+    // Schema Generator
     const postSchema = $derived({
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "BlogPosting",
-                headline: post.title,
-                description: post.description,
-                image: `https://psicologobernardo.com.br${post.image}`,
-                author: {
-                    "@type": "Person",
-                    name: "Bernardo Carielo",
-                },
-                publisher: {
-                    "@type": "Organization",
-                    name: "Psicólogo Bernardo",
-                },
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    {
+                        "@type": "ListItem",
+                        position: 1,
+                        name: "Início",
+                        item: "https://psicologobernardo.com.br/",
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 2,
+                        name: category.label,
+                        item: `https://psicologobernardo.com.br/${post.categorySlug}`,
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 3,
+                        name: post.title,
+                        item: `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/`,
+                    },
+                ],
+            },
+            {
+                "@type": post.schemaType || "Article",
+                "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#article`,
                 mainEntityOfPage: {
                     "@type": "WebPage",
-                    "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/`,
+                    "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#webpage`,
                 },
+                headline: post.title,
+                description: post.description,
+                image: {
+                    "@type": "ImageObject",
+                    url: `https://psicologobernardo.com.br${post.image}`,
+                    width: 1200,
+                    height: 630,
+                },
+                datePublished: convertToISO(post.date),
+                dateModified: post.lastReviewed || convertToISO(post.date),
+                isAccessibleForFree: true,
+                inLanguage: "pt-BR",
+                articleSection: post.category,
+                keywords: post.tags ? post.tags.join(", ") : undefined,
+                author: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
+                publisher: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                audience: {
+                    "@type": "Audience",
+                    audienceType: "General public",
+                },
+                ...(isLocalContent
+                    ? {
+                          contentLocation: {
+                              "@type": "Place",
+                              name: "Jardim da Penha, Vitória - ES",
+                          },
+                      }
+                    : {}),
+                ...(post.tags
+                    ? {
+                          about: post.tags
+                              .filter(
+                                  (t) =>
+                                      !t
+                                          .toLowerCase()
+                                          .includes("saúde mental") &&
+                                      !t
+                                          .toLowerCase()
+                                          .includes("saude mental") &&
+                                      !t.toLowerCase().includes("vitória") &&
+                                      !t.toLowerCase().includes("vitoria") &&
+                                      !t
+                                          .toLowerCase()
+                                          .includes("jardim da penha") &&
+                                      !t.toLowerCase().includes("es") &&
+                                      !t
+                                          .toLowerCase()
+                                          .includes("espírito santo"),
+                              )
+                              .map((tag) => ({
+                                  "@type": "Thing",
+                                  name: tag,
+                              })),
+                      }
+                    : {}),
+                ...(content.references
+                    ? {
+                          citation: content.references,
+                      }
+                    : {}),
             },
             ...(content.faq
                 ? [
                       {
                           "@type": "FAQPage",
+                          "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#faq`,
                           mainEntity: content.faq.map((item) => ({
                               "@type": "Question",
                               name: item.question,
@@ -69,6 +161,33 @@
                 : []),
         ],
     });
+
+    function convertToISO(dateStr: string): string {
+        // Simple parser for "DD MMM YYYY" to "YYYY-MM-DD"
+        // Portuguese months map
+        const months: Record<string, string> = {
+            Jan: "01",
+            Fev: "02",
+            Mar: "03",
+            Abr: "04",
+            Mai: "05",
+            Jun: "06",
+            Jul: "07",
+            Ago: "08",
+            Set: "09",
+            Out: "10",
+            Nov: "11",
+            Dez: "12",
+        };
+        const parts = dateStr.split(" ");
+        if (parts.length !== 3) return new Date().toISOString().split("T")[0]; // Fallback
+
+        const day = parts[0].padStart(2, "0");
+        const month = months[parts[1]] || "01";
+        const year = parts[2];
+
+        return `${year}-${month}-${day}`;
+    }
 </script>
 
 <SEO
@@ -101,6 +220,13 @@
             <div class="post-meta">
                 <span><Calendar size={16} /> {post.date}</span>
                 <span><Clock size={16} /> {post.readTime}</span>
+                {#if post.lastReviewed}
+                    <span title="Revisão Clínica"
+                        ><BookOpen size={16} /> Revisado: {convertToISO(
+                            post.lastReviewed,
+                        )}</span
+                    >
+                {/if}
             </div>
         </div>
         <div class="post-image">
@@ -129,6 +255,17 @@
                         <p>{item.answer}</p>
                     </div>
                 {/each}
+            </section>
+        {/if}
+
+        {#if content.references && content.references.length > 0}
+            <section id="referencias" class="references-section">
+                <h3>Referências Bibliográficas</h3>
+                <ul>
+                    {#each content.references as ref}
+                        <li>{ref}</li>
+                    {/each}
+                </ul>
             </section>
         {/if}
     </div>
@@ -203,17 +340,41 @@
                 <span class="author-crp">CRP 16/5527</span>
             </div>
             <p class="author-description">
-                Psicólogo com mais de 8 anos de experiência em psicoterapia com
-                a Abordagem Centrada na Pessoa. Atendo em Vitória/ES, oferecendo
-                um espaço acolhedor para você cuidar da sua saúde mental.
+                Psicólogo Clínico pela UFES desde 2017 e especialista na
+                Abordagem Centrada na Pessoa pelo <a
+                    href="https://encontroacp.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer">EncontroACP</a
+                >, sempre em formação continuada. Coordenador da Roda de
+                Conversa Terapêutica Entre Homens EncontroACP e fundador da
+                <a
+                    href="https://arranjospsicologia.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer">Arranjos Psicologia</a
+                >. Atende em Vitória (Jardim da Penha) e Online, oferecendo um
+                espaço de acolhimento ético e humanizado.
             </p>
-            <Button
-                href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar"
-                variant="primary"
-            >
-                <Phone size={20} />
-                Conversar
-            </Button>
+            <div class="author-actions">
+                <Button
+                    href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar"
+                    variant="primary"
+                    size="sm"
+                >
+                    <Phone size={18} />
+                    Conversar
+                </Button>
+                {#if isLocalContent}
+                    <Button
+                        href="https://maps.app.goo.gl/seu-link-google-maps"
+                        variant="outline"
+                        size="sm"
+                        target="_blank"
+                    >
+                        <MapPin size={18} />
+                        Como Chegar
+                    </Button>
+                {/if}
+            </div>
         </div>
     </div>
 </Section>
@@ -372,6 +533,18 @@
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 1rem;
+    }
+
+    .author-description a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+    .author-description a:hover {
+        text-decoration: underline;
+        color: var(--primary-color-dark, #069b82);
     }
 
     .related-grid .blog-card .blog-content h3 {

@@ -32,15 +32,70 @@
         }));
     }
 
-    const serviceSchema = {
+    let serviceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Laudos Psicológicos e Avaliações",
-        provider: {
-            "@type": "ProfessionalService",
-            name: "Bernardo Carielo Psicólogo",
-        },
-    };
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/servicos/laudos-psicologicos/#webpage",
+                url: "https://psicologobernardo.com.br/servicos/laudos-psicologicos/",
+                name: "Laudos Psicológicos e Avaliações em Vitória",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+            },
+            {
+                "@type": "Service",
+                serviceType: "Avaliação Psicológica",
+                name: "Laudos e Avaliações Psicológicas",
+                description:
+                    "Avaliação psicológica ética para cirurgia bariátrica, vasectomia, laqueadura e outros procedimentos. Atendimento presencial.",
+                provider: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                areaServed: {
+                    "@type": "City",
+                    name: "Vitória",
+                    containedInPlace: {
+                        "@type": "State",
+                        name: "ES",
+                    },
+                },
+                offers: {
+                    "@type": "Offer",
+                    url: "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                    priceCurrency: "BRL",
+                },
+                potentialAction: {
+                    "@type": "ReserveAction",
+                    target: {
+                        "@type": "EntryPoint",
+                        urlTemplate:
+                            "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                        actionPlatform: [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform",
+                        ],
+                    },
+                    result: {
+                        "@type": "Reservation",
+                        name: "Agendar Consulta",
+                    },
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

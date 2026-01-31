@@ -10,6 +10,8 @@ export interface BlogPost {
     readTime: string;
     image: string;
     altText?: string; // SEO-optimized image description (falls back to title if not provided)
+    schemaType?: "Article" | "BlogPosting"; // Defaults to "Article" if undefined
+    lastReviewed?: string; // ISO date for clinical review (e.g. "2026-01-25")
 }
 
 // Category definitions with metadata for SEO

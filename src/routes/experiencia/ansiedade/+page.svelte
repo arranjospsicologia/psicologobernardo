@@ -32,21 +32,61 @@
         }));
     }
 
-    const anxietySchema = {
+    let anxietySchema = $derived({
         "@context": "https://schema.org",
-        "@type": "MedicalCondition",
-        name: "Transtorno de Ansiedade",
-        alternateName: ["Ansiedade", "Crise de Ansiedade"],
-        possibleTreatment: {
-            "@type": "PsychologicalTreatment",
-            name: "Psicoterapia com Abordagem Centrada na Pessoa",
-            provider: {
-                "@type": "Physician",
-                name: "Bernardo Carielo",
-                telephone: "+55 27 99833-1228",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/experiencia/ansiedade/#webpage",
+                url: "https://psicologobernardo.com.br/experiencia/ansiedade/",
+                name: "Psicólogo para Ansiedade em Vitória ES - Tratamento Humanizado",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/experiencia/ansiedade/#article",
+                },
             },
-        },
-    };
+            {
+                "@type": "Article",
+                "@id": "https://psicologobernardo.com.br/experiencia/ansiedade/#article",
+                headline:
+                    "Psicólogo para Ansiedade em Vitória ES – Tratamento Humanizado",
+                name: "Ansiedade: Como a Psicoterapia pode ajudar?",
+                description:
+                    "Psicólogo para ansiedade em Vitória ES. Tratamento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
+                author: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
+                publisher: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                image: {
+                    "@type": "ImageObject",
+                    url: "https://psicologobernardo.com.br/images/experiencia/ansiedade-350.avif",
+                    width: 350,
+                    height: 350,
+                },
+                inLanguage: "pt-BR",
+                mentions: {
+                    "@type": "Service",
+                    "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#service",
+                    name: "Psicoterapia Individual",
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

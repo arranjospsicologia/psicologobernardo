@@ -39,15 +39,80 @@
         }));
     }
 
-    const serviceSchema = {
+    let serviceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Supervisão Profissional em ACP",
-        provider: {
-            "@type": "ProfessionalService",
-            name: "Bernardo Carielo Psicólogo",
-        },
-    };
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/servicos/supervisao-profissional/#webpage",
+                url: "https://psicologobernardo.com.br/servicos/supervisao-profissional/",
+                name: "Supervisão Profissional em ACP – Cuidado com quem cuida",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+            },
+            {
+                "@type": "Service",
+                serviceType: "Supervisão Clínica",
+                name: "Supervisão Profissional em ACP",
+                description:
+                    "Supervisão clínica para psicólogos e estudantes da Abordagem Centrada na Pessoa. Espaço de reflexão e desenvolvimento profissional.",
+                provider: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                areaServed: [
+                    {
+                        "@type": "City",
+                        name: "Vitória",
+                        containedInPlace: {
+                            "@type": "State",
+                            name: "ES",
+                        },
+                    },
+                    {
+                        "@type": "Country",
+                        name: "Brasil",
+                    },
+                ],
+                audience: {
+                    "@type": "Audience",
+                    audienceType: "Psicólogos e Estudantes de Psicologia",
+                },
+                offers: {
+                    "@type": "Offer",
+                    url: "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                    priceCurrency: "BRL",
+                },
+                potentialAction: {
+                    "@type": "ReserveAction",
+                    target: {
+                        "@type": "EntryPoint",
+                        urlTemplate:
+                            "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+                        actionPlatform: [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform",
+                        ],
+                    },
+                    result: {
+                        "@type": "Reservation",
+                        name: "Agendar Consulta",
+                    },
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

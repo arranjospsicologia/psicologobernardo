@@ -32,21 +32,61 @@
         }));
     }
 
-    const experienceSchema = {
+    let experienceSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "MedicalCondition",
-        name: "Baixa Autoestima",
-        alternateName: ["Autoestima", "Amor Próprio", "Aceitação Pessoal"],
-        possibleTreatment: {
-            "@type": "PsychologicalTreatment",
-            name: "Psicoterapia com Abordagem Centrada na Pessoa",
-            provider: {
-                "@type": "Physician",
-                name: "Bernardo Carielo",
-                telephone: "+55 27 99833-1228",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://psicologobernardo.com.br/experiencia/autoestima/#webpage",
+                url: "https://psicologobernardo.com.br/experiencia/autoestima/",
+                name: "Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem",
+                isPartOf: {
+                    "@id": "https://psicologobernardo.com.br/#website",
+                },
+                mainEntity: {
+                    "@id": "https://psicologobernardo.com.br/experiencia/autoestima/#article",
+                },
             },
-        },
-    };
+            {
+                "@type": "Article",
+                "@id": "https://psicologobernardo.com.br/experiencia/autoestima/#article",
+                headline:
+                    "Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem",
+                name: "Baixa Autoestima: Como a Psicoterapia pode ajudar?",
+                description:
+                    "Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Tratamento humanizado com a Abordagem Centrada na Pessoa.",
+                author: {
+                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                },
+                publisher: {
+                    "@id": "https://psicologobernardo.com.br/#organization",
+                },
+                image: {
+                    "@type": "ImageObject",
+                    url: "https://psicologobernardo.com.br/images/experiencia/autoestima-350.avif",
+                    width: 350,
+                    height: 350,
+                },
+                inLanguage: "pt-BR",
+                mentions: {
+                    "@type": "Service",
+                    "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#service",
+                    name: "Psicoterapia Individual",
+                },
+            },
+            {
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                    "@type": "Question",
+                    name: item.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                    },
+                })),
+            },
+        ],
+    });
 </script>
 
 <SEO

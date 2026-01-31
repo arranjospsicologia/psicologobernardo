@@ -210,6 +210,7 @@
 />
 
 <Breadcrumb
+    generateSchema={false}
     items={[
         { name: "Início", href: "/" },
         { name: category.label, href: `/${post.categorySlug}` },

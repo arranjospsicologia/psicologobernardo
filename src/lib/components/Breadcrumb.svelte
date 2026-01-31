@@ -4,7 +4,10 @@
         href?: string;
     }
 
-    let { items = [] }: { items?: BreadcrumbItem[] } = $props();
+    let {
+        items = [],
+        generateSchema = true,
+    }: { items?: BreadcrumbItem[]; generateSchema?: boolean } = $props();
 
     // Ensure Home is always first?? No, let's keep it flexible and explicit from parent?
     // Actually, nearly all pages have Home > Section > Page.
@@ -30,7 +33,9 @@
 </script>
 
 <svelte:head>
-    {@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
+    {#if generateSchema}
+        {@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
+    {/if}
 </svelte:head>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">

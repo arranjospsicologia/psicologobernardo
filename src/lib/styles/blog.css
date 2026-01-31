@@ -275,6 +275,14 @@
     padding-left: 1.5rem;
 }
 
+.post-content ul {
+    list-style: disc;
+}
+
+.post-content ol {
+    list-style: decimal;
+}
+
 .post-content li {
     margin-bottom: 0.75rem;
 }
@@ -285,6 +293,18 @@
     margin: 2rem 0;
     font-style: italic;
     color: var(--text-light);
+}
+
+.post-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: var(--transition);
+}
+
+.post-content a:hover {
+    color: var(--primary-color-dark, #069b82);
+    text-decoration-thickness: 2px;
 }
 
 

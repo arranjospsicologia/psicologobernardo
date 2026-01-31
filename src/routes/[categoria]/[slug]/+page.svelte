@@ -9,6 +9,7 @@
         Facebook,
         Twitter,
         Linkedin,
+        MessageCircle,
     } from "lucide-svelte";
     import { blogPosts } from "$lib/data/blog";
     import type { PageData } from "./$types";
@@ -32,18 +33,41 @@
 
     const postSchema = $derived({
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
-        description: post.description,
-        image: `https://psicologobernardo.com.br${post.image}`,
-        author: {
-            "@type": "Person",
-            name: "Bernardo Carielo",
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "Psicólogo Bernardo",
-        },
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                headline: post.title,
+                description: post.description,
+                image: `https://psicologobernardo.com.br${post.image}`,
+                author: {
+                    "@type": "Person",
+                    name: "Bernardo Carielo",
+                },
+                publisher: {
+                    "@type": "Organization",
+                    name: "Psicólogo Bernardo",
+                },
+                mainEntityOfPage: {
+                    "@type": "WebPage",
+                    "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/`,
+                },
+            },
+            ...(content.faq
+                ? [
+                      {
+                          "@type": "FAQPage",
+                          mainEntity: content.faq.map((item) => ({
+                              "@type": "Question",
+                              name: item.question,
+                              acceptedAnswer: {
+                                  "@type": "Answer",
+                                  text: item.answer,
+                              },
+                          })),
+                      },
+                  ]
+                : []),
+        ],
     });
 </script>
 
@@ -82,7 +106,7 @@
         <div class="post-image">
             <img
                 src={post.image}
-                alt={post.title}
+                alt={post.altText || post.title}
                 loading="eager"
                 fetchpriority="high"
                 width="800"
@@ -95,6 +119,18 @@
 <Section variant="white">
     <div class="post-content">
         {@html content.htmlContent}
+
+        {#if content.faq && content.faq.length > 0}
+            <section id="faq">
+                <h2>Perguntas Frequentes</h2>
+                {#each content.faq as item}
+                    <div class="faq-item">
+                        <h3>{item.question}</h3>
+                        <p>{item.answer}</p>
+                    </div>
+                {/each}
+            </section>
+        {/if}
     </div>
 
     <div class="post-footer">
@@ -107,6 +143,23 @@
 
         <div class="post-share">
             <strong>Compartilhar:</strong>
+            <a
+                href="https://api.whatsapp.com/send?text={encodeURIComponent(
+                    post.title +
+                        ' - ' +
+                        'https://psicologobernardo.com.br/' +
+                        post.categorySlug +
+                        '/' +
+                        post.slug +
+                        '/',
+                )}"
+                target="_blank"
+                rel="noopener"
+                aria-label="Compartilhar no WhatsApp"
+                class="share-whatsapp"
+            >
+                <MessageCircle size={18} />
+            </a>
             <a
                 href="https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/{post.categorySlug}/{post.slug}/"
                 target="_blank"
@@ -145,13 +198,14 @@
             height="100"
         />
         <div class="author-info">
-            <h3>Bernardo Carielo</h3>
-            <p class="author-title">Psicólogo CRP 16/5527</p>
-            <p>
-                Sou psicólogo com mais de 8 anos de experiência em psicoterapia
-                com a Abordagem Centrada na Pessoa. Atendo em Vitória/ES,
-                oferecendo um espaço acolhedor para você cuidar da sua saúde
-                mental.
+            <div class="author-header">
+                <h3>Bernardo Carielo</h3>
+                <span class="author-crp">CRP 16/5527</span>
+            </div>
+            <p class="author-description">
+                Psicólogo com mais de 8 anos de experiência em psicoterapia com
+                a Abordagem Centrada na Pessoa. Atendo em Vitória/ES, oferecendo
+                um espaço acolhedor para você cuidar da sua saúde mental.
             </p>
             <Button
                 href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar"
@@ -179,7 +233,7 @@
                         <div class="blog-image">
                             <img
                                 src={relatedPost.image}
-                                alt={relatedPost.title}
+                                alt={relatedPost.altText || relatedPost.title}
                                 loading="lazy"
                                 width="350"
                                 height="233"
@@ -288,17 +342,35 @@
         flex-shrink: 0;
     }
 
-    .author-info h3 {
-        margin-bottom: 0.25rem;
-    }
-
-    .author-title {
-        color: var(--primary-color);
-        font-weight: 500;
+    .author-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
         margin-bottom: 0.75rem;
     }
 
-    .author-info p:last-of-type {
+    .author-info h3 {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .author-crp {
+        display: inline-flex;
+        align-items: center;
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+    }
+
+    .author-description {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
         margin-bottom: 1rem;
     }
 
@@ -311,6 +383,10 @@
         .author-bio {
             flex-direction: column;
             text-align: center;
+        }
+
+        .author-header {
+            justify-content: center;
         }
 
         .author-avatar {

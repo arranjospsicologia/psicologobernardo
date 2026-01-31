@@ -51,7 +51,7 @@
                     <div class="blog-image">
                         <img
                             src={post.image}
-                            alt={post.title}
+                            alt={post.altText || post.title}
                             loading="lazy"
                             width="350"
                             height="233"

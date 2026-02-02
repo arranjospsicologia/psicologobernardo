@@ -1,4 +1,4 @@
-import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as Be}from"../chunks/DiiO5xdO.js";import{c as ie,a as m,f as l}from"../chunks/7o8WEx2i.js";import{f as j,F as He,t as _,J as Le,g as e,u as z,a as i,c as s,r as o,n as oe}from"../chunks/DnNcXZc0.js";import{s as A}from"../chunks/-Rh4EYo9.js";import{l as ne,s as te,i as Q}from"../chunks/B-felvAV.js";import{I as de,s as ce,e as D,B as se,a as x,i as J}from"../chunks/B4winmXY.js";import{S as re,h as Ge}from"../chunks/_jSWC8me.js";import"../chunks/CDLinRUy.js";import{B as We}from"../chunks/CKJHZfkY.js";import{S as Xe}from"../chunks/DedJW04g.js";import{C as Ze}from"../chunks/CbKiDwtL.js";import{C as Ke}from"../chunks/Cdi2hEzI.js";import{M as Ye}from"../chunks/0u8zw4Kr.js";import{F as ea}from"../chunks/Cr0G-FUx.js";import{P as Ee}from"../chunks/CKsJ9VOg.js";import{M as aa}from"../chunks/CzjsDj0N.js";function oa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M12 7v14"}],["path",{d:"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"}]];de(u,te({name:"book-open"},()=>a,{get iconNode(){return n},children:(P,y)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function sa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];de(u,te({name:"linkedin"},()=>a,{get iconNode(){return n},children:(P,y)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function ra(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];de(u,te({name:"twitter"},()=>a,{get iconNode(){return n},children:(P,y)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}const ia={"seis-condicoes-carl-rogers":{slug:"seis-condicoes-carl-rogers",tags:["Abordagem Centrada na Pessoa","Carl Rogers","Condições Terapêuticas","Vitória ES","acp"],htmlContent:`
+import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Fe,d as De,b as Je,A as Be}from"../chunks/DiiO5xdO.js";import{c as ie,a as m,f as l}from"../chunks/7o8WEx2i.js";import{f as j,F as He,t as M,J as Le,g as e,u as z,a as i,c as s,r as o,n as oe}from"../chunks/DnNcXZc0.js";import{s as C}from"../chunks/-Rh4EYo9.js";import{l as ne,s as te,i as $}from"../chunks/B-felvAV.js";import{I as de,s as ce,e as D,B as se,a as x,i as J}from"../chunks/B4winmXY.js";import{S as re,h as Ge}from"../chunks/_jSWC8me.js";import"../chunks/CDLinRUy.js";import{B as We}from"../chunks/CKJHZfkY.js";import{S as Xe}from"../chunks/DedJW04g.js";import{C as Ze}from"../chunks/CbKiDwtL.js";import{C as Ke}from"../chunks/Cdi2hEzI.js";import{M as Ye}from"../chunks/0u8zw4Kr.js";import{F as ea}from"../chunks/Cr0G-FUx.js";import{P as Ee}from"../chunks/CKsJ9VOg.js";import{M as aa}from"../chunks/CzjsDj0N.js";function oa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M12 7v14"}],["path",{d:"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"}]];de(u,te({name:"book-open"},()=>a,{get iconNode(){return n},children:(P,y)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function sa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];de(u,te({name:"linkedin"},()=>a,{get iconNode(){return n},children:(P,y)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function ra(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];de(u,te({name:"twitter"},()=>a,{get iconNode(){return n},children:(P,y)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}const ia={"seis-condicoes-carl-rogers":{slug:"seis-condicoes-carl-rogers",tags:["Abordagem Centrada na Pessoa","Carl Rogers","Condições Terapêuticas","Vitória ES","acp"],htmlContent:`
 			<p class="lead">
 				Carl Rogers afirmou que "para que ocorra uma mudança construtiva na personalidade, é necessário que estas [seis] condições existam e se mantenham ao longo de um período de tempo". Mas o que exatamente são essas condições? E por que, décadas depois, elas continuam sendo o alicerce de toda terapia centrada na pessoa?
 			</p>
@@ -1265,7 +1265,7 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 					</p>
 				</section>
 			</section>
-		`},"como-escolher-psicologo-em-vitoria-es":{slug:"como-escolher-psicologo-em-vitoria-es",tags:["Psicólogo Vitória","Jardim da Penha","CRP","Abordagem","Relação Terapêutica","saude-mental"],htmlContent:`
+		`,faq:[{question:"Preciso morar em Jardim da Penha para usar esses espaços?",answer:"Não. Os espaços públicos mencionados — praças, parques, orla de Camburi, campus da UFES — são abertos a qualquer pessoa. Você pode vir de outro bairro de Vitória ou até de outra cidade. O importante é encontrar lugares que te ajudem a respirar e desacelerar."},{question:"A UBS de Jardim da Penha oferece atendimento psicológico?",answer:"A UBS (Unidade Básica de Saúde) pode oferecer atividades de promoção de saúde e fazer encaminhamentos para a rede de saúde mental (CAPS, por exemplo). O ideal é ligar ou ir pessoalmente para verificar quais serviços estão disponíveis no momento."},{question:"Qual a diferença entre usar espaços públicos e fazer terapia?",answer:"São complementares, não substitutos. Espaços públicos ajudam na descompressão do dia a dia — caminhar, respirar, conviver. A terapia oferece um espaço de escuta profissional para questões mais profundas que precisam de acolhimento e elaboração. Muitas vezes, os dois juntos fazem toda a diferença."},{question:"Os parques e praças mencionados são seguros?",answer:"De modo geral, sim. A maioria dos espaços citados tem movimento durante o dia e são frequentados por famílias, esportistas e estudantes. Como em qualquer espaço público, é sensato evitar horários muito vazios e estar atento ao entorno."}]},"como-escolher-psicologo-em-vitoria-es":{slug:"como-escolher-psicologo-em-vitoria-es",tags:["Psicólogo Vitória","Jardim da Penha","CRP","Abordagem","Relação Terapêutica","saude-mental"],htmlContent:`
 			<p class="lead">
 				Buscar psicoterapia é um passo importante — e, muitas vezes, delicado. Em meio a tantas opções, perfis nas redes,
 				anúncios e indicações, é comum surgir a dúvida: <strong>como escolher um psicólogo em Vitória (ES) que realmente faça sentido para mim?</strong>
@@ -1398,7 +1398,7 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 				</ul>
 			</section>
 
-			<aside class="cta">
+			<section class="cta">
 				<h2>Se você está em Vitória (ES) e quer dar o próximo passo</h2>
 				<p>
 					Escolher um psicólogo é também escolher um espaço de cuidado: um tempo da sua semana, um lugar para falar com liberdade
@@ -1411,8 +1411,8 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 					·
 					<a href="/contato/">Agendar / tirar dúvidas</a>
 				</p>
-			</aside>
-		`},"autenticidade-qualidade-vida":{slug:"autenticidade-qualidade-vida",tags:["Autenticidade","Qualidade de Vida","ACP","Tendência Atualizante","Autorrealização","Carl Rogers","Saúde Mental"],htmlContent:`
+			</section>
+		`,faq:[{question:"Como verificar se um psicólogo tem CRP ativo?",answer:"Você pode consultar diretamente no site do CRP-16 (Espírito Santo) ou no portal do Conselho Federal de Psicologia (CFP). Basta buscar pelo nome do profissional. Se não encontrar registro, desconfie."},{question:"Qual a melhor abordagem psicológica para mim?",answer:"Não existe 'melhor' abordagem universal — existe a que faz sentido para você. Algumas pessoas preferem processos mais estruturados; outras, mais abertos. O mais importante é você se sentir acolhido e respeitado. Se quiser, pergunte ao psicólogo como ele trabalha antes de começar."},{question:"É normal trocar de psicólogo se não me adaptar?",answer:"Sim, completamente. A relação terapêutica é fundamental para o processo funcionar. Se você não se sente à vontade, ouvido ou respeitado, é legítimo buscar outro profissional. Um bom psicólogo entenderá essa decisão."},{question:"Quantas sessões devo esperar antes de avaliar se está funcionando?",answer:"Não há número fixo. Algumas pessoas sentem diferença rapidamente; outras precisam de mais tempo. O importante é observar se você se sente acolhido, se consegue ser honesto, e se algo — mesmo pequeno — está mudando na forma como você se vê ou se relaciona."}]},"autenticidade-qualidade-vida":{slug:"autenticidade-qualidade-vida",tags:["Autenticidade","Qualidade de Vida","ACP","Tendência Atualizante","Autorrealização","Carl Rogers","Saúde Mental"],htmlContent:`
 			<p class="lead">Ser autêntico não é um luxo psicológico. É a base da nossa saúde emocional.</p>
 			<p>E, embora essa frase pareça simples, ela carrega uma das ideias mais profundas da Abordagem Centrada na Pessoa (ACP): <strong>o melhor jeito de viver é autêntico</strong>.</p>
 			<p>Nesse texto, quero compartilhar — de forma simples — por que a autenticidade melhora a qualidade de vida e como conceitos clássicos da ACP ajudam a entender isso.</p>
@@ -1467,7 +1467,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>É permitir que a tendência atualizante apareça.</p>
 			<p>É se autorrealizar — não como um objetivo final, mas como um modo de existir.</p>
 			<p>E, acima de tudo, é assumir que <strong>sua vida vale mais quando você está nela por inteiro</strong>.</p>
-		`},"terapia-centrada-pessoa-explicacao":{slug:"terapia-centrada-pessoa-explicacao",tags:["ACP","Terapia Humanista","Carl Rogers","Psicoterapia","Primeira Sessão","Autenticidade","Relação Terapêutica"],htmlContent:`
+
+			<section class="cta">
+				<h2>Um convite para ser quem você é</h2>
+
+				<p>
+					Se você sente que tem vivido mais para atender expectativas do que para ser verdadeiro consigo, a terapia pode ser um espaço para reencontrar essa conexão.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O que é tendência atualizante?",answer:"É um conceito da ACP que descreve a força natural de todo organismo para crescer, se desenvolver e se organizar em direção à vida. É como a planta que se volta para a luz. Quando encontramos um ambiente seguro, essa tendência aparece — e a autenticidade é a porta de entrada."},{question:"Como saber se estou sendo autêntico ou apenas impulsivo?",answer:"Autenticidade não é 'fazer o que dá na telha'. É viver em coerência com o que você realmente sente, pensa e valoriza — mesmo que isso exija coragem e reflexão. Impulsividade costuma ser reativa; autenticidade vem de uma escuta interna mais profunda."},{question:"Terapia ajuda a desenvolver autenticidade?",answer:"Sim. Na ACP, o espaço terapêutico é justamente um lugar onde você pode ser quem é, sem máscaras. Quando encontramos aceitação genuína, fica mais fácil nos reconhecer e fazer escolhas alinhadas com quem realmente somos."},{question:"Por que é tão difícil 'ser eu mesmo'?",answer:"Porque crescemos aprendendo a agradar, a nos adaptar, a caber nos moldes dos outros. A autenticidade exige coragem para questionar esses padrões e aceitar que nem todo mundo vai aprovar quem você é de verdade. Mas o ganho em qualidade de vida compensa."}]},"terapia-centrada-pessoa-explicacao":{slug:"terapia-centrada-pessoa-explicacao",tags:["ACP","Terapia Humanista","Carl Rogers","Psicoterapia","Primeira Sessão","Autenticidade","Relação Terapêutica"],htmlContent:`
 			<p class="lead">Falar sobre a ACP é falar sobre o tipo de encontro humano que eu presencio diariamente: pessoas que chegam cansadas de desempenhar papéis, de "parecer bem" e de tentar resolver tudo sozinhas. Na Abordagem Centrada na Pessoa, não recebemos alguém para consertar, mas para compreender.</p>
 
 			<p>Essa postura muda tudo — e muitas vezes surpreende quem chega pela primeira vez.</p>
@@ -1532,7 +1546,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Se você está em busca de um espaço onde possa ser quem você é — sem máscaras, sem performance, sem precisar corresponder a expectativas — a Terapia Centrada na Pessoa pode ser o caminho.</p>
 
 			<p>Se quiser saber mais ou agendar uma conversa inicial, estou à disposição.</p>
-		`},"estresse-desgaste-emocional":{slug:"estresse-desgaste-emocional",tags:["Saúde Mental","Estresse","Ansiedade","Esgotamento","Vida Adulta","Cansaço","Burnout"],htmlContent:`
+
+			<section class="cta">
+				<h2>Quer conhecer essa forma de cuidar?</h2>
+
+				<p>
+					Se você busca um espaço de escuta genuína, onde é acolhido como é, a Terapia Centrada na Pessoa pode ser o caminho. Atendo em Jardim da Penha, Vitória (ES).
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"A terapia centrada na pessoa funciona para ansiedade e depressão?",answer:"Sim. A ACP é eficaz para diversas questões, incluindo ansiedade e depressão. O foco está na qualidade da relação terapêutica e na confiança de que você possui recursos internos para lidar com o que está vivendo — mesmo quando não parece."},{question:"O que o terapeuta faz se não dá conselhos?",answer:"O terapeuta escuta de verdade, reflete o que você diz, ajuda a organizar pensamentos e sentimentos, e oferece presença genuína. Ele não dirige o processo porque acredita que você sabe — ou pode descobrir — o que é melhor para si."},{question:"A ACP é melhor que outras abordagens?",answer:"Não existe abordagem universalmente 'melhor'. A ACP se diferencia por valorizar a relação acima das técnicas e por confiar na capacidade da pessoa de encontrar seus caminhos. É uma escolha, não uma hierarquia."},{question:"Como é a primeira sessão na ACP?",answer:"É um momento de acolhimento. Você pode falar sobre o que te trouxe, suas dúvidas, suas expectativas. Não há roteiro. O importante é perceber se existe espaço para você ser você — e se a relação com o terapeuta faz sentido."},{question:"Por que não há exercícios ou tarefas de casa?",answer:"Porque a transformação, na ACP, acontece na relação, não em tarefas externas. O que você leva das sessões é a clareza que surge quando você é ouvido de verdade. Isso se reflete naturalmente no dia a dia."}]},"estresse-desgaste-emocional":{slug:"estresse-desgaste-emocional",tags:["Saúde Mental","Estresse","Ansiedade","Esgotamento","Vida Adulta","Cansaço","Burnout"],htmlContent:`
 			<p class="lead">A maioria das pessoas que chega ao consultório não usa a palavra "estresse". Elas falam em cansaço, peso, irritação sem motivo, sensação de estar no limite. No fundo, estão descrevendo uma vida que não dá tempo para existir.</p>
 
 			<h2>O que é estresse (explicação simples)</h2>
@@ -1597,7 +1625,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>A terapia não é um lugar para "consertar" você. É um espaço para compreender o que está acontecendo, validar o que você sente e encontrar formas mais saudáveis de lidar com a sobrecarga.</p>
 
 			<p>Se você reconhece esses sinais em si mesmo, saiba que não precisa atravessar isso sozinho. Estou aqui para ajudar.</p>
-		`},"terapia-online-funciona":{slug:"terapia-online-funciona",tags:["Terapia Online","ACP","Psicoterapia","Atendimento Virtual","Tecnologia","Atendimento Humanizado"],htmlContent:`
+
+			<section class="cta">
+				<h2>Precisa de um espaço para respirar?</h2>
+
+				<p>
+					Se o estresse virou rotina e você não lembra mais o que é relaxar, talvez seja hora de buscar ajuda. No meu consultório em Jardim da Penha, ofereço um espaço de escuta.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Qual a diferença entre estresse e burnout?",answer:"O estresse é uma resposta natural a desafios. O burnout é o esgotamento que acontece quando o estresse se prolonga demais sem pausas. No burnout, você não está apenas cansado — está exaurido, distante, sem energia mesmo para coisas que antes importavam."},{question:"Estresse pode causar doenças físicas?",answer:"Sim. O estresse prolongado afeta o corpo: insônia, dores de cabeça, tensão muscular, problemas digestivos. Isso acontece porque corpo e mente estão conectados. O corpo expressa o que a mente não consegue processar."},{question:"Como saber se meu estresse é 'normal' ou excessivo?",answer:"Se o estresse desliga quando a situação passa, é natural. Se você vive em estado de alerta constante, mesmo sem ameaça real, pode ser excessivo. Sintomas persistentes — insônia, irritabilidade, exaustão — são sinais de que algo precisa de atenção."},{question:"Terapia ajuda com estresse crônico?",answer:"Sim. A terapia oferece um espaço para entender o que está te sobrecarregando, validar o que você sente e encontrar formas mais saudáveis de lidar com a pressão. Não é sobre 'resolver' tudo, mas sobre se relacionar diferente com o que pesa."}]},"terapia-online-funciona":{slug:"terapia-online-funciona",tags:["Terapia Online","ACP","Psicoterapia","Atendimento Virtual","Tecnologia","Atendimento Humanizado"],htmlContent:`
 			<p class="lead">O que a prática e a ciência mostram sobre os atendimentos online — e como saber se é para você.</p>
 
 			<p>A pergunta é legítima. Quando se trata de saúde mental, é natural querer saber se aquilo em que você vai investir tempo, dinheiro e confiança realmente funciona. E quando falamos de terapia online, a pergunta ganha ainda mais força, porque estamos falando de algo relativamente novo — ou ao menos que se massificou recentemente.</p>
@@ -1652,7 +1694,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>As sessões são realizadas por plataformas seguras e em conformidade com as exigências do CFP. Sua privacidade e sigilo são levados a sério — sempre.</p>
 
 			<p>Se quiser agendar ou tirar dúvidas, estou à disposição.</p>
-		`},"obrigacao-estar-bem":{slug:"obrigacao-estar-bem",tags:["Saúde Mental","Autoconhecimento","Capitalismo Emocional","Felicidade","Cultura da Performance","Autenticidade","ACP"],htmlContent:`
+
+			<section class="cta">
+				<h2>Prefere começar online?</h2>
+
+				<p>
+					Atendo online com a mesma qualidade do presencial. Se você mora longe ou prefere a flexibilidade, a terapia online pode ser o primeiro passo.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/terapia-online/">Terapia online</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Terapia online é tão eficaz quanto presencial?",answer:"Estudos mostram que a terapia online apresenta eficácia comparável à presencial, especialmente para ansiedade, depressão e estresse. O que determina a qualidade não é o meio, mas a relação entre terapeuta e cliente."},{question:"Preciso de algum equipamento especial?",answer:"Não. Um celular, tablet ou computador com câmera e internet estável é suficiente. O mais importante é ter um espaço privado e tranquilo onde você possa falar com liberdade."},{question:"Como garantir privacidade na terapia online?",answer:"Escolha um local onde você não será interrompido ou ouvido por outras pessoas. Use fones de ouvido se necessário. Do lado do terapeuta, as sessões são realizadas em plataformas seguras, conforme exigências do Conselho Federal de Psicologia."},{question:"Posso alternar entre online e presencial?",answer:"Depende do combinado com o terapeuta, mas geralmente sim. Muitas pessoas começam de uma forma e depois mudam conforme a rotina. O processo é seu e pode ser adaptado ao que fizer sentido."},{question:"E se minha internet cair durante a sessão?",answer:"Imprevistos acontecem. O ideal é combinar previamente o que fazer nesses casos — geralmente, reconectar ou reagendar. Não se preocupe: isso faz parte e não compromete o processo."}]},"obrigacao-estar-bem":{slug:"obrigacao-estar-bem",tags:["Saúde Mental","Autoconhecimento","Capitalismo Emocional","Felicidade","Cultura da Performance","Autenticidade","ACP"],htmlContent:`
 			<p class="lead">Por que acreditar que precisamos ser felizes o tempo todo adoece — e o que a ACP mostra sobre isso.</p>
 
 			<p>Vivemos num tempo em que não basta estar vivo. É preciso estar <em>bem</em>. Visível, produtivo, feliz, equilibrado, grato. E se você não consegue, há sempre um aplicativo, um curso, uma técnica, uma fórmula que promete consertar. Como se tristeza fosse defeito. Como se ansiedade fosse falha. Como se existir sem performance fosse insuficiente.</p>
@@ -1712,7 +1768,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Se você está cansado de tentar estar bem o tempo todo, se sente que está sempre devendo algo (para si mesmo, para os outros, para o mundo), talvez esteja na hora de encontrar um espaço onde você não precise dever nada. Onde possa apenas ser.</p>
 
 			<p>Se isso faz sentido para você, estou à disposição para conversarmos.</p>
-		`},"vida-acelerou-demais":{slug:"vida-acelerou-demais",tags:["Saúde Mental","Ansiedade","ACP","Desaceleração","Aceleração Social","Vida Moderna","Presença"],htmlContent:`
+
+			<section class="cta">
+				<h2>Um espaço onde você não precisa performar</h2>
+
+				<p>
+					Se você está cansado de fingir que está bem, a terapia pode ser um lugar para simplesmente existir — sem máscaras, sem cobranças.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O que é positividade tóxica?",answer:"É a pressão para estar sempre bem, grato, motivado — mesmo quando você não está. É a ideia de que emoções 'negativas' são falhas a serem corrigidas. Isso silencia o que você realmente sente e pode aumentar o sofrimento."},{question:"É errado querer ser feliz?",answer:"Não. O problema não é querer bem-estar, mas transformar isso em obrigação. Quando felicidade vira cobrança, você se culpa por sentir tristeza, cansaço ou angústia — emoções que são parte legítima da vida."},{question:"Como lidar com a pressão para 'estar sempre bem'?",answer:"Reconhecer que essa pressão existe — e que não é culpa sua — é um primeiro passo. Permitir-se sentir sem precisar 'resolver' imediatamente também ajuda. A terapia pode ser um espaço onde você não precisa performar bem-estar."},{question:"Terapia é o contrário de autoajuda?",answer:"Não necessariamente. Mas a terapia, especialmente na ACP, não oferece fórmulas prontas. Não é sobre 'se consertar' para funcionar melhor. É sobre ter um espaço onde você pode existir — com suas contradições, dores e dúvidas — sem precisar provar nada."}]},"vida-acelerou-demais":{slug:"vida-acelerou-demais",tags:["Saúde Mental","Ansiedade","ACP","Desaceleração","Aceleração Social","Vida Moderna","Presença"],htmlContent:`
 			<p class="lead">Um olhar sobre a aceleração social e a perda de presença no cotidiano.</p>
 
 			<p>Você acorda com o alarme, já atrasado. Café correndo. Responde mensagens no caminho. Chega no trabalho e já tem pendências acumuladas. Almoça rápido, às vezes sem nem perceber o sabor. Tarde passa voando. Volta pra casa cansado, mas ainda tem coisas pra fazer. Antes de dormir, rola o feed por alguns minutos que viram horas. E recomeça tudo no dia seguinte.</p>
@@ -1786,7 +1856,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>A terapia pode ser esse espaço. Um lugar onde o relógio desacelera. Onde você pode se ouvir. Onde não precisa ser rápido, eficiente, produtivo. Pode simplesmente ser.</p>
 
 			<p>Se isso faz sentido pra você, estou à disposição.</p>
-		`},"nao-somos-maquinas":{slug:"nao-somos-maquinas",tags:["Saúde Mental","Autoconhecimento","ACP","Produtividade","Byung-Chul Han","Capitalismo","Cansaço","Esgotamento"],htmlContent:`
+
+			<section class="cta">
+				<h2>Um espaço para se ouvir</h2>
+
+				<p>
+					Se você sente que está correndo sem saber para onde, a terapia pode ajudar a reconectar você com o que realmente importa. Atendo em Jardim da Penha, Vitória (ES), presencial e online.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Por que tudo parece urgente?",answer:"Vivemos em uma cultura que confunde velocidade com valor. A tecnologia que prometia dar tempo livre acabou aumentando as demandas. A sensação de urgência constante não é falha sua — é efeito de um sistema que não para."},{question:"Desacelerar significa ser menos produtivo?",answer:"Não necessariamente. Desacelerar pode significar produzir com mais presença e menos desgaste. Às vezes, o ritmo frenético resulta em muito movimento e pouco avanço real. Parar para sentir o que você faz pode torná-lo mais significativo."},{question:"Como criar pausas em uma rotina corrida?",answer:"Comece pequeno: 5 minutos de silêncio, uma caminhada sem celular, comer uma refeição sem outra tarefa. O objetivo não é 'parar tudo', mas criar pequenas ilhas de presença no meio do caos."},{question:"A sensação de pressa constante é ansiedade?",answer:"Pode ser. Quando a urgência vira estado permanente — mesmo sem nada urgente — o corpo está em alerta constante. Isso é ansiedade. E merece atenção, não normalização."}]},"nao-somos-maquinas":{slug:"nao-somos-maquinas",tags:["Saúde Mental","Autoconhecimento","ACP","Produtividade","Byung-Chul Han","Capitalismo","Cansaço","Esgotamento"],htmlContent:`
 			<p class="lead">Por que tentar render cada vez mais nos desconecta de quem realmente somos.</p>
 
 			<p>A promessa era simples: trabalhe mais, renda mais, seja mais eficiente. Otimize cada minuto. Maximize resultados. Aprenda enquanto faz outra coisa. Durma menos, produza mais. Se você se esforçar o suficiente, vai chegar lá.</p>
@@ -1868,7 +1952,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Não para te fazer render mais. Mas para te ajudar a se reencontrar com aquilo que, no meio de tanta performance, você deixou de lado: sua própria humanidade.</p>
 
 			<p>Se isso faz sentido para você, estou à disposição para conversarmos.</p>
-		`},"trabalho-interno-vs-performance":{slug:"trabalho-interno-vs-performance",tags:["Saúde Mental","ACP","Resultados","Psicoterapia","Processo Terapêutico","Ética"],htmlContent:`
+
+			<section class="cta">
+				<h2>Busca um espaço sem cobranças?</h2>
+
+				<p>
+					Se você está cansado de tentar render o tempo todo, a terapia pode ser um lugar onde você não precisa produzir — só existir.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Por que me sinto culpado quando descanso?",answer:"Porque fomos ensinados a acreditar que nosso valor está na produtividade. Descansar, nessa lógica, parece 'perda de tempo' ou 'preguiça'. Mas esse é um ensinamento — não uma verdade. Você tem direito ao descanso."},{question:"Como saber se estou esgotado ou só cansado?",answer:"O cansaço comum passa com descanso. O esgotamento não. Se você dorme e acorda exausto, se perdeu interesse em coisas que gostava, se está irritado ou distante sem motivo claro — pode ser mais do que cansaço."},{question:"Produtividade e valor pessoal são a mesma coisa?",answer:"Não. Você não é o que você produz. Seu valor não depende do quanto trabalha, rende ou entrega. Essa confusão é cultural e pode ser desaprendida — com tempo, reflexão e, se necessário, apoio profissional."},{question:"Terapia ajuda quem não consegue parar?",answer:"Sim. A terapia pode ser um espaço onde você finalmente para — sem cobranças, sem metas. E, a partir desse espaço, pode entender o que te impede de desacelerar e encontrar formas mais saudáveis de viver."}]},"trabalho-interno-vs-performance":{slug:"trabalho-interno-vs-performance",tags:["Saúde Mental","ACP","Resultados","Psicoterapia","Processo Terapêutico","Ética"],htmlContent:`
 			<p class="lead">"Como eu sei que a terapia está funcionando?" É uma pergunta legítima. Vivemos numa cultura obcecada por métricas, metas, indicadores de performance. E quando você investe tempo, dinheiro e energia num processo terapêutico, é natural querer saber: isso está servindo pra alguma coisa?</p>
 
 			<p>O problema é que saúde mental não cabe numa planilha. Mudança interna raramente é linear, mensurável ou previsível. E tentar forçar o processo terapêutico nos moldes da lógica produtivista pode acabar fazendo o contrário: transformando cuidado em cobrança.</p>
@@ -1939,7 +2037,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.75rem 2rem; border-radius: var(--radius-md); margin-top: 3rem; border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm);">
 				<p style="margin: 0; color: #0c4a6e; line-height: 1.7; font-size: 1rem;"><strong style="font-size: 1.0625rem;">Nota ética:</strong> Terapia não substitui condições materiais; sempre que necessário, encaminho para outras redes de cuidado. Conteúdos do site/blog são informativos e não substituem atendimento. Em situações de risco, procure serviços de urgência e sua rede local de cuidado.</p>
 			</div>
-		`},"quando-automatico-vira-modo-de-vida":{slug:"quando-automatico-vira-modo-de-vida",tags:["Autoconhecimento","Saúde Mental","ACP","Presença","Piloto Automático","Procrastinação","Hábitos","Burnout"],htmlContent:`
+
+			<section class="cta">
+				<h2>Quer entender se a terapia faz sentido para você?</h2>
+
+				<p>
+					Se você tem dúvidas sobre o processo, estou disponível para uma conversa inicial. Podemos entender juntos se esse caminho faz sentido para o seu momento.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Como saber se a terapia está funcionando?",answer:"Não existe métrica exata. Mas alguns sinais ajudam: você se sente mais em contato com o que sente, consegue colocar limites, trata-se com menos violência, toma decisões mais alinhadas com seus valores. Mudanças pequenas contam."},{question:"É normal não sentir mudanças imediatas?",answer:"Sim. Mudança interna não é linear. Algumas sessões parecem 'não ter dado em nada' — e, semanas depois, você percebe que algo mudou. Confie no processo, mas fale com o terapeuta se a sensação de estagnação persistir."},{question:"Devo definir metas para a terapia?",answer:"Não é obrigatório. Na ACP, não existe roteiro. O processo acompanha o que surge. Mas pode ser útil ter clareza sobre o que te trouxe ali — não como meta rígida, mas como ponto de partida."},{question:"Quanto tempo leva para ver resultados?",answer:"Varia de pessoa para pessoa. Algumas sentem diferença em semanas; outras, em meses. O tempo depende de muitos fatores — e 'resultado' não significa 'problema resolvido', mas sim uma relação diferente consigo mesmo."},{question:"O que fazer se parecer que 'não está acontecendo nada'?",answer:"Fale sobre isso na terapia. Essa sensação pode ser explorada — e muitas vezes revela algo importante. Também pode ser hora de revisar expectativas ou mesmo considerar outra abordagem ou profissional. Transparência é fundamental."}]},"quando-automatico-vira-modo-de-vida":{slug:"quando-automatico-vira-modo-de-vida",tags:["Autoconhecimento","Saúde Mental","ACP","Presença","Piloto Automático","Procrastinação","Hábitos","Burnout"],htmlContent:`
 			<p class="lead">Viver no automático é uma estratégia inteligente do corpo: economiza energia, evita sobrecarga, permite que você funcione sem parar pra pensar em cada detalhe. O problema é quando essa economia se transforma em desconexão — você segue fazendo, mas esquece de perguntar: "é isso que eu quero?"</p>
 
 			<p>Muita gente chega na terapia dizendo que não sabe mais o que sente, o que quer, ou por que está tão cansada. E, aos poucos, a gente descobre: não é falta de energia, é excesso de automatismo. É viver no piloto automático tanto tempo que se perde a sensação de estar no comando.</p>
@@ -1994,7 +2106,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Reconhecer que algo não vai bem não é fracasso. É o primeiro passo de quem quer, de fato, viver — não apenas funcionar.</p>
 
 			<p><strong>Nota ética:</strong> Se o automático está ligado a sofrimento intenso, procure ajuda. Conteúdos do site/blog são informativos e não substituem atendimento. Em situações de risco, procure serviços de urgência e sua rede local de cuidado.</p>
-		`},"ansiedade-sinais-desacelerar":{slug:"ansiedade-sinais-desacelerar",tags:["Ansiedade","Saúde Mental","Sinais","Corpo","Estresse","Autocobrança","ACP","Desaceleração"],htmlContent:`
+
+			<section class="cta">
+				<h2>Quer voltar a sentir que está no comando?</h2>
+
+				<p>
+					Se você sente que está vivendo no piloto automático, a terapia pode ajudar a reconectar você consigo mesmo.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O que é viver no piloto automático?",answer:"É funcionar sem presença. Você faz as coisas, cumpre tarefas, passa pelos dias — mas não está realmente ali. Não sente, não escolhe, não questiona. É uma estratégia do corpo para economizar energia, mas vira problema quando se estende demais."},{question:"Por que me sinto desconectado da minha vida?",answer:"Pode ser que você esteja vivendo no automático há tanto tempo que perdeu contato com o que sente e quer. Isso não é falha sua — é resposta a um ritmo que não deixa espaço para existir. A boa notícia: é possível reconectar."},{question:"Como sair do modo automático?",answer:"Comece com pequenos gestos de presença: fazer uma coisa de cada vez, incluir descanso na agenda, revisar 'deverias' que talvez não sejam seus. Terapia pode ajudar a criar espaço para você se ouvir novamente."},{question:"Isso pode ser depressão?",answer:"Pode. A desconexão prolongada, a perda de interesse, a sensação de vazio são sinais que merecem atenção. Se o automático está causando sofrimento intenso, procure ajuda profissional. Reconhecer que algo não vai bem é o primeiro passo."}]},"ansiedade-sinais-desacelerar":{slug:"ansiedade-sinais-desacelerar",tags:["Ansiedade","Saúde Mental","Sinais","Corpo","Estresse","Autocobrança","ACP","Desaceleração"],htmlContent:`
 			<h2>A diferença entre o ritmo natural da vida e a exaustão que se disfarça de produtividade</h2>
 
 			<p class="lead">A ansiedade é uma emoção natural — ela nos prepara para agir, tomar decisões e responder aos desafios do dia a dia. O problema é quando ela deixa de ser um impulso vital e passa a dominar a rotina.</p>
@@ -2055,7 +2181,22 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Se você está sentindo que a ansiedade tem tomado mais espaço do que deveria na sua vida, talvez seja o momento de buscar ajuda. A psicoterapia pode ser esse espaço de acolhimento e transformação que você precisa para reencontrar o equilíbrio.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo. Se quiser conversar, entre em contato. O primeiro passo pode ser mais simples do que você imagina.</p>
-		`},"corpo-e-emocoes":{slug:"corpo-e-emocoes",tags:["Saúde Mental","ACP","Corpo","Emoções","Psicossomática","Dor Crônica","Estresse","Saúde Integral"],htmlContent:`
+
+			<section class="cta">
+				<h2>Precisa de ajuda para desacelerar?</h2>
+
+				<p>
+					Se a ansiedade tem tomado conta, talvez seja hora de buscar um espaço de escuta. Atendo presencialmente em Jardim da Penha e online.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/servicos/terapia-online/">Terapia online</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Quais são os sinais físicos da ansiedade?",answer:"Dificuldade para dormir, tensão muscular, dores de cabeça, problemas digestivos, palpitações, sensação de urgência constante, irritabilidade. O corpo fala quando a mente não consegue processar tudo sozinha."},{question:"Ansiedade é doença ou emoção normal?",answer:"A ansiedade é uma emoção natural — nos prepara para agir. Mas quando se torna excessiva e constante, pode virar um problema. O ponto de atenção é quando ela domina a rotina e impede você de viver com mais leveza."},{question:"Quando devo procurar ajuda profissional?",answer:"Quando a ansiedade interfere no seu dia a dia: trabalho, relações, sono, bem-estar. Quando você sente que não consegue mais lidar sozinho. Buscar ajuda não é fraqueza — é cuidado."},{question:"Respiração e meditação realmente funcionam?",answer:"Podem ajudar, sim. Mas não são soluções mágicas. São ferramentas que funcionam melhor quando integradas a um cuidado mais amplo — que pode incluir terapia, mudanças de rotina, e um olhar honesto para o que está te sobrecarregando."},{question:"Ansiedade tem cura?",answer:"A ansiedade como emoção não desaparece — e nem precisa. O objetivo não é eliminá-la, mas aprender a se relacionar com ela de forma mais saudável. Com apoio, é possível viver com menos peso e mais presença."}]},"corpo-e-emocoes":{slug:"corpo-e-emocoes",tags:["Saúde Mental","ACP","Corpo","Emoções","Psicossomática","Dor Crônica","Estresse","Saúde Integral"],htmlContent:`
 			<h2>Nem sempre o problema está no corpo — às vezes, ele apenas carrega o que a mente ainda não pôde dizer</h2>
 
 			<p class="lead">Dores, insônia, palpitações, tensão. O corpo é, muitas vezes, o primeiro a manifestar o que não conseguimos expressar em palavras.</p>
@@ -2133,7 +2274,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Não se trata de "resolver" todos os sintomas, mas de compreender o que eles revelam sobre sua forma de viver. E, a partir dessa compreensão, encontrar caminhos mais saudáveis e conscientes.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo de reconexão. Entre em contato se quiser conversar.</p>
-		`},"crises-existenciais":{slug:"crises-existenciais",tags:["Saúde Mental","Autoconhecimento","Crise","Sentido","Propósito","Vazio","Transformação","ACP"],htmlContent:`
+
+			<section class="cta">
+				<h2>Escutando o corpo de verdade</h2>
+
+				<p>
+					Se seu corpo anda pedindo atenção de formas que você não entende, a terapia pode ser um espaço para traduzir esses sinais e cuidar de você por inteiro.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Por que sinto dor no corpo quando estou estressado?",answer:"Porque corpo e mente estão conectados. O estresse emocional se manifesta como tensão muscular, dores, problemas digestivos, insônia. O corpo expressa o que a mente ainda não conseguiu elaborar."},{question:"Sintomas físicos podem ser emocionais?",answer:"Sim. Quando exames médicos não encontram causa física, pode ser que o corpo esteja manifestando algo emocional. Isso não significa que a dor não é real — ela é. Significa que a origem pode estar em outro lugar."},{question:"Devo ir ao médico ou ao psicólogo primeiro?",answer:"Idealmente, os dois podem trabalhar juntos. O médico investiga causas físicas; a terapia ajuda a elaborar questões emocionais. Um não substitui o outro — eles se complementam."},{question:"Como a terapia ajuda sintomas físicos?",answer:"Ao criar espaço para você entender e expressar o que está sentindo, a tensão emocional diminui — e, frequentemente, os sintomas físicos também. Não é mágica: é o corpo respondendo a uma mente menos sobrecarregada."}]},"crises-existenciais":{slug:"crises-existenciais",tags:["Saúde Mental","Autoconhecimento","Crise","Sentido","Propósito","Vazio","Transformação","ACP"],htmlContent:`
 			<h2>Crises de sentido não são o fim de algo — são, muitas vezes, o começo de uma nova compreensão de si</h2>
 
 			<p class="lead">Há momentos em que nada parece fazer sentido. O trabalho já não motiva, os relacionamentos parecem distantes, e até as coisas que antes traziam prazer perdem o brilho.</p>
@@ -2211,7 +2366,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Se você sente que está atravessando uma crise de sentido, talvez seja hora de buscar ajuda. A psicoterapia pode ser o espaço que você precisa para se reencontrar e redescobrir o que realmente importa.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo. Entre em contato se quiser conversar.</p>
-		`},"abordagem-centrada-pessoa":{slug:"abordagem-centrada-pessoa",tags:["ACP","Carl Rogers","Psicologia Humanista","Psicoterapia","Empatia","Aceitação Incondicional","Tendência Atualizante"],htmlContent:`
+
+			<section class="cta">
+				<h2>Um espaço para as perguntas difíceis</h2>
+
+				<p>
+					Se você está se perguntando “e agora?”, a terapia pode ser um lugar para explorar esse momento sem pressa, sem julgamento e sem respostas prontas.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"O que é uma crise existencial?",answer:"É um momento em que as antigas certezas deixam de fazer sentido. Você questiona escolhas, valores, identidade. Pode sentir vazio, falta de propósito, distanciamento. É desconfortável — mas também pode ser o início de uma transformação."},{question:"É normal sentir que a vida perdeu o sentido?",answer:"Sim. Muitas pessoas passam por isso — especialmente em transições importantes. Não significa que você fracassou. Significa que algo em você está pedindo revisão. E isso pode ser uma oportunidade de crescimento."},{question:"Crise existencial é o mesmo que depressão?",answer:"Não necessariamente. Podem coexistir, mas são coisas diferentes. A crise existencial é uma pergunta sobre sentido; a depressão é um estado prolongado de sofrimento. Se os sintomas forem intensos, procure avaliação profissional."},{question:"Como sair de uma crise de sentido?",answer:"Não existe atalho. Mas a terapia pode ser um espaço para explorar essas perguntas sem pressa, sem julgamento. Aos poucos, novas direções surgem — não de fora, mas de uma escuta interna mais profunda."},{question:"Quanto tempo dura uma crise existencial?",answer:"Varia. Pode durar semanas, meses, às vezes mais. Não há prazo. O importante é não atravessar sozinho e respeitar seu ritmo. A pressa de 'resolver logo' pode atrapalhar mais do que ajudar."}]},"abordagem-centrada-pessoa":{slug:"abordagem-centrada-pessoa",tags:["ACP","Carl Rogers","Psicologia Humanista","Psicoterapia","Empatia","Aceitação Incondicional","Tendência Atualizante"],htmlContent:`
 			<h2>Uma forma de compreender o ser humano com base em presença, empatia e autenticidade</h2>
 
 			<p class="lead">A Abordagem Centrada na Pessoa (ACP), criada por Carl Rogers, parte da ideia de que cada pessoa possui dentro de si um potencial natural de crescimento e cura. O papel do terapeuta é criar um espaço onde esse potencial possa florescer.</p>
@@ -2297,7 +2466,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Se você está buscando um espaço assim — onde possa ser ouvido de verdade, onde possa se ouvir e se compreender melhor — a Abordagem Centrada na Pessoa pode ser o caminho que você procura.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo. Entre em contato se quiser saber mais ou agendar uma conversa.</p>
-		`},"terapia-para-homens":{slug:"terapia-para-homens",tags:["Masculinidades","Saúde Mental Masculina","Terapia","Emoções","Vulnerabilidade","ACP"],htmlContent:`
+
+			<section class="cta">
+				<h2>Quer experimentar essa abordagem?</h2>
+
+				<p>
+					Se você busca uma terapia baseada em empatia, aceitação e autenticidade, esse pode ser o caminho. Atendo em Jardim da Penha, Vitória (ES).
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Quem foi Carl Rogers?",answer:"Carl Rogers (1902–1987) foi um psicólogo norte-americano que revolucionou a psicoterapia ao colocar a pessoa — e não o terapeuta — no centro do processo. Ele acreditava que todo ser humano tem capacidade de crescer quando encontra um ambiente seguro."},{question:"O que significa 'aceitação incondicional'?",answer:"Significa ser acolhido como você é, sem julgamentos e sem condições. Não importa o que você sinta, pense ou tenha feito — você será respeitado em sua totalidade. Isso não significa concordância com tudo, mas aceitação profunda de quem você é."},{question:"A ACP funciona para todos os problemas?",answer:"A ACP pode ajudar em diversas questões — ansiedade, depressão, crises de sentido, relacionamentos, entre outras. Mas não é uma abordagem que se propõe a 'consertar' você. É um espaço para você se ouvir e encontrar seus próprios caminhos."},{question:"Por que o terapeuta não interpreta ou diagnostica?",answer:"Porque, na ACP, o especialista da sua vida é você. O terapeuta não impõe significados ou rótulos. Ele acompanha, escuta, reflete — e confia que você sabe, ou pode descobrir, o que é melhor para si."},{question:"Como a ACP se diferencia da psicanálise?",answer:"A psicanálise foca bastante no inconsciente, no passado e na interpretação do analista. A ACP foca mais na experiência consciente do 'aqui e agora', no potencial de crescimento e na relação igualitária entre terapeuta e cliente. Ambas são legítimas — depende do que você busca."}]},"terapia-para-homens":{slug:"terapia-para-homens",tags:["Masculinidades","Saúde Mental Masculina","Terapia","Emoções","Vulnerabilidade","ACP"],htmlContent:`
 			<h2>Entre o silêncio e o medo de parecer fraco, há um espaço de humanidade que precisa ser recuperado</h2>
 
 			<p class="lead">Crescemos ouvindo que homem não chora, que precisa ser forte, que não pode demonstrar fragilidade. Essas ideias moldam a forma como muitos homens se relacionam — e acabam gerando isolamento e sofrimento.</p>
@@ -2363,7 +2546,21 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Ie,d as De,b as Je,A as B
 			<p>Coordeno também a <strong>Roda de Conversa Entre Homens</strong>, um grupo terapêutico onde homens compartilham suas vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência potente de conexão e crescimento.</p>
 
 			<p>Se quiser saber mais sobre como a terapia pode te ajudar — seja individual ou em grupo — entre em contato. O primeiro passo pode ser mais simples do que você imagina. E você não precisa dar esse passo sozinho.</p>
-		`}},na=({params:u})=>{const t=Ie(u.categoria);if(!t)throw ae(404,"Categoria não encontrada");const a=De(u.slug),n=ia[u.slug];if(!a||!n)throw ae(404,"Artigo não encontrado");if(a.categorySlug!==u.categoria)throw ae(404,"Artigo não encontrado nesta categoria");return{categoria:u.categoria,category:t,slug:u.slug,post:a,content:n}},Ta=Object.freeze(Object.defineProperty({__proto__:null,load:na},Symbol.toStringTag,{value:"Module"}));var ta=l('<span title="Revisão Clínica"><!> </span>'),da=l('<div class="faq-item"><h3> </h3> <p> </p></div>'),ca=l('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),ma=l("<li> </li>"),ua=l('<section id="referencias" class="references-section"><h3>Referências Bibliográficas</h3> <ul></ul></section>'),pa=l('<span class="tag svelte-lxkfym"> </span>'),la=l("<!> Conversar",1),va=l("<!> Como Chegar",1),ga=l(`<div class="post-content"><!> <!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo Clínico pela UFES desde 2017 e especialista na
+
+			<section class="cta">
+				<h2>Espaço seguro para homens</h2>
+
+				<p>
+					Se você está cansado de carregar tudo sozinho, a terapia pode ser um lugar para você. Também coordeno a Roda de Conversa Entre Homens, um grupo terapêutico.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/grupos-e-rodas/">Grupos e Rodas</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,faq:[{question:"Por que homens têm mais dificuldade de buscar terapia?",answer:"Porque muitos cresceram ouvindo que homem não chora, não pode ser frágil, tem que resolver tudo sozinho. Essas mensagens criam barreiras para pedir ajuda — mesmo quando ela é necessária."},{question:"Terapia é 'coisa de mulher'?",answer:"Não. Terapia é para qualquer pessoa que queira um espaço de escuta e autoconhecimento. A ideia de que é 'coisa de mulher' vem de uma cultura que nega aos homens o direito de sentir. Isso está mudando — devagar, mas está."},{question:"Preciso chorar ou falar de sentimentos na terapia?",answer:"Não precisa chorar nem se expor mais do que se sente confortável. A terapia respeita seu ritmo. Você pode começar falando do que quiser — trabalho, rotina, algo que aconteceu. Com o tempo, as emoções vão encontrando espaço naturalmente."},{question:"O que é a Roda de Conversa Entre Homens?",answer:"É um grupo terapêutico onde homens compartilham vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência de conexão que muitos homens nunca tiveram — e que pode ser transformadora."},{question:"Como começo se nunca falei sobre o que sinto?",answer:"Você não precisa saber como começar. Basta chegar. A terapia é justamente um lugar para aprender a se ouvir. E não precisa dar esse passo sozinho — o primeiro contato pode ser só para tirar dúvidas e ver se faz sentido."}]}},na=({params:u})=>{const t=Fe(u.categoria);if(!t)throw ae(404,"Categoria não encontrada");const a=De(u.slug),n=ia[u.slug];if(!a||!n)throw ae(404,"Artigo não encontrado");if(a.categorySlug!==u.categoria)throw ae(404,"Artigo não encontrado nesta categoria");return{categoria:u.categoria,category:t,slug:u.slug,post:a,content:n}},Ua=Object.freeze(Object.defineProperty({__proto__:null,load:na},Symbol.toStringTag,{value:"Module"}));var ta=l('<span title="Revisão Clínica"><!> </span>'),da=l('<div class="faq-item"><h3> </h3> <p> </p></div>'),ca=l('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),ma=l("<li> </li>"),ua=l('<section id="referencias" class="references-section"><h3>Referências Bibliográficas</h3> <ul></ul></section>'),pa=l('<span class="tag svelte-lxkfym"> </span>'),la=l("<!> Conversar",1),va=l("<!> Como Chegar",1),ga=l(`<div class="post-content"><!> <!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo Clínico pela UFES desde 2017 e especialista na
                 Abordagem Centrada na Pessoa pelo <a href="https://encontroacp.com.br" target="_blank" rel="noopener noreferrer" class="svelte-lxkfym">EncontroACP</a>, sempre em formação continuada. Coordenador da Roda de
                 Conversa Terapêutica Entre Homens EncontroACP e fundador da <a href="https://arranjospsicologia.com.br" target="_blank" rel="noopener noreferrer" class="svelte-lxkfym">Arranjos Psicologia</a>. Atende em Vitória (Jardim da Penha) e Online, oferecendo um
-                espaço de acolhimento ético e humanizado.</p> <div class="author-actions"><!> <!></div></div></div>`,1),ha=l('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),fa=l('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),qa=l("<!> Falar no WhatsApp",1),ba=l('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),za=l('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span> <!></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Ua(u,t){He(t,!0);const a=z(()=>t.data.post),n=z(()=>t.data.content),P=z(()=>t.data.category),y=z(()=>Je.filter(r=>r.slug!==t.data.slug&&r.categorySlug===e(a).categorySlug).slice(0,3)),f=z(()=>e(a).categorySlug==="jardim-da-penha"||e(a).categorySlug==="vitoria-es"||e(a).tags.some(r=>r.toLowerCase().includes("vitória")||r.toLowerCase().includes("jardim da penha"))),O=z(()=>[{"@type":"Thing",name:e(P).label},...e(a).tags?e(a).tags.filter(r=>!r.toLowerCase().includes("vitória")&&!r.toLowerCase().includes("jardim da penha")&&!r.toLowerCase().includes("saúde mental")&&r!==e(a).categorySlug).map(r=>({"@type":"Thing",name:r.toLowerCase()==="acp"?"Abordagem Centrada na Pessoa":r.charAt(0).toUpperCase()+r.slice(1)})):[]]),je=z(()=>({"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Início",item:"https://psicologobernardo.com.br/"},{"@type":"ListItem",position:2,name:e(P).label,item:`https://psicologobernardo.com.br/${e(a).categorySlug}`},{"@type":"ListItem",position:3,name:e(a).title,item:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}]},{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#webpage`,url:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`,name:`${e(a).title} - Psicólogo Bernardo`,isPartOf:{"@id":"https://psicologobernardo.com.br/#website"},mainEntity:{"@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`}},{"@type":"Article","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`,headline:e(a).title,name:e(a).title,description:e(a).description,image:{"@type":"ImageObject",url:`https://psicologobernardo.com.br${e(a).image}`,width:800,height:450},datePublished:F(e(a).date),dateModified:e(a).lastReviewed?F(e(a).lastReviewed):F(e(a).date),author:{"@id":"https://psicologobernardo.com.br/sobre/#person"},publisher:{"@id":"https://psicologobernardo.com.br/#organization"},inLanguage:"pt-BR",isAccessibleForFree:!0,articleSection:e(a).category,keywords:e(a).tags,audience:{"@type":"Audience",audienceType:"General public"},...e(f)?{contentLocation:{"@type":"Place",name:"Jardim da Penha, Vitória - ES"}}:{},about:e(O),...e(n).references?{citation:e(n).references}:{}},...e(n).faq?[{"@type":"FAQPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#faq`,mainEntity:e(n).faq.map(r=>({"@type":"Question",name:r.question,acceptedAnswer:{"@type":"Answer",text:r.answer}}))}]:[]]}));function F(r){const q={Jan:"01",Fev:"02",Mar:"03",Abr:"04",Mai:"05",Jun:"06",Jul:"07",Ago:"08",Set:"09",Out:"10",Nov:"11",Dez:"12"},d=r.split(" ");if(d.length!==3)return new Date().toISOString().split("T")[0];const v=d[0].padStart(2,"0"),b=q[d[1]]||"01";return`${d[2]}-${b}-${v}`}var me=za(),ue=j(me);{let r=z(()=>`${e(a).title} - Psicólogo Bernardo`),q=z(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),d=z(()=>`https://psicologobernardo.com.br${e(a).image}`);Xe(ue,{get title(){return e(r)},get description(){return e(a).description},get canonical(){return e(q)},type:"article",get image(){return e(d)},get jsonLd(){return e(je)}})}var pe=i(ue,2);{let r=z(()=>[{name:"Início",href:"/"},{name:e(P).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);We(pe,{generateSchema:!1,get items(){return e(r)}})}var B=i(pe,2),le=s(B),H=s(le),L=s(H),Oe=s(L,!0);o(L);var G=i(L,2),Ne=s(G,!0);o(G);var ve=i(G,2),W=s(ve),ge=s(W);Ze(ge,{size:16});var Ve=i(ge);o(W);var X=i(W,2),he=s(X);Ke(he,{size:16});var we=i(he);o(X);var _e=i(X,2);{var Me=r=>{var q=ta(),d=s(q);oa(d,{size:16});var v=i(d);o(q),_(b=>A(v,` Revisado: ${b??""}`),[()=>F(e(a).lastReviewed)]),m(r,q)};Q(_e,r=>{e(a).lastReviewed&&r(Me)})}o(ve),o(H);var fe=i(H,2),qe=s(fe);o(fe),o(le),o(B);var be=i(B,2);re(be,{variant:"white",children:(r,q)=>{var d=ga(),v=j(d),b=s(v);Ge(b,()=>e(n).htmlContent);var M=i(b,2);{var g=c=>{var p=ca(),h=i(s(p),2);D(h,17,()=>e(n).faq,J,(C,k)=>{var w=da(),U=s(w),Qe=s(U,!0);o(U);var Se=i(U,2),Fe=s(Se,!0);o(Se),o(w),_(()=>{A(Qe,e(k).question),A(Fe,e(k).answer)}),m(C,w)}),o(p),m(c,p)};Q(M,c=>{e(n).faq&&e(n).faq.length>0&&c(g)})}var S=i(M,2);{var $=c=>{var p=ua(),h=i(s(p),2);D(h,21,()=>e(n).references,J,(C,k)=>{var w=ma(),U=s(w,!0);o(w),_(()=>A(U,e(k))),m(C,w)}),o(h),o(p),m(c,p)};Q(S,c=>{e(n).references&&e(n).references.length>0&&c($)})}o(v);var N=i(v,2),R=s(N),Z=i(s(R),2);D(Z,17,()=>e(n).tags,J,(c,p)=>{var h=pa(),C=s(h,!0);o(h),_(()=>A(C,e(p))),m(c,h)}),o(R);var T=i(R,2),E=i(s(T),2),K=s(E);Ye(K,{size:18}),o(E);var V=i(E,2),Y=s(V);ea(Y,{size:18}),o(V);var I=i(V,2),ye=s(I);ra(ye,{size:18}),o(I);var ee=i(I,2),$e=s(ee);sa($e,{size:18}),o(ee),o(T),o(N);var Ae=i(N,2),Ce=i(s(Ae),2),Pe=i(s(Ce),4),xe=s(Pe);se(xe,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",size:"sm",children:(c,p)=>{var h=la(),C=j(h);Ee(C,{size:18}),oe(),m(c,h)},$$slots:{default:!0}});var Te=i(xe,2);{var Ue=c=>{se(c,{href:"https://maps.app.goo.gl/seu-link-google-maps",variant:"outline",size:"sm",target:"_blank",children:(p,h)=>{var C=va(),k=j(C);aa(k,{size:18}),oe(),m(p,C)},$$slots:{default:!0}})};Q(Te,c=>{e(f)&&c(Ue)})}o(Pe),o(Ce),o(Ae),_((c,p)=>{x(E,"href",`https://api.whatsapp.com/send?text=${c??""}`),x(V,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),x(I,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${p??""}`),x(ee,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(r,d)},$$slots:{default:!0}});var ze=i(be,2);{var Re=r=>{re(r,{variant:"beige",children:(q,d)=>{var v=fa(),b=i(s(v),2);D(b,21,()=>e(y),J,(M,g)=>{var S=ha(),$=s(S),N=s($),R=i(N,2),Z=s(R,!0);o(R),o($);var T=i($,2),E=s(T),K=s(E,!0);o(E);var V=i(E,2),Y=i(s(V));Be(Y,{size:16}),o(V),o(T),o(S),_(()=>{x(S,"href",`/${e(g).categorySlug??""}/${e(g).slug??""}`),x(N,"src",e(g).image),x(N,"alt",e(g).altText||e(g).title),A(Z,e(g).category),A(K,e(g).title)}),m(M,S)}),o(b),o(v),m(q,v)},$$slots:{default:!0}})};Q(ze,r=>{e(y).length>0&&r(Re)})}var ke=i(ze,2);re(ke,{variant:"gradient",children:(r,q)=>{var d=ba(),v=i(s(d),4);se(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(b,M)=>{var g=qa(),S=j(g);Ee(S,{size:20}),oe(),m(b,g)},$$slots:{default:!0}}),o(d),m(r,d)},$$slots:{default:!0}}),_(()=>{A(Oe,e(a).category),A(Ne,e(a).title),A(Ve,` ${e(a).date??""}`),A(we,` ${e(a).readTime??""}`),x(qe,"src",e(a).image),x(qe,"alt",e(a).altText||e(a).title)}),m(u,me),Le()}export{Ua as component,Ta as universal};
+                espaço de acolhimento ético e humanizado.</p> <div class="author-actions"><!> <!></div></div></div>`,1),ha=l('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),fa=l('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),qa=l("<!> Falar no WhatsApp",1),ba=l('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),za=l('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span> <!></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Qa(u,t){He(t,!0);const a=z(()=>t.data.post),n=z(()=>t.data.content),P=z(()=>t.data.category),y=z(()=>Je.filter(r=>r.slug!==t.data.slug&&r.categorySlug===e(a).categorySlug).slice(0,3)),f=z(()=>e(a).categorySlug==="jardim-da-penha"||e(a).categorySlug==="vitoria-es"||e(a).tags.some(r=>r.toLowerCase().includes("vitória")||r.toLowerCase().includes("jardim da penha"))),O=z(()=>[{"@type":"Thing",name:e(P).label},...e(a).tags?e(a).tags.filter(r=>!r.toLowerCase().includes("vitória")&&!r.toLowerCase().includes("jardim da penha")&&!r.toLowerCase().includes("saúde mental")&&r!==e(a).categorySlug).map(r=>({"@type":"Thing",name:r.toLowerCase()==="acp"?"Abordagem Centrada na Pessoa":r.charAt(0).toUpperCase()+r.slice(1)})):[]]),je=z(()=>({"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Início",item:"https://psicologobernardo.com.br/"},{"@type":"ListItem",position:2,name:e(P).label,item:`https://psicologobernardo.com.br/${e(a).categorySlug}`},{"@type":"ListItem",position:3,name:e(a).title,item:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}]},{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#webpage`,url:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`,name:`${e(a).title} - Psicólogo Bernardo`,isPartOf:{"@id":"https://psicologobernardo.com.br/#website"},mainEntity:{"@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`}},{"@type":"Article","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`,headline:e(a).title,name:e(a).title,description:e(a).description,image:{"@type":"ImageObject",url:`https://psicologobernardo.com.br${e(a).image}`,width:800,height:450},datePublished:I(e(a).date),dateModified:e(a).lastReviewed?I(e(a).lastReviewed):I(e(a).date),author:{"@id":"https://psicologobernardo.com.br/sobre/#person"},publisher:{"@id":"https://psicologobernardo.com.br/#organization"},inLanguage:"pt-BR",isAccessibleForFree:!0,articleSection:e(a).category,keywords:e(a).tags,audience:{"@type":"Audience",audienceType:"General public"},...e(f)?{contentLocation:{"@type":"Place",name:"Jardim da Penha, Vitória - ES"}}:{},about:e(O),...e(n).references?{citation:e(n).references}:{}},...e(n).faq?[{"@type":"FAQPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#faq`,mainEntity:e(n).faq.map(r=>({"@type":"Question",name:r.question,acceptedAnswer:{"@type":"Answer",text:r.answer}}))}]:[]]}));function I(r){const q={Jan:"01",Fev:"02",Mar:"03",Abr:"04",Mai:"05",Jun:"06",Jul:"07",Ago:"08",Set:"09",Out:"10",Nov:"11",Dez:"12"},d=r.split(" ");if(d.length!==3)return new Date().toISOString().split("T")[0];const v=d[0].padStart(2,"0"),b=q[d[1]]||"01";return`${d[2]}-${b}-${v}`}var me=za(),ue=j(me);{let r=z(()=>`${e(a).title} - Psicólogo Bernardo`),q=z(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),d=z(()=>`https://psicologobernardo.com.br${e(a).image}`);Xe(ue,{get title(){return e(r)},get description(){return e(a).description},get canonical(){return e(q)},type:"article",get image(){return e(d)},get jsonLd(){return e(je)}})}var pe=i(ue,2);{let r=z(()=>[{name:"Início",href:"/"},{name:e(P).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);We(pe,{generateSchema:!1,get items(){return e(r)}})}var B=i(pe,2),le=s(B),H=s(le),L=s(H),Oe=s(L,!0);o(L);var G=i(L,2),we=s(G,!0);o(G);var ve=i(G,2),W=s(ve),ge=s(W);Ze(ge,{size:16});var Ne=i(ge);o(W);var X=i(W,2),he=s(X);Ke(he,{size:16});var Ve=i(he);o(X);var Me=i(X,2);{var _e=r=>{var q=ta(),d=s(q);oa(d,{size:16});var v=i(d);o(q),M(b=>C(v,` Revisado: ${b??""}`),[()=>I(e(a).lastReviewed)]),m(r,q)};$(Me,r=>{e(a).lastReviewed&&r(_e)})}o(ve),o(H);var fe=i(H,2),qe=s(fe);o(fe),o(le),o(B);var be=i(B,2);re(be,{variant:"white",children:(r,q)=>{var d=ga(),v=j(d),b=s(v);Ge(b,()=>e(n).htmlContent);var _=i(b,2);{var g=c=>{var p=ca(),h=i(s(p),2);D(h,17,()=>e(n).faq,J,(A,k)=>{var V=da(),Q=s(V),$e=s(Q,!0);o(Q);var Se=i(Q,2),Ie=s(Se,!0);o(Se),o(V),M(()=>{C($e,e(k).question),C(Ie,e(k).answer)}),m(A,V)}),o(p),m(c,p)};$(_,c=>{e(n).faq&&e(n).faq.length>0&&c(g)})}var S=i(_,2);{var T=c=>{var p=ua(),h=i(s(p),2);D(h,21,()=>e(n).references,J,(A,k)=>{var V=ma(),Q=s(V,!0);o(V),M(()=>C(Q,e(k))),m(A,V)}),o(h),o(p),m(c,p)};$(S,c=>{e(n).references&&e(n).references.length>0&&c(T)})}o(v);var w=i(v,2),R=s(w),Z=i(s(R),2);D(Z,17,()=>e(n).tags,J,(c,p)=>{var h=pa(),A=s(h,!0);o(h),M(()=>C(A,e(p))),m(c,h)}),o(R);var U=i(R,2),E=i(s(U),2),K=s(E);Ye(K,{size:18}),o(E);var N=i(E,2),Y=s(N);ea(Y,{size:18}),o(N);var F=i(N,2),ye=s(F);ra(ye,{size:18}),o(F);var ee=i(F,2),Te=s(ee);sa(Te,{size:18}),o(ee),o(U),o(w);var Ce=i(w,2),Ae=i(s(Ce),2),Pe=i(s(Ae),4),xe=s(Pe);se(xe,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",size:"sm",children:(c,p)=>{var h=la(),A=j(h);Ee(A,{size:18}),oe(),m(c,h)},$$slots:{default:!0}});var Ue=i(xe,2);{var Qe=c=>{se(c,{href:"https://maps.app.goo.gl/seu-link-google-maps",variant:"outline",size:"sm",target:"_blank",children:(p,h)=>{var A=va(),k=j(A);aa(k,{size:18}),oe(),m(p,A)},$$slots:{default:!0}})};$(Ue,c=>{e(f)&&c(Qe)})}o(Pe),o(Ae),o(Ce),M((c,p)=>{x(E,"href",`https://api.whatsapp.com/send?text=${c??""}`),x(N,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),x(F,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${p??""}`),x(ee,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(r,d)},$$slots:{default:!0}});var ze=i(be,2);{var Re=r=>{re(r,{variant:"beige",children:(q,d)=>{var v=fa(),b=i(s(v),2);D(b,21,()=>e(y),J,(_,g)=>{var S=ha(),T=s(S),w=s(T),R=i(w,2),Z=s(R,!0);o(R),o(T);var U=i(T,2),E=s(U),K=s(E,!0);o(E);var N=i(E,2),Y=i(s(N));Be(Y,{size:16}),o(N),o(U),o(S),M(()=>{x(S,"href",`/${e(g).categorySlug??""}/${e(g).slug??""}`),x(w,"src",e(g).image),x(w,"alt",e(g).altText||e(g).title),C(Z,e(g).category),C(K,e(g).title)}),m(_,S)}),o(b),o(v),m(q,v)},$$slots:{default:!0}})};$(ze,r=>{e(y).length>0&&r(Re)})}var ke=i(ze,2);re(ke,{variant:"gradient",children:(r,q)=>{var d=ba(),v=i(s(d),4);se(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(b,_)=>{var g=qa(),S=j(g);Ee(S,{size:20}),oe(),m(b,g)},$$slots:{default:!0}}),o(d),m(r,d)},$$slots:{default:!0}}),M(()=>{C(Oe,e(a).category),C(we,e(a).title),C(Ne,` ${e(a).date??""}`),C(Ve,` ${e(a).readTime??""}`),x(qe,"src",e(a).image),x(qe,"alt",e(a).altText||e(a).title)}),m(u,me),Le()}export{Qa as component,Ua as universal};

@@ -1539,7 +1539,25 @@ export const postContents: Record<string, PostContent> = {
 					</p>
 				</section>
 			</section>
-		`
+		`,
+		faq: [
+			{
+				question: "Preciso morar em Jardim da Penha para usar esses espaços?",
+				answer: "Não. Os espaços públicos mencionados — praças, parques, orla de Camburi, campus da UFES — são abertos a qualquer pessoa. Você pode vir de outro bairro de Vitória ou até de outra cidade. O importante é encontrar lugares que te ajudem a respirar e desacelerar."
+			},
+			{
+				question: "A UBS de Jardim da Penha oferece atendimento psicológico?",
+				answer: "A UBS (Unidade Básica de Saúde) pode oferecer atividades de promoção de saúde e fazer encaminhamentos para a rede de saúde mental (CAPS, por exemplo). O ideal é ligar ou ir pessoalmente para verificar quais serviços estão disponíveis no momento."
+			},
+			{
+				question: "Qual a diferença entre usar espaços públicos e fazer terapia?",
+				answer: "São complementares, não substitutos. Espaços públicos ajudam na descompressão do dia a dia — caminhar, respirar, conviver. A terapia oferece um espaço de escuta profissional para questões mais profundas que precisam de acolhimento e elaboração. Muitas vezes, os dois juntos fazem toda a diferença."
+			},
+			{
+				question: "Os parques e praças mencionados são seguros?",
+				answer: "De modo geral, sim. A maioria dos espaços citados tem movimento durante o dia e são frequentados por famílias, esportistas e estudantes. Como em qualquer espaço público, é sensato evitar horários muito vazios e estar atento ao entorno."
+			}
+		]
 	},
 	"como-escolher-psicologo-em-vitoria-es": {
 		slug: "como-escolher-psicologo-em-vitoria-es",
@@ -1677,7 +1695,7 @@ export const postContents: Record<string, PostContent> = {
 				</ul>
 			</section>
 
-			<aside class="cta">
+			<section class="cta">
 				<h2>Se você está em Vitória (ES) e quer dar o próximo passo</h2>
 				<p>
 					Escolher um psicólogo é também escolher um espaço de cuidado: um tempo da sua semana, um lugar para falar com liberdade
@@ -1690,8 +1708,26 @@ export const postContents: Record<string, PostContent> = {
 					·
 					<a href="/contato/">Agendar / tirar dúvidas</a>
 				</p>
-			</aside>
-		`
+			</section>
+		`,
+		faq: [
+			{
+				question: "Como verificar se um psicólogo tem CRP ativo?",
+				answer: "Você pode consultar diretamente no site do CRP-16 (Espírito Santo) ou no portal do Conselho Federal de Psicologia (CFP). Basta buscar pelo nome do profissional. Se não encontrar registro, desconfie."
+			},
+			{
+				question: "Qual a melhor abordagem psicológica para mim?",
+				answer: "Não existe 'melhor' abordagem universal — existe a que faz sentido para você. Algumas pessoas preferem processos mais estruturados; outras, mais abertos. O mais importante é você se sentir acolhido e respeitado. Se quiser, pergunte ao psicólogo como ele trabalha antes de começar."
+			},
+			{
+				question: "É normal trocar de psicólogo se não me adaptar?",
+				answer: "Sim, completamente. A relação terapêutica é fundamental para o processo funcionar. Se você não se sente à vontade, ouvido ou respeitado, é legítimo buscar outro profissional. Um bom psicólogo entenderá essa decisão."
+			},
+			{
+				question: "Quantas sessões devo esperar antes de avaliar se está funcionando?",
+				answer: "Não há número fixo. Algumas pessoas sentem diferença rapidamente; outras precisam de mais tempo. O importante é observar se você se sente acolhido, se consegue ser honesto, e se algo — mesmo pequeno — está mudando na forma como você se vê ou se relaciona."
+			}
+		]
 	},
 	"autenticidade-qualidade-vida": {
 		slug: "autenticidade-qualidade-vida",
@@ -1751,7 +1787,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>É permitir que a tendência atualizante apareça.</p>
 			<p>É se autorrealizar — não como um objetivo final, mas como um modo de existir.</p>
 			<p>E, acima de tudo, é assumir que <strong>sua vida vale mais quando você está nela por inteiro</strong>.</p>
-		`
+
+			<section class="cta">
+				<h2>Um convite para ser quem você é</h2>
+
+				<p>
+					Se você sente que tem vivido mais para atender expectativas do que para ser verdadeiro consigo, a terapia pode ser um espaço para reencontrar essa conexão.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "O que é tendência atualizante?",
+				answer: "É um conceito da ACP que descreve a força natural de todo organismo para crescer, se desenvolver e se organizar em direção à vida. É como a planta que se volta para a luz. Quando encontramos um ambiente seguro, essa tendência aparece — e a autenticidade é a porta de entrada."
+			},
+			{
+				question: "Como saber se estou sendo autêntico ou apenas impulsivo?",
+				answer: "Autenticidade não é 'fazer o que dá na telha'. É viver em coerência com o que você realmente sente, pensa e valoriza — mesmo que isso exija coragem e reflexão. Impulsividade costuma ser reativa; autenticidade vem de uma escuta interna mais profunda."
+			},
+			{
+				question: "Terapia ajuda a desenvolver autenticidade?",
+				answer: "Sim. Na ACP, o espaço terapêutico é justamente um lugar onde você pode ser quem é, sem máscaras. Quando encontramos aceitação genuína, fica mais fácil nos reconhecer e fazer escolhas alinhadas com quem realmente somos."
+			},
+			{
+				question: "Por que é tão difícil 'ser eu mesmo'?",
+				answer: "Porque crescemos aprendendo a agradar, a nos adaptar, a caber nos moldes dos outros. A autenticidade exige coragem para questionar esses padrões e aceitar que nem todo mundo vai aprovar quem você é de verdade. Mas o ganho em qualidade de vida compensa."
+			}
+		]
 	},
 	"terapia-centrada-pessoa-explicacao": {
 		slug: "terapia-centrada-pessoa-explicacao",
@@ -1821,7 +1889,43 @@ export const postContents: Record<string, PostContent> = {
 			<p>Se você está em busca de um espaço onde possa ser quem você é — sem máscaras, sem performance, sem precisar corresponder a expectativas — a Terapia Centrada na Pessoa pode ser o caminho.</p>
 
 			<p>Se quiser saber mais ou agendar uma conversa inicial, estou à disposição.</p>
-		`
+
+			<section class="cta">
+				<h2>Quer conhecer essa forma de cuidar?</h2>
+
+				<p>
+					Se você busca um espaço de escuta genuína, onde é acolhido como é, a Terapia Centrada na Pessoa pode ser o caminho. Atendo em Jardim da Penha, Vitória (ES).
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "A terapia centrada na pessoa funciona para ansiedade e depressão?",
+				answer: "Sim. A ACP é eficaz para diversas questões, incluindo ansiedade e depressão. O foco está na qualidade da relação terapêutica e na confiança de que você possui recursos internos para lidar com o que está vivendo — mesmo quando não parece."
+			},
+			{
+				question: "O que o terapeuta faz se não dá conselhos?",
+				answer: "O terapeuta escuta de verdade, reflete o que você diz, ajuda a organizar pensamentos e sentimentos, e oferece presença genuína. Ele não dirige o processo porque acredita que você sabe — ou pode descobrir — o que é melhor para si."
+			},
+			{
+				question: "A ACP é melhor que outras abordagens?",
+				answer: "Não existe abordagem universalmente 'melhor'. A ACP se diferencia por valorizar a relação acima das técnicas e por confiar na capacidade da pessoa de encontrar seus caminhos. É uma escolha, não uma hierarquia."
+			},
+			{
+				question: "Como é a primeira sessão na ACP?",
+				answer: "É um momento de acolhimento. Você pode falar sobre o que te trouxe, suas dúvidas, suas expectativas. Não há roteiro. O importante é perceber se existe espaço para você ser você — e se a relação com o terapeuta faz sentido."
+			},
+			{
+				question: "Por que não há exercícios ou tarefas de casa?",
+				answer: "Porque a transformação, na ACP, acontece na relação, não em tarefas externas. O que você leva das sessões é a clareza que surge quando você é ouvido de verdade. Isso se reflete naturalmente no dia a dia."
+			}
+		]
 	},
 	"estresse-desgaste-emocional": {
 		slug: "estresse-desgaste-emocional",
@@ -1891,7 +1995,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>A terapia não é um lugar para "consertar" você. É um espaço para compreender o que está acontecendo, validar o que você sente e encontrar formas mais saudáveis de lidar com a sobrecarga.</p>
 
 			<p>Se você reconhece esses sinais em si mesmo, saiba que não precisa atravessar isso sozinho. Estou aqui para ajudar.</p>
-		`
+
+			<section class="cta">
+				<h2>Precisa de um espaço para respirar?</h2>
+
+				<p>
+					Se o estresse virou rotina e você não lembra mais o que é relaxar, talvez seja hora de buscar ajuda. No meu consultório em Jardim da Penha, ofereço um espaço de escuta.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Qual a diferença entre estresse e burnout?",
+				answer: "O estresse é uma resposta natural a desafios. O burnout é o esgotamento que acontece quando o estresse se prolonga demais sem pausas. No burnout, você não está apenas cansado — está exaurido, distante, sem energia mesmo para coisas que antes importavam."
+			},
+			{
+				question: "Estresse pode causar doenças físicas?",
+				answer: "Sim. O estresse prolongado afeta o corpo: insônia, dores de cabeça, tensão muscular, problemas digestivos. Isso acontece porque corpo e mente estão conectados. O corpo expressa o que a mente não consegue processar."
+			},
+			{
+				question: "Como saber se meu estresse é 'normal' ou excessivo?",
+				answer: "Se o estresse desliga quando a situação passa, é natural. Se você vive em estado de alerta constante, mesmo sem ameaça real, pode ser excessivo. Sintomas persistentes — insônia, irritabilidade, exaustão — são sinais de que algo precisa de atenção."
+			},
+			{
+				question: "Terapia ajuda com estresse crônico?",
+				answer: "Sim. A terapia oferece um espaço para entender o que está te sobrecarregando, validar o que você sente e encontrar formas mais saudáveis de lidar com a pressão. Não é sobre 'resolver' tudo, mas sobre se relacionar diferente com o que pesa."
+			}
+		]
 	},
 	"terapia-online-funciona": {
 		slug: "terapia-online-funciona",
@@ -1951,7 +2087,43 @@ export const postContents: Record<string, PostContent> = {
 			<p>As sessões são realizadas por plataformas seguras e em conformidade com as exigências do CFP. Sua privacidade e sigilo são levados a sério — sempre.</p>
 
 			<p>Se quiser agendar ou tirar dúvidas, estou à disposição.</p>
-		`
+
+			<section class="cta">
+				<h2>Prefere começar online?</h2>
+
+				<p>
+					Atendo online com a mesma qualidade do presencial. Se você mora longe ou prefere a flexibilidade, a terapia online pode ser o primeiro passo.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/terapia-online/">Terapia online</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Terapia online é tão eficaz quanto presencial?",
+				answer: "Estudos mostram que a terapia online apresenta eficácia comparável à presencial, especialmente para ansiedade, depressão e estresse. O que determina a qualidade não é o meio, mas a relação entre terapeuta e cliente."
+			},
+			{
+				question: "Preciso de algum equipamento especial?",
+				answer: "Não. Um celular, tablet ou computador com câmera e internet estável é suficiente. O mais importante é ter um espaço privado e tranquilo onde você possa falar com liberdade."
+			},
+			{
+				question: "Como garantir privacidade na terapia online?",
+				answer: "Escolha um local onde você não será interrompido ou ouvido por outras pessoas. Use fones de ouvido se necessário. Do lado do terapeuta, as sessões são realizadas em plataformas seguras, conforme exigências do Conselho Federal de Psicologia."
+			},
+			{
+				question: "Posso alternar entre online e presencial?",
+				answer: "Depende do combinado com o terapeuta, mas geralmente sim. Muitas pessoas começam de uma forma e depois mudam conforme a rotina. O processo é seu e pode ser adaptado ao que fizer sentido."
+			},
+			{
+				question: "E se minha internet cair durante a sessão?",
+				answer: "Imprevistos acontecem. O ideal é combinar previamente o que fazer nesses casos — geralmente, reconectar ou reagendar. Não se preocupe: isso faz parte e não compromete o processo."
+			}
+		]
 	},
 	"obrigacao-estar-bem": {
 		slug: "obrigacao-estar-bem",
@@ -2016,7 +2188,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>Se você está cansado de tentar estar bem o tempo todo, se sente que está sempre devendo algo (para si mesmo, para os outros, para o mundo), talvez esteja na hora de encontrar um espaço onde você não precise dever nada. Onde possa apenas ser.</p>
 
 			<p>Se isso faz sentido para você, estou à disposição para conversarmos.</p>
-		`
+
+			<section class="cta">
+				<h2>Um espaço onde você não precisa performar</h2>
+
+				<p>
+					Se você está cansado de fingir que está bem, a terapia pode ser um lugar para simplesmente existir — sem máscaras, sem cobranças.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "O que é positividade tóxica?",
+				answer: "É a pressão para estar sempre bem, grato, motivado — mesmo quando você não está. É a ideia de que emoções 'negativas' são falhas a serem corrigidas. Isso silencia o que você realmente sente e pode aumentar o sofrimento."
+			},
+			{
+				question: "É errado querer ser feliz?",
+				answer: "Não. O problema não é querer bem-estar, mas transformar isso em obrigação. Quando felicidade vira cobrança, você se culpa por sentir tristeza, cansaço ou angústia — emoções que são parte legítima da vida."
+			},
+			{
+				question: "Como lidar com a pressão para 'estar sempre bem'?",
+				answer: "Reconhecer que essa pressão existe — e que não é culpa sua — é um primeiro passo. Permitir-se sentir sem precisar 'resolver' imediatamente também ajuda. A terapia pode ser um espaço onde você não precisa performar bem-estar."
+			},
+			{
+				question: "Terapia é o contrário de autoajuda?",
+				answer: "Não necessariamente. Mas a terapia, especialmente na ACP, não oferece fórmulas prontas. Não é sobre 'se consertar' para funcionar melhor. É sobre ter um espaço onde você pode existir — com suas contradições, dores e dúvidas — sem precisar provar nada."
+			}
+		]
 	},
 	"vida-acelerou-demais": {
 		slug: "vida-acelerou-demais",
@@ -2095,7 +2299,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>A terapia pode ser esse espaço. Um lugar onde o relógio desacelera. Onde você pode se ouvir. Onde não precisa ser rápido, eficiente, produtivo. Pode simplesmente ser.</p>
 
 			<p>Se isso faz sentido pra você, estou à disposição.</p>
-		`
+
+			<section class="cta">
+				<h2>Um espaço para se ouvir</h2>
+
+				<p>
+					Se você sente que está correndo sem saber para onde, a terapia pode ajudar a reconectar você com o que realmente importa. Atendo em Jardim da Penha, Vitória (ES), presencial e online.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Por que tudo parece urgente?",
+				answer: "Vivemos em uma cultura que confunde velocidade com valor. A tecnologia que prometia dar tempo livre acabou aumentando as demandas. A sensação de urgência constante não é falha sua — é efeito de um sistema que não para."
+			},
+			{
+				question: "Desacelerar significa ser menos produtivo?",
+				answer: "Não necessariamente. Desacelerar pode significar produzir com mais presença e menos desgaste. Às vezes, o ritmo frenético resulta em muito movimento e pouco avanço real. Parar para sentir o que você faz pode torná-lo mais significativo."
+			},
+			{
+				question: "Como criar pausas em uma rotina corrida?",
+				answer: "Comece pequeno: 5 minutos de silêncio, uma caminhada sem celular, comer uma refeição sem outra tarefa. O objetivo não é 'parar tudo', mas criar pequenas ilhas de presença no meio do caos."
+			},
+			{
+				question: "A sensação de pressa constante é ansiedade?",
+				answer: "Pode ser. Quando a urgência vira estado permanente — mesmo sem nada urgente — o corpo está em alerta constante. Isso é ansiedade. E merece atenção, não normalização."
+			}
+		]
 	},
 	"nao-somos-maquinas": {
 		slug: "nao-somos-maquinas",
@@ -2182,7 +2418,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>Não para te fazer render mais. Mas para te ajudar a se reencontrar com aquilo que, no meio de tanta performance, você deixou de lado: sua própria humanidade.</p>
 
 			<p>Se isso faz sentido para você, estou à disposição para conversarmos.</p>
-		`
+
+			<section class="cta">
+				<h2>Busca um espaço sem cobranças?</h2>
+
+				<p>
+					Se você está cansado de tentar render o tempo todo, a terapia pode ser um lugar onde você não precisa produzir — só existir.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Por que me sinto culpado quando descanso?",
+				answer: "Porque fomos ensinados a acreditar que nosso valor está na produtividade. Descansar, nessa lógica, parece 'perda de tempo' ou 'preguiça'. Mas esse é um ensinamento — não uma verdade. Você tem direito ao descanso."
+			},
+			{
+				question: "Como saber se estou esgotado ou só cansado?",
+				answer: "O cansaço comum passa com descanso. O esgotamento não. Se você dorme e acorda exausto, se perdeu interesse em coisas que gostava, se está irritado ou distante sem motivo claro — pode ser mais do que cansaço."
+			},
+			{
+				question: "Produtividade e valor pessoal são a mesma coisa?",
+				answer: "Não. Você não é o que você produz. Seu valor não depende do quanto trabalha, rende ou entrega. Essa confusão é cultural e pode ser desaprendida — com tempo, reflexão e, se necessário, apoio profissional."
+			},
+			{
+				question: "Terapia ajuda quem não consegue parar?",
+				answer: "Sim. A terapia pode ser um espaço onde você finalmente para — sem cobranças, sem metas. E, a partir desse espaço, pode entender o que te impede de desacelerar e encontrar formas mais saudáveis de viver."
+			}
+		]
 	},
 	"trabalho-interno-vs-performance": {
 		slug: "trabalho-interno-vs-performance",
@@ -2258,7 +2526,43 @@ export const postContents: Record<string, PostContent> = {
 			<div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.75rem 2rem; border-radius: var(--radius-md); margin-top: 3rem; border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm);">
 				<p style="margin: 0; color: #0c4a6e; line-height: 1.7; font-size: 1rem;"><strong style="font-size: 1.0625rem;">Nota ética:</strong> Terapia não substitui condições materiais; sempre que necessário, encaminho para outras redes de cuidado. Conteúdos do site/blog são informativos e não substituem atendimento. Em situações de risco, procure serviços de urgência e sua rede local de cuidado.</p>
 			</div>
-		`
+
+			<section class="cta">
+				<h2>Quer entender se a terapia faz sentido para você?</h2>
+
+				<p>
+					Se você tem dúvidas sobre o processo, estou disponível para uma conversa inicial. Podemos entender juntos se esse caminho faz sentido para o seu momento.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Como saber se a terapia está funcionando?",
+				answer: "Não existe métrica exata. Mas alguns sinais ajudam: você se sente mais em contato com o que sente, consegue colocar limites, trata-se com menos violência, toma decisões mais alinhadas com seus valores. Mudanças pequenas contam."
+			},
+			{
+				question: "É normal não sentir mudanças imediatas?",
+				answer: "Sim. Mudança interna não é linear. Algumas sessões parecem 'não ter dado em nada' — e, semanas depois, você percebe que algo mudou. Confie no processo, mas fale com o terapeuta se a sensação de estagnação persistir."
+			},
+			{
+				question: "Devo definir metas para a terapia?",
+				answer: "Não é obrigatório. Na ACP, não existe roteiro. O processo acompanha o que surge. Mas pode ser útil ter clareza sobre o que te trouxe ali — não como meta rígida, mas como ponto de partida."
+			},
+			{
+				question: "Quanto tempo leva para ver resultados?",
+				answer: "Varia de pessoa para pessoa. Algumas sentem diferença em semanas; outras, em meses. O tempo depende de muitos fatores — e 'resultado' não significa 'problema resolvido', mas sim uma relação diferente consigo mesmo."
+			},
+			{
+				question: "O que fazer se parecer que 'não está acontecendo nada'?",
+				answer: "Fale sobre isso na terapia. Essa sensação pode ser explorada — e muitas vezes revela algo importante. Também pode ser hora de revisar expectativas ou mesmo considerar outra abordagem ou profissional. Transparência é fundamental."
+			}
+		]
 	},
 	"quando-automatico-vira-modo-de-vida": {
 		slug: "quando-automatico-vira-modo-de-vida",
@@ -2318,7 +2622,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>Reconhecer que algo não vai bem não é fracasso. É o primeiro passo de quem quer, de fato, viver — não apenas funcionar.</p>
 
 			<p><strong>Nota ética:</strong> Se o automático está ligado a sofrimento intenso, procure ajuda. Conteúdos do site/blog são informativos e não substituem atendimento. Em situações de risco, procure serviços de urgência e sua rede local de cuidado.</p>
-		`
+
+			<section class="cta">
+				<h2>Quer voltar a sentir que está no comando?</h2>
+
+				<p>
+					Se você sente que está vivendo no piloto automático, a terapia pode ajudar a reconectar você consigo mesmo.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "O que é viver no piloto automático?",
+				answer: "É funcionar sem presença. Você faz as coisas, cumpre tarefas, passa pelos dias — mas não está realmente ali. Não sente, não escolhe, não questiona. É uma estratégia do corpo para economizar energia, mas vira problema quando se estende demais."
+			},
+			{
+				question: "Por que me sinto desconectado da minha vida?",
+				answer: "Pode ser que você esteja vivendo no automático há tanto tempo que perdeu contato com o que sente e quer. Isso não é falha sua — é resposta a um ritmo que não deixa espaço para existir. A boa notícia: é possível reconectar."
+			},
+			{
+				question: "Como sair do modo automático?",
+				answer: "Comece com pequenos gestos de presença: fazer uma coisa de cada vez, incluir descanso na agenda, revisar 'deverias' que talvez não sejam seus. Terapia pode ajudar a criar espaço para você se ouvir novamente."
+			},
+			{
+				question: "Isso pode ser depressão?",
+				answer: "Pode. A desconexão prolongada, a perda de interesse, a sensação de vazio são sinais que merecem atenção. Se o automático está causando sofrimento intenso, procure ajuda profissional. Reconhecer que algo não vai bem é o primeiro passo."
+			}
+		]
 	},
 	"ansiedade-sinais-desacelerar": {
 		slug: "ansiedade-sinais-desacelerar",
@@ -2384,7 +2720,44 @@ export const postContents: Record<string, PostContent> = {
 			<p>Se você está sentindo que a ansiedade tem tomado mais espaço do que deveria na sua vida, talvez seja o momento de buscar ajuda. A psicoterapia pode ser esse espaço de acolhimento e transformação que você precisa para reencontrar o equilíbrio.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo. Se quiser conversar, entre em contato. O primeiro passo pode ser mais simples do que você imagina.</p>
-		`
+
+			<section class="cta">
+				<h2>Precisa de ajuda para desacelerar?</h2>
+
+				<p>
+					Se a ansiedade tem tomado conta, talvez seja hora de buscar um espaço de escuta. Atendo presencialmente em Jardim da Penha e online.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/servicos/terapia-online/">Terapia online</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Quais são os sinais físicos da ansiedade?",
+				answer: "Dificuldade para dormir, tensão muscular, dores de cabeça, problemas digestivos, palpitações, sensação de urgência constante, irritabilidade. O corpo fala quando a mente não consegue processar tudo sozinha."
+			},
+			{
+				question: "Ansiedade é doença ou emoção normal?",
+				answer: "A ansiedade é uma emoção natural — nos prepara para agir. Mas quando se torna excessiva e constante, pode virar um problema. O ponto de atenção é quando ela domina a rotina e impede você de viver com mais leveza."
+			},
+			{
+				question: "Quando devo procurar ajuda profissional?",
+				answer: "Quando a ansiedade interfere no seu dia a dia: trabalho, relações, sono, bem-estar. Quando você sente que não consegue mais lidar sozinho. Buscar ajuda não é fraqueza — é cuidado."
+			},
+			{
+				question: "Respiração e meditação realmente funcionam?",
+				answer: "Podem ajudar, sim. Mas não são soluções mágicas. São ferramentas que funcionam melhor quando integradas a um cuidado mais amplo — que pode incluir terapia, mudanças de rotina, e um olhar honesto para o que está te sobrecarregando."
+			},
+			{
+				question: "Ansiedade tem cura?",
+				answer: "A ansiedade como emoção não desaparece — e nem precisa. O objetivo não é eliminá-la, mas aprender a se relacionar com ela de forma mais saudável. Com apoio, é possível viver com menos peso e mais presença."
+			}
+		]
 	},
 	"corpo-e-emocoes": {
 		slug: "corpo-e-emocoes",
@@ -2467,7 +2840,39 @@ export const postContents: Record<string, PostContent> = {
 			<p>Não se trata de "resolver" todos os sintomas, mas de compreender o que eles revelam sobre sua forma de viver. E, a partir dessa compreensão, encontrar caminhos mais saudáveis e conscientes.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo de reconexão. Entre em contato se quiser conversar.</p>
-		`
+
+			<section class="cta">
+				<h2>Escutando o corpo de verdade</h2>
+
+				<p>
+					Se seu corpo anda pedindo atenção de formas que você não entende, a terapia pode ser um espaço para traduzir esses sinais e cuidar de você por inteiro.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Por que sinto dor no corpo quando estou estressado?",
+				answer: "Porque corpo e mente estão conectados. O estresse emocional se manifesta como tensão muscular, dores, problemas digestivos, insônia. O corpo expressa o que a mente ainda não conseguiu elaborar."
+			},
+			{
+				question: "Sintomas físicos podem ser emocionais?",
+				answer: "Sim. Quando exames médicos não encontram causa física, pode ser que o corpo esteja manifestando algo emocional. Isso não significa que a dor não é real — ela é. Significa que a origem pode estar em outro lugar."
+			},
+			{
+				question: "Devo ir ao médico ou ao psicólogo primeiro?",
+				answer: "Idealmente, os dois podem trabalhar juntos. O médico investiga causas físicas; a terapia ajuda a elaborar questões emocionais. Um não substitui o outro — eles se complementam."
+			},
+			{
+				question: "Como a terapia ajuda sintomas físicos?",
+				answer: "Ao criar espaço para você entender e expressar o que está sentindo, a tensão emocional diminui — e, frequentemente, os sintomas físicos também. Não é mágica: é o corpo respondendo a uma mente menos sobrecarregada."
+			}
+		]
 	},
 	"crises-existenciais": {
 		slug: "crises-existenciais",
@@ -2550,7 +2955,43 @@ export const postContents: Record<string, PostContent> = {
 			<p>Se você sente que está atravessando uma crise de sentido, talvez seja hora de buscar ajuda. A psicoterapia pode ser o espaço que você precisa para se reencontrar e redescobrir o que realmente importa.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo. Entre em contato se quiser conversar.</p>
-		`
+
+			<section class="cta">
+				<h2>Um espaço para as perguntas difíceis</h2>
+
+				<p>
+					Se você está se perguntando “e agora?”, a terapia pode ser um lugar para explorar esse momento sem pressa, sem julgamento e sem respostas prontas.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "O que é uma crise existencial?",
+				answer: "É um momento em que as antigas certezas deixam de fazer sentido. Você questiona escolhas, valores, identidade. Pode sentir vazio, falta de propósito, distanciamento. É desconfortável — mas também pode ser o início de uma transformação."
+			},
+			{
+				question: "É normal sentir que a vida perdeu o sentido?",
+				answer: "Sim. Muitas pessoas passam por isso — especialmente em transições importantes. Não significa que você fracassou. Significa que algo em você está pedindo revisão. E isso pode ser uma oportunidade de crescimento."
+			},
+			{
+				question: "Crise existencial é o mesmo que depressão?",
+				answer: "Não necessariamente. Podem coexistir, mas são coisas diferentes. A crise existencial é uma pergunta sobre sentido; a depressão é um estado prolongado de sofrimento. Se os sintomas forem intensos, procure avaliação profissional."
+			},
+			{
+				question: "Como sair de uma crise de sentido?",
+				answer: "Não existe atalho. Mas a terapia pode ser um espaço para explorar essas perguntas sem pressa, sem julgamento. Aos poucos, novas direções surgem — não de fora, mas de uma escuta interna mais profunda."
+			},
+			{
+				question: "Quanto tempo dura uma crise existencial?",
+				answer: "Varia. Pode durar semanas, meses, às vezes mais. Não há prazo. O importante é não atravessar sozinho e respeitar seu ritmo. A pressa de 'resolver logo' pode atrapalhar mais do que ajudar."
+			}
+		]
 	},
 	"abordagem-centrada-pessoa": {
 		slug: "abordagem-centrada-pessoa",
@@ -2641,7 +3082,43 @@ export const postContents: Record<string, PostContent> = {
 			<p>Se você está buscando um espaço assim — onde possa ser ouvido de verdade, onde possa se ouvir e se compreender melhor — a Abordagem Centrada na Pessoa pode ser o caminho que você procura.</p>
 
 			<p>Estou aqui para acompanhar você nesse processo. Entre em contato se quiser saber mais ou agendar uma conversa.</p>
-		`
+
+			<section class="cta">
+				<h2>Quer experimentar essa abordagem?</h2>
+
+				<p>
+					Se você busca uma terapia baseada em empatia, aceitação e autenticidade, esse pode ser o caminho. Atendo em Jardim da Penha, Vitória (ES).
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Quem foi Carl Rogers?",
+				answer: "Carl Rogers (1902–1987) foi um psicólogo norte-americano que revolucionou a psicoterapia ao colocar a pessoa — e não o terapeuta — no centro do processo. Ele acreditava que todo ser humano tem capacidade de crescer quando encontra um ambiente seguro."
+			},
+			{
+				question: "O que significa 'aceitação incondicional'?",
+				answer: "Significa ser acolhido como você é, sem julgamentos e sem condições. Não importa o que você sinta, pense ou tenha feito — você será respeitado em sua totalidade. Isso não significa concordância com tudo, mas aceitação profunda de quem você é."
+			},
+			{
+				question: "A ACP funciona para todos os problemas?",
+				answer: "A ACP pode ajudar em diversas questões — ansiedade, depressão, crises de sentido, relacionamentos, entre outras. Mas não é uma abordagem que se propõe a 'consertar' você. É um espaço para você se ouvir e encontrar seus próprios caminhos."
+			},
+			{
+				question: "Por que o terapeuta não interpreta ou diagnostica?",
+				answer: "Porque, na ACP, o especialista da sua vida é você. O terapeuta não impõe significados ou rótulos. Ele acompanha, escuta, reflete — e confia que você sabe, ou pode descobrir, o que é melhor para si."
+			},
+			{
+				question: "Como a ACP se diferencia da psicanálise?",
+				answer: "A psicanálise foca bastante no inconsciente, no passado e na interpretação do analista. A ACP foca mais na experiência consciente do 'aqui e agora', no potencial de crescimento e na relação igualitária entre terapeuta e cliente. Ambas são legítimas — depende do que você busca."
+			}
+		]
 	},
 	"terapia-para-homens": {
 		slug: "terapia-para-homens",
@@ -2712,6 +3189,42 @@ export const postContents: Record<string, PostContent> = {
 			<p>Coordeno também a <strong>Roda de Conversa Entre Homens</strong>, um grupo terapêutico onde homens compartilham suas vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência potente de conexão e crescimento.</p>
 
 			<p>Se quiser saber mais sobre como a terapia pode te ajudar — seja individual ou em grupo — entre em contato. O primeiro passo pode ser mais simples do que você imagina. E você não precisa dar esse passo sozinho.</p>
-		`
+
+			<section class="cta">
+				<h2>Espaço seguro para homens</h2>
+
+				<p>
+					Se você está cansado de carregar tudo sozinho, a terapia pode ser um lugar para você. Também coordeno a Roda de Conversa Entre Homens, um grupo terapêutico.
+				</p>
+
+				<p>
+					<a href="/sobre/">Conheça meu trabalho</a> ·
+					<a href="/servicos/grupos-e-rodas/">Grupos e Rodas</a> ·
+					<a href="/contato/">Entrar em contato</a>
+				</p>
+			</section>
+		`,
+		faq: [
+			{
+				question: "Por que homens têm mais dificuldade de buscar terapia?",
+				answer: "Porque muitos cresceram ouvindo que homem não chora, não pode ser frágil, tem que resolver tudo sozinho. Essas mensagens criam barreiras para pedir ajuda — mesmo quando ela é necessária."
+			},
+			{
+				question: "Terapia é 'coisa de mulher'?",
+				answer: "Não. Terapia é para qualquer pessoa que queira um espaço de escuta e autoconhecimento. A ideia de que é 'coisa de mulher' vem de uma cultura que nega aos homens o direito de sentir. Isso está mudando — devagar, mas está."
+			},
+			{
+				question: "Preciso chorar ou falar de sentimentos na terapia?",
+				answer: "Não precisa chorar nem se expor mais do que se sente confortável. A terapia respeita seu ritmo. Você pode começar falando do que quiser — trabalho, rotina, algo que aconteceu. Com o tempo, as emoções vão encontrando espaço naturalmente."
+			},
+			{
+				question: "O que é a Roda de Conversa Entre Homens?",
+				answer: "É um grupo terapêutico onde homens compartilham vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência de conexão que muitos homens nunca tiveram — e que pode ser transformadora."
+			},
+			{
+				question: "Como começo se nunca falei sobre o que sinto?",
+				answer: "Você não precisa saber como começar. Basta chegar. A terapia é justamente um lugar para aprender a se ouvir. E não precisa dar esse passo sozinho — o primeiro contato pode ser só para tirar dúvidas e ver se faz sentido."
+			}
+		]
 	}
 };

@@ -1,4 +1,188 @@
-import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Fe,d as De,b as Je,A as Be}from"../chunks/F9n-vBwq.js";import{c as ie,a as m,f as l}from"../chunks/7o8WEx2i.js";import{f as j,F as He,t as M,J as Le,g as e,u as z,a as i,c as s,r as o,n as oe}from"../chunks/DnNcXZc0.js";import{s as A}from"../chunks/-Rh4EYo9.js";import{l as ne,s as te,i as $}from"../chunks/B-felvAV.js";import{I as de,s as ce,e as D,B as se,a as x,i as J}from"../chunks/B4winmXY.js";import{S as re,h as Ge}from"../chunks/_jSWC8me.js";import"../chunks/CDLinRUy.js";import{B as We}from"../chunks/CKJHZfkY.js";import{S as Xe}from"../chunks/DedJW04g.js";import{C as Ke}from"../chunks/CbKiDwtL.js";import{C as Ze}from"../chunks/Cdi2hEzI.js";import{M as Ye}from"../chunks/0u8zw4Kr.js";import{F as ea}from"../chunks/Cr0G-FUx.js";import{P as Ee}from"../chunks/CKsJ9VOg.js";import{M as aa}from"../chunks/CzjsDj0N.js";function oa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M12 7v14"}],["path",{d:"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"}]];de(u,te({name:"book-open"},()=>a,{get iconNode(){return n},children:(P,k)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function sa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];de(u,te({name:"linkedin"},()=>a,{get iconNode(){return n},children:(P,k)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function ra(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];de(u,te({name:"twitter"},()=>a,{get iconNode(){return n},children:(P,k)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}const ia={"aceitacao-incondicional":{slug:"aceitacao-incondicional",tags:["Abordagem Centrada na Pessoa","Carl Rogers","Autoestima","Autoaceitação","Vitória ES","acp"],htmlContent:`
+import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Fe,d as De,b as Je,A as Be}from"../chunks/BEhN-_rW.js";import{c as ie,a as m,f as l}from"../chunks/7o8WEx2i.js";import{f as j,F as He,t as M,J as Le,g as e,u as z,a as i,c as s,r as o,n as oe}from"../chunks/DnNcXZc0.js";import{s as A}from"../chunks/-Rh4EYo9.js";import{l as ne,s as te,i as $}from"../chunks/B-felvAV.js";import{I as de,s as ce,e as D,B as se,a as x,i as J}from"../chunks/B4winmXY.js";import{S as re,h as Ge}from"../chunks/_jSWC8me.js";import"../chunks/CDLinRUy.js";import{B as We}from"../chunks/CKJHZfkY.js";import{S as Xe}from"../chunks/DedJW04g.js";import{C as Ke}from"../chunks/CbKiDwtL.js";import{C as Ze}from"../chunks/Cdi2hEzI.js";import{M as Ye}from"../chunks/0u8zw4Kr.js";import{F as ea}from"../chunks/Cr0G-FUx.js";import{P as Ee}from"../chunks/CKsJ9VOg.js";import{M as aa}from"../chunks/CzjsDj0N.js";function oa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M12 7v14"}],["path",{d:"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"}]];de(u,te({name:"book-open"},()=>a,{get iconNode(){return n},children:(P,k)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function sa(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}],["rect",{width:"4",height:"12",x:"2",y:"9"}],["circle",{cx:"4",cy:"4",r:"2"}]];de(u,te({name:"linkedin"},()=>a,{get iconNode(){return n},children:(P,k)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}function ra(u,t){const a=ne(t,["children","$$slots","$$events","$$legacy"]);const n=[["path",{d:"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"}]];de(u,te({name:"twitter"},()=>a,{get iconNode(){return n},children:(P,k)=>{var f=ie(),O=j(f);ce(O,t,"default",{}),m(P,f)},$$slots:{default:!0}}))}const ia={"terapia-sem-respostas-prontas":{slug:"terapia-sem-respostas-prontas",tags:["Psicoterapia","Escuta","ACP","Coaching","Expectativas","Vitória ES"],htmlContent:`
+			<p class="lead">
+				Você já saiu de uma sessão de terapia pensando: <em>"Mas e aí, o que eu faço?"</em>
+			</p>
+
+			<p>
+				Se já, você não está sozinho. Uma das frustrações mais comuns de quem começa a fazer terapia é perceber que o psicólogo não vai dizer o que você deve fazer. Não vai dar conselho. Não vai resolver o problema por você.
+			</p>
+
+			<p>
+				<strong>A terapia não oferece respostas prontas — e isso, que parece uma falha, é justamente o que a torna transformadora.</strong>
+			</p>
+
+			<p>
+				Mas entender isso exige desconstruir algumas expectativas. E é sobre isso que quero falar.
+			</p>
+
+			<section>
+				<h2>O que a gente espera (e por que espera)</h2>
+
+				<p>
+					Quando buscamos ajuda, é natural querer uma solução. Se vou ao médico com dor de cabeça, espero sair com um diagnóstico e uma receita. Se vou ao advogado, espero orientação jurídica. Faz sentido esperar o mesmo do psicólogo.
+				</p>
+
+				<p>
+					A diferença é que o objeto da psicoterapia não é um sintoma isolado ou um problema técnico. É você. Sua história, seus padrões, suas escolhas, seu jeito de estar no mundo.
+				</p>
+
+				<p>
+					E ninguém — nenhum especialista — pode saber melhor do que você o que faz sentido para a sua vida.
+				</p>
+			</section>
+
+			<section>
+				<h2>Por que o psicólogo não dá conselho?</h2>
+
+				<p>
+					Na <a href="/acp/abordagem-centrada-pessoa">Abordagem Centrada na Pessoa</a>, existe uma premissa fundamental: <strong>a pessoa é a maior especialista em si mesma</strong>.
+				</p>
+
+				<p>
+					O papel do terapeuta não é guiar, corrigir ou ensinar. É criar um ambiente seguro para que você possa se ouvir — talvez pela primeira vez em muito tempo.
+				</p>
+
+				<p>Isso significa:</p>
+
+				<ul>
+					<li>Não impor soluções.</li>
+					<li>Não julgar escolhas.</li>
+					<li>Não dizer o que é certo ou errado.</li>
+				</ul>
+
+				<p>
+					O terapeuta <a href="/acp/seis-condicoes-carl-rogers">oferece presença, escuta e aceitação</a>. E é nesse espaço que algo começa a mudar.
+				</p>
+
+				<h3>Não é omissão — é confiança</h3>
+
+				<p>
+					Quando o psicólogo não dá conselho, ele não está sendo frio ou omisso. Ele está confiando que, se você tiver espaço para pensar, sentir e explorar, vai encontrar suas próprias respostas.
+				</p>
+
+				<p>
+					E isso é muito diferente de receber uma resposta pronta de fora.
+				</p>
+			</section>
+
+			<section>
+				<h2>Coaching, aconselhamento e psicoterapia: qual a diferença?</h2>
+
+				<p>
+					Parte da frustração vem de uma confusão entre práticas diferentes:
+				</p>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Prática</th>
+							<th>O que faz</th>
+							<th>Quem busca</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong><a href="https://icfbrasil.org/institucional/competencias-essenciais-da-icf/" target="_blank" rel="noopener">Coaching</a></strong></td>
+							<td>Foca em metas, ação, desempenho. O coach orienta, desafia, propõe tarefas.</td>
+							<td>Quem quer resultados específicos (carreira, produtividade).</td>
+						</tr>
+						<tr>
+							<td><strong><a href="https://dictionary.apa.org/counseling" target="_blank" rel="noopener">Aconselhamento</a></strong></td>
+							<td>Oferece orientação direta sobre situações específicas (religioso, jurídico, etc).</td>
+							<td>Quem busca direção clara.</td>
+						</tr>
+						<tr>
+							<td><strong><a href="https://www.apa.org/topics/psychotherapy/understanding" target="_blank" rel="noopener">Psicoterapia</a></strong></td>
+							<td>Trabalha o autoconhecimento, padrões emocionais, história de vida. Não dá respostas.</td>
+							<td>Quem quer se entender melhor, lidar com sofrimento.</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>
+					Não existe melhor ou pior — são propostas diferentes. Mas se você procura um coach esperando terapia, ou vai ao psicólogo esperando coaching, vai se frustrar.
+				</p>
+			</section>
+
+			<section>
+				<h2>A frustração faz parte</h2>
+
+				<p>
+					É normal sentir frustração no começo. Você chega com uma pergunta — <em>"O que eu faço com meu casamento?"</em>, <em>"Devo pedir demissão?"</em>, <em>"Por que eu me sinto assim?"</em> — e parece que o terapeuta só devolve mais perguntas.
+				</p>
+
+				<p>
+					Mas essa frustração é, em si, material terapêutico.
+				</p>
+
+				<ul>
+					<li>Por que você quer que alguém decida por você?</li>
+					<li>O que acontece se você não tiver certeza?</li>
+					<li>Como seria confiar na sua própria capacidade de escolher?</li>
+				</ul>
+
+				<p>
+					A terapia não resolve o problema. Ela ajuda você a se tornar alguém que consegue lidar com o problema.
+				</p>
+			</section>
+
+			<section>
+				<h2>Quando a escuta transforma</h2>
+
+				<p>
+					Parece pouco: alguém que escuta. Mas não se trata de um silêncio passivo. A escuta clínica é uma presença ativa: o terapeuta participa, intervém e devolve o que percebe, mas faz isso sem a pressa de dar uma solução ou a agenda de te convencer de algo.
+				</p>
+
+				<p>
+					Diferente de uma conversa comum, onde o outro muitas vezes espera a vez de falar ou tenta te dar uma direção, na terapia o foco é a sua experiência sendo processada em conjunto.
+				</p>
+
+				<p>
+					E quando essa escuta — que é diálogo e presença ao mesmo tempo — acontece, algo se transforma:
+				</p>
+
+				<ul>
+					<li>Você começa a se ouvir com mais clareza.</li>
+					<li>Pensamentos confusos ganham contorno através das intervenções do terapeuta.</li>
+					<li>Emoções caóticas começam a fazer sentido na relação terapêutica.</li>
+				</ul>
+
+				<p>
+					Isso não vem de um conselho externo. Vem de um processo de descoberta facilitado pela escuta.
+				</p>
+			</section>
+
+			<section>
+				<h2>O que você pode esperar da terapia</h2>
+
+				<p>
+					Se não são respostas prontas, o que a terapia oferece?
+				</p>
+
+				<ul>
+					<li><strong>Um espaço seguro</strong> para pensar em voz alta, sem medo de julgamento.</li>
+					<li><strong>Autoconhecimento</strong>: entender seus padrões, suas defesas, suas necessidades.</li>
+					<li><strong>Clareza emocional</strong>: saber o que você sente (e por quê).</li>
+					<li><strong>Autonomia</strong>: a capacidade de tomar decisões alinhadas com quem você é.</li>
+				</ul>
+
+				<p>
+					<a href="/psicoterapia/trabalho-interno-vs-performance">A terapia é trabalho interno</a>. Os resultados nem sempre são visíveis — mas são profundos.
+				</p>
+			</section>
+
+			<section class="cta">
+				<h2>O processo começa quando você decide começar</h2>
+
+				<p>
+					Se você está buscando respostas, talvez a terapia não te dê as que você espera. Mas pode te ajudar a encontrar as suas. E isso, no fim, costuma ser mais transformador do que qualquer conselho.
+				</p>
+
+				<p>
+					<a href="/servicos/psicoterapia-individual/">Conheça a psicoterapia individual</a> ou <a href="/contato/">entre em contato</a> para agendar uma sessão.
+				</p>
+			</section>
+		`,faq:[{question:"Psicólogo pode dar conselho?",answer:"Tecnicamente, sim — não há proibição. Mas na maioria das abordagens, especialmente na ACP, o terapeuta evita dar conselhos porque isso tiraria de você a oportunidade de descobrir suas próprias respostas."},{question:"Se o psicólogo só escuta, qual a diferença de conversar com um amigo?",answer:"O amigo escuta com suas próprias opiniões, julgamentos e agenda. O terapeuta é treinado para escutar sem impor nada. Além disso, ele percebe padrões que você talvez não veja sozinho."},{question:"A terapia funciona para problemas práticos (carreira, dinheiro, decisões)?",answer:"Sim, mas de forma diferente do coaching. A terapia não vai te dar um plano de ação — vai te ajudar a entender o que está por trás da dificuldade de decidir, agir ou mudar."},{question:"Quanto tempo até eu ter respostas?",answer:"Depende. Algumas pessoas têm clareza em poucas sessões. Outras levam meses para acessar emoções mais profundas. O tempo da terapia é o seu tempo."},{question:"E se eu quiser conselho mesmo assim?",answer:"Você pode pedir. Mas o terapeuta provavelmente vai te perguntar: 'O que você acha que deveria fazer?' — porque, no fundo, você já sabe."}],references:["Rogers, C. R. (1957). The necessary and sufficient conditions of therapeutic personality change. Journal of Consulting Psychology, 21(2), 95-103.","Rogers, C. R. (1997). Tornar-se pessoa (M. J. C. Ferreira, Trad.). Martins Fontes. (Obra original publicada em 1961)","American Psychological Association. (n.d.). Understanding psychotherapy and how it works. https://www.apa.org/topics/psychotherapy/understanding"]},"aceitacao-incondicional":{slug:"aceitacao-incondicional",tags:["Abordagem Centrada na Pessoa","Carl Rogers","Autoestima","Autoaceitação","Vitória ES","acp"],htmlContent:`
 			<p class="lead">
 				Você já percebeu como é difícil gostar de si mesmo sem precisar de uma conquista, uma validação, um "parabéns"? Para muita gente, a ideia de se aceitar - especialmente nos dias difíceis, ou nas partes que considera inaceitáveis - parece quase impossível. <em>"Como vou me aceitar se eu sei que preciso melhorar?"</em>
 			</p>
@@ -2725,7 +2909,7 @@ import{e as ae}from"../chunks/CBbuBPfZ.js";import{g as Fe,d as De,b as Je,A as B
 					<a href="/contato/">Entrar em contato</a>
 				</p>
 			</section>
-		`,faq:[{question:"Por que homens têm mais dificuldade de buscar terapia?",answer:"Porque muitos cresceram ouvindo que homem não chora, não pode ser frágil, tem que resolver tudo sozinho. Essas mensagens criam barreiras para pedir ajuda — mesmo quando ela é necessária."},{question:"Terapia é 'coisa de mulher'?",answer:"Não. Terapia é para qualquer pessoa que queira um espaço de escuta e autoconhecimento. A ideia de que é 'coisa de mulher' vem de uma cultura que nega aos homens o direito de sentir. Isso está mudando — devagar, mas está."},{question:"Preciso chorar ou falar de sentimentos na terapia?",answer:"Não precisa chorar nem se expor mais do que se sente confortável. A terapia respeita seu ritmo. Você pode começar falando do que quiser — trabalho, rotina, algo que aconteceu. Com o tempo, as emoções vão encontrando espaço naturalmente."},{question:"O que é a Roda de Conversa Entre Homens?",answer:"É um grupo terapêutico onde homens compartilham vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência de conexão que muitos homens nunca tiveram — e que pode ser transformadora."},{question:"Como começo se nunca falei sobre o que sinto?",answer:"Você não precisa saber como começar. Basta chegar. A terapia é justamente um lugar para aprender a se ouvir. E não precisa dar esse passo sozinho — o primeiro contato pode ser só para tirar dúvidas e ver se faz sentido."}]}},na=({params:u})=>{const t=Fe(u.categoria);if(!t)throw ae(404,"Categoria não encontrada");const a=De(u.slug),n=ia[u.slug];if(!a||!n)throw ae(404,"Artigo não encontrado");if(a.categorySlug!==u.categoria)throw ae(404,"Artigo não encontrado nesta categoria");return{categoria:u.categoria,category:t,slug:u.slug,post:a,content:n}},Ua=Object.freeze(Object.defineProperty({__proto__:null,load:na},Symbol.toStringTag,{value:"Module"}));var ta=l('<span title="Revisão Clínica"><!> </span>'),da=l('<div class="faq-item"><h3> </h3> <p> </p></div>'),ca=l('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),ma=l("<li> </li>"),ua=l('<section id="referencias" class="references-section"><h3>Referências Bibliográficas</h3> <ul></ul></section>'),pa=l('<span class="tag svelte-lxkfym"> </span>'),la=l("<!> Conversar",1),va=l("<!> Como Chegar",1),ga=l(`<div class="post-content"><!> <!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo Clínico pela UFES desde 2017 e especialista na
+		`,faq:[{question:"Por que homens têm mais dificuldade de buscar terapia?",answer:"Porque muitos cresceram ouvindo que homem não chora, não pode ser frágil, tem que resolver tudo sozinho. Essas mensagens criam barreiras para pedir ajuda — mesmo quando ela é necessária."},{question:"Terapia é 'coisa de mulher'?",answer:"Não. Terapia é para qualquer pessoa que queira um espaço de escuta e autoconhecimento. A ideia de que é 'coisa de mulher' vem de uma cultura que nega aos homens o direito de sentir. Isso está mudando — devagar, mas está."},{question:"Preciso chorar ou falar de sentimentos na terapia?",answer:"Não precisa chorar nem se expor mais do que se sente confortável. A terapia respeita seu ritmo. Você pode começar falando do que quiser — trabalho, rotina, algo que aconteceu. Com o tempo, as emoções vão encontrando espaço naturalmente."},{question:"O que é a Roda de Conversa Entre Homens?",answer:"É um grupo terapêutico onde homens compartilham vivências, desafios e emoções em um espaço seguro e livre de julgamentos. É uma experiência de conexão que muitos homens nunca tiveram — e que pode ser transformadora."},{question:"Como começo se nunca falei sobre o que sinto?",answer:"Você não precisa saber como começar. Basta chegar. A terapia é justamente um lugar para aprender a se ouvir. E não precisa dar esse passo sozinho — o primeiro contato pode ser só para tirar dúvidas e ver se faz sentido."}]}},na=({params:u})=>{const t=Fe(u.categoria);if(!t)throw ae(404,"Categoria não encontrada");const a=De(u.slug),n=ia[u.slug];if(!a||!n)throw ae(404,"Artigo não encontrado");if(a.categorySlug!==u.categoria)throw ae(404,"Artigo não encontrado nesta categoria");return{categoria:u.categoria,category:t,slug:u.slug,post:a,content:n}},Qa=Object.freeze(Object.defineProperty({__proto__:null,load:na},Symbol.toStringTag,{value:"Module"}));var ta=l('<span title="Revisão Clínica"><!> </span>'),da=l('<div class="faq-item"><h3> </h3> <p> </p></div>'),ca=l('<section id="faq"><h2>Perguntas Frequentes</h2> <!></section>'),ma=l("<li> </li>"),ua=l('<section id="referencias" class="references-section"><h3>Referências Bibliográficas</h3> <ul></ul></section>'),pa=l('<span class="tag svelte-lxkfym"> </span>'),la=l("<!> Conversar",1),va=l("<!> Como Chegar",1),ga=l(`<div class="post-content"><!> <!> <!></div> <div class="post-footer svelte-lxkfym"><div class="post-tags svelte-lxkfym"><strong>Tags:</strong> <!></div> <div class="post-share svelte-lxkfym"><strong>Compartilhar:</strong> <a target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" class="share-whatsapp svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no Twitter" class="svelte-lxkfym"><!></a> <a target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn" class="svelte-lxkfym"><!></a></div></div> <div class="author-bio svelte-lxkfym"><img src="/images/bernardo-avatar.jpg" alt="Bernardo Carielo" class="author-avatar svelte-lxkfym" width="100" height="100"/> <div class="author-info svelte-lxkfym"><div class="author-header svelte-lxkfym"><h3 class="svelte-lxkfym">Bernardo Carielo</h3> <span class="author-crp svelte-lxkfym">CRP 16/5527</span></div> <p class="author-description svelte-lxkfym">Psicólogo Clínico pela UFES desde 2017 e especialista na
                 Abordagem Centrada na Pessoa pelo <a href="https://encontroacp.com.br" target="_blank" rel="noopener noreferrer" class="svelte-lxkfym">EncontroACP</a>, sempre em formação continuada. Coordenador da Roda de
                 Conversa Terapêutica Entre Homens EncontroACP e fundador da <a href="https://arranjospsicologia.com.br" target="_blank" rel="noopener noreferrer" class="svelte-lxkfym">Arranjos Psicologia</a>. Atende em Vitória (Jardim da Penha) e Online, oferecendo um
-                espaço de acolhimento ético e humanizado.</p> <div class="author-actions"><!> <!></div></div></div>`,1),ha=l('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),fa=l('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),qa=l("<!> Falar no WhatsApp",1),ba=l('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),za=l('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span> <!></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Qa(u,t){He(t,!0);const a=z(()=>t.data.post),n=z(()=>t.data.content),P=z(()=>t.data.category),k=z(()=>Je.filter(r=>r.slug!==t.data.slug&&r.categorySlug===e(a).categorySlug).slice(0,3)),f=z(()=>e(a).categorySlug==="jardim-da-penha"||e(a).categorySlug==="vitoria-es"||e(a).tags.some(r=>r.toLowerCase().includes("vitória")||r.toLowerCase().includes("jardim da penha"))),O=z(()=>[{"@type":"Thing",name:e(P).label},...e(a).tags?e(a).tags.filter(r=>!r.toLowerCase().includes("vitória")&&!r.toLowerCase().includes("jardim da penha")&&!r.toLowerCase().includes("saúde mental")&&r!==e(a).categorySlug).map(r=>({"@type":"Thing",name:r.toLowerCase()==="acp"?"Abordagem Centrada na Pessoa":r.charAt(0).toUpperCase()+r.slice(1)})):[]]),je=z(()=>({"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Início",item:"https://psicologobernardo.com.br/"},{"@type":"ListItem",position:2,name:e(P).label,item:`https://psicologobernardo.com.br/${e(a).categorySlug}`},{"@type":"ListItem",position:3,name:e(a).title,item:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}]},{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#webpage`,url:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`,name:`${e(a).title} - Psicólogo Bernardo`,isPartOf:{"@id":"https://psicologobernardo.com.br/#website"},mainEntity:{"@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`}},{"@type":e(a).schemaType||"BlogPosting","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`,headline:e(a).title,name:e(a).title,description:e(a).description,image:{"@type":"ImageObject",url:`https://psicologobernardo.com.br${e(a).image}`,width:800,height:450},datePublished:I(e(a).date),dateModified:e(a).lastReviewed?I(e(a).lastReviewed):I(e(a).date),author:{"@id":"https://psicologobernardo.com.br/sobre/#person"},publisher:{"@id":"https://psicologobernardo.com.br/#organization"},inLanguage:"pt-BR",isAccessibleForFree:!0,articleSection:e(a).category,keywords:e(a).tags,audience:{"@type":"Audience",audienceType:"General public"},...e(f)?{contentLocation:{"@type":"Place",name:"Jardim da Penha, Vitória - ES"}}:{},about:e(O),...e(n).references?{citation:e(n).references}:{}},...e(n).faq?[{"@type":"FAQPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#faq`,mainEntity:e(n).faq.map(r=>({"@type":"Question",name:r.question,acceptedAnswer:{"@type":"Answer",text:r.answer}}))}]:[]]}));function I(r){const q={Jan:"01",Fev:"02",Mar:"03",Abr:"04",Mai:"05",Jun:"06",Jul:"07",Ago:"08",Set:"09",Out:"10",Nov:"11",Dez:"12"},d=r.split(" ");if(d.length!==3)return new Date().toISOString().split("T")[0];const v=d[0].padStart(2,"0"),b=q[d[1]]||"01";return`${d[2]}-${b}-${v}`}var me=za(),ue=j(me);{let r=z(()=>`${e(a).title} - Psicólogo Bernardo`),q=z(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),d=z(()=>`https://psicologobernardo.com.br${e(a).image}`);Xe(ue,{get title(){return e(r)},get description(){return e(a).description},get canonical(){return e(q)},type:"article",get image(){return e(d)},get jsonLd(){return e(je)}})}var pe=i(ue,2);{let r=z(()=>[{name:"Início",href:"/"},{name:e(P).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);We(pe,{generateSchema:!1,get items(){return e(r)}})}var B=i(pe,2),le=s(B),H=s(le),L=s(H),Oe=s(L,!0);o(L);var G=i(L,2),we=s(G,!0);o(G);var ve=i(G,2),W=s(ve),ge=s(W);Ke(ge,{size:16});var Ne=i(ge);o(W);var X=i(W,2),he=s(X);Ze(he,{size:16});var Ve=i(he);o(X);var Me=i(X,2);{var _e=r=>{var q=ta(),d=s(q);oa(d,{size:16});var v=i(d);o(q),M(b=>A(v,` Revisado: ${b??""}`),[()=>I(e(a).lastReviewed)]),m(r,q)};$(Me,r=>{e(a).lastReviewed&&r(_e)})}o(ve),o(H);var fe=i(H,2),qe=s(fe);o(fe),o(le),o(B);var be=i(B,2);re(be,{variant:"white",children:(r,q)=>{var d=ga(),v=j(d),b=s(v);Ge(b,()=>e(n).htmlContent);var _=i(b,2);{var g=c=>{var p=ca(),h=i(s(p),2);D(h,17,()=>e(n).faq,J,(C,y)=>{var V=da(),Q=s(V),$e=s(Q,!0);o(Q);var Se=i(Q,2),Ie=s(Se,!0);o(Se),o(V),M(()=>{A($e,e(y).question),A(Ie,e(y).answer)}),m(C,V)}),o(p),m(c,p)};$(_,c=>{e(n).faq&&e(n).faq.length>0&&c(g)})}var S=i(_,2);{var T=c=>{var p=ua(),h=i(s(p),2);D(h,21,()=>e(n).references,J,(C,y)=>{var V=ma(),Q=s(V,!0);o(V),M(()=>A(Q,e(y))),m(C,V)}),o(h),o(p),m(c,p)};$(S,c=>{e(n).references&&e(n).references.length>0&&c(T)})}o(v);var w=i(v,2),R=s(w),K=i(s(R),2);D(K,17,()=>e(n).tags,J,(c,p)=>{var h=pa(),C=s(h,!0);o(h),M(()=>A(C,e(p))),m(c,h)}),o(R);var U=i(R,2),E=i(s(U),2),Z=s(E);Ye(Z,{size:18}),o(E);var N=i(E,2),Y=s(N);ea(Y,{size:18}),o(N);var F=i(N,2),ke=s(F);ra(ke,{size:18}),o(F);var ee=i(F,2),Te=s(ee);sa(Te,{size:18}),o(ee),o(U),o(w);var Ae=i(w,2),Ce=i(s(Ae),2),Pe=i(s(Ce),4),xe=s(Pe);se(xe,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",size:"sm",children:(c,p)=>{var h=la(),C=j(h);Ee(C,{size:18}),oe(),m(c,h)},$$slots:{default:!0}});var Ue=i(xe,2);{var Qe=c=>{se(c,{href:"https://maps.app.goo.gl/seu-link-google-maps",variant:"outline",size:"sm",target:"_blank",children:(p,h)=>{var C=va(),y=j(C);aa(y,{size:18}),oe(),m(p,C)},$$slots:{default:!0}})};$(Ue,c=>{e(f)&&c(Qe)})}o(Pe),o(Ce),o(Ae),M((c,p)=>{x(E,"href",`https://api.whatsapp.com/send?text=${c??""}`),x(N,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),x(F,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${p??""}`),x(ee,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(r,d)},$$slots:{default:!0}});var ze=i(be,2);{var Re=r=>{re(r,{variant:"beige",children:(q,d)=>{var v=fa(),b=i(s(v),2);D(b,21,()=>e(k),J,(_,g)=>{var S=ha(),T=s(S),w=s(T),R=i(w,2),K=s(R,!0);o(R),o(T);var U=i(T,2),E=s(U),Z=s(E,!0);o(E);var N=i(E,2),Y=i(s(N));Be(Y,{size:16}),o(N),o(U),o(S),M(()=>{x(S,"href",`/${e(g).categorySlug??""}/${e(g).slug??""}`),x(w,"src",e(g).image),x(w,"alt",e(g).altText||e(g).title),A(K,e(g).category),A(Z,e(g).title)}),m(_,S)}),o(b),o(v),m(q,v)},$$slots:{default:!0}})};$(ze,r=>{e(k).length>0&&r(Re)})}var ye=i(ze,2);re(ye,{variant:"gradient",children:(r,q)=>{var d=ba(),v=i(s(d),4);se(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(b,_)=>{var g=qa(),S=j(g);Ee(S,{size:20}),oe(),m(b,g)},$$slots:{default:!0}}),o(d),m(r,d)},$$slots:{default:!0}}),M(()=>{A(Oe,e(a).category),A(we,e(a).title),A(Ne,` ${e(a).date??""}`),A(Ve,` ${e(a).readTime??""}`),x(qe,"src",e(a).image),x(qe,"alt",e(a).altText||e(a).title)}),m(u,me),Le()}export{Qa as component,Ua as universal};
+                espaço de acolhimento ético e humanizado.</p> <div class="author-actions"><!> <!></div></div></div>`,1),ha=l('<a class="blog-card svelte-lxkfym"><div class="blog-image"><img loading="lazy" width="350" height="233"/> <div class="blog-category"> </div></div> <div class="blog-content svelte-lxkfym"><h3 class="svelte-lxkfym"> </h3> <span class="blog-link">Ler mais <!></span></div></a>'),fa=l('<div class="related-posts"><h2 style="text-align: center; margin-bottom: 2rem;">Artigos Relacionados</h2> <div class="related-grid svelte-lxkfym"></div></div>'),qa=l("<!> Falar no WhatsApp",1),ba=l('<div class="cta-content"><h2>Gostou do que leu?</h2> <p>Talvez seja um bom momento pra conversar.</p> <!></div>'),za=l('<!> <!> <section class="post-hero"><div class="container"><div class="post-header"><span class="blog-category"> </span> <h1> </h1> <div class="post-meta"><span><!> </span> <span><!> </span> <!></div></div> <div class="post-image"><img loading="eager" fetchpriority="high" width="800" height="450"/></div></div></section> <!> <!> <!>',1);function Ua(u,t){He(t,!0);const a=z(()=>t.data.post),n=z(()=>t.data.content),P=z(()=>t.data.category),k=z(()=>Je.filter(r=>r.slug!==t.data.slug&&r.categorySlug===e(a).categorySlug).slice(0,3)),f=z(()=>e(a).categorySlug==="jardim-da-penha"||e(a).categorySlug==="vitoria-es"||e(a).tags.some(r=>r.toLowerCase().includes("vitória")||r.toLowerCase().includes("jardim da penha"))),O=z(()=>[{"@type":"Thing",name:e(P).label},...e(a).tags?e(a).tags.filter(r=>!r.toLowerCase().includes("vitória")&&!r.toLowerCase().includes("jardim da penha")&&!r.toLowerCase().includes("saúde mental")&&r!==e(a).categorySlug).map(r=>({"@type":"Thing",name:r.toLowerCase()==="acp"?"Abordagem Centrada na Pessoa":r.charAt(0).toUpperCase()+r.slice(1)})):[]]),je=z(()=>({"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Início",item:"https://psicologobernardo.com.br/"},{"@type":"ListItem",position:2,name:e(P).label,item:`https://psicologobernardo.com.br/${e(a).categorySlug}`},{"@type":"ListItem",position:3,name:e(a).title,item:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`}]},{"@type":"WebPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#webpage`,url:`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`,name:`${e(a).title} - Psicólogo Bernardo`,isPartOf:{"@id":"https://psicologobernardo.com.br/#website"},mainEntity:{"@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`}},{"@type":e(a).schemaType||"BlogPosting","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#article`,headline:e(a).title,name:e(a).title,description:e(a).description,image:{"@type":"ImageObject",url:`https://psicologobernardo.com.br${e(a).image}`,width:800,height:450},datePublished:I(e(a).date),dateModified:e(a).lastReviewed?I(e(a).lastReviewed):I(e(a).date),author:{"@id":"https://psicologobernardo.com.br/sobre/#person"},publisher:{"@id":"https://psicologobernardo.com.br/#organization"},inLanguage:"pt-BR",isAccessibleForFree:!0,articleSection:e(a).category,keywords:e(a).tags,audience:{"@type":"Audience",audienceType:"General public"},...e(f)?{contentLocation:{"@type":"Place",name:"Jardim da Penha, Vitória - ES"}}:{},about:e(O),...e(n).references?{citation:e(n).references}:{}},...e(n).faq?[{"@type":"FAQPage","@id":`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/#faq`,mainEntity:e(n).faq.map(r=>({"@type":"Question",name:r.question,acceptedAnswer:{"@type":"Answer",text:r.answer}}))}]:[]]}));function I(r){const q={Jan:"01",Fev:"02",Mar:"03",Abr:"04",Mai:"05",Jun:"06",Jul:"07",Ago:"08",Set:"09",Out:"10",Nov:"11",Dez:"12"},d=r.split(" ");if(d.length!==3)return new Date().toISOString().split("T")[0];const v=d[0].padStart(2,"0"),b=q[d[1]]||"01";return`${d[2]}-${b}-${v}`}var me=za(),ue=j(me);{let r=z(()=>`${e(a).title} - Psicólogo Bernardo`),q=z(()=>`https://psicologobernardo.com.br/${e(a).categorySlug}/${e(a).slug}/`),d=z(()=>`https://psicologobernardo.com.br${e(a).image}`);Xe(ue,{get title(){return e(r)},get description(){return e(a).description},get canonical(){return e(q)},type:"article",get image(){return e(d)},get jsonLd(){return e(je)}})}var pe=i(ue,2);{let r=z(()=>[{name:"Início",href:"/"},{name:e(P).label,href:`/${e(a).categorySlug}`},{name:e(a).title.length>40?e(a).title.substring(0,40)+"...":e(a).title}]);We(pe,{generateSchema:!1,get items(){return e(r)}})}var B=i(pe,2),le=s(B),H=s(le),L=s(H),Oe=s(L,!0);o(L);var G=i(L,2),we=s(G,!0);o(G);var ve=i(G,2),W=s(ve),ge=s(W);Ke(ge,{size:16});var Ne=i(ge);o(W);var X=i(W,2),he=s(X);Ze(he,{size:16});var Ve=i(he);o(X);var Me=i(X,2);{var _e=r=>{var q=ta(),d=s(q);oa(d,{size:16});var v=i(d);o(q),M(b=>A(v,` Revisado: ${b??""}`),[()=>I(e(a).lastReviewed)]),m(r,q)};$(Me,r=>{e(a).lastReviewed&&r(_e)})}o(ve),o(H);var fe=i(H,2),qe=s(fe);o(fe),o(le),o(B);var be=i(B,2);re(be,{variant:"white",children:(r,q)=>{var d=ga(),v=j(d),b=s(v);Ge(b,()=>e(n).htmlContent);var _=i(b,2);{var g=c=>{var p=ca(),h=i(s(p),2);D(h,17,()=>e(n).faq,J,(C,y)=>{var V=da(),U=s(V),$e=s(U,!0);o(U);var Se=i(U,2),Ie=s(Se,!0);o(Se),o(V),M(()=>{A($e,e(y).question),A(Ie,e(y).answer)}),m(C,V)}),o(p),m(c,p)};$(_,c=>{e(n).faq&&e(n).faq.length>0&&c(g)})}var S=i(_,2);{var T=c=>{var p=ua(),h=i(s(p),2);D(h,21,()=>e(n).references,J,(C,y)=>{var V=ma(),U=s(V,!0);o(V),M(()=>A(U,e(y))),m(C,V)}),o(h),o(p),m(c,p)};$(S,c=>{e(n).references&&e(n).references.length>0&&c(T)})}o(v);var w=i(v,2),R=s(w),K=i(s(R),2);D(K,17,()=>e(n).tags,J,(c,p)=>{var h=pa(),C=s(h,!0);o(h),M(()=>A(C,e(p))),m(c,h)}),o(R);var Q=i(R,2),E=i(s(Q),2),Z=s(E);Ye(Z,{size:18}),o(E);var N=i(E,2),Y=s(N);ea(Y,{size:18}),o(N);var F=i(N,2),ke=s(F);ra(ke,{size:18}),o(F);var ee=i(F,2),Te=s(ee);sa(Te,{size:18}),o(ee),o(Q),o(w);var Ae=i(w,2),Ce=i(s(Ae),2),Pe=i(s(Ce),4),xe=s(Pe);se(xe,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"primary",size:"sm",children:(c,p)=>{var h=la(),C=j(h);Ee(C,{size:18}),oe(),m(c,h)},$$slots:{default:!0}});var Qe=i(xe,2);{var Ue=c=>{se(c,{href:"https://maps.app.goo.gl/seu-link-google-maps",variant:"outline",size:"sm",target:"_blank",children:(p,h)=>{var C=va(),y=j(C);aa(y,{size:18}),oe(),m(p,C)},$$slots:{default:!0}})};$(Qe,c=>{e(f)&&c(Ue)})}o(Pe),o(Ce),o(Ae),M((c,p)=>{x(E,"href",`https://api.whatsapp.com/send?text=${c??""}`),x(N,"href",`https://www.facebook.com/sharer/sharer.php?u=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`),x(F,"href",`https://twitter.com/intent/tweet?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/&text=${p??""}`),x(ee,"href",`https://www.linkedin.com/sharing/share-offsite/?url=https://psicologobernardo.com.br/${e(a).categorySlug??""}/${e(a).slug??""}/`)},[()=>encodeURIComponent(e(a).title+" - https://psicologobernardo.com.br/"+e(a).categorySlug+"/"+e(a).slug+"/"),()=>encodeURIComponent(e(a).title)]),m(r,d)},$$slots:{default:!0}});var ze=i(be,2);{var Re=r=>{re(r,{variant:"beige",children:(q,d)=>{var v=fa(),b=i(s(v),2);D(b,21,()=>e(k),J,(_,g)=>{var S=ha(),T=s(S),w=s(T),R=i(w,2),K=s(R,!0);o(R),o(T);var Q=i(T,2),E=s(Q),Z=s(E,!0);o(E);var N=i(E,2),Y=i(s(N));Be(Y,{size:16}),o(N),o(Q),o(S),M(()=>{x(S,"href",`/${e(g).categorySlug??""}/${e(g).slug??""}`),x(w,"src",e(g).image),x(w,"alt",e(g).altText||e(g).title),A(K,e(g).category),A(Z,e(g).title)}),m(_,S)}),o(b),o(v),m(q,v)},$$slots:{default:!0}})};$(ze,r=>{e(k).length>0&&r(Re)})}var ye=i(ze,2);re(ye,{variant:"gradient",children:(r,q)=>{var d=ba(),v=i(s(d),4);se(v,{href:"https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar",variant:"secondary",size:"lg",children:(b,_)=>{var g=qa(),S=j(g);Ee(S,{size:20}),oe(),m(b,g)},$$slots:{default:!0}}),o(d),m(r,d)},$$slots:{default:!0}}),M(()=>{A(Oe,e(a).category),A(we,e(a).title),A(Ne,` ${e(a).date??""}`),A(Ve,` ${e(a).readTime??""}`),x(qe,"src",e(a).image),x(qe,"alt",e(a).altText||e(a).title)}),m(u,me),Le()}export{Ua as component,Qa as universal};

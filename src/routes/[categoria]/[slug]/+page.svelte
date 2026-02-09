@@ -109,7 +109,7 @@
                 },
             },
             {
-                "@type": "Article",
+                "@type": post.schemaType || "BlogPosting",
                 "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#article`,
                 headline: post.title,
                 name: post.title,

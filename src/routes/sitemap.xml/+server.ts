@@ -5,7 +5,7 @@ import { blogPosts, categoryPages } from '$lib/data/blog';
 const site = 'https://psicologobernardo.com.br';
 
 // Data do último deploy/build - atualizar quando necessário
-const LAST_BUILD_DATE = '2026-01-27';
+const LAST_BUILD_DATE = '2026-02-04';
 
 interface SitemapUrl {
     loc: string;

@@ -10,7 +10,7 @@ export interface BlogPost {
     readTime: string;
     image: string;
     altText?: string; // SEO-optimized image description (falls back to title if not provided)
-    schemaType?: "Article" | "BlogPosting"; // Defaults to "Article" if undefined
+    schemaType?: "Article" | "BlogPosting"; // Defaults to "BlogPosting" if undefined. Use "Article" for technical/academic content.
     lastReviewed?: string; // ISO date for clinical review (e.g. "2026-01-25")
 }
 
@@ -25,6 +25,55 @@ export const categoryPages = [
 ];
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "preco-psiquico-nunca-depender-ninguem",
+        title: "O preço psíquico de nunca depender de ninguém",
+        description: "Você aprendeu que homem de verdade resolve tudo sozinho. Mas a autossuficiência radical tem um custo: solidão, exaustão e a sensação de nunca ser realmente conhecido.",
+        category: "Terapia para Homens",
+        categorySlug: "homens",
+        tags: ["Homens", "Masculinidades", "Solidão Masculina", "Autoconhecimento", "Vitória ES"],
+        date: "08 Fev 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/preco-psiquico-nunca-depender-ninguem.webp",
+        altText: "Ilustração abstrata de uma figura masculina carregando um peso invisível, com fragmentos de conexão ao redor que não se completam"
+    },
+    {
+        slug: "vida-dando-certo-piorando-por-dentro",
+        title: "Quando a vida está \"dando certo\", mas você está piorando por dentro",
+        description: "Você conquistou tudo o que buscava, mas ainda se sente vazio. Entenda o paradoxo do sucesso externo e sofrimento interno - e por que isso não é ingratidão.",
+        category: "Saúde Mental",
+        categorySlug: "saude-mental",
+        tags: ["Saúde Mental", "Vazio Existencial", "Alta Renda", "Autoconhecimento", "Vitória ES"],
+        date: "08 Fev 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/vida-dando-certo-piorando-por-dentro.webp",
+        altText: "Ilustração abstrata de uma figura humana cercada por conquistas externas (símbolos de sucesso) mas com o interior vazio e fragmentado"
+    },
+    {
+        slug: "terapia-sem-respostas-prontas",
+        title: "Por que a terapia não tem respostas prontas (e como isso pode ser frustrante e transformador)",
+        description: "A terapia não dá conselhos nem resolve problemas por você. Entenda por que isso acontece e como a escuta genuína transforma mais do que qualquer resposta pronta.",
+        category: "Psicoterapia",
+        categorySlug: "psicoterapia",
+        tags: ["Psicoterapia", "Escuta", "ACP", "Coaching", "Expectativas", "Vitória ES"],
+        date: "03 Fev 2026",
+        readTime: "7 min de leitura",
+        image: "/images/blog/terapia-sem-respostas-prontas.webp",
+        altText: "Ilustração abstrata de formas orgânicas em turquesa e bege sugerindo diálogo e conexão terapêutica",
+        schemaType: "Article"
+    },
+    {
+        slug: "aceitacao-incondicional",
+        title: "Aceitação Incondicional: aprendendo a se acolher (mesmo com os defeitos)",
+        description: "A aceitação incondicional não é passividade. Entenda como aprender a se acolher, com suas luzes e sombras, transforma a relação consigo mesmo.",
+        category: "Abordagem Centrada na Pessoa",
+        categorySlug: "acp",
+        tags: ["Abordagem Centrada na Pessoa", "Carl Rogers", "Autoestima", "Autoaceitação", "Vitória ES", "acp"],
+        date: "02 Fev 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/aceitacao-incondicional.webp",
+        altText: "Ilustração abstrata minimalista de uma silhueta humana se abraçando, em tons turquesa e bege, representando autoaceitação"
+    },
     {
         slug: "seis-condicoes-carl-rogers",
         title: "As Seis Condições Necessárias e Suficientes para a Mudança Terapêutica: O Legado de Carl Rogers",

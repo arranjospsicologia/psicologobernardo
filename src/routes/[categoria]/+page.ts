@@ -1,8 +1,13 @@
-import { error } from "@sveltejs/kit";
+import { error, redirect } from "@sveltejs/kit";
 import type { PageLoad } from "./$types";
 import { getPostsByCategory, getCategoryBySlug } from "$lib/data/blog";
 
 export const load: PageLoad = ({ params }) => {
+    // Handle legacy /blog index redirect
+    if (params.categoria === 'blog') {
+        throw redirect(301, '/artigos');
+    }
+
     const category = getCategoryBySlug(params.categoria);
 
     if (!category) {

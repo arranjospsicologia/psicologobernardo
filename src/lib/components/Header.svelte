@@ -1,17 +1,24 @@
 <script lang="ts">
     import { Menu, X, ChevronDown } from "lucide-svelte";
     import { Button } from "$lib";
+    import { onMount } from "svelte";
 
     let isMenuOpen = $state(false);
     let servicesOpen = $state(false);
     let experiencesOpen = $state(false);
     let headerElement: HTMLElement;
+    let menuBtn: HTMLButtonElement;
 
-    function toggleMenu() {
+    function toggleMenu(e?: Event) {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
         isMenuOpen = !isMenuOpen;
         if (!isMenuOpen) {
             servicesOpen = false;
             experiencesOpen = false;
+            // Unlock body scroll if needed, though not currently implemented in CSS
         }
     }
 
@@ -31,6 +38,19 @@
             closeDropdowns();
         }
     }
+
+    onMount(() => {
+        // Robust fallback: manually attach listener to bypass potential hydration delegation issues
+        if (menuBtn) {
+            menuBtn.addEventListener("click", toggleMenu);
+        }
+
+        return () => {
+            if (menuBtn) {
+                menuBtn.removeEventListener("click", toggleMenu);
+            }
+        };
+    });
 
     const servicos = [
         {
@@ -143,7 +163,7 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button class="nav-toggle" onclick={toggleMenu} aria-label="Menu">
+        <button class="nav-toggle" bind:this={menuBtn} aria-label="Menu">
             {#if isMenuOpen}
                 <X size={24} />
             {:else}

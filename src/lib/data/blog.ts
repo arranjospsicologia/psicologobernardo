@@ -26,6 +26,30 @@ export const categoryPages = [
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "esperar-piorar-sai-mais-caro",
+        title: "Por que você não precisa esperar piorar para fazer terapia",
+        description: "Você não precisa estar em crise para buscar terapia. O cuidado preventivo com a saúde mental evita que o desgaste acumulado se transforme em colapso.",
+        category: "Psicoterapia",
+        categorySlug: "psicoterapia",
+        tags: ["Psicoterapia", "Terapia Preventiva", "Prevenção Saúde Mental", "Alta Renda", "Vitória ES"],
+        date: "18 Fev 2026",
+        readTime: "7 min de leitura",
+        image: "/images/blog/esperar-piorar-sai-mais-caro.webp",
+        altText: "Ilustração abstrata de uma planta florescendo em tons turquesa e bege, com raízes saudáveis visíveis, representando crescimento gradual e cuidado preventivo com a saúde mental"
+    },
+    {
+        slug: "contradicoes-ideologicas-capitalismo-ia",
+        title: "Quando seus valores não cabem no mundo: o sofrimento de viver contra a corrente",
+        description: "Viver em contradição com os próprios valores gera exaustão e solidão. Entenda o sofrimento de quem questiona o capitalismo e a IA, mas precisa sobreviver dentro deles.",
+        category: "Saúde Mental",
+        categorySlug: "saude-mental",
+        tags: ["Saúde Mental", "Capitalismo", "Inteligência Artificial", "Contradição Ideológica", "Vitória ES"],
+        date: "09 Fev 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/contradicoes-ideologicas-capitalismo-ia.webp",
+        altText: "Ilustração abstrata de uma silhueta humana dividida entre padrões geométricos digitais frios e formas orgânicas quentes, representando o conflito entre valores pessoais e um mundo tecnológico"
+    },
+    {
         slug: "preco-psiquico-nunca-depender-ninguem",
         title: "O preço psíquico de nunca depender de ninguém",
         description: "Você aprendeu que homem de verdade resolve tudo sozinho. Mas a autossuficiência radical tem um custo: solidão, exaustão e a sensação de nunca ser realmente conhecido.",

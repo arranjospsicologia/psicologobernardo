@@ -26,6 +26,19 @@ export const categoryPages = [
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "relacao-principal-ferramenta-terapia",
+        title: "Por que a Relação é a principal ferramenta da terapia?",
+        description: "A técnica não é o que mais cura em terapia. Descubra por que a relação terapêutica, baseada em empatia, aceitação e autenticidade, é a principal ferramenta de mudança.",
+        category: "Abordagem Centrada na Pessoa",
+        categorySlug: "acp",
+        tags: ["Abordagem Centrada na Pessoa", "Carl Rogers", "Relação Terapêutica", "Psicoterapia", "Vitória ES"],
+        date: "24 Fev 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/relacao-principal-ferramenta-terapia.webp",
+        altText: "Ilustração abstrata de duas formas orgânicas em turquesa e bege se aproximando com um espaço iluminado entre elas, representando conexão genuína e vínculo terapêutico",
+        schemaType: "Article"
+    },
+    {
         slug: "esperar-piorar-sai-mais-caro",
         title: "Por que você não precisa esperar piorar para fazer terapia",
         description: "Você não precisa estar em crise para buscar terapia. O cuidado preventivo com a saúde mental evita que o desgaste acumulado se transforme em colapso.",

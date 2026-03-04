@@ -99,17 +99,22 @@
                     },
                 },
             },
-            {
-                "@type": "FAQPage",
-                mainEntity: faqItems.map((item) => ({
-                    "@type": "Question",
-                    name: item.question,
-                    acceptedAnswer: {
-                        "@type": "Answer",
-                        text: item.answer,
-                    },
-                })),
-            },
+            ...(faqItems && faqItems.length > 0
+                ? [
+                      {
+                          "@type": "FAQPage",
+                          "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#faq",
+                          mainEntity: faqItems.map((item) => ({
+                              "@type": "Question",
+                              name: item.question,
+                              acceptedAnswer: {
+                                  "@type": "Answer",
+                                  text: item.answer,
+                              },
+                          })),
+                      },
+                  ]
+                : []),
         ],
     });
 </script>

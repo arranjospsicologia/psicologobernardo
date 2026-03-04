@@ -26,6 +26,18 @@ export const categoryPages = [
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "autonomia-vai-te-fazer-bem",
+        title: "Por que a autonomia vai te fazer bem?",
+        description: "Autonomia é a capacidade de se guiar pela própria experiência. Entenda por que a terapia não-diretiva devolve esse poder e como a ACP pensa a autonomia como caminho de conexão consigo.",
+        category: "Abordagem Centrada na Pessoa",
+        categorySlug: "acp",
+        tags: ["Abordagem Centrada na Pessoa", "Carl Rogers", "Autonomia", "Autoconhecimento", "Vitória ES"],
+        date: "26 Fev 2026",
+        readTime: "8 min de leitura",
+        image: "/images/blog/autonomia-vai-te-fazer-bem.webp",
+        altText: "Ilustração abstrata de uma silhueta humana em turquesa avançando de formas geométricas rígidas para um espaço aberto e luminoso, representando autonomia e autoconfiança"
+    },
+    {
         slug: "relacao-principal-ferramenta-terapia",
         title: "Por que a Relação é a principal ferramenta da terapia?",
         description: "A técnica não é o que mais cura em terapia. Descubra por que a relação terapêutica, baseada em empatia, aceitação e autenticidade, é a principal ferramenta de mudança.",

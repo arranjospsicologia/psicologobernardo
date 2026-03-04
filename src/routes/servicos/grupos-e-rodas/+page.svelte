@@ -89,17 +89,22 @@
                     },
                 },
             },
-            {
-                "@type": "FAQPage",
-                mainEntity: faqItems.map((item) => ({
-                    "@type": "Question",
-                    name: item.question,
-                    acceptedAnswer: {
-                        "@type": "Answer",
-                        text: item.answer,
-                    },
-                })),
-            },
+            ...(faqItems && faqItems.length > 0
+                ? [
+                      {
+                          "@type": "FAQPage",
+                          "@id": "https://psicologobernardo.com.br/servicos/grupos-e-rodas/#faq",
+                          mainEntity: faqItems.map((item) => ({
+                              "@type": "Question",
+                              name: item.question,
+                              acceptedAnswer: {
+                                  "@type": "Answer",
+                                  text: item.answer,
+                              },
+                          })),
+                      },
+                  ]
+                : []),
         ],
     });
 </script>

@@ -1,104 +1,59 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb, SEO } from "$lib";
-    import { Phone, MapPin, ExternalLink } from "lucide-svelte";
+    import "$lib/styles/location.css";
+    import { Section, Button, Breadcrumb, SEO, Card } from "$lib";
+    import {
+        Phone,
+        MapPin,
+        ExternalLink,
+        Heart,
+        Monitor,
+        Users,
+        ChevronDown,
+    } from "lucide-svelte";
+    import { locations } from "$lib/data/locations";
+    import { buildLocationJsonLd } from "$lib/utils/locationSchema";
 
-    // FAQPage Schema for SEO
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "Tem psicólogo em Praia do Canto?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Atendo moradores de Praia do Canto no meu consultório em Jardim da Penha, a apenas 5-10 minutos de carro. A localização é de fácil acesso para quem vem da região litorânea.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Quanto tempo leva para chegar ao consultório saindo de Praia do Canto?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "O trajeto de Praia do Canto até o consultório em Jardim da Penha leva entre 5 e 10 minutos de carro, dependendo do trânsito. Também é possível chegar de ônibus.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "O psicólogo atende convênio para moradores de Praia do Canto?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Os atendimentos são particulares. Forneço recibo para reembolso caso seu plano de saúde ofereça essa opção.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Qual o horário de atendimento do psicólogo?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "O atendimento acontece de segunda a sexta-feira, das 13h30 às 21h. Os horários são agendados previamente pelo WhatsApp.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "É possível fazer terapia online morando em Praia do Canto?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Sim. Além do atendimento presencial, ofereço terapia online por videochamada. Você pode escolher a modalidade que melhor se adapta ao seu momento.",
-                },
-            },
-        ],
-    };
+    const loc = locations["praia-do-canto"];
 
-    const praiaDoCantoSchema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        name: "Bernardo Carielo Psicólogo",
-        description:
-            "Atendimento psicológico presencial e online, com acesso fácil para moradores de Praia do Canto.",
-        telephone: "+55-27-99833-1228",
-        address: {
-            "@type": "PostalAddress",
-            streetAddress: "Rua Darcy Grijó, 50 - Sala 409",
-            addressLocality: "Jardim da Penha",
-            addressRegion: "ES",
-            postalCode: "29060-500",
-            addressCountry: "BR",
-        },
-    };
+    const jsonLd = buildLocationJsonLd({
+        canonical: loc.canonical,
+        pageName: loc.h1,
+        pageDescription: loc.description,
+        faqItems: loc.faqItems,
+    });
 </script>
 
 <SEO
-    title="Psicólogo em Praia do Canto – Vitória ES | Atendimento Próximo a Você"
-    description="Atendimento psicológico para moradores de Praia do Canto e bairros próximos. Consultório em Jardim da Penha, a poucos minutos de distância. Psicoterapia pela Abordagem Centrada na Pessoa."
-    canonical="https://psicologobernardo.com.br/localizacao/psicologo-praia-do-canto/"
-    jsonLd={praiaDoCantoSchema}
-    preloadImage="/images/consultorio/fachada-madison.webp"
+    title={loc.title}
+    description={loc.description}
+    canonical={loc.canonical}
+    {jsonLd}
+    preloadImage="/images/hero/hero-600x800.webp"
 />
 
-<!-- Breadcrumb -->
 <Breadcrumb
     items={[
         { name: "Início", href: "/" },
+        { name: "Localização", href: "/localizacao/" },
         { name: "Psicólogo Praia do Canto" },
     ]}
 />
 
+<!-- Hero -->
 <section class="location-hero">
     <div class="container">
         <div class="hero-grid">
             <div class="hero-content">
-                <h1>Psicólogo próximo a Praia do Canto - Bernardo Carielo</h1>
+                <h1>{loc.h1}</h1>
                 <p class="hero-description">
                     Atendimento presencial pela Abordagem Centrada na Pessoa
                     para moradores de Praia do Canto e bairros próximos. Meu
-                    consultório fica em Jardim da Penha, a poucos minutos de
-                    distância, em um espaço de escuta, acolhimento e
-                    autenticidade.
+                    consultório fica em Jardim da Penha, bairro vizinho, em um
+                    espaço de escuta e acolhimento.
                 </p>
                 <div class="hero-buttons">
                     <Button
-                        href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+                        href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
                         variant="primary"
                     >
                         <Phone size={20} />
@@ -111,12 +66,12 @@
             </div>
             <div class="hero-image">
                 <img
-                    src="/images/consultorio/fachada-madison.webp"
-                    srcset="/images/consultorio/fachada-madison-400w.webp 400w,
-                            /images/consultorio/fachada-madison-800w.webp 800w,
-                            /images/consultorio/fachada-madison.webp 1200w"
-                    sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 450px"
-                    alt="Fachada do Edifício Madison Office Tower - Consultório em Jardim da Penha, Vitória (ES)"
+                    src="/images/hero/hero-600x800.webp"
+                    srcset="/images/hero/hero-600x800-300w.webp 300w,
+                            /images/hero/hero-600x800-450w.webp 450w,
+                            /images/hero/hero-600x800.webp 600w"
+                    sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                    alt={loc.heroAlt}
                     width="450"
                     height="600"
                     loading="eager"
@@ -127,36 +82,59 @@
     </div>
 </section>
 
+<!-- Editorial local -->
+<Section variant="white">
+    <article class="editorial-local">
+        <h2>{loc.editorialTitle}</h2>
+        <p class="editorial-subtitle">{loc.editorialSubtitle}</p>
+
+        <img
+            src="/images/localizacao/psicologo-praia-do-canto.webp"
+            alt="Ilustração abstrata para Praia do Canto"
+            class="editorial-image"
+            width="800"
+            height="1066"
+            loading="lazy"
+        />
+
+        <p>
+            A Praia do Canto oferece uma vida confortável: boas opções de lazer,
+            restaurantes conhecidos, apartamentos bem localizados. É um bairro
+            onde muita gente conseguiu construir uma rotina que funciona — e
+            cuidar da saúde mental é uma forma de complementar essa conquista.
+        </p>
+        <p>
+            Terapia não precisa ser uma resposta a uma crise. Pode ser o espaço
+            que faltava para refletir sobre escolhas, dar nome ao que você
+            sente, ou simplesmente ter uma hora na semana que é inteiramente
+            sua. Muitas pessoas da Praia do Canto valorizam justamente isso: um
+            momento reservado e sem agenda.
+        </p>
+        <p>
+            O consultório em Jardim da Penha fica num bairro vizinho, com uma
+            discreta distância do circuito social do dia a dia — o que muita
+            gente aprecia. É um espaço reservado para você, sem obrigação de
+            cruzar com conhecidos.
+        </p>
+        <p>
+            Se você está buscando esse tipo de espaço, conheça como funciona a
+            <a href="/servicos/psicoterapia-individual/"
+                >psicoterapia individual</a
+            >
+            e o que esperar dos primeiros encontros.
+        </p>
+    </article>
+</Section>
+
+<!-- Micro-seção prática -->
 <Section variant="beige">
-    <div class="section-header">
-        <h2>Sobre mim</h2>
-    </div>
-    <div class="about-grid">
-        <div class="about-content">
-            <p>
-                Se você mora em Praia do Canto e está procurando um atendimento
-                psicológico próximo da sua casa, meu consultório em Jardim da
-                Penha oferece um espaço acolhedor e reservado, a apenas 5-10
-                minutos de carro.
-            </p>
-            <p>
-                Trabalho com a <strong>Abordagem Centrada na Pessoa</strong>,
-                desenvolvida por Carl Rogers, que valoriza a autenticidade, a
-                empatia e o respeito incondicional. Aqui, você é o protagonista
-                do seu processo, e meu papel é oferecer um espaço seguro para
-                que você se compreenda melhor e encontre seus próprios caminhos.
-            </p>
-        </div>
-        <div class="about-image">
-            <img
-                src="/images/hero/hero-600x800.jpg"
-                alt="Bernardo Carielo Psicólogo em Jardim da Penha, Vitória (ES)"
-                loading="lazy"
-            />
-        </div>
+    <div class="practical-section">
+        <h2>{loc.practicalSection.title}</h2>
+        {@html loc.practicalSection.bodyHtml}
     </div>
 </Section>
 
+<!-- Onde fica / Mapa -->
 <Section variant="white">
     <div class="section-header">
         <h2>Onde fica o consultório</h2>
@@ -166,15 +144,7 @@
             Meu consultório está localizado no bairro <strong
                 >Jardim da Penha</strong
             >, em Vitória – ES, com excelente localização e fácil acesso para
-            pessoas que vêm de
-            <strong>Praia do Canto</strong> e bairros próximos. Fico em frente à
-            UFES (Universidade Federal do Espírito Santo), a apenas poucos minutos
-            de carro.
-        </p>
-        <p>
-            A localização central e próxima da região litorânea faz com que
-            pessoas de Praia do Canto, Mata da Praia e arredores consigam chegar
-            com facilidade e rapidez.
+            pessoas que vêm de <strong>Praia do Canto</strong> e bairros próximos.
         </p>
         <div class="address-card">
             <h3>
@@ -206,159 +176,163 @@
                 rel="noopener"
                 class="map-link"
             >
-                <ExternalLink size={20} />
-                Abrir no Google Maps
+                <ExternalLink size={20} /> Abrir no Google Maps
             </a>
         </div>
     </div>
 </Section>
 
+<!-- Serviços -->
+<Section variant="beige">
+    <div class="section-header"><h2>Serviços disponíveis</h2></div>
+    <div class="cards-grid" style="margin-top: 2rem;">
+        <Card
+            icon={Heart}
+            title="Psicoterapia Individual"
+            href="/servicos/psicoterapia-individual/"
+            variant="default"
+        >
+            <p>
+                Acolhimento para ansiedade, depressão e processos de
+                autoconhecimento.
+            </p>
+        </Card>
+        <Card
+            icon={Users}
+            title="Terapia para Casais"
+            href="/servicos/terapia-de-casal/"
+            variant="default"
+        >
+            <p>Espaço de mediação e diálogo para relacionamentos.</p>
+        </Card>
+        <Card
+            icon={Monitor}
+            title="Terapia Online"
+            href="/servicos/terapia-online/"
+            variant="default"
+        >
+            <p>
+                Atendimento por videochamada com a mesma presença terapêutica.
+            </p>
+        </Card>
+    </div>
+</Section>
+
+<!-- Sobre mim + CRP -->
+<Section variant="white">
+    <div class="about-grid">
+        <img
+            src="/images/sobre/bernardo-profissional.webp"
+            alt="Bernardo Carielo Psicólogo próximo a Praia do Canto"
+            width="250"
+            height="333"
+            loading="lazy"
+        />
+        <div>
+            <h3>Bernardo Carielo</h3>
+            <p class="crp-badge">CRP-16/5527 · Psicólogo Humanista</p>
+            <p>{loc.aboutText}</p>
+            <a href="/sobre/">Conheça minha abordagem e formação →</a>
+        </div>
+    </div>
+</Section>
+
+<!-- Bairros -->
 <Section variant="beige">
     <div class="section-header">
         <h2>Bairros próximos – atendimentos para Praia do Canto</h2>
-        <p style="color: var(--text-light); margin-top: 0.5rem;">
-            Atendo presencialmente pessoas de Praia do Canto, Mata da Praia e
-            bairros próximos à região litorânea de Vitória.
-        </p>
     </div>
     <div class="bairros-grid">
-        <div class="bairro-card">
-            <h3><MapPin size={20} /> Bairros Litorâneos</h3>
-            <ul>
-                <li>• Praia do Canto</li>
-                <li>• Mata da Praia</li>
-                <li>• Ilha do Boi</li>
-                <li>• Ilha do Frade</li>
-                <li>• Enseada do Suá</li>
-            </ul>
-        </div>
-        <div class="bairro-card">
-            <h3><MapPin size={20} /> Bairros Próximos</h3>
-            <ul>
-                <li>• Santa Lúcia</li>
-                <li>• Bento Ferreira</li>
-                <li>• Jardim da Penha</li>
-                <li>• Jardim Camburi</li>
-            </ul>
-        </div>
-        <div class="bairro-card">
-            <h3><MapPin size={20} /> Região Metropolitana</h3>
-            <ul>
-                <li>• Vila Velha</li>
-                <li>• Serra</li>
-                <li>• Cariacica</li>
-                <li>• Toda região</li>
-            </ul>
-        </div>
+        {#each loc.neighborhoodGroups as group}
+            <div class="bairro-card">
+                <h3><MapPin size={20} /> {group.label}</h3>
+                <ul>
+                    {#each group.items as item}<li>• {item}</li>{/each}
+                </ul>
+            </div>
+        {/each}
     </div>
 </Section>
 
+<!-- Próximos passos -->
 <Section variant="white">
-    <div class="section-header">
-        <h2>Outras regiões atendidas</h2>
+    <div class="contact-steps">
+        <h2>Como funciona o primeiro contato</h2>
+        <ol>
+            <li><strong>Envie uma mensagem</strong> pelo WhatsApp</li>
+            <li>
+                <strong>Eu respondo</strong> geralmente no mesmo dia útil para combinarmos
+                um horário
+            </li>
+            <li>
+                <strong>Primeira conversa</strong> sem compromisso de continuidade
+                — é um momento para nos conhecermos
+            </li>
+        </ol>
+        <p>
+            Não há pressa. O primeiro passo mais importante é o que você se
+            sentir pronto para dar.
+        </p>
     </div>
+</Section>
+
+<!-- FAQ -->
+<Section variant="beige" id="faq">
+    <div class="section-header"><h2>{loc.faqSectionTitle}</h2></div>
+    <div class="loc-faq-container">
+        {#each loc.faqItems as item}
+            <details class="loc-faq-item">
+                <summary
+                    ><span>{item.question}</span><ChevronDown
+                        size={20}
+                        class="loc-faq-chevron"
+                    /></summary
+                >
+                <div class="loc-faq-answer"><p>{item.answer}</p></div>
+            </details>
+        {/each}
+    </div>
+</Section>
+
+<!-- Artigos -->
+<Section variant="white">
+    <div class="section-header"><h2>{loc.articlesSectionTitle}</h2></div>
+    <div class="loc-articles-grid">
+        {#each loc.blogArticles as article}
+            <a href={`/blog/${article.slug}/`} class="loc-article-card">
+                <h3>{article.title}</h3>
+                <p>{article.reason}</p>
+                <span class="read-more">Ler artigo →</span>
+            </a>
+        {/each}
+    </div>
+</Section>
+
+<!-- Outras regiões -->
+<Section variant="beige">
+    <div class="section-header"><h2>Outras regiões atendidas</h2></div>
     <div class="links-grid">
-        <a href="/localizacao/psicologo-vitoria-es/" class="link-card">
-            <h3>Vitória ES</h3>
-            <p>Atendimento em todos os bairros de Vitória</p>
-        </a>
-        <a href="/localizacao/psicologo-jardim-da-penha/" class="link-card">
-            <h3>Jardim da Penha</h3>
-            <p>Consultório em frente à UFES</p>
-        </a>
-        <a href="/localizacao/psicologo-vila-velha/" class="link-card">
-            <h3>Vila Velha</h3>
-            <p>Atendimento presencial e online</p>
-        </a>
-        <a href="/localizacao/psicologo-serra-es/" class="link-card">
-            <h3>Serra</h3>
-            <p>Atendimento presencial e online</p>
-        </a>
+        {#each loc.crossLinks as link}
+            <a href={link.href} class="link-card"
+                ><h3>{link.label}</h3>
+                <p>{link.description}</p></a
+            >
+        {/each}
     </div>
 </Section>
 
-<svelte:head>
-    {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
-</svelte:head>
-
-<Section variant="white">
-    <div class="section-header">
-        <h2>Perguntas frequentes – Psicólogo próximo a Praia do Canto</h2>
-    </div>
-    <div class="faq-container">
-        <details class="faq-item">
-            <summary>Tem psicólogo em Praia do Canto?</summary>
-            <div class="faq-answer">
-                <p>
-                    Atendo moradores de Praia do Canto no meu consultório em
-                    Jardim da Penha, a apenas 5-10 minutos de carro. A
-                    localização é de fácil acesso para quem vem da região
-                    litorânea.
-                </p>
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary
-                >Quanto tempo leva para chegar ao consultório saindo de Praia do
-                Canto?</summary
-            >
-            <div class="faq-answer">
-                <p>
-                    O trajeto de Praia do Canto até o consultório em Jardim da
-                    Penha leva entre 5 e 10 minutos de carro, dependendo do
-                    trânsito. Também é possível chegar de ônibus.
-                </p>
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary
-                >O psicólogo atende convênio para moradores de Praia do Canto?</summary
-            >
-            <div class="faq-answer">
-                <p>
-                    Os atendimentos são particulares. Forneço recibo para
-                    reembolso caso seu plano de saúde ofereça essa opção.
-                </p>
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary>Qual o horário de atendimento do psicólogo?</summary>
-            <div class="faq-answer">
-                <p>
-                    O atendimento acontece de segunda a sexta-feira, das 13h30
-                    às 21h. Os horários são agendados previamente pelo WhatsApp.
-                </p>
-            </div>
-        </details>
-        <details class="faq-item">
-            <summary
-                >É possível fazer terapia online morando em Praia do Canto?</summary
-            >
-            <div class="faq-answer">
-                <p>
-                    Sim. Além do atendimento presencial, ofereço terapia online
-                    por videochamada. Você pode escolher a modalidade que melhor
-                    se adapta ao seu momento.
-                </p>
-            </div>
-        </details>
-    </div>
-</Section>
-
+<!-- CTA final -->
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Pronto para agendar sua consulta?</h2>
-        <p>Entre em contato e vamos conversar sobre como posso ajudar</p>
+        <h2>{loc.ctaH2}</h2>
+        <p>{loc.ctaSubtitle}</p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+            href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
             variant="secondary"
             size="lg"
         >
-            <Phone size={20} />
-            Agendar Consulta
+            <Phone size={20} /> Agendar Consulta
         </Button>
+        <p class="response-time">Respondo geralmente no mesmo dia útil</p>
     </div>
 </Section>
-
-<style>
-</style>

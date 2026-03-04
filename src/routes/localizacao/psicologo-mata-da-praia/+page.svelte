@@ -13,7 +13,7 @@
     import { locations } from "$lib/data/locations";
     import { buildLocationJsonLd } from "$lib/utils/locationSchema";
 
-    const loc = locations["vila-velha"];
+    const loc = locations["mata-da-praia"];
 
     const jsonLd = buildLocationJsonLd({
         canonical: loc.canonical,
@@ -35,7 +35,7 @@
     items={[
         { name: "Início", href: "/" },
         { name: "Localização", href: "/localizacao/" },
-        { name: "Psicólogo Vila Velha" },
+        { name: "Psicólogo Mata da Praia" },
     ]}
 />
 
@@ -47,15 +47,17 @@
                 <h1>{loc.h1}</h1>
                 <p class="hero-description">
                     Atendimento presencial pela Abordagem Centrada na Pessoa
-                    para moradores de Vila Velha. Consultório em Jardim da Penha
-                    (Vitória), com acesso fácil pela Terceira Ponte.
+                    para moradores de Mata da Praia e bairros vizinhos. Meu
+                    consultório fica em Jardim da Penha, a um trajeto curto, em
+                    um espaço de escuta e acolhimento.
                 </p>
                 <div class="hero-buttons">
                     <Button
                         href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
                         variant="primary"
-                        ><Phone size={20} /> Agendar consulta</Button
                     >
+                        <Phone size={20} /> Agendar consulta
+                    </Button>
                     <Button href="/contato" variant="outline"
                         >Ver contato</Button
                     >
@@ -84,8 +86,8 @@
         <p class="editorial-subtitle">{loc.editorialSubtitle}</p>
 
         <img
-            src="/images/localizacao/psicologo-vila-velha.webp"
-            alt="Ilustração abstrata para Vila Velha"
+            src="/images/localizacao/psicologo-mata-da-praia.webp"
+            alt="Ilustração abstrata para Mata da Praia"
             class="editorial-image"
             width="800"
             height="1066"
@@ -93,30 +95,31 @@
         />
 
         <p>
-            Vila Velha é uma cidade com personalidade própria: praias extensas,
-            bairros diversos e uma conexão cotidiana com Vitória pela Terceira
-            Ponte. Muitos moradores já fazem essa travessia para trabalho ou
-            estudo — e incluir terapia nesse percurso pode ser mais natural do
-            que parece.
+            A Mata da Praia é um dos bairros com melhor qualidade de vida de
+            Vitória. Ruas tranquilas, orla próxima, condomínios bem cuidados, e
+            uma vizinhança que preza pelo bem-estar. Quem escolheu morar aqui
+            geralmente valoriza equilíbrio — e cuidar da saúde mental é parte
+            natural desse cuidado.
         </p>
         <p>
-            Ter o consultório em outro município é, para muita gente, uma
-            vantagem: cria uma separação saudável entre a rotina do dia a dia e
-            o momento dedicado a si. Cruzar a ponte pode virar um pequeno ritual
-            de transição — e a sessão, um espaço genuinamente seu.
+            Terapia pode ser mais um recurso dentro de uma vida que já funciona
+            bem. Um espaço para pensar sobre relacionamentos, decisões de
+            carreira, ou simplesmente para ter uma conversa honesta consigo
+            mesmo. Não é preciso esperar por um motivo específico — às vezes o
+            melhor momento para começar é quando você tem espaço para isso.
         </p>
         <p>
-            O consultório em Jardim da Penha, Vitória, fica logo depois da
-            Terceira Ponte, com vagas nas ruas ao redor e fácil localização. E
-            para as semanas em que o deslocamento não funciona, a
-            <a href="/servicos/terapia-online/">terapia online</a> está disponível
-            com a mesma presença e cuidado.
+            O consultório fica em Jardim da Penha, bairro vizinho, numa região
+            que muitos moradores de Mata da Praia já percorrem. É um lugar com
+            um pouco de distância do círculo do dia a dia — o que pode ser
+            confortável quando se trata de terapia.
         </p>
         <p>
-            Saiba mais sobre como funciona a
+            Se você está com vontade de experimentar, conheça mais sobre a
             <a href="/servicos/psicoterapia-individual/"
                 >psicoterapia individual</a
-            >.
+            >
+            e o que esperar do processo.
         </p>
     </article>
 </Section>
@@ -134,8 +137,10 @@
     <div class="section-header"><h2>Onde fica o consultório</h2></div>
     <div class="location-content">
         <p>
-            O consultório fica em <strong>Jardim da Penha</strong>, Vitória,
-            logo após a Terceira Ponte, com acesso direto pela Reta da Penha.
+            Meu consultório está localizado no bairro <strong
+                >Jardim da Penha</strong
+            >, em Vitória – ES, em frente à UFES, próximo à Av. Fernando
+            Ferrari.
         </p>
         <div class="address-card">
             <h3>
@@ -182,8 +187,8 @@
             href="/servicos/psicoterapia-individual/"
             variant="default"
             ><p>
-                Acolhimento para momentos de crise, ansiedade e sofrimento
-                emocional.
+                Acolhimento para ansiedade, depressão e processos de
+                autoconhecimento.
             </p></Card
         >
         <Card
@@ -210,7 +215,7 @@
     <div class="about-grid">
         <img
             src="/images/sobre/bernardo-profissional.webp"
-            alt="Bernardo Carielo Psicólogo – atendimento para Vila Velha"
+            alt="Bernardo Carielo Psicólogo próximo a Mata da Praia, Vitória (ES)"
             width="250"
             height="333"
             loading="lazy"
@@ -227,7 +232,7 @@
 <!-- Bairros -->
 <Section variant="beige">
     <div class="section-header">
-        <h2>Bairros de Vila Velha com atendimento frequente</h2>
+        <h2>Mata da Praia e regiões próximas atendidas</h2>
     </div>
     <div class="bairros-grid">
         {#each loc.neighborhoodGroups as group}

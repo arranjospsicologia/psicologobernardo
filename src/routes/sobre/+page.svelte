@@ -1,5 +1,5 @@
 ﻿<script lang="ts">
-    import { Section, Button, Card, Breadcrumb, SEO } from "$lib";
+    import { Section, Button, Card, Breadcrumb, SEO, buildWhatsAppUrl, getFullStreetAddress, schemaIds, siteProfile, siteSameAs } from "$lib";
     import {
         Heart,
         Clock,
@@ -31,31 +31,24 @@
                 url: "https://psicologobernardo.com.br/sobre/",
                 name: "Sobre Bernardo Carielo – Psicólogo em Vitória ES | Abordagem Centrada na Pessoa",
                 isPartOf: {
-                    "@id": "https://psicologobernardo.com.br/#website",
+                    "@id": schemaIds.website,
                 },
                 mainEntity: {
-                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                    "@id": schemaIds.person,
                 },
             },
             {
                 "@type": "Person",
-                "@id": "https://psicologobernardo.com.br/sobre/#person",
-                name: "Bernardo Carielo Macedo de Oliveira Pinto",
-                alternateName: "Bernardo Carielo",
-                identifier: "CRP 16/5527",
+                "@id": schemaIds.person,
+                name: siteProfile.fullName,
+                alternateName: siteProfile.personName,
+                identifier: siteProfile.crp,
                 url: "https://psicologobernardo.com.br/sobre/",
                 image: "https://psicologobernardo.com.br/images/bernardo-avatar.jpg",
                 jobTitle: "Psicólogo Clínico",
-                worksFor: [
-                    {
-                        "@id": "https://psicologobernardo.com.br/#organization",
-                    },
-                    {
-                        "@type": "Organization",
-                        name: "Arranjos Psicologia",
-                        url: "https://arranjospsicologia.com.br",
-                    },
-                ],
+                worksFor: {
+                    "@id": schemaIds.organization,
+                },
                 alumniOf: [
                     {
                         "@type": "EducationalOrganization",
@@ -83,15 +76,11 @@
                         "Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
                     addressLocality: "Vitória",
                     addressRegion: "ES",
-                    postalCode: "29060-630",
+                    postalCode: siteProfile.address.postalCode,
                     addressCountry: "BR",
                 },
-                telephone: "+5527998331228",
-                sameAs: [
-                    "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
-                    "https://www.instagram.com/bcarielo",
-                    "https://www.facebook.com/bcarielo",
-                ],
+                telephone: siteProfile.phoneHref.replace("tel:", ""),
+                sameAs: [...siteSameAs],
             },
         ],
     };
@@ -205,7 +194,7 @@
 </Section>
 
 <!-- Minha Maneira de Trabalhar - Consolidated list format -->
-<Section variant="dark" id="abordagem">
+<Section variant="beige" id="abordagem">
     <div class="section-header">
         <h2>Minha maneira de trabalhar (ACP)</h2>
     </div>
@@ -236,17 +225,29 @@
         </p>
     </div>
 
-    <div class="cards-grid cards-grid--3">
-        <Card icon={User} title="Indivíduos">
-            <p>Atendimento individual para adultos</p>
-        </Card>
-        <Card icon={Heart} title="Casais">
-            <p>Terapia de casal e relacionamentos</p>
-        </Card>
-        <Card icon={Users} title="Famílias">
-            <p>Acompanhamento familiar</p>
-        </Card>
-    </div>
+    <ul class="para-quem-list">
+        <li>
+            <User size={22} />
+            <div>
+                <strong>Indivíduos</strong>
+                <span>Atendimento individual para adultos</span>
+            </div>
+        </li>
+        <li>
+            <Heart size={22} />
+            <div>
+                <strong>Casais</strong>
+                <span>Terapia de casal e relacionamentos</span>
+            </div>
+        </li>
+        <li>
+            <Users size={22} />
+            <div>
+                <strong>Famílias</strong>
+                <span>Acompanhamento familiar</span>
+            </div>
+        </li>
+    </ul>
 
     <div class="note-box">
         <p>
@@ -391,6 +392,7 @@
 <!-- Formação -->
 <Section variant="beige" id="formacao">
     <div class="section-header">
+        <span class="section-kicker">Formação</span>
         <h2>Formação</h2>
     </div>
 
@@ -446,6 +448,7 @@
 <!-- Como Funcionam os Atendimentos - Compact layout -->
 <Section variant="white" id="como-funcionam">
     <div class="section-header">
+        <span class="section-kicker">Atendimento</span>
         <h2>Como funcionam os atendimentos</h2>
         <p>
             Informações práticas sobre formatos de atendimento, público-alvo e
@@ -551,23 +554,23 @@
     </div>
 </Section>
 
-<!-- Redes e Projetos -->
+<!-- Projetos e Parcerias -->
 <Section variant="white" id="redes-projetos">
     <div class="section-header">
-        <h2>Redes e projetos</h2>
+        <h2>Projetos e parcerias</h2>
     </div>
 
     <div class="redes-grid">
         <a
-            href="https://arranjospsicologia.com.br"
+            href={siteProfile.externalLinks.arranjos}
             target="_blank"
             rel="noopener"
             class="rede-card"
         >
             <h3>Arranjos Psicologia</h3>
             <p>
-                Clínica, grupos (Entre Homens; Desafios da Profissão) e
-                supervisão.
+                Clínica, grupos (Roda de Conversa de Masculinidades; Desafios
+                da Profissão) e supervisão.
             </p>
             <span class="rede-link">
                 Visitar site
@@ -581,7 +584,7 @@
             class="rede-card"
         >
             <h3>EncontroACP</h3>
-            <p>Parceria e facilitação de grupos.</p>
+            <p>Parceria na facilitação do grupo: Roda de Conversa Terapêutica Entre Homens.</p>
             <span class="rede-link">
                 Visitar site
                 <ExternalLink size={16} />
@@ -599,7 +602,7 @@
             mais sobre como posso te ajudar, entre em contato.
         </p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta.")}
             variant="secondary"
             size="lg"
         >
@@ -734,15 +737,15 @@
         display: flex;
         gap: 1rem;
         align-items: flex-start;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(4px);
+        background: var(--white);
         padding: 1.25rem 1.5rem;
         border-radius: var(--radius-md);
-        border-left: 4px solid var(--primary-light);
+        border-left: 4px solid var(--primary-color);
+        box-shadow: var(--shadow-sm);
     }
 
     .approach-item :global(svg) {
-        color: var(--primary-light);
+        color: var(--primary-color);
         flex-shrink: 0;
         margin-top: 0.125rem;
     }
@@ -754,12 +757,12 @@
     }
 
     .approach-item strong {
-        color: var(--white);
+        color: var(--text-color);
         font-size: 1.0625rem;
     }
 
     .approach-item span {
-        color: rgba(255, 255, 255, 0.85);
+        color: var(--text-light);
         line-height: 1.6;
     }
 
@@ -848,6 +851,51 @@
     .commitment-list li span {
         color: var(--text-color);
         line-height: 1.7;
+    }
+
+    /* ================================
+       PARA QUEM - Vertical List
+       ================================ */
+    .para-quem-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 2rem auto;
+        max-width: 600px;
+    }
+
+    .para-quem-list li {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 1rem 1.25rem;
+        background: var(--secondary-color);
+        border-radius: var(--radius-sm);
+    }
+
+    .para-quem-list li :global(svg) {
+        color: var(--primary-color);
+        flex-shrink: 0;
+        margin-top: 0.125rem;
+    }
+
+    .para-quem-list li div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+    }
+
+    .para-quem-list li strong {
+        color: var(--text-color);
+        font-size: 0.9375rem;
+    }
+
+    .para-quem-list li span {
+        color: var(--text-light);
+        font-size: 0.9375rem;
+        line-height: 1.5;
     }
 
     /* Ambiente de trabalho image */

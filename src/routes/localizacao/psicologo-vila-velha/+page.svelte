@@ -12,6 +12,7 @@
     } from "lucide-svelte";
     import { locations } from "$lib/data/locations";
     import { buildLocationJsonLd } from "$lib/utils/locationSchema";
+    import { buildWhatsAppUrl, siteProfile } from "$lib/data/siteProfile";
 
     const loc = locations["vila-velha"];
 
@@ -20,6 +21,7 @@
         pageName: loc.h1,
         pageDescription: loc.description,
         faqItems: loc.faqItems,
+        areaServedCity: "Vila Velha",
     });
 </script>
 
@@ -52,7 +54,7 @@
                 </p>
                 <div class="hero-buttons">
                     <Button
-                        href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
+                        href={buildWhatsAppUrl(loc.whatsappText)}
                         variant="primary"
                         ><Phone size={20} /> Agendar consulta</Button
                     >
@@ -93,24 +95,32 @@
         />
 
         <p>
-            Vila Velha é uma cidade com personalidade própria: praias extensas,
-            bairros diversos e uma conexão cotidiana com Vitória pela Terceira
-            Ponte. Muitos moradores já fazem essa travessia para trabalho ou
-            estudo — e incluir terapia nesse percurso pode ser mais natural do
-            que parece.
+            Vila Velha é uma cidade com praias extensas e personalidade própria —
+            mas muitos de seus moradores já cruzam a Terceira Ponte com frequência
+            para trabalho ou estudo. Para quem faz esse percurso, o consultório em
+            <strong>Jardim da Penha, Vitória</strong>, fica logo após a travessia:
+            a distância varia de <strong>20 a 40 minutos</strong> dependendo do
+            bairro de partida e do horário escolhido.
         </p>
         <p>
-            Ter o consultório em outro município é, para muita gente, uma
-            vantagem: cria uma separação saudável entre a rotina do dia a dia e
-            o momento dedicado a si. Cruzar a ponte pode virar um pequeno ritual
-            de transição — e a sessão, um espaço genuinamente seu.
+            Ter um espaço de escuta em outro município pode ser, inclusive, uma
+            vantagem: cria uma separação saudável entre a rotina cotidiana e o
+            momento dedicado a si. Cruzar a ponte pode virar um pequeno ritual de
+            transição — e a sessão, um espaço genuinamente seu, fora do contexto
+            de casa e de trabalho.
         </p>
         <p>
-            O consultório em Jardim da Penha, Vitória, fica logo depois da
-            Terceira Ponte, com vagas nas ruas ao redor e fácil localização. E
-            para as semanas em que o deslocamento não funciona, a
+            Entre os temas mais frequentes entre moradores de Vila Velha que chegam
+            ao consultório: o peso de uma rotina que atravessa municípios, a pressão
+            de viver em uma das regiões com custo de vida mais alto do ES, a
+            dificuldade de separar vida pessoal de vida profissional — e pessoas que
+            simplesmente querem um espaço de escuta sem precisar esperar por uma crise.
+        </p>
+        <p>
+            Para as semanas em que o deslocamento não funcionar, a
             <a href="/servicos/terapia-online/">terapia online</a> está disponível
-            com a mesma presença e cuidado.
+            com a mesma presença e cuidado. Muitos moradores de Vila Velha combinam
+            as duas modalidades conforme a semana permite.
         </p>
         <p>
             Saiba mais sobre como funciona a
@@ -157,12 +167,12 @@
                 allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Localização do consultório - Arranjos Psicologia"
+                title="Bernardo Carielo"
             ></iframe>
         </div>
         <div style="text-align: center; margin-top: 1rem;">
             <a
-                href="https://maps.google.com/?q=Rua+Darcy+Grijó,+50,+Jardim+da+Penha,+Vitória,+ES"
+                href={siteProfile.externalLinks.googleMapsPlace}
                 target="_blank"
                 rel="noopener"
                 class="map-link"
@@ -286,7 +296,7 @@
     <div class="section-header"><h2>{loc.articlesSectionTitle}</h2></div>
     <div class="loc-articles-grid">
         {#each loc.blogArticles as article}
-            <a href={`/blog/${article.slug}/`} class="loc-article-card"
+            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card"
                 ><h3>{article.title}</h3>
                 <p>{article.reason}</p>
                 <span class="read-more">Ler artigo →</span></a
@@ -312,7 +322,7 @@
         <h2>{loc.ctaH2}</h2>
         <p>{loc.ctaSubtitle}</p>
         <Button
-            href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
+            href={buildWhatsAppUrl(loc.whatsappText)}
             variant="secondary"
             size="lg"><Phone size={20} /> Agendar Consulta</Button
         >

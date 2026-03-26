@@ -2,6 +2,7 @@
     import { Section, Button, Breadcrumb, SEO } from "$lib";
     import { Phone, Calendar, Clock, Search, ArrowRight } from "lucide-svelte";
     import { blogPosts, categories, filterPosts } from "$lib/data/blog";
+    import { buildWhatsAppUrl } from "$lib/data/siteProfile";
 
     let searchTerm = $state("");
     let selectedCategory = $state("todos");
@@ -38,7 +39,10 @@
 <section class="blog-hero">
     <div class="container">
         <h1>Artigos</h1>
-        <p>Reflexões, dicas e conteúdos sobre saúde mental e psicologia</p>
+        <p class="hero-subtitle">
+            Reflexões sobre terapia, saúde emocional e vida cotidiana — escritas por 
+            <strong>Bernardo Carielo</strong>, psicólogo em Vitória ES.
+        </p>
     </div>
 </section>
 
@@ -97,18 +101,48 @@
 
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Gostou do que leu?</h2>
-        <p>Talvez seja um bom momento pra conversar.</p>
+        <h2>Quando fizer sentido, o primeiro passo pode ser simples</h2>
+        <p>
+            Se algum texto aqui ressoou com o que você está vivendo, você pode escrever em poucas linhas e, a partir daí, alinhamos o formato mais adequado — seja o atendimento presencial em <strong>Vitória ES</strong> ou na modalidade <strong>online</strong>.
+        </p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostei%20do%20seu%20texto%20no%20blog%20e%20gostaria%20de%20conversar"
+            href={buildWhatsAppUrl("Olá Bernardo, li um artigo no seu site e gostaria de conversar sobre atendimento.")}
             variant="secondary"
             size="lg"
         >
             <Phone size={20} />
-            Falar no WhatsApp
+            Agendar conversa
         </Button>
     </div>
 </Section>
 
 <style>
+    .blog-hero {
+        padding: calc(var(--header-height) + 3rem) 0 4rem;
+        background: var(--beige-light);
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        max-width: 600px;
+        margin: 1rem auto 0;
+        font-size: 1.15rem;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .hero-subtitle strong {
+        color: var(--primary-dark);
+        font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+        .blog-hero {
+            padding-top: calc(var(--header-height) + 2rem);
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+        }
+    }
 </style>

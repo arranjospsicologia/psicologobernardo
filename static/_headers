@@ -10,11 +10,11 @@
   Cache-Control: public, max-age=31536000, immutable
 
 # CSS and JS assets (hashed by SvelteKit)
-/_app/immutable/*
+/app/immutable/*
   Cache-Control: public, max-age=31536000, immutable
 
 # Other static assets
-/_app/*
+/app/*
   Cache-Control: public, max-age=604800
 
 # HTML pages - shorter cache for freshness

@@ -1,15 +1,14 @@
 <script lang="ts">
-    import { Section, Button, SEO } from "$lib";
+    import { Section, Button, Breadcrumb, SEO, TrustPanel, buildWhatsAppUrl, getFullStreetAddress, siteProfile } from "$lib";
     import {
         Calendar,
-        Clock,
-        Monitor,
-        Shield,
-        Phone,
-        Mail,
         ChevronDown,
+        Clock,
+        Mail,
+        Monitor,
+        Phone,
+        Shield,
     } from "lucide-svelte";
-    import { onMount } from "svelte";
 
     // Dynamic import to prevent CSS from being bundled in shared chunks
     const LazyDoctoraliaWidgetPromise = import(
@@ -19,32 +18,22 @@
     let faqItems = [
         {
             question: "Como funciona o agendamento online?",
-            answer: "O agendamento é feito pela plataforma Doctoralia, integrada nesta página. Você escolhe uma data e horário disponível no calendário, preenche seus dados de contato e recebe confirmação por email. Todo o processo é simples, rápido e seguro.",
-            open: false,
-        },
-        {
-            question: "Quanto tempo antes posso agendar minha consulta?",
-            answer: "Você pode agendar sua consulta com até 30 dias de antecedência através da plataforma. Recomendo agendar com pelo menos 48 horas de antecedência para garantir o horário de sua preferência.",
+            answer: "O agendamento é feito pela plataforma Doctoralia, integrada nesta página. Você escolhe uma data e horário disponível no calendário, preenche seus dados de contato e recebe confirmação por e-mail.",
             open: false,
         },
         {
             question: "Posso cancelar ou remarcar minha consulta?",
-            answer: "Sim, você pode cancelar ou remarcar através da plataforma Doctoralia ou entrando em contato direto pelo WhatsApp (27) 99833-1228. Peço que avise com no mínimo 24 horas de antecedência.",
+            answer: `Sim. Você pode cancelar ou remarcar pela plataforma Doctoralia ou entrando em contato pelo WhatsApp ${siteProfile.phoneDisplay}. O ideal é avisar com pelo menos 24 horas de antecedência. Quando o cancelamento é realizado com menos de 24 horas de antecedência, a sessão é cobrada integralmente.`,
             open: false,
         },
         {
             question: "O atendimento é presencial ou online?",
-            answer: "Ofereço as duas modalidades. No momento do agendamento, você pode escolher entre atendimento presencial no consultório em Jardim da Penha, Vitória/ES, ou atendimento online via videochamada segura.",
-            open: false,
-        },
-        {
-            question: "Qual o valor da consulta?",
-            answer: "Os valores são informados no momento do agendamento através da plataforma Doctoralia. Você também pode entrar em contato pelo WhatsApp para consultar valores e formas de pagamento.",
+            answer: "Ofereço as duas modalidades. No momento do agendamento, você pode escolher entre atendimento presencial no consultório em Jardim da Penha, Vitória, ou atendimento online via videochamada.",
             open: false,
         },
         {
             question: "Quanto tempo dura cada sessão?",
-            answer: "Cada sessão tem duração de 50 minutos, seguindo o padrão estabelecido pela psicologia. A frequência geralmente é semanal, mas pode ser ajustada conforme suas necessidades.",
+            answer: `Cada sessão individual tem duração média de ${siteProfile.sessionMinutes.individual} minutos. A frequência costuma ser semanal, mas pode ser ajustada conforme a necessidade.`,
             open: false,
         },
     ];
@@ -60,17 +49,16 @@
         {
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            name: "Bernardo Carielo Psicólogo",
+            name: siteProfile.clinicalBrandName,
             image: "https://psicologobernardo.com.br/images/bernardo-avatar.jpg",
-            telephone: "+5527998331228",
+            telephone: siteProfile.phoneHref.replace("tel:", ""),
             priceRange: "$$",
             address: {
                 "@type": "PostalAddress",
-                streetAddress:
-                    "Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
-                addressLocality: "Vitória",
-                addressRegion: "ES",
-                postalCode: "29060-500",
+                streetAddress: getFullStreetAddress(),
+                addressLocality: siteProfile.address.city,
+                addressRegion: siteProfile.address.state,
+                postalCode: siteProfile.address.postalCode,
                 addressCountry: "BR",
             },
             openingHoursSpecification: [
@@ -83,124 +71,154 @@
                         "Thursday",
                         "Friday",
                     ],
-                    opens: "08:00",
-                    closes: "20:00",
+                    opens: siteProfile.hours.opens,
+                    closes: siteProfile.hours.closes,
                 },
             ],
             aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "65",
+                ratingValue: siteProfile.reviews.ratingValue,
+                reviewCount: siteProfile.reviews.reviewCount,
             },
         },
         {
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-                {
-                    "@type": "Question",
-                    name: "Como funciona o agendamento online?",
-                    acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "O agendamento é feito pela plataforma Doctoralia. Você escolhe uma data e horário disponível no calendário, preenche seus dados e recebe confirmação por email.",
-                    },
+            mainEntity: faqItems.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
                 },
-                {
-                    "@type": "Question",
-                    name: "O atendimento é presencial ou online?",
-                    acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "Ofereço as duas modalidades. Você pode escolher entre atendimento presencial no consultório em Vitória/ES ou atendimento online via videochamada segura.",
-                    },
-                },
-            ],
+            })),
         },
     ];
 </script>
 
 <SEO
-    title="Agendar Consulta com Psicólogo em Vitória/ES | Bernardo Carielo (CRP 16/5527)"
-    description="Agende sua consulta com psicólogo em Vitória/ES. Atendimento presencial e online com Bernardo Carielo (CRP 16/5527). Horários flexíveis e agendamento fácil pela plataforma Doctoralia."
+    title="Agendar consulta | Bernardo Carielo Psicólogo em Vitória ES"
+    description="Agende sua consulta com psicólogo em Vitória ES. Atendimento presencial e online com Bernardo Carielo, com agenda online e WhatsApp para tirar dúvidas antes da primeira sessão."
     canonical="https://psicologobernardo.com.br/agendar/"
     jsonLd={agendarSchema}
 />
 
-<!-- Hero Section -->
+<!-- Breadcrumb -->
+<Breadcrumb
+    items={[
+        { name: "Início", href: "/" },
+        { name: "Agendar" },
+    ]}
+/>
+
+<!-- Hero -->
 <section class="agendar-hero">
-    <div class="container">
-        <h1>Agende sua Consulta com Psicólogo em Vitória/ES</h1>
+    <div class="container agendar-hero__content">
+        <span class="agendar-hero__eyebrow">Agenda e primeiro passo</span>
+        <h1>Escolha o horário com mais clareza</h1>
         <p class="hero-subtitle">
-            Atendimento presencial e online com horários flexíveis. Escolha o
-            melhor dia e horário para sua primeira sessão.
+            Atendimento presencial em Jardim da Penha, Vitória, e modalidade online.
+            Se você já sabe que quer avançar, a agenda online encurta o caminho.
+            Se ainda estiver em dúvida, o WhatsApp continua sendo o melhor ponto de partida.
         </p>
+        <div class="agendar-hero__actions">
+            <Button
+                href="#agendar"
+                variant="primary"
+                size="lg"
+            >
+                <Calendar size={20} />
+                Ver horários
+            </Button>
+            <Button
+                href={buildWhatsAppUrl("Olá, gostaria de tirar uma dúvida antes de agendar.")}
+                variant="outline"
+                size="lg"
+            >
+                <Phone size={20} />
+                Tirar dúvidas
+            </Button>
+        </div>
     </div>
 </section>
 
+<!-- TrustPanel -->
+<Section variant="white">
+    <TrustPanel
+        title="Antes de abrir a agenda"
+        intro="A agenda online faz sentido quando você já quer olhar disponibilidade. Quando a dúvida ainda é sobre formato, localização ou se este é o melhor caminho, o WhatsApp ajuda a decidir sem pressa."
+        primaryHref="#agendar"
+        primaryLabel="Abrir agenda nesta página"
+        primaryVariant="primary"
+        secondaryHref={buildWhatsAppUrl("Olá, gostaria de tirar uma dúvida antes de agendar.")}
+        secondaryLabel="Falar no WhatsApp"
+        secondaryVariant="outline"
+    />
+</Section>
+
+<!-- Info Cards -->
+<Section variant="beige">
+    <div class="info-grid">
+        <article class="info-card">
+            <Calendar size={42} />
+            <h3>Escolha o horário</h3>
+            <p>
+                A agenda online mostra janelas disponíveis em tempo real para facilitar a primeira marcação.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <Clock size={42} />
+            <h3>Horários consistentes</h3>
+            <p>
+                Atendimento de {siteProfile.hours.displayDays.toLowerCase()}, {siteProfile.hours.displayTime}, com sessões individuais de {siteProfile.sessionMinutes.individual} minutos.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <Monitor size={42} />
+            <h3>Presencial ou online</h3>
+            <p>
+                Escolha entre atendimento presencial no consultório em Jardim da Penha ou online, conforme a sua rotina.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <Shield size={42} />
+            <h3>Sigilo e organização</h3>
+            <p>
+                Dados protegidos e processo simples, com possibilidade de tirar dúvidas antes de concluir o agendamento.
+            </p>
+        </article>
+    </div>
+</Section>
+
 <!-- Widget Calendário -->
 <Section variant="white" id="agendar">
-    <div class="widget-container">
-        {#await LazyDoctoraliaWidgetPromise then module}
-            <module.default />
-        {:catch}
-            <a
-                href="https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria"
-                rel="nofollow"
-            >
-                Agendar consulta via Doctoralia
-            </a>
-        {/await}
-    </div>
-</Section>
-
-<!-- Informações sobre Agendamento -->
-<Section variant="beige" id="info">
-    <div class="info-grid">
-        <div class="info-card">
-            <Calendar size={48} />
-            <h3>Agendamento Fácil</h3>
+    <div class="widget-shell">
+        <div class="widget-shell__content">
+            <h2>Agenda online</h2>
             <p>
-                Sistema de agendamento online integrado com calendário em tempo
-                real. Veja os horários disponíveis e escolha o que melhor se
-                encaixa na sua rotina.
+                Se preferir, use o calendário abaixo para visualizar horários disponíveis e seguir com o agendamento.
             </p>
         </div>
-
-        <div class="info-card">
-            <Clock size={48} />
-            <h3>Horários Flexíveis</h3>
-            <p>
-                Atendimento de segunda a sexta-feira, das 8h às 20h, com
-                possibilidade de horários alternativos mediante consulta.
-                Sessões com duração de 50 minutos.
-            </p>
-        </div>
-
-        <div class="info-card">
-            <Monitor size={48} />
-            <h3>Presencial ou Online</h3>
-            <p>
-                Escolha entre atendimento presencial no consultório em Jardim da
-                Penha, Vitória/ES, ou atendimento online via videochamada com
-                total sigilo e qualidade.
-            </p>
-        </div>
-
-        <div class="info-card">
-            <Shield size={48} />
-            <h3>Segurança e Sigilo</h3>
-            <p>
-                Seus dados são protegidos conforme a LGPD e o Código de Ética
-                Profissional do Psicólogo. Total confidencialidade garantida em
-                todas as sessões.
-            </p>
+        <div class="widget-container">
+            {#await LazyDoctoraliaWidgetPromise then module}
+                <module.default />
+            {:catch}
+                <a href={siteProfile.externalLinks.doctoralia} rel="nofollow">
+                    Agendar consulta via Doctoralia
+                </a>
+            {/await}
         </div>
     </div>
 </Section>
 
-<!-- FAQ Section -->
-<Section variant="white" id="faq">
+<!-- FAQ -->
+<Section variant="beige" id="faq">
     <div class="section-header">
-        <h2>Perguntas Frequentes sobre Agendamento</h2>
+        <h2>Perguntas frequentes sobre agendamento</h2>
+        <p>Respostas curtas para reduzir atrito antes da primeira sessão.</p>
     </div>
 
     <div class="faq-container">
@@ -228,55 +246,49 @@
 </Section>
 
 <!-- Contato Alternativo -->
-<Section variant="beige" id="contato-alternativo">
-    <div class="section-header">
-        <h2>Prefere agendar por WhatsApp?</h2>
-        <p>Entre em contato direto comigo e tire suas dúvidas</p>
-    </div>
-
-    <div class="contact-buttons">
-        <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
-            variant="primary"
-            size="lg"
-        >
-            <Phone size={20} />
-            Falar no WhatsApp
-        </Button>
-        <Button
-            href="mailto:contato@arranjospsicologia.com.br"
-            variant="outline"
-            size="lg"
-        >
-            <Mail size={20} />
-            Enviar Email
-        </Button>
-    </div>
-
-    <div class="schedule-info">
-        <h3>Horários de Atendimento</h3>
-        <p><strong>Segunda a Sexta:</strong> 8h às 20h</p>
+<Section variant="white">
+    <div class="contact-support">
+        <h2>Prefere alinhar antes de escolher um horário?</h2>
         <p>
-            <strong>Localização:</strong> Rua Darcy Grijó, 50 - Sala 409, Jardim
-            da Penha, Vitória/ES
+            Isso é comum. Você pode me chamar no WhatsApp para entender se o formato presencial
+            ou online faz mais sentido e como o processo começa.
         </p>
-        <p class="crp">
-            <strong>CRP 16/5527</strong> | Atendimento regulamentado pelo CFP
-        </p>
+        <div class="contact-support__actions">
+            <Button
+                href={buildWhatsAppUrl("Olá, gostaria de tirar uma dúvida antes de agendar.")}
+                variant="primary"
+                size="lg"
+            >
+                <Phone size={20} />
+                Falar no WhatsApp
+            </Button>
+            <Button
+                href={`mailto:${siteProfile.officialEmail}`}
+                variant="outline"
+                size="lg"
+            >
+                <Mail size={20} />
+                Enviar Email
+            </Button>
+        </div>
+        <div class="support-summary">
+            <p><strong>Endereço:</strong> {getFullStreetAddress()} — {siteProfile.address.neighborhood}, {siteProfile.address.city}/{siteProfile.address.state}</p>
+            <p><strong>Horário:</strong> {siteProfile.hours.displayDays}, {siteProfile.hours.displayTime}</p>
+            <p><strong>{siteProfile.crp}</strong> | Atendimento regulamentado pelo CFP</p>
+        </div>
     </div>
 </Section>
 
 <!-- CTA Final -->
 <Section variant="gradient" id="cta">
     <div class="cta-content">
-        <h2>Dê o primeiro passo para cuidar da sua saúde mental</h2>
+        <h2>Quando fizer sentido, escolha o primeiro horário possível</h2>
         <p>
-            Agende sua primeira consulta agora mesmo e comece sua jornada de
-            autoconhecimento e bem-estar
+            A agenda online ajuda a transformar uma vontade vaga em um compromisso concreto com o cuidado.
         </p>
         <Button href="#agendar" variant="secondary" size="lg">
             <Calendar size={20} />
-            Escolher Horário
+            Escolher horário
         </Button>
     </div>
 </Section>
@@ -289,65 +301,86 @@
             var(--primary-color) 0%,
             var(--primary-dark) 100%
         );
-        padding: 5rem 0;
-        text-align: center;
+        padding: calc(var(--header-height) + 2.5rem) 0 4rem;
         color: var(--white);
+    }
+
+    .agendar-hero__content {
+        text-align: center;
+        max-width: 760px;
+    }
+
+    .agendar-hero__eyebrow {
+        display: inline-flex;
+        padding: 0.4rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        color: var(--white);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
     }
 
     .agendar-hero h1 {
         color: var(--white);
-        margin-bottom: 1rem;
     }
 
     .hero-subtitle {
         font-size: var(--text-lg);
-        opacity: 0.95;
+        color: rgba(255, 255, 255, 0.9);
         max-width: 700px;
-        margin: 0 auto;
+        margin: 1rem auto 0;
     }
 
-    /* Widget Container */
-    .widget-container {
-        max-width: 900px;
-        margin: 0 auto;
-        min-height: 500px;
+    .agendar-hero__actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
     }
 
-    /* Section Header */
-    .section-header {
-        text-align: center;
-        margin-bottom: 3rem;
+    /* Fix outline button contrast in dark hero */
+    .agendar-hero__actions :global(.btn-outline) {
+        border-color: rgba(255, 255, 255, 0.6) !important;
+        color: var(--white) !important;
     }
 
-    .section-header p {
-        color: var(--text-light);
-        font-size: var(--text-lg);
+    .agendar-hero__actions :global(.btn-outline *) {
+        color: var(--white) !important;
+    }
+
+    .agendar-hero__actions :global(.btn-outline:hover) {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border-color: var(--white) !important;
     }
 
     /* Info Grid */
     .info-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
         max-width: 1100px;
         margin: 0 auto;
     }
 
     .info-card {
         background: var(--white);
-        padding: 2rem;
-        border-radius: var(--radius-md);
+        padding: 1.6rem;
+        border-radius: var(--radius-lg);
         box-shadow: var(--shadow-sm);
-        text-align: center;
+        text-align: left;
     }
 
     .info-card :global(svg) {
         color: var(--primary-color);
-        margin-bottom: 1rem;
+        margin-bottom: 0.9rem;
     }
 
     .info-card h3 {
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
     }
 
     .info-card p {
@@ -359,17 +392,29 @@
     .faq-container {
         max-width: 800px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .faq-item {
-        border-bottom: 1px solid var(--border-light);
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(8, 186, 156, 0.08);
+        overflow: hidden;
+        transition: box-shadow 0.2s ease;
+    }
+
+    .faq-item[open] {
+        box-shadow: var(--shadow-md);
     }
 
     .faq-question {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.25rem 0;
+        padding: 1.25rem 1.5rem;
         cursor: pointer;
         font-weight: 600;
         color: var(--text-color);
@@ -378,10 +423,12 @@
 
     .faq-question span {
         flex: 1;
+        padding-right: 1.5rem;
     }
 
     .faq-question :global(.chevron) {
         transition: transform 0.3s ease;
+        color: var(--primary-color);
     }
 
     .faq-question :global(.chevron.open) {
@@ -389,41 +436,70 @@
     }
 
     .faq-answer {
-        padding: 0 0 1.25rem;
+        padding: 0 1.5rem 1.5rem;
     }
 
     .faq-answer p {
         color: var(--text-light);
-        line-height: 1.7;
+        line-height: 1.75;
+        margin: 0;
     }
 
-    /* Contact Buttons */
-    .contact-buttons {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 3rem;
-    }
-
-    /* Schedule Info */
-    .schedule-info {
-        text-align: center;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: var(--radius-md);
-        max-width: 700px;
+    /* Widget Shell */
+    .widget-shell {
+        max-width: 980px;
         margin: 0 auto;
     }
 
-    .schedule-info h3 {
-        margin-bottom: 1rem;
+    .widget-shell__content {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 1.5rem;
     }
 
-    .schedule-info .crp {
-        margin-top: 1rem;
-        font-size: var(--text-sm);
+    .widget-shell__content p {
         color: var(--text-light);
+        margin-top: 0.8rem;
+    }
+
+    .widget-container {
+        max-width: 900px;
+        margin: 0 auto;
+        min-height: 500px;
+    }
+
+    /* Contact Support */
+    .contact-support {
+        max-width: 820px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact-support p {
+        color: var(--text-light);
+        line-height: 1.8;
+    }
+
+    .contact-support__actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1.5rem 0;
+    }
+
+    .support-summary {
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        background: var(--secondary-light);
+    }
+
+    .support-summary p {
+        margin-bottom: 0.5rem;
+    }
+
+    .support-summary p:last-child {
+        margin-bottom: 0;
     }
 
     /* CTA */
@@ -444,15 +520,21 @@
         margin-bottom: 2rem;
     }
 
-    /* Mobile */
-    @media (max-width: 768px) {
+    /* Responsive */
+    @media (max-width: 900px) {
         .info-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 640px) {
+        .agendar-hero__actions,
+        .contact-support__actions {
+            flex-direction: column;
         }
 
-        .contact-buttons {
-            flex-direction: column;
-            align-items: center;
+        .info-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>

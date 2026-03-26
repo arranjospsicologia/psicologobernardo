@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb } from "$lib";
+    import { Section, Button, Breadcrumb, buildWhatsAppUrl } from "$lib";
     import {
         Phone,
         Shield,
@@ -30,7 +30,7 @@
 <section class="legal-hero">
     <div class="container">
         <h1>Política de Privacidade</h1>
-        <p>Última atualização: 25 de outubro de 2025</p>
+        <p>Última atualização: 25 de março de 2026</p>
     </div>
 </section>
 
@@ -122,7 +122,7 @@
                     da Penha, Vitória - ES
                 </p>
                 <p>
-                    <strong>E-mail:</strong> contato@arranjospsicologia.com.br
+                    <strong>E-mail:</strong> contato@psicologobernardo.com.br
                 </p>
                 <p><strong>Telefone:</strong> (27) 99833-1228</p>
             </div>
@@ -144,16 +144,17 @@
 
             <h3>3.2. Dados coletados automaticamente</h3>
             <p>
-                Durante a navegação no site, coletamos automaticamente através
-                do Google Analytics:
+                Este site <strong>não utiliza ferramentas de analytics de terceiros</strong>
+                (como Google Analytics) e não coleta dados de navegação automaticamente.
+                Não há rastreamento de comportamento, perfil publicitário ou cookies de analytics.
             </p>
-            <ul>
-                <li>Endereço IP</li>
-                <li>Tipo de navegador e dispositivo</li>
-                <li>Páginas visitadas e tempo de permanência</li>
-                <li>Origem do acesso (referência)</li>
-                <li>Cookies de navegação</li>
-            </ul>
+            <p>
+                Algumas páginas incorporam recursos externos sob demanda: mapas do Google Maps
+                (páginas de localização), widget de agendamento do Doctoralia e avaliações do
+                Trustindex. Esses serviços podem receber dados técnicos de conexão (como
+                endereço IP) conforme suas próprias políticas de privacidade, fora do controle
+                deste site.
+            </p>
 
             <h3>3.3. Dados clínicos (pacientes em atendimento)</h3>
             <div class="legal-highlight">
@@ -178,16 +179,7 @@
                 <li>Melhorar a experiência de navegação no site</li>
             </ul>
 
-            <h3>4.2. Dados de navegação (Analytics)</h3>
-            <ul>
-                <li>Análise estatística de tráfego do site</li>
-                <li>
-                    Compreensão de como os usuários interagem com o conteúdo
-                </li>
-                <li>Melhorias na estrutura e usabilidade do site</li>
-            </ul>
-
-            <h3>4.3. Dados clínicos</h3>
+            <h3>4.2. Dados clínicos</h3>
             <ul>
                 <li>Prestação de serviços de psicoterapia</li>
                 <li>
@@ -206,15 +198,11 @@
             <ul>
                 <li>
                     <strong>Consentimento:</strong> ao utilizar os formulários de
-                    contato ou navegar no site
+                    contato ou comunicar-se por e-mail/WhatsApp
                 </li>
                 <li>
                     <strong>Execução de contrato:</strong> para prestação de serviços
                     psicológicos
-                </li>
-                <li>
-                    <strong>Legítimo interesse:</strong> para análise de tráfego
-                    e melhorias no site
                 </li>
                 <li>
                     <strong>Cumprimento de obrigação legal:</strong> quando exigido
@@ -233,10 +221,6 @@
             <ul>
                 <li>Quando exigido por lei ou ordem judicial</li>
                 <li>Para proteção de direitos, propriedade ou segurança</li>
-                <li>
-                    Com provedores de serviços essenciais (Google Analytics),
-                    que atuam como processadores de dados sob nossas instruções
-                </li>
             </ul>
 
             <div class="legal-highlight">
@@ -252,16 +236,17 @@
 
         <section id="cookies" class="legal-section">
             <h2>7. Cookies e Tecnologias Similares</h2>
-            <p>O site utiliza cookies para:</p>
-            <ul>
-                <li>Análise de tráfego (Google Analytics)</li>
-                <li>Melhorar a experiência de navegação</li>
-                <li>Lembrar preferências do usuário</li>
-            </ul>
             <p>
-                Você pode desabilitar os cookies nas configurações do seu
-                navegador, mas isso pode afetar a funcionalidade de algumas
-                áreas do site.
+                Este site <strong>não utiliza cookies de rastreamento, analytics ou publicidade</strong>.
+                Não há perfil de comportamento, remarketing ou qualquer cookie de terceiros
+                instalado para fins de rastreamento durante a navegação.
+            </p>
+            <p>
+                Recursos incorporados de terceiros (Google Maps, Doctoralia, Trustindex) podem
+                utilizar cookies próprios quando carregados, conforme as políticas de privacidade
+                de cada plataforma. O próprio navegador pode armazenar dados técnicos essenciais
+                para o funcionamento do site, sem coleta ou envio de dados de navegação por
+                parte deste site.
             </p>
         </section>
 
@@ -319,7 +304,7 @@
             </ul>
             <p>
                 Para exercer seus direitos, entre em contato através do e-mail: <strong
-                    >contato@arranjospsicologia.com.br</strong
+                    >contato@psicologobernardo.com.br</strong
                 >
             </p>
 
@@ -342,10 +327,6 @@
                     legítima ou até solicitação de exclusão
                 </li>
                 <li>
-                    <strong>Dados de navegação:</strong> armazenados pelo Google
-                    Analytics conforme política da plataforma
-                </li>
-                <li>
                     <strong>Dados clínicos:</strong> mínimo de 5 anos após o término
                     do atendimento (Resolução CFP nº 01/2009)
                 </li>
@@ -361,7 +342,7 @@
             <div class="legal-contact-box">
                 <h3><Mail size={20} /> Entre em Contato</h3>
                 <p>
-                    <strong>E-mail:</strong> contato@arranjospsicologia.com.br
+                    <strong>E-mail:</strong> contato@psicologobernardo.com.br
                 </p>
                 <p><strong>WhatsApp:</strong> (27) 99833-1228</p>
                 <p>
@@ -391,7 +372,7 @@
         <h2>Alguma dúvida sobre nossa política de privacidade?</h2>
         <p>Entre em contato e teremos prazer em esclarecer</p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20tenho%20dúvidas%20sobre%20a%20política%20de%20privacidade"
+            href={buildWhatsAppUrl("Olá, tenho dúvidas sobre a política de privacidade")}
             variant="secondary"
             size="lg"
         >

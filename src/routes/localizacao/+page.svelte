@@ -11,8 +11,7 @@
     } from "lucide-svelte";
     import { locations } from "$lib/data/locations";
     import { buildLocationJsonLd } from "$lib/utils/locationSchema";
-
-    const WHATSAPP_BASE = "https://wa.me/5527998331228";
+    import { buildWhatsAppUrl } from "$lib/data/siteProfile";
 
     const hubFaqItems = [
         {
@@ -75,7 +74,7 @@
                 </p>
                 <div class="hero-buttons">
                     <Button
-                        href={`${WHATSAPP_BASE}?text=${encodeURIComponent("Olá, gostaria de agendar uma consulta.")}`}
+                        href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta.")}
                         variant="primary"
                     >
                         <Phone size={20} /> Agendar consulta
@@ -214,7 +213,7 @@
         <h2>Quando fizer sentido, me chame no WhatsApp</h2>
         <p>Sem pressa. O primeiro passo é o que você puder dar.</p>
         <Button
-            href={`${WHATSAPP_BASE}?text=${encodeURIComponent("Olá, gostaria de agendar uma consulta.")}`}
+            href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta.")}
             variant="secondary"
             size="lg"
         >

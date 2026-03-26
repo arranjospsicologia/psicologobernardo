@@ -10,6 +10,9 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<meta name="theme-color" content="#0b7d77" />
+	<link rel="manifest" href="/site.webmanifest" />
+
 	<!-- Favicon -->
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />

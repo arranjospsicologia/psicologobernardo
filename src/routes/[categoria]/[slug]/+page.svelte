@@ -1,6 +1,6 @@
 <script lang="ts">
     import "$lib/styles/blog.css";
-    import { Section, Button, Breadcrumb, SEO } from "$lib";
+    import { Section, Button, Breadcrumb, SEO, buildWhatsAppUrl, schemaIds } from "$lib";
     import {
         Phone,
         Calendar,
@@ -102,7 +102,7 @@
                 url: `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/`,
                 name: `${post.title} - Psicólogo Bernardo`,
                 isPartOf: {
-                    "@id": "https://psicologobernardo.com.br/#website",
+                    "@id": schemaIds.website,
                 },
                 mainEntity: {
                     "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#article`,
@@ -125,10 +125,10 @@
                     ? convertToISO(post.lastReviewed)
                     : convertToISO(post.date),
                 author: {
-                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                    "@id": schemaIds.person,
                 },
                 publisher: {
-                    "@id": "https://psicologobernardo.com.br/#organization",
+                    "@id": schemaIds.organization,
                 },
                 inLanguage: "pt-BR",
                 isAccessibleForFree: true,
@@ -173,6 +173,9 @@
     });
 
     function convertToISO(dateStr: string): string {
+        // If already in ISO format (YYYY-MM-DD), return as-is
+        if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr;
+
         // Simple parser for "DD MMM YYYY" to "YYYY-MM-DD"
         // Portuguese months map
         const months: Record<string, string> = {
@@ -190,13 +193,19 @@
             Dez: "12",
         };
         const parts = dateStr.split(" ");
-        if (parts.length !== 3) return new Date().toISOString().split("T")[0]; // Fallback
+        if (parts.length !== 3) return dateStr; // Return original instead of today's date
 
         const day = parts[0].padStart(2, "0");
         const month = months[parts[1]] || "01";
         const year = parts[2];
 
         return `${year}-${month}-${day}`;
+    }
+
+    function formatDateBR(isoDate: string): string {
+        const [year, month, day] = isoDate.split("-");
+        const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+        return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
     }
 </script>
 
@@ -233,9 +242,7 @@
                 <span><Clock size={16} /> {post.readTime}</span>
                 {#if post.lastReviewed}
                     <span title="Revisão Clínica"
-                        ><BookOpen size={16} /> Revisado: {convertToISO(
-                            post.lastReviewed,
-                        )}</span
+                        ><BookOpen size={16} /> Revisado: {formatDateBR(post.lastReviewed)}</span
                     >
                 {/if}
             </div>
@@ -367,7 +374,7 @@
             </p>
             <div class="author-actions">
                 <Button
-                    href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar"
+                    href={buildWhatsAppUrl("Olá, vi seu artigo e gostaria de conversar")}
                     variant="primary"
                     size="sm"
                 >
@@ -432,7 +439,7 @@
         <h2>Gostou do que leu?</h2>
         <p>Talvez seja um bom momento pra conversar.</p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20artigo%20e%20gostaria%20de%20conversar"
+            href={buildWhatsAppUrl("Olá, vi seu artigo e gostaria de conversar")}
             variant="secondary"
             size="lg"
         >

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb, SEO } from "$lib";
+    import { Section, Button, Breadcrumb, SEO, buildWhatsAppUrl } from "$lib";
     import { Phone, Calendar, Clock, ArrowRight } from "lucide-svelte";
     import { getPostsByCategory, getCategoryBySlug } from "$lib/data/blog";
     import type { PageData } from "./$types";
@@ -80,7 +80,7 @@
         <h2>Gostou do que leu?</h2>
         <p>Talvez seja um bom momento pra conversar.</p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20conversar"
+            href={buildWhatsAppUrl("Olá, vi seu site e gostaria de conversar")}
             variant="secondary"
             size="lg"
         >

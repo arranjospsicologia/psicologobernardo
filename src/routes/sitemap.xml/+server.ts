@@ -4,8 +4,7 @@ import { blogPosts, categoryPages } from '$lib/data/blog';
 
 const site = 'https://psicologobernardo.com.br';
 
-// Data do último deploy/build - atualizar quando necessário
-const LAST_BUILD_DATE = '2026-02-04';
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 interface SitemapUrl {
     loc: string;
@@ -26,7 +25,7 @@ function parseBrazilianDate(dateStr: string): string {
     };
 
     const parts = dateStr.split(' ');
-    if (parts.length !== 3) return LAST_BUILD_DATE;
+    if (parts.length !== 3) return BUILD_DATE;
 
     const day = parts[0].padStart(2, '0');
     const month = months[parts[1]] || '01';
@@ -117,7 +116,7 @@ function getLastmod(route: string): string {
     }
 
     // Para outras páginas, usar data do build
-    return LAST_BUILD_DATE;
+    return BUILD_DATE;
 }
 
 export async function GET() {
@@ -135,7 +134,11 @@ export async function GET() {
         })
         .filter((route) => {
             // Exclude dynamic routes (contain [ or ]) as we'll add them manually
-            return !route.includes('[') && !route.includes(']');
+            if (route.includes('[') || route.includes(']')) return false;
+            // Exclude noindex pages from sitemap
+            const noIndexPages = ['/politica-privacidade', '/termos-uso'];
+            if (noIndexPages.includes(route)) return false;
+            return true;
         });
 
     // Generate dynamic routes

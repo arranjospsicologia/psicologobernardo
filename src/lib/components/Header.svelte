@@ -2,6 +2,11 @@
     import { Menu, X, ChevronDown } from "lucide-svelte";
     import { Button } from "$lib";
     import { onMount } from "svelte";
+    import {
+        experienceNavItems,
+        serviceNavItems,
+    } from "$lib/data/siteNavigation";
+    import { buildWhatsAppUrl } from "$lib/data/siteProfile";
 
     let isMenuOpen = $state(false);
     let servicesOpen = $state(false);
@@ -18,7 +23,6 @@
         if (!isMenuOpen) {
             servicesOpen = false;
             experiencesOpen = false;
-            // Unlock body scroll if needed, though not currently implemented in CSS
         }
     }
 
@@ -39,8 +43,18 @@
         }
     }
 
+    function toggleDesktopDropdown(section: "services" | "experiences") {
+        if (section === "services") {
+            servicesOpen = !servicesOpen;
+            if (servicesOpen) experiencesOpen = false;
+            return;
+        }
+
+        experiencesOpen = !experiencesOpen;
+        if (experiencesOpen) servicesOpen = false;
+    }
+
     onMount(() => {
-        // Robust fallback: manually attach listener to bypass potential hydration delegation issues
         if (menuBtn) {
             menuBtn.addEventListener("click", toggleMenu);
         }
@@ -51,29 +65,6 @@
             }
         };
     });
-
-    const servicos = [
-        {
-            name: "Psicoterapia Individual",
-            href: "/servicos/psicoterapia-individual/",
-        },
-        { name: "Terapia Online", href: "/servicos/terapia-online/" },
-        { name: "Terapia de Casal", href: "/servicos/terapia-de-casal/" },
-        { name: "Grupos e Rodas", href: "/servicos/grupos-e-rodas/" },
-        { name: "Laudos Psicológicos", href: "/servicos/laudos-psicologicos/" },
-        {
-            name: "Supervisão Profissional",
-            href: "/servicos/supervisao-profissional/",
-        },
-    ];
-
-    const experiencias = [
-        { name: "Ansiedade", href: "/experiencia/ansiedade/" },
-        { name: "Depressão", href: "/experiencia/depressao/" },
-        { name: "Burnout", href: "/experiencia/burnout/" },
-        { name: "Relacionamentos", href: "/experiencia/relacionamento/" },
-        { name: "Autoestima", href: "/experiencia/autoestima/" },
-    ];
 </script>
 
 <svelte:window onclick={handleClickOutside} />
@@ -98,20 +89,25 @@
 
             <!-- Serviços Dropdown -->
             <li class="dropdown">
-                <button
-                    class="nav-link dropdown-trigger"
-                    onclick={() => (
-                        (servicesOpen = !servicesOpen),
-                        servicesOpen && (experiencesOpen = false)
-                    )}
-                >
-                    Serviços <ChevronDown
-                        size={16}
-                        class={servicesOpen ? "chevron open" : "chevron"}
-                    />
-                </button>
+                <div class="nav-group">
+                    <a href="/servicos/" class="nav-link nav-link--primary" onclick={closeDropdowns}
+                        >Serviços</a
+                    >
+                    <button
+                        class="nav-dropdown-button"
+                        type="button"
+                        aria-expanded={servicesOpen}
+                        aria-label="Abrir submenu de serviços"
+                        onclick={() => toggleDesktopDropdown("services")}
+                    >
+                        <ChevronDown
+                            size={16}
+                            class={servicesOpen ? "chevron open" : "chevron"}
+                        />
+                    </button>
+                </div>
                 <ul class="dropdown-menu" class:open={servicesOpen}>
-                    {#each servicos as servico}
+                    {#each serviceNavItems as servico}
                         <li>
                             <a
                                 href={servico.href}
@@ -123,22 +119,27 @@
                 </ul>
             </li>
 
-            <!-- Experiências Dropdown -->
+            <!-- Como posso ajudar Dropdown -->
             <li class="dropdown">
-                <button
-                    class="nav-link dropdown-trigger"
-                    onclick={() => (
-                        (experiencesOpen = !experiencesOpen),
-                        experiencesOpen && (servicesOpen = false)
-                    )}
-                >
-                    Experiência <ChevronDown
-                        size={16}
-                        class={experiencesOpen ? "chevron open" : "chevron"}
-                    />
-                </button>
+                <div class="nav-group">
+                    <a href="/experiencia/" class="nav-link nav-link--primary" onclick={closeDropdowns}
+                        >Como posso ajudar</a
+                    >
+                    <button
+                        class="nav-dropdown-button"
+                        type="button"
+                        aria-expanded={experiencesOpen}
+                        aria-label="Abrir submenu de como posso ajudar"
+                        onclick={() => toggleDesktopDropdown("experiences")}
+                    >
+                        <ChevronDown
+                            size={16}
+                            class={experiencesOpen ? "chevron open" : "chevron"}
+                        />
+                    </button>
+                </div>
                 <ul class="dropdown-menu" class:open={experiencesOpen}>
-                    {#each experiencias as experiencia}
+                    {#each experienceNavItems as experiencia}
                         <li>
                             <a
                                 href={experiencia.href}
@@ -150,15 +151,16 @@
                 </ul>
             </li>
 
+            <li><a href="/localizacao/" class="nav-link">Localização</a></li>
             <li><a href="/artigos/" class="nav-link">Artigos</a></li>
             <li><a href="/contato/" class="nav-link">Contato</a></li>
         </ul>
 
         <div class="nav-cta">
             <Button
-                href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+                href={buildWhatsAppUrl("Olá, vi seu site e gostaria de saber mais sobre a terapia.")}
                 variant="primary"
-                size="sm">Conversar</Button
+                size="sm">Agendar conversa</Button
             >
         </div>
 
@@ -208,22 +210,28 @@
                 </li>
 
                 <li class="mobile-dropdown">
-                    <button
-                        class="mobile-link mobile-dropdown-trigger"
-                        onclick={() => {
-                            servicesOpen = !servicesOpen;
-                            if (servicesOpen) experiencesOpen = false;
-                        }}
-                        aria-expanded={servicesOpen}
-                    >
-                        <span>Serviços</span>
-                        <ChevronDown
-                            size={20}
-                            class={servicesOpen ? "chevron open" : "chevron"}
-                        />
-                    </button>
+                    <div class="mobile-group">
+                        <a href="/servicos/" class="mobile-link" onclick={closeMenu}>
+                            <span>Serviços</span>
+                        </a>
+                        <button
+                            class="mobile-expand-button"
+                            type="button"
+                            aria-expanded={servicesOpen}
+                            aria-label="Abrir submenu de serviços"
+                            onclick={() => {
+                                servicesOpen = !servicesOpen;
+                                if (servicesOpen) experiencesOpen = false;
+                            }}
+                        >
+                            <ChevronDown
+                                size={20}
+                                class={servicesOpen ? "chevron open" : "chevron"}
+                            />
+                        </button>
+                    </div>
                     <ul class="mobile-submenu" class:open={servicesOpen}>
-                        {#each servicos as servico}
+                        {#each serviceNavItems as servico}
                             <li>
                                 <a
                                     href={servico.href}
@@ -238,22 +246,28 @@
                 </li>
 
                 <li class="mobile-dropdown">
-                    <button
-                        class="mobile-link mobile-dropdown-trigger"
-                        onclick={() => {
-                            experiencesOpen = !experiencesOpen;
-                            if (experiencesOpen) servicesOpen = false;
-                        }}
-                        aria-expanded={experiencesOpen}
-                    >
-                        <span>Experiência</span>
-                        <ChevronDown
-                            size={20}
-                            class={experiencesOpen ? "chevron open" : "chevron"}
-                        />
-                    </button>
+                    <div class="mobile-group">
+                        <a href="/experiencia/" class="mobile-link" onclick={closeMenu}>
+                            <span>Como posso ajudar</span>
+                        </a>
+                        <button
+                            class="mobile-expand-button"
+                            type="button"
+                            aria-expanded={experiencesOpen}
+                            aria-label="Abrir submenu de como posso ajudar"
+                            onclick={() => {
+                                experiencesOpen = !experiencesOpen;
+                                if (experiencesOpen) servicesOpen = false;
+                            }}
+                        >
+                            <ChevronDown
+                                size={20}
+                                class={experiencesOpen ? "chevron open" : "chevron"}
+                            />
+                        </button>
+                    </div>
                     <ul class="mobile-submenu" class:open={experiencesOpen}>
-                        {#each experiencias as experiencia}
+                        {#each experienceNavItems as experiencia}
                             <li>
                                 <a
                                     href={experiencia.href}
@@ -267,6 +281,11 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="/localizacao/" class="mobile-link" onclick={closeMenu}>
+                        <span>Localização</span>
+                    </a>
+                </li>
                 <li>
                     <a href="/artigos/" class="mobile-link" onclick={closeMenu}>
                         <span>Artigos</span>
@@ -282,9 +301,9 @@
 
         <div class="mobile-cta">
             <Button
-                href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+                href={buildWhatsAppUrl("Olá, vi seu site e gostaria de saber mais sobre a terapia.")}
                 variant="primary"
-                onclick={closeMenu}>Conversar</Button
+                onclick={closeMenu}>Agendar conversa</Button
             >
         </div>
     </div>

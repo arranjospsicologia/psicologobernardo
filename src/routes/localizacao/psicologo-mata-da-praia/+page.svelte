@@ -12,6 +12,7 @@
     } from "lucide-svelte";
     import { locations } from "$lib/data/locations";
     import { buildLocationJsonLd } from "$lib/utils/locationSchema";
+    import { buildWhatsAppUrl, siteProfile } from "$lib/data/siteProfile";
 
     const loc = locations["mata-da-praia"];
 
@@ -53,7 +54,7 @@
                 </p>
                 <div class="hero-buttons">
                     <Button
-                        href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
+                        href={buildWhatsAppUrl(loc.whatsappText)}
                         variant="primary"
                     >
                         <Phone size={20} /> Agendar consulta
@@ -162,12 +163,12 @@
                 allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Localização do consultório - Arranjos Psicologia"
+                title="Bernardo Carielo"
             ></iframe>
         </div>
         <div style="text-align: center; margin-top: 1rem;">
             <a
-                href="https://maps.google.com/?q=Rua+Darcy+Grijó,+50,+Jardim+da+Penha,+Vitória,+ES"
+                href={siteProfile.externalLinks.googleMapsPlace}
                 target="_blank"
                 rel="noopener"
                 class="map-link"
@@ -291,7 +292,7 @@
     <div class="section-header"><h2>{loc.articlesSectionTitle}</h2></div>
     <div class="loc-articles-grid">
         {#each loc.blogArticles as article}
-            <a href={`/blog/${article.slug}/`} class="loc-article-card"
+            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card"
                 ><h3>{article.title}</h3>
                 <p>{article.reason}</p>
                 <span class="read-more">Ler artigo →</span></a
@@ -317,7 +318,7 @@
         <h2>{loc.ctaH2}</h2>
         <p>{loc.ctaSubtitle}</p>
         <Button
-            href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
+            href={buildWhatsAppUrl(loc.whatsappText)}
             variant="secondary"
             size="lg"><Phone size={20} /> Agendar Consulta</Button
         >

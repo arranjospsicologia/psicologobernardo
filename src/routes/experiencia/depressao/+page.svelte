@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb, SEO } from "$lib";
+    import { Section, Button, Breadcrumb, SEO, buildWhatsAppUrl, schemaIds } from "$lib";
     import { Phone, ChevronDown } from "lucide-svelte";
 
     let faqItems = $state([
@@ -41,7 +41,7 @@
                 url: "https://psicologobernardo.com.br/experiencia/depressao/",
                 name: "Psicólogo para Depressão em Vitória ES – Acolhimento e Escuta",
                 isPartOf: {
-                    "@id": "https://psicologobernardo.com.br/#website",
+                    "@id": schemaIds.website,
                 },
                 mainEntity: {
                     "@id": "https://psicologobernardo.com.br/experiencia/depressao/#article",
@@ -56,10 +56,10 @@
                 description:
                     "Psicólogo para depressão em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
                 author: {
-                    "@id": "https://psicologobernardo.com.br/sobre/#person",
+                    "@id": schemaIds.person,
                 },
                 publisher: {
-                    "@id": "https://psicologobernardo.com.br/#organization",
+                    "@id": schemaIds.organization,
                 },
                 image: {
                     "@type": "ImageObject",
@@ -70,7 +70,7 @@
                 inLanguage: "pt-BR",
                 mentions: {
                     "@type": "Service",
-                    "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#service",
+                    "@id": schemaIds.serviceIndividual,
                     name: "Psicoterapia Individual",
                 },
             },
@@ -101,7 +101,7 @@
 <Breadcrumb
     items={[
         { name: "Início", href: "/" },
-        { name: "Experiência", href: "/#experiencia" },
+        { name: "Experiência", href: "/experiencia/" },
         { name: "Depressão" },
     ]}
 />
@@ -114,6 +114,19 @@
             espaço seguro para atravessar momentos de tristeza profunda e falta
             de sentido.
         </p>
+        <div class="hero-buttons">
+            <Button
+                href={buildWhatsAppUrl("Olá, gostaria de agendar uma primeira conversa sobre depressão.")}
+                variant="primary"
+                size="lg"
+            >
+                <Phone size={20} />
+                Agendar primeira conversa
+            </Button>
+            <Button href="/servicos/psicoterapia-individual/" variant="outline" size="lg">
+                Ver psicoterapia individual
+            </Button>
+        </div>
         <div class="hero-image">
             <picture>
                 <source
@@ -143,6 +156,9 @@
 
 <Section variant="white">
     <article class="experience-content">
+        <div class="answer-box">
+            <p>Se você busca um psicólogo para depressão em Vitória, o atendimento acontece em consultório em Jardim da Penha, presencial, e também online. A Abordagem Centrada na Pessoa oferece um espaço de escuta genuína — sem julgamentos, sem pressa. A tristeza persistente merece atenção, e o primeiro passo é uma conversa inicial, sem compromisso de continuidade.</p>
+        </div>
         <h2>Você está passando por um momento difícil?</h2>
         <p>
             Sentir-se triste às vezes é normal. Faz parte da vida. Mas quando a
@@ -199,7 +215,7 @@
             pressa. O processo terapêutico acontece no seu ritmo.
         </p>
         <p>A terapia pode ajudar você a:</p>
-        <ul>
+        <ul class="benefit-list">
             <li>
                 <strong>Compreender</strong> o que está por trás dos sentimentos
                 de tristeza e desânimo
@@ -231,7 +247,7 @@
             enfrentar isso sozinho.
         </p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta")}
             variant="primary"
         >
             <Phone size={20} />
@@ -290,21 +306,135 @@
 
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Pronto para dar o primeiro passo?</h2>
+        <h2>Quando fizer sentido, o primeiro passo pode ser simples</h2>
         <p>
-            Você não precisa enfrentar isso sozinho. Entre em contato para
-            conversarmos.
+            Você pode escrever em poucas linhas o que está vivendo. A partir daí,
+            alinhamos o formato mais adequado, presencial em Vitória ou online.
         </p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            href={buildWhatsAppUrl("Olá, gostaria de agendar uma primeira conversa sobre depressão.")}
             variant="secondary"
             size="lg"
         >
             <Phone size={20} />
-            Agendar Consulta
+            Falar no WhatsApp
         </Button>
     </div>
 </Section>
 
 <style>
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1.5rem 0 2rem;
+    }
+
+    .answer-box {
+        margin-bottom: 2rem;
+        padding: 1.4rem 1.6rem;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.92);
+        border-left: 4px solid var(--primary-color);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .answer-box p {
+        margin: 0;
+        line-height: 1.75;
+        color: var(--text-color);
+    }
+
+    .experience-content ul {
+        list-style: none;
+        margin: 1rem 0 1.5rem 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .experience-content li {
+        position: relative;
+        padding: 0.75rem 1rem 0.75rem 1.25rem;
+        background: var(--secondary-light);
+        border-radius: var(--radius-sm);
+        line-height: 1.65;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .benefit-list {
+        padding: 1.5rem 1.75rem;
+        background: rgba(8, 186, 156, 0.07);
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(8, 186, 156, 0.2);
+    }
+
+    .benefit-list li {
+        background: transparent;
+        border-left: none;
+        padding: 0.5rem 0 0.5rem 2.25rem;
+        border-radius: 0;
+    }
+
+    .benefit-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0.5rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .faq-item {
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+    }
+
+    .faq-item[open] {
+        box-shadow: var(--shadow-md);
+    }
+
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 1.5rem;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .faq-question span {
+        flex: 1;
+        padding-right: 1.5rem;
+    }
+
+    .faq-question :global(.chevron) {
+        transition: transform 0.3s ease;
+        color: var(--primary-color);
+    }
+
+    .faq-question :global(.chevron.open) {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .faq-answer p {
+        color: var(--text-light);
+        line-height: 1.75;
+        margin: 0;
+    }
+
+    @media (max-width: 560px) {
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 </style>

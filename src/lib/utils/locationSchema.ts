@@ -12,6 +12,7 @@ type BuildLocationJsonLdParams = {
     pageDescription: string;
     faqItems?: LocationFaqItem[];
     mode?: "location" | "hub";   // default: "location"
+    areaServedCity?: string;     // quando presente, adiciona nó ProfessionalService com areaServed
 };
 
 export function buildLocationJsonLd({
@@ -20,6 +21,7 @@ export function buildLocationJsonLd({
     pageDescription,
     faqItems = [],
     mode = "location",
+    areaServedCity,
 }: BuildLocationJsonLdParams) {
     // Remove trailing slash para formar os @id corretamente
     const base = canonical.endsWith("/")
@@ -58,6 +60,28 @@ export function buildLocationJsonLd({
                     text: item.answer, // texto limpo no JSON-LD (links ficam só no visual)
                 },
             })),
+        });
+    }
+
+    if (areaServedCity) {
+        graph.push({
+            "@type": "ProfessionalService",
+            "@id": `${base}/#service`,
+            name: `Atendimento Psicológico – ${areaServedCity}`,
+            provider: { "@id": `${SITE_URL}/#organization` },
+            areaServed: {
+                "@type": "City",
+                name: areaServedCity,
+                containedInPlace: {
+                    "@type": "State",
+                    name: "Espírito Santo",
+                    identifier: "ES",
+                },
+            },
+            serviceArea: {
+                "@type": "City",
+                name: areaServedCity,
+            },
         });
     }
 

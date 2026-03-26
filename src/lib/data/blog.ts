@@ -24,7 +24,56 @@ export const categoryPages = [
     { slug: "vitoria-es", label: "Vitória ES", description: "Artigos sobre psicologia e saúde mental em Vitória, Espírito Santo" },
 ];
 
+/**
+ * Criterios editoriais:
+ * - schemaType "Article": usar para posts com referencias bibliograficas, dados tecnicos ou conteudo clinico fundamentado.
+ * - schemaType "BlogPosting" (default): posts opinativos, reflexivos ou de posicionamento pessoal.
+ * - lastReviewed: preencher com data ISO (YYYY-MM-DD) sempre que o conteudo for revisado clinicamente.
+ * - references: obrigatoria para posts com referencias bibliograficas, recomendada para posts que mencionem dados, pesquisas ou afirmacoes clinicas.
+ */
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "masculinidade-saudavel-redpill-falacias-digitais",
+        title: "Masculinidade e Redpill: Por que Discursos Fáceis Seduzem (e o que a Psicologia Real Diz)",
+        description: "Entenda por que discursos 'Redpill' seduzem homens em sofrimento e como a psicologia, através do memorando de Moynihan e diretrizes da APA, desmascara falácias como a 'negligência benigna'.",
+        category: "Terapia para Homens",
+        categorySlug: "homens",
+        tags: ["Homens", "Masculinidades", "Redpill", "Saúde Mental", "Vitória ES"],
+        date: "25 Mar 2026",
+        readTime: "9 min de leitura",
+        image: "/images/blog/masculinidade-saudavel-redpill-falacias-digitais.webp",
+        altText: "Ilustração digital moderna com uma silhueta masculina em turquesa, integrada a uma grade digital com efeitos de glitch em coral, representando os perigos dos discursos de co-optação online e a busca por uma identidade autêntica",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
+    },
+    {
+        slug: "intelectualizar-nao-sentir",
+        title: "Intelectualizar tudo também é um jeito de não sentir",
+        description: "Você analisa, explica, entende tudo sobre o que sente, mas nada se move. A intelectualização é um mecanismo de defesa que substitui o sentir pelo pensar. Entenda como isso funciona e o que muda quando você se permite sentir.",
+        category: "Saúde Mental",
+        categorySlug: "saude-mental",
+        tags: ["Saúde Mental", "Intelectualização", "Mecanismos de Defesa", "Autoconhecimento", "Vitória ES"],
+        date: "04 Mar 2026",
+        readTime: "9 min de leitura",
+        image: "/images/blog/intelectualizar-nao-sentir.webp",
+        altText: "Ilustração abstrata de uma silhueta humana com padrões geométricos cristalinos na cabeça e formas orgânicas quentes emergindo do peito, representando a separação entre pensamento analítico e experiência emocional",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
+    },
+    {
+        slug: "comunicacao-honesta-conversas-dificeis",
+        title: "Por que a comunicação honesta é tão difícil (e tão necessária) nas conversas que mais importam",
+        description: "Dizer o que sentimos com honestidade e ouvir o outro com genuinidade é raro, mas transforma relações. Entenda por que evitamos conversas difíceis e como uma comunicação mais expressiva fortalece vínculos.",
+        category: "Saúde Mental",
+        categorySlug: "saude-mental",
+        tags: ["Saúde Mental", "Comunicação", "Relacionamentos", "Conversas Difíceis", "Vitória ES"],
+        date: "04 Mar 2026",
+        readTime: "9 min de leitura",
+        image: "/images/blog/comunicacao-honesta-conversas-dificeis.webp",
+        altText: "Ilustração abstrata de duas silhuetas orgânicas em turquesa frente a frente com linhas fluidas conectando-as, representando o fluxo de uma comunicação genuína e honesta",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
+    },
     {
         slug: "autonomia-vai-te-fazer-bem",
         title: "Por que a autonomia vai te fazer bem?",
@@ -35,7 +84,9 @@ export const blogPosts: BlogPost[] = [
         date: "26 Fev 2026",
         readTime: "8 min de leitura",
         image: "/images/blog/autonomia-vai-te-fazer-bem.webp",
-        altText: "Ilustração abstrata de uma silhueta humana em turquesa avançando de formas geométricas rígidas para um espaço aberto e luminoso, representando autonomia e autoconfiança"
+        altText: "Ilustração abstrata de uma silhueta humana em turquesa avançando de formas geométricas rígidas para um espaço aberto e luminoso, representando autonomia e autoconfiança",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "relacao-principal-ferramenta-terapia",
@@ -48,7 +99,8 @@ export const blogPosts: BlogPost[] = [
         readTime: "8 min de leitura",
         image: "/images/blog/relacao-principal-ferramenta-terapia.webp",
         altText: "Ilustração abstrata de duas formas orgânicas em turquesa e bege se aproximando com um espaço iluminado entre elas, representando conexão genuína e vínculo terapêutico",
-        schemaType: "Article"
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "esperar-piorar-sai-mais-caro",
@@ -60,7 +112,9 @@ export const blogPosts: BlogPost[] = [
         date: "18 Fev 2026",
         readTime: "7 min de leitura",
         image: "/images/blog/esperar-piorar-sai-mais-caro.webp",
-        altText: "Ilustração abstrata de uma planta florescendo em tons turquesa e bege, com raízes saudáveis visíveis, representando crescimento gradual e cuidado preventivo com a saúde mental"
+        altText: "Ilustração abstrata de uma planta florescendo em tons turquesa e bege, com raízes saudáveis visíveis, representando crescimento gradual e cuidado preventivo com a saúde mental",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "contradicoes-ideologicas-capitalismo-ia",
@@ -72,7 +126,9 @@ export const blogPosts: BlogPost[] = [
         date: "09 Fev 2026",
         readTime: "8 min de leitura",
         image: "/images/blog/contradicoes-ideologicas-capitalismo-ia.webp",
-        altText: "Ilustração abstrata de uma silhueta humana dividida entre padrões geométricos digitais frios e formas orgânicas quentes, representando o conflito entre valores pessoais e um mundo tecnológico"
+        altText: "Ilustração abstrata de uma silhueta humana dividida entre padrões geométricos digitais frios e formas orgânicas quentes, representando o conflito entre valores pessoais e um mundo tecnológico",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "preco-psiquico-nunca-depender-ninguem",
@@ -84,7 +140,9 @@ export const blogPosts: BlogPost[] = [
         date: "08 Fev 2026",
         readTime: "8 min de leitura",
         image: "/images/blog/preco-psiquico-nunca-depender-ninguem.webp",
-        altText: "Ilustração abstrata de uma figura masculina carregando um peso invisível, com fragmentos de conexão ao redor que não se completam"
+        altText: "Ilustração abstrata de uma figura masculina carregando um peso invisível, com fragmentos de conexão ao redor que não se completam",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "vida-dando-certo-piorando-por-dentro",
@@ -96,7 +154,9 @@ export const blogPosts: BlogPost[] = [
         date: "08 Fev 2026",
         readTime: "8 min de leitura",
         image: "/images/blog/vida-dando-certo-piorando-por-dentro.webp",
-        altText: "Ilustração abstrata de uma figura humana cercada por conquistas externas (símbolos de sucesso) mas com o interior vazio e fragmentado"
+        altText: "Ilustração abstrata de uma figura humana cercada por conquistas externas (símbolos de sucesso) mas com o interior vazio e fragmentado",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "terapia-sem-respostas-prontas",
@@ -109,7 +169,8 @@ export const blogPosts: BlogPost[] = [
         readTime: "7 min de leitura",
         image: "/images/blog/terapia-sem-respostas-prontas.webp",
         altText: "Ilustração abstrata de formas orgânicas em turquesa e bege sugerindo diálogo e conexão terapêutica",
-        schemaType: "Article"
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "aceitacao-incondicional",
@@ -121,7 +182,9 @@ export const blogPosts: BlogPost[] = [
         date: "02 Fev 2026",
         readTime: "8 min de leitura",
         image: "/images/blog/aceitacao-incondicional.webp",
-        altText: "Ilustração abstrata minimalista de uma silhueta humana se abraçando, em tons turquesa e bege, representando autoaceitação"
+        altText: "Ilustração abstrata minimalista de uma silhueta humana se abraçando, em tons turquesa e bege, representando autoaceitação",
+        schemaType: "Article",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "seis-condicoes-carl-rogers",
@@ -133,7 +196,8 @@ export const blogPosts: BlogPost[] = [
         date: "28 Jan 2026",
         readTime: "9 min de leitura",
         image: "/images/blog/seis-condicoes-carl-rogers.webp",
-        altText: "Ilustração abstrata de formas orgânicas em turquesa e bege, representando conexão e harmonia na relação terapêutica"
+        altText: "Ilustração abstrata de formas orgânicas em turquesa e bege, representando conexão e harmonia na relação terapêutica",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "vinculos-liquidos-intimidade-digital",
@@ -145,7 +209,8 @@ export const blogPosts: BlogPost[] = [
         date: "28 Jan 2026",
         readTime: "8 min de leitura",
         image: "/images/blog/vinculos-liquidos-intimidade-digital.webp",
-        altText: "Ilustração abstrata de duas silhuetas humanas se conectando - uma formada por pixels fragmentados representando conexões digitais, outra com formas orgânicas representando intimidade real"
+        altText: "Ilustração abstrata de duas silhuetas humanas se conectando - uma formada por pixels fragmentados representando conexões digitais, outra com formas orgânicas representando intimidade real",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "o-silencio-na-terapia",
@@ -157,7 +222,8 @@ export const blogPosts: BlogPost[] = [
         date: "28 Jan 2026",
         readTime: "5 min de leitura",
         image: "/images/blog/o-silencio-na-terapia.webp",
-        altText: "Ilustração de duas cadeiras vazias em um ambiente tranquilo de terapia"
+        altText: "Ilustração de duas cadeiras vazias em um ambiente tranquilo de terapia",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "carl-rogers-revolucao-humanista",
@@ -169,7 +235,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Abordagem Centrada na Pessoa", "Carl Rogers", "Humanismo", "Vitória ES", "acp"],
         date: "28 Jan 2026",
         readTime: "7 min de leitura",
-        image: "/images/blog/carl-rogers-revolucao-humanista.webp"
+        image: "/images/blog/carl-rogers-revolucao-humanista.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "rede-apoio-saude-mental-vitoria-es",
@@ -181,7 +248,8 @@ export const blogPosts: BlogPost[] = [
         date: "27 Jan 2026",
         readTime: "9 min de leitura",
         image: "/images/blog/rede-apoio-saude-mental-vitoria-es.webp",
-        altText: "Ilustração de pessoas se abraçando dentro de um círculo de pessoas de mãos dadas"
+        altText: "Ilustração de pessoas se abraçando dentro de um círculo de pessoas de mãos dadas",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "vicio-trabalho-workaholic-burnout",
@@ -192,7 +260,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Homens", "Burnout", "Workaholism", "Vitória ES", "homens"],
         date: "27 Jan 2026",
         readTime: "8 min de leitura",
-        image: "/images/blog/vicio-trabalho-workaholic-burnout.webp"
+        image: "/images/blog/vicio-trabalho-workaholic-burnout.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "como-funciona-terapia-primeira-sessao",
@@ -203,7 +272,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Psicoterapia", "Primeira Sessão", "ACP", "Vitória ES", "psicoterapia"],
         date: "27 Jan 2026",
         readTime: "7 min de leitura",
-        image: "/images/blog/como-funciona-terapia-primeira-sessao.webp"
+        image: "/images/blog/como-funciona-terapia-primeira-sessao.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "ciumes-excessivo-cuidado-controle",
@@ -214,7 +284,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Relacionamentos", "Ciúmes", "Abuso Emocional", "Vitória ES", "saude-mental"],
         date: "27 Jan 2026",
         readTime: "8 min de leitura",
-        image: "/images/blog/ciumes-excessivo-cuidado-controle.webp"
+        image: "/images/blog/ciumes-excessivo-cuidado-controle.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "custo-vida-jardim-da-penha-ansiedade",
@@ -225,7 +296,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Jardim da Penha", "Ansiedade Financeira", "Custo de Vida", "Vitória ES", "saude-mental"],
         date: "27 Jan 2026",
         readTime: "6 min de leitura",
-        image: "/images/blog/custo-vida-jardim-da-penha-ansiedade.webp"
+        image: "/images/blog/custo-vida-jardim-da-penha-ansiedade.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "terapia-para-estudantes-ufes-vitoria",
@@ -236,7 +308,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["UFES", "Estudantes", "Ansiedade Acadêmica", "Jardim da Penha", "Carreira", "saude-mental"],
         date: "19 Dez 2025",
         readTime: "6 min de leitura",
-        image: "/images/blog/terapia-estudantes-ufes.png"
+        image: "/images/blog/terapia-estudantes-ufes.png",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "onde-cuidar-saude-mental-jardim-da-penha",
@@ -247,7 +320,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Jardim da Penha", "Saúde Mental", "Vitória ES", "Natureza", "Autocuidado", "saude-mental"],
         date: "19 Dez 2025",
         readTime: "6 min de leitura",
-        image: "/images/blog/saude-mental-jardim-da-penha.png"
+        image: "/images/blog/saude-mental-jardim-da-penha.png",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "como-escolher-psicologo-em-vitoria-es",
@@ -258,7 +332,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["Psicólogo Vitória", "Jardim da Penha", "CRP", "Abordagem", "Relação Terapêutica", "saude-mental"],
         date: "19 Dez 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/como-escolher-psicologo-vitoria.png"
+        image: "/images/blog/como-escolher-psicologo-vitoria.png",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "autenticidade-qualidade-vida",
@@ -269,7 +344,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["autoconhecimento", "acp"],
         date: "17 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/autenticidade-qualidade-vida.webp"
+        image: "/images/blog/autenticidade-qualidade-vida.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "terapia-centrada-pessoa-explicacao",
@@ -280,7 +356,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["acp", "terapia-humanista"],
         date: "16 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/terapia-centrada-pessoa-explicacao.webp"
+        image: "/images/blog/terapia-centrada-pessoa-explicacao.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "estresse-desgaste-emocional",
@@ -291,7 +368,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "ansiedade"],
         date: "13 Nov 2025",
         readTime: "8 min de leitura",
-        image: "/images/blog/estresse-desgaste-emocional.webp"
+        image: "/images/blog/estresse-desgaste-emocional.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "terapia-online-funciona",
@@ -302,7 +380,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["acp", "terapia-online"],
         date: "10 Nov 2025",
         readTime: "8 min de leitura",
-        image: "/images/blog/terapia-online-funciona.webp"
+        image: "/images/blog/terapia-online-funciona.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "obrigacao-estar-bem",
@@ -313,7 +392,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "autoconhecimento"],
         date: "07 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/obrigacao-estar-bem.webp"
+        image: "/images/blog/obrigacao-estar-bem.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "vida-acelerou-demais",
@@ -324,7 +404,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "ansiedade", "acp"],
         date: "05 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/vida-acelerou-demais.webp"
+        image: "/images/blog/vida-acelerou-demais.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "nao-somos-maquinas",
@@ -335,7 +416,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "autoconhecimento", "acp"],
         date: "02 Nov 2025",
         readTime: "7 min de leitura",
-        image: "/images/blog/nao-somos-maquinas.webp"
+        image: "/images/blog/nao-somos-maquinas.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "trabalho-interno-vs-performance",
@@ -346,7 +428,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["psicoterapia", "acp", "saude-mental"],
         date: "31 Out 2025",
         readTime: "12 min de leitura",
-        image: "/images/blog/trabalho-interno-vs-performance.webp"
+        image: "/images/blog/trabalho-interno-vs-performance.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "quando-automatico-vira-modo-de-vida",
@@ -357,7 +440,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["autoconhecimento", "saude-mental", "acp"],
         date: "30 Out 2025",
         readTime: "10 min de leitura",
-        image: "/images/blog/quando-automatico-vira-modo-de-vida.webp"
+        image: "/images/blog/quando-automatico-vira-modo-de-vida.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "ansiedade-sinais-desacelerar",
@@ -368,7 +452,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["ansiedade", "saude-mental"],
         date: "5 Mar 2025",
         readTime: "11 min de leitura",
-        image: "/images/blog/ansiedade-sinais-desacelerar.webp"
+        image: "/images/blog/ansiedade-sinais-desacelerar.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "corpo-e-emocoes",
@@ -379,7 +464,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "acp"],
         date: "20 Fev 2025",
         readTime: "11 min de leitura",
-        image: "/images/blog/corpo-e-emocoes.webp"
+        image: "/images/blog/corpo-e-emocoes.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "crises-existenciais",
@@ -390,7 +476,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["saude-mental", "autoconhecimento"],
         date: "5 Fev 2025",
         readTime: "12 min de leitura",
-        image: "/images/blog/crises-existenciais.webp"
+        image: "/images/blog/crises-existenciais.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "abordagem-centrada-pessoa",
@@ -401,7 +488,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["acp"],
         date: "22 Jan 2025",
         readTime: "14 min de leitura",
-        image: "/images/blog/abordagem-centrada-pessoa.webp"
+        image: "/images/blog/abordagem-centrada-pessoa.webp",
+        lastReviewed: "2026-03-25"
     },
     {
         slug: "terapia-para-homens",
@@ -412,7 +500,8 @@ export const blogPosts: BlogPost[] = [
         tags: ["masculinidades"],
         date: "22 Jan 2025",
         readTime: "10 min de leitura",
-        image: "/images/blog/terapia-para-homens.webp"
+        image: "/images/blog/terapia-para-homens.webp",
+        lastReviewed: "2026-03-25"
     }
 ];
 

@@ -1,4 +1,4 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import {
 		Button,
 		Section,
@@ -6,57 +6,74 @@
 		ReviewCarousel,
 		ImageCarousel,
 		SEO,
+		buildWhatsAppUrl,
+		schemaIds,
+		siteProfile,
+		siteSameAs,
+		primaryServiceItems,
+		experienceNavItems,
 	} from "$lib";
 	import {
 		Heart,
 		Video,
 		Users,
-		Calendar,
 		Phone,
-		Mail,
 		MapPin,
-		Award,
-		Clock,
-		MessageCircle,
 		ChevronDown,
-		GraduationCap,
-		ExternalLink,
-		Star,
+		Zap,
+		HeartPulse,
+		UsersRound,
+		SmilePlus,
 	} from "lucide-svelte";
+	import type { PageData } from "./$types";
 
-	let faqItems = $state([
+	let { data }: { data: PageData } = $props();
+
+	// Service icon mapping
+	const serviceIcons = {
+		"Psicoterapia Individual": Heart,
+		"Terapia de Casal": Users,
+		"Terapia Online": Video,
+	} as const;
+
+	// Experience icon/color mapping
+	const experienceIcons = {
+		"/experiencia/ansiedade/": Zap,
+		"/experiencia/depressao/": HeartPulse,
+		"/experiencia/burnout/": Zap,
+		"/experiencia/relacionamento/": UsersRound,
+		"/experiencia/autoestima/": SmilePlus,
+	} as const;
+
+	const experienceAccents: Record<string, string> = {
+		"/experiencia/ansiedade/": "#F7B42A",
+		"/experiencia/depressao/": "#F83A50",
+		"/experiencia/burnout/": "#FFA467",
+		"/experiencia/relacionamento/": "#08BA9C",
+		"/experiencia/autoestima/": "#9B5DE5",
+	};
+
+	// FAQ — preserving original content, reduced to 4
+	const faqEntries = [
 		{
-			question:
-				"Como funciona a terapia pela Abordagem Centrada na Pessoa?",
+			question: "Como funciona a terapia pela Abordagem Centrada na Pessoa?",
 			answer: "A terapia acontece em um espaço de escuta empática e genuína, onde você pode falar sobre o que sente sem julgamentos. O foco é ajudar você a se compreender e tomar decisões mais alinhadas a quem é.",
-			open: false,
 		},
 		{
 			question: "Atende presencial e online?",
 			answer: "Sim. O atendimento presencial acontece em Vitória/ES, no bairro Jardim da Penha. Também realizo atendimentos online para todo o Brasil e para brasileiros que vivem no exterior.",
-			open: false,
 		},
 		{
 			question: "Aceita convênio?",
 			answer: "Não trabalho com convênios. Os atendimentos são particulares, o que garante maior flexibilidade de horários e um cuidado personalizado. Emito Nota Fiscal em conformidade com a política de reembolso dos principais planos de saúde.",
-			open: false,
-		},
-		{
-			question: "Quanto custa uma sessão de psicoterapia?",
-			answer: "Os valores são definidos considerando o tipo de atendimento e a duração das sessões. Entre em contato para conversar — buscaremos uma forma que caiba na sua realidade.",
-			open: false,
-		},
-		{
-			question: "Quanto tempo dura o processo terapêutico?",
-			answer: "Cada pessoa tem seu tempo. Algumas vivenciam mudanças em poucas semanas, outras preferem um processo contínuo. Conversamos sobre isso ao longo do acompanhamento.",
-			open: false,
 		},
 		{
 			question: "Como agendar uma consulta?",
-			answer: 'Você pode conversar diretamente comigo pelo WhatsApp. Basta clicar no botão "Conversar" ou "Falar no WhatsApp".',
-			open: false,
+			answer: "Você pode conversar diretamente comigo pelo WhatsApp. Basta clicar no botão \"Agendar primeira conversa\" ou \"Falar no WhatsApp\". Um resumo breve do que você está vivendo já é suficiente.",
 		},
-	]);
+	];
+
+	let faqItems = $state(faqEntries.map((item) => ({ ...item, open: false })));
 
 	function toggleFaq(index: number) {
 		faqItems = faqItems.map((item, i) => ({
@@ -65,8 +82,8 @@
 		}));
 	}
 
-	// Google Reviews data (exact content from original site for SEO)
-	const googleReviews = [
+	// Reviews — static fallback data (original content preserved)
+	const googleReviewsStatic = [
 		{
 			name: "Kleber do R.",
 			photo: "https://lh3.googleusercontent.com/a-/ALV-UjX1w6dUUZBROk9gV2ybPaKamAxETpfz2-yGu3x00BCLg_E3v0Sm=w36-h36-p-rp-mo-br100",
@@ -111,8 +128,7 @@
 		},
 	];
 
-	// Doctoralia Reviews data (exact content from original site for SEO)
-	const doctoraliaReviews = [
+	const doctoraliaReviewsStatic = [
 		{
 			name: "FG",
 			initial: "F",
@@ -150,6 +166,14 @@
 		},
 	];
 
+	// Use loader data with static fallback
+	const googleReviews = $derived(
+		(data.googleReviews.length ? data.googleReviews : googleReviewsStatic).slice(0, 6)
+	);
+	const doctoraliaReviews = $derived(
+		(data.doctoraliaReviews.length ? data.doctoraliaReviews : doctoraliaReviewsStatic).slice(0, 6)
+	);
+
 	// Office images for carousel
 	const officeImages = [
 		{
@@ -179,77 +203,88 @@
 		},
 	];
 
+	// Schema — using siteProfile (no hardcoded strings)
 	const homeSchema = {
 		"@context": "https://schema.org",
 		"@graph": [
 			{
 				"@type": "WebSite",
-				"@id": "https://psicologobernardo.com.br/#website",
-				url: "https://psicologobernardo.com.br/",
-				name: "Psicólogo Bernardo",
+				"@id": schemaIds.website,
+				url: `${siteProfile.siteUrl}/`,
+				name: siteProfile.siteName,
+				description: siteProfile.description,
 				inLanguage: "pt-BR",
 				publisher: {
-					"@id": "https://psicologobernardo.com.br/#organization",
+					"@id": schemaIds.organization,
 				},
 			},
 			{
 				"@type": "WebPage",
-				"@id": "https://psicologobernardo.com.br/#webpage",
-				url: "https://psicologobernardo.com.br/",
-				name: "Bernardo Carielo Psicólogo",
-				description:
-					"Psicólogo em Vitória-ES (Jardim da Penha) e Online. Especialista na Abordagem Centrada na Pessoa. Atendimento humanizado para ansiedade, depressão, autoconhecimento e relacionamentos.",
+				"@id": `${siteProfile.siteUrl}/#webpage`,
+				url: `${siteProfile.siteUrl}/`,
+				name: siteProfile.clinicalBrandName,
+				description: siteProfile.description,
 				isPartOf: {
-					"@id": "https://psicologobernardo.com.br/#website",
+					"@id": schemaIds.website,
+				},
+				about: {
+					"@id": schemaIds.organization,
+				},
+				primaryImageOfPage: {
+					"@type": "ImageObject",
+					url: siteProfile.ogImageUrl,
 				},
 				mainEntity: {
-					"@id": "https://psicologobernardo.com.br/#organization",
+					"@id": `${siteProfile.siteUrl}/#faq`,
 				},
 			},
 			{
-				"@type": ["LocalBusiness", "ProfessionalService"],
-				"@id": "https://psicologobernardo.com.br/#organization",
-				name: "Bernardo Carielo Psicólogo",
-				alternateName: "Psicólogo Bernardo",
-				description:
-					"Psicólogo em Vitória-ES (Jardim da Penha) e Online. Especialista na Abordagem Centrada na Pessoa. Atendimento humanizado para ansiedade, depressão, autoconhecimento e relacionamentos.",
+				"@type": "Person",
+				"@id": schemaIds.person,
+				name: siteProfile.fullName,
+				alternateName: siteProfile.personName,
+				jobTitle: "Psicólogo",
+				worksFor: {
+					"@id": schemaIds.organization,
+				},
+			},
+			{
+				"@type": ["ProfessionalService", "LocalBusiness"],
+				"@id": schemaIds.organization,
+				name: siteProfile.clinicalBrandName,
+				description: siteProfile.description,
+				url: `${siteProfile.siteUrl}/`,
 				image: [
-					"https://psicologobernardo.com.br/images/hero/hero-600x800.webp",
-					"https://psicologobernardo.com.br/images/consultorio/ambiente-acolhedor.jpg",
+					siteProfile.ogImageUrl,
+					`${siteProfile.siteUrl}/images/hero/hero-600x800.webp`,
 				],
-				url: "https://psicologobernardo.com.br/",
-				telephone: "+5527998331228",
-				email: "contato@psicologobernardo.com.br",
+				logo: {
+					"@type": "ImageObject",
+					url: siteProfile.logoUrl,
+				},
+				telephone: siteProfile.phoneHref.replace("tel:", ""),
+				email: siteProfile.officialEmail,
 				priceRange: "$$",
 				currenciesAccepted: "BRL",
 				paymentAccepted: "Dinheiro, Transferência Bancária, PIX",
-				foundingDate: "2017",
-				address: {
-					"@type": "PostalAddress",
-					streetAddress:
-						"Rua Darcy Grijó, 50, Sala 409, Ed. Madison Office Tower",
-					addressLocality: "Vitória",
-					addressRegion: "ES",
-					postalCode: "29060-500",
-					addressCountry: {
-						"@type": "Country",
-						name: "BR",
-					},
-				},
+				hasMap: siteProfile.externalLinks.googleMapsPlace,
 				geo: {
 					"@type": "GeoCoordinates",
-					latitude: -20.2798925,
-					longitude: -40.3009252,
+					latitude: siteProfile.coordinates.latitude,
+					longitude: siteProfile.coordinates.longitude,
 				},
-				hasMap: "https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
-				containedInPlace: {
-					"@type": "LocalBusiness",
-					name: "Arranjos Psicologia",
+				address: {
+					"@type": "PostalAddress",
+					streetAddress: `${siteProfile.address.streetAddress}, ${siteProfile.address.extendedAddress}`,
+					addressLocality: siteProfile.address.city,
+					addressRegion: siteProfile.address.state,
+					postalCode: siteProfile.address.postalCode,
+					addressCountry: siteProfile.address.country,
 				},
 				areaServed: [
 					{
 						"@type": "City",
-						name: "Vitória",
+						name: siteProfile.address.city,
 						containedInPlace: {
 							"@type": "State",
 							name: "Espírito Santo",
@@ -264,186 +299,48 @@
 					{
 						"@type": "OpeningHoursSpecification",
 						dayOfWeek: [
-							"Monday",
-							"Tuesday",
-							"Wednesday",
-							"Thursday",
-							"Friday",
+							"https://schema.org/Monday",
+							"https://schema.org/Tuesday",
+							"https://schema.org/Wednesday",
+							"https://schema.org/Thursday",
+							"https://schema.org/Friday",
 						],
-						opens: "13:30",
-						closes: "21:00",
+						opens: siteProfile.hours.opens,
+						closes: siteProfile.hours.closes,
 					},
 				],
+				contactPoint: [
+					{
+						"@type": "ContactPoint",
+						contactType: "appointments",
+						telephone: siteProfile.phoneHref.replace("tel:", ""),
+						email: siteProfile.officialEmail,
+						availableLanguage: ["pt-BR"],
+					},
+				],
+				sameAs: siteSameAs,
+				founder: {
+					"@id": schemaIds.person,
+				},
 				aggregateRating: {
 					"@type": "AggregateRating",
-					ratingValue: "5.0",
-					reviewCount: "25",
+					ratingValue: siteProfile.reviews.ratingValue,
+					reviewCount: siteProfile.reviews.reviewCount,
 					bestRating: "5",
 					worstRating: "1",
 				},
-				review: [
-					{
-						"@type": "Review",
-						reviewRating: {
-							"@type": "Rating",
-							ratingValue: "5",
-							bestRating: "5",
-						},
-						author: { "@type": "Person", name: "Kleber do R." },
-						reviewBody:
-							"O Dr. Bernardo é extremamente atencioso e empático, me senti como se estivesse conversando com meu melhor amigo e tudo fluiu muito bem.",
-						datePublished: "2024-12-12",
+			},
+			{
+				"@type": "FAQPage",
+				"@id": `${siteProfile.siteUrl}/#faq`,
+				mainEntity: faqEntries.map((item) => ({
+					"@type": "Question",
+					name: item.question,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: item.answer,
 					},
-					{
-						"@type": "Review",
-						reviewRating: {
-							"@type": "Rating",
-							ratingValue: "5",
-							bestRating: "5",
-							worstRating: "1",
-						},
-						author: { "@type": "Person", name: "Marina Benetti" },
-						reviewBody:
-							"Excelente profissional, educado, atento e empático. O espaço é acolhedor, limpo e de fácil acesso.",
-						datePublished: "2024-12-12",
-					},
-					{
-						"@type": "Review",
-						reviewRating: {
-							"@type": "Rating",
-							ratingValue: "5",
-							bestRating: "5",
-						},
-						author: {
-							"@type": "Person",
-							name: "Eder França Balbino",
-						},
-						reviewBody:
-							"Sem palavras para descrever o quanto me ajudou num momento extremamente importante em minha vida.",
-						datePublished: "2024-12-12",
-					},
-					{
-						"@type": "Review",
-						reviewRating: {
-							"@type": "Rating",
-							ratingValue: "5",
-							bestRating: "5",
-						},
-						author: { "@type": "Person", name: "FG" },
-						reviewBody:
-							"Bernardo é um profissional ímpar. Atento e detalhista, ele é sempre pertinente em suas colocações.",
-						datePublished: "2020-12-08",
-					},
-					{
-						"@type": "Review",
-						reviewRating: {
-							"@type": "Rating",
-							ratingValue: "5",
-							bestRating: "5",
-						},
-						author: { "@type": "Person", name: "Gustavo" },
-						reviewBody:
-							"O Bernardo tem me ajudado demais em um dos momentos mais difíceis da minha vida. Excelente psicólogo.",
-						datePublished: "2023-12-01",
-					},
-				],
-				sameAs: [
-					"https://www.instagram.com/bcarielo",
-					"https://www.facebook.com/bcarielo",
-					"https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
-					"https://www.google.com/maps/place/Bernardo+Carielo+Psic%C3%B3logo/@-20.2798925,-40.3009252,1019m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!16s%2Fg%2F11hdqw304k?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
-				],
-				hasOfferCatalog: {
-					"@type": "OfferCatalog",
-					name: "Serviços de Psicologia",
-					itemListElement: [
-						{
-							"@type": "OfferCatalog",
-							name: "Psicoterapia",
-							itemListElement: [
-								{
-									"@type": "Offer",
-									itemOffered: {
-										"@type": "Service",
-										name: "Psicoterapia Individual Presencial",
-										description:
-											"Atendimento psicológico presencial em consultório no Jardim da Penha.",
-									},
-								},
-								{
-									"@type": "Offer",
-									itemOffered: {
-										"@type": "Service",
-										name: "Terapia Online",
-										description:
-											"Atendimento psicológico remoto via videochamada para todo o Brasil.",
-									},
-								},
-								{
-									"@type": "Offer",
-									itemOffered: {
-										"@type": "Service",
-										name: "Terapia de Casal",
-										description:
-											"Apoio para casais melhorarem a comunicação e o relacionamento.",
-									},
-								},
-							],
-						},
-						{
-							"@type": "OfferCatalog",
-							name: "Serviços Especializados",
-							itemListElement: [
-								{
-									"@type": "Offer",
-									itemOffered: {
-										"@type": "Service",
-										name: "Grupos e Rodas de Conversa",
-										description:
-											"Encontros coletivos para troca de experiências.",
-									},
-								},
-								{
-									"@type": "Offer",
-									itemOffered: {
-										"@type": "Service",
-										name: "Supervisão Profissional",
-										description:
-											"Supervisão clínica para psicólogos em formação.",
-									},
-								},
-								{
-									"@type": "Offer",
-									itemOffered: {
-										"@type": "Service",
-										name: "Terapia para Brasileiros no Exterior",
-										description:
-											"Atendimento online para brasileiros vivendo fora do país.",
-									},
-								},
-							],
-						},
-					],
-				},
-				founder: {
-					"@id": "https://psicologobernardo.com.br/sobre/#person",
-				},
-				potentialAction: {
-					"@type": "ReserveAction",
-					target: {
-						"@type": "EntryPoint",
-						urlTemplate:
-							"https://psicologobernardo.com.br/agendar/",
-						actionPlatform: [
-							"http://schema.org/DesktopWebPlatform",
-							"http://schema.org/MobileWebPlatform",
-						],
-					},
-					result: {
-						"@type": "Reservation",
-						name: "Agendamento de Consulta",
-					},
-				},
+				})),
 			},
 		],
 	};
@@ -453,6 +350,8 @@
 	title="Psicólogo em Vitória ES – Jardim da Penha | Bernardo Carielo"
 	description="Psicólogo em Vitória ES, no Jardim da Penha. Atendimento presencial e online pela Abordagem Centrada na Pessoa. 8+ anos de experiência. Agende sua consulta."
 	canonical="https://psicologobernardo.com.br/"
+	image={siteProfile.ogImageUrl}
+	imageAlt="Bernardo Carielo, psicólogo em Vitória ES"
 	jsonLd={homeSchema}
 />
 
@@ -509,13 +408,22 @@
 			</p>
 			<div class="hero-buttons animate-fade-in-up" style="--delay: 0.4s">
 				<Button
-					href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+					href={buildWhatsAppUrl("Olá, vi seu site e gostaria de agendar uma primeira conversa.")}
 					variant="primary"
 					size="lg"
 				>
-					<Calendar size={20} />
-					Conversar
+					<Phone size={20} />
+					Agendar primeira conversa
 				</Button>
+				<Button href="/localizacao/psicologo-vitoria-es/" variant="outline" size="lg">
+					<MapPin size={20} />
+					Ver atendimento em Vitória
+				</Button>
+			</div>
+			<div class="quick-facts animate-fade-in-up" style="--delay: 0.5s">
+				<span>Jardim da Penha, em frente à UFES</span>
+				<span>{siteProfile.crp}</span>
+				<span>Presencial e online</span>
 			</div>
 		</div>
 		<div class="hero-image">
@@ -547,39 +455,80 @@
 	</div>
 </section>
 
-<!-- Sobre Section (Dark) -->
-<Section variant="dark" id="sobre">
-	<div class="section-header">
-		<h2>Sobre mim</h2>
+<!-- Trust Strip -->
+<div class="trust-strip">
+	<div class="container">
+		<ul class="trust-strip__items">
+			<li class="trust-strip__item">
+				<span class="trust-strip__value">5.0 ★</span>
+				<span class="trust-strip__label">Google e Doctoralia</span>
+			</li>
+			<li class="trust-strip__item">
+				<span class="trust-strip__value">{siteProfile.crp}</span>
+				<span class="trust-strip__label">Registro profissional</span>
+			</li>
+			<li class="trust-strip__item">
+				<span class="trust-strip__value">Jardim da Penha</span>
+				<span class="trust-strip__label">Em frente à UFES</span>
+			</li>
+			<li class="trust-strip__item">
+				<span class="trust-strip__value">{siteProfile.hours.displayDays}</span>
+				<span class="trust-strip__label">{siteProfile.hours.displayTime}</span>
+			</li>
+		</ul>
 	</div>
-	<div class="sobre-content">
-		<p class="sobre-intro">
-			Sou psicólogo desde 2017. Atuo pela <strong
-				>Abordagem Centrada na Pessoa</strong
-			>, uma abordagem humanista que valoriza a escuta empática e o
-			acolhimento genuíno. Acredito que cada pessoa possui recursos para
-			compreender a si mesma e fazer mudanças significativas em sua vida.
-		</p>
-		<div class="cards-grid">
-			<Card icon={Heart} title="Acolhimento" variant="dark">
-				<p>Espaço seguro e sem julgamentos para você ser você mesmo.</p>
+</div>
+
+<!-- Serviços Section -->
+<Section variant="white" class="home-services-section" id="servicos">
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Serviços</span>
+		<h2>Serviços Oferecidos</h2>
+		<p>Conheça as modalidades de atendimento disponíveis</p>
+	</div>
+	<div class="cards-grid">
+		{#each primaryServiceItems as item}
+			<Card
+				icon={serviceIcons[item.name as keyof typeof serviceIcons]}
+				title={item.name}
+				href={item.href}
+			>
+				<p>{item.description}</p>
 			</Card>
-			<Card icon={Clock} title="8+ Anos" variant="dark">
-				<p>De experiência clínica ajudando pessoas.</p>
-			</Card>
-			<Card icon={Users} title="8000+ Horas" variant="dark">
-				<p>De atendimento clínico ao longo da carreira.</p>
-			</Card>
-			<Card icon={Award} title="CRP-16/5527" variant="dark">
-				<p>
-					Devidamente registrado no Conselho Regional de Psicologia.
-				</p>
-			</Card>
+		{/each}
+	</div>
+	<div class="section-link-row">
+		<a href="/servicos/" class="section-link">Ver todos os serviços →</a>
+	</div>
+</Section>
+
+<!-- Informações Rápidas -->
+<Section variant="white" class="home-quickinfo-section" id="informacoes-rapidas">
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Antes de entrar em contato</span>
+		<h2>Informações rápidas</h2>
+	</div>
+	<div class="quickinfo-grid">
+		<div class="quickinfo-item">
+			<h3>Primeira sessão</h3>
+			<p>Já é uma sessão de terapia. Você traz o que está vivendo, é acolhido com atenção, e ao final avaliamos juntos se faz sentido continuar.</p>
+		</div>
+		<div class="quickinfo-item">
+			<h3>Modalidade</h3>
+			<p>Presencial em Jardim da Penha (Vitória) e online por videochamada para todo o Brasil e exterior.</p>
+		</div>
+		<div class="quickinfo-item">
+			<h3>Convênio</h3>
+			<p>Atendimento particular. Emito Nota Fiscal em conformidade com a política de reembolso dos principais planos de saúde.</p>
+		</div>
+		<div class="quickinfo-item">
+			<h3>Como agendar</h3>
+			<p>Envie uma mensagem curta pelo WhatsApp. Um resumo do que você está vivendo já é suficiente.</p>
 		</div>
 	</div>
 </Section>
 
-<!-- Avaliações Section -->
+<!-- Avaliações Section — 2 carrosséis distintos -->
 <Section variant="white" id="avaliacoes">
 	<div class="section-header">
 		<h2>O que dizem meus pacientes</h2>
@@ -592,243 +541,85 @@
 	<div class="avaliacoes-cta">
 		<p>
 			Quer conhecer mais sobre meu trabalho? <a
-				href="https://wa.me/5527998331228?text=Olá,%20vi%20os%20depoimentos%20no%20site%20e%20gostaria%20de%20conversar."
+				href={buildWhatsAppUrl("Olá, vi os depoimentos no site e gostaria de conversar.")}
 				>Converse comigo no WhatsApp</a
 			> e comece sua jornada de autoconhecimento.
 		</p>
 	</div>
 </Section>
 
-<!-- Credenciais Section -->
-<Section variant="beige" id="experiencia">
-	<div class="section-header">
-		<h2>Experiência e Formação</h2>
-		<p>
-			Mais de 8 anos dedicados à prática clínica e formação continuada em
-			Abordagem Centrada na Pessoa
-		</p>
+<!-- Como posso ajudar -->
+<Section variant="beige" class="home-support-section" id="como-posso-ajudar">
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Como posso ajudar</span>
+		<h2>Demandas mais comuns</h2>
 	</div>
-	<div class="credenciais-grid">
-		<div class="credencial-card">
-			<h3><GraduationCap size={24} /> Experiência Profissional</h3>
-			<ul>
-				<li>
-					<strong>Facilitação da Roda de Conversa Entre Homens</strong
-					><br /><span>EncontroACP • 2022 – atual</span>
-				</li>
-				<li>
-					<strong>Psicoterapeuta e Responsável Técnico</strong><br
-					/><span>Arranjos Psicologia • 2018 – atual</span>
-				</li>
-				<li>
-					<strong>Coordenação de Grupo e Atendimento Clínico</strong
-					><br /><span
-						>Serviço de Atenção Psicológica ao Graduando (UFES) •
-						2016 – 2017</span
-					>
-				</li>
-			</ul>
-		</div>
-		<div class="credencial-card">
-			<h3><Award size={24} /> Formação</h3>
-			<ul>
-				<li>
-					<strong>Formação Continuada em Clínica na ACP</strong><br
-					/><span>EncontroACP • 2023 – atual</span>
-				</li>
-				<li>
-					<strong
-						>Formação em Prática da Psicologia Clínica na ACP</strong
-					><br /><span>EncontroACP • 2022</span>
-				</li>
-				<li>
-					<strong>Bacharelado em Psicologia</strong><br /><span
-						>Universidade Federal do Espírito Santo (UFES) • 2017</span
-					>
-				</li>
-			</ul>
-		</div>
+	<div class="support-grid">
+		{#each experienceNavItems as item}
+			{@const Icon = experienceIcons[item.href as keyof typeof experienceIcons]}
+			{@const accent = experienceAccents[item.href] ?? "#08BA9C"}
+			<a href={item.href} class="support-card" style="border-left: 3px solid {accent};">
+				<div
+					class="support-card__icon"
+					style="background: {accent}1a; color: {accent};"
+				>
+					<Icon size={19} strokeWidth={1.8} />
+				</div>
+				<div>
+					<h3>{item.name}</h3>
+					<p>{item.description}</p>
+				</div>
+			</a>
+		{/each}
 	</div>
-	<div class="credenciais-cta">
-		<a href="/sobre/" class="btn-link">Ver mais</a>
+	<div class="section-link-row">
+		<a href="/experiencia/" class="section-link">Explorar todas as demandas →</a>
 	</div>
 </Section>
 
-<!-- Arranjos Banner -->
-<section class="arranjos-banner">
-	<div class="container">
-		<p>
-			<em
-				>Arranjos Psicologia — um espaço de formação, pesquisa e diálogo
-				sobre a prática centrada na pessoa.</em
-			>
-		</p>
-		<a
-			href="https://arranjospsicologia.com.br"
-			target="_blank"
-			rel="noopener"
-			class="btn-arranjos"
-		>
-			Conheça também a Arranjos Psicologia <ExternalLink size={16} />
-		</a>
-	</div>
-</section>
-
-<!-- Consultório Section -->
-<Section variant="white" id="consultorio">
-	<div class="section-header">
+<!-- Localização Section -->
+<Section variant="beige" class="home-location-section" id="localizacao">
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Localização</span>
 		<h2>Conheça o Consultório</h2>
 		<p>Um ambiente acolhedor e seguro, pensado para o seu bem-estar</p>
 	</div>
-	<div class="consultorio-intro">
-		<p>
-			O consultório fica em frente à UFES, no coração de <strong
-				>Jardim da Penha</strong
-			>, em Vitória/ES, em um espaço tranquilo e privativo. O ambiente foi
-			cuidadosamente pensado para proporcionar conforto, acolhimento e
-			confidencialidade durante as sessões.
-		</p>
-	</div>
-	<ImageCarousel images={officeImages} />
-	<div class="consultorio-cta">
-		<p>
-			<strong>Endereço:</strong> Rua Darcy Grijó, 50 - Sala 409, Jardim da
-			Penha, Vitória - ES
-		</p>
-		<p>
-			Atendimento presencial ou online. <a
-				href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20ao%20consultório."
-				class="btn-link">Entre em contato</a
-			> para agendar sua primeira sessão.
-		</p>
-	</div>
-</Section>
-
-<!-- Serviços Section -->
-<Section variant="beige" id="servicos">
-	<div class="section-header">
-		<h2>Serviços Oferecidos</h2>
-		<p>Conheça as modalidades de atendimento disponíveis</p>
-	</div>
-	<div class="cards-grid">
-		<Card
-			icon={Heart}
-			title="Psicoterapia Individual"
-			href="/servicos/psicoterapia-individual/"
-		>
-			<p>Processo terapêutico focado em suas necessidades individuais.</p>
-		</Card>
-		<Card
-			icon={Video}
-			title="Terapia Online"
-			href="/servicos/terapia-online/"
-		>
-			<p>Atendimento de onde você estiver, com a mesma qualidade.</p>
-		</Card>
-		<Card
-			icon={Users}
-			title="Terapia de Casal"
-			href="/servicos/terapia-de-casal/"
-		>
-			<p>Apoio para casais que desejam melhorar sua relação.</p>
-		</Card>
-		<Card
-			icon={MessageCircle}
-			title="Grupos e Rodas"
-			href="/servicos/grupos-e-rodas/"
-		>
-			<p>Encontros coletivos para troca de experiências.</p>
-		</Card>
-	</div>
-</Section>
-
-<!-- Projetos Section (Dark) -->
-<Section variant="dark" id="projetos">
-	<div class="section-header">
-		<h2>Projetos em Andamento</h2>
-	</div>
-	<div class="projetos-grid">
-		<div class="projeto-card">
-			<div class="projeto-image">
-				<img
-					src="/images/roda-homens.webp"
-					alt="Roda de Conversa Entre Homens"
-					loading="lazy"
-					decoding="async"
-					width="400"
-					height="300"
-				/>
-			</div>
-			<div class="projeto-content">
-				<h3>Roda de Conversa Entre Homens (Online)</h3>
-				<p>
-					Facilito este grupo terapêutico do <a
-						href="https://encontroacp.com.br"
-						target="_blank"
-						rel="noopener">EncontroACP</a
-					>, voltado para homens que querem compartilhar suas
-					vivências, desafios e emoções em um espaço seguro e livre de
-					julgamentos.
-				</p>
+	<div class="local-proof-grid">
+		<div>
+			<p class="local-address-short">
+				<strong>{siteProfile.address.streetAddress}</strong>, {siteProfile.address.extendedAddress}
+			</p>
+			<p class="local-reference">
+				O consultório fica em frente à UFES, no coração de <strong>Jardim da Penha</strong>, em Vitória/ES, em um espaço tranquilo e privativo. O ambiente foi cuidadosamente pensado para proporcionar conforto, acolhimento e confidencialidade durante as sessões.
+			</p>
+			<div class="local-links">
 				<a
-					href="https://encontroacp.com.br/entrehomens/"
+					href={siteProfile.externalLinks.googleMapsQuery}
 					target="_blank"
 					rel="noopener"
-					class="projeto-link"
+					class="local-map-btn"
 				>
-					Saiba Mais no EncontroACP <ExternalLink size={14} />
+					<MapPin size={16} />
+					Abrir no Google Maps
+				</a>
+				<a href="/localizacao/psicologo-vitoria-es/">
+					<MapPin size={16} />
+					Ver como chegar
+				</a>
+				<a href="/localizacao/psicologo-jardim-da-penha/">
+					Consultório em Jardim da Penha
 				</a>
 			</div>
 		</div>
-		<div class="projeto-card">
-			<div class="projeto-image">
-				<img
-					src="/images/roda-psicologos.webp"
-					alt="Roda de Conversa para Psicólogos"
-					loading="lazy"
-					decoding="async"
-					width="400"
-					height="300"
-				/>
-			</div>
-			<div class="projeto-content">
-				<h3>
-					Roda de Conversa: Desafios da Profissão Psi - ACP (Online)
-				</h3>
-				<p>
-					Espaço voltado para psicólogos da ACP discutirem questões
-					burocráticas, financeiras e éticas da profissão. Um lugar de
-					troca entre profissionais.
-				</p>
-				<a
-					href="https://arranjospsicologia.com.br"
-					target="_blank"
-					rel="noopener"
-					class="projeto-link"
-				>
-					Saiba Mais na Arranjos <ExternalLink size={14} />
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="projetos-nota">
-		<p>
-			<strong>Atenção:</strong> Podem haver outros projetos e programas
-			disponíveis.
-			<a
-				href="https://arranjospsicologia.com.br/projetos"
-				target="_blank"
-				rel="noopener"
-				>Confira todos os projetos ativos na Arranjos Psicologia</a
-			>.
-		</p>
+		<ImageCarousel images={officeImages} />
 	</div>
 </Section>
 
 <!-- FAQ Section -->
-<Section variant="white" id="faq">
-	<div class="section-header">
-		<h2>Perguntas Frequentes</h2>
+<Section variant="white" class="home-faq-section" id="faq">
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Perguntas frequentes</span>
+		<h2>Dúvidas comuns antes de começar</h2>
 	</div>
 	<div class="faq-container">
 		{#each faqItems as item, index}
@@ -854,70 +645,16 @@
 	</div>
 </Section>
 
-<!-- Contato Section -->
-<Section variant="beige" id="contato">
-	<div class="section-header">
-		<h2>Vamos Conversar?</h2>
-		<p>Entre em contato e agende sua primeira sessão</p>
-	</div>
-	<div class="contato-grid">
-		<div class="contact-info">
-			<div class="contact-item">
-				<MapPin size={24} />
-				<div>
-					<strong>Consultório</strong>
-					<p>
-						Rua Darcy Grijó, 50 - Sala 409<br />Jardim da Penha,
-						Vitória - ES<br />CEP 29060-500
-					</p>
-				</div>
-			</div>
-			<div class="contact-item">
-				<Phone size={24} />
-				<div>
-					<strong>WhatsApp</strong>
-					<p>
-						<a
-							href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
-							>(27) 99833-1228</a
-						>
-					</p>
-				</div>
-			</div>
-			<div class="contact-item">
-				<Mail size={24} />
-				<div>
-					<strong>Email</strong>
-					<p>
-						<a href="mailto:contato@psicologobernardo.com.br"
-							>contato@psicologobernardo.com.br</a
-						>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="mapa-container">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1871.2565968762556!2d-40.29407481177918!3d-20.279014427004878!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8171b61b8e13b%3A0x5bab77942d3119e5!2sPsic%C3%B3logo%20-%20Bernardo%20Carielo%20Macedo%20de%20Oliveira%20Pinto!5e0!3m2!1spt-BR!2sbr!4v1763333002406!5m2!1spt-BR!2sbr"
-				width="100%"
-				height="300"
-				style="border:0; border-radius: var(--radius-md);"
-				allowfullscreen
-				loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"
-				title="Localização do Consultório"
-			></iframe>
-		</div>
-	</div>
-</Section>
-
 <!-- CTA Final -->
 <Section variant="gradient" id="cta">
 	<div class="cta-content">
-		<h2>Pronto para dar o primeiro passo?</h2>
-		<p>Agende uma consulta e comece sua jornada de autoconhecimento.</p>
+		<h2>Quando fizer sentido, o primeiro passo pode ser simples</h2>
+		<p>
+			Você pode escrever em poucas linhas o que está vivendo. A partir daí,
+			alinhamos o formato mais adequado — presencial em Vitória ou online.
+		</p>
 		<Button
-			href="https://wa.me/5527998331228?text=Olá,%20vi%20seu%20site%20e%20gostaria%20de%20conversar"
+			href={buildWhatsAppUrl("Olá, vi seu site e gostaria de agendar uma primeira conversa.")}
 			variant="secondary"
 			size="lg"
 			class="cta-button"
@@ -927,3 +664,289 @@
 		</Button>
 	</div>
 </Section>
+
+<style>
+	/* ── Section backgrounds ── */
+	:global(.home-services-section) {
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 252, 251, 0.98));
+	}
+
+	:global(.home-support-section) {
+		background:
+			radial-gradient(circle at bottom right, rgba(248, 58, 80, 0.04), transparent 24%),
+			linear-gradient(180deg, rgba(249, 236, 232, 0.7), rgba(255, 255, 255, 0.95));
+	}
+
+	:global(.home-location-section) {
+		background:
+			radial-gradient(circle at bottom left, rgba(8, 186, 156, 0.06), transparent 24%),
+			linear-gradient(180deg, rgba(249, 236, 232, 0.78) 0%, #fff 100%);
+	}
+
+	/* ── Trust Strip ── */
+	.trust-strip {
+		border-top: 1px solid rgba(8, 186, 156, 0.12);
+		border-bottom: 1px solid rgba(8, 186, 156, 0.12);
+		background: rgba(255, 255, 255, 0.96);
+		padding: 1.25rem 0;
+	}
+
+	.trust-strip__items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		flex-wrap: wrap;
+	}
+
+	.trust-strip__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.2rem;
+		padding: 0.5rem 2rem;
+		text-align: center;
+	}
+
+	.trust-strip__item + .trust-strip__item {
+		border-left: 1px solid rgba(8, 186, 156, 0.16);
+	}
+
+	.trust-strip__value {
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--primary-dark);
+		white-space: nowrap;
+	}
+
+	.trust-strip__label {
+		font-size: 0.78rem;
+		color: var(--text-light);
+		white-space: nowrap;
+	}
+
+	/* ── Quick Facts (hero) ── */
+	.quick-facts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+	}
+
+	.quick-facts span {
+		padding: 0.45rem 0.9rem;
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.82);
+		border: 1px solid rgba(8, 186, 156, 0.15);
+		color: var(--primary-dark);
+		font-size: 0.95rem;
+		font-weight: 500;
+	}
+
+	/* ── Section header left ── */
+	.section-header--left {
+		text-align: left;
+		max-width: 760px;
+		margin: 0 0 2rem;
+	}
+
+	/* ── Section kicker ── */
+	.section-kicker {
+		display: block;
+		font-size: 0.82rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--primary-color);
+		margin-bottom: 0.5rem;
+	}
+
+	/* ── Section link row ── */
+	.section-link-row {
+		margin-top: 1.5rem;
+		text-align: center;
+	}
+
+	.section-link {
+		color: var(--primary-color);
+		font-weight: 600;
+	}
+
+	/* ── Quick Info grid ── */
+	.quickinfo-grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.quickinfo-item {
+		padding: 1.2rem;
+		border-radius: var(--radius-md);
+		background: rgba(255, 255, 255, 0.88);
+		border: 1px solid rgba(8, 186, 156, 0.1);
+	}
+
+	.quickinfo-item h3 {
+		font-size: 0.95rem;
+		color: var(--primary-dark);
+		margin-bottom: 0.4rem;
+	}
+
+	.quickinfo-item p {
+		font-size: 0.92rem;
+		line-height: 1.6;
+		color: var(--text-light);
+	}
+
+	/* ── Support / Demandas grid ── */
+	.support-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.support-card {
+		display: flex;
+		gap: 0.9rem;
+		padding: 1.15rem 1.2rem;
+		border-radius: var(--radius-md);
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid rgba(0, 0, 0, 0.07);
+		box-shadow: var(--shadow-sm);
+		transition: transform 0.18s ease, box-shadow 0.18s ease;
+	}
+
+	.support-card:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-hover);
+	}
+
+	/* Adjust carousel aspect ratio for the grid view */
+	:global(.home-location-section .slides-wrapper) {
+		aspect-ratio: 4/3 !important;
+	}
+
+	@media (min-width: 768px) {
+		:global(.home-location-section .slides-wrapper) {
+			aspect-ratio: 3/2 !important;
+		}
+	}
+
+    .support-card__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 0.85rem;
+		flex-shrink: 0;
+	}
+
+	.support-card h3 {
+		font-size: 1.02rem;
+		margin-bottom: 0.35rem;
+	}
+
+	.support-card p {
+		color: var(--text-light);
+		line-height: 1.58;
+	}
+
+	/* ── Location grid ── */
+	.local-proof-grid {
+		display: grid;
+		grid-template-columns: 0.95fr 1.05fr;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.local-address-short {
+		font-size: 1.1rem;
+		margin-bottom: 0.4rem;
+		line-height: 1.5;
+	}
+
+	.local-reference {
+		color: var(--text-light);
+		margin-bottom: 1.25rem;
+		line-height: 1.6;
+	}
+
+	.local-links {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.local-links a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		width: fit-content;
+		color: var(--primary-color);
+		font-weight: 600;
+	}
+
+	.local-map-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.6rem 1.1rem;
+		border-radius: var(--radius-sm);
+		background: var(--primary-color);
+		color: white !important;
+		font-weight: 600;
+		font-size: 0.92rem;
+		transition: background 0.2s;
+	}
+
+	.local-map-btn:hover {
+		background: var(--primary-dark);
+	}
+
+	/* ── Responsive ── */
+	@media (max-width: 900px) {
+		.local-proof-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.support-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.trust-strip__item {
+			padding: 0.5rem 1.25rem;
+		}
+
+		.quickinfo-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.trust-strip__item + .trust-strip__item {
+			border-left: none;
+			border-top: 1px solid rgba(8, 186, 156, 0.16);
+		}
+
+		.trust-strip__items {
+			flex-direction: column;
+			gap: 0;
+		}
+
+		.trust-strip__item {
+			width: 100%;
+			padding: 0.6rem 1rem;
+		}
+
+		.support-card {
+			padding: 1rem;
+		}
+
+		.quickinfo-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

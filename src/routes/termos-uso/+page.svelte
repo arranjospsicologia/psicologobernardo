@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb } from "$lib";
+    import { Section, Button, Breadcrumb, buildWhatsAppUrl } from "$lib";
     import {
         Phone,
         List,
@@ -256,7 +256,7 @@
             <div class="legal-contact-box">
                 <h3><Mail size={20} /> Entre em Contato</h3>
                 <p>
-                    <strong>E-mail:</strong> contato@arranjospsicologia.com.br
+                    <strong>E-mail:</strong> contato@psicologobernardo.com.br
                 </p>
                 <p><strong>WhatsApp:</strong> (27) 99833-1228</p>
                 <p>
@@ -287,7 +287,7 @@
             ajudar
         </p>
         <Button
-            href="https://wa.me/5527998331228?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+            href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta")}
             variant="secondary"
             size="lg"
         >

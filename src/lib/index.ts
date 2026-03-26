@@ -8,6 +8,8 @@ export { default as ReviewCarousel } from './components/ReviewCarousel.svelte';
 export { default as ImageCarousel } from './components/ImageCarousel.svelte';
 export { default as Breadcrumb } from './components/Breadcrumb.svelte';
 export { default as SEO } from './components/SEO.svelte';
+export { default as TrustPanel } from './components/TrustPanel.svelte';
+export { default as JourneyShortcuts } from './components/JourneyShortcuts.svelte';
 
 // LazyDoctoraliaWidget should be imported directly where used
 // to avoid bundling it in shared chunks:
@@ -16,3 +18,7 @@ export { default as SEO } from './components/SEO.svelte';
 
 // GSAP utils should be imported dynamically to avoid SSR issues
 // Use: const { scrollReveal } = await import('$lib/utils/gsap');
+
+// Data
+export * from './data/siteProfile';
+export * from './data/siteNavigation';

@@ -21,7 +21,7 @@ export interface LocationConfig {
     aboutText: string;   // ACP local, 2-3 frases com ângulo local
     faqItems: LocationFaqItem[];
     faqSectionTitle: string; // variado: "Perguntas frequentes", "Dúvidas comuns", etc.
-    blogArticles: { slug: string; title: string; reason: string }[];
+    blogArticles: { slug: string; categorySlug: string; title: string; reason: string }[];
     neighborhoodGroups: { label: string; items: string[] }[];
     crossLinks: { href: string; label: string; description: string }[];
     editorialTitle: string;
@@ -98,16 +98,19 @@ export const locations: Record<string, LocationConfig> = {
         blogArticles: [
             {
                 slug: "onde-cuidar-saude-mental-jardim-da-penha",
+                categorySlug: "jardim-da-penha",
                 title: "Onde cuidar da saúde mental em Jardim da Penha",
                 reason: "Menciona a Praça da Mata da Praia",
             },
             {
                 slug: "vida-dando-certo-piorando-por-dentro",
+                categorySlug: "saude-mental",
                 title: "Quando a vida está dando certo, mas você está piorando por dentro",
                 reason: "Tema central do editorial local",
             },
             {
                 slug: "vinculos-liquidos-intimidade-digital",
+                categorySlug: "saude-mental",
                 title: "Vínculos líquidos na era digital",
                 reason: "Solidão em bairro residencial novo",
             },
@@ -216,16 +219,19 @@ export const locations: Record<string, LocationConfig> = {
         blogArticles: [
             {
                 slug: "onde-cuidar-saude-mental-jardim-da-penha",
+                categorySlug: "jardim-da-penha",
                 title: "Onde cuidar da saúde mental em Jardim da Penha",
                 reason: "Principal referência de saúde mental no bairro",
             },
             {
                 slug: "relacao-principal-ferramenta-terapia",
+                categorySlug: "acp",
                 title: "Por que a relação é a principal ferramenta da terapia?",
                 reason: "Explica a essência do trabalho presencial",
             },
             {
                 slug: "autonomia-vai-te-fazer-bem",
+                categorySlug: "acp",
                 title: "Por que a autonomia vai te fazer bem?",
                 reason: "Tema recorrente com universitários da UFES",
             },
@@ -333,16 +339,19 @@ export const locations: Record<string, LocationConfig> = {
         blogArticles: [
             {
                 slug: "vinculos-liquidos-intimidade-digital",
+                categorySlug: "saude-mental",
                 title: "Vínculos líquidos na era digital",
                 reason: "Solidão em meios sociais agitados",
             },
             {
                 slug: "relacao-principal-ferramenta-terapia",
+                categorySlug: "acp",
                 title: "Por que a relação é a principal ferramenta da terapia?",
                 reason: "Essência do processo terapêutico",
             },
             {
                 slug: "autonomia-vai-te-fazer-bem",
+                categorySlug: "acp",
                 title: "Por que a autonomia vai te fazer bem?",
                 reason: "Tema relevante para quem busca autoconhecimento",
             },
@@ -451,16 +460,19 @@ export const locations: Record<string, LocationConfig> = {
         blogArticles: [
             {
                 slug: "relacao-principal-ferramenta-terapia",
+                categorySlug: "acp",
                 title: "Por que a relação é a principal ferramenta da terapia?",
                 reason: "Contexto do processo terapêutico",
             },
             {
                 slug: "autonomia-vai-te-fazer-bem",
+                categorySlug: "acp",
                 title: "Por que a autonomia vai te fazer bem?",
                 reason: "Tema central em terapia",
             },
             {
                 slug: "vinculos-liquidos-intimidade-digital",
+                categorySlug: "saude-mental",
                 title: "Vínculos líquidos na era digital",
                 reason: "Realidade contemporânea nas cidades",
             },
@@ -574,16 +586,19 @@ export const locations: Record<string, LocationConfig> = {
         blogArticles: [
             {
                 slug: "relacao-principal-ferramenta-terapia",
+                categorySlug: "acp",
                 title: "Por que a relação é a principal ferramenta da terapia?",
                 reason: "Explica o que torna o processo terapêutico efetivo",
             },
             {
                 slug: "vinculos-liquidos-intimidade-digital",
+                categorySlug: "saude-mental",
                 title: "Vínculos líquidos na era digital",
                 reason: "Relacionamentos na contemporaneidade",
             },
             {
                 slug: "autonomia-vai-te-fazer-bem",
+                categorySlug: "acp",
                 title: "Por que a autonomia vai te fazer bem?",
                 reason: "Reflexão sobre independência e escolhas",
             },
@@ -691,16 +706,19 @@ export const locations: Record<string, LocationConfig> = {
         blogArticles: [
             {
                 slug: "relacao-principal-ferramenta-terapia",
+                categorySlug: "acp",
                 title: "Por que a relação é a principal ferramenta da terapia?",
                 reason: "Explica o que torna o processo terapêutico efetivo",
             },
             {
                 slug: "autonomia-vai-te-fazer-bem",
+                categorySlug: "acp",
                 title: "Por que a autonomia vai te fazer bem?",
                 reason: "Para quem está buscando crescimento",
             },
             {
                 slug: "vinculos-liquidos-intimidade-digital",
+                categorySlug: "saude-mental",
                 title: "Vínculos líquidos na era digital",
                 reason: "Relacionamentos e solidão",
             },

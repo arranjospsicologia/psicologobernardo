@@ -85,7 +85,6 @@
     aria-label="Avaliações de pacientes"
     on:touchstart={handleTouchStart}
     on:touchend={handleTouchEnd}
-    style="position: relative;"
 >
     <!-- Header -->
     <div class="carousel-header">
@@ -178,34 +177,36 @@
         {/each}
     </div>
 
-    <!-- Navigation -->
-    <button
-        class="nav-btn nav-prev"
-        on:click={prevSlide}
-        disabled={currentIndex === 0}
-        aria-label="Review anterior"
-    >
-        <ChevronLeft size={20} />
-    </button>
+    <!-- Navigation row: prev | dots | next -->
+    <div class="review-nav">
+        <button
+            class="nav-btn nav-btn--inline"
+            on:click={prevSlide}
+            disabled={currentIndex === 0}
+            aria-label="Review anterior"
+        >
+            <ChevronLeft size={18} />
+        </button>
 
-    <button
-        class="nav-btn nav-next"
-        on:click={nextSlide}
-        disabled={currentIndex === reviews.length - 1}
-        aria-label="Próximo review"
-    >
-        <ChevronRight size={20} />
-    </button>
+        <div class="carousel-dots">
+            {#each reviews as _, index}
+                <button
+                    class="carousel-dot"
+                    class:active={index === currentIndex}
+                    on:click={() => goToSlide(index)}
+                    aria-label={`Ir para avaliação ${index + 1}`}
+                ></button>
+            {/each}
+        </div>
 
-    <div class="carousel-dots">
-        {#each reviews as _, index}
-            <button
-                class="carousel-dot"
-                class:active={index === currentIndex}
-                on:click={() => goToSlide(index)}
-                aria-label={`Ir para avaliação ${index + 1}`}
-            ></button>
-        {/each}
+        <button
+            class="nav-btn nav-btn--inline"
+            on:click={nextSlide}
+            disabled={currentIndex === reviews.length - 1}
+            aria-label="Próximo review"
+        >
+            <ChevronRight size={18} />
+        </button>
     </div>
 
     <!-- CTA Link -->
@@ -222,3 +223,31 @@
             : "Ver todas as 60+ avaliações"}
     </a>
 </div>
+
+<style>
+    .review-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    /* Sobrescrever o posicionamento absoluto global para a variante inline */
+    :global(.review-carousel) .nav-btn--inline {
+        position: static !important;
+        transform: none !important;
+        width: 36px !important;
+        height: 36px !important;
+        flex-shrink: 0;
+    }
+
+    :global(.review-carousel) .nav-btn--inline:hover {
+        transform: scale(1.08) !important;
+    }
+
+    /* Resetar margem dos pontos pois o container já tem margin-top */
+    .review-nav :global(.carousel-dots) {
+        margin-top: 0;
+    }
+</style>

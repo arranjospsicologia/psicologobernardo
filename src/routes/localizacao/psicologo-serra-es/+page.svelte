@@ -12,6 +12,7 @@
     } from "lucide-svelte";
     import { locations } from "$lib/data/locations";
     import { buildLocationJsonLd } from "$lib/utils/locationSchema";
+    import { buildWhatsAppUrl, siteProfile } from "$lib/data/siteProfile";
 
     const loc = locations["serra-es"];
 
@@ -20,6 +21,7 @@
         pageName: loc.h1,
         pageDescription: loc.description,
         faqItems: loc.faqItems,
+        areaServedCity: "Serra",
     });
 </script>
 
@@ -52,7 +54,7 @@
                 </p>
                 <div class="hero-buttons">
                     <Button
-                        href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
+                        href={buildWhatsAppUrl(loc.whatsappText)}
                         variant="primary"
                         ><Phone size={20} /> Agendar consulta</Button
                     >
@@ -93,24 +95,28 @@
         />
 
         <p>
-            A Serra é o município mais populoso do Espírito Santo e um dos que
-            mais crescem. Com bairros que vão de Laranjeiras a Jacaraípe, a
-            diversidade de realidades é grande — e a busca por qualidade de vida
-            acompanha esse crescimento. Cada vez mais moradores da Serra incluem
-            o cuidado com a saúde mental nas suas prioridades.
+            A Serra é o município mais populoso do Espírito Santo e um dos que mais
+            crescem. Para quem mora em bairros como Laranjeiras ou Colina de
+            Laranjeiras, o consultório em <strong>Jardim da Penha, Vitória</strong>,
+            fica a <strong>25 a 40 minutos</strong> pela Av. Fernando Ferrari (Reta
+            da Penha) — uma rota que muitos moradores da Serra já fazem em outras
+            rotinas. De bairros como Jacaraípe ou Nova Almeida, o percurso pode ser
+            maior; nesses casos, a terapia online costuma ser a escolha mais prática.
         </p>
         <p>
-            Para quem mora em bairros como Laranjeiras, Colina de Laranjeiras,
-            Manguinhos ou Carapina, o consultório em Jardim da Penha é mais
-            acessível do que parece. O acesso é direto pela Reta da Penha, e a
-            localização em frente à UFES facilita a orientação.
+            O crescimento acelerado de Serra tem criado um perfil específico de
+            sofrimento: pessoas que vieram de outras cidades em busca de emprego ou
+            custo de vida mais acessível, e que enfrentam isolamento, pressão
+            produtiva e dificuldade de construir vínculos. Outros já nasceram aqui e
+            sentem o peso de uma rotina que cresceu mais rápido do que o suporte
+            emocional acompanhou.
         </p>
         <p>
-            Quando a distância presencial não funcionar, a
-            <a href="/servicos/terapia-online/">terapia online</a> é uma opção genuína
-            desde o início. Muitos moradores da Serra combinam as duas modalidades
-            conforme a semana permite — e o processo terapêutico segue com a mesma
-            qualidade em ambas.
+            Quando o deslocamento não for viável, a
+            <a href="/servicos/terapia-online/">terapia online</a> é uma opção real
+            e efetiva desde o início — não uma segunda escolha, mas uma alternativa
+            igualmente presente. Muitos moradores da Serra combinam as duas
+            modalidades conforme a semana permite.
         </p>
         <p>
             Conheça mais sobre a
@@ -158,12 +164,12 @@
                 allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Localização do consultório - Arranjos Psicologia"
+                title="Bernardo Carielo"
             ></iframe>
         </div>
         <div style="text-align: center; margin-top: 1rem;">
             <a
-                href="https://maps.google.com/?q=Rua+Darcy+Grijó,+50,+Jardim+da+Penha,+Vitória,+ES"
+                href={siteProfile.externalLinks.googleMapsPlace}
                 target="_blank"
                 rel="noopener"
                 class="map-link"
@@ -287,7 +293,7 @@
     <div class="section-header"><h2>{loc.articlesSectionTitle}</h2></div>
     <div class="loc-articles-grid">
         {#each loc.blogArticles as article}
-            <a href={`/blog/${article.slug}/`} class="loc-article-card"
+            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card"
                 ><h3>{article.title}</h3>
                 <p>{article.reason}</p>
                 <span class="read-more">Ler artigo →</span></a
@@ -313,7 +319,7 @@
         <h2>{loc.ctaH2}</h2>
         <p>{loc.ctaSubtitle}</p>
         <Button
-            href={`https://wa.me/5527998331228?text=${encodeURIComponent(loc.whatsappText)}`}
+            href={buildWhatsAppUrl(loc.whatsappText)}
             variant="secondary"
             size="lg"><Phone size={20} /> Agendar Consulta</Button
         >

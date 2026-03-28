@@ -1,163 +1,156 @@
 export const prerender = true;
 
-import { blogPosts, categoryPages } from '$lib/data/blog';
+import {
+    getAllPublishedPosts,
+    getBlogPaginationEntries,
+    getCategoryPaginationEntries,
+} from "$lib/server/blog/loader";
+import { BLOG_CATEGORIES, BLOG_BASE_URL } from "$lib/server/blog/constants";
 
-const site = 'https://psicologobernardo.com.br';
+const site = BLOG_BASE_URL;
 
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 interface SitemapUrl {
     loc: string;
     lastmod: string;
-    changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly';
+    changefreq: "daily" | "weekly" | "monthly" | "yearly";
     priority: string;
 }
 
-/**
- * Converte data do formato brasileiro "DD MMM YYYY" para ISO "YYYY-MM-DD"
- * Ex: "19 Dez 2025" -> "2025-12-19"
- */
-function parseBrazilianDate(dateStr: string): string {
-    const months: { [key: string]: string } = {
-        'Jan': '01', 'Fev': '02', 'Mar': '03', 'Abr': '04',
-        'Mai': '05', 'Jun': '06', 'Jul': '07', 'Ago': '08',
-        'Set': '09', 'Out': '10', 'Nov': '11', 'Dez': '12'
-    };
-
-    const parts = dateStr.split(' ');
-    if (parts.length !== 3) return BUILD_DATE;
-
-    const day = parts[0].padStart(2, '0');
-    const month = months[parts[1]] || '01';
-    const year = parts[2];
-
-    return `${year}-${month}-${day}`;
-}
-
-/**
- * Determina prioridade da página baseado no tipo
- * 1.0 = Home, 0.9 = Conversão, 0.8 = Institucional, 0.7 = Categorias, 0.6 = Posts, 0.5 = Legal
- */
 function getPriority(route: string): string {
-    if (route === '/') return '1.0';
+    if (route === "/") return "1.0";
 
-    // Páginas de alta conversão
-    if (['/agendar', '/contato'].includes(route) || route.startsWith('/servicos')) {
-        return '0.9';
+    if (
+        ["/agendar", "/contato"].includes(route) ||
+        route.startsWith("/servicos")
+    ) {
+        return "0.9";
     }
 
-    // Páginas institucionais
-    if (route === '/sobre' || route === '/artigos') {
-        return '0.8';
+    if (route === "/sobre" || route === "/artigos") {
+        return "0.8";
     }
 
-    // Páginas de localização e experiência (SEO local)
-    if (route.startsWith('/localizacao') || route.startsWith('/experiencia')) {
-        return '0.8';
+    if (route.startsWith("/localizacao") || route.startsWith("/experiencia")) {
+        return "0.8";
     }
 
-    // Páginas legais
-    if (['/politica-privacidade', '/termos-uso'].includes(route)) {
-        return '0.5';
+    if (["/politica-privacidade", "/termos-uso"].includes(route)) {
+        return "0.5";
     }
 
-    // Páginas de categoria do blog (silos)
-    const categorySlugs = categoryPages.map(c => `/${c.slug}`);
+    const categorySlugs = BLOG_CATEGORIES.map((c) => `/${c.slug}`);
     if (categorySlugs.includes(route)) {
-        return '0.7';
+        return "0.7";
     }
 
-    // Posts do blog
-    return '0.6';
+    // Pagination pages
+    if (route.includes("/pagina/")) {
+        return "0.5";
+    }
+
+    // Blog posts
+    return "0.6";
 }
 
-/**
- * Determina frequência de atualização baseado no tipo de página
- */
-function getChangefreq(route: string): 'daily' | 'weekly' | 'monthly' | 'yearly' {
-    if (route === '/') return 'weekly';
+function getChangefreq(
+    route: string,
+): "daily" | "weekly" | "monthly" | "yearly" {
+    if (route === "/") return "weekly";
 
-    // Páginas legais raramente mudam
-    if (['/politica-privacidade', '/termos-uso'].includes(route)) {
-        return 'yearly';
+    if (["/politica-privacidade", "/termos-uso"].includes(route)) {
+        return "yearly";
     }
 
-    // Páginas de serviço e conversão
-    if (route.startsWith('/servicos') || ['/agendar', '/contato'].includes(route)) {
-        return 'monthly';
+    if (
+        route.startsWith("/servicos") ||
+        ["/agendar", "/contato"].includes(route)
+    ) {
+        return "monthly";
     }
 
-    // Blog posts são estáticos após publicação
-    const categorySlugs = categoryPages.map(c => c.slug);
-    const isBlogPost = categorySlugs.some(slug =>
-        route.startsWith(`/${slug}/`) && route !== `/${slug}`
-    );
-    if (isBlogPost) {
-        return 'monthly';
+    const categorySlugs = BLOG_CATEGORIES.map((c) => c.slug);
+    if (categorySlugs.map((s) => `/${s}`).includes(route)) {
+        return "weekly";
     }
 
-    // Páginas de categoria podem receber novos posts
-    if (categorySlugs.map(s => `/${s}`).includes(route)) {
-        return 'weekly';
+    if (route === "/artigos" || route.includes("/pagina/")) {
+        return "weekly";
     }
 
-    return 'monthly';
+    return "monthly";
 }
 
-/**
- * Obtém data de lastmod para uma rota
- */
-function getLastmod(route: string): string {
-    // Tentar encontrar post correspondente
-    for (const post of blogPosts) {
-        if (route === `/${post.categorySlug}/${post.slug}`) {
-            return parseBrazilianDate(post.date);
-        }
-    }
-
-    // Para outras páginas, usar data do build
+function getLastmod(
+    route: string,
+    postDateMap: Map<string, string>,
+): string {
+    const date = postDateMap.get(route);
+    if (date) return date;
     return BUILD_DATE;
 }
 
 export async function GET() {
-    // Auto-discover static +page.svelte files
-    const modules = import.meta.glob('/src/routes/**/+page.svelte');
+    const allPosts = getAllPublishedPosts();
+
+    // Build a route->date map for posts
+    const postDateMap = new Map<string, string>();
+    for (const post of allPosts) {
+        postDateMap.set(
+            `/${post.categorySlug}/${post.slug}`,
+            post.lastReviewed ?? post.date,
+        );
+    }
+
+    // Auto-discover static pages
+    const modules = import.meta.glob("/src/routes/**/+page.svelte");
 
     const staticPages = Object.keys(modules)
         .map((path) => {
-            // Transform /src/routes/sobre/+page.svelte -> /sobre
             const route = path
-                .replace('/src/routes', '')
-                .replace('/+page.svelte', '');
-
-            return route === '' ? '/' : route;
+                .replace("/src/routes", "")
+                .replace("/+page.svelte", "");
+            return route === "" ? "/" : route;
         })
         .filter((route) => {
-            // Exclude dynamic routes (contain [ or ]) as we'll add them manually
-            if (route.includes('[') || route.includes(']')) return false;
-            // Exclude noindex pages from sitemap
-            const noIndexPages = ['/politica-privacidade', '/termos-uso'];
+            if (route.includes("[") || route.includes("]")) return false;
+            const noIndexPages = ["/politica-privacidade", "/termos-uso"];
             if (noIndexPages.includes(route)) return false;
             return true;
         });
 
-    // Generate dynamic routes
-    const dynamicPages = [
-        // Category pages (e.g., /saude-mental/)
-        ...categoryPages.map(cat => `/${cat.slug}`),
+    // Dynamic routes: categories
+    const categoryPages = BLOG_CATEGORIES.map((cat) => `/${cat.slug}`);
 
-        // Blog posts (e.g., /saude-mental/titulo-do-post)
-        ...blogPosts.map(post => `/${post.categorySlug}/${post.slug}`)
+    // Dynamic routes: blog posts
+    const postPages = allPosts.map(
+        (post) => `/${post.categorySlug}/${post.slug}`,
+    );
+
+    // Dynamic routes: artigos pagination
+    const artigosPaginationPages = getBlogPaginationEntries().map(
+        (entry) => `/artigos/pagina/${entry.page}`,
+    );
+
+    // Dynamic routes: category pagination
+    const categoryPaginationPages = getCategoryPaginationEntries().map(
+        (entry) => `/${entry.categoria}/pagina/${entry.page}`,
+    );
+
+    const allPages = [
+        ...staticPages,
+        ...categoryPages,
+        ...postPages,
+        ...artigosPaginationPages,
+        ...categoryPaginationPages,
     ];
 
-    const allPages = [...staticPages, ...dynamicPages];
-
-    // Gerar URLs com metadados otimizados
-    const sitemapUrls: SitemapUrl[] = allPages.map(page => ({
-        loc: page === '/' ? `${site}/` : `${site}${page}/`, // Evitar barra dupla na home
-        lastmod: getLastmod(page),
+    const sitemapUrls: SitemapUrl[] = allPages.map((page) => ({
+        loc: page === "/" ? `${site}/` : `${site}${page}/`,
+        lastmod: getLastmod(page, postDateMap),
         changefreq: getChangefreq(page),
-        priority: getPriority(page)
+        priority: getPriority(page),
     }));
 
     const body = `<?xml version="1.0" encoding="UTF-8" ?>
@@ -176,15 +169,15 @@ ${sitemapUrls
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
-  </url>`
+  </url>`,
             )
-            .join('\n')}
+            .join("\n")}
 </urlset>`;
 
     return new Response(body, {
         headers: {
-            'Content-Type': 'application/xml',
-            'Cache-Control': 'max-age=0, s-maxage=3600'
-        }
+            "Content-Type": "application/xml",
+            "Cache-Control": "max-age=0, s-maxage=3600",
+        },
     });
 }

@@ -10,6 +10,7 @@ export { default as Breadcrumb } from './components/Breadcrumb.svelte';
 export { default as SEO } from './components/SEO.svelte';
 export { default as TrustPanel } from './components/TrustPanel.svelte';
 export { default as JourneyShortcuts } from './components/JourneyShortcuts.svelte';
+export { default as Pagination } from './components/Pagination.svelte';
 
 // LazyDoctoraliaWidget should be imported directly where used
 // to avoid bundling it in shared chunks:

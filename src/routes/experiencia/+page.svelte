@@ -65,10 +65,9 @@
     <div class="container">
         <h1>Como posso ajudar</h1>
         <p class="hero-subtitle">
-            Esta área organiza o site pelas dores, dúvidas e contextos que costumam levar alguém a
-            buscar terapia. O serviço principal continua sendo a
-            <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>, mas aqui você
-            encontra a porta de entrada mais parecida com o que está vivendo.
+            Criamos este espaço para você encontrar o cuidado que faz mais sentido para o seu
+            momento atual. Seja por uma angústia específica ou um desejo de mudança, aqui você
+            encontra o ponto de partida ideal para sua jornada.
         </p>
         <div class="hero-buttons hero-buttons--centered">
             <Button
@@ -91,7 +90,8 @@
             Nem sempre a primeira busca de quem precisa de terapia é pelo nome do serviço. Muitas
             vezes a procura começa pela experiência concreta: ansiedade, cansaço extremo,
             dificuldade nos relacionamentos, tristeza que não passa ou um incômodo persistente consigo
-            mesmo. É para isso que este hub existe.
+            mesmo. Organizei este espaço para ajudar você a encontrar o caminho de cuidado mais
+            próximo do que está sentindo agora.
         </p>
     </div>
 </Section>

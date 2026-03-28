@@ -10,35 +10,21 @@
     const posts = $derived(data.posts);
     const pagination = $derived(data.pagination);
     const categories = $derived(data.categories);
-
-    const blogSchema = {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: "Artigos - Psicólogo Bernardo",
-        description:
-            "Reflexões, dicas e conteúdos sobre saúde mental e psicologia",
-        url: "https://psicologobernardo.com.br/artigos/",
-        author: {
-            "@type": "Person",
-            name: "Bernardo Carielo",
-            jobTitle: "Psicólogo",
-        },
-    };
+    const seo = $derived(data.seo);
+    const page = $derived(pagination.currentPage);
 </script>
 
 <SEO
-    title="Artigos - Psicólogo Bernardo | Bernardo Carielo"
-    description="Artigos sobre saúde mental, psicologia e bem-estar por Bernardo Carielo, psicólogo em Vitória/ES - CRP 16/5527"
-    canonical="https://psicologobernardo.com.br/artigos/"
-    jsonLd={blogSchema}
+    title={seo.title}
+    description={seo.description}
+    canonical={seo.canonical}
 />
 
-<!-- Breadcrumb -->
-<Breadcrumb items={[{ name: "Início", href: "/" }, { name: "Artigos" }]} />
+<Breadcrumb items={seo.breadcrumbs} />
 
 <section class="blog-hero">
     <div class="container">
-        <h1>Artigos</h1>
+        <h1>Artigos — Página {page}</h1>
         <p class="hero-subtitle">
             Reflexões sobre terapia, saúde emocional e vida cotidiana — escritas por
             <strong>Bernardo Carielo</strong>, psicólogo em Vitória ES.
@@ -62,37 +48,31 @@
 
 <Section variant="white">
     <div class="blog-grid">
-        {#if posts.length === 0}
-            <div class="no-results">
-                <p>Nenhum artigo encontrado.</p>
-            </div>
-        {:else}
-            {#each posts as post}
-                <a href="/{post.categorySlug}/{post.slug}" class="blog-card">
-                    <div class="blog-image">
-                        <img
-                            src={post.image}
-                            alt={post.altText || post.title}
-                            loading="lazy"
-                            width="350"
-                            height="233"
-                        />
-                        <div class="blog-category">{post.categoryLabel}</div>
+        {#each posts as post}
+            <a href="/{post.categorySlug}/{post.slug}" class="blog-card">
+                <div class="blog-image">
+                    <img
+                        src={post.image}
+                        alt={post.altText || post.title}
+                        loading="lazy"
+                        width="350"
+                        height="233"
+                    />
+                    <div class="blog-category">{post.categoryLabel}</div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><Calendar size={14} /> {post.dateLabel}</span>
+                        <span><Clock size={14} /> {post.readTime}</span>
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><Calendar size={14} /> {post.dateLabel}</span>
-                            <span><Clock size={14} /> {post.readTime}</span>
-                        </div>
-                        <h2>{post.title}</h2>
-                        <p>{post.description}</p>
-                        <span class="blog-link">
-                            Ler mais <ArrowRight size={16} />
-                        </span>
-                    </div>
-                </a>
-            {/each}
-        {/if}
+                    <h2>{post.title}</h2>
+                    <p>{post.description}</p>
+                    <span class="blog-link">
+                        Ler mais <ArrowRight size={16} />
+                    </span>
+                </div>
+            </a>
+        {/each}
     </div>
 
     <Pagination {pagination} />
@@ -116,6 +96,25 @@
 </Section>
 
 <style>
+    .blog-hero {
+        padding: calc(var(--header-height) + 3rem) 0 4rem;
+        background: var(--beige-light);
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        max-width: 600px;
+        margin: 1rem auto 0;
+        font-size: 1.15rem;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .hero-subtitle strong {
+        color: var(--primary-dark);
+        font-weight: 700;
+    }
+
     .category-nav {
         background: var(--white);
         padding: 2rem 0;
@@ -177,25 +176,6 @@
     .category-pill:hover .category-pill-count {
         background: var(--primary-color);
         color: var(--white);
-    }
-
-    .blog-hero {
-        padding: calc(var(--header-height) + 3rem) 0 4rem;
-        background: var(--beige-light);
-        text-align: center;
-    }
-
-    .hero-subtitle {
-        max-width: 600px;
-        margin: 1rem auto 0;
-        font-size: 1.15rem;
-        color: var(--text-light);
-        line-height: 1.6;
-    }
-
-    .hero-subtitle strong {
-        color: var(--primary-dark);
-        font-weight: 700;
     }
 
     @media (max-width: 640px) {

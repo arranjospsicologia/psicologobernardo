@@ -1,13 +1,14 @@
 <script lang="ts">
-    import { Section, Button, Breadcrumb, SEO, buildWhatsAppUrl } from "$lib";
+    import "$lib/styles/blog.css";
+    import { Section, Button, Breadcrumb, SEO, Pagination, buildWhatsAppUrl } from "$lib";
     import { Phone, Calendar, Clock, ArrowRight } from "lucide-svelte";
-    import { getPostsByCategory, getCategoryBySlug } from "$lib/data/blog";
     import type { PageData } from "./$types";
 
     let { data }: { data: PageData } = $props();
 
     const category = $derived(data.category);
     const posts = $derived(data.posts);
+    const pagination = $derived(data.pagination);
 
     const pageSchema = $derived({
         "@context": "https://schema.org",
@@ -56,11 +57,11 @@
                             width="350"
                             height="233"
                         />
-                        <div class="blog-category">{post.category}</div>
+                        <div class="blog-category">{post.categoryLabel}</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><Calendar size={14} /> {post.date}</span>
+                            <span><Calendar size={14} /> {post.dateLabel}</span>
                             <span><Clock size={14} /> {post.readTime}</span>
                         </div>
                         <h2>{post.title}</h2>
@@ -73,6 +74,8 @@
             {/each}
         {/if}
     </div>
+
+    <Pagination {pagination} />
 </Section>
 
 <Section variant="gradient">

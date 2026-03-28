@@ -59,9 +59,9 @@
     <div class="container">
         <h1>Serviços de psicologia em Vitória e online</h1>
         <p class="hero-subtitle">
-            Psicoterapia individual é o eixo principal do trabalho. Terapia de casal e
-            atendimento online entram como modalidades complementares, sempre com a mesma
-            base de escuta, presença e cuidado clínico.
+            Ofereço diferentes caminhos de cuidado clínico, todos baseados na escuta atenta e na
+            presença humana. Seja na terapia individual ou de casal, o foco é construir um espaço
+            seguro para o seu desenvolvimento.
         </p>
         <div class="hero-buttons hero-buttons--centered">
             <Button

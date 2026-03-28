@@ -1,16 +1,19 @@
 import { error, redirect } from "@sveltejs/kit";
-import type { PageLoad } from "./$types";
-import { getPostBySlug, getCategoryBySlug, blogPosts } from "$lib/data/blog";
-import { postContents } from "$lib/data/blogContent";
+import type { PageServerLoad } from "./$types";
+import {
+    getPostBySlug,
+    getCategoryBySlug,
+    getPostsByCategory,
+    getAllBlogRouteEntries,
+} from "$lib/server/blog/loader";
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageServerLoad = ({ params }) => {
     // Handle legacy /blog/slug or /artigos/slug redirects
-    if (params.categoria === 'blog' || params.categoria === 'artigos') {
+    if (params.categoria === "blog" || params.categoria === "artigos") {
         const post = getPostBySlug(params.slug);
         if (post) {
             throw redirect(301, `/${post.categorySlug}/${post.slug}/`);
         }
-        // If not found, fall through to 404 logic below (or specific error)
     }
 
     const category = getCategoryBySlug(params.categoria);
@@ -20,23 +23,29 @@ export const load: PageLoad = ({ params }) => {
     }
 
     const post = getPostBySlug(params.slug);
-    const content = postContents[params.slug];
 
-    if (!post || !content) {
+    if (!post) {
         throw error(404, "Artigo não encontrado");
     }
 
     // Verify post belongs to this category
     if (post.categorySlug !== params.categoria) {
-        // Gracefully redirect if accessed via wrong category but valid slug
         throw redirect(301, `/${post.categorySlug}/${post.slug}/`);
     }
+
+    const relatedPosts = getPostsByCategory(post.categorySlug)
+        .filter((p) => p.slug !== post.slug)
+        .slice(0, 3);
 
     return {
         categoria: params.categoria,
         category,
         slug: params.slug,
         post,
-        content
+        relatedPosts,
     };
 };
+
+export function entries() {
+    return getAllBlogRouteEntries();
+}

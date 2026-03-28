@@ -1,6 +1,13 @@
 <script lang="ts">
     import "$lib/styles/blog.css";
-    import { Section, Button, Breadcrumb, SEO, buildWhatsAppUrl, schemaIds } from "$lib";
+    import {
+        Section,
+        Button,
+        Breadcrumb,
+        SEO,
+        buildWhatsAppUrl,
+        schemaIds,
+    } from "$lib";
     import {
         Phone,
         Calendar,
@@ -13,25 +20,13 @@
         MapPin,
         BookOpen,
     } from "lucide-svelte";
-    import { blogPosts, type BlogPost } from "$lib/data/blog";
     import type { PageData } from "./$types";
 
     let { data }: { data: PageData } = $props();
 
     const post = $derived(data.post);
-    const content = $derived(data.content);
     const category = $derived(data.category);
-
-    // Get related posts (same category)
-    const relatedPosts = $derived(
-        blogPosts
-            .filter(
-                (p) =>
-                    p.slug !== data.slug &&
-                    p.categorySlug === post.categorySlug,
-            )
-            .slice(0, 3),
-    );
+    const relatedPosts = $derived(data.relatedPosts);
 
     // Determines if the post is "local" based on category or tags
     const isLocalContent = $derived(
@@ -132,7 +127,7 @@
                 },
                 inLanguage: "pt-BR",
                 isAccessibleForFree: true,
-                articleSection: post.category,
+                articleSection: post.categoryLabel,
                 keywords: post.tags,
                 audience: {
                     "@type": "Audience",
@@ -147,18 +142,18 @@
                       }
                     : {}),
                 about: aboutItems,
-                ...(content.references
+                ...(post.references
                     ? {
-                          citation: content.references,
+                          citation: post.references,
                       }
                     : {}),
             },
-            ...(content.faq
+            ...(post.faq
                 ? [
                       {
                           "@type": "FAQPage",
                           "@id": `https://psicologobernardo.com.br/${post.categorySlug}/${post.slug}/#faq`,
-                          mainEntity: content.faq.map((item) => ({
+                          mainEntity: post.faq.map((item) => ({
                               "@type": "Question",
                               name: item.question,
                               acceptedAnswer: {
@@ -204,7 +199,20 @@
 
     function formatDateBR(isoDate: string): string {
         const [year, month, day] = isoDate.split("-");
-        const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+        const months = [
+            "Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez",
+        ];
         return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
     }
 </script>
@@ -235,14 +243,16 @@
 <section class="post-hero">
     <div class="container">
         <div class="post-header">
-            <span class="blog-category">{post.category}</span>
+            <span class="blog-category">{post.categoryLabel}</span>
             <h1>{post.title}</h1>
             <div class="post-meta">
-                <span><Calendar size={16} /> {post.date}</span>
+                <span><Calendar size={16} /> {post.dateLabel}</span>
                 <span><Clock size={16} /> {post.readTime}</span>
                 {#if post.lastReviewed}
                     <span title="Revisão Clínica"
-                        ><BookOpen size={16} /> Revisado: {formatDateBR(post.lastReviewed)}</span
+                        ><BookOpen size={16} /> Revisado: {formatDateBR(
+                            post.lastReviewed,
+                        )}</span
                     >
                 {/if}
             </div>
@@ -262,12 +272,12 @@
 
 <Section variant="white">
     <div class="post-content">
-        {@html content.htmlContent}
+        {@html post.htmlContent}
 
-        {#if content.faq && content.faq.length > 0}
+        {#if post.faq && post.faq.length > 0}
             <section id="faq">
                 <h2>Perguntas Frequentes</h2>
-                {#each content.faq as item}
+                {#each post.faq as item}
                     <div class="faq-item">
                         <h3>{item.question}</h3>
                         <p>{item.answer}</p>
@@ -276,11 +286,11 @@
             </section>
         {/if}
 
-        {#if content.references && content.references.length > 0}
+        {#if post.references && post.references.length > 0}
             <section id="referencias" class="references-section">
                 <h3>Referências Bibliográficas</h3>
                 <ul>
-                    {#each content.references as ref}
+                    {#each post.references as ref}
                         <li>{ref}</li>
                     {/each}
                 </ul>
@@ -291,7 +301,7 @@
     <div class="post-footer">
         <div class="post-tags">
             <strong>Tags:</strong>
-            {#each content.tags as tag}
+            {#each post.tags as tag}
                 <span class="tag">{tag}</span>
             {/each}
         </div>
@@ -374,7 +384,9 @@
             </p>
             <div class="author-actions">
                 <Button
-                    href={buildWhatsAppUrl("Olá, vi seu artigo e gostaria de conversar")}
+                    href={buildWhatsAppUrl(
+                        "Olá, vi seu artigo e gostaria de conversar",
+                    )}
                     variant="primary"
                     size="sm"
                 >
@@ -418,7 +430,7 @@
                                 height="233"
                             />
                             <div class="blog-category">
-                                {relatedPost.category}
+                                {relatedPost.categoryLabel}
                             </div>
                         </div>
                         <div class="blog-content">
@@ -439,7 +451,9 @@
         <h2>Gostou do que leu?</h2>
         <p>Talvez seja um bom momento pra conversar.</p>
         <Button
-            href={buildWhatsAppUrl("Olá, vi seu artigo e gostaria de conversar")}
+            href={buildWhatsAppUrl(
+                "Olá, vi seu artigo e gostaria de conversar",
+            )}
             variant="secondary"
             size="lg"
         >

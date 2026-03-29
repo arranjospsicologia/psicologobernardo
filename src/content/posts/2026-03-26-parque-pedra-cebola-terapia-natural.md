@@ -2,8 +2,10 @@
 slug: "parque-pedra-cebola-terapia-natural"
 title: "Parque Pedra da Cebola e saúde mental: como usar a natureza como apoio fora do consultório"
 description: "Entenda como o Parque Pedra da Cebola pode funcionar como recurso complementar de regulação emocional, descanso cognitivo e reconexão com o corpo em Vitória."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 1

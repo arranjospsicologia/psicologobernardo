@@ -2,8 +2,10 @@
 slug: "sindrome-impostor-ufes"
 title: "Síndrome do impostor na UFES: por que você sente que não merece estar lá?"
 description: "Entenda como a síndrome do impostor aparece na vida universitária da UFES, por que a comparação acadêmica pesa tanto e quando a terapia pode ajudar a sustentar seu lugar."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 5

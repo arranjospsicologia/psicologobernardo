@@ -2,8 +2,10 @@
 slug: "medo-urbano-seguranca-jardim-da-penha"
 title: "Medo urbano em Jardim da Penha: como lidar com a sensação de insegurança sem deixar a vida encolher"
 description: "Entenda a diferença entre prudência e evitação por medo, e veja quando a sensação de insegurança em Vitória começa a limitar deslocamentos, encontros e rotina."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 2

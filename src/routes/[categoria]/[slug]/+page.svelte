@@ -28,10 +28,10 @@
     const category = $derived(data.category);
     const relatedPosts = $derived(data.relatedPosts);
 
-    // Determines if the post is "local" based on category or tags
+    // Determines if the post is "local" based on locationScope/neighborhood or tags
     const isLocalContent = $derived(
-        post.categorySlug === "jardim-da-penha" ||
-            post.categorySlug === "vitoria-es" ||
+        !!post.locationScope ||
+            !!post.neighborhood ||
             post.tags.some(
                 (t) =>
                     t.toLowerCase().includes("vitória") ||

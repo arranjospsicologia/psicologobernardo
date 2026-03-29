@@ -2,8 +2,10 @@
 slug: "calouro-vitoria-solidao-estudante"
 title: "Calouro em Vitória: como lidar com a solidão longe de casa"
 description: "Entenda por que a adaptação a Vitória e à UFES pode vir acompanhada de solidão, saudade e não pertencimento, e veja quando a psicoterapia pode ajudar nesse começo."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 4

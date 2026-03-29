@@ -2,8 +2,10 @@
 slug: "por-que-escolher-um-psicologo-em-jardim-da-penha"
 title: "Por que escolher um psicólogo em Jardim da Penha? A logística também influencia a continuidade"
 description: "Entenda por que escolher psicólogo em Jardim da Penha pode facilitar a adesão ao processo terapêutico, especialmente para quem mora, estuda ou trabalha na região da UFES e de Vitória."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "psicoterapia"
+categoryLabel: "Psicoterapia"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 6

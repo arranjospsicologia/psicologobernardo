@@ -2,8 +2,10 @@
 slug: "onde-cuidar-saude-mental-jardim-da-penha"
 title: "Onde cuidar da Saúde Mental em Jardim da Penha e Região (Vitória – ES)"
 description: "Guia local de saúde mental em Jardim da Penha e região: praças, parques, orla de Camburi, UFES, UBS e rede de apoio. Dicas práticas para descompressão em Vitória (ES)."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2025-12-19"
 dateLabel: "19 Dez 2025"
 publishedOrder: 2

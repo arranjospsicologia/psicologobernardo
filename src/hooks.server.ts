@@ -7,12 +7,12 @@ const blogRedirects: Record<string, string> = {
     '/blog/': '/artigos/',
 
     // Individual posts - redirecting to category-specific URLs
-    // Jardim da Penha
-    '/blog/terapia-para-estudantes-ufes-vitoria': '/jardim-da-penha/terapia-para-estudantes-ufes-vitoria',
-    '/blog/onde-cuidar-saude-mental-jardim-da-penha': '/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha',
+    // Jardim da Penha (reclassified to thematic categories)
+    '/blog/terapia-para-estudantes-ufes-vitoria': '/psicoterapia/terapia-para-estudantes-ufes-vitoria',
+    '/blog/onde-cuidar-saude-mental-jardim-da-penha': '/saude-mental/onde-cuidar-saude-mental-jardim-da-penha',
 
-    // Vitória ES
-    '/blog/como-escolher-psicologo-em-vitoria-es': '/vitoria-es/como-escolher-psicologo-em-vitoria-es',
+    // Vitória ES (reclassified to thematic categories)
+    '/blog/como-escolher-psicologo-em-vitoria-es': '/psicoterapia/como-escolher-psicologo-em-vitoria-es',
 
     // ACP
     '/blog/autenticidade-qualidade-vida': '/acp/autenticidade-qualidade-vida',
@@ -38,9 +38,9 @@ const blogRedirects: Record<string, string> = {
     '/blog/terapia-para-homens': '/homens/terapia-para-homens',
 
     // Also redirect /artigos/slug to /categoria/slug
-    '/artigos/terapia-para-estudantes-ufes-vitoria': '/jardim-da-penha/terapia-para-estudantes-ufes-vitoria',
-    '/artigos/onde-cuidar-saude-mental-jardim-da-penha': '/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha',
-    '/artigos/como-escolher-psicologo-em-vitoria-es': '/vitoria-es/como-escolher-psicologo-em-vitoria-es',
+    '/artigos/terapia-para-estudantes-ufes-vitoria': '/psicoterapia/terapia-para-estudantes-ufes-vitoria',
+    '/artigos/onde-cuidar-saude-mental-jardim-da-penha': '/saude-mental/onde-cuidar-saude-mental-jardim-da-penha',
+    '/artigos/como-escolher-psicologo-em-vitoria-es': '/psicoterapia/como-escolher-psicologo-em-vitoria-es',
     '/artigos/autenticidade-qualidade-vida': '/acp/autenticidade-qualidade-vida',
     '/artigos/terapia-centrada-pessoa-explicacao': '/acp/terapia-centrada-pessoa-explicacao',
     '/artigos/abordagem-centrada-pessoa': '/acp/abordagem-centrada-pessoa',
@@ -57,8 +57,32 @@ const blogRedirects: Record<string, string> = {
     '/artigos/terapia-para-homens': '/homens/terapia-para-homens',
 };
 
+// Redirects for removed location pages
+const locationRedirects: Record<string, string> = {
+    '/localizacao/psicologo-mata-da-praia': '/localizacao/psicologo-jardim-da-penha',
+    '/localizacao/psicologo-praia-do-canto': '/localizacao/psicologo-vitoria-es',
+    '/localizacao/psicologo-vila-velha': '/localizacao/psicologo-vitoria-es',
+    '/localizacao/psicologo-serra-es': '/localizacao/psicologo-vitoria-es',
+};
+
+// Redirects for removed geographic category archive pages
+const geoCategoryRedirects = ['/vitoria-es', '/jardim-da-penha'];
+
 export const handle: Handle = async ({ event, resolve }) => {
     const pathname = event.url.pathname;
+    const pathnameWithoutSlash = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+    const trailingSlash = pathname.endsWith('/') ? '/' : '';
+
+    // Location redirects (removed pages → main hubs)
+    if (locationRedirects[pathnameWithoutSlash]) {
+        throw redirect(301, locationRedirects[pathnameWithoutSlash] + trailingSlash);
+    }
+
+    // Geographic category archive index redirects → /artigos/
+    // (sub-paths like /vitoria-es/slug are handled by the [categoria]/[slug] route)
+    if (geoCategoryRedirects.includes(pathnameWithoutSlash)) {
+        throw redirect(301, '/artigos/');
+    }
 
     // Check for exact match first
     if (blogRedirects[pathname]) {
@@ -66,9 +90,8 @@ export const handle: Handle = async ({ event, resolve }) => {
     }
 
     // Check for match without trailing slash
-    const pathnameWithoutSlash = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
     if (blogRedirects[pathnameWithoutSlash]) {
-        throw redirect(301, blogRedirects[pathnameWithoutSlash] + (pathname.endsWith('/') ? '/' : ''));
+        throw redirect(301, blogRedirects[pathnameWithoutSlash] + trailingSlash);
     }
 
     // Fallback: redirect /blog to /artigos

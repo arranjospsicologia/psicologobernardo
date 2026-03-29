@@ -20,7 +20,7 @@
         },
         {
             question: "Atende moradores de fora de Vitória?",
-            answer: "Sim. Muitas pessoas vêm de Vila Velha e Serra para atendimento presencial. Se deslocamento for um obstáculo, a modalidade online também é possível.",
+            answer: "Sim. O consultório recebe pessoas de toda a Grande Vitória. Se o deslocamento for um obstáculo, a modalidade online também é possível.",
         },
         {
             question: "É possível fazer terapia online?",
@@ -44,10 +44,6 @@
     const locationCards = [
         locations["vitoria-es"],
         locations["jardim-da-penha"],
-        locations["praia-do-canto"],
-        locations["mata-da-praia"],
-        locations["vila-velha"],
-        locations["serra-es"],
     ];
 </script>
 

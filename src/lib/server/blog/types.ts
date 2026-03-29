@@ -1,7 +1,10 @@
-import type { BLOG_CATEGORIES } from "./constants";
+import type { BLOG_CATEGORIES, VALID_LOCATION_SCOPES, VALID_NEIGHBORHOODS } from "./constants";
 
 export type BlogCategory = (typeof BLOG_CATEGORIES)[number];
 export type BlogCategorySlug = BlogCategory["slug"];
+
+export type LocationScope = (typeof VALID_LOCATION_SCOPES)[number];
+export type Neighborhood = (typeof VALID_NEIGHBORHOODS)[number];
 
 export type BlogSchemaType = "Article" | "BlogPosting";
 
@@ -29,6 +32,8 @@ export interface BlogFrontmatter {
     faq?: BlogFaqItem[];
     references?: string[];
     featured?: boolean;
+    locationScope?: LocationScope;
+    neighborhood?: Neighborhood;
 }
 
 export interface BlogPostIndexItem {
@@ -48,6 +53,8 @@ export interface BlogPostIndexItem {
     lastReviewed?: string;
     references?: string[];
     featured?: boolean;
+    locationScope?: LocationScope;
+    neighborhood?: Neighborhood;
     source: "markdown";
 }
 

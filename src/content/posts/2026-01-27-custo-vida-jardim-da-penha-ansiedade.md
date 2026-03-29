@@ -2,8 +2,10 @@
 slug: "custo-vida-jardim-da-penha-ansiedade"
 title: "Aluguel, Condomínio e Ansiedade: o peso do custo de vida em Jardim da Penha na saúde mental"
 description: "O impacto da ansiedade financeira em quem mora em Jardim da Penha. Entenda como o alto custo de vida (aluguel, condomínio) afeta a saúde mental e o que fazer para se proteger."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-01-27"
 dateLabel: "27 Jan 2026"
 publishedOrder: 5

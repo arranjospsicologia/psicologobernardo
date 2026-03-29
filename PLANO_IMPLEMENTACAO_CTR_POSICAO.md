@@ -1,465 +1,614 @@
-# Plano de Implementação para Melhorar CTR e Posição Orgânica
+# Plano de Implementacao para Melhorar CTR e Posicao Organica
 
-## Contexto
+## Contexto Atual
 
-### Indicadores atuais
-- CTR médio: `0,9%`
+### Indicadores de partida
+
+- CTR medio: `0,9%`
 - Cliques: `65`
-- Impressões: `7,14 mil`
-- Posição média: `7,9`
+- Impressoes: `7,14 mil`
+- Posicao media: `7,9`
 
-### Leitura estratégica
-O site já possui uma base técnica sólida de SEO, com páginas de serviço, páginas locais, blog, sitemap, robots, dados estruturados e cobertura semântica relevante. O problema principal não é ausência de estrutura, mas sim **competitividade orgânica insuficiente na camada de apresentação, diferenciação e foco de intenção**.
+### Leitura estrategica atualizada
 
-Como webdesigner senior, a leitura é que o site precisa evoluir em quatro frentes simultâneas:
+O site ja passou por uma reorganizacao estrutural importante:
 
-1. **Melhorar o poder de clique dos snippets**
-2. **Definir hierarquia clara entre páginas que hoje disputam a mesma busca**
-3. **Aumentar clareza comercial e percepção de autoridade nas landing pages**
-4. **Conectar melhor UX, SEO local e conversão**
+- o blog foi consolidado em categorias tematicas
+- a estrategia local foi concentrada em `Vitória` e `Jardim da Penha`
+- as paginas locais fracas foram removidas
+- o site ja esta mais coerente do ponto de vista de marca, SEO local e navegacao
 
----
+Isso muda o problema principal.
 
-## Objetivos
+O problema agora nao e mais arquitetura inchada. O desafio principal passou a ser:
 
-### Objetivo principal
-Elevar a taxa de clique orgânica e melhorar a posição média das páginas com maior intenção comercial.
+- aumentar o poder de clique na SERP
+- deixar cada pagina principal mais nitida em sua funcao
+- transformar paginas boas em paginas mais competitivas comercialmente
+- fazer o blog transferir mais valor para paginas de servico e localizacao
 
-### Objetivos secundários
-- Tornar a home a página mais forte para a busca principal
-- Reduzir canibalização entre páginas locais e institucionais
-- Aumentar clareza visual e comercial nas páginas que hoje aparecem no Google
-- Fortalecer confiança, prova social e intenção de contato
-- Criar um sistema de medição por tipo de página
-
-### Meta de curto prazo
-- Sair de `0,9%` para `1,8% a 2,5%` de CTR médio nas páginas comerciais
-- Levar a posição média das páginas prioritárias para a faixa `3 a 6`
+Em outras palavras: a fundacao estrutural esta mais forte. O proximo salto depende de apresentacao, diferenciação e refinamento de experiencia.
 
 ---
 
-## Diagnóstico Executivo
+## Objetivo Principal
 
-## 1. Problema de CTR
-Os títulos e descrições atuais são corretos, mas ainda pouco persuasivos. Eles descrevem o serviço, porém não criam vantagem competitiva clara na SERP.
+Elevar CTR e melhorar posicao das paginas que mais importam comercialmente, sem voltar a inflar a arquitetura do site.
 
-Hoje os snippets falam muito em:
-- cidade
-- bairro
-- presencial e online
+## Objetivos Secundarios
+
+- tornar a `home` a resposta mais forte para a busca ampla de cidade
+- deixar `Vitória`, `Jardim da Penha` e `psicoterapia-individual` menos sobrepostas e mais complementares
+- aumentar a clareza de decisao nas paginas que ja recebem impressao
+- usar o blog como mecanismo de autoridade e encaminhamento, nao apenas como acervo de leitura
+- melhorar a competitividade dos snippets sem perder coerencia com o conteudo real
+
+## Meta de Curto Prazo
+
+- levar o CTR medio das paginas comerciais para a faixa de `1,8% a 2,5%`
+- aumentar a taxa de clique das paginas ja posicionadas entre `4` e `12`
+- puxar as paginas prioritarias para faixas de posicao mais proximas de `3 a 6`, quando a concorrencia permitir
+
+---
+
+## Diagnostico Executivo
+
+## 1. O site aparece, mas ainda pode convencer melhor o clique
+
+Hoje os snippets sao corretos, mas ainda sao mais informativos do que persuasivos.
+
+Eles explicam:
+
+- quem atende
+- onde atende
+- modalidade
 - abordagem
 
-Mas exploram pouco:
-- prova social
-- proximidade prática
-- clareza de primeira sessão
-- facilidade de contato
-- especialidade mais buscada
-- diferencial humano real
+Mas ainda podem explorar melhor:
 
-Resultado: o site aparece, mas não “vence” o clique.
+- o beneficio real de clicar
+- a praticidade do atendimento
+- a confianca transmitida pelo consultorio fisico
+- a relacao entre localizacao, primeira sessao e facilidade de inicio
 
-## 2. Problema de foco
-Há sinais de sobreposição entre:
-- home
-- página `psicologo-vitoria-es`
-- página `psicologo-jardim-da-penha`
-- página `psicoterapia-individual`
+Resultado: o site ganha impressao, mas ainda nao transforma toda essa visibilidade em clique.
 
-Essas páginas se aproximam demais em intenção, o que pode fragmentar relevância.
+## 2. As paginas principais ainda precisam de papeis mais explicitos
 
-## 3. Problema de design orientado à busca
-As páginas são boas do ponto de vista editorial, mas em algumas áreas ainda se comportam mais como páginas informativas do que como landing pages orientadas à decisão.
+O site ja melhorou bastante nesse ponto, mas ainda vale refinar a separacao entre:
 
-Falta reforçar:
-- proposta de valor acima da dobra
-- diferenciação entre páginas
-- blocos de decisão rápidos
-- gatilhos de confiança com hierarquia visual mais forte
-- respostas mais diretas para a intenção da busca
+- `/`
+- `/localizacao/psicologo-vitoria-es/`
+- `/localizacao/psicologo-jardim-da-penha/`
+- `/servicos/psicoterapia-individual/`
 
-## 4. Problema de desempenho e apoio editorial
-O blog é uma boa alavanca de autoridade, mas precisa:
-- transferir mais força para páginas comerciais
-- melhorar consistência de CTA e links internos
-- reduzir peso técnico em páginas de artigo
+Se a diferenca de funcao entre elas nao estiver absolutamente clara para o usuario e para o Google, parte da relevancia pode continuar fragmentada.
 
----
+## 3. Algumas paginas ainda se comportam mais como paginas corretas do que como paginas vencedoras
 
-## Estratégia Geral
+Elas estao boas.
 
-O plano será executado em cinco frentes:
+Mas em muitas delas ainda ha espaco para:
 
-1. **Reposicionamento da arquitetura de páginas**
-2. **Redesign de snippets e mensagem de busca**
-3. **Refinamento UX/UI das páginas com maior intenção comercial**
-4. **Fortalecimento de SEO local e autoridade**
-5. **Medição e iteração**
+- mais clareza logo no primeiro bloco
+- melhor hierarquia visual de decisao
+- CTA mais direcionado
+- microblocos mais fortes para mobile
+- mais contraste entre informacao institucional e resposta pratica
+
+## 4. O blog ainda pode ser melhor usado como canal de empurrar intencao
+
+O blog ja esta melhor organizado, mas ainda precisa:
+
+- direcionar mais o leitor para paginas de servico e localizacao
+- padronizar melhor os CTAs
+- usar com mais inteligencia os posts com potencial comercial
 
 ---
 
-## Frente 1: Arquitetura e Hierarquia de Busca
+## Estrategia Geral
+
+O plano sera executado em seis frentes:
+
+1. hierarquia e papel de cada pagina forte
+2. redesign de snippets
+3. refinamento das landing pages comerciais
+4. fortalecimento da pagina de servico principal
+5. blog como apoio de autoridade e conversao
+6. medicao e iteracao
+
+---
+
+## Frente 1: Hierarquia e Papel de Cada Pagina
 
 ### Objetivo
-Definir com clareza qual página responde a qual intenção.
 
-### Decisão estratégica
-- **Home**: página principal para `psicólogo em Vitória ES`
-- **/localizacao/psicologo-vitoria-es/**: página de suporte local/logístico
-- **/localizacao/psicologo-jardim-da-penha/**: página hiperlocal para bairro e UFES
-- **/servicos/psicoterapia-individual/**: página principal da intenção comercial de serviço
+Deixar inequivoco qual pagina responde a qual tipo de busca.
 
-### Ações
-- Reposicionar a home como a landing principal da busca mais ampla e comercial
-- Reduzir sobreposição semântica entre home e `psicologo-vitoria-es`
-- Reescrever H1, title, description e blocos iniciais para diferenciar melhor cada página
-- Revisar links internos para apontar a intenção correta
+### Mapa estrategico
 
-### Resultado esperado
-- Menos canibalização
-- Sinais mais claros para o Google
-- Melhor distribuição de autoridade interna
+- `home`
+  Papel: principal resposta para a busca ampla de `psicologo em Vitória ES`
+
+- `/localizacao/psicologo-vitoria-es/`
+  Papel: pagina de suporte local e logistico da cidade, para quem quer confirmar regiao, acesso, contexto urbano e encaixe pratico
+
+- `/localizacao/psicologo-jardim-da-penha/`
+  Papel: pagina hiperlocal para bairro, UFES, deslocamento curto e prova concreta de proximidade
+
+- `/servicos/psicoterapia-individual/`
+  Papel: pagina principal da intencao comercial de servico
+
+- `/servicos/terapia-de-casal/`
+  Papel: pagina principal da intencao relacional
+
+- `/servicos/terapia-online/`
+  Papel: pagina principal da intencao por modalidade
+
+### Que alteracoes essas paginas devem sofrer
+
+#### Home
+
+A home deve sofrer alteracoes para se tornar menos apenas institucional e mais claramente a pagina principal da busca ampla.
+
+Mudancas recomendadas:
+
+- H1 e subtitulo com promessa mais clara de atendimento em `Vitória`
+- bloco inicial mais forte para responder rapidamente:
+  - quem atende
+  - onde atende
+  - como funciona
+  - qual o proximo passo
+- menos texto de apresentacao generica e mais texto de decisao
+- CTA principal mais explicito para iniciar conversa
+- CTA secundario apontando para a pagina certa, sem disputar demais com o CTA principal
+
+Na pratica, a home deve se parecer menos com uma vitrine institucional ampla e mais com uma landing page premium de entrada.
+
+#### Página `Vitória`
+
+Essa pagina deve deixar mais claro que ela nao concorre com a home, e sim aprofunda a camada local da cidade.
+
+Mudancas recomendadas:
+
+- reforcar logo no hero que o consultorio fica em Jardim da Penha, em Vitória
+- reduzir qualquer sensacao de repeticao exata da promessa da home
+- enfatizar acesso, bairros atendidos, deslocamento, logistica e encaixe de rotina
+- usar `psicoterapia-individual` como servico principal visivel desde o topo
+- deixar a pagina mais orientada a confirmar `faz sentido para mim?`
+
+Na pratica, essa pagina deve parecer menos uma segunda home e mais uma pagina de prova local.
+
+#### Página `Jardim da Penha`
+
+Essa pagina deve operar como a pagina de maior concretude geográfica.
+
+Mudancas recomendadas:
+
+- hero mais focado em proximidade real, UFES e viabilidade
+- reforcar o endereco e a facilidade de acesso como diferencial de adesao ao processo
+- usar linguagem de bairro e rotina, nao linguagem ampla de cidade
+- manter o servico principal sempre visivel
+- trabalhar mais fortemente a logica de `consultorio aqui no bairro`
+
+Na pratica, essa pagina deve parecer a mais palpavel e menos abstrata de todas.
+
+#### Página `psicoterapia-individual`
+
+Essa pagina precisa sofrer as alteracoes mais importantes do plano.
+
+Mudancas recomendadas:
+
+- reescrever hero com foco em decisao, nao apenas explicacao
+- destacar logo acima da dobra:
+  - quando faz sentido procurar terapia
+  - o que esperar da primeira sessao
+  - presencial ou online
+  - como agendar
+- transformar a pagina na resposta mais forte para quem ja passou da curiosidade e esta perto da decisao
+- organizar melhor a relacao entre dor, formato, processo e acao
+
+Na pratica, essa pagina deve parecer a principal pagina comercial do site, e nao apenas uma pagina descritiva de servico.
 
 ---
 
 ## Frente 2: Redesign dos Snippets
 
 ### Objetivo
-Aumentar CTR sem depender apenas de ganho de posição.
 
-### Princípio de design de snippet
-Cada snippet precisa responder em poucos segundos:
-- quem é
-- onde atende
-- por que clicar
-- o que a pessoa encontra na página
+Ganhar clique antes mesmo de ganhar mais posicao.
 
-### Diretrizes de copy para titles
-- Começar com a intenção principal
-- Incluir local quando relevante
-- Inserir diferencial real
-- Evitar titles genéricos e apenas descritivos
+### O que precisa mudar
 
-### Diretrizes de copy para meta descriptions
-- Mostrar benefício claro
-- Inserir contexto de decisão
-- Reforçar confiança ou praticidade
-- Terminar com convite implícito à ação, sem parecer anúncio agressivo
+Os snippets precisam deixar de ser apenas corretos e passar a ser mais distintivos.
 
-### Páginas prioritárias para reescrita
-- Home
-- `localizacao/psicologo-vitoria-es`
-- `localizacao/psicologo-jardim-da-penha`
-- `servicos/psicoterapia-individual`
-- `servicos/terapia-de-casal`
-- `servicos/terapia-online`
-- `agendar`
-- `contato`
+Hoje, em muitos casos, o snippet ainda apresenta a pagina de forma neutra demais.
 
-### Critérios de qualidade
-- Cada snippet precisa ser único
-- Cada snippet precisa ter promessa compatível com o conteúdo real da página
-- A descrição não deve repetir apenas o title com outras palavras
+As mudancas devem incluir:
 
----
+- titles com promessa mais clara
+- descriptions com beneficio mais concreto
+- menos formula descritiva padrao
+- mais diferenciacao entre pagina ampla, pagina local e pagina de servico
 
-## Frente 3: Redesign das Landing Pages Comerciais
+### Tipo de alteracao por pagina
 
-### Objetivo
-Fazer com que páginas que já recebem impressões passem a converter melhor clique e permanência.
+#### Home
 
-### Páginas mais importantes
-- Home
-- `psicoterapia-individual`
-- `psicologo-vitoria-es`
-- `psicologo-jardim-da-penha`
+O snippet da home deve deixar claro que essa e a pagina principal para quem busca psicologo em Vitória, com consultorio real e possibilidade de iniciar sem friccao.
 
-### Melhorias de UX acima da dobra
-- Tornar a proposta de valor mais específica
-- Deixar evidente em 3 segundos:
-  - cidade/bairro
-  - modalidade
-  - principal serviço
-  - próxima ação
-- Reduzir abertura excessivamente institucional
-- Trazer mais clareza de decisão logo no primeiro bloco
+#### `Vitória`
 
-### Melhorias de conteúdo e layout
-- Criar um bloco visual de “isso pode fazer sentido para você se…”
-- Destacar “primeira sessão”, “como agendar” e “presencial ou online” sem exigir scroll profundo
-- Subir prova social e sinais de confiança para mais perto do topo
-- Reforçar microblocos com leitura rápida para mobile
-- Dar mais contraste entre páginas locais e páginas de serviço
+O snippet deve vender mais:
 
-### Melhorias de design orientadas à conversão
-- CTA principal único e consistente por página
-- CTA secundário contextual, não concorrente
-- Menos dispersão entre múltiplos caminhos no topo
-- Mais blocos escaneáveis e menos trechos longos na área de decisão
+- cidade
+- acesso
+- consultorio em Jardim da Penha
+- clareza de como funciona
 
-### Elementos visuais a reforçar
-- selos de confiança
-- CRP
-- região atendida
-- resposta no mesmo dia útil
-- consultório em frente à UFES
-- avaliações
+Ele precisa parecer util para quem quer confirmar se o atendimento encaixa na rotina.
+
+#### `Jardim da Penha`
+
+O snippet deve enfatizar:
+
+- bairro
+- UFES
+- proximidade
+- atendimento presencial com base concreta
+
+#### `psicoterapia-individual`
+
+O snippet deve prometer resposta para:
+
+- quando terapia faz sentido
+- o que esperar do processo
+- como comecar
+
+Essa pagina deve ter o snippet mais forte do conjunto comercial.
 
 ---
 
-## Frente 4: Diferenciação das Páginas Locais
+## Frente 3: Refinamento das Landing Pages Comerciais
 
 ### Objetivo
-Evitar que o conjunto local pareça uma série de páginas muito semelhantes.
 
-### Problema atual
-As páginas locais têm boa estrutura, porém parte do padrão editorial e comercial é repetido em excesso.
+Melhorar permanencia, entendimento e propensao de contato.
 
-### Diretriz de redesign
-Cada página local precisa ter um ângulo próprio:
-- `Vitória`: cobertura ampla da capital
-- `Jardim da Penha`: proximidade, UFES, praticidade e rotina
-- `Praia do Canto`: privacidade, deslocamento curto, rotina urbana
-- `Mata da Praia`: proximidade residencial e continuidade
-- `Vila Velha`: logística de ponte e alternativa híbrida
-- `Serra`: deslocamento e flexibilidade com online
+### O que precisa mudar no desenho das paginas
 
-### Ações
-- Reescrever blocos iniciais para refletir contexto real da região
-- Reduzir repetição estrutural excessiva
-- Criar módulos realmente diferentes por região
-- Ajustar interlinking para que as páginas locais apontem sempre para o serviço principal correto
+As paginas principais devem sofrer alteracoes de hierarquia visual e sequencia de leitura.
+
+Hoje elas ja estao boas, mas podem ficar mais objetivas para decisoes reais.
+
+### Alteracoes recomendadas
+
+#### 1. Hero mais util
+
+O hero precisa dizer mais rapidamente:
+
+- tipo de atendimento
+- local
+- principal servico
+- CTA principal
+
+Menos institucionalidade no topo.
+Mais resposta pratica.
+
+#### 2. Blocos de decisao mais cedo
+
+Criar ou reforcar blocos como:
+
+- `isso pode fazer sentido para voce se...`
+- `quando a psicoterapia costuma ajudar`
+- `o que acontece na primeira sessao`
+- `como funciona na pratica`
+
+Esses blocos reduzem ambiguidade e melhoram leitura mobile.
+
+#### 3. Prova social mais alta
+
+As avaliacoes, o CRP, a localizacao e os sinais de confianca devem aparecer mais cedo ou com maior contraste.
+
+Nao para exagerar persuasao, mas para reduzir hesitacao.
+
+#### 4. CTA principal mais limpo
+
+Cada pagina deve ter um CTA principal visivelmente dominante.
+
+Exemplo:
+
+- home: `Agendar primeira conversa`
+- `Vitória`: `Agendar conversa`
+- `Jardim da Penha`: `Agendar conversa`
+- `psicoterapia-individual`: `Iniciar pelo WhatsApp`
+
+O CTA secundario deve orientar, nao competir.
+
+#### 5. Mais escaneabilidade
+
+As paginas devem ganhar:
+
+- listas curtas
+- subblocos visuais
+- respostas objetivas
+- menos dependencia de texto corrido longo nas areas de decisao
+
+---
+
+## Frente 4: Fortalecimento da Pagina de Dinheiro
+
+### Objetivo
+
+Fazer `/servicos/psicoterapia-individual/` funcionar como principal destino comercial do dominio.
+
+### Alteracoes que essa pagina deve sofrer
+
+#### Hero
+
+- promessa mais forte
+- foco no beneficio real
+- menos explicacao generica
+
+#### Bloco de entrada
+
+- mostrar quando a terapia costuma fazer sentido
+- reduzir o salto entre curiosidade e contato
+
+#### Primeira sessao
+
+- essa parte deve subir na pagina
+- precisa ficar muito facil de encontrar
+- precisa responder objecoes sem rodeio
+
+#### Modalidade
+
+- mostrar com mais clareza a relacao entre presencial e online
+- integrar isso com localizacao e rotina
+
+#### CTA
+
+- mais coerente com a fase de decisao
+- mais presente, mas sem poluicao
 
 ### Resultado esperado
-- Melhora de diferenciação semântica
-- Maior relevância local
-- Menor risco de canibalização
+
+A pagina deixa de ser so uma pagina de servico e passa a ser uma pagina de fechamento de intencao.
 
 ---
 
-## Frente 5: Serviço Principal como Página de Dinheiro
+## Frente 5: Blog como Apoio de Autoridade e Conversao
 
 ### Objetivo
-Transformar `psicoterapia-individual` na página mais forte de intenção comercial.
 
-### Papel estratégico
-Essa página deve ser tratada como principal destino de:
-- home
-- páginas locais
-- artigos topo e meio de funil
-- páginas de experiência
+Usar o blog para empurrar o leitor para a pagina certa, no momento certo.
 
-### Ações
-- Reforçar o H1 e subtítulo com foco de decisão
-- Destacar “quando costuma fazer sentido”
-- Tornar “o que esperar da primeira sessão” ainda mais visível
-- Tornar mais explícito o caminho entre dor, modalidade e agendamento
-- Garantir que o snippet seja o mais competitivo entre as páginas comerciais
+### O que precisa mudar nos artigos
 
-### Indicadores de sucesso
-- aumento de impressões qualificadas
-- aumento de CTR
-- crescimento de cliques vindos de páginas locais e artigos
+Os artigos devem sofrer menos mudancas editoriais gerais e mais mudancas de encaminhamento.
+
+### Alteracoes recomendadas
+
+#### 1. CTA final mais inteligente
+
+O CTA do fim do artigo precisa conversar com a dor e com a etapa do leitor.
+
+Exemplo:
+
+- artigo sobre primeira sessao -> CTA para `psicoterapia-individual`
+- artigo local UFES/Jardim da Penha -> CTA para `Jardim da Penha`
+- artigo sobre formato online -> CTA para `terapia-online`
+
+#### 2. Links internos mais estrategicos
+
+Os links contextuais ao longo do texto precisam ser menos aleatorios e mais funcionais.
+
+Cada artigo forte deve ter rotas claras para:
+
+- uma pagina de servico
+- uma pagina local, quando fizer sentido
+- contato ou agendamento, em contexto mais quente
+
+#### 3. Revisao dos artigos mais promissores
+
+Os artigos com maior potencial de empurrar demanda comercial devem receber:
+
+- title SEO melhor, quando houver espaco
+- CTA melhor
+- links internos mais fortes
+- fechamento mais orientado a proximo passo
+
+#### 4. Experiencia mobile
+
+Os artigos precisam continuar leves e faceis de ler.
+
+Melhorias de performance e escaneabilidade aqui ajudam indireta e diretamente a SEO.
 
 ---
 
-## Frente 6: Blog como Apoio de Autoridade e Conversão
+## Frente 6: SEO Local Fora da Pagina
 
 ### Objetivo
-Usar o conteúdo para sustentar posição e alimentar as páginas de maior valor comercial.
 
-### Ajustes estratégicos
-- Revisar títulos de artigos com intenção mais forte quando houver oportunidade
-- Melhorar títulos SEO dos artigos no head
-- Criar CTAs internos mais coerentes com a dor do leitor
-- Padronizar links contextuais para páginas de serviço e localização
-- Priorizar artigos que puxam demanda local e primeira sessão
+Fortalecer confianca, o que aumenta tanto clique quanto conversao.
 
-### Ações imediatas
-- Revisar artigos que tratam de:
-  - primeira sessão
-  - terapia online
-  - psicólogo em Vitória
-  - UFES
-  - Jardim da Penha
-- Corrigir link placeholder de mapa em artigos locais
-- Mapear os 10 artigos com maior potencial de transferir autoridade comercial
+### O que deve ser reforcado
 
-### Ação técnica recomendada
-- Reduzir o peso carregado na rota de artigo
-- Avaliar lazy loading ou segmentação da base de conteúdo
-- Melhorar experiência mobile nos templates informacionais
-
----
-
-## Frente 7: SEO Local Fora da Página
-
-### Objetivo
-Fortalecer sinais externos que influenciam clique e posição.
-
-### Ações
-- Melhorar consistência entre site, Google Business Profile e Doctoralia
-- Solicitar novas avaliações com frequência
-- Estimular reviews que mencionem:
+- consistencia entre site, Google Business Profile e Doctoralia
+- recorrencia de novas avaliacoes
+- reviews que mencionem:
   - Vitória
   - Jardim da Penha
   - acolhimento
+  - consultorio
   - atendimento presencial e online
-- Reforçar presença em citações locais e diretórios relevantes
-- Buscar menções locais de qualidade
 
-### Observação
-CTR e posição em busca local não dependem só do site. A confiança externa tem peso importante, especialmente em nicho de psicologia.
+### Efeito esperado
+
+Mesmo quando o snippet nao muda radicalmente, mais confianca percebida aumenta a chance de clique e melhora a relacao entre impressao e conversao.
 
 ---
 
-## Frente 8: Medição e Governança
+## Medicao e Governanca
 
 ### Objetivo
-Parar de olhar apenas o CTR médio agregado e passar a medir por intenção.
 
-### Estrutura de monitoramento
-Separar no Search Console:
-- páginas comerciais
-- páginas locais
+Medir por intencao, nao apenas por media agregada.
+
+### Como separar
+
+No Search Console:
+
+- paginas comerciais
+- paginas locais
 - artigos
 
-### Métricas principais
-- impressões
-- CTR
-- posição média
-- consultas por página
-- páginas com posição entre `4` e `12`
-
 ### Leitura operacional
-- Se a posição é boa e CTR é ruim: problema de snippet
-- Se a impressão cresce e posição cai: problema de foco/competição
-- Se a posição melhora e o clique não sobe: problema de proposta na SERP
 
-### Frequência
-- revisão semanal: páginas prioritárias
-- revisão quinzenal: consultas e CTR
-- revisão mensal: arquitetura e conteúdo
+- posicao boa + CTR ruim = problema de snippet
+- impressao cresce + posicao cai = foco insuficiente ou competicao
+- pagina com muito clique interno e pouca conversao = problema de mensagem ou CTA
+
+### Frequencia recomendada
+
+- semanal: paginas prioritarias
+- quinzenal: CTR e consultas
+- mensal: revisao de snippet, copy e interlinking
 
 ---
 
-## Ordem de Implementação
+## Ordem de Implementacao
 
-## Fase 1: Ajustes de maior impacto e menor esforço
+## Fase 1: Snippet e foco de pagina
+
 Prazo estimado: `1 semana`
 
-- Definir página principal da keyword `psicólogo em Vitória ES`
-- Reescrever titles e descriptions das páginas prioritárias
-- Ajustar snippets das páginas comerciais
-- Corrigir links quebrados ou placeholders
-- Revisar CTAs principais da home e serviço principal
+- revisar mapa de intencao das paginas fortes
+- reescrever titles e descriptions prioritarias
+- ajustar headings e hero das paginas principais
 
-## Fase 2: Redesign das páginas comerciais
+## Fase 2: Landing pages comerciais
+
 Prazo estimado: `1 a 2 semanas`
 
-- Revisar hero da home
-- Revisar hero de `psicoterapia-individual`
-- Reorganizar blocos de decisão
-- Subir prova social e confiança
-- Refinar hierarquia visual para mobile
+- revisar hero e bloco inicial da home
+- revisar hero e bloco inicial de `Vitória`
+- revisar hero e bloco inicial de `Jardim da Penha`
+- revisar estrutura de `psicoterapia-individual`
+- reorganizar blocos de decisao e CTA
 
-## Fase 3: Redesign das páginas locais
-Prazo estimado: `2 semanas`
+## Fase 3: Blog e transferencia de autoridade
 
-- Diferenciar melhor `Vitória`, `Jardim da Penha`, `Praia do Canto`, `Mata da Praia`, `Vila Velha` e `Serra`
-- Reescrever blocos repetidos
-- Ajustar interlinking local
+Prazo estimado: `1 a 2 semanas`
 
-## Fase 4: Blog e autoridade
-Prazo estimado: `2 semanas`
+- revisar os artigos com maior potencial comercial
+- melhorar CTAs e links internos
+- reforcar caminhos para servicos e localizacao
 
-- Revisar artigos mais estratégicos
-- Melhorar títulos SEO dos artigos
-- Fortalecer links internos para páginas de dinheiro
-- Melhorar template de artigo em performance e conversão
+## Fase 4: Medicao e iteracao
 
-## Fase 5: Medição e iteração
-Prazo contínuo
+Prazo continuo
 
 - acompanhar Search Console
-- comparar páginas antes e depois
-- rodar revisões mensais
+- comparar CTR e consultas antes e depois
+- iterar nas paginas com maior impressao e menor clique
 
 ---
 
-## Priorização por Impacto
+## Priorizacao por Impacto
 
 ### Alto impacto
-- Reposicionar a home e a página de Vitória
-- Reescrever snippets principais
-- Fortalecer `psicoterapia-individual`
-- Melhorar diferenciação das páginas locais
 
-### Médio impacto
-- Revisar UX dos CTAs
-- Reorganizar blocos de prova social
-- Melhorar transferência de autoridade via blog
+- reescrever snippets principais
+- fortalecer `psicoterapia-individual`
+- diferenciar melhor `home`, `Vitória` e `Jardim da Penha`
+- melhorar transferencia de autoridade do blog
 
-### Baixo impacto, mas necessário
-- Corrigir placeholder de mapa
-- Revisar pequenos detalhes de consistência visual e textual
-- Ajustar pequenos pontos técnicos de desempenho
+### Medio impacto
+
+- subir sinais de confianca
+- reorganizar blocos de decisao
+- melhorar escaneabilidade mobile
+
+### Baixo impacto, mas necessario
+
+- pequenos ajustes de copy
+- consistencia visual
+- refinamentos de performance em artigos
 
 ---
 
-## Checklist de Entrega
+## Checklist Atualizado
 
 ### SEO e busca
-- [ ] Definir mapa de intenção por página
-- [ ] Reescrever titles prioritários
-- [ ] Reescrever meta descriptions prioritárias
-- [ ] Revisar headings das páginas principais
-- [ ] Ajustar links internos estratégicos
+
+- [ ] revisar mapa de intencao por pagina
+- [ ] reescrever titles prioritarios
+- [ ] reescrever meta descriptions prioritarias
+- [ ] revisar headings das paginas principais
+- [ ] ajustar links internos estrategicos
 
 ### UX e design
-- [ ] Redesenhar hero da home
-- [ ] Redesenhar hero do serviço principal
-- [ ] Reorganizar blocos de decisão
-- [ ] Reforçar prova social acima da dobra
-- [ ] Tornar CTA principal mais claro e consistente
 
-### Conteúdo
-- [ ] Diferenciar páginas locais
-- [ ] Revisar textos repetitivos
-- [ ] Melhorar CTAs do blog
-- [ ] Ajustar títulos de artigo com foco SEO
+- [ ] revisar hero da home
+- [ ] revisar hero de `Vitória`
+- [ ] revisar hero de `Jardim da Penha`
+- [ ] revisar hero de `psicoterapia-individual`
+- [ ] reorganizar blocos de decisao
+- [ ] reforcar prova social acima da dobra
+- [ ] tornar CTA principal mais claro e consistente
 
-### Técnica
-- [ ] Corrigir links placeholder
-- [ ] Revisar peso das páginas de artigo
-- [ ] Validar desempenho mobile
+### Conteudo
 
-### Mensuração
-- [ ] Criar agrupamento por tipo de página no Search Console
-- [ ] Revisar consultas com posição 4 a 12
-- [ ] Fazer leitura quinzenal de CTR
+- [ ] reforcar diferenciacao entre `Vitória` e `Jardim da Penha`
+- [ ] melhorar CTAs do blog
+- [ ] revisar artigos com maior valor comercial
+- [ ] ajustar titulos SEO dos artigos prioritarios quando fizer sentido
+
+### Tecnica
+
+- [ ] revisar peso das paginas de artigo
+- [ ] validar desempenho mobile
+- [ ] confirmar consistencia de snippets, canonical e hierarquia nas paginas prioritarias
+
+### Mensuracao
+
+- [ ] criar agrupamento por tipo de pagina no Search Console
+- [ ] revisar consultas com posicao `4 a 12`
+- [ ] fazer leitura quinzenal de CTR
 
 ---
 
 ## Resultado Esperado
 
-Se este plano for executado com consistência, o ganho mais provável no curto prazo virá de:
-- melhoria de CTR por snippet
-- melhora de foco entre páginas
-- aumento da clareza comercial das landing pages
+Se este plano for executado com consistencia, o ganho mais provavel no curto prazo vira de:
 
-No médio prazo, a combinação de:
+- snippets mais fortes
+- paginas mais nitidas em sua funcao
+- maior clareza comercial nas areas de decisao
+
+No medio prazo, a combinacao de:
+
 - melhor UX
-- melhor hierarquia semântica
-- melhor SEO local
-- melhor interligação entre conteúdo e páginas comerciais
+- melhor apresentacao na SERP
+- melhor transferencia de autoridade via blog
+- melhor coerencia entre localizacao, servico e CTA
 
-deve produzir aumento de clique, posição e conversão.
+deve produzir aumento de clique, posicao e conversao.
 
 ---
 
-## Recomendação Final
+## Recomendacao Final
 
-Este projeto não precisa de mais páginas antes de melhorar a qualidade estratégica das páginas já existentes. O próximo salto de resultado virá de **foco, diferenciação e refinamento de experiência**, não de volume.
+O site ja fez a parte estrutural mais dificil.
 
-O caminho mais eficiente é tratar o site menos como um conjunto de páginas informativas e mais como um **ecossistema de landing pages locais com narrativa editorial de apoio**.
+Agora o proximo salto nao depende de criar mais paginas.
+
+Depende de fazer as paginas certas parecerem mais fortes, mais claras e mais dignas do clique.
+
+O caminho mais eficiente e tratar o site como um sistema de paginas comerciais premium:
+
+- cada uma com funcao clara
+- cada uma com promessa especifica
+- cada uma com CTA coerente
+- todas apoiadas por um blog que conduz o leitor para a decisao certa

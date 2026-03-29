@@ -2,8 +2,9 @@
 slug: "como-escolher-psicologo-em-vitoria-es"
 title: "Como escolher um psicólogo em Vitória (ES): guia prático e seguro"
 description: "Aprenda como escolher um psicólogo em Vitória (ES) com critérios éticos e práticos: CRP, abordagem, localização (Jardim da Penha, UFES) e relação terapêutica."
-category: "vitoria-es"
-categoryLabel: "Vitória ES"
+category: "psicoterapia"
+categoryLabel: "Psicoterapia"
+locationScope: "vitoria-es"
 date: "2025-12-19"
 dateLabel: "19 Dez 2025"
 publishedOrder: 3

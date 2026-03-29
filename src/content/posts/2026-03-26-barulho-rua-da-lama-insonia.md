@@ -2,8 +2,10 @@
 slug: "barulho-rua-da-lama-insonia"
 title: "Barulho e insônia na Rua da Lama: como proteger seu sono morando em áreas boêmias"
 description: "Entenda por que o barulho noturno em Jardim da Penha pode piorar irritabilidade, cansaço e insônia, e veja medidas práticas para proteger o sono e buscar ajuda quando isso começa a pesar."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 3

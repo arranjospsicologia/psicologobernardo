@@ -27,20 +27,11 @@ export const BLOG_CATEGORIES = [
         description:
             "Artigos sobre o processo terapêutico, modalidades e dúvidas comuns",
     },
-    {
-        slug: "jardim-da-penha",
-        label: "Jardim da Penha",
-        description:
-            "Artigos sobre saúde mental em Jardim da Penha, UFES e região",
-    },
-    {
-        slug: "vitoria-es",
-        label: "Vitória ES",
-        description:
-            "Artigos sobre psicologia e saúde mental em Vitória, Espírito Santo",
-    },
 ] as const;
 
 export const BLOG_CATEGORY_MAP = new Map(
     BLOG_CATEGORIES.map((category) => [category.slug, category]),
 );
+
+export const VALID_LOCATION_SCOPES = ["vitoria-es"] as const;
+export const VALID_NEIGHBORHOODS = ["jardim-da-penha"] as const;

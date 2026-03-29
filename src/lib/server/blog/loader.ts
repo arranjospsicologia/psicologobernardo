@@ -87,6 +87,8 @@ function loadAllPosts(): BlogPostFull[] {
                 lastReviewed: frontmatter.lastReviewed,
                 references: frontmatter.references,
                 featured: frontmatter.featured,
+                locationScope: frontmatter.locationScope,
+                neighborhood: frontmatter.neighborhood,
                 source: "markdown" as const,
                 htmlContent: renderMarkdown(parsed.content),
                 faq: frontmatter.faq,

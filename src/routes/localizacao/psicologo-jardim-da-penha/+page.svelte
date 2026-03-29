@@ -72,7 +72,7 @@
     const blogArticles = [
         {
             slug: "onde-cuidar-saude-mental-jardim-da-penha",
-            categorySlug: "jardim-da-penha",
+            categorySlug: "saude-mental",
             title: "Onde cuidar da saúde mental em Jardim da Penha",
             reason: "Principal referência de saúde mental no bairro",
         },
@@ -95,26 +95,6 @@
             href: "/localizacao/psicologo-vitoria-es/",
             label: "Vitória ES",
             description: "Todos os bairros de Vitória",
-        },
-        {
-            href: "/localizacao/psicologo-praia-do-canto/",
-            label: "Praia do Canto",
-            description: "A poucos passos",
-        },
-        {
-            href: "/localizacao/psicologo-mata-da-praia/",
-            label: "Mata da Praia",
-            description: "Bairro vizinho ao consultório",
-        },
-        {
-            href: "/localizacao/psicologo-vila-velha/",
-            label: "Vila Velha",
-            description: "Presencial e online",
-        },
-        {
-            href: "/localizacao/psicologo-serra-es/",
-            label: "Serra",
-            description: "Presencial e online",
         },
     ];
 

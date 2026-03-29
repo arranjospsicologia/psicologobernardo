@@ -2,8 +2,9 @@
 slug: "terapia-de-casal-em-vitoria-quando-procurar"
 title: "Terapia de casal em Vitória: quando procurar ajuda para a relação?"
 description: "Entenda quando a terapia de casal faz sentido, quais sinais costumam aparecer antes de uma crise maior e como funciona esse cuidado em Vitória, com consultório em Jardim da Penha."
-category: "vitoria-es"
-categoryLabel: "Vitória ES"
+category: "psicoterapia"
+categoryLabel: "Psicoterapia"
+locationScope: "vitoria-es"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 8

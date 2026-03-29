@@ -7,8 +7,15 @@ import {
 import { BLOG_CATEGORIES } from "$lib/server/blog/constants";
 import type { BlogCategorySlug } from "$lib/server/blog/types";
 
+const LEGACY_GEO_CATEGORIES = ["vitoria-es", "jardim-da-penha"];
+
 export const load: PageServerLoad = ({ params }) => {
     if (params.categoria === "blog") {
+        throw redirect(301, "/artigos/");
+    }
+
+    // Legacy geographic archive → redirect to main blog index
+    if (LEGACY_GEO_CATEGORIES.includes(params.categoria)) {
         throw redirect(301, "/artigos/");
     }
 

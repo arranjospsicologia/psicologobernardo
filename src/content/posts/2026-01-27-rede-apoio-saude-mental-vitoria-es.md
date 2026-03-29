@@ -2,8 +2,9 @@
 slug: "rede-apoio-saude-mental-vitoria-es"
 title: "Rede de apoio em Vitória (ES): onde encontrar ajuda além do consultório?"
 description: "Saúde mental não se faz sozinho. Conheça os espaços públicos, grupos e serviços gratuitos de atendimento psicológico disponíveis em Vitória (ES)."
-category: "vitoria-es"
-categoryLabel: "Vitória (ES)"
+category: "saude-mental"
+categoryLabel: "Saúde Mental"
+locationScope: "vitoria-es"
 date: "2026-01-27"
 dateLabel: "27 Jan 2026"
 publishedOrder: 1

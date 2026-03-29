@@ -1,9 +1,11 @@
-import { BLOG_CATEGORY_MAP } from "./constants";
+import { BLOG_CATEGORY_MAP, VALID_LOCATION_SCOPES, VALID_NEIGHBORHOODS } from "./constants";
 import type {
     BlogCategorySlug,
     BlogFaqItem,
     BlogFrontmatter,
     BlogSchemaType,
+    LocationScope,
+    Neighborhood,
 } from "./types";
 
 function isNonEmptyString(value: unknown): value is string {
@@ -100,6 +102,22 @@ function normalizeSchemaType(value: unknown): BlogSchemaType | undefined {
     throw new Error("Frontmatter field 'schemaType' must be Article or BlogPosting");
 }
 
+function normalizeLocationScope(value: unknown): LocationScope | undefined {
+    if (value == null) return undefined;
+    if (typeof value === "string" && (VALID_LOCATION_SCOPES as readonly string[]).includes(value)) {
+        return value as LocationScope;
+    }
+    throw new Error(`Frontmatter field 'locationScope' must be one of: ${VALID_LOCATION_SCOPES.join(", ")}`);
+}
+
+function normalizeNeighborhood(value: unknown): Neighborhood | undefined {
+    if (value == null) return undefined;
+    if (typeof value === "string" && (VALID_NEIGHBORHOODS as readonly string[]).includes(value)) {
+        return value as Neighborhood;
+    }
+    throw new Error(`Frontmatter field 'neighborhood' must be one of: ${VALID_NEIGHBORHOODS.join(", ")}`);
+}
+
 export function validateFrontmatter(
     slugHint: string,
     input: Record<string, unknown>,
@@ -172,5 +190,7 @@ export function validateFrontmatter(
         faq: normalizeFaq(input.faq),
         references: normalizeReferences(input.references),
         featured: typeof input.featured === "boolean" ? input.featured : undefined,
+        locationScope: normalizeLocationScope(input.locationScope),
+        neighborhood: normalizeNeighborhood(input.neighborhood),
     };
 }

@@ -104,26 +104,6 @@
             label: "Jardim da Penha",
             description: "Consultório em frente à UFES",
         },
-        {
-            href: "/localizacao/psicologo-praia-do-canto/",
-            label: "Praia do Canto",
-            description: "Região litorânea de Vitória",
-        },
-        {
-            href: "/localizacao/psicologo-mata-da-praia/",
-            label: "Mata da Praia",
-            description: "Bairro vizinho ao consultório",
-        },
-        {
-            href: "/localizacao/psicologo-vila-velha/",
-            label: "Vila Velha",
-            description: "Presencial e online",
-        },
-        {
-            href: "/localizacao/psicologo-serra-es/",
-            label: "Serra",
-            description: "Presencial e online",
-        },
     ];
 
     const faqContent = [

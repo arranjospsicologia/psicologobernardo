@@ -2,8 +2,10 @@
 slug: "onde-encontrar-psicologo-perto-da-ufes"
 title: "Onde encontrar psicólogo perto da UFES? O que faz sentido olhar além da proximidade"
 description: "Se você estuda, trabalha ou circula pela UFES, entenda como procurar psicólogo perto da universidade com critérios práticos e éticos, considerando Jardim da Penha, logística e tipo de atendimento."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "psicoterapia"
+categoryLabel: "Psicoterapia"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2026-03-26"
 dateLabel: "26 Mar 2026"
 publishedOrder: 7

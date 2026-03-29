@@ -16,6 +16,16 @@ export const load: PageServerLoad = ({ params }) => {
         }
     }
 
+    // Handle legacy geographic category URLs (jardim-da-penha, vitoria-es)
+    const LEGACY_GEO_CATEGORIES = ["jardim-da-penha", "vitoria-es"];
+    if (LEGACY_GEO_CATEGORIES.includes(params.categoria)) {
+        const post = getPostBySlug(params.slug);
+        if (post) {
+            throw redirect(301, `/${post.categorySlug}/${post.slug}/`);
+        }
+        throw error(404, "Artigo não encontrado");
+    }
+
     const category = getCategoryBySlug(params.categoria);
 
     if (!category) {

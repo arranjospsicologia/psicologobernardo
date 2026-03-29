@@ -2,8 +2,10 @@
 slug: "terapia-para-estudantes-ufes-vitoria"
 title: "Terapia para Estudantes e Universitários em Vitória (UFES)"
 description: "Psicoterapia para estudantes e universitários em Vitória (UFES). Ansiedade acadêmica, pressão, futuro profissional e um consultório em frente à universidade, em Jardim da Penha."
-category: "jardim-da-penha"
-categoryLabel: "Jardim da Penha"
+category: "psicoterapia"
+categoryLabel: "Psicoterapia"
+locationScope: "vitoria-es"
+neighborhood: "jardim-da-penha"
 date: "2025-12-19"
 dateLabel: "19 Dez 2025"
 publishedOrder: 1

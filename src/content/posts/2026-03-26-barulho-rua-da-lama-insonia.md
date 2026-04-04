@@ -20,7 +20,6 @@ tags:
   - "Sono"
   - "Jardim da Penha"
   - "Rua da Lama"
-  - "jardim-da-penha"
 faq:
   - question: "Barulho pode mesmo causar insônia?"
     answer: "Sim. Ruído repetido, especialmente durante a madrugada, pode interromper o sono, aumentar o estado de alerta e dificultar que o corpo volte a relaxar."
@@ -92,7 +91,7 @@ Nem sempre dá para controlar o entorno. Por isso, costuma ser mais útil pensar
 </ul>
 
 <p>
-Se a rotina do bairro tem pesado em vários aspectos da vida, não apenas no sono, pode ajudar ler também <a href="/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha/">onde cuidar da saúde mental em Jardim da Penha</a> e <a href="/jardim-da-penha/por-que-escolher-um-psicologo-em-jardim-da-penha/">por que a logística real influencia tanto a continuidade do cuidado</a>.
+Se a rotina do bairro tem pesado em vários aspectos da vida, não apenas no sono, pode ajudar ler também <a href="/saude-mental/onde-cuidar-saude-mental-jardim-da-penha/">onde cuidar da saúde mental em Jardim da Penha</a> e <a href="/psicoterapia/por-que-escolher-um-psicologo-em-jardim-da-penha/">por que a logística real influencia tanto a continuidade do cuidado</a>.
 </p>
 </section>
 

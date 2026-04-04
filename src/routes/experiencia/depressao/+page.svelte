@@ -5,17 +5,17 @@
     let faqItems = $state([
         {
             question: "Como sei se preciso de ajuda profissional?",
-            answer: "Se os sinais de tristeza, desânimo ou perda de interesse persistem por semanas e afetam sua vida cotidiana, é um sinal de que buscar ajuda pode ser benéfico. Não é preciso esperar que as coisas fiquem 'muito ruins' — quanto antes você buscar apoio, melhor.",
+            answer: "Se os sinais de tristeza, desânimo ou perda de interesse persistem por semanas e afetam sua vida cotidiana, é um sinal de que buscar ajuda pode fazer sentido. Não é preciso esperar que as coisas fiquem muito difíceis para procurar um espaço de escuta.",
             open: false,
         },
         {
             question: "A terapia substitui a medicação?",
-            answer: "A psicoterapia e a medicação são caminhos complementares. Em muitos casos, a combinação de ambos traz os melhores resultados. Dependendo da intensidade do que você sente, pode ser indicado também o acompanhamento com um psiquiatra.",
+            answer: "A psicoterapia e a medicação são caminhos complementares. Em muitos casos, os dois recursos se somam de forma significativa. Dependendo da intensidade do que você sente, pode ser indicado também o acompanhamento com um psiquiatra.",
             open: false,
         },
         {
             question: "Quanto tempo leva para melhorar?",
-            answer: "Cada pessoa é única, e o tempo de melhora varia. Algumas pessoas sentem diferença em poucas semanas, enquanto outras precisam de mais tempo. O importante é respeitar seu ritmo e saber que o processo terapêutico é uma construção gradual.",
+            answer: "Cada pessoa é única, e o tempo do processo varia. Algumas pessoas percebem mudanças ao longo das primeiras semanas, enquanto outras precisam de mais tempo. O importante é respeitar seu ritmo e saber que o processo terapêutico é uma construção gradual.",
             open: false,
         },
         {

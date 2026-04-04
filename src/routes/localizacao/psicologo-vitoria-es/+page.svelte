@@ -59,21 +59,21 @@
 
     const neighborhoodGroups = [
         {
-            label: "Região da UFES",
+            label: "Perto do consultório",
             items: ["Jardim da Penha", "Mata da Praia", "Goiabeiras", "República"],
         },
         {
-            label: "Zona Leste",
+            label: "Acesso rápido pela Reta da Penha",
             items: [
                 "Praia do Canto",
                 "Enseada do Suá",
-                "Jardim Camburi",
                 "Bento Ferreira",
+                "Santa Lúcia",
             ],
         },
         {
-            label: "Centro e outras regiões",
-            items: ["Centro", "Santa Lúcia", "Maruípe", "Todos os bairros"],
+            label: "Outros bairros frequentes",
+            items: ["Jardim Camburi", "Centro", "Maruípe", "Santa Martha"],
         },
     ];
 
@@ -146,9 +146,9 @@
                 "@type": "WebPage",
                 "@id": "https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/#webpage",
                 url: "https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/",
-                name: "Psicólogo em Vitória ES | Bernardo Carielo",
+                name: "Psicólogo em Vitória ES — Acesso, Bairros e Consultório | Bernardo Carielo",
                 description:
-                    "Psicólogo em Vitória ES, com consultório em Jardim da Penha e atendimento online. Veja como funciona a psicoterapia individual e a terapia de casal.",
+                    "Consultório em Jardim da Penha, Vitória, em frente à UFES. Veja como chegar, bairros atendidos e como funciona o atendimento presencial e online.",
             },
             {
                 "@type": "FAQPage",
@@ -166,8 +166,8 @@
 </script>
 
 <SEO
-    title="Psicólogo em Vitória ES | Bernardo Carielo"
-    description="Psicólogo em Vitória ES, com consultório em Jardim da Penha e atendimento online. Veja como funciona a psicoterapia individual e a terapia de casal."
+    title="Psicólogo em Vitória ES — Acesso, Bairros e Consultório | Bernardo Carielo"
+    description="Consultório em Jardim da Penha, Vitória, em frente à UFES. Veja como chegar, bairros atendidos e como funciona o atendimento presencial e online."
     canonical="https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/"
     {jsonLd}
     preloadImage="/images/hero/hero-600x800.webp"
@@ -188,9 +188,9 @@
             <div class="hero-content">
                 <h1>Psicólogo em Vitória ES</h1>
                 <p class="hero-description">
-                    Atendimento psicológico em Vitória, com consultório em Jardim da Penha,
-                    em frente à UFES, e possibilidade de atendimento online. Para a maior parte
-                    das demandas individuais, a porta principal é a
+                    Consultório em Jardim da Penha, em frente à UFES, com acesso fácil a partir
+                    de diferentes bairros de Vitória. Atendimento presencial e online. Veja se a
+                    logística faz sentido para a sua rotina — a principal porta de entrada é a
                     <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>.
                 </p>
                 <div class="hero-buttons">
@@ -236,9 +236,9 @@
 <!-- Answer box + Editorial local -->
 <Section variant="beige">
     <article class="editorial-local">
-        <h2>Vitória: uma cidade compacta com espaço para o que importa</h2>
+        <h2>Um consultório em Vitória que cabe na sua rotina</h2>
         <p class="editorial-subtitle">
-            No centro da Grande Vitória, um consultório para quem quer se conhecer melhor
+            Jardim da Penha é central, o acesso é simples e o consultório fica em frente à UFES
         </p>
 
         <div class="answer-box">
@@ -346,9 +346,9 @@
 <!-- Bairros e acesso -->
 <Section variant="beige">
     <div class="section-header">
-        <h2>Atendimento em todos os bairros de Vitória</h2>
+        <h2>De onde vêm as pessoas que atendo</h2>
         <p style="color: var(--text-light); margin-top: 0.5rem;">
-            Consultório em localização central, de fácil acesso para moradores de toda Vitória
+            O consultório fica em Jardim da Penha, mas recebe pessoas de toda Vitória
         </p>
     </div>
     <div class="bairros-grid">
@@ -534,9 +534,9 @@
 <!-- CTA final -->
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Em Vitória, um espaço de escuta e autoconhecimento para quem quer se cuidar</h2>
+        <h2>Se a localização faz sentido, o próximo passo é simples</h2>
         <p>
-            Quando fizer sentido, basta uma mensagem para alinhar localização, formato e
+            Envie uma mensagem curta pelo WhatsApp para alinhar horário, formato e
             disponibilidade.
         </p>
         <Button href={whatsappUrl} variant="secondary" size="lg">

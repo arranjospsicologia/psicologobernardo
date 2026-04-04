@@ -19,7 +19,6 @@ tags:
   - "Relacionamentos"
   - "Vitória ES"
   - "Jardim da Penha"
-  - "vitoria-es"
 faq:
   - question: "Quando é a hora certa de fazer terapia de casal?"
     answer: "Em geral, quando o diálogo deixa de produzir aproximação e passa a gerar repetição, silêncio, ressentimento ou desgaste constante. Não é preciso esperar uma crise extrema para procurar ajuda."

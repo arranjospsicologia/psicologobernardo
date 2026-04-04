@@ -21,6 +21,7 @@
 		MapPin,
 		ChevronDown,
 		Zap,
+		Flame,
 		HeartPulse,
 		UsersRound,
 		SmilePlus,
@@ -40,21 +41,25 @@
 	const experienceIcons = {
 		"/experiencia/ansiedade/": Zap,
 		"/experiencia/depressao/": HeartPulse,
-		"/experiencia/burnout/": Zap,
+		"/experiencia/burnout/": Flame,
 		"/experiencia/relacionamento/": UsersRound,
 		"/experiencia/autoestima/": SmilePlus,
 	} as const;
 
 	const experienceAccents: Record<string, string> = {
-		"/experiencia/ansiedade/": "#F7B42A",
-		"/experiencia/depressao/": "#F83A50",
-		"/experiencia/burnout/": "#FFA467",
-		"/experiencia/relacionamento/": "#08BA9C",
-		"/experiencia/autoestima/": "#9B5DE5",
+		"/experiencia/ansiedade/": "#D4AD5A",
+		"/experiencia/depressao/": "#C97A83",
+		"/experiencia/burnout/": "#D4A87A",
+		"/experiencia/relacionamento/": "#6BAA9A",
+		"/experiencia/autoestima/": "#9B89B5",
 	};
 
-	// FAQ — preserving original content, reduced to 4
+	// FAQ da home — mantém dúvidas recorrentes também no schema FAQPage
 	const faqEntries = [
+		{
+			question: "Como funciona a primeira sessão?",
+			answer: "A primeira conversa já é uma sessão de terapia. Você pode trazer o que está vivendo com liberdade, ser acolhido com atenção, e ao final avaliamos juntos se faz sentido continuar.",
+		},
 		{
 			question: "Como funciona a terapia pela Abordagem Centrada na Pessoa?",
 			answer: "A terapia acontece em um espaço de escuta empática e genuína, onde você pode falar sobre o que sente sem julgamentos. O foco é ajudar você a se compreender e tomar decisões mais alinhadas a quem é.",
@@ -128,50 +133,9 @@
 		},
 	];
 
-	const doctoraliaReviewsStatic = [
-		{
-			name: "FG",
-			initial: "F",
-			rating: 5,
-			text: "Bernardo é um profissional ímpar. Atento e detalhista, ele é sempre pertinente em suas colocações e conduz o processo terapêutico de forma muito empática e leve. De forma bastante natural e com diálogo aberto, nos ajuda com as questões complexas que nos levam até ele. A gente fica bastante à vontade durante as sessões, sem tabus ou meias palavras.",
-			date: "8 de dezembro de 2020",
-		},
-		{
-			name: "Marina",
-			initial: "M",
-			rating: 5,
-			text: "Bernado se mostrou empático, responsivo, paciente e claro durante a sessão. Um diferencial foi a acolhida e a educação durante os contatos por Whatsapp.",
-			date: "1 de julho de 2025",
-		},
-		{
-			name: "Gustavo",
-			initial: "G",
-			rating: 5,
-			text: "O Bernardo tem me ajudado demais em um dos momentos mais difíceis da minha vida. Excelente psicólogo.",
-			date: "1 de dezembro de 2023",
-		},
-		{
-			name: "Mayke",
-			initial: "M",
-			rating: 5,
-			text: "Foi uma consulta que me aliviou e me fez dormir. Primeiro dia e me sinto mais leve, muito detalhado e perguntas que fazem sentido.",
-			date: "21 de setembro de 2022",
-		},
-		{
-			name: "Kleber",
-			initial: "K",
-			rating: 5,
-			text: "O Dr. Bernardo é extremamente atencioso e empático, me senti como se estivesse conversando com meu melhor amigo e tudo fluiu muito bem, dizem que a primeira impressão é a que fica e ela foi a melhor possível. Parabéns Dr. Bernardo você é 10, obrigado.",
-			date: "23 de fevereiro de 2022",
-		},
-	];
-
 	// Use loader data with static fallback
 	const googleReviews = $derived(
 		(data.googleReviews.length ? data.googleReviews : googleReviewsStatic).slice(0, 6)
-	);
-	const doctoraliaReviews = $derived(
-		(data.doctoraliaReviews.length ? data.doctoraliaReviews : doctoraliaReviewsStatic).slice(0, 6)
 	);
 
 	// Office images for carousel
@@ -347,8 +311,8 @@
 </script>
 
 <SEO
-	title="Psicólogo em Vitória ES – Jardim da Penha | Bernardo Carielo"
-	description="Psicólogo em Vitória ES, no Jardim da Penha. Atendimento presencial e online pela Abordagem Centrada na Pessoa. 8+ anos de experiência. Agende sua consulta."
+	title="Psicólogo em Vitória ES — Consultório em Jardim da Penha | Bernardo Carielo"
+	description="Psicólogo em Vitória com consultório em Jardim da Penha, em frente à UFES. Atendimento presencial e online. Agende uma primeira conversa sem compromisso pelo WhatsApp."
 	canonical="https://psicologobernardo.com.br/"
 	image={siteProfile.ogImageUrl}
 	imageAlt="Bernardo Carielo, psicólogo em Vitória ES"
@@ -394,7 +358,7 @@
 				class="hero-description animate-fade-in-up"
 				style="--delay: 0.3s"
 			>
-				Atendimento psicológico referência em <strong
+				Psicoterapia individual presencial em <strong
 					><a
 						href="/localizacao/psicologo-jardim-da-penha/"
 						class="text-primary-hover">Jardim da Penha</a
@@ -403,8 +367,7 @@
 						href="/localizacao/psicologo-vitoria-es/"
 						class="text-primary-hover">Vitória ES</a
 					></strong
-				> e online. Um espaço seguro, com base na Abordagem Centrada na Pessoa,
-				para você se conhecer e crescer.
+				> ou online. Escuta acolhedora, sem pressa — o primeiro passo é uma conversa.
 			</p>
 			<div class="hero-buttons animate-fade-in-up" style="--delay: 0.4s">
 				<Button
@@ -502,49 +465,29 @@
 	</div>
 </Section>
 
-<!-- Informações Rápidas -->
-<Section variant="white" class="home-quickinfo-section" id="informacoes-rapidas">
-	<div class="section-header section-header--left">
-		<span class="section-kicker">Antes de entrar em contato</span>
-		<h2>Informações rápidas</h2>
-	</div>
-	<div class="quickinfo-grid">
-		<div class="quickinfo-item">
-			<h3>Primeira sessão</h3>
-			<p>Já é uma sessão de terapia. Você traz o que está vivendo, é acolhido com atenção, e ao final avaliamos juntos se faz sentido continuar.</p>
-		</div>
-		<div class="quickinfo-item">
-			<h3>Modalidade</h3>
-			<p>Presencial em Jardim da Penha (Vitória) e online por videochamada para todo o Brasil e exterior.</p>
-		</div>
-		<div class="quickinfo-item">
-			<h3>Convênio</h3>
-			<p>Atendimento particular. Emito Nota Fiscal em conformidade com a política de reembolso dos principais planos de saúde.</p>
-		</div>
-		<div class="quickinfo-item">
-			<h3>Como agendar</h3>
-			<p>Envie uma mensagem curta pelo WhatsApp. Um resumo do que você está vivendo já é suficiente.</p>
-		</div>
-	</div>
-</Section>
-
-<!-- Avaliações Section — 2 carrosséis distintos -->
+<!-- Avaliações Section — Google Reviews -->
 <Section variant="white" id="avaliacoes">
-	<div class="section-header">
-		<h2>O que dizem meus pacientes</h2>
-		<p>Confira as avaliações de quem já passou pelo processo terapêutico</p>
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Avaliações</span>
+		<h2>Avaliações sobre o atendimento</h2>
+		<p>Depoimentos publicados no Google por pessoas que passaram pelo processo terapêutico.</p>
 	</div>
-	<div class="avaliacoes-carousels">
-		<ReviewCarousel platform="doctoralia" reviews={doctoraliaReviews} />
-		<ReviewCarousel platform="google" reviews={googleReviews} />
+	<div class="avaliacoes-carousel-single">
+		<ReviewCarousel reviews={googleReviews} reviewCount={siteProfile.reviews.reviewCount} />
 	</div>
-	<div class="avaliacoes-cta">
-		<p>
-			Quer conhecer mais sobre meu trabalho? <a
-				href={buildWhatsAppUrl("Olá, vi os depoimentos no site e gostaria de conversar.")}
-				>Converse comigo no WhatsApp</a
-			> e comece sua jornada de autoconhecimento.
-		</p>
+	<div class="section-link-row section-link-row--left">
+		<a
+			href={siteProfile.externalLinks.googleReviews}
+			target="_blank"
+			rel="noopener"
+			class="section-link"
+		>Ver todas as {siteProfile.reviews.reviewCount} avaliações no Google →</a>
+		<a
+			href={siteProfile.externalLinks.doctoralia}
+			target="_blank"
+			rel="noopener"
+			class="section-link section-link--secondary"
+		>Ver também os comentários no Doctoralia →</a>
 	</div>
 </Section>
 
@@ -648,10 +591,10 @@
 <!-- CTA Final -->
 <Section variant="gradient" id="cta">
 	<div class="cta-content">
-		<h2>Quando fizer sentido, o primeiro passo pode ser simples</h2>
+		<h2>O primeiro passo é uma conversa curta</h2>
 		<p>
-			Você pode escrever em poucas linhas o que está vivendo. A partir daí,
-			alinhamos o formato mais adequado — presencial em Vitória ou online.
+			Escreva em poucas linhas o que está vivendo. A partir daí, alinhamos formato,
+			horário e modalidade — presencial em Vitória ou online.
 		</p>
 		<Button
 			href={buildWhatsAppUrl("Olá, vi seu site e gostaria de agendar uma primeira conversa.")}
@@ -660,7 +603,7 @@
 			class="cta-button"
 		>
 			<Phone size={20} />
-			Falar no WhatsApp
+			Agendar primeira conversa
 		</Button>
 	</div>
 </Section>
@@ -770,35 +713,23 @@
 		text-align: center;
 	}
 
+	.section-link-row--left {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: flex-start;
+	}
+
 	.section-link {
 		color: var(--primary-color);
 		font-weight: 600;
 	}
 
-	/* ── Quick Info grid ── */
-	.quickinfo-grid {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 1rem;
-	}
-
-	.quickinfo-item {
-		padding: 1.2rem;
-		border-radius: var(--radius-md);
-		background: rgba(255, 255, 255, 0.88);
-		border: 1px solid rgba(8, 186, 156, 0.1);
-	}
-
-	.quickinfo-item h3 {
-		font-size: 0.95rem;
-		color: var(--primary-dark);
-		margin-bottom: 0.4rem;
-	}
-
-	.quickinfo-item p {
+	.section-link--secondary {
+		color: var(--text-light, #666);
+		font-weight: 500;
 		font-size: 0.92rem;
-		line-height: 1.6;
-		color: var(--text-light);
 	}
 
 	/* ── Support / Demandas grid ── */
@@ -919,10 +850,6 @@
 		.trust-strip__item {
 			padding: 0.5rem 1.25rem;
 		}
-
-		.quickinfo-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
 	}
 
 	@media (max-width: 640px) {
@@ -943,10 +870,6 @@
 
 		.support-card {
 			padding: 1rem;
-		}
-
-		.quickinfo-grid {
-			grid-template-columns: 1fr;
 		}
 	}
 </style>

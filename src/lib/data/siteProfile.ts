@@ -41,6 +41,7 @@ export interface SiteProfile {
     };
     externalLinks: {
         doctoralia: string;
+        googleReviews: string;
         instagram: string;
         facebook: string;
         googleMapsPlace: string;
@@ -108,6 +109,8 @@ export const siteProfile: SiteProfile = {
     externalLinks: {
         doctoralia:
             "https://www.doctoralia.com.br/bernardo-carielo-macedo-de-oliveira-pinto/psicologo/vitoria",
+        googleReviews:
+            "https://www.google.com/maps/place/Psic%C3%B3logo+-+Bernardo+Carielo+Macedo+de+Oliveira+Pinto/@-20.2796937,-40.3010992,17z/data=!4m17!1m8!3m7!1s0xb8171b61b8e13b:0x5bab77942d3119e5!2sPsic%C3%B3logo+-+Bernardo+Carielo+Macedo+de+Oliveira+Pinto!8m2!3d-20.2798925!4d-40.3009252!10e5!16s%2Fg%2F11hdqw304k!3m7!1s0xb8171b61b8e13b:0x5bab77942d3119e5!8m2!3d-20.2798925!4d-40.3009252!9m1!1b1!16s%2Fg%2F11hdqw304k?entry=ttu",
         instagram: "https://www.instagram.com/bcarielo",
         facebook: "https://www.facebook.com/bcarielo",
         googleMapsPlace:

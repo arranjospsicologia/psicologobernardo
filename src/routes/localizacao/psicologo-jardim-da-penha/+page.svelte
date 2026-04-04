@@ -157,8 +157,8 @@
 </script>
 
 <SEO
-    title="Psicólogo em Jardim da Penha | Bernardo Carielo"
-    description="Psicólogo em Jardim da Penha, Vitória (ES). Consultório em frente à UFES. Atendimento presencial e online para ansiedade, depressão e relacionamentos."
+    title="Psicólogo em Jardim da Penha — Em Frente à UFES, Vitória ES"
+    description="Consultório de psicologia em Jardim da Penha, em frente à UFES. Atendimento presencial com fácil acesso e possibilidade de sessões online. Agende pelo WhatsApp."
     canonical="https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha/"
     {jsonLd}
     preloadImage="/images/hero/hero-600x800.webp"
@@ -179,9 +179,9 @@
             <div class="hero-content">
                 <h1>Psicólogo em Jardim da Penha</h1>
                 <p class="hero-description">
-                    Atendimento presencial em Jardim da Penha, em frente à UFES, e
-                    possibilidade de atendimento online. Para a maior parte das demandas
-                    individuais, a porta principal é a
+                    Consultório no Ed. Madison, Sala 409, em frente à UFES — um ponto
+                    fácil de encontrar no bairro. Atendimento presencial e online.
+                    A principal porta de entrada é a
                     <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>.
                 </p>
                 <div class="hero-buttons">
@@ -490,10 +490,9 @@
 <!-- CTA final -->
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Em frente à UFES, um espaço para você se ouvir de verdade</h2>
+        <h2>O consultório fica aqui no bairro — o próximo passo é uma mensagem</h2>
         <p>
-            Quando fizer sentido, basta uma mensagem para alinhar horário, formato e
-            disponibilidade.
+            Escreva pelo WhatsApp o que está vivendo. A partir daí, alinhamos horário e formato.
         </p>
         <Button href={whatsappUrl} variant="secondary" size="lg">
             <Phone size={20} /> Agendar conversa

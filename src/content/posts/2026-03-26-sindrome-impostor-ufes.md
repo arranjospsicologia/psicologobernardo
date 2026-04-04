@@ -20,7 +20,6 @@ tags:
   - "Síndrome do Impostor"
   - "Ansiedade Acadêmica"
   - "Jardim da Penha"
-  - "jardim-da-penha"
 faq:
   - question: "O que é síndrome do impostor?"
     answer: "É um padrão em que a pessoa não consegue reconhecer as próprias conquistas como resultado da própria capacidade, vivendo com medo de ser descoberta como fraude mesmo tendo evidências reais de competência."
@@ -84,7 +83,7 @@ O risco é quando essa dúvida vira modo de funcionamento: você estuda em exces
 </ul>
 
 <p>
-Se isso está acontecendo junto com cansaço, isolamento e dúvida sobre seu lugar no curso, talvez haja ligação também com ansiedade de desempenho e vida universitária. O post sobre <a href="/jardim-da-penha/calouro-vitoria-solidao-estudante/">solidão de calouros em Vitória</a> pode complementar esse contexto.
+Se isso está acontecendo junto com cansaço, isolamento e dúvida sobre seu lugar no curso, talvez haja ligação também com ansiedade de desempenho e vida universitária. O post sobre <a href="/saude-mental/calouro-vitoria-solidao-estudante/">solidão de calouros em Vitória</a> pode complementar esse contexto.
 </p>
 </section>
 
@@ -108,7 +107,7 @@ Porque a síndrome do impostor cresce no isolamento. Quando parece que todo mund
 </p>
 
 <p>
-Nomear o que está acontecendo já reduz um pouco o encanto da perfeição alheia. Se você ainda está tentando entender como buscar acompanhamento perto da universidade, vale ver também <a href="/jardim-da-penha/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> e por que a rotina influencia tanto em <a href="/jardim-da-penha/por-que-escolher-um-psicologo-em-jardim-da-penha/">escolher um psicólogo em Jardim da Penha</a>.
+Nomear o que está acontecendo já reduz um pouco o encanto da perfeição alheia. Se você ainda está tentando entender como buscar acompanhamento perto da universidade, vale ver também <a href="/psicoterapia/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> e por que a rotina influencia tanto em <a href="/psicoterapia/por-que-escolher-um-psicologo-em-jardim-da-penha/">escolher um psicólogo em Jardim da Penha</a>.
 </p>
 </section>
 

@@ -1017,10 +1017,6 @@ button {
   object-fit: contain;
 }
 
-.doctoralia-logo {
-  width: 100px;
-  height: auto;
-}
 
 .header-info {
   display: flex;
@@ -1051,13 +1047,16 @@ button {
   gap: 2px;
 }
 
+.rating-count {
+  font-size: 0.82rem;
+  color: var(--text-light, #666);
+  font-weight: 400;
+}
+
 .google .rating-stars {
   color: #fbbc04;
 }
 
-.doctoralia .rating-stars {
-  color: #0fac81;
-}
 
 .cards-container {
   position: relative;
@@ -1200,22 +1199,6 @@ button {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.cta-link {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--primary-color, #08ba9c);
-  text-decoration: none;
-  border-radius: var(--radius-md, 8px);
-  transition: all 0.2s ease;
-}
-
-.cta-link:hover {
-  background: rgba(8, 186, 156, 0.1);
-}
 
 @media (min-width: 768px) {
   .review-carousel {
@@ -2008,27 +1991,8 @@ button {
   line-height: 1.8;
 }
 
-.avaliacoes-carousels {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .avaliacoes-carousels {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.avaliacoes-cta {
-  text-align: center;
-  font-size: var(--text-lg);
-}
-
-.avaliacoes-cta a {
-  color: var(--primary-color);
-  font-weight: 600;
+.avaliacoes-carousel-single {
+  max-width: 640px;
 }
 
 .credenciais-grid {

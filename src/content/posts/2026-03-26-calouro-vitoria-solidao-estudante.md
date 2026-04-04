@@ -20,7 +20,6 @@ tags:
   - "Calouros"
   - "Solidão"
   - "Jardim da Penha"
-  - "jardim-da-penha"
 faq:
   - question: "É normal se sentir muito sozinho no começo da faculdade?"
     answer: "Sim. Para muitos calouros, o começo da vida universitária vem com saudade, não pertencimento e insegurança. Isso não significa que houve erro na escolha ou incapacidade de se adaptar."
@@ -92,7 +91,7 @@ A adaptação não costuma acontecer de uma vez. Ela vai sendo montada em pequen
 </ul>
 
 <p>
-Se a dificuldade está mais ligada a sentir que todo mundo parece mais capaz ou mais adaptado do que você, pode fazer sentido ler também <a href="/jardim-da-penha/sindrome-impostor-ufes/">este texto sobre síndrome do impostor na UFES</a>.
+Se a dificuldade está mais ligada a sentir que todo mundo parece mais capaz ou mais adaptado do que você, pode fazer sentido ler também <a href="/saude-mental/sindrome-impostor-ufes/">este texto sobre síndrome do impostor na UFES</a>.
 </p>
 </section>
 
@@ -116,7 +115,7 @@ Porque a vida universitária mistura mudanca de cidade, pressão acadêmica, vid
 </p>
 
 <p>
-Se você ainda está entendendo como procurar ajuda nessa regiao, vale ver também <a href="/jardim-da-penha/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> e a página local principal de <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a>.
+Se você ainda está entendendo como procurar ajuda nessa regiao, vale ver também <a href="/psicoterapia/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> e a página local principal de <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a>.
 </p>
 </section>
 

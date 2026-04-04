@@ -20,7 +20,6 @@ tags:
   - "Jardim da Penha"
   - "UFES"
   - "Vitória ES"
-  - "jardim-da-penha"
 faq:
   - question: "Por que escolher um psicólogo em Jardim da Penha?"
     answer: "Porque, para quem mora, trabalha ou estuda na região, a proximidade costuma reduzir atrito logístico e aumentar a chance de manter a terapia com regularidade."
@@ -79,7 +78,7 @@ Jardim da Penha funciona, para muita gente, como uma extensão natural da rotina
 </p>
 
 <p>
-Isso faz diferença especialmente para quem circula entre UFES, Mata da Praia, Goiabeiras, Praia do Canto e outras áreas de Vitória. Se a sua busca está mais direta, este conteúdo sobre <a href="/jardim-da-penha/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> aprofunda justamente essa lógica de proximidade e viabilidade.
+Isso faz diferença especialmente para quem circula entre UFES, Mata da Praia, Goiabeiras, Praia do Canto e outras áreas de Vitória. Se a sua busca está mais direta, este conteúdo sobre <a href="/psicoterapia/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> aprofunda justamente essa lógica de proximidade e viabilidade.
 </p>
 </section>
 
@@ -91,7 +90,7 @@ Não. Proximidade sem segurança clínica não sustenta processo. Além da logí
 </p>
 
 <p>
-Se o que você quer é um filtro mais amplo de escolha profissional, vale cruzar este texto com o guia de <a href="/vitoria-es/como-escolher-psicologo-em-vitoria-es/">como escolher um psicólogo em Vitória</a>. Se a prioridade já é iniciar o processo, a página de <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> explica melhor o enquadre do atendimento.
+Se o que você quer é um filtro mais amplo de escolha profissional, vale cruzar este texto com o guia de <a href="/psicoterapia/como-escolher-psicologo-em-vitoria-es/">como escolher um psicólogo em Vitória</a>. Se a prioridade já é iniciar o processo, a página de <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> explica melhor o enquadre do atendimento.
 </p>
 </section>
 

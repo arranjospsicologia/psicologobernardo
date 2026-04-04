@@ -7,6 +7,7 @@
         SEO,
         buildWhatsAppUrl,
         schemaIds,
+        siteProfile,
     } from "$lib";
     import {
         Phone,
@@ -395,7 +396,7 @@
                 </Button>
                 {#if isLocalContent}
                     <Button
-                        href="https://maps.app.goo.gl/seu-link-google-maps"
+                        href={siteProfile.externalLinks.googleMapsPlace}
                         variant="outline"
                         size="sm"
                         target="_blank"
@@ -448,18 +449,30 @@
 
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Gostou do que leu?</h2>
-        <p>Talvez seja um bom momento pra conversar.</p>
+        <h2>Se algo deste texto ressoou, o próximo passo pode ser uma conversa</h2>
+        <p>
+            Escreva em poucas linhas o que está vivendo. A partir daí, alinhamos se faz sentido
+            e qual o melhor formato.
+        </p>
         <Button
             href={buildWhatsAppUrl(
-                "Olá, vi seu artigo e gostaria de conversar",
+                `Olá, li o artigo "${post.title}" e gostaria de conversar.`,
             )}
             variant="secondary"
             size="lg"
         >
             <Phone size={20} />
-            Falar no WhatsApp
+            Falar pelo WhatsApp
         </Button>
+        {#if isLocalContent}
+            <p class="cta-secondary-link">
+                Ou veja o <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a>.
+            </p>
+        {:else}
+            <p class="cta-secondary-link">
+                Ou entenda como funciona a <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>.
+            </p>
+        {/if}
     </div>
 </Section>
 
@@ -601,5 +614,17 @@
         .post-footer {
             flex-direction: column;
         }
+    }
+
+    .cta-secondary-link {
+        font-size: 0.95rem !important;
+        margin-top: -0.5rem;
+        opacity: 0.85;
+    }
+
+    .cta-secondary-link a {
+        color: var(--white);
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
 </style>

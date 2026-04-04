@@ -49,7 +49,7 @@
                 "@type": "WebPage",
                 "@id": "https://psicologobernardo.com.br/servicos/psicoterapia-individual/#webpage",
                 url: "https://psicologobernardo.com.br/servicos/psicoterapia-individual/",
-                name: "Psicoterapia individual em Vitória ES",
+                name: "Psicoterapia Individual em Vitória — Quando Faz Sentido e Como Começar",
                 isPartOf: {
                     "@id": schemaIds.website,
                 },
@@ -104,8 +104,8 @@
 </script>
 
 <SEO
-    title="Psicoterapia Individual em Vitória ES | Bernardo Carielo"
-    description="Psicoterapia individual em Vitória ES, em Jardim da Penha, e online. Entenda como funciona, quando faz sentido e o que esperar da primeira sessão."
+    title="Psicoterapia Individual em Vitória — Quando Faz Sentido e Como Começar"
+    description="Entenda quando a psicoterapia individual faz sentido, o que esperar da primeira sessão e como agendar. Consultório em Jardim da Penha, Vitória, e online."
     canonical="https://psicologobernardo.com.br/servicos/psicoterapia-individual/"
     jsonLd={serviceSchema}
     preloadImage="/images/servicos/psicoterapia-individual-hero.webp"
@@ -125,8 +125,8 @@
     <div class="container">
         <h1>Psicoterapia Individual em Vitória</h1>
         <p class="hero-subtitle">
-            Um espaço acolhedor para compreender melhor suas emoções, relações e
-            escolhas, no seu próprio ritmo
+            Quando ansiedade, desânimo ou conflitos começam a pesar demais, a terapia pode
+            ser o espaço para entender o que está acontecendo e decidir o próximo passo.
         </p>
         <div class="service-hero-actions">
             <Button
@@ -134,10 +134,10 @@
                 variant="primary"
             >
                 <Phone size={20} />
-                Conversar pelo WhatsApp
+                Iniciar pelo WhatsApp
             </Button>
             <Button href="/localizacao/psicologo-vitoria-es/" variant="outline">
-                Ver atendimento em Vitória
+                Ver consultório em Vitória
             </Button>
         </div>
         <div class="hero-image">
@@ -162,8 +162,8 @@
 <!-- TrustPanel -->
 <Section variant="white">
     <TrustPanel
-        title="O que precisa ficar claro antes do primeiro contato"
-        intro="Informações objetivas para decidir com mais calma antes do primeiro contato."
+        title="Informações práticas para decidir com calma"
+        intro="Tudo o que vale saber antes de entrar em contato."
         primaryHref={buildWhatsAppUrl("Olá, gostaria de agendar uma primeira conversa sobre psicoterapia individual.")}
         primaryLabel="Agendar primeira conversa"
         secondaryHref="/agendar/"
@@ -247,20 +247,20 @@
 
         <!-- Mid-CTA -->
         <div class="mid-cta-box">
-            <h3>Se a dúvida principal é "isso faz sentido para mim?", começamos por aí.</h3>
+            <h3>Não tem certeza se é o momento certo? Começamos por essa conversa.</h3>
             <p>
-                O primeiro contato não precisa ser elaborado. Basta resumir em poucas linhas o que você
-                está vivendo para alinharmos o melhor caminho.
+                Basta resumir em poucas linhas o que está vivendo. A partir daí, alinhamos se
+                faz sentido, qual formato e como funciona.
             </p>
             <div class="mid-cta-actions">
                 <Button
                     href={buildWhatsAppUrl("Olá, gostaria de entender se a psicoterapia individual faz sentido para mim agora.")}
                     variant="primary"
                 >
-                    Conversar agora
+                    Falar pelo WhatsApp
                 </Button>
                 <Button href="/localizacao/psicologo-vitoria-es/" variant="outline">
-                    Ver localização
+                    Ver consultório em Vitória
                 </Button>
             </div>
         </div>
@@ -407,9 +407,9 @@
 <!-- CTA Final -->
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Quando fizer sentido, começamos pela primeira conversa</h2>
+        <h2>Se chegou até aqui, talvez o próximo passo seja uma conversa</h2>
         <p>
-            Você não precisa chegar com tudo resolvido para iniciar. Basta dar o primeiro passo.
+            Você não precisa ter certeza de tudo para começar. Uma mensagem curta já é suficiente.
         </p>
         <Button
             href={buildWhatsAppUrl("Olá, gostaria de agendar uma primeira conversa sobre psicoterapia individual.")}

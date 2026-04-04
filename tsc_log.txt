@@ -1,0 +1,4 @@
+﻿src/lib/data/blog.ts(705,22): error TS2550: Property 'find' does not exist on type 'BlogPost[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+src/lib/data/blog.ts(713,26): error TS2550: Property 'find' does not exist on type '{ slug: string; label: string; description: string; }[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+src/lib/data/blog.ts(721,38): error TS2550: Property 'includes' does not exist on type 'string'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+src/lib/data/blog.ts(722,44): error TS2550: Property 'includes' does not exist on type 'string'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.

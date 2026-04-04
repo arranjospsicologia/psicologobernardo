@@ -20,7 +20,6 @@ tags:
   - "Psicólogo"
   - "Jardim da Penha"
   - "Vitória ES"
-  - "jardim-da-penha"
 faq:
   - question: "Onde encontrar psicólogo perto da UFES?"
     answer: "Jardim da Penha costuma ser a referência mais prática para quem busca atendimento presencial perto da UFES, porque fica em frente à universidade e facilita encaixar a sessão na rotina."
@@ -91,7 +90,7 @@ Na prática, procurar atendimento em <a href="/localizacao/psicologo-jardim-da-p
 <h2>Perto da UFES significa só atendimento particular?</h2>
 
 <p>
-Não. Dependendo do momento da sua vida e do orçamento disponível, a busca pode incluir atendimento particular, modalidades com reembolso e também serviços-escola ou alternativas institucionais. Se a questão principal hoje é entender o que existe em termos de cuidado e rede, vale complementar com <a href="/vitoria-es/rede-apoio-saude-mental-vitoria-es/">a rede de apoio em Vitória</a>.
+Não. Dependendo do momento da sua vida e do orçamento disponível, a busca pode incluir atendimento particular, modalidades com reembolso e também serviços-escola ou alternativas institucionais. Se a questão principal hoje é entender o que existe em termos de cuidado e rede, vale complementar com <a href="/saude-mental/rede-apoio-saude-mental-vitoria-es/">a rede de apoio em Vitória</a>.
 </p>
 
 <p>
@@ -107,7 +106,7 @@ Quem procura psicólogo perto da UFES nem sempre está buscando "terapia para es
 </p>
 
 <p>
-Se o seu contexto está mais ligado à vida universitária, pode ajudar ler também <a href="/jardim-da-penha/terapia-para-estudantes-ufes-vitoria/">este conteúdo sobre terapia para estudantes e universitários em Vitória</a>. Se a questão passa mais por escolha de profissional e critérios seguros, há também o guia de <a href="/vitoria-es/como-escolher-psicologo-em-vitoria-es/">como escolher psicólogo em Vitória</a>.
+Se o seu contexto está mais ligado à vida universitária, pode ajudar ler também <a href="/psicoterapia/terapia-para-estudantes-ufes-vitoria/">este conteúdo sobre terapia para estudantes e universitários em Vitória</a>. Se a questão passa mais por escolha de profissional e critérios seguros, há também o guia de <a href="/psicoterapia/como-escolher-psicologo-em-vitoria-es/">como escolher psicólogo em Vitória</a>.
 </p>
 </section>
 

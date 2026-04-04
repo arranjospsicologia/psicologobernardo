@@ -20,7 +20,6 @@ tags:
   - "Saúde Mental"
   - "Jardim da Penha"
   - "Vitória ES"
-  - "jardim-da-penha"
 faq:
   - question: "Caminhar no parque substitui terapia?"
     answer: "Não. Espaços verdes podem ajudar a regular o corpo e ampliar a sensação de pausa, mas não substituem tratamento psicológico ou médico quando há sofrimento mais persistente ou intenso."
@@ -91,7 +90,7 @@ Não precisa transformar o parque em mais uma tarefa de autocuidado. Costuma fun
 </ul>
 
 <p>
-Se a ideia de sair de casa anda difícil, talvez ajude começar por um passo pequeno e complementar está leitura com <a href="/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha/">este guia de espaços de cuidado em Jardim da Penha</a> e com o texto sobre <a href="/jardim-da-penha/medo-urbano-seguranca-jardim-da-penha/">medo urbano e evitação</a>.
+Se a ideia de sair de casa anda difícil, talvez ajude começar por um passo pequeno e complementar está leitura com <a href="/saude-mental/onde-cuidar-saude-mental-jardim-da-penha/">este guia de espaços de cuidado em Jardim da Penha</a> e com o texto sobre <a href="/saude-mental/medo-urbano-seguranca-jardim-da-penha/">medo urbano e evitação</a>.
 </p>
 </section>
 

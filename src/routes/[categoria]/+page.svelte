@@ -80,15 +80,17 @@
 
 <Section variant="gradient">
     <div class="cta-content">
-        <h2>Gostou do que leu?</h2>
-        <p>Talvez seja um bom momento pra conversar.</p>
+        <h2>Se algo fez sentido, o próximo passo pode ser uma conversa</h2>
+        <p>
+            Escreva em poucas linhas o que está vivendo. A partir daí, alinhamos formato e próximo passo.
+        </p>
         <Button
-            href={buildWhatsAppUrl("Olá, vi seu site e gostaria de conversar")}
+            href={buildWhatsAppUrl("Olá, vi seus artigos e gostaria de conversar.")}
             variant="secondary"
             size="lg"
         >
             <Phone size={20} />
-            Falar no WhatsApp
+            Falar pelo WhatsApp
         </Button>
     </div>
 </Section>

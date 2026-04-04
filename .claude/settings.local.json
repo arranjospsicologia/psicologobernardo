@@ -11,7 +11,9 @@
       "Bash(node update_pages_item9.cjs)",
       "Bash(rm update_pages_item9.cjs)",
       "Bash(sed -i 's/### \\\\[ \\\\] 8\\\\./### [X] 8./' plano-correcoes.md)",
-      "Bash(sed -i 's/### \\\\[ \\\\] 9\\\\./### [X] 9./' plano-correcoes.md)"
+      "Bash(sed -i 's/### \\\\[ \\\\] 9\\\\./### [X] 9./' plano-correcoes.md)",
+      "Bash(git stash:*)",
+      "Bash(npx svelte-check:*)"
     ]
   }
 }

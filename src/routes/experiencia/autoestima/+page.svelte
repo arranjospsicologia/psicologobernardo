@@ -5,17 +5,17 @@
     let faqItems = $state([
         {
             question: "Como a terapia pode melhorar minha autoestima?",
-            answer: "A terapia oferece um espaço de aceitação incondicional onde você pode explorar suas experiências, reconhecer padrões de autocrítica e desenvolver uma relação mais compassiva consigo mesmo. Na Abordagem Centrada na Pessoa, a relação terapêutica em si é transformadora.",
+            answer: "A terapia oferece um espaço de aceitação incondicional onde você pode explorar suas experiências, reconhecer padrões de autocrítica e desenvolver uma relação mais compassiva consigo mesmo. Na Abordagem Centrada na Pessoa, a qualidade da relação terapêutica é central para esse processo.",
             open: false,
         },
         {
             question: "Quanto tempo leva para melhorar a autoestima?",
-            answer: "Não existe um prazo fixo, pois cada pessoa tem seu próprio ritmo. Algumas pessoas começam a perceber mudanças em poucas sessões, enquanto outras preferem um processo mais longo. O importante é respeitar seu tempo e suas necessidades.",
+            answer: "Não existe um prazo fixo, pois cada pessoa tem seu próprio ritmo. Algumas pessoas começam a perceber mudanças ao longo das primeiras semanas, enquanto outras se beneficiam de um processo mais longo. O importante é respeitar seu tempo e suas necessidades.",
             open: false,
         },
         {
-            question: "A baixa autoestima tem cura?",
-            answer: "A autoestima não é uma doença, mas sim um aspecto da sua relação consigo mesmo que pode ser transformado. Com o processo terapêutico, é possível desenvolver uma autoestima mais saudável, baseada em aceitação, autocompaixão e autenticidade.",
+            question: "A autoestima pode mudar com o tempo?",
+            answer: "Sim. A autoestima não é fixa — ela faz parte da forma como você se relaciona consigo mesmo, e essa relação pode ser trabalhada. Com o processo terapêutico, é possível desenvolver uma autoestima mais saudável, baseada em aceitação, autocompaixão e autenticidade.",
             open: false,
         },
         {
@@ -39,7 +39,7 @@
                 "@type": "WebPage",
                 "@id": "https://psicologobernardo.com.br/experiencia/autoestima/#webpage",
                 url: "https://psicologobernardo.com.br/experiencia/autoestima/",
-                name: "Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem",
+                name: "Psicólogo para Autoestima em Vitória ES – Acolhimento e Autoconhecimento",
                 isPartOf: {
                     "@id": schemaIds.website,
                 },
@@ -51,10 +51,10 @@
                 "@type": "Article",
                 "@id": "https://psicologobernardo.com.br/experiencia/autoestima/#article",
                 headline:
-                    "Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem",
+                    "Psicólogo para Autoestima em Vitória ES – Acolhimento e Autoconhecimento",
                 name: "Baixa Autoestima: Como a Psicoterapia pode ajudar?",
                 description:
-                    "Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Acolhimento humanizado com a Abordagem Centrada na Pessoa.",
+                    "Psicólogo para autoestima em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online.",
                 author: {
                     "@id": schemaIds.person,
                 },
@@ -90,8 +90,8 @@
 </script>
 
 <SEO
-    title="Psicólogo para Autoestima em Vitória ES – Você Merece se Sentir Bem"
-    description="Psicólogo para autoestima em Vitória ES. Você merece se sentir bem com você mesmo! Acolhimento humanizado com a Abordagem Centrada na Pessoa."
+    title="Psicólogo para Autoestima em Vitória ES – Acolhimento e Autoconhecimento"
+    description="Psicólogo para autoestima em Vitória ES. Acolhimento humanizado com a Abordagem Centrada na Pessoa. Atendimento presencial em Jardim da Penha e online."
     canonical="https://psicologobernardo.com.br/experiencia/autoestima/"
     jsonLd={experienceSchema}
     preloadImage="/images/experiencia/autoestima-350.avif"
@@ -110,8 +110,9 @@
     <div class="container">
         <h1>Psicólogo para Autoestima em Vitória ES</h1>
         <p class="hero-subtitle">
-            Cuidados da autoestima na Abordagem Centrada na Pessoa: você merece
-            se sentir bem com você mesmo!
+            Acolhimento humanizado em <strong
+                >Jardim da Penha, Vitória ES</strong
+            >, para quem busca uma relação mais gentil consigo mesmo.
         </p>
         <div class="hero-buttons">
             <Button
@@ -158,7 +159,7 @@
         <div class="answer-box">
             <p>Se você busca trabalhar autoestima com um psicólogo em Vitória, o atendimento acontece em consultório em Jardim da Penha, presencial, e também online. A Abordagem Centrada na Pessoa cria um espaço de aceitação incondicional — onde você pode explorar sua relação consigo mesmo, sem julgamentos. O primeiro passo é uma conversa inicial.</p>
         </div>
-        <h2>Você merece se sentir bem com você mesmo</h2>
+        <h2>O que é autoestima, afinal?</h2>
         <p>
             A autoestima é a forma como você se vê, se valoriza e se relaciona
             consigo mesmo. Ela influencia diretamente suas escolhas, seus
@@ -172,8 +173,8 @@
             <strong>medo de ser rejeitado</strong>,
             <strong>comparação excessiva com os outros</strong> ou
             <strong>sensação de inadequação</strong>, saiba que você não está
-            sozinho. E mais importante:
-            <strong>você merece se sentir bem com você mesmo</strong>.
+            sozinho. E que existe um caminho possível para uma relação mais
+            gentil consigo mesmo.
         </p>
 
         <h2>Como a psicoterapia ajuda a autoestima?</h2>
@@ -238,7 +239,7 @@
             </li>
             <li>Respeita seu ritmo e suas escolhas, sem imposições</li>
             <li>
-                Foca na relação terapêutica como ferramenta de transformação
+                Foca na relação terapêutica como parte central do processo
             </li>
             <li>Promove o autoconhecimento e a autenticidade</li>
             <li>Valoriza suas experiências e sentimentos sem julgamentos</li>

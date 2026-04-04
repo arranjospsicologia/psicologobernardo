@@ -5,8 +5,8 @@ const MAX_HOME_REVIEWS = 6;
 type ReviewItem = {
     name: string;
     rating: number;
-    date: string;
     text: string;
+    date?: string;
     initial?: string;
     photo?: string;
 };
@@ -28,16 +28,19 @@ function normalizeReviewList(input: unknown): ReviewItem[] {
                 ? raw.rating
                 : Number.parseInt(String(raw.rating ?? "0"), 10);
 
-        if (!name || !date || !text || !Number.isFinite(rating) || rating <= 0) {
+        if (!name || !text || !Number.isFinite(rating) || rating <= 0) {
             continue;
         }
 
         const review: ReviewItem = {
             name,
-            date,
             text,
             rating,
         };
+
+        if (date) {
+            review.date = date;
+        }
 
         if (typeof raw.initial === "string" && raw.initial.trim()) {
             review.initial = raw.initial.trim();
@@ -69,13 +72,9 @@ async function fetchReviewList(
 }
 
 export const load: PageLoad = async ({ fetch }) => {
-    const [doctoraliaReviews, googleReviews] = await Promise.all([
-        fetchReviewList(fetch, "/data/doctoralia-reviews.json"),
-        fetchReviewList(fetch, "/data/reviews.json"),
-    ]);
+    const googleReviews = await fetchReviewList(fetch, "/data/reviews.json");
 
     return {
-        doctoraliaReviews,
         googleReviews,
     };
 };

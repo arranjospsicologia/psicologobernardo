@@ -18,7 +18,6 @@ tags:
   - "Rede de Apoio"
   - "Saúde Mental Gratuita"
   - "Comunidade"
-  - "vitoria-es"
 faq:
   - question: "Existe psicólogo gratuito em Vitória?"
     answer: "Sim. Clínicas-escola de universidades (UFES, UVV, FAESA, Multivix, Unisales) oferecem atendimento gratuito ou com valor social. Os CAPS do SUS também atendem gratuitamente casos de sofrimento psíquico intenso."

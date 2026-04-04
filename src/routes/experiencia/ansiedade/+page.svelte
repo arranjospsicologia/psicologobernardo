@@ -10,7 +10,7 @@
         },
         {
             question: "Quantas sessões são necessárias para tratar ansiedade?",
-            answer: "Não existe um número fixo de sessões, pois cada pessoa é única. O processo terapêutico se desenvolve no seu ritmo. Algumas pessoas sentem melhoras significativas em poucas sessões, enquanto outras preferem um acompanhamento mais longo.",
+            answer: "Não existe um número fixo de sessões, pois cada pessoa é única. O processo terapêutico se desenvolve no seu ritmo. Algumas pessoas percebem mudanças ao longo das primeiras semanas, enquanto outras se beneficiam de um acompanhamento mais longo. O mais importante é respeitar o tempo que o seu processo precisa.",
             open: false,
         },
         {

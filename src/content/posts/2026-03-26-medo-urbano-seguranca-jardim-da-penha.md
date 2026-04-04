@@ -20,7 +20,6 @@ tags:
   - "Ansiedade"
   - "Jardim da Penha"
   - "Vitória ES"
-  - "jardim-da-penha"
 faq:
   - question: "É normal sentir medo de andar na rua em Vitória?"
     answer: "Sim. Algum nível de cautela pode ser uma resposta realista ao contexto urbano. O ponto de atenção aparece quando o medo começa a impedir atividades importantes, encontros e deslocamentos simples."
@@ -85,7 +84,7 @@ Se esse estado de alerta tem se ampliado, pode ajudar ver também a página sobr
 </p>
 
 <p>
-Em Jardim da Penha e arredores, isso pode se misturar com rotina de faculdade, trabalho, deslocamento curto e exposição frequente a conversas sobre violência. Em alguns casos, o sofrimento também se soma a outros desgastes do bairro, como o que aparece neste texto sobre <a href="/jardim-da-penha/barulho-rua-da-lama-insonia/">barulho noturno e insônia na Rua da Lama</a>.
+Em Jardim da Penha e arredores, isso pode se misturar com rotina de faculdade, trabalho, deslocamento curto e exposição frequente a conversas sobre violência. Em alguns casos, o sofrimento também se soma a outros desgastes do bairro, como o que aparece neste texto sobre <a href="/saude-mental/barulho-rua-da-lama-insonia/">barulho noturno e insônia na Rua da Lama</a>.
 </p>
 </section>
 
@@ -103,7 +102,7 @@ O caminho raramente é se forçar a enfrentar tudo de uma vez. Costuma funcionar
 </ul>
 
 <p>
-Se você está tentando reconstruir um senso de pertencimento ao bairro, pode fazer sentido ler também <a href="/jardim-da-penha/onde-cuidar-saude-mental-jardim-da-penha/">onde cuidar da saúde mental em Jardim da Penha</a> e a página local de <a href="/localizacao/psicologo-jardim-da-penha/">atendimento em Jardim da Penha</a>.
+Se você está tentando reconstruir um senso de pertencimento ao bairro, pode fazer sentido ler também <a href="/saude-mental/onde-cuidar-saude-mental-jardim-da-penha/">onde cuidar da saúde mental em Jardim da Penha</a> e a página local de <a href="/localizacao/psicologo-jardim-da-penha/">atendimento em Jardim da Penha</a>.
 </p>
 </section>
 

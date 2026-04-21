@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -68,20 +68,20 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <loc>https://psicologobernardo.com.br/politica-editorial/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/psicologo-vitoria-es/</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <loc>https://psicologobernardo.com.br/psicologo-vitoria-es/psicologo-jardim-da-penha/</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -135,7 +135,7 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/saude-mental/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -156,6 +156,12 @@
     <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/saude-mental/paciencia-ou-a-falta-dela/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/acp/abertura-a-experiencia-rogers/</loc>
@@ -459,43 +465,43 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/2/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/3/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/4/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/5/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/6/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/saude-mental/pagina/2/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/saude-mental/pagina/3/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

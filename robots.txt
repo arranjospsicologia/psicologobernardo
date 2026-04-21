@@ -1,19 +1,59 @@
 # robots.txt para psicologobernardo.com.br
+# Política atualizada em 2026-04-14
+
+# Regra geral: permitir tudo por padrão
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /docs/
 
 Sitemap: https://psicologobernardo.com.br/sitemap.xml
 
 
+# --- Buscadores principais ---
 
-# Regras adicionais
 User-agent: Googlebot
 Allow: /
 
 User-agent: AdsBot-Google
 Allow: /
 
-# Evita bloqueios desnecessários
-Disallow: /node_modules/
-Disallow: /scripts/
-Disallow: /docs/
+User-agent: Bingbot
+Allow: /
+
+
+# --- Bots de IA para respostas de busca ---
+# Estes bots são usados para exibir este site como FONTE em respostas
+# de sistemas de IA (ChatGPT Search, Copilot, Perplexity).
+# Permitir garante que o conteúdo possa ser citado.
+
+# OpenAI — ChatGPT Search (descoberta e citação em buscas)
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI — fetch iniciado pelo usuário dentro do ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic — Claude (busca e citação)
+User-agent: ClaudeBot
+Allow: /
+
+
+# --- Bots de TREINAMENTO de modelos de IA ---
+# Decisão editorial (2026-04-14): bloquear uso do conteúdo para treinamento
+# de modelos sem autorização explícita. Isso não afeta citações em respostas
+# de busca dos sistemas acima.
+
+# OpenAI — treinamento do modelo GPT
+User-agent: GPTBot
+Disallow: /
+
+# Common Crawl (usado por múltiplos projetos de treinamento)
+User-agent: CCBot
+Disallow: /

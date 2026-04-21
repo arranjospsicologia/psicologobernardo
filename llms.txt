@@ -40,8 +40,8 @@
 
 ## Localização
 
-- [Atendimento em Vitória/ES](https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/)
-- [Consultório em Jardim da Penha](https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha/)
+- [Atendimento em Vitória/ES](https://psicologobernardo.com.br/psicologo-vitoria-es/)
+- [Consultório em Jardim da Penha](https://psicologobernardo.com.br/psicologo-vitoria-es/psicologo-jardim-da-penha/)
 
 ## Artigos
 
@@ -49,8 +49,12 @@
 - [Psicoterapia](https://psicologobernardo.com.br/psicoterapia/)
 - [ACP — Abordagem Centrada na Pessoa](https://psicologobernardo.com.br/acp/)
 
+## Institucional
+
+- [Política Editorial](https://psicologobernardo.com.br/politica-editorial/): processo de redação, revisão clínica, uso de IA e limites éticos do conteúdo publicado.
+
 ## Observações
 
 - Atendimentos particulares; não trabalha com convênios; emite NF para reembolso.
-- Conteúdos editoriais são escritos pelo próprio psicólogo, sem IA generativa em substituição de julgamento clínico.
+- Conteúdos editoriais são escritos pelo próprio psicólogo; ferramentas de IA podem auxiliar na pesquisa e rascunho, mas todo texto é lido, editado e aprovado pelo autor antes da publicação.
 - Este site não oferece atendimento emergencial. Em situações de risco, procure o CVV (188) ou um serviço de emergência.

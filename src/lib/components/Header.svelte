@@ -151,7 +151,7 @@
                 </ul>
             </li>
 
-            <li><a href="/localizacao/" class="nav-link">Localização</a></li>
+            <li><a href="/psicologo-vitoria-es/" class="nav-link">Localização</a></li>
             <li><a href="/artigos/" class="nav-link">Artigos</a></li>
             <li><a href="/contato/" class="nav-link">Contato</a></li>
         </ul>
@@ -160,7 +160,7 @@
             <Button
                 href={buildWhatsAppUrl("Olá, vi seu site e gostaria de saber mais sobre a terapia.")}
                 variant="primary"
-                size="sm">Agendar conversa</Button
+                size="sm">Enviar mensagem</Button
             >
         </div>
 
@@ -282,7 +282,7 @@
                 </li>
 
                 <li>
-                    <a href="/localizacao/" class="mobile-link" onclick={closeMenu}>
+                    <a href="/psicologo-vitoria-es/" class="mobile-link" onclick={closeMenu}>
                         <span>Localização</span>
                     </a>
                 </li>
@@ -303,7 +303,7 @@
             <Button
                 href={buildWhatsAppUrl("Olá, vi seu site e gostaria de saber mais sobre a terapia.")}
                 variant="primary"
-                onclick={closeMenu}>Agendar conversa</Button
+                onclick={closeMenu}>Enviar mensagem</Button
             >
         </div>
     </div>

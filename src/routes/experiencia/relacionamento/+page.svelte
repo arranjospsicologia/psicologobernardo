@@ -246,10 +246,10 @@
 
 <Section variant="beige">
     <div class="cta-box">
-        <h3>Agende uma conversa</h3>
+        <h3>Se você sente que é hora de cuidar disso</h3>
         <p>
-            Se você está enfrentando dificuldades nos seus relacionamentos,
-            entre em contato.
+            Escreva em poucas linhas o que está vivendo. Respondo com calma
+            e sem compromisso de continuidade.
         </p>
         <Button
             href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta")}
@@ -278,6 +278,12 @@
                 <a href="/experiencia/autoestima/"
                     >→ Psicólogo para Autoestima</a
                 >
+            </li>
+            <li>
+                <a href="/psicologo-vitoria-es/">→ Atendimento presencial em Vitória</a>
+            </li>
+            <li>
+                <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">→ Consultório em Jardim da Penha</a>
             </li>
         </ul>
     </div>

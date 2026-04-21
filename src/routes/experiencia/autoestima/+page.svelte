@@ -249,10 +249,10 @@
 
 <Section variant="beige">
     <div class="cta-box">
-        <h3>Agende sua primeira sessão</h3>
+        <h3>Se você sente que é hora de cuidar disso</h3>
         <p>
-            Entre em contato para conversarmos sobre como a psicoterapia pode te
-            ajudar a desenvolver uma autoestima mais saudável.
+            Escreva em poucas linhas o que está vivendo. Respondo com calma
+            e sem compromisso de continuidade.
         </p>
         <Button
             href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta sobre autoestima")}
@@ -279,6 +279,12 @@
             </li>
             <li>
                 <a href="/experiencia/depressao/">→ Psicólogo para Depressão</a>
+            </li>
+            <li>
+                <a href="/psicologo-vitoria-es/">→ Atendimento presencial em Vitória</a>
+            </li>
+            <li>
+                <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">→ Consultório em Jardim da Penha</a>
             </li>
         </ul>
     </div>

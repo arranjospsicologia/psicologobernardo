@@ -2,8 +2,7 @@
 
 O site não deve ser tratado como um blog genérico de marketing. Ele representa o trabalho clínico de Bernardo Carielo e precisa equilibrar ética profissional, clareza para o usuário e boa performance orgânica.
 
-Base principal:
-- `blog-posts/how-to-content.md`
+Este arquivo é a constituição editorial do site: define objetivo, ética, tom e direção editorial para **todas** as páginas (home, serviço, experiência, localização, sobre, contato, blog). Guias especializados para workflows específicos estão listados ao final.
 
 ## 1. Objetivo do Site
 
@@ -149,18 +148,9 @@ Regras:
 
 ## 7. Linkagem Interna
 
-Nenhuma página deve existir isolada.
+Nenhuma página deve existir isolada. Conectar sempre que fizer sentido: demanda → serviço → localização → contato; posts → páginas de experiência, serviço e contato; conteúdos relacionados entre si.
 
-Sempre que fizer sentido, conectar:
-- demanda -> serviço;
-- serviço -> localização;
-- localização -> contato;
-- posts -> páginas de experiência;
-- posts -> páginas de serviço;
-- posts -> contato/agendamento;
-- conteúdos relacionados entre si.
-
-Links internos devem ser contextuais e naturais, nunca inseridos como lista aleatória no meio do texto.
+Links internos devem ser contextuais e naturais, nunca inseridos como lista aleatória no meio do texto. Para o índice completo de páginas existentes e regras de diversidade semântica, ver [`blog-posts/how-to-link.md`](blog-posts/how-to-link.md).
 
 ## 8. Regras de Estilo
 
@@ -173,7 +163,8 @@ Preferir:
 - transições suaves entre acolhimento, explicação e CTA.
 
 Evitar:
-- excesso de travessão longo;
+- **travessão (—) em qualquer posição.** É o sinal tipográfico mais associado a escrita gerada por IA. Substituir sempre: vírgula, ponto, dois-pontos ou reescrita da frase;
+- **conjuntos de três adjetivos ou substantivos em sequência** ("lento, contraditório e incompleto", "editadas, rápidas, sem hesitações", "humano, sensível, acolhedor"). Um ou dois qualificadores são suficientes; o terceiro quase sempre é enchimento. Se a ideia precisar de três, reestruturar em frases separadas;
 - frases com cara de copy agressiva;
 - tom excessivamente técnico;
 - repetição artificial da keyword;
@@ -206,10 +197,28 @@ Antes de concluir uma edição, revise:
 - o texto parece escrito para uma pessoa real;
 - a otimização SEO não deixou o conteúdo mecânico.
 
-## 11. Em Caso de Conflito
+## 11. Manutenção Técnica de SEO
+
+- A fonte única de verdade para `lastmod` de páginas estáticas está em `src/lib/server/seo/pageMeta.ts` (`STATIC_PAGE_LASTMOD`). Ao editar qualquer página estática (home, sobre, contato, agendar, serviços, experiência, localização, artigos index etc.), atualize a entrada correspondente para a data real da alteração (formato `YYYY-MM-DD`). Artigos do blog continuam usando `date` / `lastReviewed` como fonte primária — não duplicar no SSoT.
+- Páginas `noindex` devem ser registradas em `NOINDEX_ROUTES` no mesmo arquivo; o sitemap e a validação automática usam essa lista.
+- Após mudanças em páginas, rotas ou metadados técnicos, rode `npm run build && npm run seo:validate` antes de publicar.
+
+## 12. Em Caso de Conflito
 
 Se houver conflito entre SEO e ética, vence a ética.
 
 Se houver conflito entre densidade de conteúdo e conforto de leitura, vence a legibilidade.
 
 Se houver conflito entre conversão e respeito ao usuário, vence o respeito ao usuário.
+
+---
+
+## Guias Especializados (carregar sob demanda)
+
+Este arquivo cobre as regras constitucionais do site inteiro. Para workflows específicos, carregue **apenas quando a tarefa exigir**:
+
+- **Criar ou editar post do blog** → [`blog-posts/post-guide.md`](blog-posts/post-guide.md) (frontmatter, schema, categorias, classes CSS, checklists de publicação).
+- **Escolher links internos** → [`blog-posts/how-to-link.md`](blog-posts/how-to-link.md) (índice de posts e páginas, regras de diversidade).
+- **Gerar imagem de capa** → [`blog-posts/how-to-image.md`](blog-posts/how-to-image.md) (prompt, cores da marca, conversão WebP).
+
+Os guias operacionalizam regras — **nunca** as substituem. Se um guia colidir com `AGENTS.md`, vence `AGENTS.md`.

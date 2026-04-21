@@ -71,7 +71,7 @@
                 <Phone size={20} />
                 Conversar pelo WhatsApp
             </Button>
-            <Button href="/localizacao/psicologo-vitoria-es/" variant="outline">
+            <Button href="/psicologo-vitoria-es/" variant="outline">
                 Ver atendimento em Vitória
             </Button>
         </div>

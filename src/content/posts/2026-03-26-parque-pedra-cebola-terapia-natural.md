@@ -102,7 +102,7 @@ Quando o sofrimento está intenso, persistente ou já compromete sono, trabalho,
 </p>
 
 <p>
-A <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> pode funcionar justamente como esse lugar em que a experiência ganha linguagem, continuidade e acolhimento. Se a sua busca for local, a página de <a href="/localizacao/psicologo-jardim-da-penha/">atendimento em Jardim da Penha</a> organiza esse contexto, e a de <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a> amplia a referência.
+A <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> pode funcionar justamente como esse lugar em que a experiência ganha linguagem, continuidade e acolhimento. Se a sua busca for local, a página de <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">atendimento em Jardim da Penha</a> organiza esse contexto, e a de <a href="/psicologo-vitoria-es/">atendimento em Vitória</a> amplia a referência.
 </p>
 </section>
 

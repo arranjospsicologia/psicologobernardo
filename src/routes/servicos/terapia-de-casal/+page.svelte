@@ -131,7 +131,7 @@
                 <Phone size={20} />
                 Conversar pelo WhatsApp
             </Button>
-            <Button href="/localizacao/psicologo-vitoria-es/" variant="outline">
+            <Button href="/psicologo-vitoria-es/" variant="outline">
                 Ver atendimento em Vitória
             </Button>
         </div>
@@ -277,7 +277,7 @@
         <h2>Atendimento em Vitória e online</h2>
         <p>
             O consultório fica em <strong
-                ><a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha (Vitória - ES)</a></strong>
+                ><a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha (Vitória - ES)</a></strong>
             e também ofereço terapia de casal
             <a href="/servicos/terapia-online/">online</a> para casais que precisam de mais flexibilidade 
             ou que vivem em diferentes localidades.
@@ -328,7 +328,7 @@
             <li><a href="/servicos/psicoterapia-individual/">→ Psicoterapia individual</a></li>
             <li><a href="/servicos/terapia-online/">→ Terapia online</a></li>
             <li><a href="/experiencia/relacionamento/">→ Dificuldades nos relacionamentos</a></li>
-            <li><a href="/localizacao/psicologo-vitoria-es/">→ Psicólogo em Vitória ES</a></li>
+            <li><a href="/psicologo-vitoria-es/">→ Psicólogo em Vitória ES</a></li>
         </ul>
     </div>
 </Section>

@@ -13,7 +13,29 @@
       "Bash(sed -i 's/### \\\\[ \\\\] 8\\\\./### [X] 8./' plano-correcoes.md)",
       "Bash(sed -i 's/### \\\\[ \\\\] 9\\\\./### [X] 9./' plano-correcoes.md)",
       "Bash(git stash:*)",
-      "Bash(npx svelte-check:*)"
+      "Bash(npx svelte-check:*)",
+      "Read(//c/Users/bcari/.claude/projects/c--Users-bcari-OneDrive-Desktop-Projetos-site-psicologo-bernardo/memory//**)",
+      "Read(//c/Users/bcari/.claude//**)",
+      "Bash(python3 -c \" import sys, json lines = sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\) for line in lines[-30:]: try: d = json.loads\\(line\\) ts = d.get\\('timestamp',''\\) role = d.get\\('role',''\\) content = str\\(d.get\\('content',''\\)\\)[:200] print\\(f'[{ts[:10]}] {role}: {content[:150]}'\\) except: pass \")",
+      "Bash(node -e ':*)",
+      "Bash(git mv:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(wc -l AGENTS.md blog-posts/post-guide.md blog-posts/how-to-link.md blog-posts/how-to-image.md blog-posts/archive/*.md)",
+      "Bash(node -e \"const sharp=require\\('sharp'\\);['foto-profissional-psicologo-bernardo.jpg','foto-profissional-psicologo-bernardo2.png','foto-profissional-psicologo-bernardo3.jpg'].forEach\\(async f=>{const m=await sharp\\(f\\).metadata\\(\\);console.log\\(f,m.width,'x',m.height,m.format\\);}\\);\")",
+      "Bash(node scripts/process-new-photos.mjs)",
+      "Bash(node -e \"const sharp=require\\('sharp'\\);\\(async\\(\\)=>{for\\(const f of ['static/images/consultorio/espaco-privado.webp','static/images/consultorio/espaco-privado.jpg','static/images/hero/hero-600x800.webp']\\){const m=await sharp\\(f\\).metadata\\(\\);console.log\\(f,m.width+'x'+m.height\\);}}\\)\\(\\);\")",
+      "Bash(node scripts/generate-espaco-privado.mjs)",
+      "Bash(grep -n \"kicker\\\\|section-subtitle\" src/lib/styles/*.css src/app.css)",
+      "Bash(node -e \"const l = require\\('lucide-svelte'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('house'\\) || k.toLowerCase\\(\\).includes\\('home'\\)\\)\\)\")",
+      "Bash(node scripts/auditoria-sobreposicao.mjs)",
+      "Bash(node scripts/validate-seo.mjs)",
+      "Bash(git config *)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\bcari\\OneDrive\\Desktop\\Projetos\\site_psicologo_bernardo\\src\\routes\\psicologo-vitoria-es"
     ]
   }
 }

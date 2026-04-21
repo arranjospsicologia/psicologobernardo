@@ -114,7 +114,7 @@ Alguns sinais importantes:
 </ul>
 
 <p>
-Nessas horas, a <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> pode ajudar tanto a reduzir a hiperativação quanto a entender o que o contexto ambiental está acionando em você. Se a busca estiver mais ampla, a página de <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a> mostra como esse cuidado se organiza.
+Nessas horas, a <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> pode ajudar tanto a reduzir a hiperativação quanto a entender o que o contexto ambiental está acionando em você. Se a busca estiver mais ampla, a página de <a href="/psicologo-vitoria-es/">atendimento em Vitória</a> mostra como esse cuidado se organiza.
 </p>
 </section>
 

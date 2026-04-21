@@ -96,7 +96,7 @@ O presencial costuma ajudar especialmente quando:
 </ul>
 
 <p>
-Se você mora na capital ou circula pela região, pode ajudar ver como funciona o atendimento em <a href="/localizacao/psicologo-vitoria-es/">Vitória</a> e a referência do consultório em <a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a>.
+Se você mora na capital ou circula pela região, pode ajudar ver como funciona o atendimento em <a href="/psicologo-vitoria-es/">Vitória</a> e a referência do consultório em <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a>.
 </p>
 </section>
 
@@ -143,7 +143,7 @@ Em Vitória, essa decisão costuma passar por fatores muito concretos: trânsito
 </p>
 
 <p>
-Se o deslocamento até o consultório em <a href="/localizacao/psicologo-vitoria-es/">Vitória</a> é simples e ajuda você a marcar uma pausa real, o presencial tende a ganhar força. Se o tempo está curto, a semana está imprevisível ou a rotina ameaça a constância, o online pode ser o formato que protege o processo em vez de enfraquecê-lo.
+Se o deslocamento até o consultório em <a href="/psicologo-vitoria-es/">Vitória</a> é simples e ajuda você a marcar uma pausa real, o presencial tende a ganhar força. Se o tempo está curto, a semana está imprevisível ou a rotina ameaça a constância, o online pode ser o formato que protege o processo em vez de enfraquecê-lo.
 </p>
 </section>
 

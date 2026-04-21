@@ -57,26 +57,6 @@
         },
     ];
 
-    const neighborhoodGroups = [
-        {
-            label: "Perto do consultório",
-            items: ["Jardim da Penha", "Mata da Praia", "Goiabeiras", "República"],
-        },
-        {
-            label: "Acesso rápido pela Reta da Penha",
-            items: [
-                "Praia do Canto",
-                "Enseada do Suá",
-                "Bento Ferreira",
-                "Santa Lúcia",
-            ],
-        },
-        {
-            label: "Outros bairros frequentes",
-            items: ["Jardim Camburi", "Centro", "Maruípe", "Santa Martha"],
-        },
-    ];
-
     const blogArticles = [
         {
             slug: "relacao-principal-ferramenta-terapia",
@@ -170,7 +150,7 @@
     description="Consultório em Jardim da Penha, Vitória, em frente à UFES. Veja como chegar, bairros atendidos e como funciona o atendimento presencial e online."
     canonical="https://psicologobernardo.com.br/localizacao/psicologo-vitoria-es/"
     {jsonLd}
-    preloadImage="/images/hero/hero-600x800.webp"
+    preloadImage="/images/consultorio/espaco-privado-600w.webp"
 />
 
 <Breadcrumb
@@ -208,16 +188,29 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img
-                    src="/images/hero/hero-600x800.webp"
-                    srcset="/images/hero/hero-600x800-300w.webp 300w, /images/hero/hero-600x800-450w.webp 450w, /images/hero/hero-600x800.webp 600w"
-                    sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
-                    alt="Bernardo Carielo, psicólogo em Vitória ES"
-                    width="450"
-                    height="600"
-                    loading="eager"
-                    fetchpriority="high"
-                />
+                <picture>
+                    <source
+                        type="image/avif"
+                        srcset="/images/consultorio/espaco-privado-300w.avif 300w,
+                                /images/consultorio/espaco-privado-400w.avif 400w,
+                                /images/consultorio/espaco-privado-600w.avif 600w,
+                                /images/consultorio/espaco-privado-800w.avif 800w"
+                        sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                    />
+                    <img
+                        src="/images/consultorio/espaco-privado-600w.webp"
+                        srcset="/images/consultorio/espaco-privado-300w.webp 300w,
+                                /images/consultorio/espaco-privado-400w.webp 400w,
+                                /images/consultorio/espaco-privado-600w.webp 600w,
+                                /images/consultorio/espaco-privado-800w.webp 800w"
+                        sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                        alt="Consultório em Jardim da Penha, Vitória ES — ambiente privado e acolhedor para atendimento psicológico"
+                        width="600"
+                        height="450"
+                        loading="eager"
+                        fetchpriority="high"
+                    />
+                </picture>
             </div>
         </div>
     </div>
@@ -238,50 +231,38 @@
     <article class="editorial-local">
         <h2>Um consultório em Vitória que cabe na sua rotina</h2>
         <p class="editorial-subtitle">
-            Jardim da Penha é central, o acesso é simples e o consultório fica em frente à UFES
+            O consultório fica em frente à UFES, com acesso direto pela Reta da Penha
         </p>
 
-        <div class="answer-box">
-            <p>
-                Se você procura um psicólogo em Vitória, o consultório fica em Jardim da
-                Penha e atende pessoas de diferentes bairros da capital e da região
-                metropolitana. A principal porta de entrada para demandas individuais é a
-                <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>; a
-                <a href="/servicos/terapia-de-casal/">terapia de casal</a> aparece como eixo
-                secundário quando a demanda central é relacional.
-            </p>
+        <div class="editorial-body">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="/images/sobre/foto-profissional-psicologo-bernardo2-225w.avif 225w,
+                            /images/sobre/foto-profissional-psicologo-bernardo2-450w.avif 450w"
+                    sizes="180px"
+                />
+                <img
+                    src="/images/sobre/foto-profissional-psicologo-bernardo2-225w.webp"
+                    srcset="/images/sobre/foto-profissional-psicologo-bernardo2-225w.webp 225w,
+                            /images/sobre/foto-profissional-psicologo-bernardo2-450w.webp 450w"
+                    sizes="180px"
+                    alt="Bernardo Carielo, psicólogo em Vitória ES"
+                    class="editorial-image-sm"
+                    width="180"
+                    height="240"
+                    loading="lazy"
+                />
+            </picture>
+            <div class="answer-box">
+                <p>
+                    Se você procura um psicólogo em Vitória, o consultório fica em Jardim da
+                    Penha e atende pessoas de diferentes bairros da capital. A maioria das pessoas
+                    começa pela <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>,
+                    mas se a demanda for de casal, isso também é possível.
+                </p>
+            </div>
         </div>
-
-        <img
-            src="/images/localizacao/psicologo-vitoria-es.webp"
-            alt="Ilustração abstrata para Vitória ES"
-            class="editorial-image"
-            width="800"
-            height="1066"
-            loading="lazy"
-        />
-
-        <p>
-            Vitória é uma cidade compacta e cheia de vida. Quem vive aqui conhece as vantagens
-            das distâncias curtas: a praia fica perto, o trabalho fica perto, e o cuidado com
-            a saúde mental também pode ficar. Ter um consultório acessível na capital é uma
-            facilidade que muitos moradores aproveitam.
-        </p>
-        <p>
-            O consultório em Jardim da Penha fica numa das regiões mais centrais de Vitória,
-            acessível para quem vem de diferentes bairros — de Bento Ferreira a Jardim Camburi,
-            de Santa Lúcia a Goiabeiras. A localização em frente à UFES torna a referência fácil.
-        </p>
-        <p>
-            Terapia pode ser um espaço para ampliar o autoconhecimento, refletir sobre escolhas,
-            ou simplesmente ter uma hora semanal dedicada a você. Seja qual for o seu momento, o
-            processo começa com uma conversa.
-        </p>
-        <p>
-            Conheça mais sobre como funciona a
-            <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>
-            e o que esperar dos primeiros encontros.
-        </p>
     </article>
 </Section>
 
@@ -296,9 +277,13 @@
 
 <!-- Serviços em destaque -->
 <Section variant="beige">
-    <div class="section-header">
+    <div class="section-header section-header--left">
         <span class="section-kicker">Serviços</span>
         <h2>Serviços em destaque para quem busca psicólogo em Vitória</h2>
+        <p class="section-subtitle">
+            Os três caminhos mais comuns para quem chega ao consultório, cada
+            um pensado para uma demanda diferente.
+        </p>
     </div>
     <div class="cards-grid">
         <Card
@@ -326,55 +311,16 @@
     </div>
 </Section>
 
-<!-- Micro-seção prática -->
+<!-- Endereço e como chegar -->
 <Section variant="white">
-    <div class="practical-section">
-        <h2>Como chegar ao consultório</h2>
-        <p>
-            O consultório fica na <strong>Rua Darcy Grijó, 50 - Sala 409</strong>, Jardim da
-            Penha, Vitória — em frente à UFES, com acesso pela Av. Fernando Ferrari (Reta da
-            Penha). Há vagas nas ruas ao redor do prédio.
-        </p>
-        <p>
-            Para quem mora em bairros mais distantes ou prefere praticidade, ofereço
-            <a href="/servicos/terapia-online/">terapia online</a> com a mesma qualidade e
-            presença terapêutica.
-        </p>
-    </div>
-</Section>
-
-<!-- Bairros e acesso -->
-<Section variant="beige">
-    <div class="section-header">
-        <h2>De onde vêm as pessoas que atendo</h2>
-        <p style="color: var(--text-light); margin-top: 0.5rem;">
-            O consultório fica em Jardim da Penha, mas recebe pessoas de toda Vitória
-        </p>
-    </div>
-    <div class="bairros-grid">
-        {#each neighborhoodGroups as group}
-            <div class="bairro-card">
-                <h3><MapPin size={20} /> {group.label}</h3>
-                <ul>
-                    {#each group.items as item}<li>• {item}</li>{/each}
-                </ul>
-            </div>
-        {/each}
-    </div>
-</Section>
-
-<!-- Localização / Mapa -->
-<Section variant="white">
-    <div class="section-header">
-        <span class="section-kicker">Localização</span>
-        <h2>Consultório em Jardim da Penha, com acesso para toda Vitória</h2>
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Acesso</span>
+        <h2>Endereço e como chegar</h2>
     </div>
     <div class="location-content">
-        <p>
-            O consultório está em <strong>Jardim da Penha</strong>, em frente à UFES, com
-            acesso facilitado pela Reta da Penha e pela Av. Fernando Ferrari. Isso ajuda quem
-            vem de bairros como Jardim Camburi, Praia do Canto, Bento Ferreira, Mata da Praia
-            e Santa Lúcia.
+        <p class="address-line">
+            <strong>Rua Darcy Grijó, 50 — Sala 409</strong><br />
+            Jardim da Penha, Vitória ES · Em frente à UFES
         </p>
         <div class="cards-grid access-grid">
             <Card icon={Route} title="Vias principais">
@@ -383,38 +329,31 @@
                     fácil pelas rotas centrais de Vitória.
                 </p>
             </Card>
-            <Card icon={Car} title="Ponte da Passagem">
+            <Card icon={Car} title="Estacionamento">
                 <p>
-                    Rota natural para quem vem de Praia do Canto, Enseada do Suá e bairros
-                    do centro-sul de Vitória — a ponte desemboca direto na Reta da Penha.
+                    Há vagas nas ruas ao redor do prédio. Rota natural para quem vem pela
+                    Ponte da Passagem — desemboca direto na Reta da Penha.
                 </p>
             </Card>
-            <Card icon={Bus} title="Transporte Público">
+            <Card icon={Bus} title="Transporte público">
                 <p>
                     Diversos pontos de ônibus nas proximidades — UFES e arredores como ponto
                     de referência para linhas urbanas e intermunicipais.
                 </p>
             </Card>
         </div>
-        <div class="location-process">
-            <div>
-                <h3>Como a busca local vira decisão</h3>
-                <p>
-                    Primeiro você confirma se a logística faz sentido. Depois avalia se a
-                    <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> é
-                    o melhor formato para sua demanda. Se ainda estiver em dúvida, o contato
-                    inicial pode ser breve.
-                </p>
-            </div>
-            <div class="map-container">
-                <iframe
-                    src={siteProfile.externalLinks.googleMapsEmbed}
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Localização do consultório em Vitória"
-                ></iframe>
-            </div>
+        <p class="neighborhood-note">
+            A localização costuma funcionar para quem vem de Jardim Camburi, Mata da Praia,
+            Goiabeiras, Praia do Canto, Bento Ferreira, Santa Lúcia e outros bairros próximos.
+        </p>
+        <div class="map-container map-container-full">
+            <iframe
+                src={siteProfile.externalLinks.googleMapsEmbed}
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização do consultório em Vitória"
+            ></iframe>
         </div>
         <div class="map-action">
             <a
@@ -429,23 +368,49 @@
     </div>
 </Section>
 
-<!-- Sobre mim + CRP -->
-<Section variant="beige">
+<!-- Quem vai te atender -->
+<Section variant="beige" id="quem-atende">
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Quem sou</span>
+        <h2>Quem vai te atender</h2>
+    </div>
     <div class="about-grid">
-        <img
-            src="/images/sobre/bernardo-profissional.webp"
-            alt="Bernardo Carielo Psicólogo em Vitória ES"
-            width="250"
-            height="333"
-            loading="lazy"
-        />
+        <picture>
+            <source
+                type="image/avif"
+                srcset="/images/sobre/bernardo-profissional-225w.avif 225w,
+                        /images/sobre/bernardo-profissional-450w.avif 450w"
+                sizes="(max-width: 768px) 200px, 250px"
+            />
+            <img
+                src="/images/sobre/bernardo-profissional-225w.webp"
+                srcset="/images/sobre/bernardo-profissional-225w.webp 225w,
+                        /images/sobre/bernardo-profissional-450w.webp 450w"
+                sizes="(max-width: 768px) 200px, 250px"
+                alt="Bernardo Carielo, psicólogo clínico (CRP 16/5527) em Vitória ES"
+                width="250"
+                height="333"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+            />
+        </picture>
         <div>
-            <h3>Bernardo Carielo</h3>
+            <h2 class="about-name">Bernardo Carielo</h2>
             <p class="crp-badge">CRP-16/5527 · Psicólogo Humanista</p>
             <p>
-                Uma escuta centrada na pessoa, para que a conversa seja um lugar seguro e
-                honesto — sem pressa e sem julgamento. O seu processo é seu, e meu papel é
-                estar presente enquanto você encontra seus próprios caminhos.
+                Sou psicólogo clínico pela <strong>Abordagem Centrada na
+                Pessoa (ACP)</strong> com base em Jardim da Penha (Vitória-ES),
+                em frente à UFES. Além de atendimento individual, de casal e
+                família, coordeno grupos e rodas de conversa para psicólogos e
+                população em geral, remotamente ou, na cidade e voltados à
+                população da Grande Vitória.
+            </p>
+            <p>
+                Minha abordagem se baseia em uma escuta empática e sem
+                julgamento. Confio que quando é verdadeiramente compreendida e
+                respeitada, cada pessoa pode encontrar seu próprio caminho para
+                descobrir uma maneira de ser que faça sentido para si mesma.
             </p>
             <a href="/sobre/">Conheça minha abordagem e formação →</a>
         </div>
@@ -463,8 +428,9 @@
                 horário
             </li>
             <li>
-                <strong>Primeira conversa</strong> sem compromisso de continuidade — é um momento
-                para nos conhecermos
+                <strong>Primeira sessão</strong> marcada — um encontro para
+                você apresentar o que te trouxe à terapia e começarmos a
+                construir o trabalho no seu ritmo
             </li>
         </ol>
         <p>
@@ -474,9 +440,45 @@
     </div>
 </Section>
 
+<!-- Leituras -->
+<Section variant="beige">
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Leituras</span>
+        <h2>Caso queira ler um pouco antes de decidir</h2>
+    </div>
+    <div class="loc-articles-grid">
+        {#each blogArticles as article}
+            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card">
+                <h3>{article.title}</h3>
+                <p>{article.reason}</p>
+                <span class="read-more">Ler artigo →</span>
+            </a>
+        {/each}
+    </div>
+</Section>
+
+<!-- Jardim da Penha -->
+<Section variant="white">
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Bairro</span>
+        <h2>Página específica do bairro: Jardim da Penha</h2>
+        <p class="section-subtitle">
+            Página com logística detalhada para quem quer avaliar proximidade e deslocamento.
+        </p>
+    </div>
+    <div class="links-grid">
+        {#each crossLinks as link}
+            <a href={link.href} class="link-card">
+                <h3>{link.label}</h3>
+                <p>{link.description}</p>
+            </a>
+        {/each}
+    </div>
+</Section>
+
 <!-- FAQ -->
 <Section variant="beige" id="faq">
-    <div class="section-header">
+    <div class="section-header section-header--left">
         <span class="section-kicker">Perguntas frequentes</span>
         <h2>Antes de marcar</h2>
     </div>
@@ -500,33 +502,6 @@
                 </summary>
                 <div class="loc-faq-answer"><p>{item.answer}</p></div>
             </details>
-        {/each}
-    </div>
-</Section>
-
-<!-- Artigos -->
-<Section variant="white">
-    <div class="section-header"><h2>Da nossa biblioteca</h2></div>
-    <div class="loc-articles-grid">
-        {#each blogArticles as article}
-            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card">
-                <h3>{article.title}</h3>
-                <p>{article.reason}</p>
-                <span class="read-more">Ler artigo →</span>
-            </a>
-        {/each}
-    </div>
-</Section>
-
-<!-- Outras regiões -->
-<Section variant="beige">
-    <div class="section-header"><h2>Outras regiões atendidas</h2></div>
-    <div class="links-grid">
-        {#each crossLinks as link}
-            <a href={link.href} class="link-card">
-                <h3>{link.label}</h3>
-                <p>{link.description}</p>
-            </a>
         {/each}
     </div>
 </Section>
@@ -563,6 +538,36 @@
         font-size: 0.92rem;
     }
 
+    .editorial-body {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .editorial-body .answer-box {
+        flex: 1;
+    }
+
+    .editorial-image-sm {
+        width: 180px;
+        height: auto;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+        .editorial-body {
+            flex-direction: column;
+        }
+
+        .editorial-image-sm {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+    }
+
     .answer-box {
         background: rgba(8, 186, 156, 0.06);
         border-left: 3px solid var(--primary);
@@ -581,21 +586,8 @@
         margin-top: 2rem;
     }
 
-    .location-process {
-        display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
-        gap: 2rem;
-        align-items: center;
+    .map-container-full {
         margin-top: 2rem;
-    }
-
-    .location-process h3 {
-        margin-bottom: 0.8rem;
-    }
-
-    .location-process p {
-        text-align: left;
-        margin-bottom: 0;
     }
 
     .map-action {
@@ -603,9 +595,41 @@
         margin-top: 1rem;
     }
 
-    @media (max-width: 900px) {
-        .location-process {
-            grid-template-columns: 1fr;
-        }
+    .about-name {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        line-height: 1.2;
+        color: var(--primary-color);
+    }
+
+    .section-header--left {
+        text-align: left;
+        max-width: 760px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section-header--left .section-subtitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    :global(.location-content p.address-line),
+    :global(.location-content p.neighborhood-note) {
+        text-align: left;
+    }
+
+    .address-line {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+
+    .neighborhood-note {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-top: 1.5rem;
+        margin-bottom: 0;
     }
 </style>

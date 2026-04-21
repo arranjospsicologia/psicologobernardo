@@ -102,7 +102,7 @@ O caminho raramente é se forçar a enfrentar tudo de uma vez. Costuma funcionar
 </ul>
 
 <p>
-Se você está tentando reconstruir um senso de pertencimento ao bairro, pode fazer sentido ler também <a href="/saude-mental/onde-cuidar-saude-mental-jardim-da-penha/">onde cuidar da saúde mental em Jardim da Penha</a> e a página local de <a href="/localizacao/psicologo-jardim-da-penha/">atendimento em Jardim da Penha</a>.
+Se você está tentando reconstruir um senso de pertencimento ao bairro, pode fazer sentido ler também <a href="/saude-mental/onde-cuidar-saude-mental-jardim-da-penha/">onde cuidar da saúde mental em Jardim da Penha</a> e a página local de <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">atendimento em Jardim da Penha</a>.
 </p>
 </section>
 
@@ -114,7 +114,7 @@ Quando você percebe que está deixando de viver partes importantes da rotina po
 </p>
 
 <p>
-A <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> pode ajudar a recalibrar esse alarme interno sem infantilizar sua experiência nem tratar prudência como exagero. Se a sua busca estiver mais ampla, a página de <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a> organiza esse contexto.
+A <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> pode ajudar a recalibrar esse alarme interno sem infantilizar sua experiência nem tratar prudência como exagero. Se a sua busca estiver mais ampla, a página de <a href="/psicologo-vitoria-es/">atendimento em Vitória</a> organiza esse contexto.
 </p>
 </section>
 

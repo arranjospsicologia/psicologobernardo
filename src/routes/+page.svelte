@@ -5,8 +5,10 @@
 		Card,
 		ReviewCarousel,
 		ImageCarousel,
+		JourneyShortcuts,
 		SEO,
 		buildWhatsAppUrl,
+		getFullStreetAddress,
 		schemaIds,
 		siteProfile,
 		siteSameAs,
@@ -19,16 +21,17 @@
 		Users,
 		Phone,
 		MapPin,
+		Clock,
 		ChevronDown,
 		Zap,
 		Flame,
 		HeartPulse,
 		UsersRound,
 		SmilePlus,
+		Star,
 	} from "lucide-svelte";
-	import type { PageData } from "./$types";
-
-	let { data }: { data: PageData } = $props();
+	import { onMount } from "svelte";
+	import type { HomeReview } from "$lib/data/homeReviewsFallback";
 
 	// Service icon mapping
 	const serviceIcons = {
@@ -45,14 +48,6 @@
 		"/experiencia/relacionamento/": UsersRound,
 		"/experiencia/autoestima/": SmilePlus,
 	} as const;
-
-	const experienceAccents: Record<string, string> = {
-		"/experiencia/ansiedade/": "#D4AD5A",
-		"/experiencia/depressao/": "#C97A83",
-		"/experiencia/burnout/": "#D4A87A",
-		"/experiencia/relacionamento/": "#6BAA9A",
-		"/experiencia/autoestima/": "#9B89B5",
-	};
 
 	// FAQ da home — mantém dúvidas recorrentes também no schema FAQPage
 	const faqEntries = [
@@ -87,56 +82,81 @@
 		}));
 	}
 
-	// Reviews — static fallback data (original content preserved)
-	const googleReviewsStatic = [
-		{
-			name: "Kleber do R.",
-			photo: "https://lh3.googleusercontent.com/a-/ALV-UjX1w6dUUZBROk9gV2ybPaKamAxETpfz2-yGu3x00BCLg_E3v0Sm=w36-h36-p-rp-mo-br100",
-			rating: 5,
-			date: "há 3 dias",
-			text: "O Dr. Bernardo é extremamente atencioso e empático, me senti como se estivesse conversando com meu melhor amigo e tudo fluiu muito bem. Dizem que a primeira impressão é a que fica e ela foi a melhor possível. Muito, muito bom.",
-		},
-		{
-			name: "Marina Benetti",
-			photo: "https://lh3.googleusercontent.com/a-/ALV-UjWlXDdCcI86LfZ4CfwWDLQIVaG5jbdN8qW10YMzEMi-X3_8CMjv=w36-h36-p-rp-mo-br100",
-			rating: 5,
-			date: "há 3 dias",
-			text: "Excelente profissional, educado, atento e empático. O espaço é acolhedor, limpo e de fácil acesso. E tem sempre um chazim!",
-		},
-		{
-			name: "Eder França Balbino",
-			photo: "https://lh3.googleusercontent.com/a-/ALV-UjXlRSYncjgG2LbyRWKY0JI9SrWnJ8JvPGq8APXVy7OwMPa7ChsF8w=w36-h36-p-rp-mo-br100",
-			rating: 5,
-			date: "há 3 dias",
-			text: "Sem palavras para descrever o quanto me ajudou num momento extremamente importante em minha vida. Só tenho a agradecer por ter me ajudado a me desenvolver e prosperar num momento de turbulência.",
-		},
-		{
-			name: "Raiça Ronchetti",
-			photo: "https://lh3.googleusercontent.com/a-/ALV-UjXYgRaW7hOHBdBwK6Ht5ve6AjYGsB7YYdteCczEEopE7fO6RuhH=w36-h36-p-rp-mo-br100",
-			rating: 5,
-			date: "há 4 dias",
-			text: "Bernardo me ajudou demais num momento em que eu estava precisando muito de suporte! Excelente profissional, empático e sensível. Sou muito grata por todo o nosso tempo juntos.",
-		},
-		{
-			name: "Victor Raft",
-			photo: "https://lh3.googleusercontent.com/a-/ALV-UjWBoEPl1mnij17O6DmWnj4ssgmu0kZg9BxbKPxxXcg8_YzvA2lP7Q=w36-h36-p-rp-mo-ba3-br100",
-			rating: 5,
-			date: "há 4 dias",
-			text: "O Bernardo é um ótimo psicólogo e uma pessoa admirável. Inteligente, curioso e sempre atencioso, ele é muito bom em criar um ambiente de confiança e acolhimento. Um profissional que realmente se importa e faz diferença. Recomendo muito!",
-		},
-		{
-			name: "Chander Freitas",
-			photo: "https://lh3.googleusercontent.com/a-/ALV-UjV6NxHOIQHgZ_YeLCAi0o73XzCD2y2-FaK1fFksyOnenqsUwCec6A=w36-h36-p-rp-mo-ba2-br100",
-			rating: 5,
-			date: "há 5 dias",
-			text: "Recomendo o Bernardo em todos os aspectos. Da estrutura do consultório à organização das sessões, tudo é pensado para que a psicoterapia aconteça de forma tranquila, empática, confortável e com os melhores recursos possíveis. Excelente!",
-		},
-	];
+	// Reviews — carregamento sob intenção.
+	// O conteúdo completo das avaliações só é baixado quando a seção se aproxima
+	// da viewport. Até lá, mostramos apenas o badge agregado (rating + contagem)
+	// e um estado mínimo, evitando custo de HTML/JS/requests abaixo da dobra.
+	let googleReviews = $state<HomeReview[]>([]);
+	let reviewsSection: HTMLElement | undefined = $state();
+	let reviewsLoaded = false;
+	let mapSection: HTMLElement | undefined = $state();
+	let mapVisible = $state(false);
 
-	// Use loader data with static fallback
-	const googleReviews = $derived(
-		(data.googleReviews.length ? data.googleReviews : googleReviewsStatic).slice(0, 6)
-	);
+	async function loadHomeReviews() {
+		if (reviewsLoaded) return;
+		reviewsLoaded = true;
+		try {
+			const response = await fetch("/data/reviews.json");
+			if (response.ok) {
+				const payload = (await response.json()) as unknown;
+				if (Array.isArray(payload) && payload.length) {
+					googleReviews = (payload as HomeReview[]).slice(0, 6);
+					return;
+				}
+			}
+		} catch {
+			/* silencioso: usamos fallback abaixo */
+		}
+		const { homeReviewsFallback } = await import("$lib/data/homeReviewsFallback");
+		googleReviews = homeReviewsFallback.slice(0, 6);
+	}
+
+	onMount(() => {
+		const supportsIO = typeof IntersectionObserver !== "undefined";
+		if (!supportsIO) {
+			loadHomeReviews();
+			mapVisible = true;
+			return;
+		}
+
+		const observers: IntersectionObserver[] = [];
+
+		if (reviewsSection) {
+			const io = new IntersectionObserver(
+				(entries) => {
+					for (const entry of entries) {
+						if (entry.isIntersecting) {
+							loadHomeReviews();
+							io.disconnect();
+							break;
+						}
+					}
+				},
+				{ rootMargin: "400px 0px" },
+			);
+			io.observe(reviewsSection);
+			observers.push(io);
+		}
+
+		if (mapSection) {
+			const io = new IntersectionObserver(
+				(entries) => {
+					for (const entry of entries) {
+						if (entry.isIntersecting) {
+							mapVisible = true;
+							io.disconnect();
+							break;
+						}
+					}
+				},
+				{ rootMargin: "300px 0px" },
+			);
+			io.observe(mapSection);
+			observers.push(io);
+		}
+
+		return () => observers.forEach((io) => io.disconnect());
+	});
 
 	// Office images for carousel
 	const officeImages = [
@@ -205,8 +225,8 @@
 			{
 				"@type": "Person",
 				"@id": schemaIds.person,
-				name: siteProfile.fullName,
-				alternateName: siteProfile.personName,
+				name: siteProfile.personName,
+				alternateName: siteProfile.fullName,
 				jobTitle: "Psicólogo",
 				worksFor: {
 					"@id": schemaIds.organization,
@@ -311,7 +331,7 @@
 </script>
 
 <SEO
-	title="Psicólogo em Vitória ES — Consultório em Jardim da Penha | Bernardo Carielo"
+	title="Psicólogo em Vitória ES | Consultório em Jardim da Penha | Bernardo Carielo"
 	description="Psicólogo em Vitória com consultório em Jardim da Penha, em frente à UFES. Atendimento presencial e online. Agende uma primeira conversa sem compromisso pelo WhatsApp."
 	canonical="https://psicologobernardo.com.br/"
 	image={siteProfile.ogImageUrl}
@@ -344,14 +364,14 @@
 			<h1 class="hero-h1-wrapper">
 				<span
 					class="hero-eyebrow animate-fade-in-up"
-					style="--delay: 0.1s">Psicólogo em Vitória - ES</span
+					style="--delay: 0.1s">Bernardo Carielo · CRP-16/5527</span
 				>
 				<span
 					class="hero-title animate-fade-in-up"
 					style="--delay: 0.2s"
 				>
-					Bernardo Carielo
-					<span>CRP-16/5527 • Psicólogo Humanista</span>
+					Psicólogo em Vitória ES
+					<span>Atendimento presencial e online</span>
 				</span>
 			</h1>
 			<p
@@ -360,14 +380,14 @@
 			>
 				Psicoterapia individual presencial em <strong
 					><a
-						href="/localizacao/psicologo-jardim-da-penha/"
+						href="/psicologo-vitoria-es/psicologo-jardim-da-penha/"
 						class="text-primary-hover">Jardim da Penha</a
 					>,
 					<a
-						href="/localizacao/psicologo-vitoria-es/"
+						href="/psicologo-vitoria-es/"
 						class="text-primary-hover">Vitória ES</a
 					></strong
-				> ou online. Escuta acolhedora, sem pressa — o primeiro passo é uma conversa.
+				> ou online. Escuta acolhedora, sem pressa. O primeiro passo é uma conversa.
 			</p>
 			<div class="hero-buttons animate-fade-in-up" style="--delay: 0.4s">
 				<Button
@@ -376,18 +396,23 @@
 					size="lg"
 				>
 					<Phone size={20} />
-					Agendar primeira conversa
-				</Button>
-				<Button href="/localizacao/psicologo-vitoria-es/" variant="outline" size="lg">
-					<MapPin size={20} />
-					Ver atendimento em Vitória
+					Falar pelo WhatsApp
 				</Button>
 			</div>
-			<div class="quick-facts animate-fade-in-up" style="--delay: 0.5s">
-				<span>Jardim da Penha, em frente à UFES</span>
-				<span>{siteProfile.crp}</span>
-				<span>Presencial e online</span>
-			</div>
+			<ul class="quick-facts animate-fade-in-up" style="--delay: 0.5s">
+				<li>
+					<MapPin size={14} strokeWidth={2} aria-hidden="true" />
+					<span>Jardim da Penha, em frente à UFES</span>
+				</li>
+				<li>
+					<span class="quick-facts__crp" aria-hidden="true">CRP</span>
+					<span>{siteProfile.crp}</span>
+				</li>
+				<li>
+					<Video size={14} strokeWidth={2} aria-hidden="true" />
+					<span>Presencial e online</span>
+				</li>
+			</ul>
 		</div>
 		<div class="hero-image">
 			<picture>
@@ -418,36 +443,84 @@
 	</div>
 </section>
 
-<!-- Trust Strip -->
-<div class="trust-strip">
+<!-- Trust line — informação que não aparece no hero -->
+<div class="trust-line">
 	<div class="container">
-		<ul class="trust-strip__items">
-			<li class="trust-strip__item">
-				<span class="trust-strip__value">5.0 ★</span>
-				<span class="trust-strip__label">Google e Doctoralia</span>
-			</li>
-			<li class="trust-strip__item">
-				<span class="trust-strip__value">{siteProfile.crp}</span>
-				<span class="trust-strip__label">Registro profissional</span>
-			</li>
-			<li class="trust-strip__item">
-				<span class="trust-strip__value">Jardim da Penha</span>
-				<span class="trust-strip__label">Em frente à UFES</span>
-			</li>
-			<li class="trust-strip__item">
-				<span class="trust-strip__value">{siteProfile.hours.displayDays}</span>
-				<span class="trust-strip__label">{siteProfile.hours.displayTime}</span>
-			</li>
-		</ul>
+		<p>
+			<Star size={15} fill="currentColor" strokeWidth={0} aria-hidden="true" />
+			<strong>5.0</strong> no Google e Doctoralia
+			<span class="trust-line__sep" aria-hidden="true">·</span>
+			{siteProfile.reviews.reviewCount} avaliações
+			<span class="trust-line__sep" aria-hidden="true">·</span>
+			{siteProfile.hours.displayDays}, {siteProfile.hours.displayTime}
+		</p>
 	</div>
 </div>
+
+<!-- Atalhos de jornada -->
+<Section variant="white" id="caminhos">
+	<JourneyShortcuts
+		title="Por onde começar"
+		intro="Escolha o caminho que faz mais sentido para você agora."
+		items={[
+			{
+				label: "Demanda",
+				title: "Estou passando por algo difícil",
+				description: "Veja as experiências que mais trazem pessoas ao consultório e encontre a que se aproxima do que você vive.",
+				href: "#como-posso-ajudar",
+			},
+			{
+				label: "Serviço",
+				title: "Quero conhecer os formatos",
+				description: "Psicoterapia individual, terapia de casal ou online. Veja qual faz sentido para a sua rotina.",
+				href: "#servicos",
+			},
+			{
+				label: "Localização",
+				title: "Quero ver onde fica",
+				description: "Consultório em Jardim da Penha, em frente à UFES. Veja como chegar e se a logística funciona.",
+				href: "/psicologo-vitoria-es/",
+			},
+		]}
+	/>
+</Section>
+
+<!-- Você se reconhece -->
+<Section variant="beige" class="home-support-section" id="como-posso-ajudar">
+	<div class="section-header section-header--left">
+		<span class="section-kicker">Demandas frequentes</span>
+		<h2>Alguns temas que podem se aproximar do que você está vivendo</h2>
+		<p>Não é preciso ter um diagnóstico para procurar terapia. Muitas pessoas chegam ao consultório com sensações difíceis de nomear. Veja se algo abaixo se aproxima do que você vive.</p>
+	</div>
+	<div class="experience-list">
+		{#each experienceNavItems as item, i}
+			{@const Icon = experienceIcons[item.href as keyof typeof experienceIcons]}
+			<a href={item.href} class="experience-item">
+				<div class="experience-item__number">
+					{String(i + 1).padStart(2, '0')}
+				</div>
+				<div class="experience-item__body">
+					<h3>
+						<Icon size={17} strokeWidth={1.8} class="experience-item__icon" />
+						{item.name}
+					</h3>
+					<p>{item.description}</p>
+				</div>
+				<span class="experience-item__arrow">→</span>
+			</a>
+		{/each}
+	</div>
+	<div class="section-link-row">
+		<a href="/experiencia/" class="section-link">Explorar todas as demandas →</a>
+	</div>
+</Section>
 
 <!-- Serviços Section -->
 <Section variant="white" class="home-services-section" id="servicos">
 	<div class="section-header section-header--left">
 		<span class="section-kicker">Serviços</span>
-		<h2>Serviços Oferecidos</h2>
-		<p>Conheça as modalidades de atendimento disponíveis</p>
+		<h2>Modalidades de atendimento</h2>
+		<p>Cada formato existe para responder a uma necessidade diferente. Se você não sabe qual faz mais sentido, uma conversa rápida pelo WhatsApp já é suficiente para alinhar.</p>
 	</div>
 	<div class="cards-grid">
 		{#each primaryServiceItems as item}
@@ -465,96 +538,240 @@
 	</div>
 </Section>
 
-<!-- Avaliações Section — Google Reviews -->
-<Section variant="white" id="avaliacoes">
+<!-- Consultório Section -->
+<Section variant="beige" class="home-location-section" id="consultorio">
 	<div class="section-header section-header--left">
-		<span class="section-kicker">Avaliações</span>
-		<h2>Avaliações sobre o atendimento</h2>
-		<p>Depoimentos publicados no Google por pessoas que passaram pelo processo terapêutico.</p>
+		<span class="section-kicker">Consultório</span>
+		<h2>Um espaço reservado para a sua escuta</h2>
+		<p>O consultório foi preparado com cuidado para acolher cada sessão: silencioso, privativo, pensado como um ambiente onde a conversa possa acontecer com calma.</p>
 	</div>
-	<div class="avaliacoes-carousel-single">
+	<div class="local-proof-grid">
+		<div class="consultorio-copy">
+			<p>
+				Cada detalhe do espaço foi escolhido com atenção: a iluminação, as poltronas, a disposição da sala. Tudo para que você se sinta à vontade para falar sobre o que importa, no seu ritmo.
+			</p>
+			<p>
+				É um ambiente pensado para sustentar a confidencialidade e o conforto que o processo terapêutico merece.
+			</p>
+			<div class="local-links">
+				<a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">
+					Conhecer o consultório em Jardim da Penha →
+				</a>
+				<a href="/psicologo-vitoria-es/">
+					Ver atendimento em Vitória →
+				</a>
+			</div>
+		</div>
+		<ImageCarousel images={officeImages} />
+	</div>
+</Section>
+
+<!-- Sobre Bernardo -->
+<Section variant="beige" class="home-about-section" id="sobre-bernardo">
+	<div class="about-card">
+		<div class="about-card__photo">
+			<img
+				src="/images/sobre/bernardo-profissional-225w.webp"
+				alt="Bernardo Carielo, psicólogo em Vitória ES"
+				width="225"
+				height="300"
+				loading="lazy"
+			/>
+			<span class="about-card__crp">{siteProfile.crp}</span>
+		</div>
+		<div class="about-card__content">
+			<span class="section-kicker">Sobre mim</span>
+			<h2>Bernardo Carielo</h2>
+			<p class="about-card__lead">
+				Sou psicólogo clínico (<strong>{siteProfile.crp}</strong>), formado pela UFES e com formação na <strong>Abordagem Centrada na Pessoa</strong> pelo EncontroACP (SP). Minha jornada começou na Física, como professor. Depois, quis me aprofundar nas questões que nos tornam pessoas.
+			</p>
+			<p>
+				Minha abordagem é direta, sem jargões e sem roteiros prontos. Acredito que cada pessoa pode encontrar caminhos próprios quando é escutada com presença e consideração genuínas.
+			</p>
+			<p>
+				Também coordeno rodas de conversa e supervisões, buscando tornar o conhecimento sobre psicoterapia efetiva mais acessível. Atendo presencialmente em <strong>Jardim da Penha, Vitória</strong>, e também realizo atendimentos online.
+			</p>
+			<div class="about-card__links">
+				<a href="/sobre/">Conhecer minha trajetória completa →</a>
+				<a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia individual →</a>
+			</div>
+			<div class="about-card__cta">
+				<Button
+					href={buildWhatsAppUrl("Olá, vi seu site e gostaria de agendar uma primeira conversa.")}
+					variant="primary"
+					size="sm"
+				>
+					<Phone size={18} />
+					Falar pelo WhatsApp
+				</Button>
+				<span class="about-card__cta-note">Respondo no mesmo dia útil</span>
+			</div>
+		</div>
+	</div>
+</Section>
+
+<!-- Avaliações Section — Google Reviews -->
+<Section variant="white" class="home-reviews-section" id="avaliacoes">
+	<div bind:this={reviewsSection} class="reviews-section-anchor"></div>
+	<div class="reviews-intro">
+		<div class="reviews-intro__text">
+			<span class="section-kicker">Avaliações</span>
+			<h2>Quem já passou pelo consultório</h2>
+			<p>Depoimentos reais publicados no Google por pessoas que passaram pelo processo terapêutico.</p>
+		</div>
+		<div class="reviews-intro__badge">
+			<div class="reviews-badge">
+				<Star size={22} fill="currentColor" />
+				<span class="reviews-badge__rating">{siteProfile.reviews.ratingValue}</span>
+				<span class="reviews-badge__count">{siteProfile.reviews.reviewCount} avaliações</span>
+			</div>
+		</div>
+	</div>
+	{#if googleReviews.length}
 		<ReviewCarousel reviews={googleReviews} reviewCount={siteProfile.reviews.reviewCount} />
-	</div>
+	{:else}
+		<div class="reviews-placeholder" aria-hidden="true">
+			<p>Carregando avaliações reais publicadas no Google…</p>
+		</div>
+	{/if}
 	<div class="section-link-row section-link-row--left">
 		<a
 			href={siteProfile.externalLinks.googleReviews}
 			target="_blank"
 			rel="noopener"
 			class="section-link"
-		>Ver todas as {siteProfile.reviews.reviewCount} avaliações no Google →</a>
+		>Ver todas no Google →</a>
 		<a
 			href={siteProfile.externalLinks.doctoralia}
 			target="_blank"
 			rel="noopener"
 			class="section-link section-link--secondary"
-		>Ver também os comentários no Doctoralia →</a>
+		>Ver no Doctoralia →</a>
 	</div>
 </Section>
 
-<!-- Como posso ajudar -->
-<Section variant="beige" class="home-support-section" id="como-posso-ajudar">
+<!-- Artigos em destaque -->
+<Section variant="white" class="home-articles-section" id="artigos">
 	<div class="section-header section-header--left">
-		<span class="section-kicker">Como posso ajudar</span>
-		<h2>Demandas mais comuns</h2>
+		<span class="section-kicker">Artigos</span>
+		<h2>Artigos que podem ajudar</h2>
+		<p>Textos curtos sobre temas que costumam aparecer antes e durante o processo terapêutico.</p>
 	</div>
-	<div class="support-grid">
-		{#each experienceNavItems as item}
-			{@const Icon = experienceIcons[item.href as keyof typeof experienceIcons]}
-			{@const accent = experienceAccents[item.href] ?? "#08BA9C"}
-			<a href={item.href} class="support-card" style="border-left: 3px solid {accent};">
-				<div
-					class="support-card__icon"
-					style="background: {accent}1a; color: {accent};"
-				>
-					<Icon size={19} strokeWidth={1.8} />
-				</div>
-				<div>
-					<h3>{item.name}</h3>
-					<p>{item.description}</p>
-				</div>
-			</a>
-		{/each}
+	<div class="featured-articles-grid">
+		<a href="/psicoterapia/como-funciona-terapia-primeira-sessao/" class="featured-article">
+			<img
+				src="/images/blog/como-funciona-terapia-primeira-sessao.webp"
+				alt="Ilustração sobre como funciona a primeira sessão de terapia"
+				width="800"
+				height="450"
+				loading="lazy"
+				decoding="async"
+				class="featured-article__img"
+			/>
+			<div class="featured-article__body">
+				<span class="featured-article__tag">Primeira sessão</span>
+				<h3>Como funciona a primeira sessão de terapia?</h3>
+				<p>O que esperar, o que você pode trazer e por que não precisa ter tudo pronto.</p>
+			</div>
+		</a>
+		<a href="/acp/relacao-principal-ferramenta-terapia/" class="featured-article">
+			<img
+				src="/images/blog/relacao-principal-ferramenta-terapia.webp"
+				alt="Ilustração abstrata representando conexão genuína e vínculo terapêutico"
+				width="800"
+				height="450"
+				loading="lazy"
+				decoding="async"
+				class="featured-article__img"
+			/>
+			<div class="featured-article__body">
+				<span class="featured-article__tag">Abordagem</span>
+				<h3>Por que a relação é a principal ferramenta da terapia?</h3>
+				<p>Como a qualidade do vínculo terapêutico impacta diretamente o processo de mudança.</p>
+			</div>
+		</a>
+		<a href="/psicoterapia/terapia-presencial-ou-online-como-escolher/" class="featured-article">
+			<img
+				src="/images/blog/terapia-presencial-ou-online-como-escolher.webp"
+				alt="Ilustração representando a escolha entre terapia presencial e online"
+				width="800"
+				height="450"
+				loading="lazy"
+				decoding="async"
+				class="featured-article__img"
+			/>
+			<div class="featured-article__body">
+				<span class="featured-article__tag">Formato</span>
+				<h3>Terapia presencial ou online: como escolher?</h3>
+				<p>Critérios práticos para decidir qual modalidade funciona melhor para a sua rotina.</p>
+			</div>
+		</a>
 	</div>
 	<div class="section-link-row">
-		<a href="/experiencia/" class="section-link">Explorar todas as demandas →</a>
+		<a href="/artigos/" class="section-link">Ver todos os artigos →</a>
 	</div>
 </Section>
 
-<!-- Localização Section -->
-<Section variant="beige" class="home-location-section" id="localizacao">
+<!-- Onde encontrar -->
+<Section variant="beige" class="home-map-section" id="onde-encontrar">
 	<div class="section-header section-header--left">
 		<span class="section-kicker">Localização</span>
-		<h2>Conheça o Consultório</h2>
-		<p>Um ambiente acolhedor e seguro, pensado para o seu bem-estar</p>
+		<h2>Onde me encontrar</h2>
 	</div>
-	<div class="local-proof-grid">
-		<div>
-			<p class="local-address-short">
-				<strong>{siteProfile.address.streetAddress}</strong>, {siteProfile.address.extendedAddress}
-			</p>
-			<p class="local-reference">
-				O consultório fica em frente à UFES, no coração de <strong>Jardim da Penha</strong>, em Vitória/ES, em um espaço tranquilo e privativo. O ambiente foi cuidadosamente pensado para proporcionar conforto, acolhimento e confidencialidade durante as sessões.
-			</p>
-			<div class="local-links">
-				<a
-					href={siteProfile.externalLinks.googleMapsQuery}
-					target="_blank"
-					rel="noopener"
-					class="local-map-btn"
-				>
-					<MapPin size={16} />
-					Abrir no Google Maps
-				</a>
-				<a href="/localizacao/psicologo-vitoria-es/">
-					<MapPin size={16} />
-					Ver como chegar
-				</a>
-				<a href="/localizacao/psicologo-jardim-da-penha/">
-					Consultório em Jardim da Penha
-				</a>
+	<div class="map-footer-grid">
+		<div class="map-footer-info">
+			<div class="map-footer-item">
+				<MapPin size={18} />
+				<div>
+					<strong>Endereço</strong>
+					<p>{getFullStreetAddress()}</p>
+					<p>{siteProfile.address.neighborhood}, {siteProfile.address.city} - {siteProfile.address.state}</p>
+					<p>CEP {siteProfile.address.postalCode}</p>
+				</div>
+			</div>
+			<div class="map-footer-item">
+				<Clock size={18} />
+				<div>
+					<strong>Horário</strong>
+					<p>{siteProfile.hours.displayDays}</p>
+					<p>{siteProfile.hours.displayTime}</p>
+				</div>
+			</div>
+			<div class="map-footer-item">
+				<Phone size={18} />
+				<div>
+					<strong>Contato</strong>
+					<a
+						href={buildWhatsAppUrl("Olá, vi seu site e gostaria de agendar uma primeira conversa.")}
+						class="map-footer-whatsapp"
+					>Falar pelo WhatsApp →</a>
+				</div>
 			</div>
 		</div>
-		<ImageCarousel images={officeImages} />
+		<div class="map-footer-embed" bind:this={mapSection}>
+			{#if mapVisible}
+				<iframe
+					src={siteProfile.externalLinks.googleMapsEmbed}
+					width="100%"
+					height="100%"
+					style="border:0; border-radius: var(--radius-md);"
+					allowfullscreen
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Localização do consultório de Bernardo Carielo em Jardim da Penha, Vitória ES"
+				></iframe>
+			{:else}
+				<button
+					type="button"
+					class="map-footer-placeholder"
+					onclick={() => (mapVisible = true)}
+					aria-label="Carregar mapa interativo do consultório"
+				>
+					<MapPin size={28} />
+					<span>Carregar mapa</span>
+				</button>
+			{/if}
+		</div>
 	</div>
 </Section>
 
@@ -591,10 +808,11 @@
 <!-- CTA Final -->
 <Section variant="gradient" id="cta">
 	<div class="cta-content">
-		<h2>O primeiro passo é uma conversa curta</h2>
+		<h2>O primeiro passo é uma conversa</h2>
 		<p>
-			Escreva em poucas linhas o que está vivendo. A partir daí, alinhamos formato,
-			horário e modalidade — presencial em Vitória ou online.
+			Você não precisa ter tudo claro para começar. Escreva em poucas linhas
+			o que está vivendo. A partir daí, alinhamos formato, horário e
+			modalidade, presencial em Vitória ou online.
 		</p>
 		<Button
 			href={buildWhatsAppUrl("Olá, vi seu site e gostaria de agendar uma primeira conversa.")}
@@ -626,68 +844,74 @@
 			linear-gradient(180deg, rgba(249, 236, 232, 0.78) 0%, #fff 100%);
 	}
 
-	/* ── Trust Strip ── */
-	.trust-strip {
-		border-top: 1px solid rgba(8, 186, 156, 0.12);
+	/* ── Trust line ── */
+	.trust-line {
 		border-bottom: 1px solid rgba(8, 186, 156, 0.12);
 		background: rgba(255, 255, 255, 0.96);
-		padding: 1.25rem 0;
+		padding: 0.65rem 0;
 	}
 
-	.trust-strip__items {
+	.trust-line p {
+		margin: 0;
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--text-light, #556);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0;
-		list-style: none;
-		margin: 0;
-		padding: 0;
 		flex-wrap: wrap;
+		gap: 0 0.4rem;
+		line-height: 1.4;
 	}
 
-	.trust-strip__item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.2rem;
-		padding: 0.5rem 2rem;
-		text-align: center;
+	.trust-line p :global(svg) {
+		color: #f5a623;
+		margin-right: 0.1rem;
 	}
 
-	.trust-strip__item + .trust-strip__item {
-		border-left: 1px solid rgba(8, 186, 156, 0.16);
-	}
-
-	.trust-strip__value {
-		font-size: 1.05rem;
-		font-weight: 700;
+	.trust-line strong {
 		color: var(--primary-dark);
-		white-space: nowrap;
+		font-weight: 700;
 	}
 
-	.trust-strip__label {
-		font-size: 0.78rem;
-		color: var(--text-light);
-		white-space: nowrap;
+	.trust-line__sep {
+		color: rgba(8, 186, 156, 0.45);
+		margin: 0 0.15rem;
 	}
 
 	/* ── Quick Facts (hero) ── */
 	.quick-facts {
+		list-style: none;
+		padding: 0;
+		margin: 1.25rem 0 0;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.75rem;
-		margin-top: 1.25rem;
+		gap: 0.4rem 1.5rem;
+		color: var(--text-light, #556);
+		font-size: 0.9rem;
+		line-height: 1.4;
 	}
 
-	.quick-facts span {
-		padding: 0.45rem 0.9rem;
-		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.82);
-		border: 1px solid rgba(8, 186, 156, 0.15);
-		color: var(--primary-dark);
-		font-size: 0.95rem;
-		font-weight: 500;
+	.quick-facts li {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
 	}
+
+	.quick-facts li :global(svg) {
+		color: var(--primary-color);
+		opacity: 0.85;
+		flex-shrink: 0;
+	}
+
+	.quick-facts__crp {
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		color: var(--primary-color);
+		opacity: 0.85;
+	}
+
 
 	/* ── Section header left ── */
 	.section-header--left {
@@ -732,27 +956,77 @@
 		font-size: 0.92rem;
 	}
 
-	/* ── Support / Demandas grid ── */
-	.support-grid {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 1rem;
-	}
-
-	.support-card {
+	/* ── Experience list ── */
+	.experience-list {
 		display: flex;
-		gap: 0.9rem;
-		padding: 1.15rem 1.2rem;
-		border-radius: var(--radius-md);
-		background: rgba(255, 255, 255, 0.9);
-		border: 1px solid rgba(0, 0, 0, 0.07);
-		box-shadow: var(--shadow-sm);
-		transition: transform 0.18s ease, box-shadow 0.18s ease;
+		flex-direction: column;
+		gap: 0;
 	}
 
-	.support-card:hover {
-		transform: translateY(-3px);
-		box-shadow: var(--shadow-hover);
+	.experience-item {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		padding: 1.25rem 1.4rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+		transition: background 0.2s ease, padding-left 0.2s ease;
+	}
+
+	.experience-item:first-child {
+		border-top: 1px solid rgba(0, 0, 0, 0.06);
+	}
+
+	.experience-item:hover {
+		background: rgba(255, 255, 255, 0.7);
+		padding-left: 1.8rem;
+	}
+
+	.experience-item__number {
+		font-size: 1.35rem;
+		font-weight: 700;
+		color: var(--primary-color);
+		opacity: 0.45;
+		flex-shrink: 0;
+		width: 2rem;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.experience-item__body {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.experience-item__body h3 {
+		font-size: 1.05rem;
+		margin-bottom: 0.25rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	:global(.experience-item__icon) {
+		flex-shrink: 0;
+		opacity: 0.7;
+	}
+
+	.experience-item__body p {
+		color: var(--text-light);
+		line-height: 1.55;
+		font-size: 0.93rem;
+	}
+
+	.experience-item__arrow {
+		font-size: 1.2rem;
+		flex-shrink: 0;
+		color: var(--primary-color);
+		opacity: 0;
+		transform: translateX(-6px);
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+
+	.experience-item:hover .experience-item__arrow {
+		opacity: 1;
+		transform: translateX(0);
 	}
 
 	/* Adjust carousel aspect ratio for the grid view */
@@ -766,26 +1040,6 @@
 		}
 	}
 
-    .support-card__icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 2.5rem;
-		height: 2.5rem;
-		border-radius: 0.85rem;
-		flex-shrink: 0;
-	}
-
-	.support-card h3 {
-		font-size: 1.02rem;
-		margin-bottom: 0.35rem;
-	}
-
-	.support-card p {
-		color: var(--text-light);
-		line-height: 1.58;
-	}
-
 	/* ── Location grid ── */
 	.local-proof-grid {
 		display: grid;
@@ -794,21 +1048,21 @@
 		align-items: center;
 	}
 
-	.local-address-short {
-		font-size: 1.1rem;
-		margin-bottom: 0.4rem;
-		line-height: 1.5;
+	.consultorio-copy p {
+		color: var(--text-light);
+		line-height: 1.7;
+		margin-bottom: 1rem;
 	}
 
-	.local-reference {
-		color: var(--text-light);
+	.consultorio-copy p:last-of-type {
 		margin-bottom: 1.25rem;
-		line-height: 1.6;
 	}
 
 	.local-links {
 		display: grid;
-		gap: 0.75rem;
+		gap: 0.6rem;
+		padding-top: 0.5rem;
+		border-top: 1px solid rgba(8, 186, 156, 0.14);
 	}
 
 	.local-links a {
@@ -820,56 +1074,386 @@
 		font-weight: 600;
 	}
 
-	.local-map-btn {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.4rem;
-		padding: 0.6rem 1.1rem;
-		border-radius: var(--radius-sm);
-		background: var(--primary-color);
-		color: white !important;
-		font-weight: 600;
-		font-size: 0.92rem;
-		transition: background 0.2s;
+	/* ── Home FAQ (scoped — mesmos espaçamentos de /servicos/terapia-online/) ── */
+	:global(.home-faq-section) .faq-container {
+		max-width: 800px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
-	.local-map-btn:hover {
-		background: var(--primary-dark);
+	:global(.home-faq-section) .faq-item {
+		background: var(--white);
+		border-radius: var(--radius-md);
+		box-shadow: var(--shadow-sm);
+		border: 1px solid rgba(8, 186, 156, 0.08);
+		overflow: hidden;
+		transition: box-shadow 0.2s ease;
+	}
+
+	:global(.home-faq-section) .faq-item[open] {
+		box-shadow: var(--shadow-md);
+	}
+
+	:global(.home-faq-section) .faq-question {
+		padding: 1.25rem 1.5rem;
+	}
+
+	:global(.home-faq-section) .faq-question span {
+		padding-right: 1.5rem;
+	}
+
+	:global(.home-faq-section) .faq-answer {
+		padding: 0 1.5rem 1.5rem;
+	}
+
+	:global(.home-faq-section) .faq-answer p {
+		line-height: 1.75;
+		margin: 0;
+	}
+
+	/* ── Featured articles grid ── */
+	.featured-articles-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.featured-article {
+		display: flex;
+		flex-direction: column;
+		border-radius: var(--radius-md);
+		background: #fff;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+		overflow: hidden;
+		transition: transform 0.18s ease, box-shadow 0.18s ease;
+	}
+
+	.featured-article:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-hover);
+	}
+
+	.featured-article__img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		display: block;
+	}
+
+	.featured-article__body {
+		padding: 1rem 1.25rem 1.25rem;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.featured-article__tag {
+		display: inline-flex;
+		width: fit-content;
+		margin-bottom: 0.7rem;
+		padding: 0.25rem 0.6rem;
+		border-radius: 999px;
+		background: rgba(8, 186, 156, 0.1);
+		color: var(--primary-dark);
+		font-size: 0.76rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.featured-article h3 {
+		font-size: 1.02rem;
+		margin-bottom: 0.4rem;
+		line-height: 1.4;
+	}
+
+	.featured-article p {
+		color: var(--text-light);
+		line-height: 1.55;
+		flex: 1;
+	}
+
+	/* ── About card ── */
+	:global(.home-about-section) {
+		background:
+			radial-gradient(circle at top left, rgba(8, 186, 156, 0.05), transparent 40%),
+			linear-gradient(180deg, rgba(249, 236, 232, 0.6), rgba(255, 255, 255, 0.95));
+	}
+
+	.about-card {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 2.5rem;
+		align-items: start;
+		background: rgba(255, 255, 255, 0.85);
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		border-radius: var(--radius-lg);
+		padding: 2.5rem;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.about-card__photo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.about-card__photo img {
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-md);
+	}
+
+	.about-card__crp {
+		font-size: 0.82rem;
+		color: var(--primary-dark);
+		font-weight: 600;
+		background: rgba(8, 186, 156, 0.1);
+		padding: 0.3rem 0.75rem;
+		border-radius: 2rem;
+	}
+
+	.about-card__content h2 {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+
+	.about-card__lead {
+		font-size: 1.05rem;
+		color: var(--text-color);
+		line-height: 1.7;
+		margin-bottom: 0.75rem;
+	}
+
+	.about-card__content p {
+		color: var(--text-light);
+		line-height: 1.7;
+		margin-bottom: 0.75rem;
+	}
+
+	.about-card__links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.06);
+	}
+
+	.about-card__links a {
+		color: var(--primary-color);
+		font-weight: 600;
+	}
+
+	.about-card__cta {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 1.25rem;
+		flex-wrap: wrap;
+	}
+
+	.about-card__cta-note {
+		font-size: 0.88rem;
+		color: var(--text-light, #667);
+	}
+
+	/* ── Reviews section ── */
+	:global(.home-reviews-section) {
+		background: linear-gradient(180deg, #fff, rgba(249, 252, 251, 0.98));
+	}
+
+	.reviews-intro {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.reviews-intro__text {
+		flex: 1;
+	}
+
+	.reviews-intro__text h2 {
+		margin-bottom: 0.5rem;
+	}
+
+	.reviews-intro__text p {
+		color: var(--text-light);
+		line-height: 1.6;
+	}
+
+	.reviews-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(8, 186, 156, 0.08);
+		border: 1px solid rgba(8, 186, 156, 0.15);
+		border-radius: var(--radius-md);
+		padding: 0.75rem 1.25rem;
+		color: var(--primary-dark);
+		white-space: nowrap;
+	}
+
+	.reviews-badge__rating {
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.reviews-badge__count {
+		font-size: 0.85rem;
+		color: var(--text-light);
+	}
+
+	/* ── Map footer section ── */
+	:global(.home-map-section) {
+		background:
+			radial-gradient(circle at bottom right, rgba(8, 186, 156, 0.06), transparent 30%),
+			linear-gradient(180deg, rgba(249, 236, 232, 0.6) 0%, #fff 100%);
+	}
+
+	.map-footer-grid {
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		gap: 2rem;
+		align-items: stretch;
+	}
+
+	.map-footer-info {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.map-footer-item {
+		display: flex;
+		gap: 0.85rem;
+		align-items: flex-start;
+		color: var(--primary-dark);
+	}
+
+	.map-footer-item strong {
+		display: block;
+		font-size: 0.92rem;
+		color: var(--text-color);
+		margin-bottom: 0.2rem;
+	}
+
+	.map-footer-item p {
+		color: var(--text-light);
+		line-height: 1.55;
+		font-size: 0.93rem;
+	}
+
+	.map-footer-whatsapp {
+		color: var(--primary-color);
+		font-weight: 600;
+		font-size: 0.93rem;
+	}
+
+	.map-footer-embed {
+		min-height: 280px;
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		box-shadow: var(--shadow-sm);
+		border: 1px solid rgba(0, 0, 0, 0.06);
+	}
+
+	.map-footer-placeholder {
+		width: 100%;
+		min-height: 280px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		background:
+			linear-gradient(180deg, rgba(8, 186, 156, 0.06), rgba(8, 186, 156, 0.02)),
+			#f7fbfa;
+		border: 0;
+		color: var(--primary-dark);
+		font-weight: 600;
+		font-size: 0.95rem;
+		cursor: pointer;
+	}
+
+	.map-footer-placeholder:hover {
+		background:
+			linear-gradient(180deg, rgba(8, 186, 156, 0.1), rgba(8, 186, 156, 0.04)),
+			#f3f9f8;
+	}
+
+	.reviews-section-anchor {
+		height: 0;
+	}
+
+	.reviews-placeholder {
+		min-height: 220px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-light);
+		font-size: 0.95rem;
 	}
 
 	/* ── Responsive ── */
 	@media (max-width: 900px) {
+		.featured-articles-grid {
+			grid-template-columns: 1fr;
+		}
+
 		.local-proof-grid {
 			grid-template-columns: 1fr;
 		}
 
-		.support-grid {
+		.about-card {
+			grid-template-columns: 1fr;
+			text-align: center;
+			padding: 2rem;
+		}
+
+		.about-card__photo {
+			position: static;
+			margin: 0 auto;
+		}
+
+		.map-footer-grid {
 			grid-template-columns: 1fr;
 		}
 
-		.trust-strip__item {
-			padding: 0.5rem 1.25rem;
+		.map-footer-embed {
+			min-height: 260px;
+		}
+
+		.reviews-intro {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 
 	@media (max-width: 640px) {
-		.trust-strip__item + .trust-strip__item {
-			border-left: none;
-			border-top: 1px solid rgba(8, 186, 156, 0.16);
+		.experience-item {
+			padding: 1rem 1.1rem;
+			gap: 1rem;
 		}
 
-		.trust-strip__items {
-			flex-direction: column;
-			gap: 0;
+		.experience-item__number {
+			font-size: 1.1rem;
 		}
 
-		.trust-strip__item {
-			width: 100%;
-			padding: 0.6rem 1rem;
+		.experience-item__arrow {
+			display: none;
 		}
 
-		.support-card {
-			padding: 1rem;
+		.about-card {
+			padding: 1.5rem;
 		}
 	}
 </style>

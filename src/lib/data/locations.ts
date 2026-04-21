@@ -47,7 +47,7 @@ export const locations: Record<string, LocationConfig> = {
         title: "Psicólogo em Jardim da Penha – Vitória ES | Bernardo Carielo",
         description:
             "Psicólogo em Jardim da Penha, Vitória (ES). Consultório em frente à UFES. Atendimento presencial humanizado para ansiedade, depressão e relacionamentos. Agende sua sessão.",
-        canonical: `${SITE_URL}/localizacao/psicologo-jardim-da-penha/`,
+        canonical: `${SITE_URL}/psicologo-vitoria-es/psicologo-jardim-da-penha/`,
         h1: "Psicólogo em Jardim da Penha - Bernardo Carielo",
         heroAlt:
             "Fachada do Edifício Madison Office Tower - Consultório em Jardim da Penha, Vitória (ES)",
@@ -133,7 +133,7 @@ export const locations: Record<string, LocationConfig> = {
         ],
         crossLinks: [
             {
-                href: "/localizacao/psicologo-vitoria-es/",
+                href: "/psicologo-vitoria-es/",
                 label: "Vitória ES",
                 description: "Todos os bairros de Vitória",
             },
@@ -147,7 +147,7 @@ export const locations: Record<string, LocationConfig> = {
         title: "Psicólogo em Vitória ES – Atendimento Presencial e Online | Bernardo Carielo",
         description:
             "Atendimento psicológico em Vitória ES. Psicoterapia pela Abordagem Centrada na Pessoa em consultório localizado em Jardim da Penha. Atendimento presencial e online para toda a Grande Vitória.",
-        canonical: `${SITE_URL}/localizacao/psicologo-vitoria-es/`,
+        canonical: `${SITE_URL}/psicologo-vitoria-es/`,
         h1: "Psicólogo em Vitória ES - Bernardo Carielo",
         heroAlt:
             "Consultório de psicologia em Vitória ES - Ed. Madison, Jardim da Penha",
@@ -237,7 +237,7 @@ export const locations: Record<string, LocationConfig> = {
         ],
         crossLinks: [
             {
-                href: "/localizacao/psicologo-jardim-da-penha/",
+                href: "/psicologo-vitoria-es/psicologo-jardim-da-penha/",
                 label: "Jardim da Penha",
                 description: "Consultório em frente à UFES",
             },

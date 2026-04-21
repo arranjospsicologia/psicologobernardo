@@ -299,7 +299,7 @@
                 >
             </li>
             <li>
-                <a href="/localizacao/psicologo-vitoria-es/"
+                <a href="/psicologo-vitoria-es/"
                     >→ Consultório em Jardim da Penha</a
                 >
             </li>

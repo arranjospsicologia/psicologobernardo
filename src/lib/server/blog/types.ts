@@ -34,6 +34,10 @@ export interface BlogFrontmatter {
     featured?: boolean;
     locationScope?: LocationScope;
     neighborhood?: Neighborhood;
+    /** Pergunta direta ao leitor exibida antes do corpo do post (AEO). */
+    summaryQuestion?: string;
+    /** Resposta curta e autossuficiente para summaryQuestion (40–80 palavras). */
+    summaryAnswer?: string;
 }
 
 export interface BlogPostIndexItem {
@@ -61,6 +65,8 @@ export interface BlogPostIndexItem {
 export interface BlogPostFull extends BlogPostIndexItem {
     htmlContent: string;
     faq?: BlogFaqItem[];
+    summaryQuestion?: string;
+    summaryAnswer?: string;
 }
 
 export interface PaginationInfo {

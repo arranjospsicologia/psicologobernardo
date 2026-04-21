@@ -358,7 +358,7 @@
                 >
             </li>
             <li>
-                <a href="/localizacao/psicologo-vitoria-es/"
+                <a href="/psicologo-vitoria-es/"
                     >→ Psicólogo em Vitória ES</a
                 >
             </li>

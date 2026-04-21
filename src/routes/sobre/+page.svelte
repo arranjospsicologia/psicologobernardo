@@ -40,8 +40,8 @@
             {
                 "@type": "Person",
                 "@id": schemaIds.person,
-                name: siteProfile.fullName,
-                alternateName: siteProfile.personName,
+                name: siteProfile.personName,
+                alternateName: siteProfile.fullName,
                 identifier: siteProfile.crp,
                 url: "https://psicologobernardo.com.br/sobre/",
                 image: "https://psicologobernardo.com.br/images/bernardo-avatar.jpg",
@@ -124,7 +124,7 @@
     type="profile"
     image="https://psicologobernardo.com.br/images/bernardo-avatar.jpg"
     jsonLd={aboutSchema}
-    preloadImage="/images/sobre/bernardo-profissional.webp"
+    preloadImage="/images/sobre/bernardo-profissional-450w.webp"
 />
 
 <!-- Breadcrumb -->
@@ -142,10 +142,9 @@
             <span class="sobre-eyebrow">Psicólogo em Vitória - ES</span>
             <h1>Sobre Bernardo Carielo</h1>
             <p class="hero-subtitle">
-                Psicólogo clínico orientado pela <strong
-                    >Abordagem Centrada na Pessoa</strong
-                > — escuta genuína, empatia e respeito à experiência singular de
-                cada pessoa.
+                {siteProfile.fullName} ({siteProfile.crp}) é psicólogo clínico em Vitória ES, formado pela UFES, com consultório em
+                Jardim da Penha. Trabalha com a <strong>Abordagem Centrada na Pessoa</strong>
+                — escuta empática, genuína e sem julgamento. Atende presencialmente e online.
             </p>
             <div class="hero-badges">
                 <span class="badge badge--primary">CRP 16/5527</span>
@@ -153,17 +152,27 @@
             </div>
         </div>
         <div class="hero-image">
-            <img
-                src="/images/sobre/bernardo-profissional.webp"
-                srcset="/images/sobre/bernardo-profissional-225w.webp 225w,
-                        /images/sobre/bernardo-profissional.webp 450w"
-                sizes="(max-width: 480px) 225px, 450px"
-                alt="Bernardo Carielo Psicólogo clínico em Vitória ES"
-                width="450"
-                height="450"
-                loading="eager"
-                fetchpriority="high"
-            />
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="/images/sobre/bernardo-profissional-225w.avif 225w,
+                            /images/sobre/bernardo-profissional-450w.avif 450w,
+                            /images/sobre/bernardo-profissional.avif 900w"
+                    sizes="(max-width: 480px) 225px, 450px"
+                />
+                <img
+                    src="/images/sobre/bernardo-profissional-450w.webp"
+                    srcset="/images/sobre/bernardo-profissional-225w.webp 225w,
+                            /images/sobre/bernardo-profissional-450w.webp 450w,
+                            /images/sobre/bernardo-profissional.webp 900w"
+                    sizes="(max-width: 480px) 225px, 450px"
+                    alt="Bernardo Carielo Psicólogo clínico em Vitória ES"
+                    width="450"
+                    height="600"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+            </picture>
         </div>
     </div>
 </section>

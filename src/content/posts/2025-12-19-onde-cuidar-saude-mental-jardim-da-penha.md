@@ -240,8 +240,8 @@ Se, além desses recursos, você sente que precisa de um espaço de escuta profi
 
 <p>
 <!-- Sugestões de links internos (ajuste as rotas) -->
-<a href="/localizacao/psicologo-jardim-da-penha/">Psicólogo em Jardim da Penha</a> ·
-<a href="/localizacao/psicologo-vitoria-es/">Psicólogo em Vitória (ES)</a> ·
+<a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Psicólogo em Jardim da Penha</a> ·
+<a href="/psicologo-vitoria-es/">Psicólogo em Vitória (ES)</a> ·
 <a href="/servicos/psicoterapia-individual/">Como funciona a psicoterapia</a> ·
 <a href="/contato/">Entrar em contato</a>
 </p>

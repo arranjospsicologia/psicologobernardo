@@ -109,7 +109,7 @@ Se a rotina for apertada, a <a href="/servicos/terapia-online/">terapia online</
 <h2>Em Vitória, o que ajuda a sustentar a terapia por tempo suficiente?</h2>
 
 <p>
-Quando a terapia faz parte da rotina real, ela tende a se manter com menos atrito. Como regulamentado pelo <a href="https://site.cfp.org.br/" target="_blank" rel="noopener">Conselho Federal de Psicologia</a>, tanto o formato presencial quanto o online são válidos para o acompanhamento psicoterápico. Em Vitória, isso passa por fatores concretos: deslocamento, horário, proximidade do consultório e facilidade para encaixar a sessão entre trabalho, estudo e vida pessoal. Para muita gente, escolher um atendimento acessível em <a href="/localizacao/psicologo-vitoria-es/">Vitória</a> ou na região de <a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a> já reduz bastante o risco de abandono por cansaço logístico.
+Quando a terapia faz parte da rotina real, ela tende a se manter com menos atrito. Como regulamentado pelo <a href="https://site.cfp.org.br/" target="_blank" rel="noopener">Conselho Federal de Psicologia</a>, tanto o formato presencial quanto o online são válidos para o acompanhamento psicoterápico. Em Vitória, isso passa por fatores concretos: deslocamento, horário, proximidade do consultório e facilidade para encaixar a sessão entre trabalho, estudo e vida pessoal. Para muita gente, escolher um atendimento acessível em <a href="/psicologo-vitoria-es/">Vitória</a> ou na região de <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a> já reduz bastante o risco de abandono por cansaço logístico.
 </p>
 
 <p>

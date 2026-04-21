@@ -79,9 +79,13 @@
     <!-- Header -->
     <div class="carousel-header">
         <img
-            src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+            src="/images/google-logo.svg"
             alt="Google"
             class="platform-logo"
+            width="24"
+            height="24"
+            loading="lazy"
+            decoding="async"
         />
         <div class="header-info">
             <span class="header-title">Avaliação no Google</span>

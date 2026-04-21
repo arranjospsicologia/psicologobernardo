@@ -92,6 +92,8 @@ function loadAllPosts(): BlogPostFull[] {
                 source: "markdown" as const,
                 htmlContent: renderMarkdown(parsed.content),
                 faq: frontmatter.faq,
+                summaryQuestion: frontmatter.summaryQuestion,
+                summaryAnswer: frontmatter.summaryAnswer,
             };
         })
         .sort(compareByDateDesc);

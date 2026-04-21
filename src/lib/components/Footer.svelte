@@ -13,7 +13,7 @@
             <strong>Quero atendimento individual</strong>
             <span>Veja como funciona o processo, o ritmo das sessões e o que pode ser trabalhado em terapia.</span>
         </a>
-        <a href="/localizacao/psicologo-vitoria-es/" class="footer-action-card">
+        <a href="/psicologo-vitoria-es/" class="footer-action-card">
             <strong>Quero ver localização e acesso</strong>
             <span>Confira fotos do consultório, endereço e a logística para encaixar o cuidado na sua rotina.</span>
         </a>
@@ -73,9 +73,8 @@
         <div class="footer-col">
             <h3 class="footer-title">Localização e conteúdo</h3>
             <ul class="footer-list footer-list--links">
-                <li class="footer-item"><a href="/localizacao/">Consultório e regiões atendidas</a></li>
-                <li class="footer-item"><a href="/localizacao/psicologo-vitoria-es/">Psicólogo em Vitória</a></li>
-                <li class="footer-item"><a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a></li>
+                <li class="footer-item"><a href="/psicologo-vitoria-es/">Psicólogo em Vitória ES</a></li>
+                <li class="footer-item"><a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a></li>
                 <li class="footer-item"><a href="/artigos/">Artigos</a></li>
                 <li class="footer-item"><a href="/contato/">Contato</a></li>
             </ul>
@@ -90,7 +89,7 @@
                     <span>
                         {getFullStreetAddress()}<br />
                         <a
-                            href="/localizacao/psicologo-vitoria-es/"
+                            href="/psicologo-vitoria-es/"
                             class="address-link"
                             >{siteProfile.address.neighborhood}, {siteProfile.address.city} - {siteProfile.address.state}</a
                         ><br />
@@ -161,6 +160,8 @@
                 reservados.
             </p>
             <div class="legal-links">
+                <a href="/politica-editorial/">Política Editorial</a>
+                <span class="separator">•</span>
                 <a href="/politica-privacidade/">Privacidade</a>
                 <span class="separator">•</span>
                 <a href="/termos-uso/">Termos</a>

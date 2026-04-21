@@ -241,10 +241,10 @@
 
 <Section variant="beige">
     <div class="cta-box">
-        <h3>Agende uma conversa</h3>
+        <h3>Se você sente que é hora de cuidar disso</h3>
         <p>
-            Se você está passando por um momento difícil, saiba que não precisa
-            enfrentar isso sozinho.
+            Escreva em poucas linhas o que está vivendo. Respondo com calma
+            e sem compromisso de continuidade.
         </p>
         <Button
             href={buildWhatsAppUrl("Olá, gostaria de agendar uma consulta")}
@@ -271,6 +271,12 @@
             </li>
             <li>
                 <a href="/experiencia/burnout/">→ Psicólogo para Burnout</a>
+            </li>
+            <li>
+                <a href="/psicologo-vitoria-es/">→ Atendimento presencial em Vitória</a>
+            </li>
+            <li>
+                <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">→ Consultório em Jardim da Penha</a>
             </li>
         </ul>
     </div>

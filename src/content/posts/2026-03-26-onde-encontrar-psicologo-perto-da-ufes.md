@@ -82,7 +82,7 @@ Porque, para quem vive a UFES de perto, Jardim da Penha funciona como continuaç
 </p>
 
 <p>
-Na prática, procurar atendimento em <a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a> pode ser mais sustentável do que escolher um lugar teoricamente bom, mas difícil de alcançar. Esse fator logístico pesa especialmente quando a semana aperta, e o cuidado começa a competir com prova, estágio, trabalho e cansaço.
+Na prática, procurar atendimento em <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a> pode ser mais sustentável do que escolher um lugar teoricamente bom, mas difícil de alcançar. Esse fator logístico pesa especialmente quando a semana aperta, e o cuidado começa a competir com prova, estágio, trabalho e cansaço.
 </p>
 </section>
 

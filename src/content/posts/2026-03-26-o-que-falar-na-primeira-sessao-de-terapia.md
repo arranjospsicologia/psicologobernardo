@@ -116,7 +116,7 @@ Também pode ser útil levar perguntas práticas: como funciona a frequência, o
 <h2>Em Vitória, por onde esse começo costuma ficar mais viável?</h2>
 
 <p>
-Quando a primeira sessão cabe na rotina real, fica mais fácil sustentar o processo. Para muita gente em Vitória, isso passa por escolher um atendimento acessível em <a href="/localizacao/psicologo-vitoria-es/">Vitória</a>, com referência clara de deslocamento e possibilidade de ajustar formato conforme a semana.
+Quando a primeira sessão cabe na rotina real, fica mais fácil sustentar o processo. Para muita gente em Vitória, isso passa por escolher um atendimento acessível em <a href="/psicologo-vitoria-es/">Vitória</a>, com referência clara de deslocamento e possibilidade de ajustar formato conforme a semana.
 </p>
 
 <p>

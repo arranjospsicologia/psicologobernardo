@@ -10,11 +10,14 @@
         JourneyShortcuts,
     } from "$lib";
     import {
+        Bus,
+        Car,
         ChevronDown,
         Heart,
         MapPin,
         Monitor,
         Phone,
+        Route,
         Users,
     } from "lucide-svelte";
     import { buildWhatsAppUrl, siteProfile } from "$lib/data/siteProfile";
@@ -51,21 +54,6 @@
             description:
                 "Mensagem curta para alinhar horário, formato e disponibilidade.",
             href: "/contato/",
-        },
-    ];
-
-    const neighborhoodGroups = [
-        {
-            label: "Vitória",
-            items: ["Jardim da Penha", "Santa Luíza", "Bento Ferreira", "Jardim Camburi"],
-        },
-        {
-            label: "Região Metropolitana",
-            items: ["Vila Velha", "Serra", "Cariacica", "Fundão"],
-        },
-        {
-            label: "Bairros próximos",
-            items: ["Praia do Canto", "Mata da Praia", "Goiabeiras", "República"],
         },
     ];
 
@@ -161,7 +149,7 @@
     description="Consultório de psicologia em Jardim da Penha, em frente à UFES. Atendimento presencial com fácil acesso e possibilidade de sessões online. Agende pelo WhatsApp."
     canonical="https://psicologobernardo.com.br/localizacao/psicologo-jardim-da-penha/"
     {jsonLd}
-    preloadImage="/images/hero/hero-600x800.webp"
+    preloadImage="/images/consultorio/espaco-privado-600w.webp"
 />
 
 <Breadcrumb
@@ -199,16 +187,29 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img
-                    src="/images/hero/hero-600x800.webp"
-                    srcset="/images/hero/hero-600x800-300w.webp 300w, /images/hero/hero-600x800-450w.webp 450w, /images/hero/hero-600x800.webp 600w"
-                    sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
-                    alt="Bernardo Carielo, psicólogo em Jardim da Penha, Vitória ES"
-                    width="450"
-                    height="600"
-                    loading="eager"
-                    fetchpriority="high"
-                />
+                <picture>
+                    <source
+                        type="image/avif"
+                        srcset="/images/consultorio/espaco-privado-300w.avif 300w,
+                                /images/consultorio/espaco-privado-400w.avif 400w,
+                                /images/consultorio/espaco-privado-600w.avif 600w,
+                                /images/consultorio/espaco-privado-800w.avif 800w"
+                        sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                    />
+                    <img
+                        src="/images/consultorio/espaco-privado-600w.webp"
+                        srcset="/images/consultorio/espaco-privado-300w.webp 300w,
+                                /images/consultorio/espaco-privado-400w.webp 400w,
+                                /images/consultorio/espaco-privado-600w.webp 600w,
+                                /images/consultorio/espaco-privado-800w.webp 800w"
+                        sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                        alt="Consultório em Jardim da Penha, Vitória ES — espaço privado e acolhedor, em frente à UFES"
+                        width="600"
+                        height="450"
+                        loading="eager"
+                        fetchpriority="high"
+                    />
+                </picture>
             </div>
         </div>
     </div>
@@ -231,48 +232,35 @@
         <p class="editorial-subtitle">
             Entre a UFES e a Reta da Penha, um lugar para se ouvir com calma
         </p>
-
-        <div class="answer-box">
-            <p>
-                Se você procura um psicólogo em Jardim da Penha, o consultório fica aqui
-                mesmo no bairro — na Rua Darcy Grijó, 50, em frente à UFES. A
-                <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a> é a
-                porta de entrada principal para a maioria das demandas; a
-                <a href="/servicos/terapia-de-casal/">terapia de casal</a> entra quando a
-                demanda central é relacional.
-            </p>
+        <div class="editorial-body">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="/images/sobre/foto-profissional-psicologo-bernardo2-225w.avif 225w,
+                            /images/sobre/foto-profissional-psicologo-bernardo2-450w.avif 450w"
+                    sizes="180px"
+                />
+                <img
+                    src="/images/sobre/foto-profissional-psicologo-bernardo2-225w.webp"
+                    srcset="/images/sobre/foto-profissional-psicologo-bernardo2-225w.webp 225w,
+                            /images/sobre/foto-profissional-psicologo-bernardo2-450w.webp 450w"
+                    sizes="180px"
+                    alt="Bernardo Carielo, psicólogo em Jardim da Penha"
+                    class="editorial-image-sm"
+                    width="180"
+                    height="240"
+                    loading="lazy"
+                />
+            </picture>
+            <div class="answer-box">
+                <p>
+                    Se você procura um psicólogo em Jardim da Penha, o consultório fica aqui
+                    mesmo no bairro — na Rua Darcy Grijó, 50, em frente à UFES. A maioria das
+                    pessoas começa pela <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>,
+                    mas se a demanda for de casal, isso também é possível.
+                </p>
+            </div>
         </div>
-
-        <img
-            src="/images/localizacao/psicologo-jardim-da-penha.webp"
-            alt="Ilustração abstrata para Jardim da Penha"
-            class="editorial-image"
-            width="800"
-            height="1066"
-            loading="lazy"
-        />
-
-        <p>
-            Jardim da Penha é um bairro que pulsa. Tem a UFES de um lado, o comércio de
-            outro, e uma energia constante de quem estuda, trabalha e constrói a vida por
-            aqui. É um lugar de encontros, de movimento — e também de recomeços.
-        </p>
-        <p>
-            Essa proximidade com a universidade faz do bairro um ponto de passagem para
-            muita gente em transição: estudantes descobrindo novos caminhos, profissionais
-            repensando a carreira, pessoas entre fases que merecem atenção e cuidado. É
-            natural querer um espaço para organizar essas experiências.
-        </p>
-        <p>
-            O consultório fica no Edifício Madison, em frente à UFES — um lugar que muitos
-            já conhecem na paisagem do bairro. Ter terapia por perto pode ser um dos jeitos
-            mais simples de incluir autocuidado na rotina que você já tem.
-        </p>
-        <p>
-            Se você está considerando terapia em Jardim da Penha, conheça como funciona a
-            <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>
-            e o que esperar dos primeiros encontros.
-        </p>
     </article>
 </Section>
 
@@ -287,7 +275,7 @@
 
 <!-- Serviços em destaque -->
 <Section variant="beige">
-    <div class="section-header">
+    <div class="section-header section-header--left">
         <span class="section-kicker">Serviços</span>
         <h2>Serviços disponíveis no consultório</h2>
     </div>
@@ -314,37 +302,42 @@
     </div>
 </Section>
 
-<!-- Como chegar -->
+<!-- Endereço e como chegar -->
 <Section variant="white">
-    <div class="practical-section">
-        <h2>Como chegar ao consultório</h2>
-        <p>
-            O consultório fica na <strong>Rua Darcy Grijó, 50 - Sala 409</strong>, no
-            Edifício Madison Office Tower, em frente à UFES. O acesso é fácil pela Av.
-            Fernando Ferrari (Reta da Penha) ou pela Rua da Lama. Há vagas nas ruas ao
-            redor do prédio.
-        </p>
-        <p>
-            Também ofereço <a href="/servicos/terapia-online/">terapia online</a> para quem
-            prefere não se deslocar ou tem uma semana mais corrida.
-        </p>
-    </div>
-</Section>
-
-<!-- Onde fica / Mapa -->
-<Section variant="beige">
-    <div class="section-header">
-        <span class="section-kicker">Localização</span>
-        <h2>Endereço e mapa</h2>
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Acesso</span>
+        <h2>Endereço e como chegar</h2>
     </div>
     <div class="location-content">
-        <div class="address-card">
-            <h3><MapPin size={20} style="display: inline-block; vertical-align: middle;" /> Endereço completo</h3>
-            <p>
-                <strong>Rua Darcy Grijó, 50 - Sala 409, Jardim da Penha, Vitória - ES, CEP: 29060-500</strong>
-            </p>
+        <p class="address-line">
+            <strong>Rua Darcy Grijó, 50 — Sala 409</strong><br />
+            Jardim da Penha, Vitória ES · Ed. Madison · Em frente à UFES
+        </p>
+        <div class="cards-grid access-grid">
+            <Card icon={Route} title="Vias principais">
+                <p>
+                    Acesso fácil pela <strong>Reta da Penha</strong> (Av. Fernando Ferrari)
+                    ou pela Rua da Lama, a partir de qualquer direção.
+                </p>
+            </Card>
+            <Card icon={Car} title="Estacionamento">
+                <p>
+                    O edifício não tem estacionamento próprio. Há vagas nas ruas ao redor,
+                    com disponibilidade variável por horário.
+                </p>
+            </Card>
+            <Card icon={Bus} title="Transporte público">
+                <p>
+                    Diversos pontos de ônibus nas proximidades — UFES e arredores como
+                    referência para linhas urbanas e intermunicipais.
+                </p>
+            </Card>
         </div>
-        <div class="map-container" style="margin-top: 1.5rem;">
+        <p class="neighborhood-note">
+            A localização costuma funcionar para quem vem de Jardim Camburi, Mata da Praia,
+            Goiabeiras, Praia do Canto, Bento Ferreira, Santa Lúcia e outros bairros próximos.
+        </p>
+        <div class="map-container map-container-full">
             <iframe
                 src={siteProfile.externalLinks.googleMapsEmbed}
                 allowfullscreen
@@ -366,45 +359,67 @@
     </div>
 </Section>
 
-<!-- Bairros -->
-<Section variant="white">
-    <div class="section-header">
-        <h2>Bairros próximos – atendimentos mais frequentes</h2>
-        <p style="color: var(--text-light); margin-top: 0.5rem;">
-            Atendo presencialmente pessoas de toda Vitória e região metropolitana,
-            especialmente dos bairros próximos a Jardim da Penha.
+<!-- Vitória ES -->
+<Section variant="beige">
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Região</span>
+        <h2>Página mais ampla: psicólogo em Vitória ES</h2>
+        <p class="section-subtitle">
+            Para quem quer ver bairros atendidos e opções para toda a capital.
         </p>
     </div>
-    <div class="bairros-grid">
-        {#each neighborhoodGroups as group}
-            <div class="bairro-card">
-                <h3><MapPin size={20} /> {group.label}</h3>
-                <ul>
-                    {#each group.items as item}<li>• {item}</li>{/each}
-                </ul>
-            </div>
+    <div class="links-grid">
+        {#each crossLinks as link}
+            <a href={link.href} class="link-card">
+                <h3>{link.label}</h3>
+                <p>{link.description}</p>
+            </a>
         {/each}
     </div>
 </Section>
 
-<!-- Sobre mim + CRP -->
-<Section variant="beige">
+<!-- Quem vai te atender -->
+<Section variant="white" id="quem-atende">
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Quem sou</span>
+        <h2>Quem vai te atender</h2>
+    </div>
     <div class="about-grid">
-        <img
-            src="/images/sobre/bernardo-profissional.webp"
-            alt="Bernardo Carielo Psicólogo em Jardim da Penha, Vitória ES"
-            width="250"
-            height="333"
-            loading="lazy"
-        />
+        <picture>
+            <source
+                type="image/avif"
+                srcset="/images/sobre/foto-profissional-psicologo-bernardo1-225w.avif 225w,
+                        /images/sobre/foto-profissional-psicologo-bernardo1-450w.avif 450w"
+                sizes="(max-width: 768px) 200px, 250px"
+            />
+            <img
+                src="/images/sobre/foto-profissional-psicologo-bernardo1-225w.webp"
+                srcset="/images/sobre/foto-profissional-psicologo-bernardo1-225w.webp 225w,
+                        /images/sobre/foto-profissional-psicologo-bernardo1-450w.webp 450w"
+                sizes="(max-width: 768px) 200px, 250px"
+                alt="Bernardo Carielo, psicólogo clínico (CRP 16/5527) em Jardim da Penha, Vitória ES"
+                width="250"
+                height="333"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+            />
+        </picture>
         <div>
-            <h3>Bernardo Carielo</h3>
+            <h2 class="about-name">Bernardo Carielo</h2>
             <p class="crp-badge">CRP-16/5527 · Psicólogo Humanista</p>
             <p>
-                Trabalho pela Abordagem Centrada na Pessoa — uma forma de escuta que cria
-                espaço para você falar com liberdade, sem roteiros ou imposições. Aqui, você
-                é o protagonista do seu processo, e meu papel é estar presente enquanto você
-                encontra suas próprias respostas.
+                Atendo em Jardim da Penha há 8 anos, tendo acompanhado mais de 100 moradores
+                do bairro em diferentes momentos da vida. Me considero morador inseparável
+                deste bairro e com frequência escrevo neste site sobre rotinas e cuidados de
+                saúde mental possíveis com a infraestrutura presente.
+            </p>
+            <p>
+                Conheço de perto o ritmo do bairro, a convivência com a UFES e os pequenos e
+                grandes desafios da vizinhança, o que costuma facilitar o primeiro contato e a
+                construção do vínculo terapêutico. A proximidade geográfica também significa
+                horários mais acessíveis, deslocamento curto e um espaço reservado pensado
+                para a privacidade do atendimento.
             </p>
             <a href="/sobre/">Conheça minha abordagem e formação →</a>
         </div>
@@ -412,7 +427,7 @@
 </Section>
 
 <!-- Próximos passos -->
-<Section variant="white">
+<Section variant="beige">
     <div class="contact-steps">
         <h2>Como funciona o primeiro contato</h2>
         <ol>
@@ -433,11 +448,28 @@
     </div>
 </Section>
 
+<!-- Leituras -->
+<Section variant="white">
+    <div class="section-header section-header--left">
+        <span class="section-kicker">Leituras</span>
+        <h2>Caso queira ler um pouco antes de decidir</h2>
+    </div>
+    <div class="loc-articles-grid">
+        {#each blogArticles as article}
+            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card">
+                <h3>{article.title}</h3>
+                <p>{article.reason}</p>
+                <span class="read-more">Ler artigo →</span>
+            </a>
+        {/each}
+    </div>
+</Section>
+
 <!-- FAQ -->
 <Section variant="beige" id="faq">
-    <div class="section-header">
+    <div class="section-header section-header--left">
         <span class="section-kicker">Perguntas frequentes</span>
-        <h2>Perguntas frequentes</h2>
+        <h2>Antes de marcar</h2>
     </div>
     <div class="loc-faq-container">
         {#each faqItems as item, index}
@@ -456,33 +488,6 @@
                 </summary>
                 <div class="loc-faq-answer"><p>{item.answer}</p></div>
             </details>
-        {/each}
-    </div>
-</Section>
-
-<!-- Artigos -->
-<Section variant="white">
-    <div class="section-header"><h2>Para ler antes ou depois da sessão</h2></div>
-    <div class="loc-articles-grid">
-        {#each blogArticles as article}
-            <a href={`/${article.categorySlug}/${article.slug}/`} class="loc-article-card">
-                <h3>{article.title}</h3>
-                <p>{article.reason}</p>
-                <span class="read-more">Ler artigo →</span>
-            </a>
-        {/each}
-    </div>
-</Section>
-
-<!-- Outras regiões -->
-<Section variant="beige">
-    <div class="section-header"><h2>Outras regiões atendidas</h2></div>
-    <div class="links-grid">
-        {#each crossLinks as link}
-            <a href={link.href} class="link-card">
-                <h3>{link.label}</h3>
-                <p>{link.description}</p>
-            </a>
         {/each}
     </div>
 </Section>
@@ -518,12 +523,42 @@
         font-size: 0.92rem;
     }
 
+    .editorial-body {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .editorial-body .answer-box {
+        flex: 1;
+    }
+
+    .editorial-image-sm {
+        width: 180px;
+        height: auto;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+        .editorial-body {
+            flex-direction: column;
+        }
+
+        .editorial-image-sm {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+    }
+
     .answer-box {
         background: rgba(8, 186, 156, 0.06);
-        border-left: 3px solid var(--primary);
+        border-left: 3px solid var(--primary-color);
         padding: 1.25rem 1.5rem;
         border-radius: 0 8px 8px 0;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
 
     .answer-box p {
@@ -532,8 +567,54 @@
         line-height: 1.7;
     }
 
+    .section-header--left {
+        text-align: left;
+        max-width: 760px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section-header--left .section-subtitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .access-grid {
+        margin-top: 2rem;
+    }
+
+    .map-container-full {
+        margin-top: 2rem;
+    }
+
     .map-action {
         text-align: center;
         margin-top: 1rem;
+    }
+
+    :global(.location-content p.address-line),
+    :global(.location-content p.neighborhood-note) {
+        text-align: left;
+    }
+
+    .address-line {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+
+    .neighborhood-note {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .about-name {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        line-height: 1.2;
+        color: var(--primary-color);
     }
 </style>

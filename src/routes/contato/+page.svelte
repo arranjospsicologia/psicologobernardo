@@ -102,7 +102,7 @@
         intro="WhatsApp é o canal preferencial para o primeiro contato porque reduz atrito, preserva organização e ajuda a alinhar rapidamente localização, modalidade e disponibilidade."
         primaryHref={buildWhatsAppUrl("Olá, gostaria de conversar sobre terapia.")}
         primaryLabel="Começar pelo WhatsApp"
-        secondaryHref="/localizacao/psicologo-vitoria-es/"
+        secondaryHref="/psicologo-vitoria-es/"
         secondaryLabel="Ver localização"
     />
 </Section>

@@ -121,7 +121,7 @@ Em Vitória, muitos casais vivem um tipo de rotina que mistura trânsito, agenda
 </p>
 
 <p>
-Ter um espaço fora da casa e fora da rotina, com atendimento em <a href="/localizacao/psicologo-vitoria-es/">Vitória</a> e referência clara de consultório em <a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a>, costuma ajudar justamente porque interrompe o ambiente onde o conflito já ficou automatizado. Para alguns casais, esse deslocamento concreto já marca que a relação merece tempo próprio.
+Ter um espaço fora da casa e fora da rotina, com atendimento em <a href="/psicologo-vitoria-es/">Vitória</a> e referência clara de consultório em <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a>, costuma ajudar justamente porque interrompe o ambiente onde o conflito já ficou automatizado. Para alguns casais, esse deslocamento concreto já marca que a relação merece tempo próprio.
 </p>
 </section>
 

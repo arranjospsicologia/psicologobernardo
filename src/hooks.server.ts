@@ -57,12 +57,21 @@ const blogRedirects: Record<string, string> = {
     '/artigos/terapia-para-homens': '/homens/terapia-para-homens',
 };
 
-// Redirects for removed location pages
+// Redirects for location pages — old /localizacao/* structure moved to root level.
+// All entries point directly to final URLs (no redirect chains).
 const locationRedirects: Record<string, string> = {
-    '/localizacao/psicologo-mata-da-praia': '/localizacao/psicologo-jardim-da-penha',
-    '/localizacao/psicologo-praia-do-canto': '/localizacao/psicologo-vitoria-es',
-    '/localizacao/psicologo-vila-velha': '/localizacao/psicologo-vitoria-es',
-    '/localizacao/psicologo-serra-es': '/localizacao/psicologo-vitoria-es',
+    // Hub page
+    '/localizacao': '/psicologo-vitoria-es',
+
+    // City and neighborhood pages (old structure → new root paths)
+    '/localizacao/psicologo-vitoria-es': '/psicologo-vitoria-es',
+    '/localizacao/psicologo-jardim-da-penha': '/psicologo-vitoria-es/psicologo-jardim-da-penha',
+
+    // Previously removed pages — redirect directly to final destination (no intermediate hop)
+    '/localizacao/psicologo-mata-da-praia': '/psicologo-vitoria-es/psicologo-jardim-da-penha',
+    '/localizacao/psicologo-praia-do-canto': '/psicologo-vitoria-es',
+    '/localizacao/psicologo-vila-velha': '/psicologo-vitoria-es',
+    '/localizacao/psicologo-serra-es': '/psicologo-vitoria-es',
 };
 
 // Redirects for removed geographic category archive pages

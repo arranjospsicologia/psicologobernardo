@@ -118,6 +118,27 @@ function normalizeNeighborhood(value: unknown): Neighborhood | undefined {
     throw new Error(`Frontmatter field 'neighborhood' must be one of: ${VALID_NEIGHBORHOODS.join(", ")}`);
 }
 
+function normalizeSummaryPair(
+    question: unknown,
+    answer: unknown,
+    slug: string,
+): { summaryQuestion: string | undefined; summaryAnswer: string | undefined } {
+    const q = isNonEmptyString(question) ? question.trim() : undefined;
+    const a = isNonEmptyString(answer) ? answer.trim() : undefined;
+
+    if ((q && !a) || (!q && a)) {
+        throw new Error(
+            `Post '${slug}': summaryQuestion and summaryAnswer must both be set or both be absent`,
+        );
+    }
+    if (q && q.length > 160) {
+        throw new Error(
+            `Post '${slug}': summaryQuestion must be 160 characters or fewer`,
+        );
+    }
+    return { summaryQuestion: q, summaryAnswer: a };
+}
+
 export function validateFrontmatter(
     slugHint: string,
     input: Record<string, unknown>,
@@ -171,6 +192,12 @@ export function validateFrontmatter(
         ? input.categoryLabel.trim()
         : undefined;
 
+    const { summaryQuestion, summaryAnswer } = normalizeSummaryPair(
+        input.summaryQuestion,
+        input.summaryAnswer,
+        slug,
+    );
+
     return {
         slug,
         title,
@@ -192,5 +219,7 @@ export function validateFrontmatter(
         featured: typeof input.featured === "boolean" ? input.featured : undefined,
         locationScope: normalizeLocationScope(input.locationScope),
         neighborhood: normalizeNeighborhood(input.neighborhood),
+        summaryQuestion,
+        summaryAnswer,
     };
 }

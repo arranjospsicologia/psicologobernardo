@@ -6,6 +6,10 @@ import {
     getCategoryPaginationEntries,
 } from "$lib/server/blog/loader";
 import { BLOG_CATEGORIES, BLOG_BASE_URL } from "$lib/server/blog/constants";
+import {
+    STATIC_PAGE_LASTMOD,
+    NOINDEX_ROUTES,
+} from "$lib/server/seo/pageMeta";
 
 const site = BLOG_BASE_URL;
 
@@ -32,7 +36,7 @@ function getPriority(route: string): string {
         return "0.8";
     }
 
-    if (route.startsWith("/localizacao") || route.startsWith("/experiencia")) {
+    if (route.startsWith("/psicologo-vitoria-es") || route.startsWith("/experiencia")) {
         return "0.8";
     }
 
@@ -82,12 +86,39 @@ function getChangefreq(
     return "monthly";
 }
 
+function maxDate(a: string, b: string): string {
+    return a > b ? a : b;
+}
+
 function getLastmod(
     route: string,
     postDateMap: Map<string, string>,
+    categoryLastmod: Map<string, string>,
 ): string {
-    const date = postDateMap.get(route);
-    if (date) return date;
+    // 1) Posts do blog: data real de publicação/revisão.
+    const postDate = postDateMap.get(route);
+    if (postDate) return postDate;
+
+    // 2) Páginas estáticas: fonte única de verdade.
+    const staticDate = STATIC_PAGE_LASTMOD[route];
+    if (staticDate) return staticDate;
+
+    // 3) Índice de categoria `/<slug>`: maior data entre os posts da categoria.
+    const categoryRootDate = categoryLastmod.get(route);
+    if (categoryRootDate) return categoryRootDate;
+
+    // 4) Paginações `/<slug>/pagina/N` e `/artigos/pagina/N`: derivam da maior
+    //    data real do conjunto (categoria ou blog inteiro).
+    const paginationMatch = route.match(/^\/([^/]+)\/pagina\/\d+$/);
+    if (paginationMatch) {
+        const owner = paginationMatch[1];
+        if (owner === "artigos") {
+            return categoryLastmod.get("__all__") ?? BUILD_DATE;
+        }
+        return categoryLastmod.get(`/${owner}`) ?? BUILD_DATE;
+    }
+
+    // 5) Último recurso: data de build (a validação aponta esses casos).
     return BUILD_DATE;
 }
 
@@ -96,11 +127,20 @@ export async function GET() {
 
     // Build a route->date map for posts
     const postDateMap = new Map<string, string>();
+    // Build a categorySlug->maxDate map, para alimentar índices e paginações.
+    const categoryLastmod = new Map<string, string>();
+    let blogMaxDate = "";
     for (const post of allPosts) {
-        postDateMap.set(
-            `/${post.categorySlug}/${post.slug}`,
-            post.lastReviewed ?? post.date,
-        );
+        const postDate = post.lastReviewed ?? post.date;
+        postDateMap.set(`/${post.categorySlug}/${post.slug}`, postDate);
+
+        const catKey = `/${post.categorySlug}`;
+        const current = categoryLastmod.get(catKey);
+        categoryLastmod.set(catKey, current ? maxDate(current, postDate) : postDate);
+        blogMaxDate = blogMaxDate ? maxDate(blogMaxDate, postDate) : postDate;
+    }
+    if (blogMaxDate) {
+        categoryLastmod.set("__all__", blogMaxDate);
     }
 
     // Auto-discover static pages
@@ -115,8 +155,7 @@ export async function GET() {
         })
         .filter((route) => {
             if (route.includes("[") || route.includes("]")) return false;
-            const noIndexPages = ["/politica-privacidade", "/termos-uso"];
-            if (noIndexPages.includes(route)) return false;
+            if (NOINDEX_ROUTES.includes(route)) return false;
             return true;
         });
 
@@ -148,7 +187,7 @@ export async function GET() {
 
     const sitemapUrls: SitemapUrl[] = allPages.map((page) => ({
         loc: page === "/" ? `${site}/` : `${site}${page}/`,
-        lastmod: getLastmod(page, postDateMap),
+        lastmod: getLastmod(page, postDateMap, categoryLastmod),
         changefreq: getChangefreq(page),
         priority: getPriority(page),
     }));

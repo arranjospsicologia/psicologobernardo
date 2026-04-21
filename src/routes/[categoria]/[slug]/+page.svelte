@@ -20,6 +20,7 @@
         MessageCircle,
         MapPin,
         BookOpen,
+        PenLine,
     } from "lucide-svelte";
     import type { PageData } from "./$types";
 
@@ -257,6 +258,14 @@
                     >
                 {/if}
             </div>
+            <p class="post-byline">
+                <PenLine size={14} aria-hidden="true" />
+                Escrito e revisado por
+                <a href="/sobre" rel="author">
+                    {siteProfile.personName}
+                </a>
+                <span class="byline-crp">CRP 16/5527</span>
+            </p>
         </div>
         <div class="post-image">
             <img
@@ -273,6 +282,13 @@
 
 <Section variant="white">
     <div class="post-content">
+        {#if post.summaryQuestion && post.summaryAnswer}
+            <section class="post-summary" aria-label="Resposta direta">
+                <h2 class="post-summary__question">{post.summaryQuestion}</h2>
+                <p class="post-summary__answer">{post.summaryAnswer}</p>
+            </section>
+        {/if}
+
         {@html post.htmlContent}
 
         {#if post.faq && post.faq.length > 0}
@@ -464,19 +480,47 @@
             <Phone size={20} />
             Falar pelo WhatsApp
         </Button>
-        {#if isLocalContent}
-            <p class="cta-secondary-link">
-                Ou veja o <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a>.
-            </p>
-        {:else}
-            <p class="cta-secondary-link">
-                Ou entenda como funciona a <a href="/servicos/psicoterapia-individual/">psicoterapia individual</a>.
-            </p>
-        {/if}
     </div>
 </Section>
 
 <style>
+    .post-byline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 0.75rem 0 0;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        font-style: italic;
+    }
+
+    .post-byline a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-style: normal;
+        transition: var(--transition);
+    }
+
+    .post-byline a:hover {
+        text-decoration: underline;
+    }
+
+    .byline-crp {
+        display: inline-flex;
+        align-items: center;
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 0.15rem 0.55rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.75rem;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 0.025em;
+    }
+
     .post-footer {
         margin-top: 3rem;
         padding-top: 2rem;
@@ -616,15 +660,5 @@
         }
     }
 
-    .cta-secondary-link {
-        font-size: 0.95rem !important;
-        margin-top: -0.5rem;
-        opacity: 0.85;
-    }
 
-    .cta-secondary-link a {
-        color: var(--white);
-        text-decoration: underline;
-        text-underline-offset: 3px;
-    }
 </style>

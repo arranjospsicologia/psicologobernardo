@@ -87,7 +87,7 @@ A adaptação não costuma acontecer de uma vez. Ela vai sendo montada em pequen
 <ul>
 <li><strong>Ocupe a UFES para alem da sala.</strong> Grupo de pesquisa, atlética, centro acadêmico, empresa junior e extensao ajudam a criar vínculo por atividade compartilhada.</li>
 <li><strong>Construa pequenas rotinas de conforto.</strong> Fazer comida, organizar seu quarto, repetir um cafe ou trajeto pode ajudar o corpo a entender que existe alguma base.</li>
-<li><strong>Conheca o bairro aos poucos.</strong> Para muita gente, criar referência em <a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a> ajuda a cidade a deixar de parecer hostil.</li>
+<li><strong>Conheca o bairro aos poucos.</strong> Para muita gente, criar referência em <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a> ajuda a cidade a deixar de parecer hostil.</li>
 </ul>
 
 <p>
@@ -115,7 +115,7 @@ Porque a vida universitária mistura mudanca de cidade, pressão acadêmica, vid
 </p>
 
 <p>
-Se você ainda está entendendo como procurar ajuda nessa regiao, vale ver também <a href="/psicoterapia/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> e a página local principal de <a href="/localizacao/psicologo-vitoria-es/">atendimento em Vitória</a>.
+Se você ainda está entendendo como procurar ajuda nessa regiao, vale ver também <a href="/psicoterapia/onde-encontrar-psicologo-perto-da-ufes/">onde encontrar psicólogo perto da UFES</a> e a página local principal de <a href="/psicologo-vitoria-es/">atendimento em Vitória</a>.
 </p>
 </section>
 

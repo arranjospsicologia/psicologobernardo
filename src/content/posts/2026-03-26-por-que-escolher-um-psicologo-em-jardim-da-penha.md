@@ -54,7 +54,7 @@ Muita gente abandona terapia não porque o processo "não funcionou", mas porque
 </p>
 
 <p>
-Na prática, um atendimento que cabe no trajeto costuma sobreviver melhor às semanas difíceis. Pesquisas sobre aliança terapêutica, como as de <a href="https://counsellingtutor.com/person-centred-approach/the-six-conditions/" target="_blank" rel="noopener">Norcross e Lambert sobre fatores da relação terapêutica</a>, mostram que a continuidade é um dos preditores mais fortes de bons resultados. Por isso, escolher um profissional em <a href="/localizacao/psicologo-jardim-da-penha/">Jardim da Penha</a> pode ser uma decisão clínica, e não apenas geográfica.
+Na prática, um atendimento que cabe no trajeto costuma sobreviver melhor às semanas difíceis. Pesquisas sobre aliança terapêutica, como as de <a href="https://counsellingtutor.com/person-centred-approach/the-six-conditions/" target="_blank" rel="noopener">Norcross e Lambert sobre fatores da relação terapêutica</a>, mostram que a continuidade é um dos preditores mais fortes de bons resultados. Por isso, escolher um profissional em <a href="/psicologo-vitoria-es/psicologo-jardim-da-penha/">Jardim da Penha</a> pode ser uma decisão clínica, e não apenas geográfica.
 </p>
 </section>
 
@@ -109,7 +109,7 @@ A opção por Jardim da Penha costuma ser especialmente útil quando:
 </ul>
 
 <p>
-Nesses casos, o atendimento presencial em <a href="/localizacao/psicologo-vitoria-es/">Vitória</a>, com base em Jardim da Penha, pode ser mais fácil de sustentar do que uma escolha tecnicamente boa, mas logisticamente pesada.
+Nesses casos, o atendimento presencial em <a href="/psicologo-vitoria-es/">Vitória</a>, com base em Jardim da Penha, pode ser mais fácil de sustentar do que uma escolha tecnicamente boa, mas logisticamente pesada.
 </p>
 </section>
 

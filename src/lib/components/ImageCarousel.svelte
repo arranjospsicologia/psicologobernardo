@@ -5,6 +5,8 @@
         src: string;
         alt: string;
         caption: string;
+        width?: number;
+        height?: number;
     }> = [];
 
     let currentIndex = 0;
@@ -12,16 +14,30 @@
     let touchStartX = 0;
     let touchEndX = 0;
 
+    // Só hidrata a imagem quando o slide já foi visitado pelo usuário.
+    // Evita descoberta precoce de várias imagens abaixo da dobra.
+    let visited: boolean[] = images.map((_, i) => i === 0);
+
+    function markVisited(index: number) {
+        if (!visited[index]) {
+            visited[index] = true;
+            visited = visited;
+        }
+    }
+
     function nextSlide() {
         currentIndex = (currentIndex + 1) % images.length;
+        markVisited(currentIndex);
     }
 
     function prevSlide() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
+        markVisited(currentIndex);
     }
 
     function goToSlide(index: number) {
         currentIndex = index;
+        markVisited(currentIndex);
     }
 
     function handleTouchStart(e: TouchEvent) {
@@ -71,7 +87,16 @@
                     class:active={index === currentIndex}
                     aria-hidden={index !== currentIndex}
                 >
-                    <img src={image.src} alt={image.alt} loading="lazy" />
+                    {#if visited[index]}
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            width={image.width ?? 800}
+                            height={image.height ?? 600}
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    {/if}
                     <p class="slide-caption">{image.caption}</p>
                 </div>
             {/each}

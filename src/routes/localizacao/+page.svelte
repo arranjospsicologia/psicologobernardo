@@ -5,7 +5,7 @@
         Phone,
         MapPin,
         ExternalLink,
-        Home,
+        House,
         Monitor,
         ChevronDown,
     } from "lucide-svelte";
@@ -52,7 +52,7 @@
     description="Endereço do consultório em Jardim da Penha, Vitória (ES). Atendimento presencial para toda a Grande Vitória e online para todo o Brasil. Psicólogo Bernardo Carielo."
     canonical="https://psicologobernardo.com.br/localizacao/"
     {jsonLd}
-    preloadImage="/images/hero/hero-600x800.webp"
+    preloadImage="/images/consultorio/espaco-privado-600w.webp"
 />
 
 <Breadcrumb items={[{ name: "Início", href: "/" }, { name: "Localização" }]} />
@@ -81,16 +81,29 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img
-                    src="/images/hero/hero-600x800.webp"
-                    srcset="/images/hero/hero-600x800-300w.webp 300w, /images/hero/hero-600x800-450w.webp 450w, /images/hero/hero-600x800.webp 600w"
-                    sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
-                    alt="Bernardo Carielo - Psicólogo em Jardim da Penha, Vitória (ES)"
-                    width="450"
-                    height="600"
-                    loading="eager"
-                    fetchpriority="high"
-                />
+                <picture>
+                    <source
+                        type="image/avif"
+                        srcset="/images/consultorio/espaco-privado-300w.avif 300w,
+                                /images/consultorio/espaco-privado-400w.avif 400w,
+                                /images/consultorio/espaco-privado-600w.avif 600w,
+                                /images/consultorio/espaco-privado-800w.avif 800w"
+                        sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                    />
+                    <img
+                        src="/images/consultorio/espaco-privado-600w.webp"
+                        srcset="/images/consultorio/espaco-privado-300w.webp 300w,
+                                /images/consultorio/espaco-privado-400w.webp 400w,
+                                /images/consultorio/espaco-privado-600w.webp 600w,
+                                /images/consultorio/espaco-privado-800w.webp 800w"
+                        sizes="(max-width: 480px) 300px, (max-width: 768px) 450px, 450px"
+                        alt="Consultório em Jardim da Penha, Vitória ES — espaço privado e acolhedor para psicoterapia"
+                        width="600"
+                        height="450"
+                        loading="eager"
+                        fetchpriority="high"
+                    />
+                </picture>
             </div>
         </div>
     </div>
@@ -139,12 +152,88 @@
     </div>
 </Section>
 
+<!-- Quem vai te atender -->
+<Section variant="beige" id="quem-atende">
+    <div class="section-header">
+        <h2>Quem vai te atender</h2>
+    </div>
+    <div class="about-grid about-grid--wide">
+        <picture>
+            <source
+                type="image/avif"
+                srcset="/images/hero/hero-600x800-300w.avif 300w,
+                        /images/hero/hero-600x800-450w.avif 450w,
+                        /images/hero/hero-600x800.avif 600w"
+                sizes="(max-width: 768px) 200px, 250px"
+            />
+            <img
+                src="/images/hero/hero-600x800-300w.webp"
+                srcset="/images/hero/hero-600x800-300w.webp 300w,
+                        /images/hero/hero-600x800-450w.webp 450w,
+                        /images/hero/hero-600x800.webp 600w"
+                sizes="(max-width: 768px) 200px, 250px"
+                alt="Bernardo Carielo, psicólogo clínico (CRP 16/5527)"
+                width="250"
+                height="333"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+            />
+        </picture>
+        <div>
+            <h3>Bernardo Carielo</h3>
+            <p class="crp-badge">CRP-16/5527 · Psicólogo Humanista</p>
+            <p>
+                Sou psicólogo clínico formado pela UFES e orientado pela
+                <strong>Abordagem Centrada na Pessoa (ACP)</strong>. Minha
+                abordagem se baseia em uma escuta genuína, pautada na empatia
+                e respeito à experiência de cada pessoa. Atendo adultos,
+                idosos, casais e famílias, presencialmente em Jardim da Penha
+                (Vitória-ES) e também online.
+            </p>
+            <p>
+                Meu compromisso é com a autonomia de cada pessoa, sem
+                prescrever quem você deve ser ou como lidar com suas demandas
+                — sem promessas fáceis. A minha abordagem ensina que quando
+                uma pessoa é acolhida e considerada como ela é, descobre sua
+                própria maneira de caminhar para um estado mais capaz de se
+                autorrealizar.
+            </p>
+            <a href="/sobre/">Conheça minha abordagem e formação →</a>
+        </div>
+    </div>
+</Section>
+
+<!-- Modalidades -->
+<Section variant="white">
+    <div class="section-header"><h2>Modalidades de atendimento</h2></div>
+    <div class="modalities-grid">
+        <a href="/localizacao/psicologo-jardim-da-penha/" class="modality-card">
+            <div class="modality-icon"><House size={28} /></div>
+            <h3>Presencial</h3>
+            <p>
+                Consultório em Jardim da Penha, Vitória (ES). Um espaço
+                reservado e acolhedor, com acesso para moradores de toda a
+                Grande Vitória.
+            </p>
+        </a>
+        <a href="/servicos/terapia-online/" class="modality-card">
+            <div class="modality-icon"><Monitor size={28} /></div>
+            <h3>Online — todo o Brasil</h3>
+            <p>
+                Atendimento por videochamada com a mesma presença terapêutica,
+                para todo o Brasil.
+            </p>
+        </a>
+    </div>
+</Section>
+
 <!-- Grid de cards das regiões -->
 <Section variant="beige">
     <div class="section-header">
-        <h2>Regiões atendidas</h2>
+        <h2>Acesse a página da sua localização</h2>
         <p style="color: var(--text-light); margin-top: 0.5rem;">
-            Saiba mais sobre atendimento presencial e online na sua região
+            Vitória (cidade) ou Jardim da Penha (bairro) — cada página tem detalhes de acesso, logística e atendimento.
         </p>
     </div>
     <div class="links-grid">
@@ -157,34 +246,8 @@
     </div>
 </Section>
 
-<!-- Modalidades -->
-<Section variant="white">
-    <div class="section-header"><h2>Modalidades de atendimento</h2></div>
-    <div class="modalities-grid">
-        <div class="modality-card">
-            <div class="modality-icon"><Home size={28} /></div>
-            <h3>Presencial</h3>
-            <p>
-                Consultório em Jardim da Penha, Vitória (ES). Um espaço
-                reservado e acolhedor, com acesso para moradores de toda a
-                Grande Vitória.
-            </p>
-        </div>
-        <div class="modality-card">
-            <div class="modality-icon"><Monitor size={28} /></div>
-            <h3>Online — todo o Brasil</h3>
-            <p>
-                Atendimento por videochamada com a mesma presença terapêutica.
-                Saiba mais sobre <a href="/servicos/terapia-online/"
-                    >terapia online</a
-                >.
-            </p>
-        </div>
-    </div>
-</Section>
-
 <!-- FAQ geral -->
-<Section variant="beige" id="faq">
+<Section variant="white" id="faq">
     <div class="section-header">
         <h2>Perguntas frequentes sobre localização</h2>
     </div>

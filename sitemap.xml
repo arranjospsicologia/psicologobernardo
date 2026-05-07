@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -153,9 +153,21 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/psicoterapia/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/psicoterapia/protocolo-tratamento-ansiedade/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://psicologobernardo.com.br/psicoterapia/terapia-sem-pauta-autoconhecimento/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/saude-mental/cansaco-que-nao-tem-nome/</loc>
@@ -471,31 +483,31 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/2/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/3/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/4/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/5/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/artigos/pagina/6/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -513,7 +525,7 @@
   </url>
   <url>
     <loc>https://psicologobernardo.com.br/psicoterapia/pagina/2/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
